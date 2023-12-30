@@ -1,5 +1,7 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
+#include "DSP/Processor.h"
+#include "Architecture/ConnectionMatrix.h"
 
 using namespace daisy;
 using namespace daisysp;
