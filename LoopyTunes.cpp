@@ -6,7 +6,19 @@
 using namespace daisy;
 using namespace daisysp;
 
+// Hardware
 DaisySeed hw;
+
+// System - Flash
+ConnectionMatrix connectionMatrix;
+
+// DSP - SDRAM
+Processor DSY_SDRAM_BSS processor;
+
+// UI - QSPI
+
+
+// Global
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {

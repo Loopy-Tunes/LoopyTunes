@@ -3,6 +3,8 @@
  *  Function: Mixes outputs of track classes
  ***********************************************/
 
+#include "Track.h"
+
 class Mixer
 {
 public:
@@ -10,16 +12,16 @@ public:
     void prepare();
     void processBlock(float* input, float* output);
 
-    void setChannel1Gain(float val);
-    void setChannel2Gain(float val);
-    void setChannel3Gain(float val);
-    void setChannel4Gain(float val);
+    void setTrack1Gain(float val);
+    void setTrack2Gain(float val);
+    void setTrack3Gain(float val);
+    void setTrack4Gain(float val);
 
 private:
 
-    // Channel 1
-    // Channel 2
-    // Channel 3
-    // Channel 4
+    Track track1;
+    Track track2;
+    Track track3;
+    Track track4;
 
 };

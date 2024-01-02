@@ -16,6 +16,8 @@ public:
 
 private:
 
+    Mixer mixer;
+
     // playhead (time since record was pressed)
     // isPlaying
 
