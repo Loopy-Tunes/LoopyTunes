@@ -3,8 +3,6 @@
  *  Function: Processes audio buffer and FX for each track
  *************************************************************/
 
-#include "Track.h"
-
 class Track
 {
 public:
