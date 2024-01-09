@@ -16,7 +16,7 @@ private:
 
     // string ID
 
-    volatile float value;
-    volatile bool valueHasChanged;
+    float value;
+    bool valueHasChanged;
 
 };
