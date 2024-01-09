@@ -10,15 +10,15 @@ class Processor
 public:
 
     void prepare();
-    void processBlock(float* input, float* output);
+    void processBlock(float* inputL, float* inputR);
 
-    void setIsPlaying();
+    void setIsPlaying(bool val) { isPlaying = val; }
 
 private:
 
     Mixer mixer;
 
     // playhead (time since record was pressed)
-    // isPlaying
+    bool isPlaying;
 
 };
