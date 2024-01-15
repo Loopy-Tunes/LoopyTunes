@@ -29,6 +29,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		out[1][i] = in[1][i];
 	}
 	*/
+
+	for(size_t i = 0 ; i < size ; i++)
+	{
+		processor.processBlock(in[0][i], in[1][i], out[0][i], out[1][i], size);
+	}
 }
 
 int main(void)
