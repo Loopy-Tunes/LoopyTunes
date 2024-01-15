@@ -5,7 +5,7 @@ void Mixer::prepare()
 
 }
 
-void Mixer::processBlock(float* input, size_t size)
+void Mixer::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
 {
     // if record
         // called in processoor

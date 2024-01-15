@@ -10,7 +10,7 @@ class Mixer
 public:
 
     void prepare();
-    void processBlock(float* input, size_t size);
+    void processBlock(StereoBuffer input, StereoBuffer output, size_t size);
 
     void setTrack1Gain(float val) { track1.gain = val; }
     void setTrack2Gain(float val) { track2.gain = val; }
