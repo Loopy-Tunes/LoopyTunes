@@ -7,6 +7,12 @@ void Mixer::prepare()
 
 void Mixer::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
 {
+    /*
+    TO DO:
+    - Input routing for which track is being recorded into
+    - Output mixing
+    */
+
     // if record
         // called in processoor
         // input from processor
@@ -17,5 +23,7 @@ void Mixer::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
         // calls get method for tracks
         // mix outputs
         // output to processor
+
+    track1.track.processBlock(input, output, size);
 }
 
