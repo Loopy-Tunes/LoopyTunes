@@ -16,5 +16,5 @@ void Track::init(float *memL, float *memR, size_t buffSize)
 
 void Track::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
 {
-
+    
 }
