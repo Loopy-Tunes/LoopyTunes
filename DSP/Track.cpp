@@ -7,14 +7,16 @@ void Track::prepare()
 
 void Track::init(float *memL, float *memR, size_t buffSize)
 {
+    /*
     buffer.left = memL;
     buffer.right = memR;
     buffer.size = buffSize;
 
     buffer.init();
+    */
 }
 
-void Track::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
+void Track::processBlock(float inputL, float inputR, float outputL, float outputR, size_t size)
 {
     // processes a block of samples
     // if recording
@@ -28,9 +30,9 @@ void Track::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
     // if playing
      // process distortion
      // process delay
-    buffer.left = input.left;
-    buffer.right = input.right;
+    buffer.left = inputL;
+    buffer.right = inputR;
 
-    output.left = buffer.left;
-    output.right = buffer.right;
+    outputL = buffer.left;
+    outputR = buffer.right;
 }

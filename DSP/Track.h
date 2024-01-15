@@ -12,7 +12,7 @@ public:
     void prepare();
     void init(float *memL, float *memR, size_t buffSize);
     
-    void processBlock(StereoBuffer input, StereoBuffer output, size_t size);
+    void processBlock(float inputL, float inputR, float outputL, float outputR, size_t size);
 
     void setIsRecording(bool val) { ph.isRecording = val; }
     void setIsPlaying(bool val) { ph.isPlaying = val; }

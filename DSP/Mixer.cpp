@@ -5,7 +5,7 @@ void Mixer::prepare()
 
 }
 
-void Mixer::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
+void Mixer::processBlock(float inputL, float inputR, float outputL, float outputR, size_t size)
 {
     /*
     TO DO:
@@ -24,6 +24,6 @@ void Mixer::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
         // mix outputs
         // output to processor
 
-    track1.track.processBlock(input, output, size);
+    track1.track.processBlock(inputL, inputR, outputL, outputR, size);
 }
 

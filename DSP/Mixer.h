@@ -12,7 +12,7 @@ public:
     void prepare();
     void init();
 
-    void processBlock(StereoBuffer input, StereoBuffer output, size_t size);
+    void processBlock(float inputL, float inputR, float outputL, float outputR, size_t size);
 
     void setTrack1Gain(float val) { track1.gain = val; }
     void setTrack2Gain(float val) { track2.gain = val; }
