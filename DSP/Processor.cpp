@@ -5,7 +5,7 @@ void Processor::prepare()
 
 }
 
-void Processor::processBlock(float* inputL, float* inputR)
+void Processor::processBlock(StereoBuffer input, StereoBuffer output, size_t size)
 {
 
 }
