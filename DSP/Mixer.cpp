@@ -8,8 +8,8 @@ void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t
 
     for(size_t i = 0 ; i < bufferSize ; i++)
     {
-        buffer[0][i] = 0.0f;
-        buffer[1][i] = 0.0f;
+        buffer[L][i] = 0.0f;
+        buffer[R][i] = 0.0f;
     }
 
     track1.track.init(t1, s);

@@ -8,8 +8,8 @@ void Track::init(float* mem[2], const size_t s)
 
     for(size_t i = 0 ; i < s ; i++)
     {
-        buffer[0][i] = 0.0f;
-        buffer[1][i] = 0.0f;
+        buffer[L][i] = 0.0f;
+        buffer[R][i] = 0.0f;
     }
 }
 
@@ -22,9 +22,14 @@ void Track::processBlock(size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
+        
 
 
-
-        ph.pos++;
+        incrementPlayhead();
     }
+}
+
+void Track::incrementPlayhead()
+{
+    // add ph logic here
 }

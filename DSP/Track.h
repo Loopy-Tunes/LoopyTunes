@@ -15,7 +15,10 @@ public:
     void prepare();
     void processBlock(size_t size);
 
-    //float* getCurrentValue() { return &buffer[ph.pos]; }
+    void incrementPlayhead();
+
+    float* getCurrentLeft() { return &buffer[L][ph.pos]; }
+    float* getCurrentRight() { return &buffer[R][ph.pos]; }
 
     void setIsRecording(bool val) { ph.isRecording = val; }
     void setIsPlaying(bool val) { ph.isPlaying = val; }
