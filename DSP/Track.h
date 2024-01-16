@@ -22,8 +22,7 @@ public:
 
     void setIsRecording(bool val) { ph.isRecording = val; }
     void setIsPlaying(bool val) { ph.isPlaying = val; }
-    void setPos(size_t newPos) { ph.pos = newPos; }
-    void resetPos() { ph.pos = 0; }
+    void resetPlayhead() { ph.pos = 0; }
 
 private:
 
