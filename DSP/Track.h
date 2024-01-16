@@ -15,6 +15,8 @@ public:
     void prepare();
     void processBlock(size_t size);
 
+    float* getCurrentValue() { return &buffer[ph.pos]; }
+
     void setIsRecording(bool val) { ph.isRecording = val; }
     void setIsPlaying(bool val) { ph.isPlaying = val; }
     void setPos(size_t newPos) { ph.pos = newPos; }

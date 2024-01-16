@@ -28,7 +28,7 @@ float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
 // functions
 void initialise()
 {
-	// initialise track buffer pointers and buffer sizes
+	processor.init(*mix, *track1, *track2, *track3, *track4, SAMPLERATE * DURATION);
 
 }
 
