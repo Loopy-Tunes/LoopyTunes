@@ -8,11 +8,7 @@ void Track::prepare()
 void Track::init(float *memL, float *memR, size_t buffSize)
 {
     /*
-    buffer.left = memL;
-    buffer.right = memR;
-    buffer.size = buffSize;
-
-    buffer.init();
+    - fill buffer with 0s
     */
 }
 
@@ -30,9 +26,5 @@ void Track::processBlock(float inputL, float inputR, float outputL, float output
     // if playing
      // process distortion
      // process delay
-    buffer.left = inputL;
-    buffer.right = inputR;
-
-    outputL = buffer.left;
-    outputR = buffer.right;
+    
 }

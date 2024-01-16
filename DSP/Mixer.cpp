@@ -5,6 +5,11 @@ void Mixer::prepare()
 
 }
 
+void Mixer::init()
+{
+
+}
+
 void Mixer::processBlock(float inputL, float inputR, float outputL, float outputR, size_t size)
 {
     /*

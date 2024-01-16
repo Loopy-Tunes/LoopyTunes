@@ -1,9 +1,9 @@
+#include "Track.h"
+
 /********************************************//**
  *  Class name: Mixer
  *  Function: Mixes outputs of track classes
  ***********************************************/
-
-#include "Track.h"
 
 class Mixer
 {
