@@ -23,6 +23,7 @@ private:
 
     Playhead ph;
     StereoBuffer buffer;
+    //float DSY_SDRAM_BSS buffer[2]
 
     enum class State
     {
