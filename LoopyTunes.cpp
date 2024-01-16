@@ -12,6 +12,9 @@ DaisySeed hw;
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
+// Global
+// Playhead ph;
+
 // DSP - SDRAM
 Mixer DSY_SDRAM_BSS mixer;
 
@@ -36,13 +39,22 @@ float* track4Ptr[2] = {track4[L], track4[R]};
 // functions
 void initialise()
 {
-
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
-
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	// route input
+	for(size_t i = 0 ; i < size ; i++)
+	{
+		track1Ptr[L][i] = in[0][i];
+		track1Ptr[R][i] = in[1][i];
+
+		out[0][i] = track1Ptr[L][i];
+		out[1][i] = track1Ptr[R][i];
+	}
+
+	// process output
 	mixer.processBlock(size);
 	/*
 	for (size_t i = 0; i < size; i++)

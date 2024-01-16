@@ -14,6 +14,9 @@ public:
     void prepare();
     void processBlock(size_t size);
 
+    //float* getCurrentLeft() { return &buffer[L][ph.pos]; }
+    //float* getCurrentRight() { return &buffer[R][ph.pos]; }
+
 private:
 
     float* buffer[2];
