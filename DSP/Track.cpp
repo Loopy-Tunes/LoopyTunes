@@ -16,7 +16,6 @@ void Track::prepare()
 
 void Track::processBlock(size_t size)
 {
-    // processes a block of samples
     // if recording
         // responsible for taking an input and storing it in the track's buffer
     // if playing

@@ -2,6 +2,12 @@
 
 void Mixer::init(float* m, float* t1, float* t2, float* t3, float* t4, size_t s)
 {
+    buffer = m;
+    bufferSize = s;
+
+    for(size_t i = 0 ; i < bufferSize ; i++)
+        buffer[i] = 0.0f;
+
     track1.track.init(t1, s);
     track2.track.init(t2, s);
     track3.track.init(t3, s);
