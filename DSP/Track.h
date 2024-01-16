@@ -1,4 +1,5 @@
 #include "Helpers.h"
+#include "Constants.h"
 
 /**********************************************************//**
  *  Class name: Track
@@ -22,8 +23,8 @@ public:
 private:
 
     Playhead ph;
-    StereoBuffer buffer;
-    //float DSY_SDRAM_BSS buffer[2]
+    float buffer[2][SAMPLERATE * DURATION];
+
 
     enum class State
     {
