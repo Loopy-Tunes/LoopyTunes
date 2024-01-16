@@ -9,8 +9,10 @@ class Processor
 {
 public:
 
+    void init(float* m, float* t1, float* t2, float* t3, float* t4, size_t s);
+    
     void prepare();
-    void processBlock(float inputL, float inputR, float outputL, float outputR, size_t size);
+    void processBlock(size_t size);
 
 private:
 

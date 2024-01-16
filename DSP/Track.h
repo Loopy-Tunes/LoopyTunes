@@ -10,10 +10,10 @@ class Track
 {
 public:
 
-    void prepare();
-    void init(float *memL, float *memR, size_t buffSize);
+    void init(float* mem, const size_t s);
     
-    void processBlock(float inputL, float inputR, float outputL, float outputR, size_t size);
+    void prepare();
+    void processBlock(size_t size);
 
     void setIsRecording(bool val) { ph.isRecording = val; }
     void setIsPlaying(bool val) { ph.isPlaying = val; }
@@ -23,8 +23,10 @@ public:
 private:
 
     Playhead ph;
-    const float* buffer;
+    TrackInformation ti;
 
+    float* buffer;
+    size_t bufferSize;
 
     enum class State
     {
