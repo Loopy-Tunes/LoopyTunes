@@ -8,3 +8,9 @@ struct Playhead
     bool isPlaying;
     size_t pos;
 };
+
+// track information
+struct TrackInformation
+{
+    size_t loopLength;
+};
