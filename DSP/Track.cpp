@@ -1,12 +1,16 @@
 #include "Track.h"
 
-void Track::init(float* mem, const size_t s)
+void Track::init(float* mem[2], const size_t s)
 {
-    buffer = mem;
     bufferSize = s;
+    for(int i = 0 ; i < 2 ; i++)
+        buffer[i] = mem[i];
 
     for(size_t i = 0 ; i < s ; i++)
-        buffer[i] = 0.0f;
+    {
+        buffer[0][i] = 0.0f;
+        buffer[1][i] = 0.0f;
+    }
 }
 
 void Track::prepare()

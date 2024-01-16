@@ -1,12 +1,16 @@
 #include "Mixer.h"
 
-void Mixer::init(float* m, float* t1, float* t2, float* t3, float* t4, size_t s)
+void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
 {
-    buffer = m;
     bufferSize = s;
+    for(int i = 0 ; i < 2 ; i++)
+        buffer[i] = m[i];
 
     for(size_t i = 0 ; i < bufferSize ; i++)
-        buffer[i] = 0.0f;
+    {
+        buffer[0][i] = 0.0f;
+        buffer[1][i] = 0.0f;
+    }
 
     track1.track.init(t1, s);
     track2.track.init(t2, s);
