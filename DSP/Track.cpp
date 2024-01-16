@@ -11,6 +11,10 @@ void Track::init(float* mem[2], const size_t s)
         buffer[L][i] = 0.0f;
         buffer[R][i] = 0.0f;
     }
+
+    setIsRecording(false);
+    setIsPlaying(false);
+    resetPlayhead();
 }
 
 void Track::prepare()
@@ -31,5 +35,8 @@ void Track::processBlock(size_t size)
 
 void Track::incrementPlayhead()
 {
-    // add ph logic here
+    if(ph.pos > bufferSize-1)
+        ph.pos = 0;
+    else
+        ph.pos++;
 }

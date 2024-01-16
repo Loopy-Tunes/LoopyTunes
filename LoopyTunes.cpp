@@ -31,7 +31,6 @@ float* track2Ptr[2] = {track2[L], track2[R]};
 float* track3Ptr[2] = {track3[L], track3[R]};
 float* track4Ptr[2] = {track4[L], track4[R]};
 
-
 // UI - QSPI
 
 // functions
@@ -44,6 +43,7 @@ void initialise()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	mixer.processBlock(size);
 	/*
 	for (size_t i = 0; i < size; i++)
 	{
@@ -51,9 +51,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		out[1][i] = in[1][i];
 	}
 	*/
-
-	mixer.processBlock(size);
-	
 }
 
 int main(void)

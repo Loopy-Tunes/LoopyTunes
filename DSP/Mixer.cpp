@@ -3,8 +3,8 @@
 void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
 {
     bufferSize = s;
-    for(int i = 0 ; i < 2 ; i++)
-        buffer[i] = m[i];
+    buffer[L] = m[L];
+    buffer[R] = m[R];
 
     for(size_t i = 0 ; i < bufferSize ; i++)
     {
