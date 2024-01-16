@@ -16,16 +16,11 @@ void Track::prepare()
 
 void Track::processBlock(size_t size)
 {
-    // if recording
-        // responsible for taking an input and storing it in the track's buffer
-    // if playing
-        // responsible for processing size samples through fx and sending to mixer
+    for(size_t i = 0 ; i < size ; i++)
+    {
 
-    // if recording
-        // copy input to buffer
 
-    // if playing
-     // process distortion
-     // process delay
-    
+
+        ph.pos++;
+    }
 }

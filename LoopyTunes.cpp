@@ -1,6 +1,6 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
-#include "DSP/Processor.h"
+#include "DSP/Mixer.h"
 #include "Architecture/ConnectionMatrix.h"
 
 using namespace daisy;
@@ -13,7 +13,7 @@ DaisySeed hw;
 ConnectionMatrix connectionMatrix;
 
 // DSP - SDRAM
-Processor DSY_SDRAM_BSS processor;
+Mixer DSY_SDRAM_BSS mixer;
 
 // Buffers
 float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
@@ -28,7 +28,7 @@ float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
 // functions
 void initialise()
 {
-	processor.init(*mix, *track1, *track2, *track3, *track4, SAMPLERATE * DURATION);
+	mixer.init(*mix, *track1, *track2, *track3, *track4, SAMPLERATE * DURATION);
 
 }
 
@@ -42,7 +42,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	}
 	*/
 
-	processor.processBlock(size);
+	mixer.processBlock(size);
 	
 }
 
