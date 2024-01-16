@@ -23,7 +23,7 @@ public:
 private:
 
     Playhead ph;
-    float buffer[2][SAMPLERATE * DURATION];
+    const float* buffer;
 
 
     enum class State

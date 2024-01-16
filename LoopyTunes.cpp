@@ -15,10 +15,13 @@ ConnectionMatrix connectionMatrix;
 // DSP - SDRAM
 Processor DSY_SDRAM_BSS processor;
 
+// Buffers
+float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
+
 // UI - QSPI
-
-
-// Global
 
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
