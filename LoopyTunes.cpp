@@ -12,9 +12,6 @@ DaisySeed hw;
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
-// Global
-// Playhead ph;
-
 // DSP - SDRAM
 Mixer DSY_SDRAM_BSS mixer;
 
@@ -55,7 +52,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	}
 
 	// process output
-	mixer.processBlock(size);
+	//mixer.processBlock(size);
 	/*
 	for (size_t i = 0; i < size; i++)
 	{
