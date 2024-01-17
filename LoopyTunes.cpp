@@ -47,8 +47,8 @@ void initialise()
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
 
 	// initialise GPIO
-	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
-	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
+	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
+	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
 
 	isRecord = false;
 	isPlay = false;
