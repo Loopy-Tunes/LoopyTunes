@@ -13,6 +13,9 @@ DaisySeed hw;
 GPIO record;
 GPIO play;
 
+bool isRecord;
+bool isPlay;
+
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
@@ -46,6 +49,9 @@ void initialise()
 	// initialise GPIO
 	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
 	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
+
+	isRecord = false;
+	isPlay = false;
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -73,10 +79,13 @@ int main(void)
 	hw.StartAudio(AudioCallback);
 	while(1) 
 	{
-		if(record.Read())
+		isRecord = record.Read();
+		isPlay = play.Read();
+
+		if(isRecord)
 			mixer.setIsRecording();
 
-		if(play.Read())
+		if(isPlay)
 			mixer.setIsPlaying();
 	}
 }
