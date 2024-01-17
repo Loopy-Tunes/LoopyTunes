@@ -19,14 +19,12 @@ public:
     float* processOutputLeft(size_t pos);
     float* processOutputRight(size_t pos);
 
+    void setIsRecording();
+    void setIsPlaying();
     void incrementPlayhead();
 
     float* getCurrentLeft() { return &buffer[L][ph.pos]; }
     float* getCurrentRight() { return &buffer[R][ph.pos]; }
-
-    void setIsRecording(bool val) { ph.isRecording = val; }
-    void setIsPlaying(bool val) { ph.isPlaying = val; }
-    void resetPlayhead() { ph.pos = 0; }
 
 private:
 
