@@ -16,18 +16,17 @@ public:
     void tick();
 
     void processInput(const float* left, const float* right, size_t size);
-    float processOutputLeft(size_t pos);
-    float processOutputRight(size_t pos);
+    float processOutputLeft();
+    float processOutputRight();
 
-    void incrementPlayheads();
-
-    //float* getCurrentLeft() { return &buffer[L][ph.pos]; }
-    //float* getCurrentRight() { return &buffer[R][ph.pos]; }
+    void setIsRecording() { track1.track.setIsRecording(); }
+    void setIsPlaying() { track1.track.setIsPlaying(); }
 
 private:
 
     float* buffer[2];
     size_t bufferSize;
+    float* curSample[2];
 
     struct MixerTrack
     {

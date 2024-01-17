@@ -91,18 +91,18 @@ void Track::processInput(const float* left, const float* right, size_t size)
     }
 }
 
-float* Track::processOutputLeft(size_t pos)
+float* Track::processOutputLeft()
 {
     if(!ph.isPlaying)
         return nullptr;;
     
-    return &buffer[L][pos];
+    return &buffer[L][ph.pos];
 }
 
-float* Track::processOutputRight(size_t pos)
+float* Track::processOutputRight()
 {
     if(!ph.isPlaying)
         return nullptr;
 
-    return &buffer[R][pos];
+    return &buffer[R][ph.pos];
 }

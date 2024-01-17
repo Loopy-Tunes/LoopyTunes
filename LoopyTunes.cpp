@@ -9,6 +9,10 @@ using namespace daisysp;
 // Hardware
 DaisySeed hw;
 
+// GPIO
+GPIO record;
+GPIO play;
+
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
@@ -36,7 +40,12 @@ float* track4Ptr[2] = {track4[L], track4[R]};
 // functions
 void initialise()
 {
+	// initialise DSP
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
+
+	// initialise GPIO
+	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
+	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLUP);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -48,8 +57,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	{
 		mixer.tick();
 
-		out[L][i] = mixer.processOutputLeft(i);
-		out[R][i] = mixer.processOutputRight(i);
+		out[L][i] = mixer.processOutputLeft();
+		out[R][i] = mixer.processOutputRight();
 	}
 }
 
@@ -62,5 +71,12 @@ int main(void)
 	initialise();
 
 	hw.StartAudio(AudioCallback);
-	while(1) {}
+	while(1) 
+	{
+		if(record.Read())
+			mixer.setIsRecording();
+
+		if(play.Read())
+			mixer.setIsPlaying();
+	}
 }

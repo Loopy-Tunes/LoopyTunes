@@ -21,8 +21,8 @@ public:
     void incrementPlayhead();
 
     void processInput(const float* left, const float* right, size_t size);
-    float* processOutputLeft(size_t pos);
-    float* processOutputRight(size_t pos);
+    float* processOutputLeft();
+    float* processOutputRight();
 
     float* getCurrentLeft() { return &buffer[L][ph.pos]; }
     float* getCurrentRight() { return &buffer[R][ph.pos]; }

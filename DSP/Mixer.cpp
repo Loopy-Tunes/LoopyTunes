@@ -5,11 +5,13 @@ void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t
     bufferSize = s;
     buffer[L] = m[L];
     buffer[R] = m[R];
+    for(int i = 0 ; i < 2 ; i++)
+        curSample[i] = nullptr;
 
-    for(size_t i = 0 ; i < bufferSize ; i++)
+    for(size_t j = 0 ; j < bufferSize ; j++)
     {
-        buffer[L][i] = 0.0f;
-        buffer[R][i] = 0.0f;
+        buffer[L][j] = 0.0f;
+        buffer[R][j] = 0.0f;
     }
 
     track1.track.init(t1, s);
@@ -53,20 +55,22 @@ void Mixer::processInput(const float* left, const float* right, size_t size)
     track1.track.processInput(left, right, size);
 }
 
-float Mixer::processOutputLeft(size_t pos)
+float Mixer::processOutputLeft()
 {
-    return *track1.track.processOutputLeft(pos);
+    curSample[L] = track1.track.processOutputLeft();
+
+    if(curSample[L] != nullptr)
+        return *curSample[L];
+    else
+        return 0.0f;
 }
 
-float Mixer::processOutputRight(size_t pos)
+float Mixer::processOutputRight()
 {
-    return *track1.track.processOutputRight(pos);
-}
+    curSample[R] = track1.track.processOutputRight();
 
-void Mixer::incrementPlayheads()
-{
-    track1.track.incrementPlayhead();
-    track2.track.incrementPlayhead();
-    track3.track.incrementPlayhead();
-    track4.track.incrementPlayhead();
+    if(curSample[R] != nullptr)
+        return *curSample[R];
+    else
+        return 0.0f;
 }
