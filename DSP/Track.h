@@ -15,6 +15,10 @@ public:
     void prepare();
     void processBlock(size_t size);
 
+    void processInput(const float* left, const float* right, size_t size);
+    float* processOutputLeft(size_t pos);
+    float* processOutputRight(size_t pos);
+
     void incrementPlayhead();
 
     float* getCurrentLeft() { return &buffer[L][ph.pos]; }
