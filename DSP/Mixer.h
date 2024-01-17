@@ -13,6 +13,7 @@ public:
     
     void prepare();
     void processBlock(size_t size);
+    void tick();
 
     void processInput(const float* left, const float* right, size_t size);
     float processOutputLeft(size_t pos);

@@ -46,6 +46,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	// process output
 	for(size_t i = 0 ; i < size ; i++)
 	{
+		mixer.tick();
+
 		out[L][i] = mixer.processOutputLeft(i);
 		out[R][i] = mixer.processOutputRight(i);
 	}
