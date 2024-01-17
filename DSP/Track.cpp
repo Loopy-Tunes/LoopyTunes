@@ -33,6 +33,25 @@ void Track::processBlock(size_t size)
     }
 }
 
+void Track::processInput(const float* left, const float* right, size_t size)
+{
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        buffer[L][i] = left[i];
+        buffer[R][i] = right[i];
+    }
+}
+
+float* Track::processOutputLeft(size_t pos)
+{
+    return &buffer[L][pos];
+}
+
+float* Track::processOutputRight(size_t pos)
+{
+    return &buffer[R][pos];
+}
+
 void Track::incrementPlayhead()
 {
     if(ph.pos > bufferSize-1)

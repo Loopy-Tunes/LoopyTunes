@@ -45,21 +45,17 @@ void Mixer::processBlock(size_t size)
 
 void Mixer::processInput(const float* left, const float* right, size_t size)
 {
-    for(size_t i = 0 ; i < size ; i++)
-    {
-        buffer[L][i] = left[i];
-        buffer[R][i] = right[i];
-    }
+    track1.track.processInput(left, right, size);
 }
 
 float Mixer::processOutputLeft(size_t pos)
 {
-    return buffer[L][pos];
+    return *track1.track.processOutputLeft(pos);
 }
 
 float Mixer::processOutputRight(size_t pos)
 {
-    return buffer[R][pos];
+    return *track1.track.processOutputRight(pos);
 }
 
 void Mixer::incrementPlayheads()
