@@ -12,9 +12,9 @@ void Track::init(float* mem[2], const size_t s)
         buffer[R][i] = 0.0f;
     }
 
-    setIsRecording(false);
-    setIsPlaying(false);
-    resetPlayhead();
+    ph.isRecording = false;
+    ph.isPlaying = false;
+    ph.reset();
 }
 
 void Track::prepare()
@@ -52,9 +52,24 @@ float* Track::processOutputRight(size_t pos)
     return &buffer[R][pos];
 }
 
+void Track::setIsRecording()
+{
+    ph.isRecording = !ph.isRecording;
+    ph.reset();
+}
+
+void Track::setIsPlaying()
+{
+    ph.isPlaying = !ph.isPlaying;
+    ph.reset();
+}
+
 void Track::incrementPlayhead()
 {
-    if(ph.pos > bufferSize-1)
+    if(!ph.isPlaying)
+        return;
+
+    if(ph.pos > (ti.loopLength-1))
         ph.pos = 0;
     else
         ph.pos++;

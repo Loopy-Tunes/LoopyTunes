@@ -41,11 +41,7 @@ void initialise()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	// route input
-	//for(size_t i = 0 ; i < size ; i++)
-	//{
-		mixer.processInput(in[0], in[1], size);
-	//}
+	mixer.processInput(in[0], in[1], size);
 
 	// process output
 	for(size_t i = 0 ; i < size ; i++)
