@@ -2,7 +2,7 @@
 TARGET = LoopyTunes
 
 # Sources
-CPP_SOURCES = LoopyTunes.cpp Mixer.cpp Track.cpp
+CPP_SOURCES = LoopyTunes.cpp DSP/Mixer.cpp Track.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../../../libDaisy/
