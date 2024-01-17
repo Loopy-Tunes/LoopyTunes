@@ -9,10 +9,12 @@ class Mixer
 {
 public:
 
-    void init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); // pointers to tracks, buffer sizes
+    void init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); 
     
     void prepare();
     void processBlock(size_t size);
+
+    void incrementPlayheads();
 
     //float* getCurrentLeft() { return &buffer[L][ph.pos]; }
     //float* getCurrentRight() { return &buffer[R][ph.pos]; }

@@ -43,3 +43,10 @@ void Mixer::processBlock(size_t size)
         // output to processor
 }
 
+void Mixer::incrementPlayheads()
+{
+    track1.track.incrementPlayhead();
+    track2.track.incrementPlayhead();
+    track3.track.incrementPlayhead();
+    track4.track.incrementPlayhead();
+}
