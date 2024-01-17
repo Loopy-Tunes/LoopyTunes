@@ -43,6 +43,25 @@ void Mixer::processBlock(size_t size)
         // output to processor
 }
 
+void Mixer::processInput(const float* left, const float* right, size_t size)
+{
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        buffer[L][i] = left[i];
+        buffer[R][i] = right[i];
+    }
+}
+
+float Mixer::processOutputLeft(size_t pos)
+{
+    return buffer[L][pos];
+}
+
+float Mixer::processOutputRight(size_t pos)
+{
+    return buffer[R][pos];
+}
+
 void Mixer::incrementPlayheads()
 {
     track1.track.incrementPlayhead();

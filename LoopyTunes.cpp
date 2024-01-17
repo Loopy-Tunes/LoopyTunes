@@ -42,24 +42,17 @@ void initialise()
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	// route input
-	for(size_t i = 0 ; i < size ; i++)
-	{
-		track1Ptr[L][i] = in[0][i];
-		track1Ptr[R][i] = in[1][i];
-
-		out[0][i] = track1Ptr[L][i];
-		out[1][i] = track1Ptr[R][i];
-	}
+	//for(size_t i = 0 ; i < size ; i++)
+	//{
+		mixer.processInput(in[0], in[1], size);
+	//}
 
 	// process output
-	//mixer.processBlock(size);
-	/*
-	for (size_t i = 0; i < size; i++)
+	for(size_t i = 0 ; i < size ; i++)
 	{
-		out[0][i] = in[0][i];
-		out[1][i] = in[1][i];
+		out[L][i] = mixer.processOutputLeft(i);
+		out[R][i] = mixer.processOutputRight(i);
 	}
-	*/
 }
 
 int main(void)
