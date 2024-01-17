@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
    4:DSP/Track.cpp ****     bufferSize = s;
   48              		.loc 1 4 1 view .LVU5
   49 0006 83B0     		sub	sp, sp, #12
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 2
 
 
   50              		.cfi_def_cfa_offset 24
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
   92              		.loc 1 11 22 view .LVU23
   93 0024 0021     		movs	r1, #0
   94 0026 0192     		str	r2, [sp, #4]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 3
 
 
   95 0028 FFF7FEFF 		bl	memset
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
   23:DSP/Track.h   ****     void setIsPlaying(bool val) { ph.isPlaying = val; }
  120              		.loc 2 23 52 is_stmt 0 view .LVU32
  121 0036 0023     		movs	r3, #0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 4
 
 
  122 0038 2380     		strh	r3, [r4]	@ movhi
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
  163 004e 0023     		movs	r3, #0
  164 0050 40F8043B 		str	r3, [r0], #4	@ float
   12:DSP/Track.cpp ****     }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 5
 
 
  165              		.loc 1 12 9 is_stmt 1 view .LVU49
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
  211              		.cfi_startproc
  212              		@ args = 0, pretend = 0, frame = 0
  213              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 6
 
 
  214              		@ link register save eliminated.
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
   27:DSP/Track.cpp ****     {
  249              		.loc 1 27 5 view .LVU68
  250 0010 02F10102 		add	r2, r2, #1
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 7
 
 
  251              	.LVL15:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
   38:DSP/Track.cpp ****         ph.pos = 0;
  299              		.loc 1 38 11 view .LVU78
  300 0002 4368     		ldr	r3, [r0, #4]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 8
 
 
   38:DSP/Track.cpp ****         ph.pos = 0;
@@ -458,19 +458,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 1
  332              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
  333              		.file 17 "DSP/Helpers.h"
  334              		.file 18 "<built-in>"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Track.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:19     .text._ZN5Track4initEPPfj:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:26     .text._ZN5Track4initEPPfj:0000000000000000 _ZN5Track4initEPPfj
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:179    .text._ZN5Track7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:186    .text._ZN5Track7prepareEv:0000000000000000 _ZN5Track7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:200    .text._ZN5Track12processBlockEj:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:207    .text._ZN5Track12processBlockEj:0000000000000000 _ZN5Track12processBlockEj
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:281    .text._ZN5Track17incrementPlayheadEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJMyWJi.s:288    .text._ZN5Track17incrementPlayheadEv:0000000000000000 _ZN5Track17incrementPlayheadEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:19     .text._ZN5Track4initEPPfj:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:26     .text._ZN5Track4initEPPfj:0000000000000000 _ZN5Track4initEPPfj
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:179    .text._ZN5Track7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:186    .text._ZN5Track7prepareEv:0000000000000000 _ZN5Track7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:200    .text._ZN5Track12processBlockEj:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:207    .text._ZN5Track12processBlockEj:0000000000000000 _ZN5Track12processBlockEj
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:281    .text._ZN5Track17incrementPlayheadEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccYlyUpc.s:288    .text._ZN5Track17incrementPlayheadEv:0000000000000000 _ZN5Track17incrementPlayheadEv
 
 UNDEFINED SYMBOLS
 memset
