@@ -10,8 +10,8 @@ using namespace daisysp;
 DaisySeed hw;
 
 // GPIO
-Switch record;
-Switch play;
+static Switch record;
+static Switch play;
 
 // Global
 float sampleRate;
@@ -53,6 +53,16 @@ void initialise()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	record.Debounce();
+	play.Debounce();
+
+	if(record.Pressed())
+		mixer.setIsRecording();
+
+	if(play.Pressed())
+		mixer.setIsPlaying();
+
+
 	mixer.processInput(in[0], in[1], size);
 
 	// process output
@@ -79,15 +89,6 @@ int main(void)
 
 	while(1) 
 	{
-		record.Debounce();
-		play.Debounce();
-
-		if(record.Pressed())
-			mixer.setIsRecording();
-
-		if(play.Pressed())
-			mixer.setIsPlaying();
-
 		hw.PrintLine("Record State: %s", record.Pressed() ? "true" : "false");
 		hw.PrintLine("Play State: %s", play.Pressed() ? "true" : "false");
 	}
