@@ -76,7 +76,9 @@ int main(void)
 
 	initialise();
 
+	hw.StartLog();
 	hw.StartAudio(AudioCallback);
+	
 	while(1) 
 	{
 		isRecord = record.Read();
@@ -87,5 +89,8 @@ int main(void)
 
 		if(isPlay)
 			mixer.setIsPlaying();
+
+		hw.PrintLine("Record State: %s", isRecord ? "true" : "false");
+		hw.PrintLine("Play State: %s", isPlay ? "true" : "false");
 	}
 }
