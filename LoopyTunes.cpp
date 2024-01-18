@@ -10,11 +10,7 @@ using namespace daisysp;
 DaisySeed hw;
 
 // GPIO
-GPIO record;
-GPIO play;
 
-bool isRecord;
-bool isPlay;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -78,7 +74,13 @@ int main(void)
 
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
-	
+
+	GPIO record;
+	GPIO play;
+
+	bool isRecord;
+	bool isPlay;
+
 	while(1) 
 	{
 		isRecord = record.Read();
