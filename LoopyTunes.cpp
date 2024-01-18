@@ -14,13 +14,13 @@ static Switch record;
 static Switch play;
 
 // Global
-float sampleRate;
+static float sampleRate;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
 // DSP - SDRAM
-Mixer DSY_SDRAM_BSS mixer;
+static Mixer mixer;
 
 // Buffers
 float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
@@ -47,11 +47,11 @@ void initialise()
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
 
 	// initialise GPIO
-	record.Init(hw.GetPin(21), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
-	play.Init(hw.GetPin(22), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
+	record.Init(hw.GetPin(22), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
+	play.Init(hw.GetPin(23), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
 }
 
-void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+void pollInputs()
 {
 	record.Debounce();
 	play.Debounce();
@@ -61,7 +61,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 	if(play.Pressed())
 		mixer.setIsPlaying();
+}
 
+void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+{
+	pollInputs();
 
 	mixer.processInput(in[0], in[1], size);
 
