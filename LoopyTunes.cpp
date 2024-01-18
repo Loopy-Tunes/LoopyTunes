@@ -64,7 +64,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
-	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
@@ -81,8 +80,8 @@ int main(void)
 	bool isPlay = false;
 
 	// initialise GPIO
-	record.Init(hw.GetPin(21), sampleRate / 48.f);
-	play.Init(hw.GetPin(22), sampleRate / 48.f);
+	record.Init(hw.GetPin(21), sampleRate / sampleRate, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
+	play.Init(hw.GetPin(22), sampleRate / sampleRate, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
 	led.Init(daisy::seed::D18, GPIO::Mode::OUTPUT);
 
 	while(1) 
