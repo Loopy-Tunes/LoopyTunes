@@ -3,6 +3,13 @@
 #include "DSP/Mixer.h"
 #include "Architecture/ConnectionMatrix.h"
 
+/*
+TO DO:
+- Refactor audio processing to blocks
+- 
+
+*/
+
 using namespace daisy;
 using namespace daisysp;
 
@@ -14,13 +21,15 @@ Switch record;
 Switch play;
 
 // Global
-static float sampleRate;
+float sampleRate;
+bool isRecord;
+bool isPlay;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
 // DSP - SDRAM
-static Mixer mixer;
+Mixer mixer;
 
 // Buffers
 float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
@@ -49,12 +58,15 @@ void init()
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 	sampleRate = hw.AudioSampleRate();
 
+	// initialise GPIO
+	record.Init(daisy::seed::D0, 100);
+	play.Init(daisy::seed::D1, 100);
+
+	isRecord = false;
+	isPlay = false;
+
 	// initialise DSP
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
-
-	// initialise GPIO
-	record.Init(hw.GetPin(0), sampleRate/48.f);//, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
-	play.Init(hw.GetPin(1), sampleRate/48.f);//, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
 }
 
 void pollInputs()
@@ -62,17 +74,15 @@ void pollInputs()
 	record.Debounce();
 	play.Debounce();
 
-	if(record.Pressed())
-		mixer.setIsRecording();
+	isRecord = record.Pressed();
+	isPlay = play.Pressed();
 
-	if(play.Pressed())
-		mixer.setIsPlaying();
+	if(isRecord) { mixer.setIsRecording(); }
+	if(isPlay) { mixer.setIsPlaying(); }
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	pollInputs();
-
 	mixer.processInput(in[0], in[1], size);
 
 	// process output
@@ -94,6 +104,8 @@ int main(void)
 
 	while(1) 
 	{
+		pollInputs();
+
 		hw.PrintLine("Record State: %s", record.Pressed() ? "true" : "false");
 		hw.PrintLine("Play State: %s", play.Pressed() ? "true" : "false");
 	}
