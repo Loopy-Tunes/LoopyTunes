@@ -10,8 +10,8 @@ using namespace daisysp;
 DaisySeed hw;
 
 // GPIO
-static Switch record;
-static Switch play;
+Switch record;
+Switch play;
 
 // Global
 static float sampleRate;
@@ -41,14 +41,20 @@ float* track4Ptr[2] = {track4[L], track4[R]};
 // UI - QSPI
 
 // functions
-void initialise()
+void init()
 {
+	// initialise Daisy Seed
+	hw.Init();
+	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
+	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+	sampleRate = hw.AudioSampleRate();
+
 	// initialise DSP
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
 
 	// initialise GPIO
-	record.Init(hw.GetPin(22), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
-	play.Init(hw.GetPin(23), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
+	record.Init(hw.GetPin(0), sampleRate/48.f);//, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
+	play.Init(hw.GetPin(1), sampleRate/48.f);//, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
 }
 
 void pollInputs()
@@ -81,12 +87,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
-	hw.Init();
-	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
-	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-	sampleRate = hw.AudioSampleRate();
-
-	initialise();
+	init();
 
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
