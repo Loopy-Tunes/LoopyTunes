@@ -77,12 +77,14 @@ int main(void)
 	bool isPlay = false;
 
 	// initialise GPIO
-	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
+	record.Init(hw.GetPin(21), GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
 	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
 	led.Init(daisy::seed::D18, GPIO::Mode::OUTPUT);
 
 	while(1) 
 	{
+		//hw.ProcessDi
+
 		isRecord = record.Read();
 		isPlay = play.Read();
 		System::Delay(50);
