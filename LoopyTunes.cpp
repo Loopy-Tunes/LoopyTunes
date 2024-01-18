@@ -10,7 +10,11 @@ using namespace daisysp;
 DaisySeed hw;
 
 // GPIO
+Switch record;
+Switch play;
 
+// Global
+float sampleRate;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -60,45 +64,45 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
+	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+	sampleRate = hw.AudioSampleRate();
 
 	initialise();
 
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
 
-	GPIO record;
-	GPIO play;
 	GPIO led;
 
 	bool isRecord = false;
 	bool isPlay = false;
 
 	// initialise GPIO
-	record.Init(hw.GetPin(21), GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
-	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
+	record.Init(hw.GetPin(21), sampleRate / 48.f);
+	play.Init(hw.GetPin(22), sampleRate / 48.f);
 	led.Init(daisy::seed::D18, GPIO::Mode::OUTPUT);
 
 	while(1) 
 	{
-		//hw.ProcessDi
+		record.Debounce();
+		play.Debounce();
 
-		isRecord = record.Read();
-		isPlay = play.Read();
-		System::Delay(50);
+		//isRecord = record.Pressed();
+		//isPlay = play.Pressed();
 
 		led.Write(isRecord);
 		hw.SetLed(isPlay);
 
-		if(isRecord)
+		if(record.Pressed())
 			mixer.setIsRecording();
 
-		if(isPlay)
+		if(play.Pressed())
 			mixer.setIsPlaying();
 
-		hw.PrintLine("Record State: %s", isRecord ? "true" : "false");
-		hw.PrintLine("Play State: %s", isPlay ? "true" : "false");
+		hw.PrintLine("Record State: %s", record.Pressed() ? "true" : "false");
+		hw.PrintLine("Play State: %s", play.Pressed() ? "true" : "false");
 	}
 }
