@@ -46,6 +46,9 @@ void initialise()
 	// initialise DSP
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
 
+	// initialise GPIO
+	record.Init(hw.GetPin(21), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
+	play.Init(hw.GetPin(22), sampleRate / 48.f, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -74,26 +77,10 @@ int main(void)
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
 
-	GPIO led;
-
-	bool isRecord = false;
-	bool isPlay = false;
-
-	// initialise GPIO
-	record.Init(hw.GetPin(21), sampleRate / sampleRate, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN); 
-	play.Init(hw.GetPin(22), sampleRate / sampleRate, Switch::Type::TYPE_MOMENTARY, Switch::Polarity::POLARITY_NORMAL, Switch::Pull::PULL_DOWN);
-	led.Init(daisy::seed::D18, GPIO::Mode::OUTPUT);
-
 	while(1) 
 	{
 		record.Debounce();
 		play.Debounce();
-
-		//isRecord = record.Pressed();
-		//isPlay = play.Pressed();
-
-		led.Write(isRecord);
-		hw.SetLed(isPlay);
 
 		if(record.Pressed())
 			mixer.setIsRecording();
