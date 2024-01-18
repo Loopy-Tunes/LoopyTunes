@@ -42,12 +42,6 @@ void initialise()
 	// initialise DSP
 	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, SAMPLERATE * DURATION);
 
-	// initialise GPIO
-	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
-	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
-
-	isRecord = false;
-	isPlay = false;
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -77,14 +71,24 @@ int main(void)
 
 	GPIO record;
 	GPIO play;
+	GPIO led;
 
-	bool isRecord;
-	bool isPlay;
+	bool isRecord = false;
+	bool isPlay = false;
+
+	// initialise GPIO
+	record.Init(daisy::seed::D16, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
+	play.Init(daisy::seed::D17, GPIO::Mode::INPUT, GPIO::Pull::PULLDOWN);
+	led.Init(daisy::seed::D18, GPIO::Mode::OUTPUT);
 
 	while(1) 
 	{
 		isRecord = record.Read();
 		isPlay = play.Read();
+		System::Delay(50);
+
+		led.Write(isRecord);
+		hw.SetLed(isPlay);
 
 		if(isRecord)
 			mixer.setIsRecording();
