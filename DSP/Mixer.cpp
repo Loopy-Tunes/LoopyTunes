@@ -47,7 +47,7 @@ void Mixer::processBlock(size_t size)
 
 void Mixer::tick()
 {
-    track1.track.incrementPlayhead();
+    track1.track.tick();
 }
 
 void Mixer::processInput(const float* left, const float* right, size_t size)
