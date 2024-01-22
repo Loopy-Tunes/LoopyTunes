@@ -35,10 +35,5 @@ private:
     float* buffer[2];
     size_t bufferSize;
 
-    enum class State
-    {
-        EMPTY = 0,
-        FULL
-    };
-
+    
 };
