@@ -27,10 +27,7 @@ void Track::prepare()
 
 void Track::tick()
 {
-    if(!ph.isPlaying && !ph.isRecording)
-        return;
-
-    incrementPlayhead();
+    
 }
 
 void Track::setIsRecording()
@@ -40,7 +37,7 @@ void Track::setIsRecording()
     if(!ph.isRecording)
     {
         ti.isEmpty = false;
-        ti.loopLength = ph.pos;
+        ti.loopLength = ph.writePos;
     }
 
     ph.reset();
@@ -52,50 +49,46 @@ void Track::setIsPlaying()
     ph.reset();
 }
 
-void Track::incrementPlayhead()
+void Track::incrementWritePos()
 {
-    if(!ph.isRecording || !ph.isPlaying)
-        return;
+    if(ph.writePos > (bufferSize - 1))
+            ph.writePos = 0;
+        else
+            ph.writePos++;
+}
 
-    if(ph.isRecording)
-    {
-        if(ph.pos > (bufferSize - 1))
-            ph.pos = 0;
+void Track::incrementReadPos()
+{
+    if(ph.readPos > (ti.loopLength - 1))
+            ph.readPos = 0;
         else
-            ph.pos++;
-    } else if(ph.isPlaying)
-    {
-        if(ph.pos > (ti.loopLength - 1))
-            ph.pos = 0;
-        else
-            ph.pos++;
-    }
+            ph.readPos++;
 }
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)
 {
-    //if(!ph.isRecording)
-        //return;
+    if(!ph.isRecording)
+        return;
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        buffer[L][ph.pos] = left[i];
-        buffer[R][ph.pos] = right[i];
+        buffer[L][ph.writePos] = left[i];
+        buffer[R][ph.writePos] = right[i];
 
-        tick();
+        incrementWritePos();
     }
 }
 
  void Track::processOutputBlock(float* left, float* right, size_t size)
  {
-    //if(!ph.isPlaying)
-        //return;
+    if(!ph.isRecording && !ph.isPlaying)
+        return;
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        left[i] = buffer[L][ph.pos];
-        right[i] = buffer[R][ph.pos];
+        left[i] = buffer[L][ph.readPos];
+        right[i] = buffer[R][ph.readPos];
 
-        tick();
+        incrementReadPos();
     }
  }

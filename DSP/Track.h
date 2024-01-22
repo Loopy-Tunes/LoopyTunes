@@ -11,19 +11,17 @@ class Track
 public:
 
     void init(float* mem[2], const size_t s);
-    
+   
     void prepare();
     void tick();
 
     void setIsRecording();
     void setIsPlaying();
-    void incrementPlayhead();
+    void incrementWritePos();
+    void incrementReadPos();
 
     void processInputBlock(const float* left, const float* right, size_t size);
     void processOutputBlock(float* left, float* right, size_t size);
-
-    float* getCurrentLeft() { return &buffer[L][ph.pos]; }
-    float* getCurrentRight() { return &buffer[R][ph.pos]; }
 
 private:
 

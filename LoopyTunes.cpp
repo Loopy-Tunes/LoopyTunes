@@ -59,8 +59,8 @@ void init()
 	sampleRate = hw.AudioSampleRate();
 
 	// initialise GPIO
-	record.Init(daisy::seed::D0, 100);
-	play.Init(daisy::seed::D1, 100);
+	record.Init(daisy::seed::D0, 30);
+	play.Init(daisy::seed::D1, 30);
 
 	isRecord = false;
 	isPlay = false;
@@ -71,14 +71,22 @@ void init()
 
 void pollInputs()
 {
-	record.Debounce();
-	play.Debounce();
-
 	isRecord = record.Pressed();
 	isPlay = play.Pressed();
 
-	if(isRecord) { mixer.setIsRecording(); }
-	if(isPlay) { mixer.setIsPlaying(); }
+	if(isRecord) 
+	{  
+		mixer.setIsRecording();
+		hw.PrintLine("Record set");
+	}
+	record.Debounce();
+
+	if(isPlay) 
+	{ 
+		mixer.setIsPlaying(); 
+		hw.PrintLine("Play set");
+	}
+	play.Debounce();
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -97,8 +105,5 @@ int main(void)
 	while(1) 
 	{
 		pollInputs();
-
-		hw.PrintLine("Record State: %s", record.Pressed() ? "true" : "false");
-		hw.PrintLine("Play State: %s", play.Pressed() ? "true" : "false");
 	}
 }
