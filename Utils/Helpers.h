@@ -22,3 +22,10 @@ struct TrackInformation
     bool isEmpty;
     size_t loopLength;
 };
+
+// curve types
+enum CurveType
+{
+    LOG = 0,
+    EXP
+};

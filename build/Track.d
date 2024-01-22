@@ -93,7 +93,7 @@ build/Track.o: DSP/Track.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Track.h DSP/Helpers.h DSP/Constants.h
+ DSP/Track.h DSP/../Utils/Helpers.h DSP/../Utils/Constants.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -189,5 +189,5 @@ build/Track.o: DSP/Track.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Track.h:
-DSP/Helpers.h:
-DSP/Constants.h:
+DSP/../Utils/Helpers.h:
+DSP/../Utils/Constants.h:

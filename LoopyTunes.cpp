@@ -3,15 +3,14 @@
 #include "DSP/Mixer.h"
 #include "Architecture/ConnectionMatrix.h"
 
-/*
-TO DO:
-- Refactor audio processing to blocks
-- 
-
-*/
-
 using namespace daisy;
 using namespace daisysp;
+
+/*
+TO DO:
+- Refactor play/record to have similar parameter class to analog ins
+- Implement AudioParameter
+*/
 
 // Hardware
 DaisySeed hw;
