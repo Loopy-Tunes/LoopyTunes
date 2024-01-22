@@ -20,6 +20,11 @@ void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t
     track4.track.init(t4, s);
 }
 
+void Mixer::initParameters()
+{
+
+}
+
 void Mixer::prepare()
 {
 

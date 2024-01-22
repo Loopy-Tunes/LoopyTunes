@@ -1,21 +1,30 @@
+#include "../Utils/Helpers.h"
+#include <cstdint>
+
 /**************************************************************************//**
  *  Class name: AudioParameter
  *  Function: Parameter object for DSP classes
  *****************************************************************************/
 
-#include "../Architecture/Subscriber.h"
-
-class AudioParameter : public Subscriber
+template <class type>
+class AudioParameter
 {
 public:
 
-    void initialise();
+    void init();
     
-    void setValue();
-    void publishValue();
+    void tick();
+    void process();
+
+    type getValue();
     
 private:
 
-    // string ID
+    // pointer to top level daisy seed instance
+
+    type curVal, min, max;
+    uint8_t channelID;
+    CurveType curve;
+    bool isSelected;
 
 };

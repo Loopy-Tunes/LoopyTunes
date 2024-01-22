@@ -229,7 +229,8 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  ../../../DaisySP//Source/Utility/port.h \
  ../../../DaisySP//Source/Utility/samplehold.h \
  ../../../DaisySP//Source/Utility/smooth_random.h DSP/Mixer.h DSP/Track.h \
- DSP/Helpers.h DSP/Constants.h Architecture/ConnectionMatrix.h
+ DSP/../Utils/Helpers.h DSP/../Utils/Constants.h \
+ Architecture/ConnectionMatrix.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -479,6 +480,6 @@ build/LoopyTunes.o: LoopyTunes.cpp \
 ../../../DaisySP//Source/Utility/smooth_random.h:
 DSP/Mixer.h:
 DSP/Track.h:
-DSP/Helpers.h:
-DSP/Constants.h:
+DSP/../Utils/Helpers.h:
+DSP/../Utils/Constants.h:
 Architecture/ConnectionMatrix.h:
