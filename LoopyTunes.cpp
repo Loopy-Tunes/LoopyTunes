@@ -83,16 +83,8 @@ void pollInputs()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	mixer.processInput(in[0], in[1], size);
-
-	// process output
-	for(size_t i = 0 ; i < size ; i++)
-	{
-		mixer.tick();
-
-		out[L][i] = mixer.processOutputLeft();
-		out[R][i] = mixer.processOutputRight();
-	}
+	mixer.processInputBlock(in[L], in[R], size);
+	mixer.processOutputBlock(out[L], out[R], size);
 }
 
 int main(void)

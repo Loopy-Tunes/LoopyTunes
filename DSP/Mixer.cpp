@@ -25,52 +25,17 @@ void Mixer::prepare()
 
 }
 
-void Mixer::processBlock(size_t size)
-{
-    /*
-    TO DO:
-    - Input routing for which track is being recorded into
-    - Output mixing
-    */
-
-    // if record
-        // called in processoor
-        // input from processor
-        // feed into tracks
-
-    // if playback
-        // input from tracks
-        // calls get method for tracks
-        // mix outputs
-        // output to processor
-}
-
 void Mixer::tick()
 {
     track1.track.tick();
 }
 
-void Mixer::processInput(const float* left, const float* right, size_t size)
+void Mixer::processInputBlock(const float* left, const float* right, size_t size)
 {
-    track1.track.processInput(left, right, size);
+    track1.track.processInputBlock(left, right, size);
 }
 
-float Mixer::processOutputLeft()
+void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
-    curSample[L] = track1.track.processOutputLeft();
-
-    if(curSample[L] != nullptr)
-        return *curSample[L];
-    else
-        return 0.0f;
-}
-
-float Mixer::processOutputRight()
-{
-    curSample[R] = track1.track.processOutputRight();
-
-    if(curSample[R] != nullptr)
-        return *curSample[R];
-    else
-        return 0.0f;
+    track1.track.processOutputBlock(left, right, size);
 }
