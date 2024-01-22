@@ -14,5 +14,6 @@ struct Playhead
 // track information
 struct TrackInformation
 {
+    bool isEmpty;
     size_t loopLength;
 };

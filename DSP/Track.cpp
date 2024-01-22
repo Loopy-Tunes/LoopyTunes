@@ -15,6 +15,9 @@ void Track::init(float* mem[2], const size_t s)
     ph.isRecording = false;
     ph.isPlaying = false;
     ph.reset();
+
+    ti.isEmpty = true;
+    ti.loopLength = 0;
 }
 
 void Track::prepare()
@@ -46,7 +49,10 @@ void Track::setIsRecording()
     ph.isRecording = !ph.isRecording;
 
     if(!ph.isRecording)
+    {
+        ti.isEmpty = false;
         ti.loopLength = ph.pos;
+    }
 
     ph.reset();
 }
