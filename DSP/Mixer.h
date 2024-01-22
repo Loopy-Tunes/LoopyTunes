@@ -12,12 +12,10 @@ public:
     void init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); 
     
     void prepare();
-    void processBlock(size_t size);
     void tick();
 
-    void processInput(const float* left, const float* right, size_t size);
-    float processOutputLeft();
-    float processOutputRight();
+    void processInputBlock(const float* left, const float* right, size_t size);
+    void processOutputBlock(float* left, float* right, size_t size);
 
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }

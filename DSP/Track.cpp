@@ -25,20 +25,9 @@ void Track::prepare()
 
 }
 
-void Track::processBlock(size_t size)
-{
-    for(size_t i = 0 ; i < size ; i++)
-    {
-        
-
-
-        incrementPlayhead();
-    }
-}
-
 void Track::tick()
 {
-    if(!ph.isPlaying || ph.isRecording)
+    if(!ph.isPlaying && !ph.isRecording)
         return;
 
     incrementPlayhead();
@@ -83,32 +72,30 @@ void Track::incrementPlayhead()
     }
 }
 
-void Track::processInput(const float* left, const float* right, size_t size)
+void Track::processInputBlock(const float* left, const float* right, size_t size)
 {
-    if(!ph.isRecording)
-        return;
+    //if(!ph.isRecording)
+        //return;
 
     for(size_t i = 0 ; i < size ; i++)
     {
         buffer[L][ph.pos] = left[i];
         buffer[R][ph.pos] = right[i];
 
-        incrementPlayhead();
+        tick();
     }
 }
 
-float* Track::processOutputLeft()
-{
-    if(!ph.isPlaying)
-        return nullptr;;
-    
-    return &buffer[L][ph.pos];
-}
+ void Track::processOutputBlock(float* left, float* right, size_t size)
+ {
+    //if(!ph.isPlaying)
+        //return;
 
-float* Track::processOutputRight()
-{
-    if(!ph.isPlaying)
-        return nullptr;
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        left[i] = buffer[L][ph.pos];
+        right[i] = buffer[R][ph.pos];
 
-    return &buffer[R][ph.pos];
-}
+        tick();
+    }
+ }
