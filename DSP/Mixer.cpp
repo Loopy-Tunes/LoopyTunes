@@ -34,7 +34,8 @@ void Mixer::prepare()
 
 void Mixer::tick()
 {
-    track1.track.tick();
+    //track1.track.tick();
+    track1.gain.tick();
 }
 
 void Mixer::processInputBlock(const float* left, const float* right, size_t size)

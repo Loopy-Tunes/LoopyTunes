@@ -113,5 +113,6 @@ int main(void)
 	while(1) 
 	{
 		pollInputs();
+		mixer.tick();
 	}
 }

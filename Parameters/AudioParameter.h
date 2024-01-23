@@ -48,7 +48,7 @@ public:
             break;
         }
 
-        hw->PrintLine("Current value = " << curVal);
+        hw->PrintLine("Current value = %f", curVal);
     }
 
     type getValue() { return curVal; }
