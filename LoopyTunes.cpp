@@ -9,10 +9,11 @@ using namespace daisysp;
 TO DO:
 - Refactor play/record to have similar parameter class to analog ins
 - AudioParameter value smoothing
-- Test AudioParameter with different get function
+- Update AudioParameter value only if changed
 - Parameter update queue
 - Value normalisation
 - Tick parameters less often
+- Move buffers to track level
 */
 
 // Hardware
@@ -75,7 +76,7 @@ void init()
 
 void initADC()
 {
-	amp1.InitSingle(hw.GetPin(21));
+	amp1.InitSingle(daisy::seed::A0);
 	hw.adc.Init(&amp1, 1);
 	hw.adc.Start();
 }

@@ -32,9 +32,13 @@ public:
     
     void tick()
     {
-        input = hw->adc.Get(channelID);
-        System::Delay(2);
-        process();
+        float newInput = hw->adc.GetFloat(channelID);
+
+        if (newInput > (input + jitter) || newInput < (input - jitter))
+        {
+            input = newInput;;
+            process();
+        }
     }
 
     void process()
@@ -58,6 +62,7 @@ private:
 
     DaisySeed* hw;
     float input;
+    const float jitter = 0.01f;
 
     type curVal, min, max;
     uint8_t channelID;
