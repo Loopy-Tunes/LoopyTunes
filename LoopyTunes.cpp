@@ -14,6 +14,7 @@ TO DO:
 - Value normalisation
 - Tick parameters less often
 - Move buffers to track level
+- Reduce floating point precision
 */
 
 // Hardware
