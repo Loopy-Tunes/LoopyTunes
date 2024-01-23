@@ -26,6 +26,16 @@ struct TrackInformation
 // curve types
 enum CurveType
 {
-    LOG = 0,
+    LINEAR = 0,
     EXP
+};
+
+// channel IDs
+struct ChannelIDs
+{
+    uint8_t Amp1;
+    uint8_t Amp2;
+    uint8_t Amp3;
+    uint8_t Amp4;
+    uint8_t Encoder;
 };
