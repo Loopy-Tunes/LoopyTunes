@@ -1,3 +1,4 @@
+#include "daisy_seed.h"
 #include "../Utils/Helpers.h"
 #include <cstdint>
 
@@ -27,8 +28,6 @@ public:
 
         if(channelID != ChannelIDs::Encoder)
             isSelected = true;
-
-        assert(hw != nullptr);
     }
     
     void tick()
