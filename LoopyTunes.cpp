@@ -8,7 +8,11 @@ using namespace daisysp;
 /*
 TO DO:
 - Refactor play/record to have similar parameter class to analog ins
-- Implement AudioParameter
+- AudioParameter value smoothing
+- Test AudioParameter with different get function
+- Parameter update queue
+- Value normalisation
+- Tick parameters less often
 */
 
 // Hardware

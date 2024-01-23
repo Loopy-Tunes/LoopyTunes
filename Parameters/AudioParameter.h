@@ -32,23 +32,24 @@ public:
     
     void tick()
     {
-        input = hw->adc.GetFloat(channelID);
+        input = hw->adc.Get(channelID);
+        System::Delay(2);
         process();
     }
 
     void process()
     {
-        switch (curve)
+        switch(curve)
         {
-        case LINEAR:
-            curVal = (input * (max - min)) + min;
+            case LINEAR:
+                curVal = (input * (max - min)) + min;
             break;
-        case EXP:
-            curVal = ((input * input) * (max - min)) + min;
+            case EXP:
+                curVal = ((input * input) * (max - min)) + min;
             break;
         }
 
-        hw->PrintLine("Current value = %f", curVal);
+        hw->PrintLine("Current value = %g", curVal);
     }
 
     type getValue() { return curVal; }
