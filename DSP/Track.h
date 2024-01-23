@@ -1,5 +1,5 @@
-#include "../Utils/Helpers.h"
 #include "../Utils/Constants.h"
+#include "../Parameters/AudioParameter.h"
 
 /**********************************************************//**
  *  Class name: Track
