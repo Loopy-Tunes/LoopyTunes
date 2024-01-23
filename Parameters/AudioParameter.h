@@ -2,10 +2,10 @@
 #include "../Utils/Helpers.h"
 #include <cstdint>
 
-/**************************************************************************//**
+/*****************************************************************************//**
  *  Class name: AudioParameter
- *  Function: Parameter object for DSP classes
- *****************************************************************************/
+ *  Function: Parameter object for DSP classes that contains pot boilerplate code
+ ********************************************************************************/
 
 using namespace daisy;
 
