@@ -52,17 +52,17 @@ void Track::setIsPlaying()
 void Track::incrementWritePos()
 {
     if(ph.writePos > (bufferSize - 1))
-            ph.writePos = 0;
-        else
-            ph.writePos++;
+        ph.writePos = 0;
+    else
+        ph.writePos++;
 }
 
 void Track::incrementReadPos()
 {
     if(ph.readPos > (ti.loopLength - 1))
-            ph.readPos = 0;
-        else
-            ph.readPos++;
+        ph.readPos = 0;
+    else
+        ph.readPos++;
 }
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)

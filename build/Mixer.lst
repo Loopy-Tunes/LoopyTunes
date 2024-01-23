@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
   49              	.LBB6:
    6:DSP/Mixer.cpp ****     buffer[L] = m[L];
    7:DSP/Mixer.cpp ****     buffer[R] = m[R];
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 2
 
 
    8:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
   87 0020 06EB8503 		add	r3, r6, r5, lsl #2
   88 0024 AA00     		lsls	r2, r5, #2
   89              	.LVL4:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 3
 
 
   90              		.loc 1 11 26 is_stmt 0 view .LVU22
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
  135              		.loc 1 20 22 is_stmt 0 view .LVU34
  136 0066 2A46     		mov	r2, r5
  137 0068 0A99     		ldr	r1, [sp, #40]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 4
 
 
  138 006a 04F1BC00 		add	r0, r4, #188
@@ -194,10 +194,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
    2:DSP/../Parameters/AudioParameter.h **** #include "../Utils/Helpers.h"
    3:DSP/../Parameters/AudioParameter.h **** #include <cstdint>
    4:DSP/../Parameters/AudioParameter.h **** 
-   5:DSP/../Parameters/AudioParameter.h **** /**************************************************************************//**
+   5:DSP/../Parameters/AudioParameter.h **** /*****************************************************************************//**
    6:DSP/../Parameters/AudioParameter.h ****  *  Class name: AudioParameter
-   7:DSP/../Parameters/AudioParameter.h ****  *  Function: Parameter object for DSP classes
-   8:DSP/../Parameters/AudioParameter.h ****  *****************************************************************************/
+   7:DSP/../Parameters/AudioParameter.h ****  *  Function: Parameter object for DSP classes that contains pot boilerplate code
+   8:DSP/../Parameters/AudioParameter.h ****  ********************************************************************************/
    9:DSP/../Parameters/AudioParameter.h **** 
   10:DSP/../Parameters/AudioParameter.h **** using namespace daisy;
   11:DSP/../Parameters/AudioParameter.h **** 
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
   29:DSP/../Parameters/AudioParameter.h ****         if(channelID != ChannelIDs::Encoder)
   30:DSP/../Parameters/AudioParameter.h ****             isSelected = true;
  159              		.loc 2 30 24 view .LVU43
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 5
 
 
  160 0082 0123     		movs	r3, #1
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
   11:DSP/Mixer.cpp ****     {
  200              		.loc 1 11 26 is_stmt 0 view .LVU60
  201 00aa 8842     		cmp	r0, r1
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 6
 
 
   14:DSP/Mixer.cpp ****     }
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
  253              		.p2align 2,,3
  254              		.global	_ZN5Mixer4tickEv
  255              		.syntax unified
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 7
 
 
  256              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
  299 0002 FFF7FEBF 		b	_ZN5Track17processInputBlockEPKfS1_j
  300              	.LVL20:
  301              		.loc 1 42 35 view .LVU75
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 8
 
 
  302              		.cfi_endproc
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
  354              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
  355              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
  356              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 9
 
 
  357              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
@@ -505,23 +505,23 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
  378              		.file 47 "DSP/Mixer.h"
  379              		.file 48 "<built-in>"
  380              		.file 49 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Mixer.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:213    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:220    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:234    .text._ZN5Mixer7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:241    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:252    .text._ZN5Mixer4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:259    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:279    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:286    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:306    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:313    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:213    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:220    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:234    .text._ZN5Mixer7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:241    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:252    .text._ZN5Mixer4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:259    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:279    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:286    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:306    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2ojIn1.s:313    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
 
 UNDEFINED SYMBOLS
 memset

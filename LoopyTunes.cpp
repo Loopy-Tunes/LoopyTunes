@@ -18,6 +18,9 @@ DaisySeed hw;
 Switch record;
 Switch play;
 
+// ADC inputs
+AdcChannelConfig amp1;
+
 // Global
 float sampleRate;
 bool isRecord;
@@ -47,7 +50,6 @@ float* track4Ptr[2] = {track4[L], track4[R]};
 
 // UI - QSPI
 
-// functions
 void init()
 {
 	// initialise Daisy Seed
@@ -65,6 +67,13 @@ void init()
 
 	// initialise DSP
 	mixer.init(&hw, mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, sampleRate * DURATION);
+}
+
+void initADC()
+{
+	amp1.InitSingle(hw.GetPin(21));
+	hw.adc.Init(&amp1, 1);
+	hw.adc.Start();
 }
 
 void pollInputs()
@@ -96,6 +105,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 int main(void)
 {
 	init();
+	initADC();
 
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
