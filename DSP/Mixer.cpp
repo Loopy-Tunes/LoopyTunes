@@ -19,7 +19,7 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
     track3.track.init(t3, s);
     track4.track.init(t4, s);
 
-    track1.gain.init(seed, 0, 1, EXP, ChannelIDs::Amp1);
+    track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
 }
 
 void Mixer::initParameters()

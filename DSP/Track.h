@@ -31,5 +31,4 @@ private:
     float* buffer[2];
     size_t bufferSize;
 
-
 };
