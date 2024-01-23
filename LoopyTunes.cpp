@@ -64,7 +64,7 @@ void init()
 	isPlay = false;
 
 	// initialise DSP
-	mixer.init(mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, sampleRate * DURATION);
+	mixer.init(&hw, mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, sampleRate * DURATION);
 }
 
 void pollInputs()

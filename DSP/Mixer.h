@@ -9,7 +9,7 @@ class Mixer
 {
 public:
 
-    void init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); 
+    void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); 
     void initParameters();
     
     void prepare();
@@ -30,7 +30,7 @@ private:
     struct MixerTrack
     {
         Track track;
-        float gain;
+        AudioParameter<float> gain;
     };
 
     MixerTrack track1;

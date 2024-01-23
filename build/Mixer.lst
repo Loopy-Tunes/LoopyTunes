@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -18,453 +18,510 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 1
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.section	.text._ZN5Mixer4initEPPfS1_S1_S1_S1_j,"ax",%progbits
+  18              		.section	.text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j,"ax",%progbits
   19              		.align	1
   20              		.p2align 2,,3
-  21              		.global	_ZN5Mixer4initEPPfS1_S1_S1_S1_j
+  21              		.global	_ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j
   22              		.syntax unified
   23              		.thumb
   24              		.thumb_func
-  26              	_ZN5Mixer4initEPPfS1_S1_S1_S1_j:
+  26              	_ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:
   27              	.LVL0:
   28              	.LFB2541:
   29              		.file 1 "DSP/Mixer.cpp"
    1:DSP/Mixer.cpp **** #include "Mixer.h"
    2:DSP/Mixer.cpp **** 
-   3:DSP/Mixer.cpp **** void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
+   3:DSP/Mixer.cpp **** void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], flo
    4:DSP/Mixer.cpp **** {
   30              		.loc 1 4 1 view -0
   31              		.cfi_startproc
-  32              		@ args = 12, pretend = 0, frame = 8
+  32              		@ args = 16, pretend = 0, frame = 8
   33              		@ frame_needed = 0, uses_anonymous_args = 0
    5:DSP/Mixer.cpp ****     bufferSize = s;
   34              		.loc 1 5 5 view .LVU1
    4:DSP/Mixer.cpp ****     bufferSize = s;
   35              		.loc 1 4 1 is_stmt 0 view .LVU2
-  36 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
-  37              		.cfi_def_cfa_offset 32
-  38              		.cfi_offset 4, -32
-  39              		.cfi_offset 5, -28
-  40              		.cfi_offset 6, -24
-  41              		.cfi_offset 7, -20
-  42              		.cfi_offset 8, -16
-  43              		.cfi_offset 9, -12
-  44              		.cfi_offset 10, -8
-  45              		.cfi_offset 14, -4
-  46 0004 0446     		mov	r4, r0
-  47 0006 82B0     		sub	sp, sp, #8
-  48              		.cfi_def_cfa_offset 40
-   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
-  49              		.loc 1 6 20 view .LVU3
-  50 0008 0868     		ldr	r0, [r1]
-  51              	.LVL1:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 2
-
-
+  36 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  37              		.cfi_def_cfa_offset 24
+  38              		.cfi_offset 4, -24
+  39              		.cfi_offset 5, -20
+  40              		.cfi_offset 6, -16
+  41              		.cfi_offset 7, -12
+  42              		.cfi_offset 8, -8
+  43              		.cfi_offset 14, -4
+  44 0004 82B0     		sub	sp, sp, #8
+  45              		.cfi_def_cfa_offset 32
    4:DSP/Mixer.cpp ****     bufferSize = s;
-  52              		.loc 1 4 1 view .LVU4
-  53 000a 1F46     		mov	r7, r3
-  54 000c 0C9D     		ldr	r5, [sp, #48]
-  55              	.LBB2:
+  46              		.loc 1 4 1 view .LVU3
+  47 0006 0446     		mov	r4, r0
+  48 0008 9846     		mov	r8, r3
+  49              	.LBB6:
+   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
    7:DSP/Mixer.cpp ****     buffer[R] = m[R];
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 2
+
+
    8:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
    9:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  56              		.loc 1 9 22 view .LVU5
-  57 000e 0023     		movs	r3, #0
-  58              	.LVL2:
-  59              		.loc 1 9 22 view .LVU6
-  60              	.LBE2:
-   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
-  61              		.loc 1 6 15 view .LVU7
-  62 0010 2060     		str	r0, [r4]
+  50              		.loc 1 9 22 view .LVU4
+  51 000a 0023     		movs	r3, #0
+  52              	.LVL1:
+  53              		.loc 1 9 22 view .LVU5
+  54              	.LBE6:
    4:DSP/Mixer.cpp ****     bufferSize = s;
-  63              		.loc 1 4 1 view .LVU8
-  64 0012 9246     		mov	r10, r2
-   7:DSP/Mixer.cpp ****     buffer[R] = m[R];
-  65              		.loc 1 7 15 view .LVU9
-  66 0014 4E68     		ldr	r6, [r1, #4]
-   4:DSP/Mixer.cpp ****     bufferSize = s;
-  67              		.loc 1 4 1 view .LVU10
-  68 0016 DDF82890 		ldr	r9, [sp, #40]
-  69 001a DDF82C80 		ldr	r8, [sp, #44]
-   7:DSP/Mixer.cpp ****     buffer[R] = m[R];
-  70              		.loc 1 7 15 view .LVU11
-  71 001e 6660     		str	r6, [r4, #4]
+  55              		.loc 1 4 1 view .LVU6
+  56 000c 0B9D     		ldr	r5, [sp, #44]
+  57 000e 0F46     		mov	r7, r1
    5:DSP/Mixer.cpp ****     buffer[L] = m[L];
-  72              		.loc 1 5 16 view .LVU12
-  73 0020 A560     		str	r5, [r4, #8]
-   6:DSP/Mixer.cpp ****     buffer[R] = m[R];
-  74              		.loc 1 6 5 is_stmt 1 view .LVU13
+  58              		.loc 1 5 16 view .LVU7
+  59 0010 8560     		str	r5, [r0, #8]
+   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
+  60              		.loc 1 6 5 is_stmt 1 view .LVU8
+   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
+  61              		.loc 1 6 20 is_stmt 0 view .LVU9
+  62 0012 1068     		ldr	r0, [r2]
+  63              	.LVL2:
+   6:DSP/Mixer.cpp ****     buffer[L] = m[L];
+  64              		.loc 1 6 15 view .LVU10
+  65 0014 2060     		str	r0, [r4]
    7:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
-  75              		.loc 1 7 5 view .LVU14
+  66              		.loc 1 7 5 is_stmt 1 view .LVU11
+   7:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  67              		.loc 1 7 15 is_stmt 0 view .LVU12
+  68 0016 5668     		ldr	r6, [r2, #4]
+  69              	.LBB7:
+  70              		.loc 1 9 22 view .LVU13
+  71 0018 C4E90333 		strd	r3, r3, [r4, #12]
+  72              	.LBE7:
+   7:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  73              		.loc 1 7 15 view .LVU14
+  74 001c 6660     		str	r6, [r4, #4]
    8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  76              		.loc 1 8 5 view .LVU15
-  77              	.LVL3:
-  78              	.LBB3:
+  75              		.loc 1 8 5 is_stmt 1 view .LVU15
+  76              	.LVL3:
+  77              	.LBB8:
    8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  79              		.loc 1 8 23 view .LVU16
-  80              		.loc 1 9 9 view .LVU17
+  78              		.loc 1 8 23 view .LVU16
+  79              		.loc 1 9 9 view .LVU17
    8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  81              		.loc 1 8 5 view .LVU18
+  80              		.loc 1 8 5 view .LVU18
    8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  82              		.loc 1 8 23 view .LVU19
-  83              		.loc 1 9 9 view .LVU20
+  81              		.loc 1 8 23 view .LVU19
    8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  84              		.loc 1 8 5 view .LVU21
-   8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  85              		.loc 1 8 23 view .LVU22
-   8:DSP/Mixer.cpp ****         curSample[i] = nullptr;
-  86              		.loc 1 8 23 is_stmt 0 view .LVU23
-  87              	.LBE3:
-  88              	.LBB4:
+  82              		.loc 1 8 23 is_stmt 0 view .LVU20
+  83              	.LBE8:
+  84              	.LBB9:
   10:DSP/Mixer.cpp **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 3
-
-
   11:DSP/Mixer.cpp ****     for(size_t j = 0 ; j < bufferSize ; j++)
-  89              		.loc 1 11 26 is_stmt 1 view .LVU24
-  90              	.LBE4:
-  91              	.LBB5:
-   9:DSP/Mixer.cpp **** 
-  92              		.loc 1 9 22 is_stmt 0 view .LVU25
-  93 0022 C4E90333 		strd	r3, r3, [r4, #12]
-  94              	.LBE5:
-  95              	.LBB6:
-  96              		.loc 1 11 26 view .LVU26
-  97 0026 85B1     		cbz	r5, .L2
-  98 0028 06EB8503 		add	r3, r6, r5, lsl #2
-  99 002c AA00     		lsls	r2, r5, #2
- 100              	.LVL4:
- 101              		.loc 1 11 26 view .LVU27
- 102 002e 9842     		cmp	r0, r3
- 103 0030 02D2     		bcs	.L6
- 104 0032 8118     		adds	r1, r0, r2
- 105              	.LVL5:
- 106              		.loc 1 11 26 view .LVU28
- 107 0034 8E42     		cmp	r6, r1
- 108 0036 23D3     		bcc	.L5
- 109              	.L6:
+  85              		.loc 1 11 26 is_stmt 1 view .LVU21
+  86 001e 85B1     		cbz	r5, .L2
+  87 0020 06EB8503 		add	r3, r6, r5, lsl #2
+  88 0024 AA00     		lsls	r2, r5, #2
+  89              	.LVL4:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 3
+
+
+  90              		.loc 1 11 26 is_stmt 0 view .LVU22
+  91 0026 9842     		cmp	r0, r3
+  92 0028 02D2     		bcs	.L6
+  93 002a 8118     		adds	r1, r0, r2
+  94              	.LVL5:
+  95              		.loc 1 11 26 view .LVU23
+  96 002c 8E42     		cmp	r6, r1
+  97 002e 32D3     		bcc	.L5
+  98              	.L6:
   12:DSP/Mixer.cpp ****     {
   13:DSP/Mixer.cpp ****         buffer[L][j] = 0.0f;
- 110              		.loc 1 13 22 view .LVU29
- 111 0038 0021     		movs	r1, #0
- 112 003a 0192     		str	r2, [sp, #4]
- 113 003c FFF7FEFF 		bl	memset
- 114              	.LVL6:
+  99              		.loc 1 13 22 view .LVU24
+ 100 0030 0021     		movs	r1, #0
+ 101 0032 0192     		str	r2, [sp, #4]
+ 102 0034 FFF7FEFF 		bl	memset
+ 103              	.LVL6:
   14:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
- 115              		.loc 1 14 22 view .LVU30
- 116 0040 019A     		ldr	r2, [sp, #4]
- 117 0042 3046     		mov	r0, r6
- 118 0044 0021     		movs	r1, #0
- 119 0046 FFF7FEFF 		bl	memset
- 120              	.LVL7:
- 121              	.L2:
- 122              		.loc 1 14 22 view .LVU31
- 123              	.LBE6:
+ 104              		.loc 1 14 22 view .LVU25
+ 105 0038 019A     		ldr	r2, [sp, #4]
+ 106 003a 3046     		mov	r0, r6
+ 107 003c 0021     		movs	r1, #0
+ 108 003e FFF7FEFF 		bl	memset
+ 109              	.LVL7:
+ 110              	.L2:
+ 111              		.loc 1 14 22 view .LVU26
+ 112              	.LBE9:
   15:DSP/Mixer.cpp ****     }
   16:DSP/Mixer.cpp **** 
   17:DSP/Mixer.cpp ****     track1.track.init(t1, s);
- 124              		.loc 1 17 5 is_stmt 1 view .LVU32
- 125              		.loc 1 17 22 is_stmt 0 view .LVU33
- 126 004a 5146     		mov	r1, r10
- 127 004c 04F11400 		add	r0, r4, #20
- 128 0050 2A46     		mov	r2, r5
- 129 0052 FFF7FEFF 		bl	_ZN5Track4initEPPfj
- 130              	.LVL8:
+ 113              		.loc 1 17 5 is_stmt 1 view .LVU27
+ 114              		.loc 1 17 22 is_stmt 0 view .LVU28
+ 115 0042 2A46     		mov	r2, r5
+ 116 0044 4146     		mov	r1, r8
+ 117 0046 04F11400 		add	r0, r4, #20
+ 118 004a FFF7FEFF 		bl	_ZN5Track4initEPPfj
+ 119              	.LVL8:
   18:DSP/Mixer.cpp ****     track2.track.init(t2, s);
- 131              		.loc 1 18 5 is_stmt 1 view .LVU34
- 132              		.loc 1 18 22 is_stmt 0 view .LVU35
- 133 0056 2A46     		mov	r2, r5
- 134 0058 3946     		mov	r1, r7
- 135 005a 04F13800 		add	r0, r4, #56
- 136 005e FFF7FEFF 		bl	_ZN5Track4initEPPfj
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 4
-
-
- 137              	.LVL9:
+ 120              		.loc 1 18 5 is_stmt 1 view .LVU29
+ 121              		.loc 1 18 22 is_stmt 0 view .LVU30
+ 122 004e 2A46     		mov	r2, r5
+ 123 0050 0899     		ldr	r1, [sp, #32]
+ 124 0052 04F14C00 		add	r0, r4, #76
+ 125 0056 FFF7FEFF 		bl	_ZN5Track4initEPPfj
+ 126              	.LVL9:
   19:DSP/Mixer.cpp ****     track3.track.init(t3, s);
- 138              		.loc 1 19 5 is_stmt 1 view .LVU36
- 139              		.loc 1 19 22 is_stmt 0 view .LVU37
- 140 0062 2A46     		mov	r2, r5
- 141 0064 4946     		mov	r1, r9
- 142 0066 04F15C00 		add	r0, r4, #92
- 143 006a FFF7FEFF 		bl	_ZN5Track4initEPPfj
- 144              	.LVL10:
+ 127              		.loc 1 19 5 is_stmt 1 view .LVU31
+ 128              		.loc 1 19 22 is_stmt 0 view .LVU32
+ 129 005a 2A46     		mov	r2, r5
+ 130 005c 0999     		ldr	r1, [sp, #36]
+ 131 005e 04F18400 		add	r0, r4, #132
+ 132 0062 FFF7FEFF 		bl	_ZN5Track4initEPPfj
+ 133              	.LVL10:
   20:DSP/Mixer.cpp ****     track4.track.init(t4, s);
- 145              		.loc 1 20 5 is_stmt 1 view .LVU38
- 146              		.loc 1 20 22 is_stmt 0 view .LVU39
- 147 006e 2A46     		mov	r2, r5
- 148 0070 4146     		mov	r1, r8
- 149 0072 04F18000 		add	r0, r4, #128
-  21:DSP/Mixer.cpp **** }
- 150              		.loc 1 21 1 view .LVU40
- 151 0076 02B0     		add	sp, sp, #8
- 152              		.cfi_remember_state
- 153              		.cfi_def_cfa_offset 32
- 154              		@ sp needed
- 155 0078 BDE8F047 		pop	{r4, r5, r6, r7, r8, r9, r10, lr}
- 156              		.cfi_restore 14
- 157              		.cfi_restore 10
- 158              		.cfi_restore 9
- 159              		.cfi_restore 8
- 160              		.cfi_restore 7
- 161              		.cfi_restore 6
- 162              		.cfi_restore 5
- 163              		.cfi_restore 4
- 164              		.cfi_def_cfa_offset 0
- 165              	.LVL11:
-  20:DSP/Mixer.cpp ****     track4.track.init(t4, s);
- 166              		.loc 1 20 22 view .LVU41
- 167 007c FFF7FEBF 		b	_ZN5Track4initEPPfj
- 168              	.LVL12:
- 169              	.L5:
- 170              		.cfi_restore_state
- 171              	.LBB7:
-  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
- 172              		.loc 1 13 9 is_stmt 1 view .LVU42
-  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
- 173              		.loc 1 13 22 is_stmt 0 view .LVU43
- 174 0080 0023     		movs	r3, #0
- 175 0082 40F8043B 		str	r3, [r0], #4	@ float
-  14:DSP/Mixer.cpp ****     }
- 176              		.loc 1 14 9 is_stmt 1 view .LVU44
-  11:DSP/Mixer.cpp ****     {
- 177              		.loc 1 11 26 is_stmt 0 view .LVU45
- 178 0086 8842     		cmp	r0, r1
-  14:DSP/Mixer.cpp ****     }
- 179              		.loc 1 14 22 view .LVU46
- 180 0088 46F8043B 		str	r3, [r6], #4	@ float
-  11:DSP/Mixer.cpp ****     {
- 181              		.loc 1 11 5 is_stmt 1 view .LVU47
-  11:DSP/Mixer.cpp ****     {
- 182              		.loc 1 11 26 view .LVU48
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 5
+ 134              		.loc 1 20 5 is_stmt 1 view .LVU33
+ 135              		.loc 1 20 22 is_stmt 0 view .LVU34
+ 136 0066 2A46     		mov	r2, r5
+ 137 0068 0A99     		ldr	r1, [sp, #40]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 4
 
 
- 183 008c DDD0     		beq	.L2
-  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
- 184              		.loc 1 13 9 view .LVU49
-  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
- 185              		.loc 1 13 22 is_stmt 0 view .LVU50
- 186 008e 0023     		movs	r3, #0
- 187 0090 40F8043B 		str	r3, [r0], #4	@ float
-  14:DSP/Mixer.cpp ****     }
- 188              		.loc 1 14 9 is_stmt 1 view .LVU51
-  11:DSP/Mixer.cpp ****     {
- 189              		.loc 1 11 26 is_stmt 0 view .LVU52
- 190 0094 8842     		cmp	r0, r1
-  14:DSP/Mixer.cpp ****     }
- 191              		.loc 1 14 22 view .LVU53
- 192 0096 46F8043B 		str	r3, [r6], #4	@ float
-  11:DSP/Mixer.cpp ****     {
- 193              		.loc 1 11 5 is_stmt 1 view .LVU54
-  11:DSP/Mixer.cpp ****     {
- 194              		.loc 1 11 26 view .LVU55
- 195 009a F1D1     		bne	.L5
- 196 009c D5E7     		b	.L2
- 197              	.LBE7:
- 198              		.cfi_endproc
- 199              	.LFE2541:
- 201 009e 00BF     		.section	.text._ZN5Mixer14initParametersEv,"ax",%progbits
- 202              		.align	1
- 203              		.p2align 2,,3
- 204              		.global	_ZN5Mixer14initParametersEv
- 205              		.syntax unified
- 206              		.thumb
- 207              		.thumb_func
- 209              	_ZN5Mixer14initParametersEv:
- 210              	.LVL13:
- 211              	.LFB2542:
-  22:DSP/Mixer.cpp **** 
-  23:DSP/Mixer.cpp **** void Mixer::initParameters()
-  24:DSP/Mixer.cpp **** {
- 212              		.loc 1 24 1 view -0
- 213              		.cfi_startproc
- 214              		@ args = 0, pretend = 0, frame = 0
- 215              		@ frame_needed = 0, uses_anonymous_args = 0
- 216              		@ link register save eliminated.
-  25:DSP/Mixer.cpp **** 
-  26:DSP/Mixer.cpp **** }
- 217              		.loc 1 26 1 is_stmt 0 view .LVU57
- 218 0000 7047     		bx	lr
- 219              		.cfi_endproc
- 220              	.LFE2542:
- 222 0002 00BF     		.section	.text._ZN5Mixer7prepareEv,"ax",%progbits
- 223              		.align	1
- 224              		.p2align 2,,3
- 225              		.global	_ZN5Mixer7prepareEv
- 226              		.syntax unified
- 227              		.thumb
- 228              		.thumb_func
- 230              	_ZN5Mixer7prepareEv:
- 231              	.LFB2562:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 6
+ 138 006a 04F1BC00 		add	r0, r4, #188
+ 139 006e FFF7FEFF 		bl	_ZN5Track4initEPPfj
+ 140              	.LVL11:
+  21:DSP/Mixer.cpp **** 
+  22:DSP/Mixer.cpp ****     track1.gain.init(seed, 0.f, 1.f, EXP, ChannelIDs::Amp1);
+ 141              		.loc 1 22 5 is_stmt 1 view .LVU35
+ 142              	.LBB10:
+ 143              	.LBI10:
+ 144              		.file 2 "DSP/../Parameters/AudioParameter.h"
+   1:DSP/../Parameters/AudioParameter.h **** #include "daisy_seed.h"
+   2:DSP/../Parameters/AudioParameter.h **** #include "../Utils/Helpers.h"
+   3:DSP/../Parameters/AudioParameter.h **** #include <cstdint>
+   4:DSP/../Parameters/AudioParameter.h **** 
+   5:DSP/../Parameters/AudioParameter.h **** /**************************************************************************//**
+   6:DSP/../Parameters/AudioParameter.h ****  *  Class name: AudioParameter
+   7:DSP/../Parameters/AudioParameter.h ****  *  Function: Parameter object for DSP classes
+   8:DSP/../Parameters/AudioParameter.h ****  *****************************************************************************/
+   9:DSP/../Parameters/AudioParameter.h **** 
+  10:DSP/../Parameters/AudioParameter.h **** using namespace daisy;
+  11:DSP/../Parameters/AudioParameter.h **** 
+  12:DSP/../Parameters/AudioParameter.h **** template <class type>
+  13:DSP/../Parameters/AudioParameter.h **** class AudioParameter
+  14:DSP/../Parameters/AudioParameter.h **** {
+  15:DSP/../Parameters/AudioParameter.h **** public:
+  16:DSP/../Parameters/AudioParameter.h **** 
+  17:DSP/../Parameters/AudioParameter.h ****     void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID)
+ 145              		.loc 2 17 10 view .LVU36
+ 146              	.LBB11:
+  18:DSP/../Parameters/AudioParameter.h ****     {
+  19:DSP/../Parameters/AudioParameter.h ****         hw = seed;
+  20:DSP/../Parameters/AudioParameter.h ****         input = 0;
+ 147              		.loc 2 20 15 is_stmt 0 view .LVU37
+ 148 0072 0023     		movs	r3, #0
+  21:DSP/../Parameters/AudioParameter.h **** 
+  22:DSP/../Parameters/AudioParameter.h ****         curVal = 0;
+  23:DSP/../Parameters/AudioParameter.h ****         min = mi;
+  24:DSP/../Parameters/AudioParameter.h ****         max = ma;
+ 149              		.loc 2 24 13 view .LVU38
+ 150 0074 4FF07E51 		mov	r1, #1065353216
+  25:DSP/../Parameters/AudioParameter.h **** 
+  26:DSP/../Parameters/AudioParameter.h ****         curve = c;
+  27:DSP/../Parameters/AudioParameter.h ****         channelID = ID;
+ 151              		.loc 2 27 19 view .LVU39
+ 152 0078 4FF48072 		mov	r2, #256
+  20:DSP/../Parameters/AudioParameter.h **** 
+ 153              		.loc 2 20 15 view .LVU40
+ 154 007c A363     		str	r3, [r4, #56]	@ float
+  22:DSP/../Parameters/AudioParameter.h ****         min = mi;
+ 155              		.loc 2 22 16 view .LVU41
+ 156 007e E363     		str	r3, [r4, #60]	@ float
+  23:DSP/../Parameters/AudioParameter.h ****         max = ma;
+ 157              		.loc 2 23 13 view .LVU42
+ 158 0080 2364     		str	r3, [r4, #64]	@ float
+  28:DSP/../Parameters/AudioParameter.h **** 
+  29:DSP/../Parameters/AudioParameter.h ****         if(channelID != ChannelIDs::Encoder)
+  30:DSP/../Parameters/AudioParameter.h ****             isSelected = true;
+ 159              		.loc 2 30 24 view .LVU43
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 5
 
 
- 232              		.cfi_startproc
- 233              		@ args = 0, pretend = 0, frame = 0
- 234              		@ frame_needed = 0, uses_anonymous_args = 0
- 235              		@ link register save eliminated.
- 236 0000 7047     		bx	lr
- 237              		.cfi_endproc
- 238              	.LFE2562:
- 240 0002 00BF     		.section	.text._ZN5Mixer4tickEv,"ax",%progbits
- 241              		.align	1
- 242              		.p2align 2,,3
- 243              		.global	_ZN5Mixer4tickEv
- 244              		.syntax unified
- 245              		.thumb
- 246              		.thumb_func
- 248              	_ZN5Mixer4tickEv:
- 249              	.LVL14:
- 250              	.LFB2544:
+ 160 0082 0123     		movs	r3, #1
+  19:DSP/../Parameters/AudioParameter.h ****         input = 0;
+ 161              		.loc 2 19 12 view .LVU44
+ 162 0084 6763     		str	r7, [r4, #52]
+  24:DSP/../Parameters/AudioParameter.h **** 
+ 163              		.loc 2 24 13 view .LVU45
+ 164 0086 6164     		str	r1, [r4, #68]	@ float
+  27:DSP/../Parameters/AudioParameter.h **** 
+ 165              		.loc 2 27 19 view .LVU46
+ 166 0088 A4F84820 		strh	r2, [r4, #72]	@ movhi
+ 167              		.loc 2 30 24 view .LVU47
+ 168 008c 84F84A30 		strb	r3, [r4, #74]
+ 169              	.LVL12:
+ 170              		.loc 2 30 24 view .LVU48
+ 171              	.LBE11:
+ 172              	.LBE10:
+  23:DSP/Mixer.cpp **** }
+ 173              		.loc 1 23 1 view .LVU49
+ 174 0090 02B0     		add	sp, sp, #8
+ 175              		.cfi_remember_state
+ 176              		.cfi_def_cfa_offset 24
+ 177              		@ sp needed
+ 178 0092 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 179              	.LVL13:
+ 180              	.L5:
+ 181              		.cfi_restore_state
+ 182              	.LBB12:
+  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
+ 183              		.loc 1 13 9 is_stmt 1 view .LVU50
+  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
+ 184              		.loc 1 13 22 is_stmt 0 view .LVU51
+ 185 0096 0023     		movs	r3, #0
+ 186 0098 40F8043B 		str	r3, [r0], #4	@ float
+  14:DSP/Mixer.cpp ****     }
+ 187              		.loc 1 14 9 is_stmt 1 view .LVU52
+  11:DSP/Mixer.cpp ****     {
+ 188              		.loc 1 11 26 is_stmt 0 view .LVU53
+ 189 009c 8842     		cmp	r0, r1
+  14:DSP/Mixer.cpp ****     }
+ 190              		.loc 1 14 22 view .LVU54
+ 191 009e 46F8043B 		str	r3, [r6], #4	@ float
+  11:DSP/Mixer.cpp ****     {
+ 192              		.loc 1 11 5 is_stmt 1 view .LVU55
+  11:DSP/Mixer.cpp ****     {
+ 193              		.loc 1 11 26 view .LVU56
+ 194 00a2 CED0     		beq	.L2
+  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
+ 195              		.loc 1 13 9 view .LVU57
+  13:DSP/Mixer.cpp ****         buffer[R][j] = 0.0f;
+ 196              		.loc 1 13 22 is_stmt 0 view .LVU58
+ 197 00a4 0023     		movs	r3, #0
+ 198 00a6 40F8043B 		str	r3, [r0], #4	@ float
+  14:DSP/Mixer.cpp ****     }
+ 199              		.loc 1 14 9 is_stmt 1 view .LVU59
+  11:DSP/Mixer.cpp ****     {
+ 200              		.loc 1 11 26 is_stmt 0 view .LVU60
+ 201 00aa 8842     		cmp	r0, r1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 6
+
+
+  14:DSP/Mixer.cpp ****     }
+ 202              		.loc 1 14 22 view .LVU61
+ 203 00ac 46F8043B 		str	r3, [r6], #4	@ float
+  11:DSP/Mixer.cpp ****     {
+ 204              		.loc 1 11 5 is_stmt 1 view .LVU62
+  11:DSP/Mixer.cpp ****     {
+ 205              		.loc 1 11 26 view .LVU63
+ 206 00b0 F1D1     		bne	.L5
+ 207 00b2 C6E7     		b	.L2
+ 208              	.LBE12:
+ 209              		.cfi_endproc
+ 210              	.LFE2541:
+ 212              		.section	.text._ZN5Mixer14initParametersEv,"ax",%progbits
+ 213              		.align	1
+ 214              		.p2align 2,,3
+ 215              		.global	_ZN5Mixer14initParametersEv
+ 216              		.syntax unified
+ 217              		.thumb
+ 218              		.thumb_func
+ 220              	_ZN5Mixer14initParametersEv:
+ 221              	.LVL14:
+ 222              	.LFB2542:
+  24:DSP/Mixer.cpp **** 
+  25:DSP/Mixer.cpp **** void Mixer::initParameters()
+  26:DSP/Mixer.cpp **** {
+ 223              		.loc 1 26 1 view -0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
   27:DSP/Mixer.cpp **** 
-  28:DSP/Mixer.cpp **** void Mixer::prepare()
-  29:DSP/Mixer.cpp **** {
-  30:DSP/Mixer.cpp **** 
-  31:DSP/Mixer.cpp **** }
+  28:DSP/Mixer.cpp **** }
+ 228              		.loc 1 28 1 is_stmt 0 view .LVU65
+ 229 0000 7047     		bx	lr
+ 230              		.cfi_endproc
+ 231              	.LFE2542:
+ 233 0002 00BF     		.section	.text._ZN5Mixer7prepareEv,"ax",%progbits
+ 234              		.align	1
+ 235              		.p2align 2,,3
+ 236              		.global	_ZN5Mixer7prepareEv
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 241              	_ZN5Mixer7prepareEv:
+ 242              	.LFB2563:
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+ 247 0000 7047     		bx	lr
+ 248              		.cfi_endproc
+ 249              	.LFE2563:
+ 251 0002 00BF     		.section	.text._ZN5Mixer4tickEv,"ax",%progbits
+ 252              		.align	1
+ 253              		.p2align 2,,3
+ 254              		.global	_ZN5Mixer4tickEv
+ 255              		.syntax unified
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 7
+
+
+ 256              		.thumb
+ 257              		.thumb_func
+ 259              	_ZN5Mixer4tickEv:
+ 260              	.LVL15:
+ 261              	.LFB2544:
+  29:DSP/Mixer.cpp **** 
+  30:DSP/Mixer.cpp **** void Mixer::prepare()
+  31:DSP/Mixer.cpp **** {
   32:DSP/Mixer.cpp **** 
-  33:DSP/Mixer.cpp **** void Mixer::tick()
-  34:DSP/Mixer.cpp **** {
- 251              		.loc 1 34 1 is_stmt 1 view -0
- 252              		.cfi_startproc
- 253              		@ args = 0, pretend = 0, frame = 0
- 254              		@ frame_needed = 0, uses_anonymous_args = 0
- 255              		@ link register save eliminated.
-  35:DSP/Mixer.cpp ****     track1.track.tick();
- 256              		.loc 1 35 5 view .LVU59
- 257              		.loc 1 35 22 is_stmt 0 view .LVU60
- 258 0000 1430     		adds	r0, r0, #20
- 259              	.LVL15:
- 260              		.loc 1 35 22 view .LVU61
- 261 0002 FFF7FEBF 		b	_ZN5Track4tickEv
- 262              	.LVL16:
- 263              		.loc 1 35 22 view .LVU62
- 264              		.cfi_endproc
- 265              	.LFE2544:
- 267 0006 00BF     		.section	.text._ZN5Mixer17processInputBlockEPKfS1_j,"ax",%progbits
- 268              		.align	1
- 269              		.p2align 2,,3
- 270              		.global	_ZN5Mixer17processInputBlockEPKfS1_j
- 271              		.syntax unified
- 272              		.thumb
- 273              		.thumb_func
- 275              	_ZN5Mixer17processInputBlockEPKfS1_j:
- 276              	.LVL17:
- 277              	.LFB2545:
-  36:DSP/Mixer.cpp **** }
-  37:DSP/Mixer.cpp **** 
-  38:DSP/Mixer.cpp **** void Mixer::processInputBlock(const float* left, const float* right, size_t size)
-  39:DSP/Mixer.cpp **** {
- 278              		.loc 1 39 1 is_stmt 1 view -0
- 279              		.cfi_startproc
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 7
+  33:DSP/Mixer.cpp **** }
+  34:DSP/Mixer.cpp **** 
+  35:DSP/Mixer.cpp **** void Mixer::tick()
+  36:DSP/Mixer.cpp **** {
+ 262              		.loc 1 36 1 is_stmt 1 view -0
+ 263              		.cfi_startproc
+ 264              		@ args = 0, pretend = 0, frame = 0
+ 265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 266              		@ link register save eliminated.
+  37:DSP/Mixer.cpp ****     track1.track.tick();
+ 267              		.loc 1 37 5 view .LVU67
+ 268              		.loc 1 37 22 is_stmt 0 view .LVU68
+ 269 0000 1430     		adds	r0, r0, #20
+ 270              	.LVL16:
+ 271              		.loc 1 37 22 view .LVU69
+ 272 0002 FFF7FEBF 		b	_ZN5Track4tickEv
+ 273              	.LVL17:
+ 274              		.loc 1 37 22 view .LVU70
+ 275              		.cfi_endproc
+ 276              	.LFE2544:
+ 278 0006 00BF     		.section	.text._ZN5Mixer17processInputBlockEPKfS1_j,"ax",%progbits
+ 279              		.align	1
+ 280              		.p2align 2,,3
+ 281              		.global	_ZN5Mixer17processInputBlockEPKfS1_j
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 286              	_ZN5Mixer17processInputBlockEPKfS1_j:
+ 287              	.LVL18:
+ 288              	.LFB2545:
+  38:DSP/Mixer.cpp **** }
+  39:DSP/Mixer.cpp **** 
+  40:DSP/Mixer.cpp **** void Mixer::processInputBlock(const float* left, const float* right, size_t size)
+  41:DSP/Mixer.cpp **** {
+ 289              		.loc 1 41 1 is_stmt 1 view -0
+ 290              		.cfi_startproc
+ 291              		@ args = 0, pretend = 0, frame = 0
+ 292              		@ frame_needed = 0, uses_anonymous_args = 0
+ 293              		@ link register save eliminated.
+  42:DSP/Mixer.cpp ****     track1.track.processInputBlock(left, right, size);
+ 294              		.loc 1 42 5 view .LVU72
+ 295              		.loc 1 42 35 is_stmt 0 view .LVU73
+ 296 0000 1430     		adds	r0, r0, #20
+ 297              	.LVL19:
+ 298              		.loc 1 42 35 view .LVU74
+ 299 0002 FFF7FEBF 		b	_ZN5Track17processInputBlockEPKfS1_j
+ 300              	.LVL20:
+ 301              		.loc 1 42 35 view .LVU75
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 8
 
 
- 280              		@ args = 0, pretend = 0, frame = 0
- 281              		@ frame_needed = 0, uses_anonymous_args = 0
- 282              		@ link register save eliminated.
-  40:DSP/Mixer.cpp ****     track1.track.processInputBlock(left, right, size);
- 283              		.loc 1 40 5 view .LVU64
- 284              		.loc 1 40 35 is_stmt 0 view .LVU65
- 285 0000 1430     		adds	r0, r0, #20
- 286              	.LVL18:
- 287              		.loc 1 40 35 view .LVU66
- 288 0002 FFF7FEBF 		b	_ZN5Track17processInputBlockEPKfS1_j
- 289              	.LVL19:
- 290              		.loc 1 40 35 view .LVU67
- 291              		.cfi_endproc
- 292              	.LFE2545:
- 294 0006 00BF     		.section	.text._ZN5Mixer18processOutputBlockEPfS0_j,"ax",%progbits
- 295              		.align	1
- 296              		.p2align 2,,3
- 297              		.global	_ZN5Mixer18processOutputBlockEPfS0_j
- 298              		.syntax unified
- 299              		.thumb
- 300              		.thumb_func
- 302              	_ZN5Mixer18processOutputBlockEPfS0_j:
- 303              	.LVL20:
- 304              	.LFB2546:
-  41:DSP/Mixer.cpp **** }
-  42:DSP/Mixer.cpp **** 
-  43:DSP/Mixer.cpp **** void Mixer::processOutputBlock(float* left, float* right, size_t size)
-  44:DSP/Mixer.cpp **** {
- 305              		.loc 1 44 1 is_stmt 1 view -0
- 306              		.cfi_startproc
- 307              		@ args = 0, pretend = 0, frame = 0
- 308              		@ frame_needed = 0, uses_anonymous_args = 0
- 309              		@ link register save eliminated.
-  45:DSP/Mixer.cpp ****     track1.track.processOutputBlock(left, right, size);
- 310              		.loc 1 45 5 view .LVU69
- 311              		.loc 1 45 36 is_stmt 0 view .LVU70
- 312 0000 1430     		adds	r0, r0, #20
- 313              	.LVL21:
- 314              		.loc 1 45 36 view .LVU71
- 315 0002 FFF7FEBF 		b	_ZN5Track18processOutputBlockEPfS0_j
- 316              	.LVL22:
- 317              		.loc 1 45 36 view .LVU72
- 318              		.cfi_endproc
- 319              	.LFE2546:
- 321 0006 00BF     		.text
- 322              	.Letext0:
- 323              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 324              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 325              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 326              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 327              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 328              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 329              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 330              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 331              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 332              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 333              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 8
+ 302              		.cfi_endproc
+ 303              	.LFE2545:
+ 305 0006 00BF     		.section	.text._ZN5Mixer18processOutputBlockEPfS0_j,"ax",%progbits
+ 306              		.align	1
+ 307              		.p2align 2,,3
+ 308              		.global	_ZN5Mixer18processOutputBlockEPfS0_j
+ 309              		.syntax unified
+ 310              		.thumb
+ 311              		.thumb_func
+ 313              	_ZN5Mixer18processOutputBlockEPfS0_j:
+ 314              	.LVL21:
+ 315              	.LFB2546:
+  43:DSP/Mixer.cpp **** }
+  44:DSP/Mixer.cpp **** 
+  45:DSP/Mixer.cpp **** void Mixer::processOutputBlock(float* left, float* right, size_t size)
+  46:DSP/Mixer.cpp **** {
+ 316              		.loc 1 46 1 is_stmt 1 view -0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320              		@ link register save eliminated.
+  47:DSP/Mixer.cpp ****     track1.track.processOutputBlock(left, right, size);
+ 321              		.loc 1 47 5 view .LVU77
+ 322              		.loc 1 47 36 is_stmt 0 view .LVU78
+ 323 0000 1430     		adds	r0, r0, #20
+ 324              	.LVL22:
+ 325              		.loc 1 47 36 view .LVU79
+ 326 0002 FFF7FEBF 		b	_ZN5Track18processOutputBlockEPfS0_j
+ 327              	.LVL23:
+ 328              		.loc 1 47 36 view .LVU80
+ 329              		.cfi_endproc
+ 330              	.LFE2546:
+ 332 0006 00BF     		.text
+ 333              	.Letext0:
+ 334              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 335              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 336              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 337              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 338              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 339              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 340              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 341              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 342              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 343              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 344              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 345              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 346              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 347              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 348              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 349              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 350              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 351              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 352              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 353              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 354              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 355              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 356              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 9
 
 
- 334              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 335              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
- 336              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 337              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
- 338              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 339              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
- 340              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 341              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 342              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 343              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
- 344              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 345              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 346              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
- 347              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
- 348              		.file 27 "../../../libDaisy//src/daisy_core.h"
- 349              		.file 28 "../../../libDaisy//src/util/wav_format.h"
- 350              		.file 29 "../../../libDaisy//src/dev/max11300.h"
- 351              		.file 30 "../../../libDaisy//src/daisy_seed.h"
- 352              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 353              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 354              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
- 355              		.file 34 "DSP/../Parameters/../Utils/Helpers.h"
- 356              		.file 35 "DSP/../Parameters/AudioParameter.h"
- 357              		.file 36 "DSP/Track.h"
- 358              		.file 37 "DSP/Mixer.h"
- 359              		.file 38 "<built-in>"
- 360              		.file 39 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s 			page 9
+ 357              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 358              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 359              		.file 28 "../../../libDaisy//src/daisy_core.h"
+ 360              		.file 29 "../../../libDaisy//src/per/tim.h"
+ 361              		.file 30 "../../../libDaisy//src/sys/system.h"
+ 362              		.file 31 "../../../libDaisy//src/per/qspi.h"
+ 363              		.file 32 "../../../libDaisy//src/per/dac.h"
+ 364              		.file 33 "../../../libDaisy//src/per/sai.h"
+ 365              		.file 34 "../../../libDaisy//src/hid/audio.h"
+ 366              		.file 35 "../../../libDaisy//src/per/adc.h"
+ 367              		.file 36 "../../../libDaisy//src/hid/usb.h"
+ 368              		.file 37 "../../../libDaisy//src/util/wav_format.h"
+ 369              		.file 38 "../../../libDaisy//src/dev/max11300.h"
+ 370              		.file 39 "../../../libDaisy//src/daisy_seed.h"
+ 371              		.file 40 "../../../libDaisy//src/per/gpio.h"
+ 372              		.file 41 "../../../libDaisy//src/dev/sdram.h"
+ 373              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 374              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 375              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 376              		.file 45 "DSP/../Parameters/../Utils/Helpers.h"
+ 377              		.file 46 "DSP/Track.h"
+ 378              		.file 47 "DSP/Mixer.h"
+ 379              		.file 48 "<built-in>"
+ 380              		.file 49 "../../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Mixer.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:19     .text._ZN5Mixer4initEPPfS1_S1_S1_S1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:26     .text._ZN5Mixer4initEPPfS1_S1_S1_S1_j:0000000000000000 _ZN5Mixer4initEPPfS1_S1_S1_S1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:202    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:209    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:223    .text._ZN5Mixer7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:230    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:241    .text._ZN5Mixer4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:248    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:268    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:275    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:295    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cccFCtne.s:302    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:213    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:220    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:234    .text._ZN5Mixer7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:241    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:252    .text._ZN5Mixer4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:259    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:279    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:286    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:306    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxO9lwR.s:313    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
 
 UNDEFINED SYMBOLS
 memset
