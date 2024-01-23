@@ -47,6 +47,8 @@ public:
             curVal = ((input * input) * (max - min)) + min;
             break;
         }
+
+        hw->PrintLine("Current value = " << curVal);
     }
 
     type getValue() { return curVal; }
