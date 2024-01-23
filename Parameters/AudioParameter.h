@@ -46,14 +46,14 @@ public:
         switch(curve)
         {
             case LINEAR:
-                curVal = (input * (max - min)) + min;
+                curVal = ((input / 1.0f) * (max - min)) + min;
             break;
             case EXP:
                 curVal = ((input * input) * (max - min)) + min;
             break;
         }
 
-        hw->PrintLine("Current value = %g", curVal);
+        hw->PrintLine("Current value = %f", curVal);
     }
 
     type getValue() { return curVal; }
