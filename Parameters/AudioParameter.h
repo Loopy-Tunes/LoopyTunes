@@ -14,7 +14,7 @@ class AudioParameter
 {
 public:
 
-    void init(DaisySeed& seed, type mi, type ma, CurveType c, ChannelIDs ID)
+    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID)
     {
         hw = seed;
         input = 0;

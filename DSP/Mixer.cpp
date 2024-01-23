@@ -1,6 +1,6 @@
 #include "Mixer.h"
 
-void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
+void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
 {
     bufferSize = s;
     buffer[L] = m[L];
@@ -18,6 +18,8 @@ void Mixer::init(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t
     track2.track.init(t2, s);
     track3.track.init(t3, s);
     track4.track.init(t4, s);
+
+    track1.gain.init(seed, 0.f, 1.f, EXP, ChannelIDs::Amp1);
 }
 
 void Mixer::initParameters()

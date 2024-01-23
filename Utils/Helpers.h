@@ -31,11 +31,11 @@ enum CurveType
 };
 
 // channel IDs
-struct ChannelIDs
+namespace ChannelIDs
 {
-    uint8_t Amp1;
-    uint8_t Amp2;
-    uint8_t Amp3;
-    uint8_t Amp4;
-    uint8_t Encoder;
+    const uint8_t Amp1 = 0;
+    const uint8_t Amp2 = 1;
+    const uint8_t Amp3 = 2;
+    const uint8_t Amp4 = 3;
+    const uint8_t Encoder = 4;
 };
