@@ -1,10 +1,8 @@
 #include "Track.h"
 
-void Track::init(float* mem[2], const size_t s)
+void Track::init()
 {
-    bufferSize = s;
-    for(int i = 0 ; i < 2 ; i++)
-        buffer[i] = mem[i];
+    bufferSize = SAMPLERATE * DURATION;
 
     for(size_t i = 0 ; i < s ; i++)
     {
