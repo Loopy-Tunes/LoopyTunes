@@ -1,8 +1,9 @@
 #include "Mixer.h"
 
-void Mixer::init(daisy::DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], float* t4[2])
+void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
     bufferSize = SAMPLERATE * DURATION;
+    
 
     for(size_t j = 0 ; j < bufferSize ; j++)
     {
