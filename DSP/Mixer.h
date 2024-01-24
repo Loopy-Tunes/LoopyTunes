@@ -23,10 +23,6 @@ public:
 
 private:
 
-    float* buffer[2];
-    size_t bufferSize;
-    float* curSample[2];
-
     struct MixerTrack
     {
         Track track;
@@ -37,5 +33,8 @@ private:
     MixerTrack track2;
     MixerTrack track3;
     MixerTrack track4;
+
+    float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
+    size_t bufferSize;
 
 };
