@@ -18,6 +18,8 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
     track4.track.init(t4);
 
     track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
+
+    track1.curSample = std::make_pair(nullptr, nullptr);
 }
 
 void Mixer::initParameters()
@@ -43,13 +45,16 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
-    // mix samples here
     for(size_t i = 0 ; i < size ; i++)
     {
         if(track1.track.getIsRecording() || track1.track.getIsPlaying())
+        {
             track1.curSample = track1.track.processOutput();
+            mix[L][i] = *track1.curSample.first * track1.gain.getValue();
+            mix[R][i] = *track1.curSample.second * track1.gain.getValue();
+        }
 
-        left = track1.curSample.first;
-        right = track1.curSample.second;
+        left[i] = mix[L][i];
+        right[i] = mix[R][i];
     }
 }
