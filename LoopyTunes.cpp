@@ -9,12 +9,11 @@ using namespace daisysp;
 TO DO:
 - Refactor play/record to have similar parameter class to analog ins
 - AudioParameter value smoothing
-- Update AudioParameter value only if changed
 - Parameter update queue
 - Value normalisation
 - Tick parameters less often
-- Move buffers to track level
 - Reduce floating point precision
+- Come up with much better mixing system
 */
 
 // Hardware

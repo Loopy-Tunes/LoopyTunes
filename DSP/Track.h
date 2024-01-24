@@ -1,5 +1,6 @@
 #include "../Utils/Constants.h"
 #include "../Parameters/AudioParameter.h"
+#include <utility>
 
 /**********************************************************//**
  *  Class name: Track
@@ -17,11 +18,15 @@ public:
 
     void setIsRecording();
     void setIsPlaying();
+
+    bool getIsRecording() { return ph.isRecording; }
+    bool getIsPlaying() { return ph.isPlaying; }
+
     void incrementWritePos();
     void incrementReadPos();
 
     void processInputBlock(const float* left, const float* right, size_t size);
-    void processOutputBlock(float* left, float* right, size_t size);
+    std::pair<float*, float*> processOutput();
 
 private:
 
@@ -30,6 +35,5 @@ private:
 
     float* buffer[2];
     size_t bufferSize;
-
 };
 

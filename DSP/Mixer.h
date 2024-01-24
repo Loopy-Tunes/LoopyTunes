@@ -23,16 +23,17 @@ public:
 
 private:
 
-    struct MixerTrack
+    struct MixerChannel
     {
         Track track;
+        std::pair<float*, float*> curSample;
         AudioParameter<float> gain;
     };
 
-    MixerTrack track1;
-    MixerTrack track2;
-    MixerTrack track3;
-    MixerTrack track4;
+    MixerChannel track1;
+    MixerChannel track2;
+    MixerChannel track3;
+    MixerChannel track4;
 
     float* mix[2];
     size_t bufferSize;
