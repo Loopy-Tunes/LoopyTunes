@@ -40,6 +40,19 @@ Mixer mixer;
 
 // UI - QSPI
 
+// Buffers
+float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
+float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
+
+// Buffer pointers
+float* track1Ptr[2] = {track1[L], track1[R]};
+float* track2Ptr[2] = {track2[L], track2[R]};
+float* track3Ptr[2] = {track3[L], track3[R]};
+float* track4Ptr[2] = {track4[L], track4[R]};
+
+
 void init()
 {
 	// initialise Daisy Seed
@@ -56,7 +69,7 @@ void init()
 	isPlay = false;
 
 	// initialise DSP
-	mixer.init(&hw, mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr, sampleRate * DURATION);
+	mixer.init(&hw, track1Ptr, track2Ptr, track3Ptr, track4Ptr);
 }
 
 void initADC()

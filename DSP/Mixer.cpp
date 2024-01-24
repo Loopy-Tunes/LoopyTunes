@@ -1,23 +1,19 @@
 #include "Mixer.h"
 
-void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s)
+void Mixer::init(daisy::DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
-    bufferSize = s;
-    buffer[L] = m[L];
-    buffer[R] = m[R];
-    for(int i = 0 ; i < 2 ; i++)
-        curSample[i] = nullptr;
+    bufferSize = SAMPLERATE * DURATION;
 
     for(size_t j = 0 ; j < bufferSize ; j++)
     {
-        buffer[L][j] = 0.0f;
-        buffer[R][j] = 0.0f;
+        mix[L][j] = 0.0f;
+        mix[R][j] = 0.0f;
     }
 
-    track1.track.init(t1, s);
-    track2.track.init(t2, s);
-    track3.track.init(t3, s);
-    track4.track.init(t4, s);
+    track1.track.init(t1);
+    track2.track.init(t2);
+    track3.track.init(t3);
+    track4.track.init(t4);
 
     track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
 }

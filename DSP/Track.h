@@ -10,7 +10,7 @@ class Track
 {
 public:
 
-    void init();
+    void init(float* mem[2]);
    
     void prepare();
     void tick();
@@ -28,7 +28,8 @@ private:
     Playhead ph;
     TrackInformation ti;
 
-    float DSY_SDRAM_BSS buffer[2][SAMPLERATE * DURATION];
+    float* buffer[2];
     size_t bufferSize;
 
 };
+
