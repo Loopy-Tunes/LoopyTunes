@@ -3,7 +3,8 @@
 void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
     bufferSize = SAMPLERATE * DURATION;
-    
+    for(int i = 0 ; i < 2 ; i++)
+        mix[i] = m[i];
 
     for(size_t j = 0 ; j < bufferSize ; j++)
     {
@@ -42,5 +43,13 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
-    track1.track.processOutputBlock(left, right, size);
+    // mix samples here
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        if(track1.track.getIsRecording() || track1.track.getIsPlaying())
+            track1.curSample = track1.track.processOutput();
+
+        left = track1.curSample.first;
+        right = track1.curSample.second;
+    }
 }

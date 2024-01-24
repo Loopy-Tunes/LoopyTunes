@@ -51,7 +51,7 @@ void Track::setIsPlaying()
 
 void Track::incrementWritePos()
 {
-    if(ph.writePos > (bufferSize - 1))
+    if(ph.writePos >= (bufferSize - 1))
         ph.writePos = 0;
     else
         ph.writePos++;
@@ -59,7 +59,7 @@ void Track::incrementWritePos()
 
 void Track::incrementReadPos()
 {
-    if(ph.readPos > (ti.loopLength - 1))
+    if(ph.readPos >= (ti.loopLength - 1))
         ph.readPos = 0;
     else
         ph.readPos++;
@@ -79,16 +79,10 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
     }
 }
 
- void Track::processOutputBlock(float* left, float* right, size_t size)
- {
-    if(!ph.isRecording && !ph.isPlaying)
-        return;
+std::pair<float*, float*> Track::processOutput()
+{
+    auto curSample = std::make_pair(&buffer[L][ph.readPos], &buffer[R][ph.readPos]);
+    incrementReadPos();
 
-    for(size_t i = 0 ; i < size ; i++)
-    {
-        left[i] = buffer[L][ph.readPos];
-        right[i] = buffer[R][ph.readPos];
-
-        incrementReadPos();
-    }
- }
+    return curSample;
+}
