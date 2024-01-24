@@ -9,7 +9,7 @@ class Mixer
 {
 public:
 
-    void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], size_t s); 
+    void init(daisy::DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
     void initParameters();
     
     void prepare();
@@ -34,7 +34,7 @@ private:
     MixerTrack track3;
     MixerTrack track4;
 
-    float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
+    static float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
     size_t bufferSize;
 
 };

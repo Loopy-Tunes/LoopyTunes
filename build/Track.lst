@@ -1,0 +1,879 @@
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"Track.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN5Track4initEPPf,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_ZN5Track4initEPPf
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN5Track4initEPPf:
+  27              	.LVL0:
+  28              	.LFB2539:
+  29              		.file 1 "DSP/Track.cpp"
+   1:DSP/Track.cpp **** #include "Track.h"
+   2:DSP/Track.cpp **** 
+   3:DSP/Track.cpp **** void Track::init(float* mem[2])
+   4:DSP/Track.cpp **** {
+  30              		.loc 1 4 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+   5:DSP/Track.cpp ****     bufferSize = SAMPLERATE * DURATION;
+  34              		.loc 1 5 5 view .LVU1
+   4:DSP/Track.cpp ****     bufferSize = SAMPLERATE * DURATION;
+  35              		.loc 1 4 1 is_stmt 0 view .LVU2
+  36 0000 38B5     		push	{r3, r4, r5, lr}
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 3, -16
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 154A     		ldr	r2, .L8
+   4:DSP/Track.cpp ****     bufferSize = SAMPLERATE * DURATION;
+  43              		.loc 1 4 1 view .LVU3
+  44 0004 0546     		mov	r5, r0
+  45              		.loc 1 5 16 view .LVU4
+  46 0006 154C     		ldr	r4, .L8+4
+  47              	.LBB16:
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+   7:DSP/Track.cpp ****         buffer[i] = mem[i];
+  48              		.loc 1 7 26 view .LVU5
+  49 0008 0868     		ldr	r0, [r1]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 2
+
+
+  50              	.LVL1:
+  51              		.loc 1 7 26 view .LVU6
+  52              	.LBE16:
+   5:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  53              		.loc 1 5 16 view .LVU7
+  54 000a EC61     		str	r4, [r5, #28]
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  55              		.loc 1 6 5 is_stmt 1 view .LVU8
+  56              	.LVL2:
+  57              	.LBB17:
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  58              		.loc 1 6 23 view .LVU9
+  59              		.loc 1 7 9 view .LVU10
+  60 000c 0244     		add	r2, r2, r0
+  61              		.loc 1 7 19 is_stmt 0 view .LVU11
+  62 000e 6861     		str	r0, [r5, #20]
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  63              		.loc 1 6 5 is_stmt 1 view .LVU12
+  64              	.LVL3:
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  65              		.loc 1 6 23 view .LVU13
+  66              		.loc 1 7 9 view .LVU14
+  67              		.loc 1 7 26 is_stmt 0 view .LVU15
+  68 0010 4C68     		ldr	r4, [r1, #4]
+  69 0012 1349     		ldr	r1, .L8+8
+  70              	.LVL4:
+  71              		.loc 1 7 26 view .LVU16
+  72 0014 121B     		subs	r2, r2, r4
+  73              		.loc 1 7 19 view .LVU17
+  74 0016 AC61     		str	r4, [r5, #24]
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  75              		.loc 1 6 5 is_stmt 1 view .LVU18
+  76              	.LVL5:
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  77              		.loc 1 6 23 view .LVU19
+   6:DSP/Track.cpp ****     for(int i = 0 ; i < 2 ; i++)
+  78              		.loc 1 6 23 is_stmt 0 view .LVU20
+  79              	.LBE17:
+  80              	.LBB18:
+   8:DSP/Track.cpp **** 
+   9:DSP/Track.cpp ****     for(size_t i = 0 ; i < bufferSize ; i++)
+  81              		.loc 1 9 26 is_stmt 1 view .LVU21
+  82 0018 8A42     		cmp	r2, r1
+  83 001a 10D9     		bls	.L2
+  10:DSP/Track.cpp ****     {
+  11:DSP/Track.cpp ****         buffer[L][i] = 0.0f;
+  84              		.loc 1 11 22 is_stmt 0 view .LVU22
+  85 001c 114A     		ldr	r2, .L8+12
+  86 001e 0021     		movs	r1, #0
+  87 0020 FFF7FEFF 		bl	memset
+  88              	.LVL6:
+  12:DSP/Track.cpp ****         buffer[R][i] = 0.0f;
+  89              		.loc 1 12 22 view .LVU23
+  90 0024 0F4A     		ldr	r2, .L8+12
+  91 0026 0021     		movs	r1, #0
+  92 0028 2046     		mov	r0, r4
+  93 002a FFF7FEFF 		bl	memset
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 3
+
+
+  94              	.LVL7:
+  95              	.L3:
+  96              		.loc 1 12 22 view .LVU24
+  97              	.LBE18:
+  13:DSP/Track.cpp ****     }
+  14:DSP/Track.cpp **** 
+  15:DSP/Track.cpp ****     ph.isRecording = false;
+  98              		.loc 1 15 5 is_stmt 1 view .LVU25
+  16:DSP/Track.cpp ****     ph.isPlaying = false;
+  99              		.loc 1 16 5 view .LVU26
+  15:DSP/Track.cpp ****     ph.isPlaying = false;
+ 100              		.loc 1 15 20 is_stmt 0 view .LVU27
+ 101 002e 0023     		movs	r3, #0
+  17:DSP/Track.cpp ****     ph.reset();
+  18:DSP/Track.cpp **** 
+  19:DSP/Track.cpp ****     ti.isEmpty = true;
+ 102              		.loc 1 19 16 view .LVU28
+ 103 0030 0122     		movs	r2, #1
+  15:DSP/Track.cpp ****     ph.isPlaying = false;
+ 104              		.loc 1 15 20 view .LVU29
+ 105 0032 2B80     		strh	r3, [r5]	@ movhi
+  17:DSP/Track.cpp ****     ph.reset();
+ 106              		.loc 1 17 5 is_stmt 1 view .LVU30
+ 107              	.LVL8:
+ 108              	.LBB19:
+ 109              	.LBI19:
+ 110              		.file 2 "DSP/../Parameters/../Utils/Helpers.h"
+   1:DSP/../Parameters/../Utils/Helpers.h **** #include "stddef.h"
+   2:DSP/../Parameters/../Utils/Helpers.h **** #include <algorithm>
+   3:DSP/../Parameters/../Utils/Helpers.h **** 
+   4:DSP/../Parameters/../Utils/Helpers.h **** // playhead
+   5:DSP/../Parameters/../Utils/Helpers.h **** struct Playhead
+   6:DSP/../Parameters/../Utils/Helpers.h **** {
+   7:DSP/../Parameters/../Utils/Helpers.h ****     bool isRecording;
+   8:DSP/../Parameters/../Utils/Helpers.h ****     bool isPlaying;
+   9:DSP/../Parameters/../Utils/Helpers.h ****     size_t writePos;
+  10:DSP/../Parameters/../Utils/Helpers.h ****     size_t readPos;
+  11:DSP/../Parameters/../Utils/Helpers.h **** 
+  12:DSP/../Parameters/../Utils/Helpers.h ****     void reset() 
+ 111              		.loc 2 12 10 view .LVU31
+ 112              	.LBB20:
+  13:DSP/../Parameters/../Utils/Helpers.h ****     { 
+  14:DSP/../Parameters/../Utils/Helpers.h ****         writePos = 0;
+ 113              		.loc 2 14 9 view .LVU32
+ 114              	.LBE20:
+ 115              	.LBE19:
+ 116              		.loc 1 19 16 is_stmt 0 view .LVU33
+ 117 0034 2A73     		strb	r2, [r5, #12]
+  20:DSP/Track.cpp ****     ti.loopLength = 0;
+ 118              		.loc 1 20 19 view .LVU34
+ 119 0036 2B61     		str	r3, [r5, #16]
+ 120              	.LBB22:
+ 121              	.LBB21:
+  15:DSP/../Parameters/../Utils/Helpers.h ****         readPos = 0; 
+ 122              		.loc 2 15 17 view .LVU35
+ 123 0038 C5E90133 		strd	r3, r3, [r5, #4]
+ 124              	.LVL9:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 4
+
+
+ 125              		.loc 2 15 17 view .LVU36
+ 126              	.LBE21:
+ 127              	.LBE22:
+  19:DSP/Track.cpp ****     ti.loopLength = 0;
+ 128              		.loc 1 19 5 is_stmt 1 view .LVU37
+ 129              		.loc 1 20 5 view .LVU38
+  21:DSP/Track.cpp **** }
+ 130              		.loc 1 21 1 is_stmt 0 view .LVU39
+ 131 003c 38BD     		pop	{r3, r4, r5, pc}
+ 132              	.LVL10:
+ 133              	.L2:
+ 134              		.loc 1 21 1 view .LVU40
+ 135 003e 0346     		mov	r3, r0
+ 136 0040 0848     		ldr	r0, .L8+12
+ 137 0042 2146     		mov	r1, r4
+ 138 0044 1844     		add	r0, r0, r3
+ 139              	.LVL11:
+ 140              	.L4:
+ 141              	.LBB23:
+  11:DSP/Track.cpp ****         buffer[R][i] = 0.0f;
+ 142              		.loc 1 11 9 is_stmt 1 view .LVU41
+  11:DSP/Track.cpp ****         buffer[R][i] = 0.0f;
+ 143              		.loc 1 11 22 is_stmt 0 view .LVU42
+ 144 0046 0022     		movs	r2, #0
+ 145 0048 43F8042B 		str	r2, [r3], #4	@ float
+  12:DSP/Track.cpp ****     }
+ 146              		.loc 1 12 9 is_stmt 1 view .LVU43
+   9:DSP/Track.cpp ****     {
+ 147              		.loc 1 9 26 is_stmt 0 view .LVU44
+ 148 004c 9842     		cmp	r0, r3
+  12:DSP/Track.cpp ****     }
+ 149              		.loc 1 12 22 view .LVU45
+ 150 004e 41F8042B 		str	r2, [r1], #4	@ float
+   9:DSP/Track.cpp ****     {
+ 151              		.loc 1 9 5 is_stmt 1 view .LVU46
+   9:DSP/Track.cpp ****     {
+ 152              		.loc 1 9 26 view .LVU47
+ 153 0052 F8D1     		bne	.L4
+ 154 0054 EBE7     		b	.L3
+ 155              	.L9:
+ 156 0056 00BF     		.align	2
+ 157              	.L8:
+ 158 0058 FF4B1D00 		.word	1919999
+ 159 005c 00530700 		.word	480000
+ 160 0060 FE973A00 		.word	3839998
+ 161 0064 004C1D00 		.word	1920000
+ 162              	.LBE23:
+ 163              		.cfi_endproc
+ 164              	.LFE2539:
+ 166              		.section	.text._ZN5Track7prepareEv,"ax",%progbits
+ 167              		.align	1
+ 168              		.p2align 2,,3
+ 169              		.global	_ZN5Track7prepareEv
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 174              	_ZN5Track7prepareEv:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 5
+
+
+ 175              	.LVL12:
+ 176              	.LFB2540:
+  22:DSP/Track.cpp **** 
+  23:DSP/Track.cpp **** void Track::prepare()
+  24:DSP/Track.cpp **** {
+ 177              		.loc 1 24 1 view -0
+ 178              		.cfi_startproc
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              		@ link register save eliminated.
+  25:DSP/Track.cpp **** 
+  26:DSP/Track.cpp **** }
+ 182              		.loc 1 26 1 is_stmt 0 view .LVU49
+ 183 0000 7047     		bx	lr
+ 184              		.cfi_endproc
+ 185              	.LFE2540:
+ 187 0002 00BF     		.section	.text._ZN5Track4tickEv,"ax",%progbits
+ 188              		.align	1
+ 189              		.p2align 2,,3
+ 190              		.global	_ZN5Track4tickEv
+ 191              		.syntax unified
+ 192              		.thumb
+ 193              		.thumb_func
+ 195              	_ZN5Track4tickEv:
+ 196              	.LFB2563:
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              		@ link register save eliminated.
+ 201 0000 7047     		bx	lr
+ 202              		.cfi_endproc
+ 203              	.LFE2563:
+ 205 0002 00BF     		.section	.text._ZN5Track14setIsRecordingEv,"ax",%progbits
+ 206              		.align	1
+ 207              		.p2align 2,,3
+ 208              		.global	_ZN5Track14setIsRecordingEv
+ 209              		.syntax unified
+ 210              		.thumb
+ 211              		.thumb_func
+ 213              	_ZN5Track14setIsRecordingEv:
+ 214              	.LVL13:
+ 215              	.LFB2542:
+  27:DSP/Track.cpp **** 
+  28:DSP/Track.cpp **** void Track::tick()
+  29:DSP/Track.cpp **** {
+  30:DSP/Track.cpp ****     
+  31:DSP/Track.cpp **** }
+  32:DSP/Track.cpp **** 
+  33:DSP/Track.cpp **** void Track::setIsRecording()
+  34:DSP/Track.cpp **** {
+ 216              		.loc 1 34 1 is_stmt 1 view -0
+ 217              		.cfi_startproc
+ 218              		@ args = 0, pretend = 0, frame = 0
+ 219              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220              		@ link register save eliminated.
+  35:DSP/Track.cpp ****     ph.isRecording = !ph.isRecording;
+ 221              		.loc 1 35 5 view .LVU51
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 6
+
+
+ 222              		.loc 1 35 22 is_stmt 0 view .LVU52
+ 223 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 224 0002 83F00103 		eor	r3, r3, #1
+ 225              		.loc 1 35 20 view .LVU53
+ 226 0006 0370     		strb	r3, [r0]
+  36:DSP/Track.cpp **** 
+  37:DSP/Track.cpp ****     if(!ph.isRecording)
+ 227              		.loc 1 37 5 is_stmt 1 view .LVU54
+ 228 0008 13B9     		cbnz	r3, .L13
+  38:DSP/Track.cpp ****     {
+  39:DSP/Track.cpp ****         ti.isEmpty = false;
+ 229              		.loc 1 39 9 view .LVU55
+  40:DSP/Track.cpp ****         ti.loopLength = ph.writePos;
+ 230              		.loc 1 40 23 is_stmt 0 view .LVU56
+ 231 000a 4268     		ldr	r2, [r0, #4]
+  39:DSP/Track.cpp ****         ti.loopLength = ph.writePos;
+ 232              		.loc 1 39 20 view .LVU57
+ 233 000c 0373     		strb	r3, [r0, #12]
+ 234              		.loc 1 40 9 is_stmt 1 view .LVU58
+ 235              		.loc 1 40 23 is_stmt 0 view .LVU59
+ 236 000e 0261     		str	r2, [r0, #16]
+ 237              	.L13:
+  41:DSP/Track.cpp ****     }
+  42:DSP/Track.cpp **** 
+  43:DSP/Track.cpp ****     ph.reset();
+ 238              		.loc 1 43 5 is_stmt 1 view .LVU60
+ 239              	.LVL14:
+ 240              	.LBB24:
+ 241              	.LBI24:
+  12:DSP/../Parameters/../Utils/Helpers.h ****     { 
+ 242              		.loc 2 12 10 view .LVU61
+ 243              	.LBB25:
+  14:DSP/../Parameters/../Utils/Helpers.h ****         readPos = 0; 
+ 244              		.loc 2 14 9 view .LVU62
+  14:DSP/../Parameters/../Utils/Helpers.h ****         readPos = 0; 
+ 245              		.loc 2 14 18 is_stmt 0 view .LVU63
+ 246 0010 0023     		movs	r3, #0
+ 247              		.loc 2 15 17 view .LVU64
+ 248 0012 C0E90133 		strd	r3, r3, [r0, #4]
+ 249              	.LVL15:
+ 250              		.loc 2 15 17 view .LVU65
+ 251              	.LBE25:
+ 252              	.LBE24:
+  44:DSP/Track.cpp **** }
+ 253              		.loc 1 44 1 view .LVU66
+ 254 0016 7047     		bx	lr
+ 255              		.cfi_endproc
+ 256              	.LFE2542:
+ 258              		.section	.text._ZN5Track12setIsPlayingEv,"ax",%progbits
+ 259              		.align	1
+ 260              		.p2align 2,,3
+ 261              		.global	_ZN5Track12setIsPlayingEv
+ 262              		.syntax unified
+ 263              		.thumb
+ 264              		.thumb_func
+ 266              	_ZN5Track12setIsPlayingEv:
+ 267              	.LVL16:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 7
+
+
+ 268              	.LFB2543:
+  45:DSP/Track.cpp **** 
+  46:DSP/Track.cpp **** void Track::setIsPlaying()
+  47:DSP/Track.cpp **** {
+ 269              		.loc 1 47 1 is_stmt 1 view -0
+ 270              		.cfi_startproc
+ 271              		@ args = 0, pretend = 0, frame = 0
+ 272              		@ frame_needed = 0, uses_anonymous_args = 0
+ 273              		@ link register save eliminated.
+  48:DSP/Track.cpp ****     ph.isPlaying = !ph.isPlaying;
+ 274              		.loc 1 48 5 view .LVU68
+ 275              		.loc 1 48 20 is_stmt 0 view .LVU69
+ 276 0000 4378     		ldrb	r3, [r0, #1]	@ zero_extendqisi2
+ 277              	.LBB26:
+ 278              	.LBB27:
+  14:DSP/../Parameters/../Utils/Helpers.h ****         readPos = 0; 
+ 279              		.loc 2 14 18 view .LVU70
+ 280 0002 0022     		movs	r2, #0
+ 281              	.LBE27:
+ 282              	.LBE26:
+ 283              		.loc 1 48 20 view .LVU71
+ 284 0004 83F00103 		eor	r3, r3, #1
+ 285              	.LBB30:
+ 286              	.LBB28:
+ 287              		.loc 2 15 17 view .LVU72
+ 288 0008 C0E90122 		strd	r2, r2, [r0, #4]
+ 289              	.LBE28:
+ 290              	.LBE30:
+ 291              		.loc 1 48 18 view .LVU73
+ 292 000c 4370     		strb	r3, [r0, #1]
+  49:DSP/Track.cpp ****     ph.reset();
+ 293              		.loc 1 49 5 is_stmt 1 view .LVU74
+ 294              	.LVL17:
+ 295              	.LBB31:
+ 296              	.LBI26:
+  12:DSP/../Parameters/../Utils/Helpers.h ****     { 
+ 297              		.loc 2 12 10 view .LVU75
+ 298              	.LBB29:
+  14:DSP/../Parameters/../Utils/Helpers.h ****         readPos = 0; 
+ 299              		.loc 2 14 9 view .LVU76
+ 300              		.loc 2 15 9 view .LVU77
+ 301              		.loc 2 15 9 is_stmt 0 view .LVU78
+ 302              	.LBE29:
+ 303              	.LBE31:
+  50:DSP/Track.cpp **** }
+ 304              		.loc 1 50 1 view .LVU79
+ 305 000e 7047     		bx	lr
+ 306              		.cfi_endproc
+ 307              	.LFE2543:
+ 309              		.section	.text._ZN5Track17incrementWritePosEv,"ax",%progbits
+ 310              		.align	1
+ 311              		.p2align 2,,3
+ 312              		.global	_ZN5Track17incrementWritePosEv
+ 313              		.syntax unified
+ 314              		.thumb
+ 315              		.thumb_func
+ 317              	_ZN5Track17incrementWritePosEv:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 8
+
+
+ 318              	.LVL18:
+ 319              	.LFB2544:
+  51:DSP/Track.cpp **** 
+  52:DSP/Track.cpp **** void Track::incrementWritePos()
+  53:DSP/Track.cpp **** {
+ 320              		.loc 1 53 1 is_stmt 1 view -0
+ 321              		.cfi_startproc
+ 322              		@ args = 0, pretend = 0, frame = 0
+ 323              		@ frame_needed = 0, uses_anonymous_args = 0
+ 324              		@ link register save eliminated.
+  54:DSP/Track.cpp ****     if(ph.writePos > (bufferSize - 1))
+ 325              		.loc 1 54 5 view .LVU81
+ 326              		.loc 1 54 34 is_stmt 0 view .LVU82
+ 327 0000 C269     		ldr	r2, [r0, #28]
+ 328              		.loc 1 54 11 view .LVU83
+ 329 0002 4368     		ldr	r3, [r0, #4]
+ 330              		.loc 1 54 34 view .LVU84
+ 331 0004 013A     		subs	r2, r2, #1
+ 332              		.loc 1 54 5 view .LVU85
+ 333 0006 9342     		cmp	r3, r2
+  55:DSP/Track.cpp ****         ph.writePos = 0;
+  56:DSP/Track.cpp ****     else
+  57:DSP/Track.cpp ****         ph.writePos++;
+ 334              		.loc 1 57 9 is_stmt 1 view .LVU86
+ 335              		.loc 1 57 20 is_stmt 0 view .LVU87
+ 336 0008 94BF     		ite	ls
+ 337 000a 0133     		addls	r3, r3, #1
+  55:DSP/Track.cpp ****         ph.writePos = 0;
+ 338              		.loc 1 55 21 view .LVU88
+ 339 000c 0023     		movhi	r3, #0
+ 340 000e 4360     		str	r3, [r0, #4]
+  58:DSP/Track.cpp **** }
+ 341              		.loc 1 58 1 view .LVU89
+ 342 0010 7047     		bx	lr
+ 343              		.cfi_endproc
+ 344              	.LFE2544:
+ 346 0012 00BF     		.section	.text._ZN5Track16incrementReadPosEv,"ax",%progbits
+ 347              		.align	1
+ 348              		.p2align 2,,3
+ 349              		.global	_ZN5Track16incrementReadPosEv
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 354              	_ZN5Track16incrementReadPosEv:
+ 355              	.LVL19:
+ 356              	.LFB2545:
+  59:DSP/Track.cpp **** 
+  60:DSP/Track.cpp **** void Track::incrementReadPos()
+  61:DSP/Track.cpp **** {
+ 357              		.loc 1 61 1 is_stmt 1 view -0
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361              		@ link register save eliminated.
+  62:DSP/Track.cpp ****     if(ph.readPos > (ti.loopLength - 1))
+ 362              		.loc 1 62 5 view .LVU91
+ 363              		.loc 1 62 36 is_stmt 0 view .LVU92
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 9
+
+
+ 364 0000 0269     		ldr	r2, [r0, #16]
+ 365              		.loc 1 62 11 view .LVU93
+ 366 0002 8368     		ldr	r3, [r0, #8]
+ 367              		.loc 1 62 36 view .LVU94
+ 368 0004 013A     		subs	r2, r2, #1
+ 369              		.loc 1 62 5 view .LVU95
+ 370 0006 9342     		cmp	r3, r2
+  63:DSP/Track.cpp ****         ph.readPos = 0;
+  64:DSP/Track.cpp ****     else
+  65:DSP/Track.cpp ****         ph.readPos++;
+ 371              		.loc 1 65 9 is_stmt 1 view .LVU96
+ 372              		.loc 1 65 19 is_stmt 0 view .LVU97
+ 373 0008 94BF     		ite	ls
+ 374 000a 0133     		addls	r3, r3, #1
+  63:DSP/Track.cpp ****         ph.readPos = 0;
+ 375              		.loc 1 63 20 view .LVU98
+ 376 000c 0023     		movhi	r3, #0
+ 377 000e 8360     		str	r3, [r0, #8]
+  66:DSP/Track.cpp **** }
+ 378              		.loc 1 66 1 view .LVU99
+ 379 0010 7047     		bx	lr
+ 380              		.cfi_endproc
+ 381              	.LFE2545:
+ 383 0012 00BF     		.section	.text._ZN5Track17processInputBlockEPKfS1_j,"ax",%progbits
+ 384              		.align	1
+ 385              		.p2align 2,,3
+ 386              		.global	_ZN5Track17processInputBlockEPKfS1_j
+ 387              		.syntax unified
+ 388              		.thumb
+ 389              		.thumb_func
+ 391              	_ZN5Track17processInputBlockEPKfS1_j:
+ 392              	.LVL20:
+ 393              	.LFB2546:
+  67:DSP/Track.cpp **** 
+  68:DSP/Track.cpp **** void Track::processInputBlock(const float* left, const float* right, size_t size)
+  69:DSP/Track.cpp **** {
+ 394              		.loc 1 69 1 is_stmt 1 view -0
+ 395              		.cfi_startproc
+ 396              		@ args = 0, pretend = 0, frame = 0
+ 397              		@ frame_needed = 0, uses_anonymous_args = 0
+  70:DSP/Track.cpp ****     if(!ph.isRecording)
+ 398              		.loc 1 70 5 view .LVU101
+  69:DSP/Track.cpp ****     if(!ph.isRecording)
+ 399              		.loc 1 69 1 is_stmt 0 view .LVU102
+ 400 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 401              		.cfi_def_cfa_offset 20
+ 402              		.cfi_offset 4, -20
+ 403              		.cfi_offset 5, -16
+ 404              		.cfi_offset 6, -12
+ 405              		.cfi_offset 7, -8
+ 406              		.cfi_offset 14, -4
+ 407              		.loc 1 70 5 view .LVU103
+ 408 0002 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
+ 409 0004 DCB1     		cbz	r4, .L21
+ 410              	.LVL21:
+ 411              	.LBB32:
+  71:DSP/Track.cpp ****         return;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 10
+
+
+  72:DSP/Track.cpp **** 
+  73:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 412              		.loc 1 73 26 is_stmt 1 view .LVU104
+ 413 0006 D3B1     		cbz	r3, .L21
+ 414              	.LBB33:
+ 415              	.LBB34:
+  54:DSP/Track.cpp ****         ph.writePos = 0;
+ 416              		.loc 1 54 34 is_stmt 0 view .LVU105
+ 417 0008 C569     		ldr	r5, [r0, #28]
+ 418 000a 01EB8304 		add	r4, r1, r3, lsl #2
+ 419              	.LBE34:
+ 420              	.LBE33:
+  74:DSP/Track.cpp ****     {
+  75:DSP/Track.cpp ****         buffer[L][ph.writePos] = left[i];
+ 421              		.loc 1 75 17 view .LVU106
+ 422 000e 4669     		ldr	r6, [r0, #20]
+ 423              	.LBB41:
+ 424              	.LBB35:
+  54:DSP/Track.cpp ****         ph.writePos = 0;
+ 425              		.loc 1 54 34 view .LVU107
+ 426 0010 013D     		subs	r5, r5, #1
+ 427 0012 4368     		ldr	r3, [r0, #4]
+ 428              	.LVL22:
+  54:DSP/Track.cpp ****         ph.writePos = 0;
+ 429              		.loc 1 54 34 view .LVU108
+ 430              	.LBE35:
+ 431              	.LBE41:
+  76:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 432              		.loc 1 76 17 view .LVU109
+ 433 0014 8769     		ldr	r7, [r0, #24]
+ 434              	.LVL23:
+ 435              	.L24:
+  75:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 436              		.loc 1 75 9 is_stmt 1 discriminator 2 view .LVU110
+ 437              	.LBB42:
+ 438              	.LBB36:
+  57:DSP/Track.cpp **** }
+ 439              		.loc 1 57 9 discriminator 2 view .LVU111
+ 440              	.LBE36:
+ 441              	.LBE42:
+  75:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 442              		.loc 1 75 40 is_stmt 0 discriminator 2 view .LVU112
+ 443 0016 F1EC017A 		vldmia.32	r1!, {s15}
+  75:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 444              		.loc 1 75 32 discriminator 2 view .LVU113
+ 445 001a 06EB830E 		add	lr, r6, r3, lsl #2
+ 446              	.LBB43:
+ 447              	.LBB37:
+  54:DSP/Track.cpp ****         ph.writePos = 0;
+ 448              		.loc 1 54 5 discriminator 2 view .LVU114
+ 449 001e 9D42     		cmp	r5, r3
+ 450              	.LBE37:
+ 451              	.LBE43:
+ 452              		.loc 1 76 32 discriminator 2 view .LVU115
+ 453 0020 07EB830C 		add	ip, r7, r3, lsl #2
+  75:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 454              		.loc 1 75 32 discriminator 2 view .LVU116
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 11
+
+
+ 455 0024 CEED007A 		vstr.32	s15, [lr]
+ 456              		.loc 1 76 9 is_stmt 1 discriminator 2 view .LVU117
+ 457              	.LBB44:
+ 458              	.LBB38:
+  57:DSP/Track.cpp **** }
+ 459              		.loc 1 57 20 is_stmt 0 discriminator 2 view .LVU118
+ 460 0028 03F10103 		add	r3, r3, #1
+ 461              	.LBE38:
+ 462              	.LBE44:
+ 463              		.loc 1 76 41 discriminator 2 view .LVU119
+ 464 002c 52F804EB 		ldr	lr, [r2], #4	@ float
+ 465              	.LBB45:
+ 466              	.LBB39:
+  55:DSP/Track.cpp ****     else
+ 467              		.loc 1 55 21 discriminator 2 view .LVU120
+ 468 0030 38BF     		it	cc
+ 469 0032 0023     		movcc	r3, #0
+ 470              	.LBE39:
+ 471              	.LBE45:
+  73:DSP/Track.cpp ****     {
+ 472              		.loc 1 73 26 discriminator 2 view .LVU121
+ 473 0034 A142     		cmp	r1, r4
+ 474              		.loc 1 76 32 discriminator 2 view .LVU122
+ 475 0036 CCF800E0 		str	lr, [ip]	@ float
+  77:DSP/Track.cpp **** 
+  78:DSP/Track.cpp ****         incrementWritePos();
+ 476              		.loc 1 78 9 is_stmt 1 discriminator 2 view .LVU123
+ 477              	.LBB46:
+ 478              	.LBI33:
+  52:DSP/Track.cpp **** {
+ 479              		.loc 1 52 6 discriminator 2 view .LVU124
+ 480              	.LBB40:
+  54:DSP/Track.cpp ****         ph.writePos = 0;
+ 481              		.loc 1 54 5 discriminator 2 view .LVU125
+ 482              	.LBE40:
+ 483              	.LBE46:
+  73:DSP/Track.cpp ****     {
+ 484              		.loc 1 73 5 discriminator 2 view .LVU126
+  73:DSP/Track.cpp ****     {
+ 485              		.loc 1 73 26 discriminator 2 view .LVU127
+ 486 003a ECD1     		bne	.L24
+ 487 003c 4360     		str	r3, [r0, #4]
+ 488              	.L21:
+  73:DSP/Track.cpp ****     {
+ 489              		.loc 1 73 26 is_stmt 0 discriminator 2 view .LVU128
+ 490              	.LBE32:
+  79:DSP/Track.cpp ****     }
+  80:DSP/Track.cpp **** }
+ 491              		.loc 1 80 1 view .LVU129
+ 492 003e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 493              		.cfi_endproc
+ 494              	.LFE2546:
+ 496              		.section	.text._ZN5Track18processOutputBlockEPfS0_j,"ax",%progbits
+ 497              		.align	1
+ 498              		.p2align 2,,3
+ 499              		.global	_ZN5Track18processOutputBlockEPfS0_j
+ 500              		.syntax unified
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 12
+
+
+ 501              		.thumb
+ 502              		.thumb_func
+ 504              	_ZN5Track18processOutputBlockEPfS0_j:
+ 505              	.LVL24:
+ 506              	.LFB2547:
+  81:DSP/Track.cpp **** 
+  82:DSP/Track.cpp ****  void Track::processOutputBlock(float* left, float* right, size_t size)
+  83:DSP/Track.cpp ****  {
+ 507              		.loc 1 83 2 is_stmt 1 view -0
+ 508              		.cfi_startproc
+ 509              		@ args = 0, pretend = 0, frame = 0
+ 510              		@ frame_needed = 0, uses_anonymous_args = 0
+  84:DSP/Track.cpp ****     if(!ph.isRecording && !ph.isPlaying)
+ 511              		.loc 1 84 5 view .LVU131
+  83:DSP/Track.cpp ****     if(!ph.isRecording && !ph.isPlaying)
+ 512              		.loc 1 83 2 is_stmt 0 view .LVU132
+ 513 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 514              		.cfi_def_cfa_offset 20
+ 515              		.cfi_offset 4, -20
+ 516              		.cfi_offset 5, -16
+ 517              		.cfi_offset 6, -12
+ 518              		.cfi_offset 7, -8
+ 519              		.cfi_offset 14, -4
+ 520              		.loc 1 84 5 view .LVU133
+ 521 0002 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
+ 522 0004 0CB9     		cbnz	r4, .L38
+ 523              		.loc 1 84 24 discriminator 1 view .LVU134
+ 524 0006 4478     		ldrb	r4, [r0, #1]	@ zero_extendqisi2
+ 525 0008 DCB1     		cbz	r4, .L34
+ 526              	.L38:
+ 527              	.LVL25:
+ 528              	.LBB47:
+  85:DSP/Track.cpp ****         return;
+  86:DSP/Track.cpp **** 
+  87:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 529              		.loc 1 87 26 is_stmt 1 discriminator 3 view .LVU135
+ 530 000a D3B1     		cbz	r3, .L34
+ 531              	.LBB48:
+ 532              	.LBB49:
+  62:DSP/Track.cpp ****         ph.readPos = 0;
+ 533              		.loc 1 62 36 is_stmt 0 view .LVU136
+ 534 000c 0569     		ldr	r5, [r0, #16]
+ 535 000e 01EB8304 		add	r4, r1, r3, lsl #2
+ 536              	.LBE49:
+ 537              	.LBE48:
+  88:DSP/Track.cpp ****     {
+  89:DSP/Track.cpp ****         left[i] = buffer[L][ph.readPos];
+ 538              		.loc 1 89 27 view .LVU137
+ 539 0012 4669     		ldr	r6, [r0, #20]
+ 540              	.LBB56:
+ 541              	.LBB50:
+  62:DSP/Track.cpp ****         ph.readPos = 0;
+ 542              		.loc 1 62 36 view .LVU138
+ 543 0014 013D     		subs	r5, r5, #1
+ 544 0016 8368     		ldr	r3, [r0, #8]
+ 545              	.LVL26:
+  62:DSP/Track.cpp ****         ph.readPos = 0;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 13
+
+
+ 546              		.loc 1 62 36 view .LVU139
+ 547              	.LBE50:
+ 548              	.LBE56:
+  90:DSP/Track.cpp ****         right[i] = buffer[R][ph.readPos];
+ 549              		.loc 1 90 28 view .LVU140
+ 550 0018 8769     		ldr	r7, [r0, #24]
+ 551              	.LVL27:
+ 552              	.L40:
+  89:DSP/Track.cpp ****         right[i] = buffer[R][ph.readPos];
+ 553              		.loc 1 89 9 is_stmt 1 discriminator 2 view .LVU141
+ 554              	.LBB57:
+ 555              	.LBB51:
+  65:DSP/Track.cpp **** }
+ 556              		.loc 1 65 9 discriminator 2 view .LVU142
+ 557              	.LBE51:
+ 558              	.LBE57:
+  89:DSP/Track.cpp ****         right[i] = buffer[R][ph.readPos];
+ 559              		.loc 1 89 39 is_stmt 0 discriminator 2 view .LVU143
+ 560 001a 06EB830E 		add	lr, r6, r3, lsl #2
+ 561              	.LBB58:
+ 562              	.LBB52:
+  62:DSP/Track.cpp ****         ph.readPos = 0;
+ 563              		.loc 1 62 5 discriminator 2 view .LVU144
+ 564 001e 9D42     		cmp	r5, r3
+ 565              	.LBE52:
+ 566              	.LBE58:
+ 567              		.loc 1 90 40 discriminator 2 view .LVU145
+ 568 0020 07EB830C 		add	ip, r7, r3, lsl #2
+ 569              	.LBB59:
+ 570              	.LBB53:
+  65:DSP/Track.cpp **** }
+ 571              		.loc 1 65 19 discriminator 2 view .LVU146
+ 572 0024 03F10103 		add	r3, r3, #1
+ 573              	.LBE53:
+ 574              	.LBE59:
+  89:DSP/Track.cpp ****         right[i] = buffer[R][ph.readPos];
+ 575              		.loc 1 89 39 discriminator 2 view .LVU147
+ 576 0028 DEF800E0 		ldr	lr, [lr]	@ float
+ 577              	.LBB60:
+ 578              	.LBB54:
+  63:DSP/Track.cpp ****     else
+ 579              		.loc 1 63 20 discriminator 2 view .LVU148
+ 580 002c 38BF     		it	cc
+ 581 002e 0023     		movcc	r3, #0
+ 582              	.LBE54:
+ 583              	.LBE60:
+  89:DSP/Track.cpp ****         right[i] = buffer[R][ph.readPos];
+ 584              		.loc 1 89 17 discriminator 2 view .LVU149
+ 585 0030 41F804EB 		str	lr, [r1], #4	@ float
+ 586              		.loc 1 90 9 is_stmt 1 discriminator 2 view .LVU150
+  87:DSP/Track.cpp ****     {
+ 587              		.loc 1 87 26 is_stmt 0 discriminator 2 view .LVU151
+ 588 0034 8C42     		cmp	r4, r1
+ 589              		.loc 1 90 40 discriminator 2 view .LVU152
+ 590 0036 DCF800C0 		ldr	ip, [ip]	@ float
+ 591              		.loc 1 90 18 discriminator 2 view .LVU153
+ 592 003a 42F804CB 		str	ip, [r2], #4	@ float
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 14
+
+
+  91:DSP/Track.cpp **** 
+  92:DSP/Track.cpp ****         incrementReadPos();
+ 593              		.loc 1 92 9 is_stmt 1 discriminator 2 view .LVU154
+ 594              	.LBB61:
+ 595              	.LBI48:
+  60:DSP/Track.cpp **** {
+ 596              		.loc 1 60 6 discriminator 2 view .LVU155
+ 597              	.LBB55:
+  62:DSP/Track.cpp ****         ph.readPos = 0;
+ 598              		.loc 1 62 5 discriminator 2 view .LVU156
+ 599              	.LBE55:
+ 600              	.LBE61:
+  87:DSP/Track.cpp ****     {
+ 601              		.loc 1 87 5 discriminator 2 view .LVU157
+  87:DSP/Track.cpp ****     {
+ 602              		.loc 1 87 26 discriminator 2 view .LVU158
+ 603 003e ECD1     		bne	.L40
+ 604 0040 8360     		str	r3, [r0, #8]
+ 605              	.L34:
+  87:DSP/Track.cpp ****     {
+ 606              		.loc 1 87 26 is_stmt 0 discriminator 2 view .LVU159
+ 607              	.LBE47:
+  93:DSP/Track.cpp ****     }
+  94:DSP/Track.cpp ****  }...
+ 608              		.loc 1 94 2 view .LVU160
+ 609 0042 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 610              		.cfi_endproc
+ 611              	.LFE2547:
+ 613              		.text
+ 614              	.Letext0:
+ 615              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 616              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 617              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 618              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 619              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 620              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 621              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 622              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 623              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 624              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 625              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 626              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 627              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 628              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 629              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 630              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 631              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 632              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 633              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 634              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 635              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 636              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 637              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 638              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 639              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 640              		.file 28 "../../../libDaisy//src/daisy_core.h"
+ 641              		.file 29 "../../../libDaisy//src/util/wav_format.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 15
+
+
+ 642              		.file 30 "../../../libDaisy//src/dev/max11300.h"
+ 643              		.file 31 "../../../libDaisy//src/daisy_seed.h"
+ 644              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 645              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 646              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 647              		.file 35 "DSP/../Parameters/AudioParameter.h"
+ 648              		.file 36 "DSP/Track.h"
+ 649              		.file 37 "<built-in>"
+ 650              		.file 38 "../../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Track.cpp
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:19     .text._ZN5Track4initEPPf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:26     .text._ZN5Track4initEPPf:0000000000000000 _ZN5Track4initEPPf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:158    .text._ZN5Track4initEPPf:0000000000000058 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:167    .text._ZN5Track7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:174    .text._ZN5Track7prepareEv:0000000000000000 _ZN5Track7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:188    .text._ZN5Track4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:195    .text._ZN5Track4tickEv:0000000000000000 _ZN5Track4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:206    .text._ZN5Track14setIsRecordingEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:213    .text._ZN5Track14setIsRecordingEv:0000000000000000 _ZN5Track14setIsRecordingEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:259    .text._ZN5Track12setIsPlayingEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:266    .text._ZN5Track12setIsPlayingEv:0000000000000000 _ZN5Track12setIsPlayingEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:310    .text._ZN5Track17incrementWritePosEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:317    .text._ZN5Track17incrementWritePosEv:0000000000000000 _ZN5Track17incrementWritePosEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:347    .text._ZN5Track16incrementReadPosEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:354    .text._ZN5Track16incrementReadPosEv:0000000000000000 _ZN5Track16incrementReadPosEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:384    .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:391    .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 _ZN5Track17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:497    .text._ZN5Track18processOutputBlockEPfS0_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccVKQEJ0.s:504    .text._ZN5Track18processOutputBlockEPfS0_j:0000000000000000 _ZN5Track18processOutputBlockEPfS0_j
+
+UNDEFINED SYMBOLS
+memset
