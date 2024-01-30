@@ -32,9 +32,11 @@ public:
     
     void tick()
     {
-        float newInput = hw->adc.GetFloat(channelID);
+        float newInput;
+        if(isSelected)
+            newInput = hw->adc.GetFloat(channelID);
 
-        if (newInput > (input + jitter) || newInput < (input - jitter))
+        if(newInput > (input + jitter) || newInput < (input - jitter))
         {
             input = newInput;;
             process();
