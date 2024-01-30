@@ -7,13 +7,17 @@ using namespace daisysp;
 
 /*
 TO DO:
-- Refactor play/record to have similar parameter class to analog ins
+- BinaryParameter
 - AudioParameter value smoothing
 - Parameter update queue
 - Value normalisation
 - Tick parameters less often
 - Reduce floating point precision
 - Come up with much better mixing system
+- Decibel conversion
+- Undo/redo?
+- Parameter ramping
+- Output EQ profiles for different output sources
 */
 
 // Hardware
