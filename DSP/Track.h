@@ -1,5 +1,4 @@
-#include "../Utils/Constants.h"
-#include "Delay.h"
+#include "FX/Delay.h"
 #include <utility>
 
 /**********************************************************//**
@@ -12,8 +11,6 @@ class Track
 public:
 
     void init(float* mem[2]);
-   
-    void prepare();
     void tick();
 
     void setIsRecording();
@@ -25,6 +22,7 @@ public:
     void incrementWritePos();
     void incrementReadPos();
 
+    void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
     std::pair<float*, float*> processOutput();
 

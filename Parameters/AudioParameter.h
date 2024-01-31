@@ -1,5 +1,7 @@
 #include "daisy_seed.h"
+#include "daisysp.h"
 #include "../Utils/Helpers.h"
+#include "../Utils/Constants.h"
 #include <cstdint>
 
 /*****************************************************************************//**
@@ -72,5 +74,4 @@ private:
     uint8_t channelID;
     CurveType curve;
     bool isSelected;
-
 };

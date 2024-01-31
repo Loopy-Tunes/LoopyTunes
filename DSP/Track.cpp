@@ -20,11 +20,6 @@ void Track::init(float* mem[2])
     ti.loopLength = 0;
 }
 
-void Track::prepare()
-{
-
-}
-
 void Track::tick()
 {
     
@@ -63,6 +58,11 @@ void Track::incrementReadPos()
         ph.readPos = 0;
     else
         ph.readPos++;
+}
+
+void Track::prepare()
+{
+
 }
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)

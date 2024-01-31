@@ -22,20 +22,15 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
     track1.curSample = std::make_pair(nullptr, nullptr);
 }
 
-void Mixer::initParameters()
+void Mixer::tick()
 {
-
+    //track1.track.tick();
+    track1.gain.tick();
 }
 
 void Mixer::prepare()
 {
 
-}
-
-void Mixer::tick()
-{
-    //track1.track.tick();
-    track1.gain.tick();
 }
 
 void Mixer::processInputBlock(const float* left, const float* right, size_t size)
