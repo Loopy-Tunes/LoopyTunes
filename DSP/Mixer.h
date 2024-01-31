@@ -10,11 +10,9 @@ class Mixer
 public:
 
     void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
-    void initParameters();
-    
-    void prepare();
     void tick();
 
+    void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
     void processOutputBlock(float* left, float* right, size_t size);
 

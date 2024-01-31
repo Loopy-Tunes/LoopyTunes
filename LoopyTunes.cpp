@@ -1,4 +1,3 @@
-#include "daisysp.h"
 #include "DSP/Mixer.h"
 #include "Architecture/ConnectionMatrix.h"
 
