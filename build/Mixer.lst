@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
    4:DSP/Mixer.cpp ****     bufferSize = SAMPLERATE * DURATION;
   49              		.loc 1 4 1 view .LVU5
   50 0006 1F46     		mov	r7, r3
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 2
 
 
   51 0008 254B     		ldr	r3, .L8+4
@@ -68,15 +68,15 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
    6:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
   55              		.loc 1 6 5 is_stmt 1 view .LVU7
   56              	.LVL3:
-  57              	.LBB29:
+  57              	.LBB31:
   58              		.loc 1 6 23 view .LVU8
    7:DSP/Mixer.cpp ****         mix[i] = m[i];
   59              		.loc 1 7 9 view .LVU9
-  60              	.LBE29:
+  60              	.LBE31:
    4:DSP/Mixer.cpp ****     bufferSize = SAMPLERATE * DURATION;
   61              		.loc 1 4 1 is_stmt 0 view .LVU10
   62 000e 0E46     		mov	r6, r1
-  63              	.LBB30:
+  63              	.LBB32:
   64              		.loc 1 7 21 view .LVU11
   65 0010 1068     		ldr	r0, [r2]
   66 0012 0344     		add	r3, r3, r0
@@ -103,8 +103,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   83              		.loc 1 6 23 view .LVU20
    6:DSP/Mixer.cpp ****     for(int i = 0 ; i < 2 ; i++)
   84              		.loc 1 6 23 is_stmt 0 view .LVU21
-  85              	.LBE30:
-  86              	.LBB31:
+  85              	.LBE32:
+  86              	.LBB33:
    8:DSP/Mixer.cpp **** 
    9:DSP/Mixer.cpp ****     for(size_t j = 0 ; j < bufferSize ; j++)
   87              		.loc 1 9 26 is_stmt 1 view .LVU22
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   93              	.LVL7:
   94              		.loc 1 11 19 view .LVU24
   95 002a FFF7FEFF 		bl	memset
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 3
 
 
   96              	.LVL8:
@@ -131,7 +131,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  102              	.LVL9:
  103              	.L3:
  104              		.loc 1 12 19 view .LVU26
- 105              	.LBE31:
+ 105              	.LBE33:
   13:DSP/Mixer.cpp ****     }
   14:DSP/Mixer.cpp **** 
   15:DSP/Mixer.cpp ****     track1.track.init(t1);
@@ -165,8 +165,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   19:DSP/Mixer.cpp **** 
   20:DSP/Mixer.cpp ****     track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
  130              		.loc 1 20 5 is_stmt 1 view .LVU35
- 131              	.LBB32:
- 132              	.LBI32:
+ 131              	.LBB34:
+ 132              	.LBI34:
  133              		.file 2 "DSP/../Parameters/AudioParameter.h"
    1:DSP/../Parameters/AudioParameter.h **** #include "daisy_seed.h"
    2:DSP/../Parameters/AudioParameter.h **** #include "../Utils/Helpers.h"
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
    8:DSP/../Parameters/AudioParameter.h ****  ********************************************************************************/
    9:DSP/../Parameters/AudioParameter.h **** 
   10:DSP/../Parameters/AudioParameter.h **** using namespace daisy;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 4
 
 
   11:DSP/../Parameters/AudioParameter.h **** 
@@ -189,7 +189,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   16:DSP/../Parameters/AudioParameter.h **** 
   17:DSP/../Parameters/AudioParameter.h ****     void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID)
  134              		.loc 2 17 10 view .LVU36
- 135              	.LBB33:
+ 135              	.LBB35:
   18:DSP/../Parameters/AudioParameter.h ****     {
   19:DSP/../Parameters/AudioParameter.h ****         hw = seed;
   20:DSP/../Parameters/AudioParameter.h ****         input = 0;
@@ -234,16 +234,16 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  157 0076 85F84220 		strb	r2, [r5, #66]
  158              	.LVL14:
  159              		.loc 2 30 24 view .LVU48
- 160              	.LBE33:
- 161              	.LBE32:
+ 160              	.LBE35:
+ 161              	.LBE34:
   21:DSP/Mixer.cpp **** 
   22:DSP/Mixer.cpp ****     track1.curSample = std::make_pair(nullptr, nullptr);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 5
 
 
  162              		.loc 1 22 5 is_stmt 1 view .LVU49
- 163              	.LBB34:
- 164              	.LBI34:
+ 163              	.LBB36:
+ 164              	.LBI36:
  165              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
    1:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** // Pair implementation -*- C++ -*-
    2:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   51:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** /** @file bits/stl_pair.h
   52:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****  *  This is an internal header file, included by other library headers.
   53:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****  *  Do not attempt to use it directly. @headername{utility}
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 6
 
 
   54:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****  */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  108:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       }
  109:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 
  110:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       template <typename _U1, typename _U2>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 7
 
 
  111:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       static constexpr bool _ImplicitlyConvertiblePair()
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  165:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       {
  166:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	return false;
  167:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 8
 
 
  168:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  222:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       /** The default constructor creates @c first and @c second using their
  223:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****        *  respective default constructors.  */
  224:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** #if __cplusplus >= 201103L
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 9
 
 
  225:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       template <typename _U1 = _T1,
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  279:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 
  280:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** #if __cplusplus < 201103L
  281:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       /// There is also a templated constructor to convert from other pairs.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 10
 
 
  282:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       template<typename _U1, typename _U2>
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  336:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****        constexpr pair(const _T1& __x, _U2&& __y)
  337:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****        : first(__x), second(std::forward<_U2>(__y)) { }
  338:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 11
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 11
 
 
  339:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       template<typename _U2, typename
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  393:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 		const pair&, const __nonesuch&>::type __p)
  394:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h ****       {
  395:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	first = __p.first;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 12
 
 
  396:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	second = __p.second;
@@ -697,7 +697,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  429:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 			   pair&>::type
  430:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	operator=(pair<_U1, _U2>&& __p)
  166              		.loc 3 430 2 view .LVU50
- 167              	.LBB35:
+ 167              	.LBB37:
  431:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	{
  432:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	  first = std::forward<_U1>(__p.first);
  433:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	  second = std::forward<_U2>(__p.second);
@@ -705,8 +705,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  169 007a C5E90833 		strd	r3, r3, [r5, #32]
  170              	.LVL15:
  171              		.loc 3 433 11 view .LVU52
- 172              	.LBE35:
- 173              	.LBE34:
+ 172              	.LBE37:
+ 173              	.LBE36:
   23:DSP/Mixer.cpp **** }
  174              		.loc 1 23 1 view .LVU53
  175 007e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
@@ -718,11 +718,11 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  181 0084 A646     		mov	lr, r4
  182 0086 1044     		add	r0, r0, r2
  183              	.LVL17:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 13
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 13
 
 
  184              	.L4:
- 185              	.LBB36:
+ 185              	.LBB38:
   11:DSP/Mixer.cpp ****         mix[R][j] = 0.0f;
  186              		.loc 1 11 9 is_stmt 1 view .LVU55
   11:DSP/Mixer.cpp ****         mix[R][j] = 0.0f;
@@ -750,7 +750,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  203 00a0 FF4B1D00 		.word	1919999
  204 00a4 FE973A00 		.word	3839998
  205 00a8 004C1D00 		.word	1920000
- 206              	.LBE36:
+ 206              	.LBE38:
  207              		.cfi_endproc
  208              	.LFE2545:
  210              		.section	.text._ZN5Mixer14initParametersEv,"ax",%progbits
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  228              		.cfi_endproc
  229              	.LFE2569:
  231 0002 00BF     		.section	.text._ZN5Mixer7prepareEv,"ax",%progbits
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 14
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 14
 
 
  232              		.align	1
@@ -788,14 +788,14 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  236              		.thumb
  237              		.thumb_func
  239              	_ZN5Mixer7prepareEv:
- 240              	.LFB2597:
+ 240              	.LFB2598:
  241              		.cfi_startproc
  242              		@ args = 0, pretend = 0, frame = 0
  243              		@ frame_needed = 0, uses_anonymous_args = 0
  244              		@ link register save eliminated.
  245 0000 7047     		bx	lr
  246              		.cfi_endproc
- 247              	.LFE2597:
+ 247              	.LFE2598:
  249 0002 00BF     		.section	.rodata._ZN5Mixer4tickEv.str1.4,"aMS",%progbits,1
  250              		.align	2
  251              	.LC0:
@@ -829,122 +829,138 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   37:DSP/Mixer.cpp ****     //track1.track.tick();
   38:DSP/Mixer.cpp ****     track1.gain.tick();
  268              		.loc 1 38 5 view .LVU65
- 269              	.LBB43:
- 270              	.LBI43:
+ 269              	.LBB47:
+ 270              	.LBI47:
   31:DSP/../Parameters/AudioParameter.h ****     }
   32:DSP/../Parameters/AudioParameter.h ****     
   33:DSP/../Parameters/AudioParameter.h ****     void tick()
  271              		.loc 2 33 10 view .LVU66
- 272              	.LBB44:
+ 272              	.LBB48:
   34:DSP/../Parameters/AudioParameter.h ****     {
-  35:DSP/../Parameters/AudioParameter.h ****         float newInput = 0.f;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 15
+  35:DSP/../Parameters/AudioParameter.h ****         if(!isSelected)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 15
 
 
-  36:DSP/../Parameters/AudioParameter.h ****         if(isSelected)
- 273              		.loc 2 36 9 is_stmt 0 view .LVU67
+ 273              		.loc 2 35 9 is_stmt 0 view .LVU67
  274 0000 90F84230 		ldrb	r3, [r0, #66]	@ zero_extendqisi2
- 275              	.LBE44:
- 276              	.LBE43:
+ 275 0004 03B9     		cbnz	r3, .L25
+ 276 0006 7047     		bx	lr
+ 277              	.L25:
+ 278              	.LVL20:
+ 279              	.LBB49:
+ 280              	.LBI49:
+  33:DSP/../Parameters/AudioParameter.h ****     {
+ 281              		.loc 2 33 10 is_stmt 1 view .LVU68
+ 282              	.LBE49:
+ 283              	.LBE48:
+ 284              	.LBE47:
   36:DSP/Mixer.cpp ****     //track1.track.tick();
- 277              		.loc 1 36 1 view .LVU68
- 278 0004 10B5     		push	{r4, lr}
- 279              		.cfi_def_cfa_offset 8
- 280              		.cfi_offset 4, -8
- 281              		.cfi_offset 14, -4
-  36:DSP/Mixer.cpp ****     //track1.track.tick();
- 282              		.loc 1 36 1 view .LVU69
- 283 0006 0446     		mov	r4, r0
- 284              	.LBB60:
- 285              	.LBB57:
- 286              		.loc 2 36 9 view .LVU70
- 287 0008 F3BB     		cbnz	r3, .L23
-  35:DSP/../Parameters/AudioParameter.h ****         if(isSelected)
- 288              		.loc 2 35 15 view .LVU71
- 289 000a 9FED230A 		vldr.32	s0, .L25
- 290              	.LVL20:
- 291              	.L13:
-  37:DSP/../Parameters/AudioParameter.h ****             newInput = hw->adc.GetFloat(channelID);
-  38:DSP/../Parameters/AudioParameter.h **** 
-  39:DSP/../Parameters/AudioParameter.h ****         if(newInput > (input + jitter) || newInput < (input - jitter))
- 292              		.loc 2 39 24 view .LVU72
- 293 000e D4ED0B7A 		vldr.32	s15, [r4, #44]
- 294              		.loc 2 39 32 view .LVU73
- 295 0012 94ED0C7A 		vldr.32	s14, [r4, #48]
- 296              		.loc 2 39 30 view .LVU74
- 297 0016 77EE876A 		vadd.f32	s13, s15, s14
- 298              		.loc 2 39 9 view .LVU75
- 299 001a F4EEC06A 		vcmpe.f32	s13, s0
- 300 001e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 301 0022 06D4     		bmi	.L14
- 302              		.loc 2 39 61 view .LVU76
- 303 0024 77EEC77A 		vsub.f32	s15, s15, s14
- 304              		.loc 2 39 40 view .LVU77
- 305 0028 B4EEE70A 		vcmpe.f32	s0, s15
- 306 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 307 0030 1BD5     		bpl	.L21
- 308              	.L14:
- 309              	.LBB45:
- 310              	.LBB46:
-  40:DSP/../Parameters/AudioParameter.h ****         {
-  41:DSP/../Parameters/AudioParameter.h ****             input = newInput;;
-  42:DSP/../Parameters/AudioParameter.h ****             process();
-  43:DSP/../Parameters/AudioParameter.h ****         }
-  44:DSP/../Parameters/AudioParameter.h ****     }
-  45:DSP/../Parameters/AudioParameter.h **** 
-  46:DSP/../Parameters/AudioParameter.h ****     void process()
-  47:DSP/../Parameters/AudioParameter.h ****     {
-  48:DSP/../Parameters/AudioParameter.h ****         switch(curve)
- 311              		.loc 2 48 16 view .LVU78
- 312 0032 94F84130 		ldrb	r3, [r4, #65]	@ zero_extendqisi2
- 313              	.LBE46:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 16
-
-
- 314              	.LBE45:
-  41:DSP/../Parameters/AudioParameter.h ****             process();
- 315              		.loc 2 41 19 view .LVU79
- 316 0036 84ED0B0A 		vstr.32	s0, [r4, #44]
- 317              	.LVL21:
- 318              	.LBB54:
- 319              	.LBI45:
-  46:DSP/../Parameters/AudioParameter.h ****     {
- 320              		.loc 2 46 10 is_stmt 1 view .LVU80
+ 285              		.loc 1 36 1 is_stmt 0 view .LVU69
+ 286 0008 10B5     		push	{r4, lr}
+ 287              		.cfi_def_cfa_offset 8
+ 288              		.cfi_offset 4, -8
+ 289              		.cfi_offset 14, -4
+ 290 000a 0446     		mov	r4, r0
+ 291              	.LBB71:
+ 292              	.LBB68:
+ 293              	.LBB65:
+ 294              	.LBB50:
+  36:DSP/../Parameters/AudioParameter.h ****             return;
+  37:DSP/../Parameters/AudioParameter.h **** 
+  38:DSP/../Parameters/AudioParameter.h ****         float newInput = hw->adc.GetFloat(channelID);
+ 295              		.loc 2 38 42 view .LVU70
+ 296 000c 806A     		ldr	r0, [r0, #40]
+ 297              	.LVL21:
+ 298              		.loc 2 38 42 view .LVU71
+ 299 000e 94F84010 		ldrb	r1, [r4, #64]	@ zero_extendqisi2
+ 300 0012 1830     		adds	r0, r0, #24
+ 301 0014 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
+ 302              	.LVL22:
+  39:DSP/../Parameters/AudioParameter.h **** 
+  40:DSP/../Parameters/AudioParameter.h ****         if(newInput > (input + jitter) || newInput < (input - jitter))
+ 303              		.loc 2 40 24 view .LVU72
+ 304 0018 D4ED0B7A 		vldr.32	s15, [r4, #44]
+ 305              		.loc 2 40 32 view .LVU73
+ 306 001c 94ED0C7A 		vldr.32	s14, [r4, #48]
+ 307              	.LVL23:
+ 308              		.loc 2 40 30 view .LVU74
+ 309 0020 77EE876A 		vadd.f32	s13, s15, s14
+ 310              		.loc 2 40 9 view .LVU75
+ 311 0024 B4EEE60A 		vcmpe.f32	s0, s13
+ 312 0028 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 313 002c 06DC     		bgt	.L15
+ 314              		.loc 2 40 61 view .LVU76
+ 315 002e 77EEC77A 		vsub.f32	s15, s15, s14
+ 316              		.loc 2 40 40 view .LVU77
+ 317 0032 B4EEE70A 		vcmpe.f32	s0, s15
+ 318 0036 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 319 003a 1BD5     		bpl	.L12
+ 320              	.L15:
  321              	.LBB51:
- 322              		.loc 2 48 9 is_stmt 0 view .LVU81
- 323 003a D3B1     		cbz	r3, .L17
- 324              		.loc 2 48 9 view .LVU82
- 325 003c 012B     		cmp	r3, #1
- 326 003e 15D1     		bne	.L24
-  49:DSP/../Parameters/AudioParameter.h ****         {
-  50:DSP/../Parameters/AudioParameter.h ****             case LINEAR:
-  51:DSP/../Parameters/AudioParameter.h ****                 curVal = ((input / 1.0f) * (max - min)) + min;
-  52:DSP/../Parameters/AudioParameter.h ****             break;
-  53:DSP/../Parameters/AudioParameter.h ****             case EXP:
-  54:DSP/../Parameters/AudioParameter.h ****                 curVal = ((input * input) * (max - min)) + min;
- 327              		.loc 2 54 52 view .LVU83
- 328 0040 D4ED0E7A 		vldr.32	s15, [r4, #56]
- 329              		.loc 2 54 34 view .LVU84
- 330 0044 20EE000A 		vmul.f32	s0, s0, s0
- 331              	.LVL22:
- 332              		.loc 2 54 50 view .LVU85
- 333 0048 94ED0F7A 		vldr.32	s14, [r4, #60]
- 334 004c 37EE677A 		vsub.f32	s14, s14, s15
- 335              		.loc 2 54 58 view .LVU86
- 336 0050 E0EE077A 		vfma.f32	s15, s0, s14
- 337              		.loc 2 54 24 view .LVU87
- 338 0054 C4ED0D7A 		vstr.32	s15, [r4, #52]
- 339              	.L19:
- 340              	.LVL23:
- 341              	.LBB47:
- 342              	.LBI47:
- 343              		.file 4 "../../../libDaisy//src/daisy_seed.h"
+ 322              	.LBB52:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 16
+
+
+  41:DSP/../Parameters/AudioParameter.h ****         {
+  42:DSP/../Parameters/AudioParameter.h ****             input = newInput;;
+  43:DSP/../Parameters/AudioParameter.h ****             process();
+  44:DSP/../Parameters/AudioParameter.h ****         }
+  45:DSP/../Parameters/AudioParameter.h ****         
+  46:DSP/../Parameters/AudioParameter.h ****     }
+  47:DSP/../Parameters/AudioParameter.h **** 
+  48:DSP/../Parameters/AudioParameter.h ****     void process()
+  49:DSP/../Parameters/AudioParameter.h ****     {
+  50:DSP/../Parameters/AudioParameter.h ****         switch(curve)
+ 323              		.loc 2 50 16 view .LVU78
+ 324 003c 94F84130 		ldrb	r3, [r4, #65]	@ zero_extendqisi2
+ 325              	.LBE52:
+ 326              	.LBE51:
+  42:DSP/../Parameters/AudioParameter.h ****             process();
+ 327              		.loc 2 42 19 view .LVU79
+ 328 0040 84ED0B0A 		vstr.32	s0, [r4, #44]
+ 329              	.LVL24:
+ 330              	.LBB60:
+ 331              	.LBI51:
+  48:DSP/../Parameters/AudioParameter.h ****     {
+ 332              		.loc 2 48 10 is_stmt 1 view .LVU80
+ 333              	.LBB57:
+ 334              		.loc 2 50 9 is_stmt 0 view .LVU81
+ 335 0044 D3B1     		cbz	r3, .L18
+ 336              		.loc 2 50 9 view .LVU82
+ 337 0046 012B     		cmp	r3, #1
+ 338 0048 15D1     		bne	.L26
+  51:DSP/../Parameters/AudioParameter.h ****         {
+  52:DSP/../Parameters/AudioParameter.h ****             case LINEAR:
+  53:DSP/../Parameters/AudioParameter.h ****                 curVal = ((input / 1.0f) * (max - min)) + min;
+  54:DSP/../Parameters/AudioParameter.h ****             break;
+  55:DSP/../Parameters/AudioParameter.h ****             case EXP:
+  56:DSP/../Parameters/AudioParameter.h ****                 curVal = ((input * input) * (max - min)) + min;
+ 339              		.loc 2 56 52 view .LVU83
+ 340 004a D4ED0E7A 		vldr.32	s15, [r4, #56]
+ 341              		.loc 2 56 34 view .LVU84
+ 342 004e 20EE000A 		vmul.f32	s0, s0, s0
+ 343              	.LVL25:
+ 344              		.loc 2 56 50 view .LVU85
+ 345 0052 94ED0F7A 		vldr.32	s14, [r4, #60]
+ 346 0056 37EE677A 		vsub.f32	s14, s14, s15
+ 347              		.loc 2 56 58 view .LVU86
+ 348 005a E0EE077A 		vfma.f32	s15, s0, s14
+ 349              		.loc 2 56 24 view .LVU87
+ 350 005e C4ED0D7A 		vstr.32	s15, [r4, #52]
+ 351              	.L20:
+ 352              	.LVL26:
+ 353              	.LBB53:
+ 354              	.LBI53:
+ 355              		.file 4 "../../../libDaisy//src/daisy_seed.h"
    1:../../../libDaisy//src/daisy_seed.h **** #pragma once
    2:../../../libDaisy//src/daisy_seed.h **** #ifndef DSY_SEED_H
    3:../../../libDaisy//src/daisy_seed.h **** #define DSY_SEED_H
    4:../../../libDaisy//src/daisy_seed.h **** 
    5:../../../libDaisy//src/daisy_seed.h **** #include "daisy.h"
    6:../../../libDaisy//src/daisy_seed.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 17
+
+
    7:../../../libDaisy//src/daisy_seed.h **** //Uncomment this out if you're still using the rev2 hardware
    8:../../../libDaisy//src/daisy_seed.h **** //#define SEED_REV2
    9:../../../libDaisy//src/daisy_seed.h **** 
@@ -958,9 +974,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   17:../../../libDaisy//src/daisy_seed.h **** */
   18:../../../libDaisy//src/daisy_seed.h **** class DaisySeed
   19:../../../libDaisy//src/daisy_seed.h **** {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 17
-
-
   20:../../../libDaisy//src/daisy_seed.h ****   public:
   21:../../../libDaisy//src/daisy_seed.h ****     DaisySeed() {}
   22:../../../libDaisy//src/daisy_seed.h ****     ~DaisySeed() {}
@@ -1005,6 +1018,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   61:../../../libDaisy//src/daisy_seed.h ****     void StartAudio(AudioHandle::InterleavingAudioCallback cb);
   62:../../../libDaisy//src/daisy_seed.h **** 
   63:../../../libDaisy//src/daisy_seed.h ****     /** Begins the audio for the seeds builtin audio.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 18
+
+
   64:../../../libDaisy//src/daisy_seed.h ****     the specified callback will get called whenever
   65:../../../libDaisy//src/daisy_seed.h ****     new data is ready to be prepared.
   66:../../../libDaisy//src/daisy_seed.h ****     This will use the newer non-interleaved callback.
@@ -1018,9 +1034,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   74:../../../libDaisy//src/daisy_seed.h ****     /** Changes to a new multichannel callback
   75:../../../libDaisy//src/daisy_seed.h ****      */
   76:../../../libDaisy//src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 18
-
-
   77:../../../libDaisy//src/daisy_seed.h **** 
   78:../../../libDaisy//src/daisy_seed.h ****     /** Stops the audio if it is running. */
   79:../../../libDaisy//src/daisy_seed.h ****     void StopAudio();
@@ -1064,188 +1077,180 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
  117:../../../libDaisy//src/daisy_seed.h ****     */
  118:../../../libDaisy//src/daisy_seed.h ****     template <typename... VA>
  119:../../../libDaisy//src/daisy_seed.h ****     static void PrintLine(const char* format, VA... va)
- 344              		.loc 4 119 17 is_stmt 1 view .LVU88
- 345              	.LBB48:
+ 356              		.loc 4 119 17 is_stmt 1 view .LVU88
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 19
+
+
+ 357              	.LBB54:
  120:../../../libDaisy//src/daisy_seed.h ****     {
  121:../../../libDaisy//src/daisy_seed.h ****         Log::PrintLine(format, va...);
- 346              		.loc 4 121 23 is_stmt 0 view .LVU89
- 347 0058 B7EEE77A 		vcvt.f64.f32	d7, s15
- 348 005c 0F48     		ldr	r0, .L25+4
- 349              	.LBE48:
- 350              	.LBE47:
- 351              	.LBE51:
- 352              	.LBE54:
- 353              	.LBE57:
- 354              	.LBE60:
+ 358              		.loc 4 121 23 is_stmt 0 view .LVU89
+ 359 0062 B7EEE77A 		vcvt.f64.f32	d7, s15
+ 360 0066 0B48     		ldr	r0, .L27
+ 361              	.LBE54:
+ 362              	.LBE53:
+ 363              	.LBE57:
+ 364              	.LBE60:
+ 365              	.LBE50:
+ 366              	.LBE65:
+ 367              	.LBE68:
+ 368              	.LBE71:
   39:DSP/Mixer.cpp **** }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 19
+ 369              		.loc 1 39 1 view .LVU90
+ 370 0068 BDE81040 		pop	{r4, lr}
+ 371              		.cfi_remember_state
+ 372              		.cfi_restore 14
+ 373              		.cfi_restore 4
+ 374              		.cfi_def_cfa_offset 0
+ 375              	.LVL27:
+ 376              	.LBB72:
+ 377              	.LBB69:
+ 378              	.LBB66:
+ 379              	.LBB63:
+ 380              	.LBB61:
+ 381              	.LBB58:
+ 382              	.LBB56:
+ 383              	.LBB55:
+ 384              		.loc 4 121 23 view .LVU91
+ 385 006c 53EC172B 		vmov	r2, r3, d7
+ 386 0070 FFF7FEBF 		b	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 387              	.LVL28:
+ 388              	.L12:
+ 389              		.cfi_restore_state
+ 390              		.loc 4 121 23 view .LVU92
+ 391              	.LBE55:
+ 392              	.LBE56:
+ 393              	.LBE58:
+ 394              	.LBE61:
+ 395              	.LBE63:
+ 396              	.LBE66:
+ 397              	.LBE69:
+ 398              	.LBE72:
+ 399              		.loc 1 39 1 view .LVU93
+ 400 0074 10BD     		pop	{r4, pc}
+ 401              	.LVL29:
+ 402              	.L26:
+ 403              	.LBB73:
+ 404              	.LBB70:
+ 405              	.LBB67:
+ 406              	.LBB64:
+ 407              	.LBB62:
+ 408              	.LBB59:
+  57:DSP/../Parameters/AudioParameter.h ****             break;
+  58:DSP/../Parameters/AudioParameter.h ****         }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 20
 
 
- 355              		.loc 1 39 1 view .LVU90
- 356 005e BDE81040 		pop	{r4, lr}
- 357              		.cfi_remember_state
- 358              		.cfi_restore 14
- 359              		.cfi_restore 4
- 360              		.cfi_def_cfa_offset 0
- 361              	.LVL24:
- 362              	.LBB61:
- 363              	.LBB58:
- 364              	.LBB55:
- 365              	.LBB52:
- 366              	.LBB50:
- 367              	.LBB49:
- 368              		.loc 4 121 23 view .LVU91
- 369 0062 53EC172B 		vmov	r2, r3, d7
- 370 0066 FFF7FEBF 		b	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
- 371              	.LVL25:
- 372              	.L21:
- 373              		.cfi_restore_state
- 374              		.loc 4 121 23 view .LVU92
- 375              	.LBE49:
- 376              	.LBE50:
- 377              	.LBE52:
- 378              	.LBE55:
- 379              	.LBE58:
- 380              	.LBE61:
- 381              		.loc 1 39 1 view .LVU93
- 382 006a 10BD     		pop	{r4, pc}
- 383              	.LVL26:
- 384              	.L24:
- 385              	.LBB62:
- 386              	.LBB59:
- 387              	.LBB56:
- 388              	.LBB53:
-  55:DSP/../Parameters/AudioParameter.h ****             break;
-  56:DSP/../Parameters/AudioParameter.h ****         }
-  57:DSP/../Parameters/AudioParameter.h **** 
-  58:DSP/../Parameters/AudioParameter.h ****         hw->PrintLine("Current value = %f", curVal);
- 389              		.loc 2 58 22 view .LVU94
- 390 006c D4ED0D7A 		vldr.32	s15, [r4, #52]
- 391 0070 F2E7     		b	.L19
- 392              	.L17:
-  51:DSP/../Parameters/AudioParameter.h ****             break;
- 393              		.loc 2 51 51 view .LVU95
- 394 0072 D4ED0E7A 		vldr.32	s15, [r4, #56]
-  51:DSP/../Parameters/AudioParameter.h ****             break;
- 395              		.loc 2 51 49 view .LVU96
- 396 0076 94ED0F7A 		vldr.32	s14, [r4, #60]
- 397 007a 37EE677A 		vsub.f32	s14, s14, s15
-  51:DSP/../Parameters/AudioParameter.h ****             break;
- 398              		.loc 2 51 57 view .LVU97
- 399 007e E0EE077A 		vfma.f32	s15, s0, s14
-  51:DSP/../Parameters/AudioParameter.h ****             break;
- 400              		.loc 2 51 24 view .LVU98
- 401 0082 C4ED0D7A 		vstr.32	s15, [r4, #52]
-  52:DSP/../Parameters/AudioParameter.h ****             case EXP:
- 402              		.loc 2 52 13 view .LVU99
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 20
-
-
- 403 0086 E7E7     		b	.L19
- 404              	.LVL27:
- 405              	.L23:
-  52:DSP/../Parameters/AudioParameter.h ****             case EXP:
- 406              		.loc 2 52 13 view .LVU100
- 407              	.LBE53:
- 408              	.LBE56:
-  37:DSP/../Parameters/AudioParameter.h **** 
- 409              		.loc 2 37 40 view .LVU101
- 410 0088 806A     		ldr	r0, [r0, #40]
- 411              	.LVL28:
-  37:DSP/../Parameters/AudioParameter.h **** 
- 412              		.loc 2 37 40 view .LVU102
- 413 008a 94F84010 		ldrb	r1, [r4, #64]	@ zero_extendqisi2
- 414 008e 1830     		adds	r0, r0, #24
- 415 0090 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
- 416              	.LVL29:
-  37:DSP/../Parameters/AudioParameter.h **** 
- 417              		.loc 2 37 40 view .LVU103
- 418 0094 BBE7     		b	.L13
- 419              	.L26:
- 420 0096 00BF     		.align	2
- 421              	.L25:
- 422 0098 00000000 		.word	0
- 423 009c 00000000 		.word	.LC0
- 424              	.LBE59:
- 425              	.LBE62:
- 426              		.cfi_endproc
- 427              	.LFE2571:
- 429              		.section	.text._ZN5Mixer17processInputBlockEPKfS1_j,"ax",%progbits
- 430              		.align	1
- 431              		.p2align 2,,3
- 432              		.global	_ZN5Mixer17processInputBlockEPKfS1_j
- 433              		.syntax unified
- 434              		.thumb
- 435              		.thumb_func
- 437              	_ZN5Mixer17processInputBlockEPKfS1_j:
- 438              	.LVL30:
- 439              	.LFB2572:
+  59:DSP/../Parameters/AudioParameter.h **** 
+  60:DSP/../Parameters/AudioParameter.h ****         hw->PrintLine("Current value = %f", curVal);
+ 409              		.loc 2 60 22 view .LVU94
+ 410 0076 D4ED0D7A 		vldr.32	s15, [r4, #52]
+ 411 007a F2E7     		b	.L20
+ 412              	.L18:
+  53:DSP/../Parameters/AudioParameter.h ****             break;
+ 413              		.loc 2 53 51 view .LVU95
+ 414 007c D4ED0E7A 		vldr.32	s15, [r4, #56]
+  53:DSP/../Parameters/AudioParameter.h ****             break;
+ 415              		.loc 2 53 49 view .LVU96
+ 416 0080 94ED0F7A 		vldr.32	s14, [r4, #60]
+ 417 0084 37EE677A 		vsub.f32	s14, s14, s15
+  53:DSP/../Parameters/AudioParameter.h ****             break;
+ 418              		.loc 2 53 57 view .LVU97
+ 419 0088 E0EE077A 		vfma.f32	s15, s0, s14
+  53:DSP/../Parameters/AudioParameter.h ****             break;
+ 420              		.loc 2 53 24 view .LVU98
+ 421 008c C4ED0D7A 		vstr.32	s15, [r4, #52]
+  54:DSP/../Parameters/AudioParameter.h ****             case EXP:
+ 422              		.loc 2 54 13 view .LVU99
+ 423 0090 E7E7     		b	.L20
+ 424              	.L28:
+ 425 0092 00BF     		.align	2
+ 426              	.L27:
+ 427 0094 00000000 		.word	.LC0
+ 428              	.LBE59:
+ 429              	.LBE62:
+ 430              	.LBE64:
+ 431              	.LBE67:
+ 432              	.LBE70:
+ 433              	.LBE73:
+ 434              		.cfi_endproc
+ 435              	.LFE2571:
+ 437              		.section	.text._ZN5Mixer17processInputBlockEPKfS1_j,"ax",%progbits
+ 438              		.align	1
+ 439              		.p2align 2,,3
+ 440              		.global	_ZN5Mixer17processInputBlockEPKfS1_j
+ 441              		.syntax unified
+ 442              		.thumb
+ 443              		.thumb_func
+ 445              	_ZN5Mixer17processInputBlockEPKfS1_j:
+ 446              	.LVL30:
+ 447              	.LFB2572:
   40:DSP/Mixer.cpp **** 
   41:DSP/Mixer.cpp **** void Mixer::processInputBlock(const float* left, const float* right, size_t size)
   42:DSP/Mixer.cpp **** {
- 440              		.loc 1 42 1 is_stmt 1 view -0
- 441              		.cfi_startproc
- 442              		@ args = 0, pretend = 0, frame = 0
- 443              		@ frame_needed = 0, uses_anonymous_args = 0
- 444              		@ link register save eliminated.
+ 448              		.loc 1 42 1 is_stmt 1 view -0
+ 449              		.cfi_startproc
+ 450              		@ args = 0, pretend = 0, frame = 0
+ 451              		@ frame_needed = 0, uses_anonymous_args = 0
+ 452              		@ link register save eliminated.
   43:DSP/Mixer.cpp ****     track1.track.processInputBlock(left, right, size);
- 445              		.loc 1 43 5 view .LVU105
- 446              		.loc 1 43 35 is_stmt 0 view .LVU106
- 447 0000 FFF7FEBF 		b	_ZN5Track17processInputBlockEPKfS1_j
- 448              	.LVL31:
- 449              		.loc 1 43 35 view .LVU107
- 450              		.cfi_endproc
- 451              	.LFE2572:
- 453              		.section	.text._ZN5Mixer18processOutputBlockEPfS0_j,"ax",%progbits
- 454              		.align	1
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 21
+ 453              		.loc 1 43 5 view .LVU101
+ 454              		.loc 1 43 35 is_stmt 0 view .LVU102
+ 455 0000 FFF7FEBF 		b	_ZN5Track17processInputBlockEPKfS1_j
+ 456              	.LVL31:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 21
 
 
- 455              		.p2align 2,,3
- 456              		.global	_ZN5Mixer18processOutputBlockEPfS0_j
- 457              		.syntax unified
- 458              		.thumb
- 459              		.thumb_func
- 461              	_ZN5Mixer18processOutputBlockEPfS0_j:
- 462              	.LVL32:
- 463              	.LFB2573:
+ 457              		.loc 1 43 35 view .LVU103
+ 458              		.cfi_endproc
+ 459              	.LFE2572:
+ 461              		.section	.text._ZN5Mixer18processOutputBlockEPfS0_j,"ax",%progbits
+ 462              		.align	1
+ 463              		.p2align 2,,3
+ 464              		.global	_ZN5Mixer18processOutputBlockEPfS0_j
+ 465              		.syntax unified
+ 466              		.thumb
+ 467              		.thumb_func
+ 469              	_ZN5Mixer18processOutputBlockEPfS0_j:
+ 470              	.LVL32:
+ 471              	.LFB2573:
   44:DSP/Mixer.cpp **** }
   45:DSP/Mixer.cpp **** 
   46:DSP/Mixer.cpp **** void Mixer::processOutputBlock(float* left, float* right, size_t size)
   47:DSP/Mixer.cpp **** {
- 464              		.loc 1 47 1 is_stmt 1 view -0
- 465              		.cfi_startproc
- 466              		@ args = 0, pretend = 0, frame = 8
- 467              		@ frame_needed = 0, uses_anonymous_args = 0
+ 472              		.loc 1 47 1 is_stmt 1 view -0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 8
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
   48:DSP/Mixer.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 468              		.loc 1 48 5 view .LVU109
- 469              	.LBB63:
- 470              		.loc 1 48 26 view .LVU110
- 471 0000 002B     		cmp	r3, #0
- 472 0002 40D0     		beq	.L35
- 473              	.LBE63:
+ 476              		.loc 1 48 5 view .LVU105
+ 477              	.LBB74:
+ 478              		.loc 1 48 26 view .LVU106
+ 479 0000 002B     		cmp	r3, #0
+ 480 0002 40D0     		beq	.L37
+ 481              	.LBE74:
   47:DSP/Mixer.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 474              		.loc 1 47 1 is_stmt 0 view .LVU111
- 475 0004 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 476              		.cfi_def_cfa_offset 24
- 477              		.cfi_offset 4, -24
- 478              		.cfi_offset 5, -20
- 479              		.cfi_offset 6, -16
- 480              		.cfi_offset 7, -12
- 481              		.cfi_offset 8, -8
- 482              		.cfi_offset 14, -4
- 483 0008 0446     		mov	r4, r0
- 484 000a 82B0     		sub	sp, sp, #8
- 485              		.cfi_def_cfa_offset 32
- 486 000c 1E46     		mov	r6, r3
- 487 000e 8846     		mov	r8, r1
- 488 0010 1746     		mov	r7, r2
- 489              	.LBB76:
- 490              		.loc 1 48 16 view .LVU112
- 491 0012 0025     		movs	r5, #0
- 492 0014 0EE0     		b	.L33
- 493              	.LVL33:
- 494              	.L39:
+ 482              		.loc 1 47 1 is_stmt 0 view .LVU107
+ 483 0004 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 484              		.cfi_def_cfa_offset 24
+ 485              		.cfi_offset 4, -24
+ 486              		.cfi_offset 5, -20
+ 487              		.cfi_offset 6, -16
+ 488              		.cfi_offset 7, -12
+ 489              		.cfi_offset 8, -8
+ 490              		.cfi_offset 14, -4
+ 491 0008 0446     		mov	r4, r0
+ 492 000a 82B0     		sub	sp, sp, #8
+ 493              		.cfi_def_cfa_offset 32
+ 494 000c 1E46     		mov	r6, r3
+ 495 000e 8846     		mov	r8, r1
+ 496 0010 1746     		mov	r7, r2
+ 497              	.LBB87:
+ 498              		.loc 1 48 16 view .LVU108
+ 499 0012 0025     		movs	r5, #0
+ 500 0014 0EE0     		b	.L35
+ 501              	.LVL33:
+ 502              	.L41:
   49:DSP/Mixer.cpp ****     {
   50:DSP/Mixer.cpp ****         if(track1.track.getIsRecording() || track1.track.getIsPlaying())
   51:DSP/Mixer.cpp ****         {
@@ -1253,54 +1258,54 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   53:DSP/Mixer.cpp ****             mix[L][i] = *track1.curSample.first * track1.gain.getValue();
   54:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
   55:DSP/Mixer.cpp ****         }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 22
+
+
   56:DSP/Mixer.cpp **** 
   57:DSP/Mixer.cpp ****         left[i] = mix[L][i];
   58:DSP/Mixer.cpp ****         right[i] = mix[R][i];
- 495              		.loc 1 58 28 view .LVU113
- 496 0016 D4E94412 		ldrd	r1, r2, [r4, #272]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 22
-
-
- 497              	.LVL34:
+ 503              		.loc 1 58 28 view .LVU109
+ 504 0016 D4E94412 		ldrd	r1, r2, [r4, #272]
+ 505              	.LVL34:
   57:DSP/Mixer.cpp ****         right[i] = mix[R][i];
- 498              		.loc 1 57 27 view .LVU114
- 499 001a 01EB8501 		add	r1, r1, r5, lsl #2
- 500              		.loc 1 58 28 view .LVU115
- 501 001e 02EB8502 		add	r2, r2, r5, lsl #2
- 502              	.L31:
+ 506              		.loc 1 57 27 view .LVU110
+ 507 001a 01EB8501 		add	r1, r1, r5, lsl #2
+ 508              		.loc 1 58 28 view .LVU111
+ 509 001e 02EB8502 		add	r2, r2, r5, lsl #2
+ 510              	.L33:
   57:DSP/Mixer.cpp ****         right[i] = mix[R][i];
- 503              		.loc 1 57 9 is_stmt 1 discriminator 2 view .LVU116
+ 511              		.loc 1 57 9 is_stmt 1 discriminator 2 view .LVU112
   57:DSP/Mixer.cpp ****         right[i] = mix[R][i];
- 504              		.loc 1 57 27 is_stmt 0 discriminator 2 view .LVU117
- 505 0022 0B68     		ldr	r3, [r1]	@ float
+ 512              		.loc 1 57 27 is_stmt 0 discriminator 2 view .LVU113
+ 513 0022 0B68     		ldr	r3, [r1]	@ float
   48:DSP/Mixer.cpp ****     {
- 506              		.loc 1 48 5 discriminator 2 view .LVU118
- 507 0024 0135     		adds	r5, r5, #1
- 508              	.LVL35:
+ 514              		.loc 1 48 5 discriminator 2 view .LVU114
+ 515 0024 0135     		adds	r5, r5, #1
+ 516              	.LVL35:
   57:DSP/Mixer.cpp ****         right[i] = mix[R][i];
- 509              		.loc 1 57 17 discriminator 2 view .LVU119
- 510 0026 48F8043B 		str	r3, [r8], #4	@ float
- 511              		.loc 1 58 9 is_stmt 1 discriminator 2 view .LVU120
+ 517              		.loc 1 57 17 discriminator 2 view .LVU115
+ 518 0026 48F8043B 		str	r3, [r8], #4	@ float
+ 519              		.loc 1 58 9 is_stmt 1 discriminator 2 view .LVU116
   48:DSP/Mixer.cpp ****     {
- 512              		.loc 1 48 26 is_stmt 0 discriminator 2 view .LVU121
- 513 002a AE42     		cmp	r6, r5
- 514              		.loc 1 58 28 discriminator 2 view .LVU122
- 515 002c 1368     		ldr	r3, [r2]	@ float
- 516              		.loc 1 58 18 discriminator 2 view .LVU123
- 517 002e 47F8043B 		str	r3, [r7], #4	@ float
+ 520              		.loc 1 48 26 is_stmt 0 discriminator 2 view .LVU117
+ 521 002a AE42     		cmp	r6, r5
+ 522              		.loc 1 58 28 discriminator 2 view .LVU118
+ 523 002c 1368     		ldr	r3, [r2]	@ float
+ 524              		.loc 1 58 18 discriminator 2 view .LVU119
+ 525 002e 47F8043B 		str	r3, [r7], #4	@ float
   48:DSP/Mixer.cpp ****     {
- 518              		.loc 1 48 5 is_stmt 1 discriminator 2 view .LVU124
- 519              	.LVL36:
+ 526              		.loc 1 48 5 is_stmt 1 discriminator 2 view .LVU120
+ 527              	.LVL36:
   48:DSP/Mixer.cpp ****     {
- 520              		.loc 1 48 26 discriminator 2 view .LVU125
- 521 0032 25D0     		beq	.L38
- 522              	.LVL37:
- 523              	.L33:
+ 528              		.loc 1 48 26 discriminator 2 view .LVU121
+ 529 0032 25D0     		beq	.L40
+ 530              	.LVL37:
+ 531              	.L35:
   50:DSP/Mixer.cpp ****         {
- 524              		.loc 1 50 9 view .LVU126
- 525              	.LBB64:
- 526              	.LBI64:
- 527              		.file 5 "DSP/Track.h"
+ 532              		.loc 1 50 9 view .LVU122
+ 533              	.LBB75:
+ 534              	.LBI75:
+ 535              		.file 5 "DSP/Track.h"
    1:DSP/Track.h   **** #include "../Utils/Constants.h"
    2:DSP/Track.h   **** #include "../Parameters/AudioParameter.h"
    3:DSP/Track.h   **** #include <utility>
@@ -1313,245 +1318,245 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 1
   10:DSP/Track.h   **** class Track
   11:DSP/Track.h   **** {
   12:DSP/Track.h   **** public:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 23
+
+
   13:DSP/Track.h   **** 
   14:DSP/Track.h   ****     void init(float* mem[2]);
   15:DSP/Track.h   ****    
   16:DSP/Track.h   ****     void prepare();
   17:DSP/Track.h   ****     void tick();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 23
-
-
   18:DSP/Track.h   **** 
   19:DSP/Track.h   ****     void setIsRecording();
   20:DSP/Track.h   ****     void setIsPlaying();
   21:DSP/Track.h   **** 
   22:DSP/Track.h   ****     bool getIsRecording() { return ph.isRecording; }
- 528              		.loc 5 22 10 view .LVU127
- 529              	.LBB65:
- 530              		.loc 5 22 29 view .LVU128
- 531              		.loc 5 22 29 is_stmt 0 view .LVU129
- 532              	.LBE65:
- 533              	.LBE64:
- 534              	.LBB66:
- 535              	.LBI66:
+ 536              		.loc 5 22 10 view .LVU123
+ 537              	.LBB76:
+ 538              		.loc 5 22 29 view .LVU124
+ 539              		.loc 5 22 29 is_stmt 0 view .LVU125
+ 540              	.LBE76:
+ 541              	.LBE75:
+ 542              	.LBB77:
+ 543              	.LBI77:
   23:DSP/Track.h   ****     bool getIsPlaying() { return ph.isPlaying; }
- 536              		.loc 5 23 10 is_stmt 1 view .LVU130
- 537              	.LBB67:
- 538              		.loc 5 23 27 view .LVU131
- 539              		.loc 5 23 27 is_stmt 0 view .LVU132
- 540              	.LBE67:
- 541              	.LBE66:
+ 544              		.loc 5 23 10 is_stmt 1 view .LVU126
+ 545              	.LBB78:
+ 546              		.loc 5 23 27 view .LVU127
+ 547              		.loc 5 23 27 is_stmt 0 view .LVU128
+ 548              	.LBE78:
+ 549              	.LBE77:
   52:DSP/Mixer.cpp ****             mix[L][i] = *track1.curSample.first * track1.gain.getValue();
- 542              		.loc 1 52 13 is_stmt 1 view .LVU133
+ 550              		.loc 1 52 13 is_stmt 1 view .LVU129
   50:DSP/Mixer.cpp ****         {
- 543              		.loc 1 50 42 is_stmt 0 view .LVU134
- 544 0034 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 551              		.loc 1 50 42 is_stmt 0 view .LVU130
+ 552 0034 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
   52:DSP/Mixer.cpp ****             mix[L][i] = *track1.curSample.first * track1.gain.getValue();
- 545              		.loc 1 52 59 view .LVU135
- 546 0036 2146     		mov	r1, r4
- 547 0038 6846     		mov	r0, sp
+ 553              		.loc 1 52 59 view .LVU131
+ 554 0036 2146     		mov	r1, r4
+ 555 0038 6846     		mov	r0, sp
   50:DSP/Mixer.cpp ****         {
- 548              		.loc 1 50 42 view .LVU136
- 549 003a 13B9     		cbnz	r3, .L30
- 550              	.LVL38:
+ 556              		.loc 1 50 42 view .LVU132
+ 557 003a 13B9     		cbnz	r3, .L32
+ 558              	.LVL38:
   50:DSP/Mixer.cpp ****         {
- 551              		.loc 1 50 42 discriminator 2 view .LVU137
- 552 003c 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 553 003e 002B     		cmp	r3, #0
- 554 0040 E9D0     		beq	.L39
- 555              	.L30:
+ 559              		.loc 1 50 42 discriminator 2 view .LVU133
+ 560 003c 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 561 003e 002B     		cmp	r3, #0
+ 562 0040 E9D0     		beq	.L41
+ 563              	.L32:
   52:DSP/Mixer.cpp ****             mix[L][i] = *track1.curSample.first * track1.gain.getValue();
- 556              		.loc 1 52 59 discriminator 3 view .LVU138
- 557 0042 FFF7FEFF 		bl	_ZN5Track13processOutputEv
- 558              	.LVL39:
- 559              	.LBB68:
- 560              	.LBI68:
+ 564              		.loc 1 52 59 discriminator 3 view .LVU134
+ 565 0042 FFF7FEFF 		bl	_ZN5Track13processOutputEv
+ 566              	.LVL39:
+ 567              	.LBB79:
+ 568              	.LBI79:
  401:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 		__and_<is_move_assignable<_T1>,
- 561              		.loc 3 401 7 is_stmt 1 discriminator 3 view .LVU139
- 562              	.LBB69:
+ 569              		.loc 3 401 7 is_stmt 1 discriminator 3 view .LVU135
+ 570              	.LBB80:
  408:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	second = std::forward<second_type>(__p.second);
- 563              		.loc 3 408 8 is_stmt 0 discriminator 3 view .LVU140
- 564 0046 009A     		ldr	r2, [sp]
- 565              	.LBE69:
- 566              	.LBE68:
-  53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 567              		.loc 1 53 49 discriminator 3 view .LVU141
- 568 0048 94ED0D7A 		vldr.32	s14, [r4, #52]
- 569 004c D2ED007A 		vldr.32	s15, [r2]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 24
+ 571              		.loc 3 408 8 is_stmt 0 discriminator 3 view .LVU136
+ 572 0046 009A     		ldr	r2, [sp]
+ 573              	.LBE80:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 24
 
 
+ 574              	.LBE79:
   53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 570              		.loc 1 53 21 discriminator 3 view .LVU142
- 571 0050 D4F81011 		ldr	r1, [r4, #272]
+ 575              		.loc 1 53 49 discriminator 3 view .LVU137
+ 576 0048 94ED0D7A 		vldr.32	s14, [r4, #52]
+ 577 004c D2ED007A 		vldr.32	s15, [r2]
   53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 572              		.loc 1 53 49 discriminator 3 view .LVU143
- 573 0054 67EE877A 		vmul.f32	s15, s15, s14
- 574              	.LBB72:
- 575              	.LBB70:
+ 578              		.loc 1 53 21 discriminator 3 view .LVU138
+ 579 0050 D4F81011 		ldr	r1, [r4, #272]
+  53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
+ 580              		.loc 1 53 49 discriminator 3 view .LVU139
+ 581 0054 67EE877A 		vmul.f32	s15, s15, s14
+ 582              	.LBB83:
+ 583              	.LBB81:
  409:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	return *this;
- 576              		.loc 3 409 9 discriminator 3 view .LVU144
- 577 0058 019B     		ldr	r3, [sp, #4]
- 578              	.LBE70:
- 579              	.LBE72:
+ 584              		.loc 3 409 9 discriminator 3 view .LVU140
+ 585 0058 019B     		ldr	r3, [sp, #4]
+ 586              	.LBE81:
+ 587              	.LBE83:
   53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 580              		.loc 1 53 21 discriminator 3 view .LVU145
- 581 005a 01EB8501 		add	r1, r1, r5, lsl #2
- 582              	.LBB73:
- 583              	.LBB71:
+ 588              		.loc 1 53 21 discriminator 3 view .LVU141
+ 589 005a 01EB8501 		add	r1, r1, r5, lsl #2
+ 590              	.LBB84:
+ 591              	.LBB82:
  408:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	second = std::forward<second_type>(__p.second);
- 584              		.loc 3 408 8 discriminator 3 view .LVU146
- 585 005e 2262     		str	r2, [r4, #32]
+ 592              		.loc 3 408 8 discriminator 3 view .LVU142
+ 593 005e 2262     		str	r2, [r4, #32]
  409:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	return *this;
- 586              		.loc 3 409 9 discriminator 3 view .LVU147
- 587 0060 6362     		str	r3, [r4, #36]
- 588              	.LVL40:
+ 594              		.loc 3 409 9 discriminator 3 view .LVU143
+ 595 0060 6362     		str	r3, [r4, #36]
+ 596              	.LVL40:
  409:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h **** 	return *this;
- 589              		.loc 3 409 9 discriminator 3 view .LVU148
- 590              	.LBE71:
- 591              	.LBE73:
+ 597              		.loc 3 409 9 discriminator 3 view .LVU144
+ 598              	.LBE82:
+ 599              	.LBE84:
   53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 592              		.loc 1 53 13 is_stmt 1 discriminator 3 view .LVU149
- 593              	.LBB74:
- 594              	.LBI74:
-  59:DSP/../Parameters/AudioParameter.h ****     }
-  60:DSP/../Parameters/AudioParameter.h **** 
-  61:DSP/../Parameters/AudioParameter.h ****     type getValue() { return curVal; }
- 595              		.loc 2 61 10 discriminator 3 view .LVU150
- 596              		.loc 2 61 10 is_stmt 0 discriminator 3 view .LVU151
- 597              	.LBE74:
+ 600              		.loc 1 53 13 is_stmt 1 discriminator 3 view .LVU145
+ 601              	.LBB85:
+ 602              	.LBI85:
+  61:DSP/../Parameters/AudioParameter.h ****     }
+  62:DSP/../Parameters/AudioParameter.h **** 
+  63:DSP/../Parameters/AudioParameter.h ****     type getValue() { return curVal; }
+ 603              		.loc 2 63 10 discriminator 3 view .LVU146
+ 604              		.loc 2 63 10 is_stmt 0 discriminator 3 view .LVU147
+ 605              	.LBE85:
   54:DSP/Mixer.cpp ****         }
- 598              		.loc 1 54 21 discriminator 3 view .LVU152
- 599 0062 D4F81421 		ldr	r2, [r4, #276]
+ 606              		.loc 1 54 21 discriminator 3 view .LVU148
+ 607 0062 D4F81421 		ldr	r2, [r4, #276]
   53:DSP/Mixer.cpp ****             mix[R][i] = *track1.curSample.second * track1.gain.getValue();
- 600              		.loc 1 53 23 discriminator 3 view .LVU153
- 601 0066 C1ED007A 		vstr.32	s15, [r1]
+ 608              		.loc 1 53 23 discriminator 3 view .LVU149
+ 609 0066 C1ED007A 		vstr.32	s15, [r1]
   54:DSP/Mixer.cpp ****         }
- 602              		.loc 1 54 13 is_stmt 1 discriminator 3 view .LVU154
- 603              	.LVL41:
- 604              	.LBB75:
- 605              	.LBI75:
- 606              		.loc 2 61 10 discriminator 3 view .LVU155
- 607              		.loc 2 61 10 is_stmt 0 discriminator 3 view .LVU156
- 608              	.LBE75:
-  54:DSP/Mixer.cpp ****         }
- 609              		.loc 1 54 50 discriminator 3 view .LVU157
- 610 006a D3ED007A 		vldr.32	s15, [r3]
-  54:DSP/Mixer.cpp ****         }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 25
+ 610              		.loc 1 54 13 is_stmt 1 discriminator 3 view .LVU150
+ 611              	.LVL41:
+ 612              	.LBB86:
+ 613              	.LBI86:
+ 614              		.loc 2 63 10 discriminator 3 view .LVU151
+ 615              		.loc 2 63 10 is_stmt 0 discriminator 3 view .LVU152
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 25
 
 
- 611              		.loc 1 54 21 discriminator 3 view .LVU158
- 612 006e 02EB8502 		add	r2, r2, r5, lsl #2
+ 616              	.LBE86:
   54:DSP/Mixer.cpp ****         }
- 613              		.loc 1 54 50 discriminator 3 view .LVU159
- 614 0072 94ED0D7A 		vldr.32	s14, [r4, #52]
- 615 0076 67EE877A 		vmul.f32	s15, s15, s14
+ 617              		.loc 1 54 50 discriminator 3 view .LVU153
+ 618 006a D3ED007A 		vldr.32	s15, [r3]
   54:DSP/Mixer.cpp ****         }
- 616              		.loc 1 54 23 discriminator 3 view .LVU160
- 617 007a C2ED007A 		vstr.32	s15, [r2]
- 618 007e D0E7     		b	.L31
- 619              	.L38:
+ 619              		.loc 1 54 21 discriminator 3 view .LVU154
+ 620 006e 02EB8502 		add	r2, r2, r5, lsl #2
   54:DSP/Mixer.cpp ****         }
- 620              		.loc 1 54 23 discriminator 3 view .LVU161
- 621              	.LBE76:
+ 621              		.loc 1 54 50 discriminator 3 view .LVU155
+ 622 0072 94ED0D7A 		vldr.32	s14, [r4, #52]
+ 623 0076 67EE877A 		vmul.f32	s15, s15, s14
+  54:DSP/Mixer.cpp ****         }
+ 624              		.loc 1 54 23 discriminator 3 view .LVU156
+ 625 007a C2ED007A 		vstr.32	s15, [r2]
+ 626 007e D0E7     		b	.L33
+ 627              	.L40:
+  54:DSP/Mixer.cpp ****         }
+ 628              		.loc 1 54 23 discriminator 3 view .LVU157
+ 629              	.LBE87:
   59:DSP/Mixer.cpp ****     }
   60:DSP/Mixer.cpp **** }...
- 622              		.loc 1 60 1 view .LVU162
- 623 0080 02B0     		add	sp, sp, #8
- 624              		.cfi_def_cfa_offset 24
- 625              		@ sp needed
- 626 0082 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 627              	.LVL42:
- 628              	.L35:
- 629              		.cfi_def_cfa_offset 0
- 630              		.cfi_restore 4
- 631              		.cfi_restore 5
- 632              		.cfi_restore 6
- 633              		.cfi_restore 7
- 634              		.cfi_restore 8
- 635              		.cfi_restore 14
- 636              		.loc 1 60 1 view .LVU163
- 637 0086 7047     		bx	lr
- 638              		.cfi_endproc
- 639              	.LFE2573:
- 641              		.text
- 642              	.Letext0:
- 643              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 644              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 645              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 646              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 647              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 648              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 649              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 650              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 651              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 652              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 653              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
- 654              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 655              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 656              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
- 657              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 658              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
- 659              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h"
- 660              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 661              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 662              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 663              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 26
+ 630              		.loc 1 60 1 view .LVU158
+ 631 0080 02B0     		add	sp, sp, #8
+ 632              		.cfi_def_cfa_offset 24
+ 633              		@ sp needed
+ 634 0082 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 635              	.LVL42:
+ 636              	.L37:
+ 637              		.cfi_def_cfa_offset 0
+ 638              		.cfi_restore 4
+ 639              		.cfi_restore 5
+ 640              		.cfi_restore 6
+ 641              		.cfi_restore 7
+ 642              		.cfi_restore 8
+ 643              		.cfi_restore 14
+ 644              		.loc 1 60 1 view .LVU159
+ 645 0086 7047     		bx	lr
+ 646              		.cfi_endproc
+ 647              	.LFE2573:
+ 649              		.text
+ 650              	.Letext0:
+ 651              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 652              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 653              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 654              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 655              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 656              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 657              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 658              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 659              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 660              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 661              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 662              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 663              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 664              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 665              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 666              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 26
 
 
- 664              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 665              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 666              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
- 667              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
- 668              		.file 31 "../../../libDaisy//src/daisy_core.h"
- 669              		.file 32 "../../../libDaisy//src/per/tim.h"
- 670              		.file 33 "../../../libDaisy//src/sys/system.h"
- 671              		.file 34 "../../../libDaisy//src/per/qspi.h"
- 672              		.file 35 "../../../libDaisy//src/per/dac.h"
- 673              		.file 36 "../../../libDaisy//src/per/sai.h"
- 674              		.file 37 "../../../libDaisy//src/hid/audio.h"
- 675              		.file 38 "../../../libDaisy//src/per/adc.h"
- 676              		.file 39 "../../../libDaisy//src/hid/usb.h"
- 677              		.file 40 "../../../libDaisy//src/hid/logger_impl.h"
- 678              		.file 41 "../../../libDaisy//src/util/wav_format.h"
- 679              		.file 42 "../../../libDaisy//src/dev/max11300.h"
- 680              		.file 43 "../../../libDaisy//src/hid/logger.h"
- 681              		.file 44 "../../../libDaisy//src/per/gpio.h"
- 682              		.file 45 "../../../libDaisy//src/dev/sdram.h"
- 683              		.file 46 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 684              		.file 47 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 685              		.file 48 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
- 686              		.file 49 "DSP/../Parameters/../Utils/Helpers.h"
- 687              		.file 50 "DSP/Mixer.h"
- 688              		.file 51 "<built-in>"
- 689              		.file 52 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s 			page 27
+ 667              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h"
+ 668              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 669              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 670              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 671              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 672              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 673              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 674              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 675              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 676              		.file 31 "../../../libDaisy//src/daisy_core.h"
+ 677              		.file 32 "../../../libDaisy//src/per/tim.h"
+ 678              		.file 33 "../../../libDaisy//src/sys/system.h"
+ 679              		.file 34 "../../../libDaisy//src/per/qspi.h"
+ 680              		.file 35 "../../../libDaisy//src/per/dac.h"
+ 681              		.file 36 "../../../libDaisy//src/per/sai.h"
+ 682              		.file 37 "../../../libDaisy//src/hid/audio.h"
+ 683              		.file 38 "../../../libDaisy//src/per/adc.h"
+ 684              		.file 39 "../../../libDaisy//src/hid/usb.h"
+ 685              		.file 40 "../../../libDaisy//src/hid/logger_impl.h"
+ 686              		.file 41 "../../../libDaisy//src/util/wav_format.h"
+ 687              		.file 42 "../../../libDaisy//src/dev/max11300.h"
+ 688              		.file 43 "../../../libDaisy//src/hid/logger.h"
+ 689              		.file 44 "../../../libDaisy//src/per/gpio.h"
+ 690              		.file 45 "../../../libDaisy//src/dev/sdram.h"
+ 691              		.file 46 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 692              		.file 47 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 693              		.file 48 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 694              		.file 49 "DSP/../Parameters/../Utils/Helpers.h"
+ 695              		.file 50 "DSP/Mixer.h"
+ 696              		.file 51 "<built-in>"
+ 697              		.file 52 "../../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Mixer.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:202    .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:000000000000009c $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:211    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:218    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:232    .text._ZN5Mixer7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:239    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:250    .rodata._ZN5Mixer4tickEv.str1.4:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:254    .text._ZN5Mixer4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:261    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:422    .text._ZN5Mixer4tickEv:0000000000000098 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:430    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:437    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:454    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cczbodsy.s:461    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:202    .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:000000000000009c $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:211    .text._ZN5Mixer14initParametersEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:218    .text._ZN5Mixer14initParametersEv:0000000000000000 _ZN5Mixer14initParametersEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:232    .text._ZN5Mixer7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:239    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:250    .rodata._ZN5Mixer4tickEv.str1.4:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:254    .text._ZN5Mixer4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:261    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:427    .text._ZN5Mixer4tickEv:0000000000000094 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:438    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:445    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:462    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccs3v4Tt.s:469    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
 
 UNDEFINED SYMBOLS
 memset
 _ZN5Track4initEPPf
-_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
 _ZNK5daisy9AdcHandle8GetFloatEh
+_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
 _ZN5Track17processInputBlockEPKfS1_j
 _ZN5Track13processOutputEv

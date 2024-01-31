@@ -35,7 +35,6 @@ Switch play;
 AdcChannelConfig amp1;
 
 // Global
-float sampleRate;
 bool isRecord;
 bool isPlay;
 
@@ -47,23 +46,19 @@ Mixer mixer;
 
 // UI - QSPI
 
-// Buffers
-float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
-float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
-float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
-float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
-float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
-
-// Buffer pointers
-float* mixPtr[2] = {mix[L], mix[R]};
-float* track1Ptr[2] = {track1[L], track1[R]};
-float* track2Ptr[2] = {track2[L], track2[R]};
-float* track3Ptr[2] = {track3[L], track3[R]};
-float* track4Ptr[2] = {track4[L], track4[R]};
-
-namespace Constants
+namespace Buffers
 {
+	float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
+	float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
+	float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
+	float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
+	float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
 
+	float* mixPtr[2] = {mix[L], mix[R]};
+	float* track1Ptr[2] = {track1[L], track1[R]};
+	float* track2Ptr[2] = {track2[L], track2[R]};
+	float* track3Ptr[2] = {track3[L], track3[R]};
+	float* track4Ptr[2] = {track4[L], track4[R]};
 };
 
 void init()
@@ -72,7 +67,6 @@ void init()
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-	sampleRate = hw.AudioSampleRate();
 
 	// initialise GPIO
 	record.Init(daisy::seed::D0, 30);
@@ -82,7 +76,7 @@ void init()
 	isPlay = false;
 
 	// initialise DSP
-	mixer.init(&hw, mixPtr, track1Ptr, track2Ptr, track3Ptr, track4Ptr);
+	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 }
 
 void initADC()
