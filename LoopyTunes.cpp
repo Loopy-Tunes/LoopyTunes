@@ -18,6 +18,10 @@ TO DO:
 - Undo/redo?
 - Parameter ramping
 - Output EQ profiles for different output sources
+- Move helpers and constants to namespaces in LoopyTunes
+- Interpolate between start and end sample of loop to smooth transition
+- Is there a better method of managing ADC inputs?
+- Check bit width of pointers, memory range
 */
 
 // Hardware
@@ -56,6 +60,11 @@ float* track1Ptr[2] = {track1[L], track1[R]};
 float* track2Ptr[2] = {track2[L], track2[R]};
 float* track3Ptr[2] = {track3[L], track3[R]};
 float* track4Ptr[2] = {track4[L], track4[R]};
+
+namespace Constants
+{
+
+};
 
 void init()
 {

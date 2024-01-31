@@ -32,7 +32,7 @@ public:
     
     void tick()
     {
-        float newInput;
+        float newInput = 0.f;
         if(isSelected)
             newInput = hw->adc.GetFloat(channelID);
 
