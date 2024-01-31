@@ -8,7 +8,7 @@ using namespace daisysp;
 /*
 TO DO:
 - BinaryParameter
-- AudioParameter value smoothing
+- AudioParameter value smoothing / ramping
 - Parameter update queue
 - Value normalisation
 - Tick parameters less often
@@ -16,9 +16,7 @@ TO DO:
 - Come up with much better mixing system
 - Decibel conversion
 - Undo/redo?
-- Parameter ramping
 - Output EQ profiles for different output sources
-- Move helpers and constants to namespaces in LoopyTunes
 - Interpolate between start and end sample of loop to smooth transition
 - Is there a better method of managing ADC inputs?
 - Check bit width of pointers, memory range

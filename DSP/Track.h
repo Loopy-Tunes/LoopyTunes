@@ -1,5 +1,5 @@
 #include "../Utils/Constants.h"
-#include "../Parameters/AudioParameter.h"
+#include "Delay.h"
 #include <utility>
 
 /**********************************************************//**

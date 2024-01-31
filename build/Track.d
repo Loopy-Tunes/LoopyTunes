@@ -93,18 +93,18 @@ build/Track.o: DSP/Track.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Track.h DSP/../Utils/Constants.h DSP/../Parameters/AudioParameter.h \
- ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
- ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
- ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/per/tim.h \
- ../../../libDaisy//src/per/qspi.h ../../../libDaisy//src/per/dac.h \
- ../../../libDaisy//src/per/gpio.h ../../../libDaisy//src/dev/leddriver.h \
- ../../../libDaisy//src/per/i2c.h ../../../libDaisy//src/dev/mpr121.h \
- ../../../libDaisy//src/dev/sdram.h ../../../libDaisy//src/dev/sr_4021.h \
- ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/hid/audio.h \
- ../../../libDaisy//src/per/sai.h ../../../libDaisy//src/util/unique_id.h \
- ../../../libDaisy//src/per/adc.h ../../../libDaisy//src/per/uart.h \
- ../../../libDaisy//src/hid/midi.h \
+ DSP/Track.h DSP/../Utils/Constants.h DSP/Delay.h \
+ DSP/../Parameters/AudioParameter.h ../../../libDaisy//src/daisy_seed.h \
+ ../../../libDaisy//src/daisy.h ../../../libDaisy//src/daisy_core.h \
+ ../../../libDaisy//src/version.h ../../../libDaisy//src/sys/system.h \
+ ../../../libDaisy//src/per/tim.h ../../../libDaisy//src/per/qspi.h \
+ ../../../libDaisy//src/per/dac.h ../../../libDaisy//src/per/gpio.h \
+ ../../../libDaisy//src/dev/leddriver.h ../../../libDaisy//src/per/i2c.h \
+ ../../../libDaisy//src/dev/mpr121.h ../../../libDaisy//src/dev/sdram.h \
+ ../../../libDaisy//src/dev/sr_4021.h ../../../libDaisy//src/sys/system.h \
+ ../../../libDaisy//src/hid/audio.h ../../../libDaisy//src/per/sai.h \
+ ../../../libDaisy//src/util/unique_id.h ../../../libDaisy//src/per/adc.h \
+ ../../../libDaisy//src/per/uart.h ../../../libDaisy//src/hid/midi.h \
  ../../../libDaisy//src/util/ringbuffer.h \
  ../../../libDaisy//src/hid/MidiEvent.h \
  ../../../libDaisy//src/hid/usb_midi.h ../../../libDaisy//src/hid/usb.h \
@@ -257,6 +257,7 @@ build/Track.o: DSP/Track.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Track.h:
 DSP/../Utils/Constants.h:
+DSP/Delay.h:
 DSP/../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
