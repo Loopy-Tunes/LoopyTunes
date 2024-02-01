@@ -38,7 +38,6 @@ private:
 
     float* mix[2];
     size_t bufferSize;
-
 };
 
 #endif
