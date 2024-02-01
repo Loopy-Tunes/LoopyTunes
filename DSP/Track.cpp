@@ -1,6 +1,6 @@
 #include "Track.h"
 
-void Track::init(float* mem[2])
+void Track::init(float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
     bufferSize = SAMPLERATE * DURATION;
     for(int i = 0 ; i < 2 ; i++)
@@ -18,11 +18,15 @@ void Track::init(float* mem[2])
 
     ti.isEmpty = true;
     ti.loopLength = 0;
+
+    record.init(r, 30, [this]{ setIsRecording(); });
+    play.init(p, 30, [this]{ setIsPlaying(); });
 }
 
 void Track::tick()
 {
-    
+    record.tick();
+    play.tick();
 }
 
 void Track::setIsRecording()
