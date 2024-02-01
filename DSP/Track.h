@@ -1,3 +1,6 @@
+#ifndef TRACK_H
+#define TRACK_H
+
 #include "FX/Delay.h"
 #include <utility>
 
@@ -35,3 +38,4 @@ private:
     size_t bufferSize;
 };
 
+#endif

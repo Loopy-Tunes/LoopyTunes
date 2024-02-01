@@ -1,3 +1,6 @@
+#ifndef DELAY_H
+#define DELAY_H
+
 #include "../../Parameters/AudioParameter.h"
 
 /************************************************************//**
@@ -25,3 +28,5 @@ private:
     AudioParameter<float> amount;
 
 };
+
+#endif

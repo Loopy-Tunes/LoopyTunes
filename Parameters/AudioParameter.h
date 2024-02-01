@@ -1,3 +1,6 @@
+#ifndef AUDIO_PARAMETER_H
+#define AUDIO_PARAMETER_H
+
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "../Utils/Helpers.h"
@@ -75,3 +78,5 @@ private:
     CurveType curve;
     bool isSelected;
 };
+
+#endif
