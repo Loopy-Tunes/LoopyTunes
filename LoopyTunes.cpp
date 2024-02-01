@@ -83,24 +83,6 @@ void initADC()
 	hw.adc.Start();
 }
 
-void pollInputs()
-{
-	isRecord = record.Pressed();
-	isPlay = play.Pressed();
-
-	if(isRecord) 
-	{  
-		mixer.setIsRecording();
-	}
-	record.Debounce();
-
-	if(isPlay) 
-	{ 
-		mixer.setIsPlaying(); 
-	}
-	play.Debounce();
-}
-
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	mixer.processInputBlock(in[L], in[R], size);
@@ -117,7 +99,6 @@ int main(void)
 
 	while(1) 
 	{
-		pollInputs();
 		mixer.tick();
 	}
 }
