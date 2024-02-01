@@ -23,7 +23,7 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
 
 void Mixer::tick()
 {
-    //track1.track.tick();
+    track1.track.tick();
     track1.gain.tick();
 }
 

@@ -26,6 +26,8 @@ public:
         value = btn.Pressed();
         if(value)
             callback();
+
+        btn.Debounce();
     }
 
 private:
