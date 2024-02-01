@@ -83,10 +83,7 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
     }
 }
 
-std::pair<float*, float*> Track::processOutput()
+void Track::processOutputBlock()
 {
-    auto curSample = std::make_pair(&buffer[L][ph.readPos], &buffer[R][ph.readPos]);
-    incrementReadPos();
-
-    return curSample;
+    
 }
