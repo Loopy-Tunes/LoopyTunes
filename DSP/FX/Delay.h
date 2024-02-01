@@ -9,7 +9,7 @@
  ***************************************************************/
 using namespace daisysp;
 
-DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine;
+extern DelayLine<float, MAXDELAY> DSY_SDRAM_BSS buffer;
 
 class Delay
 {
