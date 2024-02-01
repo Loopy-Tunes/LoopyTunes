@@ -14,7 +14,8 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
 
     track1.track.init(t1, daisy::seed::D0, daisy::seed::D1);
     track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
-    track1.curSample = std::make_pair(nullptr, nullptr);
+    for(int i = 0 ; i < 2 ; i++)
+        track1.buffer[i] = t1[i];
     
     //track2.track.init(t2);
     //track3.track.init(t3);
@@ -43,9 +44,10 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
     {
         if(track1.track.getIsRecording() || track1.track.getIsPlaying())
         {
-            track1.curSample = track1.track.processOutput();
-            mix[L][i] = *track1.curSample.first * track1.gain.getValue();
-            mix[R][i] = *track1.curSample.second * track1.gain.getValue();
+            size_t readPos = track1.track.getReadPos();
+            mix[L][i] = track1.buffer[L][readPos];
+            mix[R][i] = track1.buffer[R][readPos];
+            track1.track.incrementReadPos();
         }
 
         left[i] = mix[L][i];

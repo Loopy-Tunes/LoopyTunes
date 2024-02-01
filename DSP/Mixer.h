@@ -27,7 +27,7 @@ private:
     struct MixerChannel
     {
         Track track;
-        std::pair<float*, float*> curSample;
+        float* buffer[2];
         AudioParameter<float> gain;
     };
 
