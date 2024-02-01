@@ -91,14 +91,12 @@ void pollInputs()
 	if(isRecord) 
 	{  
 		mixer.setIsRecording();
-		hw.PrintLine("Record set");
 	}
 	record.Debounce();
 
 	if(isPlay) 
 	{ 
 		mixer.setIsPlaying(); 
-		hw.PrintLine("Play set");
 	}
 	play.Debounce();
 }

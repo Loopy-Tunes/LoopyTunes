@@ -1,3 +1,6 @@
+#ifndef MIXER_H
+#define MIXER_H
+
 #include "Track.h"
 
 /********************************************//**
@@ -37,3 +40,5 @@ private:
     size_t bufferSize;
 
 };
+
+#endif
