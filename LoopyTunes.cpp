@@ -24,16 +24,8 @@ TO DO:
 // Hardware
 DaisySeed hw;
 
-// GPIO
-Switch record;
-Switch play;
-
 // ADC inputs
 AdcChannelConfig amp1;
-
-// Global
-bool isRecord;
-bool isPlay;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -64,13 +56,6 @@ void init()
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-
-	// initialise GPIO
-	record.Init(daisy::seed::D0, 30);
-	play.Init(daisy::seed::D1, 30);
-
-	isRecord = false;
-	isPlay = false;
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
