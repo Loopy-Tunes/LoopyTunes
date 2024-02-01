@@ -19,7 +19,7 @@ public:
     void tick();
 
     void prepare();
-    void process();
+    void process(float* input, size_t size);
 
 private:
 

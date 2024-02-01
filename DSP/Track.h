@@ -25,6 +25,7 @@ public:
 
     void incrementWritePos();
     void incrementReadPos();
+    size_t getReadPos() { return ph.readPos; }
 
     void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);

@@ -25,12 +25,17 @@ void Delay::tick()
 
 void Delay::prepare()
 {
-
+    
 
 }
 
-void Delay::process()
+void Delay::process(float* input, size_t size)
 {
+    if(bypass.getValue() == 0)
+        return;
 
+    for(size_t i = 0 ; i < size ; i++)
+    {
 
+    }
 }
