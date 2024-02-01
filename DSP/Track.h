@@ -14,7 +14,7 @@ class Track
 {
 public:
 
-    void init(float* mem[2]);
+    void init(float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p);
     void tick();
 
     void setIsRecording();

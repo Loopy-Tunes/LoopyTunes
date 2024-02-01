@@ -12,14 +12,13 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
         mix[R][j] = 0.0f;
     }
 
-    track1.track.init(t1);
-    track2.track.init(t2);
-    track3.track.init(t3);
-    track4.track.init(t4);
-
+    track1.track.init(t1, daisy::seed::D0, daisy::seed::D1);
     track1.gain.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1);
-
     track1.curSample = std::make_pair(nullptr, nullptr);
+    
+    //track2.track.init(t2);
+    //track3.track.init(t3);
+    //track4.track.init(t4);
 }
 
 void Mixer::tick()
