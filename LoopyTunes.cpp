@@ -6,7 +6,6 @@ using namespace daisysp;
 
 /*
 TO DO:
-- BinaryParameter
 - AudioParameter value smoothing / ramping
 - Parameter update queue
 - Value normalisation

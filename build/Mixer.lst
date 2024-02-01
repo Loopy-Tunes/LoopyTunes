@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   49 0008 274B     		ldr	r3, .L8+4
   50              	.LVL2:
   51              		.loc 1 5 16 view .LVU5
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 2
 
 
   52 000a C5F83802 		str	r0, [r5, #568]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   93              		.loc 1 11 19 is_stmt 0 view .LVU23
   94 0028 214A     		ldr	r2, .L8+12
   95 002a 0021     		movs	r1, #0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 3
 
 
   96              	.LVL7:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   34:../../../libDaisy//src/daisy_core.h **** #define FBIPMIN (-FBIPMAX)            /**< - (1 - LSB) */
   35:../../../libDaisy//src/daisy_core.h **** #define U82F_SCALE 0.0078740f         /**< 1 / 127 */
   36:../../../libDaisy//src/daisy_core.h **** #define F2U8_SCALE 127.0f             /**< 128 - 1 */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 4
 
 
   37:../../../libDaisy//src/daisy_core.h **** #define S82F_SCALE 0.0078125f         /**< 1 / (2**7) */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   91:../../../libDaisy//src/daisy_core.h ****     return (uint8_t)((x * F2U8_SCALE) + F2U8_SCALE);
   92:../../../libDaisy//src/daisy_core.h **** }
   93:../../../libDaisy//src/daisy_core.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 5
 
 
   94:../../../libDaisy//src/daisy_core.h **** 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  148:../../../libDaisy//src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
  149:../../../libDaisy//src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
  150:../../../libDaisy//src/daisy_core.h ****     return (int32_t)(x * F2S24_SCALE);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 6
 
 
  151:../../../libDaisy//src/daisy_core.h **** }
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  205:../../../libDaisy//src/daisy_core.h **** {
  206:../../../libDaisy//src/daisy_core.h ****     dsy_gpio_port port; /**< & */
  207:../../../libDaisy//src/daisy_core.h ****     uint8_t       pin;  /**< number 0-15 */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 7
 
 
  208:../../../libDaisy//src/daisy_core.h **** } dsy_gpio_pin;
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  262:../../../libDaisy//src/daisy_core.h ****     GPIOPort port;
  263:../../../libDaisy//src/daisy_core.h ****     uint8_t  pin;
  264:../../../libDaisy//src/daisy_core.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 8
 
 
  265:../../../libDaisy//src/daisy_core.h ****     /** @brief Constructor creates a valid pin. 
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  129              		.loc 1 15 22 view .LVU36
  130 003e 3146     		mov	r1, r6
  131 0040 2846     		mov	r0, r5
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 9
 
 
  132 0042 8DF80130 		strb	r3, [sp, #1]
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   15:DSP/FX/../../Parameters/AudioParameter.h **** using namespace daisy;
   16:DSP/FX/../../Parameters/AudioParameter.h **** 
   17:DSP/FX/../../Parameters/AudioParameter.h **** template <class type>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 10
 
 
   18:DSP/FX/../../Parameters/AudioParameter.h **** class AudioParameter
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  193              	.LBB46:
  194              		.loc 1 18 32 view .LVU59
  195 0074 3268     		ldr	r2, [r6]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 11
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 11
 
 
  196              	.LBE46:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  238 0088 094B     		ldr	r3, .L8+12
  239 008a 0246     		mov	r2, r0
  240 008c A646     		mov	lr, r4
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 12
 
 
  241 008e 0344     		add	r3, r3, r0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   26:DSP/Mixer.cpp **** {
  284              		.loc 1 26 1 view -0
  285              		.cfi_startproc
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 13
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 13
 
 
  286              		@ args = 0, pretend = 0, frame = 0
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   44:DSP/FX/../../Parameters/AudioParameter.h **** 
   45:DSP/FX/../../Parameters/AudioParameter.h ****         if(newInput > (input + jitter) || newInput < (input - jitter))
  326              		.loc 3 45 24 view .LVU91
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 14
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 14
 
 
  327 001c D4ED1D7A 		vldr.32	s15, [r4, #116]
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  363 004e D4ED207A 		vldr.32	s15, [r4, #128]
  364              		.loc 3 61 34 view .LVU103
  365 0052 20EE000A 		vmul.f32	s0, s0, s0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 15
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 15
 
 
  366              	.LVL24:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   42:../../../libDaisy//src/daisy_seed.h ****     */
   43:../../../libDaisy//src/daisy_seed.h ****     void DeInit();
   44:../../../libDaisy//src/daisy_seed.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 16
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 16
 
 
   45:../../../libDaisy//src/daisy_seed.h ****     /** 
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   99:../../../libDaisy//src/daisy_seed.h **** 
  100:../../../libDaisy//src/daisy_seed.h ****     /** Sets the state of the built in LED
  101:../../../libDaisy//src/daisy_seed.h ****      */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 17
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 17
 
 
  102:../../../libDaisy//src/daisy_seed.h ****     void SetLed(bool state);
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  413              		.loc 4 121 23 view .LVU111
  414              	.LBE68:
  415              	.LBE69:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 18
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 18
 
 
   62:DSP/FX/../../Parameters/AudioParameter.h ****             break;
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   33:DSP/Mixer.cpp **** 
   34:DSP/Mixer.cpp **** }
  460              		.loc 1 34 1 is_stmt 0 view .LVU119
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 19
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 19
 
 
  461 0000 7047     		bx	lr
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  509              		.loc 1 42 1 is_stmt 0 view .LVU127
  510 0002 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
  511              		.cfi_def_cfa_offset 32
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 20
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 20
 
 
  512              		.cfi_offset 4, -32
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
   12:DSP/Track.h   **** 
   13:DSP/Track.h   **** class Track
   14:DSP/Track.h   **** {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 21
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 21
 
 
   15:DSP/Track.h   **** public:
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  582 0024 AE00     		lsls	r6, r5, #2
  583              	.LBE91:
   45:DSP/Mixer.cpp ****         {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 22
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 22
 
 
  584              		.loc 1 45 42 view .LVU148
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  622              	.LBE94:
   43:DSP/Mixer.cpp ****     {
  623              		.loc 1 43 5 discriminator 2 view .LVU165
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 23
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 23
 
 
  624 004e 0135     		adds	r5, r5, #1
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  672              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
  673              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
  674              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 24
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 24
 
 
  675              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
@@ -1436,24 +1436,24 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 1
  727              		.file 65 "DSP/Mixer.h"
  728              		.file 66 "<built-in>"
  729              		.file 67 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s 			page 25
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Mixer.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:261    .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:00000000000000a4 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:270    .rodata._ZN5Mixer4tickEv.str1.4:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:274    .text._ZN5Mixer4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:281    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:434    .text._ZN5Mixer4tickEv:0000000000000094 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:445    .text._ZN5Mixer7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:452    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:466    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:473    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:490    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc2eJoGY.s:497    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:19     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:26     .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:0000000000000000 _ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:261    .text._ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_:00000000000000a4 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:270    .rodata._ZN5Mixer4tickEv.str1.4:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:274    .text._ZN5Mixer4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:281    .text._ZN5Mixer4tickEv:0000000000000000 _ZN5Mixer4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:434    .text._ZN5Mixer4tickEv:0000000000000094 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:445    .text._ZN5Mixer7prepareEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:452    .text._ZN5Mixer7prepareEv:0000000000000000 _ZN5Mixer7prepareEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:466    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:473    .text._ZN5Mixer17processInputBlockEPKfS1_j:0000000000000000 _ZN5Mixer17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:490    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccbOUn2c.s:497    .text._ZN5Mixer18processOutputBlockEPfS0_j:0000000000000000 _ZN5Mixer18processOutputBlockEPfS0_j
 
 UNDEFINED SYMBOLS
 memset
