@@ -83,7 +83,16 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
     }
 }
 
-void Track::processOutputBlock()
+void Track::processOutputBlock(float* left, float* right, size_t size)
 {
-    
+    if(!ph.isRecording && !ph.isPlaying)
+        return;
+
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        left[i] = buffer[L][ph.readPos];
+        right[i] = buffer[R][ph.readPos];
+        
+        incrementReadPos();
+    }
 }
