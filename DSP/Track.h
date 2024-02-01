@@ -2,6 +2,7 @@
 #define TRACK_H
 
 #include "FX/Delay.h"
+#include "../Parameters/BinaryParameter.h"
 #include <utility>
 
 /**********************************************************//**
@@ -33,6 +34,9 @@ private:
 
     Playhead ph;
     TrackInformation ti;
+
+    BinaryParameter record;
+    BinaryParameter play;
 
     float* buffer[2];
     size_t bufferSize;

@@ -26,7 +26,6 @@ private:
     AudioParameter<float> size;
     AudioParameter<float> bounce;
     AudioParameter<float> amount;
-
 };
 
 #endif
