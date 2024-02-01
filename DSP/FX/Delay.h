@@ -15,7 +15,7 @@ class Delay
 {
 public:
 
-    void init();
+    void init(DaisySeed* seed);
     void tick();
 
     void prepare();
@@ -23,6 +23,7 @@ public:
 
 private:
 
+    AudioParameter<int> bypass;
     AudioParameter<float> size;
     AudioParameter<float> bounce;
     AudioParameter<float> amount;
