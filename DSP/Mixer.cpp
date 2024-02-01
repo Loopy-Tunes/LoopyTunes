@@ -40,16 +40,10 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
+    track1.track.processOutputBlock(mix[L], mix[R], size);
+
     for(size_t i = 0 ; i < size ; i++)
     {
-        if(track1.track.getIsRecording() || track1.track.getIsPlaying())
-        {
-            size_t readPos = track1.track.getReadPos();
-            mix[L][i] = track1.buffer[L][readPos];
-            mix[R][i] = track1.buffer[R][readPos];
-            track1.track.incrementReadPos();
-        }
-
         left[i] = mix[L][i];
         right[i] = mix[R][i];
     }
