@@ -38,4 +38,9 @@ namespace ChannelIDs
     const uint8_t Amp3 = 2;
     const uint8_t Amp4 = 3;
     const uint8_t Encoder = 4;
+
+    const uint8_t TEMP1 = 1;
+    const uint8_t TEMP2 = 2;
+    const uint8_t TEMP3 = 3;
+    const uint8_t TEMP4 = 4;
 };

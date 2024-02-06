@@ -26,6 +26,10 @@ DaisySeed hw;
 
 // ADC inputs
 AdcChannelConfig amp1;
+AdcChannelConfig temp1;
+AdcChannelConfig temp2;
+AdcChannelConfig temp3;
+AdcChannelConfig temp4;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -68,6 +72,16 @@ void initADC()
 {
 	amp1.InitSingle(daisy::seed::A0);
 	hw.adc.Init(&amp1, 1);
+
+	temp1.InitSingle(daisy::seed::A1);
+	hw.adc.Init(&temp1, 1);
+	temp2.InitSingle(daisy::seed::A2);
+	hw.adc.Init(&temp1, 1);
+	temp3.InitSingle(daisy::seed::A3);
+	hw.adc.Init(&temp1, 1);
+	temp4.InitSingle(daisy::seed::A4);
+	hw.adc.Init(&temp1, 1);
+
 	hw.adc.Start();
 }
 
