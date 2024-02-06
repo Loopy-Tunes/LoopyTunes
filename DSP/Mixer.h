@@ -12,7 +12,7 @@ class Mixer
 {
 public:
 
-    void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
+    void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2]); 
     void tick();
 
     void prepare();
