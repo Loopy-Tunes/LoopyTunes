@@ -22,13 +22,19 @@ public:
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }
 
+    void setTrack1Gain(float g){ track1.gain = g; }
+    void setTrack2Gain(float g){ track2.gain = g; }
+    void setTrack3Gain(float g){ track3.gain = g; }
+    void setTrack4Gain(float g){ track4.gain = g; }
+
 private:
 
     struct MixerChannel
     {
         Track track;
         float* buffer[2];
-        AudioParameter<float> gain;
+        AudioParameter<float> gainParam;
+        float gain;
     };
 
     MixerChannel track1;

@@ -6,6 +6,7 @@
 #include "../Utils/Helpers.h"
 #include "../Utils/Constants.h"
 #include <cstdint>
+#include <functional>
 
 /*****************************************************************************//**
  *  Class name: AudioParameter
@@ -19,7 +20,7 @@ class AudioParameter
 {
 public:
 
-    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID)
+    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
     {
         hw = seed;
         input = 0;
@@ -30,6 +31,7 @@ public:
 
         curve = c;
         channelID = ID;
+        callback = cb;
 
         if(channelID != ChannelIDs::Encoder)
             isSelected = true;
@@ -46,6 +48,7 @@ public:
         {
             input = newInput;;
             process();
+            callback(curVal);
         }
         
     }
@@ -77,6 +80,8 @@ private:
     uint8_t channelID;
     CurveType curve;
     bool isSelected;
+
+    std::function<void(type)> callback;
 };
 
 #endif

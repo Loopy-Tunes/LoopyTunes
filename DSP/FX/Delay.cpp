@@ -29,13 +29,16 @@ void Delay::prepare()
 
 }
 
-void Delay::process(float* input, size_t size)
+void Delay::processBlock(float* input[2], size_t size, size_t rp)
 {
     if(bypass.getValue() == 0)
         return;
 
-    for(size_t i = 0 ; i < size ; i++)
+    for(size_t i = rp ; i < rp + size ; i++)
     {
-
+        // read value from delay line
+        // calculate output
+        // calculate new delay line entry
+        // write new delay to delay line
     }
 }
