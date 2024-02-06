@@ -2,12 +2,10 @@
 
 using namespace daisysp;
 
-DelayLine<float, MAXDELAY> DSY_SDRAM_BSS buffer;
-
 void Delay::init(DaisySeed* seed)
 {
-    buffer.Init();
-    buffer.Reset();
+    delayLine.Init();
+    delayLine.Reset();
 
     bypassParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (int b) { setBypass(b); });
     sizeParam.init(seed, 0, 10000, LINEAR, ChannelIDs::Encoder, [this] (size_t s) { setSize(s); });
@@ -41,9 +39,13 @@ void Delay::processBlock(float* input[2], size_t size, size_t rp)
 
     for(size_t i = rp ; i < rp + size ; i++)
     {
-        // read value from delay line
-        // calculate output
-        // calculate new delay line entry
-        // write new delay to delay line
+        for(int j = 0 ; j < 2 ; j++)
+        {
+            float delay_b = delayLine.Read();
+            float delay_o = input[j][i] + (delay_b * amount);
+            input[j][i] = delay_o;
+            float delay_n = input[j][i] + (delay_o * bounce);
+            delayLine.Write(delay_n);
+        }
     }
 }

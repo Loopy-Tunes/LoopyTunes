@@ -1,7 +1,17 @@
 #include "Track.h"
 
-void Track::init(float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p)
+void Track::init(daisy::DaisySeed* seed, float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
+    ph.isRecording = false;
+    ph.isPlaying = false;
+    ph.reset();
+
+    ti.isEmpty = true;
+    ti.loopLength = 0;
+
+    record.init(r, 30, [this]{ setIsRecording(); });
+    play.init(p, 30, [this]{ setIsPlaying(); });
+
     bufferSize = SAMPLERATE * DURATION;
     for(int i = 0 ; i < 2 ; i++)
         buffer[i] = mem[i];
@@ -12,15 +22,7 @@ void Track::init(float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p)
         buffer[R][i] = 0.0f;
     }
 
-    ph.isRecording = false;
-    ph.isPlaying = false;
-    ph.reset();
-
-    ti.isEmpty = true;
-    ti.loopLength = 0;
-
-    record.init(r, 30, [this]{ setIsRecording(); });
-    play.init(p, 30, [this]{ setIsPlaying(); });
+    delay.init(seed);
 }
 
 void Track::tick()
@@ -66,7 +68,7 @@ void Track::incrementReadPos()
 
 void Track::prepare()
 {
-
+    delay.tick();
 }
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)
@@ -89,7 +91,7 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
         return;
 
     // distortion process block
-    // delay.processBlock(buffer, size, ph.readPos);
+    delay.processBlock(buffer, size, ph.readPos);
 
     for(size_t i = 0 ; i < size ; i++)
     {
