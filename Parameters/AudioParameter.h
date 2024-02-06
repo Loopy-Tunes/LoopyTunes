@@ -70,7 +70,7 @@ private:
 
     DaisySeed* hw;
     float input;
-    const float jitter = 0.01f;
+    const float jitter = 0.1f;
 
     type curVal, min, max;
     uint8_t channelID;
