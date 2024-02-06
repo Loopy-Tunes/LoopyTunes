@@ -1,6 +1,6 @@
 #include "Track.h"
 
-void Track::init(daisy::DaisySeed* seed, float* mem[2], dsy_gpio_pin r, dsy_gpio_pin p)
+void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
     ph.isRecording = false;
     ph.isPlaying = false;
@@ -22,7 +22,7 @@ void Track::init(daisy::DaisySeed* seed, float* mem[2], dsy_gpio_pin r, dsy_gpio
         buffer[R][i] = 0.0f;
     }
 
-    delay.init(seed);
+    delay.init(seed, dl);
 }
 
 void Track::tick()

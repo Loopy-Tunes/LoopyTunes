@@ -2,13 +2,17 @@
 
 using namespace daisysp;
 
-void Delay::init(DaisySeed* seed)
+void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
 {
-    delayLine.Init();
-    delayLine.Reset();
+    for(int i = 0 ; i < 2 ; i++)
+    {
+        delayLine[i] = dl[i];
+        delayLine[i]->Init();
+        delayLine[i]->Reset();
+    }
 
     bypassParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (int b) { setBypass(b); });
-    sizeParam.init(seed, 0, 10000, LINEAR, ChannelIDs::Encoder, [this] (size_t s) { setSize(s); });
+    sizeParam.init(seed, 0, 10000, LINEAR, ChannelIDs::Encoder, [this] (size_t s) { setDelay(s); });
     bounceParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float b) { setBounce(b); });
     amountParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float a) { setAmount(a); });
 
@@ -41,11 +45,11 @@ void Delay::processBlock(float* input[2], size_t size, size_t rp)
     {
         for(int j = 0 ; j < 2 ; j++)
         {
-            float delay_b = delayLine.Read();
+            float delay_b = delayLine[j]->Read();
             float delay_o = input[j][i] + (delay_b * amount);
             input[j][i] = delay_o;
             float delay_n = input[j][i] + (delay_o * bounce);
-            delayLine.Write(delay_n);
+            delayLine[j]->Write(delay_n);
         }
     }
 }

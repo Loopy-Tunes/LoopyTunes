@@ -15,18 +15,17 @@ class Delay
 {
 public:
 
-    void init(DaisySeed* seed);
+    void init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
 
     void setBypass(int b) { bypass = b; }
-    void setSize(size_t s) { delayLine.SetDelay(s); }
+    void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
+    //void setDelayR(size_t s) {delayLine[r]} add for stereo
     void setBounce(float b) { bounce = b; }
     void setAmount(float a) { amount = a; }
 
     void prepare();
     void processBlock(float* input[2], size_t size, size_t rp); 
-
-    DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine;
 
 private:
 
@@ -40,7 +39,7 @@ private:
     float bounce;
     float amount;
 
-    
+    DelayLine<float, MAXDELAY>* delayLine[2];
 };
 
 #endif

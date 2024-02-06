@@ -48,6 +48,9 @@ namespace Buffers
 	float* track2Ptr[2] = {track2[L], track2[R]};
 	float* track3Ptr[2] = {track3[L], track3[R]};
 	float* track4Ptr[2] = {track4[L], track4[R]};
+
+	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine[2];
+	DelayLine<float, MAXDELAY>* delayLinePtr[2] = {&delayLine[L], &delayLine[R]};
 };
 
 void init()
@@ -58,7 +61,7 @@ void init()
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// initialise DSP
-	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
+	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
 }
 
 void initADC()
