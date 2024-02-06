@@ -16,6 +16,8 @@ TO DO:
 - Output EQ profiles for different output sources
 - Interpolate between start and end sample of loop to smooth transition
 - Check bit width of pointers, memory range
+- Delay ms/room size -> samples calculation
+- Find out ms delay of certain room sizes for delay
 */
 
 // Hardware

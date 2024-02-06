@@ -19,7 +19,7 @@ public:
     void tick();
 
     void setBypass(int b) { bypass = b; }
-    void setSize(float s) { buffer.SetDelay(s); }
+    void setSize(size_t s) { buffer.SetDelay(s); }
     void setBounce(float b) { bounce = b; }
     void setAmount(float a) { amount = a; }
 
@@ -29,12 +29,12 @@ public:
 private:
 
     AudioParameter<int> bypassParam;
-    AudioParameter<float> sizeParam;
+    AudioParameter<size_t> sizeParam;
     AudioParameter<float> bounceParam;
     AudioParameter<float> amountParam;
 
     int bypass;
-    float size;
+    size_t size;
     float bounce;
     float amount;
 };
