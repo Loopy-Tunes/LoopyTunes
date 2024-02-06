@@ -10,7 +10,7 @@ void Delay::init(DaisySeed* seed)
     buffer.Reset();
 
     bypassParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (int b) { setBypass(b); });
-    sizeParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float s) { setSize(s); });
+    sizeParam.init(seed, 0, 10000, LINEAR, ChannelIDs::Encoder, [this] (size_t s) { setSize(s); });
     bounceParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float b) { setBounce(b); });
     amountParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float a) { setAmount(a); });
 
