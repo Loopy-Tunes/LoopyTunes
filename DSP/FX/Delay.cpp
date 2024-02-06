@@ -9,18 +9,23 @@ void Delay::init(DaisySeed* seed)
     buffer.Init();
     buffer.Reset();
 
-    bypass.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder);
-    size.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder);
-    bounce.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder);
-    amount.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder);
+    bypassParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (int b) { setBypass(b); });
+    sizeParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float s) { setSize(s); });
+    bounceParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float b) { setBounce(b); });
+    amountParam.init(seed, 0, 1, LINEAR, ChannelIDs::Encoder, [this] (float a) { setAmount(a); });
+
+    bypass = 0;
+    size = 0;
+    bounce = 0;
+    amount = 0;
 }
 
 void Delay::tick()
 {
-    bypass.tick();
-    size.tick();
-    bounce.tick();
-    amount.tick();
+    bypassParam.tick();
+    sizeParam.tick();
+    bounceParam.tick();
+    amountParam.tick();
 }
 
 void Delay::prepare()
@@ -31,7 +36,7 @@ void Delay::prepare()
 
 void Delay::processBlock(float* input[2], size_t size, size_t rp)
 {
-    if(bypass.getValue() == 0)
+    if(bypass == 0)
         return;
 
     for(size_t i = rp ; i < rp + size ; i++)
