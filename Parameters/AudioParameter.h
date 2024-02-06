@@ -80,4 +80,11 @@ private:
     std::function<void(type)> callback;
 };
 
+template <class type>
+struct ParameterWrapper
+{
+    AudioParameter<type> param;
+    type value;
+};
+
 #endif
