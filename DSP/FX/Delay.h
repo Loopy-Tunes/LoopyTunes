@@ -20,7 +20,7 @@ public:
 
     void setBypass(int b) { bypass = b; }
     void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
-    //void setDelayR(size_t s) {delayLine[r]} add for stereo
+    //void setDelayR(size_t s) {delayLine[r]} add for stereo delay
     void setBounce(float b) { bounce = b; }
     void setAmount(float a) { amount = a; }
 
