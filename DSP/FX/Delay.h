@@ -9,7 +9,7 @@
  ***************************************************************/
 using namespace daisysp;
 
-extern DelayLine<float, MAXDELAY> DSY_SDRAM_BSS buffer;
+//extern DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine;
 
 class Delay
 {
@@ -19,12 +19,14 @@ public:
     void tick();
 
     void setBypass(int b) { bypass = b; }
-    void setSize(size_t s) { buffer.SetDelay(s); }
+    void setSize(size_t s) { delayLine.SetDelay(s); }
     void setBounce(float b) { bounce = b; }
     void setAmount(float a) { amount = a; }
 
     void prepare();
     void processBlock(float* input[2], size_t size, size_t rp); 
+
+    DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine;
 
 private:
 
@@ -37,6 +39,8 @@ private:
     size_t size;
     float bounce;
     float amount;
+
+    
 };
 
 #endif

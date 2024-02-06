@@ -43,14 +43,12 @@ public:
             return;
 
         float newInput = hw->adc.GetFloat(channelID);
-
         if(newInput > (input + jitter) || newInput < (input - jitter))
         {
-            input = newInput;;
+            input = newInput;
             process();
             callback(curVal);
         }
-        
     }
 
     void process()
@@ -64,8 +62,6 @@ public:
                 curVal = ((input * input) * (max - min)) + min;
             break;
         }
-
-        hw->PrintLine("Current value = %f", curVal);
     }
 
     type getValue() { return curVal; }

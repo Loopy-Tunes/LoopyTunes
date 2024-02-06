@@ -18,6 +18,7 @@ TO DO:
 - Check bit width of pointers, memory range
 - Delay ms/room size -> samples calculation
 - Find out ms delay of certain room sizes for delay
+- Calculate correct max delay
 */
 
 // Hardware
