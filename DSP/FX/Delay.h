@@ -9,8 +9,6 @@
  ***************************************************************/
 using namespace daisysp;
 
-//extern DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine;
-
 class Delay
 {
 public:
@@ -18,26 +16,21 @@ public:
     void init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
 
-    void setBypass(int b) { bypass = b; }
+    void setBypass(int b) { bypass.value = b; }
     void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
     //void setDelayR(size_t s) {delayLine[r]} add for stereo delay
-    void setBounce(float b) { bounce = b; }
-    void setAmount(float a) { amount = a; }
+    void setBounce(float b) { bounce.value = b; }
+    void setAmount(float a) { amount.value = a; }
 
     void prepare();
     void processBlock(float* input[2], size_t size, size_t rp); 
 
 private:
 
-    AudioParameter<int> bypassParam;
-    AudioParameter<size_t> sizeParam;
-    AudioParameter<float> bounceParam;
-    AudioParameter<float> amountParam;
-
-    int bypass;
-    size_t size;
-    float bounce;
-    float amount;
+    ParameterWrapper<int> bypass;
+    AudioParameter<size_t> size;
+    ParameterWrapper<float> bounce;
+    ParameterWrapper<float> amount;
 
     DelayLine<float, MAXDELAY>* delayLine[2];
 };
