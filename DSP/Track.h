@@ -41,6 +41,8 @@ private:
 
     float* buffer[2];
     size_t bufferSize;
+
+    Delay delay;
 };
 
 #endif

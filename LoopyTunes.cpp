@@ -13,10 +13,8 @@ TO DO:
 - Reduce floating point precision
 - Come up with much better mixing system
 - Decibel conversion
-- Undo/redo?
 - Output EQ profiles for different output sources
 - Interpolate between start and end sample of loop to smooth transition
-- Is there a better method of managing ADC inputs?
 - Check bit width of pointers, memory range
 */
 
