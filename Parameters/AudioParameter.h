@@ -20,7 +20,7 @@ class AudioParameter
 {
 public:
 
-    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
+    inline void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
     {
         hw = seed;
         input = 0;
@@ -37,7 +37,7 @@ public:
             isSelected = true;
     }
     
-    void tick()
+    inline void tick()
     {
         if(!isSelected)
             return;
@@ -46,12 +46,12 @@ public:
         if(newInput > (input + jitter) || newInput < (input - jitter))
         {
             input = newInput;
-            process();
+            processCurve();
             callback(curVal);
         }
     }
 
-    void process()
+    void processCurve()
     {
         switch(curve)
         {
@@ -64,13 +64,13 @@ public:
         }
     }
 
-    type getValue() { return curVal; }
+    inline type getValue() { return curVal; }
     
 private:
 
     DaisySeed* hw;
     float input;
-    const float jitter = 0.02f;
+    const float jitter = 0.01f;
 
     type curVal, min, max;
     uint8_t channelID;

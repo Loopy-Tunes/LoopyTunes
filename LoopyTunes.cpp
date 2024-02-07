@@ -76,11 +76,11 @@ void initADC()
 	temp1.InitSingle(daisy::seed::A1);
 	hw.adc.Init(&temp1, 1);
 	temp2.InitSingle(daisy::seed::A2);
-	hw.adc.Init(&temp1, 1);
+	hw.adc.Init(&temp2, 1);
 	temp3.InitSingle(daisy::seed::A3);
-	hw.adc.Init(&temp1, 1);
+	hw.adc.Init(&temp3, 1);
 	temp4.InitSingle(daisy::seed::A4);
-	hw.adc.Init(&temp1, 1);
+	hw.adc.Init(&temp4, 1);
 
 	hw.adc.Start();
 }
