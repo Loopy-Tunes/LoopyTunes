@@ -37,12 +37,12 @@ public:
             isSelected = true;
     }
     
-    inline void tick()
+    inline void tick() 
     {
         if(!isSelected)
             return;
 
-        float newInput = hw->adc.GetFloat(channelID);
+        volatile float newInput = hw->adc.GetFloat(channelID);
         if(newInput > (input + jitter) || newInput < (input - jitter))
         {
             input = newInput;

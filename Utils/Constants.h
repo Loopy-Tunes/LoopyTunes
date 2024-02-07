@@ -8,3 +8,5 @@
 
 #define L 0
 #define R 1
+
+#define NO_OPT __attribute__((optimize(0)))
