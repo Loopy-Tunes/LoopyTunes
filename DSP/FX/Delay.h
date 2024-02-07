@@ -16,11 +16,10 @@ public:
     void init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
 
-    void setBypass(int b) { bypass.value = b; }
-    void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
-    //void setDelayR(size_t s) {delayLine[r]} add for stereo delay
-    void setBounce(float b) { bounce.value = b; }
-    void setAmount(float a) { amount.value = a; }
+    inline void setBypass(int b) { bypass.value = b; }
+    inline void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
+    inline void setBounce(float b) { bounce.value = b; }
+    inline void setAmount(float a) { amount.value = a; }
 
     void prepare();
     void processBlock(float* input[2], size_t size, size_t rp); 

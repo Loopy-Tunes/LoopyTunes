@@ -15,13 +15,13 @@ class BinaryParameter
 {
 public:
 
-    void init(dsy_gpio_pin pin, float updateRate, std::function<void()> cb)
+    inline void init(dsy_gpio_pin pin, float updateRate, std::function<void()> cb)
     {
         btn.Init(pin, updateRate);
         callback = cb;
     }
 
-    void tick()
+    inline void tick()
     {
         value = btn.Pressed();
         if(value)
