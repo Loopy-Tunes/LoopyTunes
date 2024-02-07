@@ -13,7 +13,7 @@ void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELA
     play.init(p, 30, [this]{ setIsPlaying(); });
 
     bufferSize = SAMPLERATE * DURATION;
-    for(int i = 0 ; i < 2 ; i++)
+    for(uint_fast8_t i = 0 ; i < 2 ; i++)
         buffer[i] = mem[i];
 
     for(size_t i = 0 ; i < bufferSize ; i++)

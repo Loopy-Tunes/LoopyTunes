@@ -4,7 +4,7 @@ using namespace daisysp;
 
 void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
 {
-    for(int i = 0 ; i < 2 ; i++)
+    for(uint_fast8_t i = 0 ; i < 2 ; i++)
     {
         delayLine[i] = dl[i];
         delayLine[i]->Init();
@@ -13,7 +13,7 @@ void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
 
     bypass.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (int b) { setBypass(b); }); // to be set to encoder
     size.init(seed, 0, 10000, LINEAR, ChannelIDs::TEMP2, [this] (size_t s) { setDelay(s); }); // to be set to encode
-    bounce.param.init(seed, 0, 1, LINEAR, ChannelIDs::Amp1, [this] (float b) { setBounce(b); }); // to be set to encoder
+    bounce.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP3, [this] (float b) { setBounce(b); }); // to be set to encoder
     amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP4, [this] (float a) { setAmount(a); }); // to be set to encoder
 
     bypass.value = 0;
@@ -42,7 +42,7 @@ void Delay::processBlock(float* input[2], size_t size, size_t rp)
 
     for(size_t i = rp ; i < rp + size ; i++)
     {
-        for(int j = 0 ; j < 2 ; j++)
+        for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
             float delay_b = delayLine[j]->Read();
             float delay_o = input[j][i] + (delay_b * amount.value);

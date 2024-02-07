@@ -30,6 +30,7 @@ AdcChannelConfig temp1;
 AdcChannelConfig temp2;
 AdcChannelConfig temp3;
 AdcChannelConfig temp4;
+AdcChannelConfig configs[5];
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -71,17 +72,13 @@ void init()
 void initADC()
 {
 	amp1.InitSingle(daisy::seed::A0);
-	hw.adc.Init(&amp1, 1);
-
 	temp1.InitSingle(daisy::seed::A1);
-	hw.adc.Init(&temp1, 1);
 	temp2.InitSingle(daisy::seed::A2);
-	hw.adc.Init(&temp2, 1);
 	temp3.InitSingle(daisy::seed::A3);
-	hw.adc.Init(&temp3, 1);
 	temp4.InitSingle(daisy::seed::A4);
-	hw.adc.Init(&temp4, 1);
 
+	configs[5] = {amp1, temp1, temp2, temp3, temp4};
+	hw.adc.Init(configs, 4);
 	hw.adc.Start();
 }
 
@@ -102,5 +99,10 @@ int main(void)
 	while(1) 
 	{
 		mixer.tick();
+
+		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);
+		float pot2 = hw.adc.GetFloat(ChannelIDs::TEMP2);
+		float pot3 = hw.adc.GetFloat(ChannelIDs::TEMP3);
+		float pot4 = hw.adc.GetFloat(ChannelIDs::TEMP4);
 	}
 }
