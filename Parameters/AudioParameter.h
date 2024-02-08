@@ -33,7 +33,7 @@ public:
         channelID = ID;
         callback = cb;
 
-        if(channelID != ChannelIDs::Encoder)
+        if(channelID != ChannelIDs::ENCODER)
             isSelected = true;
     }
     

@@ -69,7 +69,7 @@ void init()
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-
+/*
 	// initialise ADC
 	ADC::amp1.InitSingle(daisy::seed::A0);
 	ADC::temp1.InitSingle(daisy::seed::A1);
@@ -79,7 +79,7 @@ void init()
 
 	hw.adc.Init(ADC::configs, ADCINPUTS);
 	hw.adc.Start();
-
+*/
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
 }
@@ -97,18 +97,24 @@ int main(void)
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
 
+	AdcChannelConfig conf;
+	conf.InitSingle(daisy::seed::A0);
+
+	hw.adc.Init(&conf, 1);
+	hw.adc.Start();
+
 	while(1) 
 	{
 		mixer.tick();
 
-		float ampPot = hw.adc.GetFloat(ChannelIDs::Amp1);
+		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
 		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);
 		float pot2 = hw.adc.GetFloat(ChannelIDs::TEMP2);
 		float pot3 = hw.adc.GetFloat(ChannelIDs::TEMP3);
 		float pot4 = hw.adc.GetFloat(ChannelIDs::TEMP4);
 
-		hw.PrintLine("amp pot = %f", ampPot);
-		hw.PrintLine("pot 1 = %f", pot1);
+		hw.PrintLine("amp pot = %f", hw.adc.GetFloat(ChannelIDs::AMP1));
+		//hw.PrintLine("pot 1 = %f", pot1);
 		//hw.PrintLine("pot 2 = %f", pot2);
 		//hw.PrintLine("pot 3 = %f", pot3);
 		//hw.PrintLine("pot 4 = %f", pot4);
