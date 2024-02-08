@@ -19,6 +19,8 @@ TO DO:
 - Delay ms/room size -> samples calculation
 - Find out ms delay of certain room sizes for delay
 - Calculate correct max delay
+- Sort out problem with buffers not looping
+- Fix potentiometers
 */
 
 // Hardware
@@ -68,12 +70,7 @@ void init()
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
-	// initialise DSP
-	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
-}
-
-void initADC()
-{
+	// initialise ADC
 	ADC::amp1.InitSingle(daisy::seed::A0);
 	ADC::temp1.InitSingle(daisy::seed::A1);
 	ADC::temp2.InitSingle(daisy::seed::A2);
@@ -82,6 +79,9 @@ void initADC()
 
 	hw.adc.Init(ADC::configs, ADCINPUTS);
 	hw.adc.Start();
+
+	// initialise DSP
+	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -93,7 +93,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 int main(void)
 {
 	init();
-	initADC();
 
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
@@ -109,7 +108,7 @@ int main(void)
 		float pot4 = hw.adc.GetFloat(ChannelIDs::TEMP4);
 
 		hw.PrintLine("amp pot = %f", ampPot);
-		//hw.PrintLine("pot 1 = %f", pot1);
+		hw.PrintLine("pot 1 = %f", pot1);
 		//hw.PrintLine("pot 2 = %f", pot2);
 		//hw.PrintLine("pot 3 = %f", pot3);
 		//hw.PrintLine("pot 4 = %f", pot4);
