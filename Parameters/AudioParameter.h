@@ -42,7 +42,7 @@ public:
         if(!isSelected)
             return;
 
-        volatile float newInput = hw->adc.GetFloat(channelID);
+        float newInput = hw->adc.GetFloat(channelID);
         if(newInput > (input + jitter) || newInput < (input - jitter))
         {
             input = newInput;

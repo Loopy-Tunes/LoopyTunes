@@ -16,9 +16,10 @@ void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
     bounce.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP3, [this] (float b) { setBounce(b); }); // to be set to encoder
     amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP4, [this] (float a) { setAmount(a); }); // to be set to encoder
 
-    bypass.value = 0;
-    bounce.value = 0;
-    amount.value = 0;
+    bypass.value = 1;
+    bounce.value = 0.8;
+    amount.value = 0.5;
+    setDelay(40000);
 }
 
 void Delay::tick()

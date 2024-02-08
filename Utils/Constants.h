@@ -9,4 +9,6 @@
 #define L 0
 #define R 1
 
+#define ADCINPUTS 5
+
 #define NO_OPT __attribute__((optimize(0)))

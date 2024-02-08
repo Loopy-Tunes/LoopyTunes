@@ -25,12 +25,15 @@ TO DO:
 DaisySeed hw;
 
 // ADC inputs
-AdcChannelConfig amp1;
-AdcChannelConfig temp1;
-AdcChannelConfig temp2;
-AdcChannelConfig temp3;
-AdcChannelConfig temp4;
-AdcChannelConfig configs[5];
+namespace ADC
+{
+	AdcChannelConfig amp1;
+	AdcChannelConfig temp1;
+	AdcChannelConfig temp2;
+	AdcChannelConfig temp3;
+	AdcChannelConfig temp4;
+	AdcChannelConfig configs[ADCINPUTS] = {amp1, temp1, temp2, temp3, temp4};
+};
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -71,14 +74,13 @@ void init()
 
 void initADC()
 {
-	amp1.InitSingle(daisy::seed::A0);
-	temp1.InitSingle(daisy::seed::A1);
-	temp2.InitSingle(daisy::seed::A2);
-	temp3.InitSingle(daisy::seed::A3);
-	temp4.InitSingle(daisy::seed::A4);
+	ADC::amp1.InitSingle(daisy::seed::A0);
+	ADC::temp1.InitSingle(daisy::seed::A1);
+	ADC::temp2.InitSingle(daisy::seed::A2);
+	ADC::temp3.InitSingle(daisy::seed::A3);
+	ADC::temp4.InitSingle(daisy::seed::A4);
 
-	configs[5] = {amp1, temp1, temp2, temp3, temp4};
-	hw.adc.Init(configs, 4);
+	hw.adc.Init(ADC::configs, ADCINPUTS);
 	hw.adc.Start();
 }
 
@@ -100,9 +102,16 @@ int main(void)
 	{
 		mixer.tick();
 
+		float ampPot = hw.adc.GetFloat(ChannelIDs::Amp1);
 		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);
 		float pot2 = hw.adc.GetFloat(ChannelIDs::TEMP2);
 		float pot3 = hw.adc.GetFloat(ChannelIDs::TEMP3);
 		float pot4 = hw.adc.GetFloat(ChannelIDs::TEMP4);
+
+		hw.PrintLine("amp pot = %f", ampPot);
+		//hw.PrintLine("pot 1 = %f", pot1);
+		//hw.PrintLine("pot 2 = %f", pot2);
+		//hw.PrintLine("pot 3 = %f", pot3);
+		//hw.PrintLine("pot 4 = %f", pot4);
 	}
 }
