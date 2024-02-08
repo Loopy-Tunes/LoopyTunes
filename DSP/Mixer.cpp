@@ -44,7 +44,7 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        left[i] = mix[L][i] * track1.gain;
-        right[i] = mix[R][i] * track1.gain;
+        left[i] = mix[L][i];//track1.gain;
+        right[i] = mix[R][i];//track1.gain;
     }
 }
