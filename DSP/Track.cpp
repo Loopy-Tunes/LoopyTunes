@@ -5,14 +5,15 @@ void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELA
     hw = seed;
 
     ph.isRecording = false;
+    ph.wasRecording = false;
     ph.isPlaying = false;
     ph.reset();
 
     ti.isEmpty = true;
     ti.loopLength = 0;
 
-    record.init(r, 30, [this]{ setIsRecording(); });
-    play.init(p, 30, [this]{ setIsPlaying(); });
+    record.init(r, 1000, [this]{ setIsRecording(); });
+    play.init(p, 1000, [this]{ setIsPlaying(); });
 
     bufferSize = SAMPLERATE * DURATION;
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
@@ -37,10 +38,15 @@ void Track::setIsRecording()
 {
     ph.isRecording = !ph.isRecording;
 
-    if(!ph.isRecording)
+    if(ph.wasRecording)
     {
+        ph.wasRecording = false;
         ti.isEmpty = false;
         ti.loopLength = ph.writePos;
+    } else if(ph.isRecording)
+    {
+        ph.wasRecording = true;
+        ph.isPlaying = false;
     }
 
     ph.reset();
@@ -49,6 +55,12 @@ void Track::setIsRecording()
 void Track::setIsPlaying()
 {
     ph.isPlaying = !ph.isPlaying;
+
+    if(ph.isPlaying)
+    {
+        ph.isRecording = false;
+    }
+
     ph.reset();
 }
 
@@ -67,7 +79,7 @@ void Track::incrementReadPos()
     else
         ph.readPos++;
 
-    hw->PrintLine("read pos = %d", ph.readPos);
+    //hw->PrintLine("read pos = %d", ph.readPos);
 }
 
 void Track::prepare()
@@ -95,7 +107,7 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
         return;
 
     // distortion process block
-    delay.processBlock(buffer, size, ph.readPos);
+    // delay.processBlock(buffer, size, ph.readPos);
 
     for(size_t i = 0 ; i < size ; i++)
     {

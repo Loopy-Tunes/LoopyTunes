@@ -21,6 +21,7 @@ TO DO:
 - Calculate correct max delay
 - Sort out problem with buffers not looping
 - Fix potentiometers
+- LPF on track inputs
 */
 
 // Hardware
@@ -100,7 +101,7 @@ int main(void)
 	while(1) 
 	{
 		mixer.tick();
-
+/*
 		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
 		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);
 		float pot2 = hw.adc.GetFloat(ChannelIDs::TEMP2);
@@ -112,5 +113,6 @@ int main(void)
 		//hw.PrintLine("pot 2 = %f", pot2);
 		//hw.PrintLine("pot 3 = %f", pot3);
 		//hw.PrintLine("pot 4 = %f", pot4);
+*/
 	}
 }

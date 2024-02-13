@@ -12,7 +12,7 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
         mix[R][j] = 0.0f;
     }
 
-    track1.track.init(seed, t1, dl, daisy::seed::D0, daisy::seed::D1);
+    track1.track.init(seed, t1, dl, daisy::seed::D30, daisy::seed::D29);
     track1.gainParam.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
     for(int i = 0 ; i < 2 ; i++)
         track1.buffer[i] = t1[i];
