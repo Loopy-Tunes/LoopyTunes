@@ -33,8 +33,6 @@ public:
 
 private:
 
-    DaisySeed* hw; // temp
-
     Playhead ph;
     TrackInformation ti;
 

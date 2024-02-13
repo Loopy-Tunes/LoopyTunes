@@ -23,10 +23,12 @@ public:
 
     inline void tick()
     {
-        value = btn.Pressed();
         btn.Debounce();
+        value = btn.Pressed();
         if(value)
             callback();
+        
+        System::Delay(1);
     }
 
 private:
