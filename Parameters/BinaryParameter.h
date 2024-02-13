@@ -28,7 +28,7 @@ public:
         if(value)
             callback();
         
-        System::Delay(1);
+        System::Delay(5);
     }
 
 private:

@@ -8,7 +8,7 @@ using namespace daisysp;
 TO DO:
 - AudioParameter value smoothing / ramping
 - Parameter update queue
-- Value normalisation
+- Parameter denormalisation (for display)
 - Tick parameters less often
 - Reduce floating point precision
 - Come up with much better mixing system
@@ -22,6 +22,8 @@ TO DO:
 - Sort out problem with buffers not looping
 - Fix potentiometers
 - LPF on track inputs
+- State system
+- Block counter for handling parameter updates
 */
 
 // Hardware
@@ -37,6 +39,9 @@ namespace ADC
 	AdcChannelConfig temp4;
 	AdcChannelConfig configs[ADCINPUTS] = {amp1, temp1, temp2, temp3, temp4};
 };
+
+// Global
+int sample;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
@@ -81,12 +86,20 @@ void init()
 	hw.adc.Init(ADC::configs, ADCINPUTS);
 	hw.adc.Start();
 
+	// initialise global variables
+	sample = 0;
+
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	if(sample == SUBBLOCKSIZE)
+		mixer.tick();
+	else
+		sample++;
+
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
@@ -100,7 +113,7 @@ int main(void)
 
 	while(1) 
 	{
-		mixer.tick();
+		//mixer.tick();
 		hw.PrintLine("read pos = %d", mixer.getReadPos());
 /*
 		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
