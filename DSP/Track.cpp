@@ -2,6 +2,8 @@
 
 void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
+    hw = seed;
+
     ph.isRecording = false;
     ph.isPlaying = false;
     ph.reset();
@@ -64,6 +66,8 @@ void Track::incrementReadPos()
         ph.readPos = 0;
     else
         ph.readPos++;
+
+    hw->PrintLine("read pos = %d", ph.readPos);
 }
 
 void Track::prepare()
