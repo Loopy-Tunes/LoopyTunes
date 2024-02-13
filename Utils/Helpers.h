@@ -4,8 +4,6 @@
 // playhead
 struct Playhead
 {
-    bool isRecording;
-    bool isPlaying;
     size_t writePos;
     size_t readPos;
 

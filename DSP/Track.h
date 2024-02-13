@@ -21,8 +21,7 @@ public:
     void setIsRecording();
     void setIsPlaying();
 
-    bool getIsRecording() { return ph.isRecording; }
-    bool getIsPlaying() { return ph.isPlaying; }
+    TrackState getState() { return state; }
 
     void incrementWritePos();
     void incrementReadPos();

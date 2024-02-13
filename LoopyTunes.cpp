@@ -9,21 +9,17 @@ TO DO:
 - AudioParameter value smoothing / ramping
 - Parameter update queue
 - Parameter denormalisation (for display)
-- Tick parameters less often
-- Reduce floating point precision
 - Come up with much better mixing system
 - Decibel conversion
 - Output EQ profiles for different output sources
 - Interpolate between start and end sample of loop to smooth transition
-- Check bit width of pointers, memory range
 - Delay ms/room size -> samples calculation
 - Find out ms delay of certain room sizes for delay
 - Calculate correct max delay
-- Sort out problem with buffers not looping
 - Fix potentiometers
 - LPF on track inputs
-- State system
 - Block counter for handling parameter updates
+- Reverse mode
 */
 
 // Hardware
@@ -95,12 +91,7 @@ void init()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	/*
-	if(sample == SUBBLOCKSIZE)
-		mixer.tick();
-	else
-		sample++;
-	*/
+	//mixer.tick();
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);

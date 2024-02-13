@@ -88,7 +88,10 @@ void Track::incrementReadPos()
 {
     if(state == RECORDING)
     {
-        ph.readPos = ph.writePos - 1;
+        if(ph.writePos <= 0)
+            ph.readPos = 0;
+        else
+            ph.readPos = ph.writePos - 1;
     } else if(state == PLAYING)
     {
         if(ph.readPos >= ti.loopLength)

@@ -24,8 +24,7 @@ public:
     inline void tick()
     {
         btn.Debounce();
-        value = btn.Pressed();
-        if(value)
+        if(btn.FallingEdge())
             callback();
         
         System::Delay(5);
@@ -34,7 +33,6 @@ public:
 private:
 
     Switch btn;
-    bool value;
     std::function<void()> callback;
 };
 
