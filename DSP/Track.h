@@ -16,6 +16,7 @@ public:
 
     void init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p);
     void tick();
+    void clearBuffer();
 
     void setIsRecording();
     void setIsPlaying();
