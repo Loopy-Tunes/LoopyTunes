@@ -2,12 +2,10 @@
 
 void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
-    state = STOPPED; //.isRecording = false;
-    //ph.isPlaying = false;
     ph.reset();
-
     ti.isEmpty = true;
     ti.loopLength = 0;
+    state = STOPPED;
 
     record.init(r, 1000, [this]{ setIsRecording(); });
     play.init(p, 1000, [this]{ setIsPlaying(); });
@@ -43,25 +41,36 @@ void Track::clearBuffer()
 
 void Track::setIsRecording()
 {
-    ph.isRecording = !ph.isRecording;
-
-    if(!ph.isRecording)
+    switch(state)
     {
-        ti.isEmpty = false;
+    case RECORDING:
+        state = STOPPED;
         ti.loopLength = ph.writePos;
-    } 
+        break;
+    case PLAYING:
+        state = RECORDING;
+        break;
+    case STOPPED:
+        state = RECORDING;
+        break;
+    }
 
-    clearBuffer();
     ph.reset();
 }
 
 void Track::setIsPlaying()
 {
-    ph.isPlaying = !ph.isPlaying;
-
-    if(ph.isPlaying)
+    switch(state)
     {
-        ph.isRecording = false;
+    case RECORDING:
+        state = PLAYING;
+        break;
+    case PLAYING:
+        state = STOPPED;
+        break;
+    case STOPPED:
+        state = PLAYING;
+        break;
     }
 
     ph.reset();
@@ -77,10 +86,16 @@ void Track::incrementWritePos()
 
 void Track::incrementReadPos()
 {
-    if(ph.readPos >= ti.loopLength)
-        ph.readPos = 0;
-    else
-        ph.readPos++;
+    if(state == RECORDING)
+    {
+        ph.readPos = ph.writePos - 1;
+    } else if(state == PLAYING)
+    {
+        if(ph.readPos >= ti.loopLength)
+            ph.readPos = 0;
+        else
+            ph.readPos++;
+    }
 }
 
 void Track::prepare()
@@ -90,7 +105,7 @@ void Track::prepare()
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)
 {
-    if(!ph.isRecording)
+    if(state != RECORDING)
         return;
 
     for(size_t i = 0 ; i < size ; i++)
@@ -104,7 +119,7 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
 
 void Track::processOutputBlock(float* left, float* right, size_t size)
 {
-    if(!ph.isRecording && !ph.isPlaying)
+    if(state == STOPPED)
         return;
 
     // distortion process block
