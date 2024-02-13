@@ -2,8 +2,8 @@
 
 void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
-    ph.isRecording = false;
-    ph.isPlaying = false;
+    state = STOPPED; //.isRecording = false;
+    //ph.isPlaying = false;
     ph.reset();
 
     ti.isEmpty = true;
@@ -69,7 +69,7 @@ void Track::setIsPlaying()
 
 void Track::incrementWritePos()
 {
-    if(ph.writePos >= (bufferSize - 1))
+    if(ph.writePos >= bufferSize)
         ph.writePos = 0;
     else
         ph.writePos++;
@@ -77,7 +77,7 @@ void Track::incrementWritePos()
 
 void Track::incrementReadPos()
 {
-    if(ph.readPos >= (ti.loopLength - 1))
+    if(ph.readPos >= ti.loopLength)
         ph.readPos = 0;
     else
         ph.readPos++;

@@ -36,6 +36,7 @@ private:
 
     Playhead ph;
     TrackInformation ti;
+    TrackState state;
 
     BinaryParameter record;
     BinaryParameter play;

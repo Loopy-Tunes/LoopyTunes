@@ -95,10 +95,12 @@ void init()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	/*
 	if(sample == SUBBLOCKSIZE)
 		mixer.tick();
 	else
 		sample++;
+	*/
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
@@ -113,7 +115,7 @@ int main(void)
 
 	while(1) 
 	{
-		//mixer.tick();
+		mixer.tick();
 		hw.PrintLine("read pos = %d", mixer.getReadPos());
 /*
 		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
