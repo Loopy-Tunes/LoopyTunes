@@ -24,10 +24,9 @@ public:
     inline void tick()
     {
         value = btn.Pressed();
+        btn.Debounce();
         if(value)
             callback();
-
-        btn.Debounce();
     }
 
 private:
