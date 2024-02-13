@@ -23,6 +23,14 @@ struct TrackInformation
     size_t loopLength;
 };
 
+// track state
+enum TrackState
+{
+    RECORDING = 0,
+    PLAYING,
+    STOPPED
+};
+
 // curve types
 enum CurveType
 {
