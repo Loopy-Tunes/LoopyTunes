@@ -32,6 +32,15 @@ void Track::tick()
     delay.tick();
 }
 
+void Track::clearBuffer()
+{
+    for(size_t i = 0 ; i < bufferSize ; i++)
+    {
+        buffer[L][i] = 0.0f;
+        buffer[R][i] = 0.0f;
+    }
+}
+
 void Track::setIsRecording()
 {
     ph.isRecording = !ph.isRecording;
@@ -42,6 +51,7 @@ void Track::setIsRecording()
         ti.loopLength = ph.writePos;
     } 
 
+    clearBuffer();
     ph.reset();
 }
 
