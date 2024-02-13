@@ -101,6 +101,7 @@ int main(void)
 	while(1) 
 	{
 		mixer.tick();
+		hw.PrintLine("read pos = %d", mixer.getReadPos());
 /*
 		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
 		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);

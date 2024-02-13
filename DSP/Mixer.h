@@ -21,6 +21,7 @@ public:
 
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }
+    size_t getReadPos() { return track1.track.getReadPos(); }
 
     void setTrack1Gain(float g){ track1.gain = g; }
     void setTrack2Gain(float g){ track2.gain = g; }
