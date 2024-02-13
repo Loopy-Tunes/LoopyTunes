@@ -2,10 +2,7 @@
 
 void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
-    hw = seed;
-
     ph.isRecording = false;
-    ph.wasRecording = false;
     ph.isPlaying = false;
     ph.reset();
 
@@ -32,22 +29,18 @@ void Track::tick()
 {
     record.tick();
     play.tick();
+    delay.tick();
 }
 
 void Track::setIsRecording()
 {
     ph.isRecording = !ph.isRecording;
 
-    if(ph.wasRecording)
+    if(!ph.isRecording)
     {
-        ph.wasRecording = false;
         ti.isEmpty = false;
         ti.loopLength = ph.writePos;
-    } else if(ph.isRecording)
-    {
-        ph.wasRecording = true;
-        ph.isPlaying = false;
-    }
+    } 
 
     ph.reset();
 }
@@ -78,13 +71,11 @@ void Track::incrementReadPos()
         ph.readPos = 0;
     else
         ph.readPos++;
-
-    //hw->PrintLine("read pos = %d", ph.readPos);
 }
 
 void Track::prepare()
 {
-    delay.tick();
+
 }
 
 void Track::processInputBlock(const float* left, const float* right, size_t size)
