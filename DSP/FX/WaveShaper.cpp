@@ -61,7 +61,8 @@ void Waveshaper::processSine(float* input[2], size_t size, size_t readPos)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            
+            float output = cos(input[i][j]);
+            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
         }
     }
 }
