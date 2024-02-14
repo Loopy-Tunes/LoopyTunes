@@ -12,29 +12,19 @@ TO DO:
 - Come up with much better mixing system
 - Decibel conversion
 - Output EQ profiles for different output sources
-- Interpolate between start and end sample of loop to smooth transition
 - Delay ms/room size -> samples calculation
 - Find out ms delay of certain room sizes for delay
 - Calculate correct max delay
-- Fix potentiometers
 - LPF on track inputs
 - Block counter for handling parameter updates
 - Reverse mode
+- Keypad driver
+- Encoder driver
+- CPU load testing (after distortion or symposium)
 */
 
 // Hardware
 DaisySeed hw;
-
-// ADC inputs
-namespace ADC
-{
-	AdcChannelConfig amp1;
-	AdcChannelConfig temp1;
-	AdcChannelConfig temp2;
-	AdcChannelConfig temp3;
-	AdcChannelConfig temp4;
-	AdcChannelConfig configs[ADCINPUTS] = {amp1, temp1, temp2, temp3, temp4};
-};
 
 // Global
 int sample;
@@ -71,17 +61,7 @@ void init()
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-
-	// initialise ADC
-	ADC::amp1.InitSingle(daisy::seed::A0);
-	ADC::temp1.InitSingle(daisy::seed::A1);
-	ADC::temp2.InitSingle(daisy::seed::A2);
-	ADC::temp3.InitSingle(daisy::seed::A3);
-	ADC::temp4.InitSingle(daisy::seed::A4);
-
-	hw.adc.Init(ADC::configs, ADCINPUTS);
-	hw.adc.Start();
-
+	
 	// initialise global variables
 	sample = 0;
 
@@ -104,22 +84,24 @@ int main(void)
 	hw.StartLog();
 	hw.StartAudio(AudioCallback);
 
+	// handle ADC init
+	AdcChannelConfig configs[ADCINPUTS];
+	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
+	configs[ChannelIDs::TEMP1].InitSingle(seed::A1);
+	configs[ChannelIDs::TEMP2].InitSingle(seed::A2);
+	configs[ChannelIDs::TEMP3].InitSingle(seed::A3);
+	configs[ChannelIDs::TEMP4].InitSingle(seed::A4);
+	hw.adc.Init(configs, ADCINPUTS);
+	hw.adc.Start();
+
 	while(1) 
 	{
 		mixer.tick();
-		hw.PrintLine("read pos = %d", mixer.getReadPos());
-/*
-		float ampPot = hw.adc.GetFloat(ChannelIDs::AMP1);
-		float pot1 = hw.adc.GetFloat(ChannelIDs::TEMP1);
-		float pot2 = hw.adc.GetFloat(ChannelIDs::TEMP2);
-		float pot3 = hw.adc.GetFloat(ChannelIDs::TEMP3);
-		float pot4 = hw.adc.GetFloat(ChannelIDs::TEMP4);
+		//hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
+		//hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));
+		//hw.PrintLine("temp 3 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP3));
+		//hw.PrintLine("temp 4 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP4));
 
-		//hw.PrintLine("amp pot = %f", hw.adc.GetFloat(ChannelIDs::AMP1));
-		//hw.PrintLine("pot 1 = %f", pot1);
-		//hw.PrintLine("pot 2 = %f", pot2);
-		//hw.PrintLine("pot 3 = %f", pot3);
-		//hw.PrintLine("pot 4 = %f", pot4);
-*/
+		System::Delay(50);
 	}
 }
