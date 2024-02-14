@@ -29,6 +29,13 @@ enum TrackState
     STOPPED
 };
 
+enum Funcs
+{
+    SINE = 0,
+    TANH,
+    SIGNUM
+};
+
 // curve types
 enum CurveType
 {
