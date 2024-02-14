@@ -13,9 +13,24 @@ class WaveShaper
 {
 public:
 
+    void init(DaisySeed* seed);
+    void tick();
+
+    inline void setBypass(int b) { bypass.value = b; }
+    inline void setInput(float i) { input.value = i; }
+    inline void setWaveShaper(int ws) { waveShape.value = ws; }
+    
+    void preapre();
+    void calculateAutoGain();
+    void process();
+
 private:
 
+    ParameterWrapper<int> bypass;
+    ParameterWrapper<float> input;
+    ParameterWrapper<int> waveShape;
 
+    float gain;
 };
 
 #endif
