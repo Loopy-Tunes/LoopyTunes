@@ -93,7 +93,7 @@ build/Mixer.o: DSP/Mixer.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Mixer.h DSP/Track.h DSP/FX/WaveShaper.h \
+ DSP/Mixer.h DSP/Track.h DSP/FX/Waveshaper.h \
  DSP/FX/../../Parameters/AudioParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
@@ -330,7 +330,7 @@ build/Mixer.o: DSP/Mixer.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Mixer.h:
 DSP/Track.h:
-DSP/FX/WaveShaper.h:
+DSP/FX/Waveshaper.h:
 DSP/FX/../../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
