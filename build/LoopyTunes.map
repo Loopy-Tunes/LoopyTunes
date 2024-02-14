@@ -132,10 +132,20 @@ Archive member included to satisfy reference by file (symbol)
                               /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o) (__cxxabiv1::__unexpected_handler)
 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_term_handler.o)
                               /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o) (__cxxabiv1::__terminate_handler)
+/Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+                              build/Waveshaper.o (tanhf)
+/Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o) (expm1f)
+/Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o) (fabsf)
+/Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o) (__math_oflowf)
 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
                               /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o) (abort)
 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-cxa_atexit.o)
                               /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(atexit_arm.o) (__cxa_atexit)
+/Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o) (__errno)
 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-exit.o)
                               /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/crt0.o (exit)
 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-impure.o)
@@ -360,24 +370,24 @@ Discarded input sections
                 0x0000000000000000        0x4 build/Waveshaper.o
  .text._ZN10Waveshaper17calculateAutoGainEv
                 0x0000000000000000        0x4 build/Waveshaper.o
- .text._ZN10Waveshaper12processBlockEPPfjj
-                0x0000000000000000        0x4 build/Waveshaper.o
  .text._ZN10Waveshaper11processSineEPPfjj
                 0x0000000000000000        0x4 build/Waveshaper.o
- .text._ZN10Waveshaper11processTanHEPPfjj
-                0x0000000000000000        0x4 build/Waveshaper.o
+ .text._ZN10Waveshaper11processTanhEPPfjj
+                0x0000000000000000       0x7c build/Waveshaper.o
+ .text._ZN10Waveshaper12processBlockEPPfjj
+                0x0000000000000000       0x1c build/Waveshaper.o
  .text._ZN10Waveshaper13processSignumEPPfjj
                 0x0000000000000000        0x4 build/Waveshaper.o
- .debug_info    0x0000000000000000     0xaef9 build/Waveshaper.o
- .debug_abbrev  0x0000000000000000      0xc78 build/Waveshaper.o
- .debug_loc     0x0000000000000000     0x1da5 build/Waveshaper.o
+ .debug_info    0x0000000000000000     0xb00d build/Waveshaper.o
+ .debug_abbrev  0x0000000000000000      0xcac build/Waveshaper.o
+ .debug_loc     0x0000000000000000     0x1f8d build/Waveshaper.o
  .debug_aranges
-                0x0000000000000000       0x78 build/Waveshaper.o
- .debug_ranges  0x0000000000000000      0x9a8 build/Waveshaper.o
- .debug_line    0x0000000000000000     0x1228 build/Waveshaper.o
- .debug_str     0x0000000000000000     0x589e build/Waveshaper.o
+                0x0000000000000000       0x88 build/Waveshaper.o
+ .debug_ranges  0x0000000000000000      0xa40 build/Waveshaper.o
+ .debug_line    0x0000000000000000     0x131a build/Waveshaper.o
+ .debug_str     0x0000000000000000     0x58d2 build/Waveshaper.o
  .comment       0x0000000000000000       0x4a build/Waveshaper.o
- .debug_frame   0x0000000000000000      0x144 build/Waveshaper.o
+ .debug_frame   0x0000000000000000      0x188 build/Waveshaper.o
  .ARM.attributes
                 0x0000000000000000       0x32 build/Waveshaper.o
  .text          0x0000000000000000        0x0 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
@@ -2838,6 +2848,46 @@ Discarded input sections
                 0x0000000000000000        0x4 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_term_handler.o)
  .ARM.attributes
                 0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_term_handler.o)
+ .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .text.tanhf    0x0000000000000000       0xb8 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .debug_frame   0x0000000000000000       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .text.expm1f   0x0000000000000000      0x26c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .debug_frame   0x0000000000000000       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .text.fabsf    0x0000000000000000       0x10 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .debug_frame   0x0000000000000000       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.with_errnof
+                0x0000000000000000       0x18 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.xflowf   0x0000000000000000       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.__math_uflowf
+                0x0000000000000000        0xc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.__math_may_uflowf
+                0x0000000000000000        0xc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.__math_oflowf
+                0x0000000000000000        0xc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.__math_divzerof
+                0x0000000000000000       0x24 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .text.__math_invalidf
+                0x0000000000000000       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .debug_frame   0x0000000000000000       0x90 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
  .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
  .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
  .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
@@ -2846,6 +2896,13 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-cxa_atexit.o)
  .rodata.__cxa_atexit_dummy
                 0x0000000000000000        0x4 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-cxa_atexit.o)
+ .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .text.__errno  0x0000000000000000        0xc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000000000000000       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
  .text          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-exit.o)
  .data          0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-exit.o)
  .bss           0x0000000000000000        0x0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-exit.o)
@@ -7744,7 +7801,7 @@ Waveshaper::prepare()                             build/Waveshaper.o
 Waveshaper::processBlock(float**, unsigned int, unsigned int) build/Waveshaper.o
 Waveshaper::processSignum(float**, unsigned int, unsigned int) build/Waveshaper.o
 Waveshaper::processSine(float**, unsigned int, unsigned int) build/Waveshaper.o
-Waveshaper::processTanH(float**, unsigned int, unsigned int) build/Waveshaper.o
+Waveshaper::processTanh(float**, unsigned int, unsigned int) build/Waveshaper.o
 Waveshaper::tick()                                build/Waveshaper.o
                                                   build/Track.o
 _Balloc                                           /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
@@ -7794,8 +7851,8 @@ __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*,
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 __cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
 __cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
-                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 __cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 __cxxabiv1::__forced_unwind::~__forced_unwind()   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 __cxxabiv1::__forced_unwind::~__forced_unwind()   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 __cxxabiv1::__forced_unwind::~__forced_unwind()   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
@@ -7820,6 +7877,8 @@ __deregister_frame_info                           /Library/DaisyToolchain/0.2.0/
 __dso_handle                                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/crtbegin.o
                                                   ../../../libDaisy//build/libdaisy.a(system.o)
                                                   build/LoopyTunes.o
+__errno                                           /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
 __exponent                                        /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
 __fp_lock_all                                     /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-findfp.o)
 __fp_unlock_all                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-findfp.o)
@@ -7863,6 +7922,12 @@ __malloc_sbrk_start                               /Library/DaisyToolchain/0.2.0/
 __malloc_unlock                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mlock.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-mallocr.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-freer.o)
+__math_divzerof                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+__math_invalidf                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+__math_may_uflowf                                 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+__math_oflowf                                     /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+__math_uflowf                                     /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
 __mcmp                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-dtoa.o)
 __mdiff                                           /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
@@ -8039,6 +8104,7 @@ _impure_ptr                                       /Library/DaisyToolchain/0.2.0/
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-putchar.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-printf.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-malloc.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
 _init                                             /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/crti.o
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-init.o)
 _init_signal                                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signal.o)
@@ -8527,6 +8593,10 @@ errno                                             /Library/DaisyToolchain/0.2.0/
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-sbrkr.o)
 exit                                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-exit.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/crt0.o
+expm1f                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+fabsf                                             /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
 fflush                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fflush.o)
 fiprintf                                          /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fprintf.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-assert.o)
@@ -8635,14 +8705,16 @@ std::type_info::operator==(std::type_info const&) const /Library/DaisyToolchain/
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
 std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
-std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
+std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
 std::unexpected()                                 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o)
 strcmp                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-strcmp.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-locale.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
 strlen                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-strlen.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+tanhf                                             /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+                                                  build/Waveshaper.o
 transaction clone for std::bad_exception::what() const /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 transaction clone for std::bad_exception::~bad_exception() const /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 transaction clone for std::exception::what() const /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)

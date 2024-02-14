@@ -40,7 +40,19 @@ void Waveshaper::processBlock(float* input[2], size_t size, size_t readPos)
         return;
 
     // handle input gain
-    // switch statement to see which transfer function is selected
+    
+    switch(waveshape.value)
+    {
+        case SINE:
+            processSine(input, size, readPos);
+        break;
+        case TANH:
+            processTanh(input, size, readPos);
+        break;
+        case SIGNUM:
+            processSignum(input, size, readPos);
+        break;
+    }
 }
 
 void Waveshaper::processSine(float* input[2], size_t size, size_t readPos)
@@ -54,13 +66,14 @@ void Waveshaper::processSine(float* input[2], size_t size, size_t readPos)
     }
 }
 
-void Waveshaper::processTanH(float* input[2], size_t size, size_t readPos)
+void Waveshaper::processTanh(float* input[2], size_t size, size_t readPos)
 {
     for(size_t i = readPos ; i < readPos + size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            
+            float output = tanh(input[j][i]);
+            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
         }
     }
 }

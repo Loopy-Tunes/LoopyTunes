@@ -2,6 +2,7 @@
 #define WAVESHAPER_H
 
 #include "../../Parameters/AudioParameter.h"
+#include <cmath>
 
 /************************************************************//**
  *  Class name: Delay
@@ -26,7 +27,7 @@ public:
     void processBlock(float* input[2], size_t size, size_t readPos);
 
     void processSine(float* input[2], size_t size, size_t readPos);
-    void processTanH(float* input[2], size_t size, size_t readPos);
+    void processTanh(float* input[2], size_t size, size_t readPos);
     void processSignum(float* input[2], size_t size, size_t readPos);
     // wave shape 4 process 
     // wave shape 5 process 
