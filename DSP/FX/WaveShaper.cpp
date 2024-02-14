@@ -85,7 +85,8 @@ void Waveshaper::processSignum(float* input[2], size_t size, size_t readPos)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            
+            float output = (0 < input[i][j]) - (input[i][j] < 0);
+            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
         }
     }
 }
