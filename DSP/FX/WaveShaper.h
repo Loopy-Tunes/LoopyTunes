@@ -18,9 +18,9 @@ public:
 
     inline void setBypass(int b) { bypass.value = b; }
     inline void setInput(float i) { input.value = i; }
-    inline void setWaveShaper(int ws) { waveShape.value = ws; }
+    inline void setWaveShape(int ws) { waveShape.value = ws; }
     
-    void preapre();
+    void prepare();
     void calculateAutoGain();
     void process();
 

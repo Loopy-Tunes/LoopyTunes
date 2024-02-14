@@ -333,6 +333,43 @@ Discarded input sections
                 0x0000000000000000        0x4 build/Delay.o
  .text._ZN5Delay12processBlockEPPfjj
                 0x0000000000000000       0xd4 build/Delay.o
+ .text          0x0000000000000000        0x0 build/WaveShaper.o
+ .data          0x0000000000000000        0x0 build/WaveShaper.o
+ .bss           0x0000000000000000        0x0 build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFviEZN10WaveShaper4initEPN5daisy9DaisySeedEEUliE_E9_M_invokeERKSt9_Any_dataOi
+                0x0000000000000000        0x8 build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFvfEZN10WaveShaper4initEPN5daisy9DaisySeedEEUlfE0_E9_M_invokeERKSt9_Any_dataOf
+                0x0000000000000000        0x8 build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFviEZN10WaveShaper4initEPN5daisy9DaisySeedEEUlfE1_E9_M_invokeERKSt9_Any_dataOi
+                0x0000000000000000       0x14 build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFviEZN10WaveShaper4initEPN5daisy9DaisySeedEEUliE_E10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
+                0x0000000000000000       0x1c build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFvfEZN10WaveShaper4initEPN5daisy9DaisySeedEEUlfE0_E10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
+                0x0000000000000000       0x1c build/WaveShaper.o
+ .text._ZNSt17_Function_handlerIFviEZN10WaveShaper4initEPN5daisy9DaisySeedEEUlfE1_E10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
+                0x0000000000000000       0x1c build/WaveShaper.o
+ .text._ZN10WaveShaper4initEPN5daisy9DaisySeedE
+                0x0000000000000000      0x1c8 build/WaveShaper.o
+ .text._ZN10WaveShaper4tickEv
+                0x0000000000000000      0x1cc build/WaveShaper.o
+ .text._ZN10WaveShaper7prepareEv
+                0x0000000000000000        0x4 build/WaveShaper.o
+ .text._ZN10WaveShaper17calculateAutoGainEv
+                0x0000000000000000        0x4 build/WaveShaper.o
+ .text._ZN10WaveShaper7processEv
+                0x0000000000000000        0x4 build/WaveShaper.o
+ .debug_info    0x0000000000000000     0x9fd5 build/WaveShaper.o
+ .debug_abbrev  0x0000000000000000      0xc63 build/WaveShaper.o
+ .debug_loc     0x0000000000000000     0x175e build/WaveShaper.o
+ .debug_aranges
+                0x0000000000000000       0x60 build/WaveShaper.o
+ .debug_ranges  0x0000000000000000      0x7f8 build/WaveShaper.o
+ .debug_line    0x0000000000000000      0xff2 build/WaveShaper.o
+ .debug_str     0x0000000000000000     0x58b5 build/WaveShaper.o
+ .comment       0x0000000000000000       0x4a build/WaveShaper.o
+ .debug_frame   0x0000000000000000       0xf0 build/WaveShaper.o
+ .ARM.attributes
+                0x0000000000000000       0x32 build/WaveShaper.o
  .text          0x0000000000000000        0x0 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
  .data          0x0000000000000000        0x0 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
  .bss           0x0000000000000000        0x0 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
@@ -3169,6 +3206,7 @@ LOAD build/LoopyTunes.o
 LOAD build/Mixer.o
 LOAD build/Track.o
 LOAD build/Delay.o
+LOAD build/WaveShaper.o
 LOAD ../../../libDaisy//build/libdaisy.a
 LOAD /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a
 LOAD ../../../DaisySP//build/libdaisysp.a
@@ -7691,6 +7729,11 @@ USB_WritePacket                                   ../../../libDaisy//build/libda
 UsageFault_Handler                                build/startup_stm32h750xx.o
 WAKEUP_PIN_IRQHandler                             build/startup_stm32h750xx.o
 WWDG_IRQHandler                                   build/startup_stm32h750xx.o
+WaveShaper::calculateAutoGain()                   build/WaveShaper.o
+WaveShaper::init(daisy::DaisySeed*)               build/WaveShaper.o
+WaveShaper::prepare()                             build/WaveShaper.o
+WaveShaper::process()                             build/WaveShaper.o
+WaveShaper::tick()                                build/WaveShaper.o
 _Balloc                                           /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-dtoa.o)
 _Bfree                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
@@ -8068,6 +8111,7 @@ daisy::AdcChannelConfig::InitSingle(dsy_gpio_pin) ../../../libDaisy//build/libda
                                                   build/LoopyTunes.o
 daisy::AdcHandle::Get(unsigned char) const        ../../../libDaisy//build/libdaisy.a(adc.o)
 daisy::AdcHandle::GetFloat(unsigned char) const   ../../../libDaisy//build/libdaisy.a(adc.o)
+                                                  build/WaveShaper.o
                                                   build/Delay.o
                                                   build/Mixer.o
 daisy::AdcHandle::GetMux(unsigned char, unsigned char) const ../../../libDaisy//build/libdaisy.a(adc.o)
@@ -8541,6 +8585,7 @@ setlocale                                         /Library/DaisyToolchain/0.2.0/
 signal                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signal.o)
 software_init_hook                                /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/crt0.o
 std::__throw_bad_function_call()                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o)
+                                                  build/WaveShaper.o
                                                   build/Delay.o
                                                   build/Track.o
                                                   build/Mixer.o
@@ -8555,8 +8600,8 @@ std::bad_function_call::~bad_function_call()      /Library/DaisyToolchain/0.2.0/
 std::exception::what() const                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 std::exception::~exception()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 std::exception::~exception()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
-                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o)
 std::exception::~exception()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
+                                                  /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o)
 std::get_terminate()                              /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o)
 std::get_unexpected()                             /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o)
 std::set_terminate(void (*)())                    /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o)
