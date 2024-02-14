@@ -93,7 +93,7 @@ build/Track.o: DSP/Track.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Track.h DSP/FX/WaveShaper.h DSP/FX/../../Parameters/AudioParameter.h \
+ DSP/Track.h DSP/FX/Waveshaper.h DSP/FX/../../Parameters/AudioParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
  ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/per/tim.h \
@@ -328,7 +328,7 @@ build/Track.o: DSP/Track.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Track.h:
-DSP/FX/WaveShaper.h:
+DSP/FX/Waveshaper.h:
 DSP/FX/../../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
