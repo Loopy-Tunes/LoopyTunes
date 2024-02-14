@@ -27,6 +27,7 @@ void Track::tick()
 {
     record.tick();
     play.tick();
+    shaper.tick();
     delay.tick();
 }
 
@@ -125,7 +126,7 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
     if(state == STOPPED)
         return;
 
-    // distortion process block
+    // shaper.processBlock(buffer, size, ph.readPos);
     // delay.processBlock(buffer, size, ph.readPos);
 
     for(size_t i = 0 ; i < size ; i++)

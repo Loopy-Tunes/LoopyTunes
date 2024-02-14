@@ -1,6 +1,7 @@
 #ifndef TRACK_H
 #define TRACK_H
 
+#include "FX/WaveShaper.h"
 #include "FX/Delay.h"
 #include "../Parameters/BinaryParameter.h"
 #include <utility>
@@ -43,6 +44,7 @@ private:
     float* buffer[2];
     size_t bufferSize;
 
+    WaveShaper shaper;
     Delay delay;
 };
 
