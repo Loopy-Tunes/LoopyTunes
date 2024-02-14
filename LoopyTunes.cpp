@@ -74,8 +74,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	//mixer.tick();
 
-	//mixer.processInputBlock(in[L], in[R], size);
-	//mixer.processOutputBlock(out[L], out[R], size);
+	mixer.processInputBlock(in[L], in[R], size);
+	mixer.processOutputBlock(out[L], out[R], size);
 }
 
 int main(void)
@@ -91,13 +91,15 @@ int main(void)
 	configs[ChannelIDs::TEMP4].InitSingle(seed::A4);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
+	hw.StartLog();
 	
 	while(1) 
 	{
 		//mixer.tick();
-		//hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
-		//hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));
-		//hw.PrintLine("temp 3 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP3));
-		//hw.PrintLine("temp 4 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP4));
+
+		hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
+		hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));
+		hw.PrintLine("temp 3 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP3));
+		hw.PrintLine("temp 4 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP4));
 	}
 }
