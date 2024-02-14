@@ -21,19 +21,20 @@ TO DO:
 - Keypad driver
 - Encoder driver
 - CPU load testing (after distortion or symposium)
+- SORT OUT HANG PROBLEM
 */
 
 // Hardware
 DaisySeed hw;
 
 // Global
-int sample;
+//int sample;
 
 // System - Flash
 ConnectionMatrix connectionMatrix;
 
 // DSP - SDRAM
-Mixer mixer;
+static Mixer mixer;
 
 // UI - QSPI
 
@@ -63,7 +64,7 @@ void init()
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 	
 	// initialise global variables
-	sample = 0;
+	//sample = 0;
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
@@ -73,16 +74,13 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	//mixer.tick();
 
-	mixer.processInputBlock(in[L], in[R], size);
-	mixer.processOutputBlock(out[L], out[R], size);
+	//mixer.processInputBlock(in[L], in[R], size);
+	//mixer.processOutputBlock(out[L], out[R], size);
 }
 
 int main(void)
 {
 	init();
-
-	hw.StartLog();
-	hw.StartAudio(AudioCallback);
 
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
@@ -93,15 +91,13 @@ int main(void)
 	configs[ChannelIDs::TEMP4].InitSingle(seed::A4);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
-
+	
 	while(1) 
 	{
-		mixer.tick();
+		//mixer.tick();
 		//hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
 		//hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));
 		//hw.PrintLine("temp 3 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP3));
 		//hw.PrintLine("temp 4 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP4));
-
-		System::Delay(50);
 	}
 }
