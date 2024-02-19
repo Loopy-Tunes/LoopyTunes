@@ -7,6 +7,7 @@
 #include "../Utils/Constants.h"
 #include <cstdint>
 #include <functional>
+#include <memory>
 
 /*****************************************************************************//**
  *  Class name: AudioParameter
@@ -81,7 +82,7 @@ private:
 };
 
 template <class type>
-struct ParameterWrapper
+struct AudioParameterWrapper
 {
     AudioParameter<type> param;
     type value;

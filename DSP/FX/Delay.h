@@ -2,6 +2,7 @@
 #define DELAY_H
 
 #include "../../Parameters/AudioParameter.h"
+#include "../../Parameters/BinaryParameter.h"
 
 /************************************************************//**
  *  Class name: Delay
@@ -16,7 +17,7 @@ public:
     void init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
 
-    inline void setBypass(int b) { bypass.value = b; }
+    inline void setBypass() { bypass.value = !bypass.value; }
     inline void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
     inline void setBounce(float b) { bounce.value = b; }
     inline void setAmount(float a) { amount.value = a; }
@@ -26,10 +27,10 @@ public:
 
 private:
 
-    ParameterWrapper<int> bypass;
+    BinaryParameterWrapper bypass;
     AudioParameter<size_t> size;
-    ParameterWrapper<float> bounce;
-    ParameterWrapper<float> amount;
+    AudioParameterWrapper<float> bounce;
+    AudioParameterWrapper<float> amount;
 
     DelayLine<float, MAXDELAY>* delayLine[2];
 };

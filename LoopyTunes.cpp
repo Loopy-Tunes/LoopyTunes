@@ -22,6 +22,7 @@ TO DO:
 - Encoder driver
 - CPU load testing (after distortion or symposium)
 - SORT OUT HANG PROBLEM
+- turn hardware pointer to smart pointer
 */
 
 // Hardware
@@ -81,6 +82,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 int main(void)
 {
 	init();
+	hw.StartAudio(AudioCallback);
 
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
@@ -91,11 +93,12 @@ int main(void)
 	configs[ChannelIDs::TEMP4].InitSingle(seed::A4);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
+	
 	hw.StartLog();
 	
 	while(1) 
 	{
-		//mixer.tick();
+		mixer.tick();
 
 		hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
 		hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));

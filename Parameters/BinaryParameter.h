@@ -36,4 +36,9 @@ private:
     std::function<void()> callback;
 };
 
+struct BinaryParameterWrapper
+{
+    BinaryParameter param;
+    bool value;
+};
 #endif
