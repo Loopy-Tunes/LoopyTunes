@@ -12,7 +12,7 @@ class Mixer
 {
 public:
 
-    void init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2]); 
+    void init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2]); 
     void tick();
 
     void prepare();
@@ -23,10 +23,10 @@ public:
     void setIsPlaying() { track1.track.setIsPlaying(); }
     size_t getReadPos() { return track1.track.getReadPos(); }
 
-    void setTrack1Gain(float g){ track1.gain = g; }
-    void setTrack2Gain(float g){ track2.gain = g; }
-    void setTrack3Gain(float g){ track3.gain = g; }
-    void setTrack4Gain(float g){ track4.gain = g; }
+    void setTrack1Gain(float g){ track1.gain.value = g; }
+    void setTrack2Gain(float g){ track2.gain.value = g; }
+    void setTrack3Gain(float g){ track3.gain.value = g; }
+    void setTrack4Gain(float g){ track4.gain.value = g; }
 
 private:
 
@@ -34,8 +34,7 @@ private:
     {
         Track track;
         float* buffer[2];
-        AudioParameter<float> gainParam;
-        float gain;
+        AudioParameterWrapper<float> gain;
     };
 
     MixerChannel track1;

@@ -1,6 +1,6 @@
 #include "Track.h"
 
-void Track::init(daisy::DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
+void Track::init(DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
 {
     ph.reset();
     ti.isEmpty = true;
@@ -126,7 +126,7 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
     if(state == STOPPED)
         return;
 
-    // shaper.processBlock(buffer, size, ph.readPos);
+    shaper.processBlock(buffer, size, ph.readPos);
     // delay.processBlock(buffer, size, ph.readPos);
 
     for(size_t i = 0 ; i < size ; i++)

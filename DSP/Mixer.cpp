@@ -1,6 +1,6 @@
 #include "Mixer.h"
 
-void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2])
+void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2])
 {
     bufferSize = SAMPLERATE * DURATION;
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
@@ -13,7 +13,7 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
     }
 
     track1.track.init(seed, t1, dl, daisy::seed::D30, daisy::seed::D29);
-    track1.gainParam.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
+    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
     for(int i = 0 ; i < 2 ; i++)
         track1.buffer[i] = t1[i];
     
@@ -25,7 +25,7 @@ void Mixer::init(daisy::DaisySeed* seed, float* m[2], float* t1[2], float* t2[2]
 void Mixer::tick()
 {
     track1.track.tick();
-    track1.gainParam.tick();
+    track1.gain.param.tick();
 }
 
 void Mixer::prepare()

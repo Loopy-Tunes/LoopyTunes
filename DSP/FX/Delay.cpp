@@ -11,12 +11,12 @@ void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
         delayLine[i]->Reset();
     }
 
-    bypass.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (int b) { setBypass(b); }); // to be set to encoder
+    //bypass.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (int b) { setBypass(b); }); // to be set to encoder
     size.init(seed, 0, 10000, LINEAR, ChannelIDs::TEMP2, [this] (size_t s) { setDelay(s); }); // to be set to encoder
     bounce.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP3, [this] (float b) { setBounce(b); }); // to be set to encoder
     amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP4, [this] (float a) { setAmount(a); }); // to be set to encoder
 
-    bypass.value = 1; // set to 0 when pots working
+    bypass.value = false; // set to 0 when pots working
     bounce.value = 0.8;
     amount.value = 0.5;
     setDelay(40000);
@@ -38,7 +38,7 @@ void Delay::prepare()
 
 void Delay::processBlock(float* input[2], size_t size, size_t readPos)
 {
-    if(bypass.value == 0)
+    if(bypass.value)
         return;
 
     for(size_t i = readPos ; i < readPos + size ; i++)
