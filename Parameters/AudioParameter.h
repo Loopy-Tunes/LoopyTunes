@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <functional>
 #include <memory>
+#include <type_traits>
 
 /*****************************************************************************//**
  *  Class name: AudioParameter
@@ -21,7 +22,7 @@ class AudioParameter
 {
 public:
 
-    inline void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
+    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
     {
         hw = seed;
         input = 0;
