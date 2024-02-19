@@ -11,7 +11,7 @@ void Waveshaper::init(DaisySeed* seed)
 
     bypass.value = 1;
     input.value = 0;
-    waveshape.value = 2;
+    waveshape.value = 1;
     amount.value = 1;
 
     gain = 0;
@@ -68,8 +68,8 @@ void Waveshaper::processSine(float* input[2], size_t size, size_t readPos)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = cos(input[i][j]);
-            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
+            float output = cos(input[j][i]);
+            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
         }
     }
 }
@@ -81,7 +81,7 @@ void Waveshaper::processTanh(float* input[2], size_t size, size_t readPos)
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
             float output = tanh(input[j][i]);
-            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
+            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
         }
     }
 }
@@ -92,8 +92,8 @@ void Waveshaper::processSignum(float* input[2], size_t size, size_t readPos)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = (0 < input[i][j]) - (input[i][j] < 0);
-            input[i][j] = (1.f - amount.value) * input[i][j] + output * amount.value;
+            float output = (0 < input[j][i]) - (input[j][i] < 0);
+            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
         }
     }
 }
