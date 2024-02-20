@@ -13,15 +13,15 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
     }
 
     track1.track.init(seed, t1, dl, daisy::seed::D30, daisy::seed::D29);
-    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
+    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (float g) { setTrack1Gain(g); });
     
-    track2.track.init(seed, t2, dl, daisy::seed::D30, daisy::seed::D29);
+    track2.track.init(seed, t2, dl, daisy::seed::D28, daisy::seed::D27);
     track2.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack2Gain(g); });
     
-    track3.track.init(seed, t3, dl, daisy::seed::D30, daisy::seed::D29);
+    track3.track.init(seed, t3, dl, daisy::seed::D26, daisy::seed::D25);
     track3.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack3Gain(g); });
     
-    track4.track.init(seed, t4, dl, daisy::seed::D30, daisy::seed::D29);
+    track4.track.init(seed, t4, dl, daisy::seed::D24, daisy::seed::D23);
     track4.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack4Gain(g); });
 
     mixDiv = 0;
