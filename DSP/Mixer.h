@@ -41,7 +41,7 @@ private:
 
         inline float getCurVal(int chan, size_t index)
         {
-            return buffer[chan][index] * gain.value;
+            return buffer[chan][index];//gain.value;
         }
     };
 

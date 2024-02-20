@@ -45,16 +45,16 @@ void Track::setIsRecording()
 {
     switch(state)
     {
-    case RECORDING:
-        state = STOPPED;
-        ti.loopLength = ph.writePos;
-        break;
-    case PLAYING:
-        state = RECORDING;
-        break;
-    case STOPPED:
-        state = RECORDING;
-        break;
+        case RECORDING:
+            state = STOPPED;
+            ti.loopLength = ph.writePos;
+            break;
+        case PLAYING:
+            state = RECORDING;
+            break;
+        case STOPPED:
+            state = RECORDING;
+            break;
     }
 
     ph.reset();
@@ -64,15 +64,15 @@ void Track::setIsPlaying()
 {
     switch(state)
     {
-    case RECORDING:
-        state = PLAYING;
-        break;
-    case PLAYING:
-        state = STOPPED;
-        break;
-    case STOPPED:
-        state = PLAYING;
-        break;
+        case RECORDING:
+            state = PLAYING;
+            break;
+        case PLAYING:
+            state = STOPPED;
+            break;
+        case STOPPED:
+            state = PLAYING;
+            break;
     }
 
     ph.reset();
