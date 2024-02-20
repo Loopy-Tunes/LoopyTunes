@@ -1,14 +1,11 @@
 #include "Track.h"
 
-void Track::init(DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p)
+void Track::init(float* mem[2])
 {
+    state = STOPPED;
     ph.reset();
     ti.isEmpty = true;
     ti.loopLength = 0;
-    state = STOPPED;
-
-    record.init(r, 1000, [this]{ setIsRecording(); });
-    play.init(p, 1000, [this]{ setIsPlaying(); });
 
     bufferSize = SAMPLERATE * DURATION;
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
@@ -19,7 +16,16 @@ void Track::init(DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[
         buffer[L][i] = 0.0f;
         buffer[R][i] = 0.0f;
     }
+}
 
+void Track::initIO(TrackIO io)
+{
+    record.init(io.record, 1000, [this]{ setIsRecording(); });
+    play.init(io.play, 1000, [this]{ setIsPlaying(); });
+}
+
+void Track::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
+{
     delay.init(seed, dl);
     shaper.init(seed);
 }

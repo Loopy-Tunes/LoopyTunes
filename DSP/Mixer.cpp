@@ -12,20 +12,18 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
         mix[R][j] = 0.0f;
     }
 
-    track1.track.init(seed, t1, dl, daisy::seed::D30, daisy::seed::D29);
-    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (float g) { setTrack1Gain(g); });
-    
-    track2.track.init(seed, t2, dl, daisy::seed::D28, daisy::seed::D27);
-    track2.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack2Gain(g); });
-    
-    track3.track.init(seed, t3, dl, daisy::seed::D26, daisy::seed::D25);
-    track3.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack3Gain(g); });
-    
-    track4.track.init(seed, t4, dl, daisy::seed::D24, daisy::seed::D23);
-    track4.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack4Gain(g); });
+    track1.track.init(t1);
+    // init fx
+    track2.track.init(t2);
+    // init fx
+    track3.track.init(t3);
+    // init fx
+    track4.track.init(t4);
+    // init fx
 
     mixDiv = 0;
-    master.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] ( float v) { setMasterVolume(v); });
+    // CHANGE TO MASTER CHANNEL
+    master.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] ( float v) { setMasterVolume(v); }); 
 }
 
 void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2])
@@ -37,6 +35,19 @@ void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[
         track3.buffer[i] = t3[i];
         track4.buffer[i] = t4[i];
     }
+}
+
+void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, TrackIO t4)
+{
+    track1.gain.param.init(seed, 0, 1, LINEAR, t1.amp, [this] (float g) { setTrack1Gain(g); });
+    track2.gain.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float g) { setTrack2Gain(g); });
+    track3.gain.param.init(seed, 0, 1, LINEAR, t3.amp, [this] (float g) { setTrack3Gain(g); });
+    track4.gain.param.init(seed, 0, 1, LINEAR, t4.amp, [this] (float g) { setTrack4Gain(g); });
+
+    track1.track.initIO(t1);
+    track2.track.initIO(t2);
+    track3.track.initIO(t3);
+    track4.track.initIO(t4);
 }
 
 void Mixer::tick()
