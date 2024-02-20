@@ -21,6 +21,7 @@ void Track::init(DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[
     }
 
     delay.init(seed, dl);
+    shaper.init(seed);
 }
 
 void Track::tick()
