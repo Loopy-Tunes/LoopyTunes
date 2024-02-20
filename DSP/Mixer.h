@@ -21,14 +21,16 @@ public:
 
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }
-    size_t getReadPos() { return track1.track.getReadPos(); }
 
+    void setMasterVolume(float m){ master.value = m; }
     void setTrack1Gain(float g){ track1.gain.value = g; }
     void setTrack2Gain(float g){ track2.gain.value = g; }
     void setTrack3Gain(float g){ track3.gain.value = g; }
     void setTrack4Gain(float g){ track4.gain.value = g; }
 
 private:
+
+    AudioParameterWrapper<float> master;
 
     struct MixerChannel
     {
