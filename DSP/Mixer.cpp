@@ -92,8 +92,8 @@ void Mixer::mixOutput(size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        mix[L][i] = (track1.buffer[L][i] + track2.buffer[L][i] + track3.buffer[L][i] + track4.buffer[L][i]) / mixDiv;
-        mix[R][i] = (track1.buffer[R][i] + track2.buffer[R][i] + track3.buffer[R][i] + track4.buffer[R][i]) / mixDiv;
+        mix[L][i] = (track1.getCurVal(L, i) + track2.getCurVal(L, i) + track3.getCurVal(L, i) + track4.getCurVal(L, i)) / mixDiv;
+        mix[R][i] = (track1.getCurVal(R, i) + track2.getCurVal(R, i) + track3.getCurVal(R, i) + track4.getCurVal(R, i)) / mixDiv;
     }
 
     // pass mix buffer through limiter

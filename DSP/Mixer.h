@@ -38,6 +38,11 @@ private:
         Track track;
         float* buffer[2];
         AudioParameterWrapper<float> gain;
+
+        inline float getCurVal(int chan, size_t index)
+        {
+            return buffer[chan][index] * gain.value;
+        }
     };
 
     MixerChannel track1;
