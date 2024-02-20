@@ -50,11 +50,16 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
     track4.track.processInputBlock(left, right, size);
 }
 
+void Mixer::mixOutput()
+{
+
+}
+
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
     track1.track.processOutputBlock(mix[L], mix[R], size);
 
-    // call mix method here
+    mixOutput();
 
     for(size_t i = 0 ; i < size ; i++)
     {
