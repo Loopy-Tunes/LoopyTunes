@@ -15,7 +15,9 @@ class Track
 {
 public:
 
-    void init(DaisySeed* seed, float* mem[2], DelayLine<float, MAXDELAY>* dl[2], dsy_gpio_pin r, dsy_gpio_pin p);
+    void init(float* mem[2]);
+    void initIO(TrackIO io);
+    void initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
     void clearBuffer();
 
@@ -34,9 +36,9 @@ public:
 
 private:
 
+    TrackState state;
     Playhead ph;
     TrackInformation ti;
-    TrackState state;
 
     BinaryParameter record;
     BinaryParameter play;
