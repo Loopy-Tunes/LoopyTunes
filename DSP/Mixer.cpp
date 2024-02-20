@@ -26,6 +26,15 @@ void Mixer::tick()
 {
     track1.track.tick();
     track1.gain.param.tick();
+
+    track2.track.tick();
+    track2.gain.param.tick();
+
+    track3.track.tick();
+    track3.gain.param.tick();
+
+    track4.track.tick();
+    track4.gain.param.tick();
 }
 
 void Mixer::prepare()
@@ -36,11 +45,16 @@ void Mixer::prepare()
 void Mixer::processInputBlock(const float* left, const float* right, size_t size)
 {
     track1.track.processInputBlock(left, right, size);
+    track2.track.processInputBlock(left, right, size);
+    track3.track.processInputBlock(left, right, size);
+    track4.track.processInputBlock(left, right, size);
 }
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
     track1.track.processOutputBlock(mix[L], mix[R], size);
+
+    // call mix method here
 
     for(size_t i = 0 ; i < size ; i++)
     {

@@ -7,9 +7,8 @@ using namespace daisysp;
 /*
 TO DO:
 - AudioParameter value smoothing / ramping
-- Parameter update queue
+- Parameter update queue (is this needed?)
 - Parameter denormalisation (for display)
-- Come up with much better mixing system
 - Decibel conversion
 - Output EQ profiles for different output sources
 - Delay ms/room size -> samples calculation
@@ -22,7 +21,9 @@ TO DO:
 - Encoder driver
 - CPU load testing (after distortion or symposium)
 - SORT OUT HANG PROBLEM
-- turn hardware pointer to smart pointer
+- Output Limiter
+- Multitrack functionality (mixer etc.)
+- Panning
 */
 
 // Hardware
@@ -99,10 +100,5 @@ int main(void)
 	while(1) 
 	{
 		mixer.tick();
-
-		hw.PrintLine("temp 1 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP1));
-		hw.PrintLine("temp 2 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP2));
-		hw.PrintLine("temp 3 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP3));
-		hw.PrintLine("temp 4 pot = %f", hw.adc.GetFloat(ChannelIDs::TEMP4));
 	}
 }
