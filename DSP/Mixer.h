@@ -13,11 +13,13 @@ class Mixer
 public:
 
     void init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2]); 
+    void initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2]);
     void tick();
 
     void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
-    void mixOutput();
+    void setMixDiv();
+    void mixOutput(size_t size);
     void processOutputBlock(float* left, float* right, size_t size);
 
     void setIsRecording() { track1.track.setIsRecording(); }
@@ -31,8 +33,6 @@ public:
 
 private:
 
-    AudioParameterWrapper<float> master;
-
     struct MixerChannel
     {
         Track track;
@@ -45,6 +45,8 @@ private:
     MixerChannel track3;
     MixerChannel track4;
 
+    int mixDiv;
+    AudioParameterWrapper<float> master;
     float* mix[2];
     size_t bufferSize;
 };
