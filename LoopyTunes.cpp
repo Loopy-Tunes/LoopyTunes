@@ -122,7 +122,7 @@ int main(void)
 	
 	driver.Init();
 	driver.Fill(COLOR_BLACK);
-	driver.FillRect(Rectangle(100, 100, 50, 50), COLOR_RED);
+	driver.FillRect(Rectangle(100, 100, 50, 50), COLOR_BLUE);
 	driver.DrawRect(Rectangle(100, 100, 50, 50), COLOR_WHITE);
 
 	while(1) 
