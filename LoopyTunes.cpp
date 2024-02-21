@@ -1,5 +1,6 @@
 #include "DSP/Mixer.h"
 #include "Architecture/ConnectionMatrix.h"
+#include "LCD/ili9341_ui_driver.cpp"
 
 using namespace daisy;
 using namespace daisysp;

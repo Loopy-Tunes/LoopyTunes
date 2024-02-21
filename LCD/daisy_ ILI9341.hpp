@@ -3,9 +3,8 @@
 #include <cstring>
 
 #include "daisy_seed.h"
-#include "daisy_pod.h"
-#include "util/oled_fonts.h"
-#include "hid/disp/graphics_common.h"
+//#include "util/oled_fonts.h"
+//#include "hid/disp/graphics_common.h"
 
 using namespace daisy;
 
