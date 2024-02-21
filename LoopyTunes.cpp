@@ -41,6 +41,7 @@ ConnectionMatrix connectionMatrix;
 static Mixer mixer;
 
 // UI - QSPI
+//UiDriver driver;
 
 namespace Buffers
 {
@@ -119,8 +120,16 @@ int main(void)
 	
 	hw.StartLog();
 	
+	/*
+	driver.Init();
+	driver.Fill(COLOR_BLACK);
+	driver.FillRect(Rectangle(100, 100, 50, 50), COLOR_RED);
+	driver.DrawRect(Rectangle(100, 100, 50, 50), COLOR_WHITE);
+	*/
+
 	while(1) 
 	{
 		mixer.tick();
+		//driver.Update();
 	}
 }

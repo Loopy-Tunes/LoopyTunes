@@ -69,16 +69,16 @@ class ILI9341SpiTransport
         // spi_config.pin_config.miso = {DSY_GPIOX, 0}; // not used
 
         // v0.1 mix up
-        uint8_t dc_pin    = 16;
-        uint8_t reset_pin = 22;
+        //uint8_t dc_pin    = 16;
+        //uint8_t reset_pin = 22;
 
         // DC pin
         pin_dc_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-        pin_dc_.pin  = DaisySeed::GetPin(dc_pin);
+        pin_dc_.pin  = seed::D12;
         dsy_gpio_init(&pin_dc_);
         // Reset pin
         pin_reset_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-        pin_reset_.pin  = DaisySeed::GetPin(reset_pin);
+        pin_reset_.pin  = seed::D11;
         dsy_gpio_init(&pin_reset_);
         // CS pin
         pin_cs_.mode = DSY_GPIO_MODE_OUTPUT_PP;
