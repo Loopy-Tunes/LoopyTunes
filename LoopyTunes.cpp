@@ -121,13 +121,16 @@ int main(void)
 	hw.StartLog();
 	
 	driver.Init();
-	driver.Fill(COLOR_BLACK);
+	driver.Fill(COLOR_GREEN);
 	driver.FillRect(Rectangle(100, 100, 50, 50), COLOR_BLUE);
 	driver.DrawRect(Rectangle(100, 100, 50, 50), COLOR_WHITE);
+	driver.Update();
+
+	//river.WriteChar("A")
 
 	while(1) 
 	{
 		mixer.tick();
-		driver.Update();
+		
 	}
 }
