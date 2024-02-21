@@ -86,7 +86,12 @@ void init()
 
 void initTrackIO()
 {
-	// call trackIO with constructors here
+	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
+	TrackIO t2IO {ChannelIDs::AMP1, seed::D21, seed::D22};
+	TrackIO t3IO {ChannelIDs::AMP1, seed::D23, seed::D24};
+	TrackIO t4IO {ChannelIDs::AMP1, seed::D25, seed::D26};
+
+	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -105,10 +110,9 @@ int main(void)
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
-	configs[ChannelIDs::TEMP1].InitSingle(seed::A1);
-	configs[ChannelIDs::TEMP2].InitSingle(seed::A2);
-	configs[ChannelIDs::TEMP3].InitSingle(seed::A3);
-	configs[ChannelIDs::TEMP4].InitSingle(seed::A4);
+	configs[ChannelIDs::AMP2].InitSingle(seed::A1);
+	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
+	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	

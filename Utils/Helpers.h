@@ -5,6 +5,9 @@
 enum ChannelIDs
 {
     AMP1 = 0,
+    AMP2,
+    AMP3,
+    AMP4,
     TEMP1,
     TEMP2,
     TEMP3,
@@ -35,13 +38,6 @@ struct TrackInformation
 // track I/O
 struct TrackIO
 {
-    TrackIO(ChannelIDs a, dsy_gpio_pin r, dsy_gpio_pin p)
-    {
-        amp = a;
-        record = r;
-        play = p;
-    }
-
     ChannelIDs amp;
     dsy_gpio_pin record;
     dsy_gpio_pin play;
