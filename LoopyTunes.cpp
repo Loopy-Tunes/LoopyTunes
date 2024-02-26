@@ -41,6 +41,9 @@ static Mixer mixer;
 
 // UI - QSPI
 
+// testing
+CpuLoadMeter cpu;
+
 namespace Buffers
 {
 	float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
@@ -75,7 +78,7 @@ void init()
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
-	
+
 	// initialise global variables
 	//sample = 0;
 
@@ -96,10 +99,12 @@ void initTrackIO()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	//mixer.tick();
+	cpu.OnBlockStart();
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
+
+	cpu.OnBlockEnd();
 }
 
 int main(void)
@@ -117,9 +122,15 @@ int main(void)
 	hw.adc.Start();
 	
 	hw.StartLog();
+
+	cpu.Init(hw.AudioSampleRate(), 4, 0.5);
+	cpu.Reset();
 	
 	while(1) 
 	{
 		mixer.tick();
+		hw.PrintLine("Min CPU load = %d", cpu.GetMinCpuLoad());
+		hw.PrintLine("Avg CPU load = %d", cpu.GetAvgCpuLoad());
+		hw.PrintLine("Max CPU load = %d", cpu.GetMaxCpuLoad());
 	}
 }
