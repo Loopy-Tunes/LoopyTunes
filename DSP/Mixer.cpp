@@ -43,6 +43,11 @@ void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, Tra
     track3.gain.param.init(seed, 0, 1, LINEAR, t3.amp, [this] (float g) { setTrack3Gain(g); });
     track4.gain.param.init(seed, 0, 1, LINEAR, t4.amp, [this] (float g) { setTrack4Gain(g); });
 
+    track1.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack1Pan(p); });
+    track2.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack2Pan(p); });
+    track3.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack3Pan(p); });
+    track4.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack4Pan(p); });
+
     track1.track.initIO(t1);
     track2.track.initIO(t2);
     track3.track.initIO(t3);
@@ -79,31 +84,12 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
     track4.track.processInputBlock(left, right, size);
 }
 
-void Mixer::panTrack(float* buffer[2], size_t size)
+void Mixer::panChannels(size_t size)
 {
-    /*
-        LeftOut  = (1-pan) * MonoIn // = power((1-pan),1) * MonoIn;
-        RightOut = pan * MonoIn
-    */
-
-   
-}
-
-void Mixer::setMixDiv()
-{
-    mixDiv = 0;
-
-    if(track1.track.getState() != STOPPED)
-        mixDiv++;
-    if(track2.track.getState() != STOPPED)
-        mixDiv++;
-    if(track3.track.getState() != STOPPED)
-        mixDiv++;
-    if(track4.track.getState() != STOPPED)
-        mixDiv++;
-    
-    if(mixDiv > 4)
-        mixDiv = 4;
+    panMixBuffer(track1.buffer, track1.pan.value, size);
+    panMixBuffer(track2.buffer, track2.pan.value, size);
+    panMixBuffer(track3.buffer, track3.pan.value, size);
+    panMixBuffer(track4.buffer, track4.pan.value, size);
 }
 
 void Mixer::mixOutput(size_t size)
@@ -134,6 +120,7 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
     track3.track.processOutputBlock(track3.buffer[L], track3.buffer[R], size);
     track4.track.processOutputBlock(track4.buffer[L], track4.buffer[R], size);
 
+    panChannels(size);
     mixOutput(size);
 
     for(size_t i = 0 ; i < size ; i++)
@@ -141,4 +128,31 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
         left[i] = mix[L][i] * master.value;
         right[i] = mix[R][i] * master.value;
     }
+}
+
+void Mixer::panMixBuffer(float* buffer[2], float pan, size_t size)
+{
+    // -6dB linear taper
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        buffer[L][i] = (1 - pan) * buffer[L][i];
+        buffer[R][i] = pan * buffer[R][i];
+    }
+}
+
+void Mixer::setMixDiv()
+{
+    mixDiv = 0;
+
+    if(track1.track.getState() != STOPPED)
+        mixDiv++;
+    if(track2.track.getState() != STOPPED)
+        mixDiv++;
+    if(track3.track.getState() != STOPPED)
+        mixDiv++;
+    if(track4.track.getState() != STOPPED)
+        mixDiv++;
+    
+    if(mixDiv > 4)
+        mixDiv = 4;
 }

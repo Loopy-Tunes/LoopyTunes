@@ -9,10 +9,6 @@ enum ChannelIDs
     AMP3,
     AMP4,
     MASTER,
-    TEMP1,
-    TEMP2,
-    TEMP3,
-    TEMP4,
     ENCODER
 };
 

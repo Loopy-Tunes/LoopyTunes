@@ -19,10 +19,12 @@ public:
 
     void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
-    void panTrack(float* buffer[2], size_t size);
-    void setMixDiv();
+    void panChannels(size_t size);
     void mixOutput(size_t size);
     void processOutputBlock(float* left, float* right, size_t size);
+
+    void panMixBuffer(float* buffer[2], float pan, size_t size);
+    void setMixDiv();
 
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }

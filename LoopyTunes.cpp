@@ -22,6 +22,7 @@ TO DO:
 - Panning
 - Play/record LEDs
 - LED - BinaryParameter coupling
+- Modularise track methods with ID enum
 */
 
 // Hardware
