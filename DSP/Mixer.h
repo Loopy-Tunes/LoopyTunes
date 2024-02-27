@@ -19,6 +19,7 @@ public:
 
     void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
+    void panTrack(float* buffer[2], size_t size);
     void setMixDiv();
     void mixOutput(size_t size);
     void processOutputBlock(float* left, float* right, size_t size);
@@ -26,11 +27,16 @@ public:
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }
 
-    void setMasterVolume(float m){ master.value = m; }
+    void setTrack1Pan(float p){ track1.pan.value = p; }
+    void setTrack2Pan(float p){ track2.pan.value = p; }
+    void setTrack3Pan(float p){ track3.pan.value = p; }
+    void setTrack4Pan(float p){ track4.pan.value = p; }
+
     void setTrack1Gain(float g){ track1.gain.value = g; }
     void setTrack2Gain(float g){ track2.gain.value = g; }
     void setTrack3Gain(float g){ track3.gain.value = g; }
     void setTrack4Gain(float g){ track4.gain.value = g; }
+    void setMasterVolume(float m){ master.value = m; }
 
 private:
 
@@ -38,11 +44,12 @@ private:
     {
         Track track;
         float* buffer[2];
+        AudioParameterWrapper<float> pan;
         AudioParameterWrapper<float> gain;
 
         inline float getCurVal(int chan, size_t index)
         {
-            if(gain.value < 0.005)
+            if(gain.value < 0.005 || track.getState() == STOPPED)
                 return 0.0f;
             else
                 return buffer[chan][index] * gain.value;

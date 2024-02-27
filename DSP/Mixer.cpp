@@ -79,6 +79,16 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
     track4.track.processInputBlock(left, right, size);
 }
 
+void Mixer::panTrack(float* buffer[2], size_t size)
+{
+    /*
+        LeftOut  = (1-pan) * MonoIn // = power((1-pan),1) * MonoIn;
+        RightOut = pan * MonoIn
+    */
+
+   
+}
+
 void Mixer::setMixDiv()
 {
     mixDiv = 0;

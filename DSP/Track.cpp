@@ -144,4 +144,3 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
         incrementReadPos();
     }
 }
-

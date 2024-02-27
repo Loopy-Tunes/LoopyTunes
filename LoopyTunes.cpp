@@ -10,22 +10,18 @@ TO DO:
 - Parameter update queue (is this needed?)
 - Parameter denormalisation (for display)
 - Decibel conversion
-- Output EQ profiles for different output sources
-- Delay ms/room size -> samples calculation
-- Find out ms delay of certain room sizes for delay
-- Calculate correct max delay
-- LPF on track inputs
+- Output EQ profiles for different output sources (?)
+- LPF/HPF filters
+- Pitch shift
 - Block counter for handling parameter updates
-- Reverse mode
+- Find reverb algortihm to port
 - Keypad driver
 - Encoder driver
 - CPU load testing (after distortion or symposium)
-- SORT OUT HANG PROBLEM
 - Output Limiter
-- Multitrack functionality (mixer etc.)
 - Panning
-- Time/Shape/Space/Pitch FX
-- PLA/RECORD leds
+- Play/record LEDs
+- LED - BinaryParameter coupling
 */
 
 // Hardware
