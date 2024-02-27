@@ -24,7 +24,7 @@ TO DO:
 - Output Limiter
 - Multitrack functionality (mixer etc.)
 - Panning
-- Channel I/O struct
+- Time/Shape/Space/Pitch FX
 */
 
 // Hardware
@@ -90,26 +90,23 @@ void init()
 void initTrackIO()
 {
 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
-	TrackIO t2IO {ChannelIDs::AMP1, seed::D21, seed::D22};
-	TrackIO t3IO {ChannelIDs::AMP1, seed::D23, seed::D24};
-	TrackIO t4IO {ChannelIDs::AMP1, seed::D25, seed::D26};
+	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
+	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
+	TrackIO t4IO {ChannelIDs::AMP4, seed::D25, seed::D26};
 
 	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	cpu.OnBlockStart();
-
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
-
-	cpu.OnBlockEnd();
 }
 
 int main(void)
 {
 	init();
+	initTrackIO();
 	hw.StartAudio(AudioCallback);
 
 	// handle ADC init
@@ -122,15 +119,9 @@ int main(void)
 	hw.adc.Start();
 	
 	hw.StartLog();
-
-	cpu.Init(hw.AudioSampleRate(), 4, 0.5);
-	cpu.Reset();
 	
 	while(1) 
 	{
 		mixer.tick();
-		hw.PrintLine("Min CPU load = %d", cpu.GetMinCpuLoad());
-		hw.PrintLine("Avg CPU load = %d", cpu.GetAvgCpuLoad());
-		hw.PrintLine("Max CPU load = %d", cpu.GetMaxCpuLoad());
 	}
 }

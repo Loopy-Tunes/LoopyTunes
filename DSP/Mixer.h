@@ -42,7 +42,10 @@ private:
 
         inline float getCurVal(int chan, size_t index)
         {
-            return buffer[chan][index];//gain.value;
+            if(gain.value < 0.005)
+                return 0.0f;
+            else
+                return buffer[chan][index] * gain.value;
         }
     };
 
