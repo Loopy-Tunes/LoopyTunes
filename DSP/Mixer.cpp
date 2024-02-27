@@ -22,8 +22,7 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
     // init fx
 
     mixDiv = 0;
-    // CHANGE TO MASTER CHANNEL
-    master.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] ( float v) { setMasterVolume(v); }); 
+    master.param.init(seed, 0, 1, LINEAR, ChannelIDs::MASTER, [this] ( float v) { setMasterVolume(v); }); 
 }
 
 void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2])
@@ -103,8 +102,16 @@ void Mixer::mixOutput(size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        mix[L][i] = (track1.getCurVal(L, i)); //+ track2.getCurVal(L, i) + track3.getCurVal(L, i) + track4.getCurVal(L, i)) / mixDiv;
-        mix[R][i] = (track1.getCurVal(R, i)); //+ track2.getCurVal(R, i) + track3.getCurVal(R, i) + track4.getCurVal(R, i)) / mixDiv;
+        mix[L][i] = (track1.getCurVal(L, i) 
+                    + track2.getCurVal(L, i) 
+                    + track3.getCurVal(L, i) 
+                    + track4.getCurVal(L, i)) 
+                    / mixDiv;
+        mix[R][i] = (track1.getCurVal(R, i) 
+                    + track2.getCurVal(R, i) 
+                    + track3.getCurVal(R, i) 
+                    + track4.getCurVal(R, i)) 
+                    / mixDiv;
     }
 
     // pass mix buffer through limiter
@@ -121,7 +128,7 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        left[i] = mix[L][i];// * master.value;
-        right[i] = mix[R][i];// * master.value;
+        left[i] = mix[L][i] * master.value;
+        right[i] = mix[R][i] * master.value;
     }
 }
