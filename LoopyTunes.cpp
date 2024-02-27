@@ -25,6 +25,7 @@ TO DO:
 - Multitrack functionality (mixer etc.)
 - Panning
 - Time/Shape/Space/Pitch FX
+- PLA/RECORD leds
 */
 
 // Hardware
@@ -115,6 +116,7 @@ int main(void)
 	configs[ChannelIDs::AMP2].InitSingle(seed::A1);
 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
 	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
+	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	
