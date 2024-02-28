@@ -1,7 +1,7 @@
 #ifndef KEYPADDRIVER_H
 #define KEYPADDRIVER_H
 
-// includes here
+#include "Parameters/BinaryParameter.h"
 
 /*****************************************************************************//**
  *  Class name: KeypadDriver
@@ -12,11 +12,19 @@ class KeypadDriver
 {
 public:
 
+    // init
+
+    // init top
+    // init bottom
+    // init left
+    // init right
 
 private:
 
-
-
+    BinaryParameter top;
+    BinaryParameter bottom;
+    BinaryParameter left;
+    BinaryParameter right;
 };
 
 #endif
