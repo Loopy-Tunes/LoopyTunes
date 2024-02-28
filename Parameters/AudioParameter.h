@@ -1,5 +1,5 @@
-#ifndef AUDIO_PARAMETER_H
-#define AUDIO_PARAMETER_H
+#ifndef AUDIOPARAMETER_H
+#define AUDIOPARAMETER_H
 
 #include "daisy_seed.h"
 #include "daisysp.h"

@@ -1,5 +1,5 @@
-#ifndef BINARY_PARAMETER_H
-#define BINARY_PARAMETER_H
+#ifndef BINARYPARAMETER_H
+#define BINARYPARAMETER_H
 
 #include "daisy_seed.h"
 #include <functional>
