@@ -105,6 +105,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
+	System::ResetToBootloader;
+
 	init();
 	initTrackIO();
 	hw.StartAudio(AudioCallback);

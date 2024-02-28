@@ -12,5 +12,12 @@ DAISYSP_DIR = ../../../DaisySP/
 SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
 include $(SYSTEM_FILES_DIR)/Makefile
 
+# Bootloader
+OPT = -O0
+APP_TYPE = BOOT_QSPI
+
+# Debug
+DEBUG = 1
+
 # Flags
 LDFLAGS += -u _printf_float
