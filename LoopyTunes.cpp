@@ -39,7 +39,6 @@ static Mixer mixer;
 // UI - QSPI
 
 // testing
-//CpuLoadMeter cpu;
 
 namespace Buffers
 {
@@ -105,8 +104,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
-	System::ResetToBootloader;
-
 	init();
 	initTrackIO();
 	hw.StartAudio(AudioCallback);

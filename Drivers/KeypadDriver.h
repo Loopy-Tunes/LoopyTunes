@@ -12,19 +12,46 @@ class KeypadDriver
 {
 public:
 
-    // init
+    void init(dsy_gpio_pin t, dsy_gpio_pin b, dsy_gpio_pin l, dsy_gpio_pin r)
+    {
+        top.init(t, 1000, [this]{ topPressed(); });
+        bottom.init(b, 1000, [this]{ bottomPressed(); });
+        right.init(t, 1000, [this]{ rightPressed(); });
+        left.init(t, 1000, [this]{ leftPressed(); });
+    }
 
-    // init top
-    // init bottom
-    // init left
-    // init right
+    void topPressed()
+    {
+        index.col++;
+    }
+    
+    void bottomPressed()
+    {
+        index.col--;
+    }
+
+    void rightPressed()
+    {
+        index.row++;
+    }
+
+    void leftPressed()
+    {
+        index.row--;
+    }
 
 private:
 
+    struct Index
+    {
+        int row;
+        int col;
+    } index;
+
     BinaryParameter top;
     BinaryParameter bottom;
-    BinaryParameter left;
     BinaryParameter right;
+    BinaryParameter left;
 };
 
 #endif
