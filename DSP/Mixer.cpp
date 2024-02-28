@@ -1,6 +1,6 @@
 #include "Mixer.h"
 
-void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2], DelayLine<float, MAXDELAY>* dl[2])
+void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
     bufferSize = SAMPLERATE * DURATION;
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
@@ -54,6 +54,15 @@ void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, Tra
     track4.track.initIO(t4);
 
     track1.pan.param.setIsSelected(true);
+}
+
+void Mixer::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
+                                    DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2])
+{
+    track1.track.initFX(seed, t1);
+    track2.track.initFX(seed, t2);
+    track3.track.initFX(seed, t3);
+    track4.track.initFX(seed, t4);
 }
 
 void Mixer::tick()

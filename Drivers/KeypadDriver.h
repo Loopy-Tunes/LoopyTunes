@@ -14,10 +14,10 @@ public:
 
     void init(dsy_gpio_pin t, dsy_gpio_pin b, dsy_gpio_pin l, dsy_gpio_pin r)
     {
-        top.init(t, 1000, [this]{ topPressed(); });
-        bottom.init(b, 1000, [this]{ bottomPressed(); });
-        right.init(t, 1000, [this]{ rightPressed(); });
-        left.init(t, 1000, [this]{ leftPressed(); });
+        top.init(t, 1000, [this] { topPressed(); });
+        bottom.init(b, 1000, [this] { bottomPressed(); });
+        right.init(l, 1000, [this] { rightPressed(); });
+        left.init(r, 1000, [this] { leftPressed(); });
     }
 
     void topPressed()
