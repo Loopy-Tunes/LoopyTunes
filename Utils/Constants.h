@@ -9,7 +9,7 @@
 #define L 0
 #define R 1
 
-#define ADCINPUTS 5
+#define ADCINPUTS 6
 #define SUBBLOCKSIZE 1024
 
 #define NO_OPT __attribute__((optimize(0)))
