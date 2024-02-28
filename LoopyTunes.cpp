@@ -15,7 +15,6 @@ TO DO:
 - Pitch shift
 - Block counter for handling parameter updates
 - Find reverb algortihm to port
-- Keypad driver
 - Encoder driver
 - Output Limiter
 - Play/record LEDs
@@ -67,8 +66,15 @@ namespace Buffers
 	float* t4mPtr[2] = {t4m[L], t4m[R]};
 
 	// Delay Lines
-	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine[2];
-	DelayLine<float, MAXDELAY>* delayLinePtr[2] = {&delayLine[L], &delayLine[R]};
+	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t1delayLine[2];
+	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delayLine[2];
+	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delayLine[2];
+	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delayLine[2];
+
+	DelayLine<float, MAXDELAY>* t1delayLinePtr[2] = {&t1delayLine[L], &t1delayLine[R]};
+	DelayLine<float, MAXDELAY>* t2delayLinePtr[2] = {&t2delayLine[L], &t2delayLine[R]};
+	DelayLine<float, MAXDELAY>* t3delayLinePtr[2] = {&t3delayLine[L], &t3delayLine[R]};
+	DelayLine<float, MAXDELAY>* t4delayLinePtr[2] = {&t4delayLine[L], &t4delayLine[R]};
 };
 
 void init()
@@ -82,8 +88,9 @@ void init()
 	//sample = 0;
 
 	// initialise DSP
-	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr, Buffers::delayLinePtr);
+	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
+	mixer.initFX(&hw, Buffers::t1delayLinePtr, Buffers::t2delayLinePtr, Buffers::t3delayLinePtr, Buffers::t4delayLinePtr);
 }
 
 void initTrackIO()
