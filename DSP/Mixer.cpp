@@ -52,21 +52,27 @@ void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, Tra
     track2.track.initIO(t2);
     track3.track.initIO(t3);
     track4.track.initIO(t4);
+
+    track1.pan.param.setIsSelected(true);
 }
 
 void Mixer::tick()
 {
     track1.track.tick();
     track1.gain.param.tick();
+    track1.pan.param.tick();
 
     track2.track.tick();
     track2.gain.param.tick();
+    track2.pan.param.tick();
 
     track3.track.tick();
     track3.gain.param.tick();
+    track3.pan.param.tick();
 
     track4.track.tick();
     track4.gain.param.tick();
+    track4.pan.param.tick();
 
     master.param.tick();
 }
@@ -120,7 +126,7 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
     track3.track.processOutputBlock(track3.buffer[L], track3.buffer[R], size);
     track4.track.processOutputBlock(track4.buffer[L], track4.buffer[R], size);
 
-    panChannels(size);
+    //panChannels(size);
     mixOutput(size);
 
     for(size_t i = 0 ; i < size ; i++)

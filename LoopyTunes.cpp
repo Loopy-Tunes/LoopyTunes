@@ -23,6 +23,7 @@ TO DO:
 - Play/record LEDs
 - LED - BinaryParameter coupling
 - Modularise track methods with ID enum
+- Add delay lines for each track and separate init method
 */
 
 // Hardware
@@ -40,25 +41,27 @@ static Mixer mixer;
 // UI - QSPI
 
 // testing
-CpuLoadMeter cpu;
+//CpuLoadMeter cpu;
 
 namespace Buffers
 {
+	// Sample Buffers
 	float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
 	float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
 	float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
 	float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
 
+	float* track1Ptr[2] = {track1[L], track1[R]};
+	float* track2Ptr[2] = {track2[L], track2[R]};
+	float* track3Ptr[2] = {track3[L], track3[R]};
+	float* track4Ptr[2] = {track4[L], track4[R]};
+
+	// Mix Buffers
 	float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
 	float DSY_SDRAM_BSS t1m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t2m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t3m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t4m[2][BLOCKLENGTH];
-
-	float* track1Ptr[2] = {track1[L], track1[R]};
-	float* track2Ptr[2] = {track2[L], track2[R]};
-	float* track3Ptr[2] = {track3[L], track3[R]};
-	float* track4Ptr[2] = {track4[L], track4[R]};
 
 	float* mixPtr[2] = {mix[L], mix[R]};
 	float* t1mPtr[2] = {t1m[L], t1m[R]};
@@ -66,6 +69,7 @@ namespace Buffers
 	float* t3mPtr[2] = {t3m[L], t3m[R]};
 	float* t4mPtr[2] = {t4m[L], t4m[R]};
 
+	// Delay Lines
 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS delayLine[2];
 	DelayLine<float, MAXDELAY>* delayLinePtr[2] = {&delayLine[L], &delayLine[R]};
 };
@@ -90,7 +94,7 @@ void initTrackIO()
 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
-	TrackIO t4IO {ChannelIDs::AMP4, seed::D25, seed::D26};
+	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
 
 	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
 }
@@ -114,6 +118,7 @@ int main(void)
 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
 	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
+	configs[ChannelIDs::ENCODER].InitSingle(seed::A10);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	

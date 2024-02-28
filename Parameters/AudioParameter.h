@@ -66,6 +66,7 @@ public:
         }
     }
 
+    inline void setIsSelected(bool s) { isSelected = s; }
     inline type getValue() { return curVal; }
     
 private:
