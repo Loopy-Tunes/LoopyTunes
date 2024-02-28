@@ -17,9 +17,7 @@ TO DO:
 - Find reverb algortihm to port
 - Keypad driver
 - Encoder driver
-- CPU load testing (after distortion or symposium)
 - Output Limiter
-- Panning
 - Play/record LEDs
 - LED - BinaryParameter coupling
 - Modularise track methods with ID enum
