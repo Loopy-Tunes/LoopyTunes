@@ -10,36 +10,6 @@
 #include "comb.hpp"
 #include "allpass.hpp"
 #include "tuning.h"
-#include "daisysp.h"
-
-namespace Buffers
-{
-	float DSY_SDRAM_BSS combL1[combtuningL1];
-	float DSY_SDRAM_BSS combR1[combtuningR1];
-	float DSY_SDRAM_BSS combL2[combtuningL2];
-	float DSY_SDRAM_BSS combR2[combtuningR2];
-	float DSY_SDRAM_BSS combL3[combtuningL3];
-	float DSY_SDRAM_BSS combR3[combtuningR3];
-	float DSY_SDRAM_BSS combL4[combtuningL4];
-	float DSY_SDRAM_BSS combR4[combtuningR4];
-	float DSY_SDRAM_BSS combL5[combtuningL5];
-	float DSY_SDRAM_BSS combR5[combtuningR5];
-	float DSY_SDRAM_BSS combL6[combtuningL6];
-	float DSY_SDRAM_BSS combR6[combtuningR6];
-	float DSY_SDRAM_BSS combL7[combtuningL7];
-	float DSY_SDRAM_BSS combR7[combtuningR7];
-	float DSY_SDRAM_BSS combL8[combtuningL8];
-	float DSY_SDRAM_BSS combR8[combtuningR8];
-
-	float DSY_SDRAM_BSS allPassL1[allpasstuningL1];
-	float DSY_SDRAM_BSS allPassR1[allpasstuningR1];
-	float DSY_SDRAM_BSS allPassL2[allpasstuningL2];
-	float DSY_SDRAM_BSS allPassR2[allpasstuningR2];
-	float DSY_SDRAM_BSS allPassL3[allpasstuningL3];
-	float DSY_SDRAM_BSS allPassR3[allpasstuningR3];
-	float DSY_SDRAM_BSS allPassL4[allpasstuningL4];
-	float DSY_SDRAM_BSS allPassR4[allpasstuningR4];
-};
 
 class revmodel
 {
@@ -110,6 +80,7 @@ private:
 	float	bufallpassR3[allpasstuningR3];
 	float	bufallpassL4[allpasstuningL4];
 	float	bufallpassR4[allpasstuningR4];
+	
 };
 
 #endif//_revmodel_

@@ -64,10 +64,10 @@ void revmodel::mute()
 		combL[i].mute();
 		combR[i].mute();
 	}
-	for (i=0;i<numallpasses;i++)
+	for (int j=0;j<numallpasses;j++)
 	{
-		allpassL[i].mute();
-		allpassR[i].mute();
+		allpassL[j].mute();
+		allpassR[j].mute();
 	}
 }
 
@@ -88,10 +88,10 @@ void revmodel::processreplace(float *inputL, float *inputR, float *outputL, floa
 		}
 
 		// Feed through allpasses in series
-		for(i=0; i<numallpasses; i++)
+		for(int j=0; j<numallpasses; j++)
 		{
-			outL = allpassL[i].process(outL);
-			outR = allpassR[i].process(outR);
+			outL = allpassL[j].process(outL);
+			outR = allpassR[j].process(outR);
 		}
 
 		// Calculate output REPLACING anything already there
@@ -123,10 +123,10 @@ void revmodel::processmix(float *inputL, float *inputR, float *outputL, float *o
 		}
 
 		// Feed through allpasses in series
-		for(i=0; i<numallpasses; i++)
+		for(int j=0; j<numallpasses; j++)
 		{
-			outL = allpassL[i].process(outL);
-			outR = allpassR[i].process(outR);
+			outL = allpassL[j].process(outL);
+			outR = allpassR[j].process(outR);
 		}
 
 		// Calculate output MIXING with anything already there

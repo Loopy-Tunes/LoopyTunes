@@ -234,7 +234,13 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  DSP/FX/../../Parameters/../Utils/Helpers.h \
  DSP/FX/../../Parameters/../Utils/Constants.h \
  DSP/FX/../../Parameters/BinaryParameter.h DSP/FX/Delay.h \
- DSP/../Parameters/BinaryParameter.h Architecture/ConnectionMatrix.h
+ DSP/FX/Reverb/Reverb.h \
+ DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
+ DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
+ DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
+ DSP/FX/Reverb/denormals.h DSP/FX/Reverb/allpass.hpp \
+ DSP/FX/Reverb/tuning.h DSP/../Parameters/BinaryParameter.h \
+ Architecture/ConnectionMatrix.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -490,5 +496,13 @@ DSP/FX/../../Parameters/../Utils/Helpers.h:
 DSP/FX/../../Parameters/../Utils/Constants.h:
 DSP/FX/../../Parameters/BinaryParameter.h:
 DSP/FX/Delay.h:
+DSP/FX/Reverb/Reverb.h:
+DSP/FX/Reverb/../../../Parameters/AudioParameter.h:
+DSP/FX/Reverb/../../../Parameters/BinaryParameter.h:
+DSP/FX/Reverb/revmodel.hpp:
+DSP/FX/Reverb/comb.hpp:
+DSP/FX/Reverb/denormals.h:
+DSP/FX/Reverb/allpass.hpp:
+DSP/FX/Reverb/tuning.h:
 DSP/../Parameters/BinaryParameter.h:
 Architecture/ConnectionMatrix.h:
