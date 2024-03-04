@@ -1,0 +1,299 @@
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"comb.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN4combC2Ev,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_ZN4combC2Ev
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN4combC2Ev:
+  27              	.LVL0:
+  28              	.LFB546:
+  29              		.file 1 "DSP/FX/Reverb/comb.cpp"
+   1:DSP/FX/Reverb/comb.cpp **** // Comb filter implementation
+   2:DSP/FX/Reverb/comb.cpp **** //
+   3:DSP/FX/Reverb/comb.cpp **** // Written by Jezar at Dreampoint, June 2000
+   4:DSP/FX/Reverb/comb.cpp **** // http://www.dreampoint.co.uk
+   5:DSP/FX/Reverb/comb.cpp **** // This code is public domain
+   6:DSP/FX/Reverb/comb.cpp **** 
+   7:DSP/FX/Reverb/comb.cpp **** #include "comb.hpp"
+   8:DSP/FX/Reverb/comb.cpp **** 
+   9:DSP/FX/Reverb/comb.cpp **** comb::comb()
+  30              		.loc 1 9 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB2:
+  10:DSP/FX/Reverb/comb.cpp **** {
+  11:DSP/FX/Reverb/comb.cpp **** 	filterstore = 0;
+  36              		.loc 1 11 2 view .LVU1
+  37              		.loc 1 11 14 is_stmt 0 view .LVU2
+  38 0000 0021     		movs	r1, #0
+  12:DSP/FX/Reverb/comb.cpp **** 	bufidx = 0;
+  39              		.loc 1 12 9 view .LVU3
+  40 0002 0022     		movs	r2, #0
+  11:DSP/FX/Reverb/comb.cpp **** 	bufidx = 0;
+  41              		.loc 1 11 14 view .LVU4
+  42 0004 4160     		str	r1, [r0, #4]	@ float
+  43              		.loc 1 12 2 is_stmt 1 view .LVU5
+  44              		.loc 1 12 9 is_stmt 0 view .LVU6
+  45 0006 8261     		str	r2, [r0, #24]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 2
+
+
+  46              	.LBE2:
+  13:DSP/FX/Reverb/comb.cpp **** }
+  47              		.loc 1 13 1 view .LVU7
+  48 0008 7047     		bx	lr
+  49              		.cfi_endproc
+  50              	.LFE546:
+  52              		.global	_ZN4combC1Ev
+  53              		.thumb_set _ZN4combC1Ev,_ZN4combC2Ev
+  54 000a 00BF     		.section	.text._ZN4comb9setbufferEPfi,"ax",%progbits
+  55              		.align	1
+  56              		.p2align 2,,3
+  57              		.global	_ZN4comb9setbufferEPfi
+  58              		.syntax unified
+  59              		.thumb
+  60              		.thumb_func
+  62              	_ZN4comb9setbufferEPfi:
+  63              	.LVL1:
+  64              	.LFB548:
+  14:DSP/FX/Reverb/comb.cpp **** 
+  15:DSP/FX/Reverb/comb.cpp **** void comb::setbuffer(float *buf, int size) 
+  16:DSP/FX/Reverb/comb.cpp **** {
+  65              		.loc 1 16 1 is_stmt 1 view -0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  17:DSP/FX/Reverb/comb.cpp **** 	buffer = buf; 
+  70              		.loc 1 17 2 view .LVU9
+  18:DSP/FX/Reverb/comb.cpp **** 	bufsize = size;
+  71              		.loc 1 18 10 is_stmt 0 view .LVU10
+  72 0000 C0E90412 		strd	r1, r2, [r0, #16]
+  19:DSP/FX/Reverb/comb.cpp **** }
+  73              		.loc 1 19 1 view .LVU11
+  74 0004 7047     		bx	lr
+  75              		.cfi_endproc
+  76              	.LFE548:
+  78 0006 00BF     		.section	.text._ZN4comb4muteEv,"ax",%progbits
+  79              		.align	1
+  80              		.p2align 2,,3
+  81              		.global	_ZN4comb4muteEv
+  82              		.syntax unified
+  83              		.thumb
+  84              		.thumb_func
+  86              	_ZN4comb4muteEv:
+  87              	.LVL2:
+  88              	.LFB549:
+  20:DSP/FX/Reverb/comb.cpp **** 
+  21:DSP/FX/Reverb/comb.cpp **** void comb::mute()
+  22:DSP/FX/Reverb/comb.cpp **** {
+  89              		.loc 1 22 1 is_stmt 1 view -0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              		@ link register save eliminated.
+  23:DSP/FX/Reverb/comb.cpp **** 	for (int i=0; i<bufsize; i++)
+  94              		.loc 1 23 2 view .LVU13
+  95              	.LBB3:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 3
+
+
+  96              		.loc 1 23 17 view .LVU14
+  97              		.loc 1 23 18 is_stmt 0 view .LVU15
+  98 0000 4269     		ldr	r2, [r0, #20]
+  99              		.loc 1 23 17 view .LVU16
+ 100 0002 002A     		cmp	r2, #0
+ 101 0004 04DD     		ble	.L4
+  24:DSP/FX/Reverb/comb.cpp **** 		buffer[i]=0;
+ 102              		.loc 1 24 12 view .LVU17
+ 103 0006 9200     		lsls	r2, r2, #2
+ 104 0008 0021     		movs	r1, #0
+ 105 000a 0069     		ldr	r0, [r0, #16]
+ 106              	.LVL3:
+ 107              		.loc 1 24 12 view .LVU18
+ 108 000c FFF7FEBF 		b	memset
+ 109              	.LVL4:
+ 110              	.L4:
+ 111              		.loc 1 24 12 view .LVU19
+ 112              	.LBE3:
+  25:DSP/FX/Reverb/comb.cpp **** }
+ 113              		.loc 1 25 1 view .LVU20
+ 114 0010 7047     		bx	lr
+ 115              		.cfi_endproc
+ 116              	.LFE549:
+ 118 0012 00BF     		.section	.text._ZN4comb7setdampEf,"ax",%progbits
+ 119              		.align	1
+ 120              		.p2align 2,,3
+ 121              		.global	_ZN4comb7setdampEf
+ 122              		.syntax unified
+ 123              		.thumb
+ 124              		.thumb_func
+ 126              	_ZN4comb7setdampEf:
+ 127              	.LVL5:
+ 128              	.LFB550:
+  26:DSP/FX/Reverb/comb.cpp **** 
+  27:DSP/FX/Reverb/comb.cpp **** void comb::setdamp(float val) 
+  28:DSP/FX/Reverb/comb.cpp **** {
+ 129              		.loc 1 28 1 is_stmt 1 view -0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+  29:DSP/FX/Reverb/comb.cpp **** 	damp1 = val; 
+ 134              		.loc 1 29 2 view .LVU22
+  30:DSP/FX/Reverb/comb.cpp **** 	damp2 = 1-val;
+ 135              		.loc 1 30 11 is_stmt 0 view .LVU23
+ 136 0000 F7EE007A 		vmov.f32	s15, #1.0e+0
+  29:DSP/FX/Reverb/comb.cpp **** 	damp1 = val; 
+ 137              		.loc 1 29 8 view .LVU24
+ 138 0004 80ED020A 		vstr.32	s0, [r0, #8]
+ 139              		.loc 1 30 2 is_stmt 1 view .LVU25
+ 140              		.loc 1 30 11 is_stmt 0 view .LVU26
+ 141 0008 77EEC07A 		vsub.f32	s15, s15, s0
+ 142              		.loc 1 30 8 view .LVU27
+ 143 000c C0ED037A 		vstr.32	s15, [r0, #12]
+  31:DSP/FX/Reverb/comb.cpp **** }
+ 144              		.loc 1 31 1 view .LVU28
+ 145 0010 7047     		bx	lr
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 4
+
+
+ 146              		.cfi_endproc
+ 147              	.LFE550:
+ 149 0012 00BF     		.section	.text._ZN4comb7getdampEv,"ax",%progbits
+ 150              		.align	1
+ 151              		.p2align 2,,3
+ 152              		.global	_ZN4comb7getdampEv
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 157              	_ZN4comb7getdampEv:
+ 158              	.LVL6:
+ 159              	.LFB551:
+  32:DSP/FX/Reverb/comb.cpp **** 
+  33:DSP/FX/Reverb/comb.cpp **** float comb::getdamp() 
+  34:DSP/FX/Reverb/comb.cpp **** {
+ 160              		.loc 1 34 1 is_stmt 1 view -0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+  35:DSP/FX/Reverb/comb.cpp **** 	return damp1;
+ 165              		.loc 1 35 2 view .LVU30
+  36:DSP/FX/Reverb/comb.cpp **** }
+ 166              		.loc 1 36 1 is_stmt 0 view .LVU31
+ 167 0000 90ED020A 		vldr.32	s0, [r0, #8]
+ 168 0004 7047     		bx	lr
+ 169              		.cfi_endproc
+ 170              	.LFE551:
+ 172 0006 00BF     		.section	.text._ZN4comb11setfeedbackEf,"ax",%progbits
+ 173              		.align	1
+ 174              		.p2align 2,,3
+ 175              		.global	_ZN4comb11setfeedbackEf
+ 176              		.syntax unified
+ 177              		.thumb
+ 178              		.thumb_func
+ 180              	_ZN4comb11setfeedbackEf:
+ 181              	.LVL7:
+ 182              	.LFB552:
+  37:DSP/FX/Reverb/comb.cpp **** 
+  38:DSP/FX/Reverb/comb.cpp **** void comb::setfeedback(float val) 
+  39:DSP/FX/Reverb/comb.cpp **** {
+ 183              		.loc 1 39 1 is_stmt 1 view -0
+ 184              		.cfi_startproc
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187              		@ link register save eliminated.
+  40:DSP/FX/Reverb/comb.cpp **** 	feedback = val;
+ 188              		.loc 1 40 2 view .LVU33
+ 189              		.loc 1 40 11 is_stmt 0 view .LVU34
+ 190 0000 80ED000A 		vstr.32	s0, [r0]
+  41:DSP/FX/Reverb/comb.cpp **** }
+ 191              		.loc 1 41 1 view .LVU35
+ 192 0004 7047     		bx	lr
+ 193              		.cfi_endproc
+ 194              	.LFE552:
+ 196 0006 00BF     		.section	.text._ZN4comb11getfeedbackEv,"ax",%progbits
+ 197              		.align	1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 5
+
+
+ 198              		.p2align 2,,3
+ 199              		.global	_ZN4comb11getfeedbackEv
+ 200              		.syntax unified
+ 201              		.thumb
+ 202              		.thumb_func
+ 204              	_ZN4comb11getfeedbackEv:
+ 205              	.LVL8:
+ 206              	.LFB553:
+  42:DSP/FX/Reverb/comb.cpp **** 
+  43:DSP/FX/Reverb/comb.cpp **** float comb::getfeedback() 
+  44:DSP/FX/Reverb/comb.cpp **** {
+ 207              		.loc 1 44 1 is_stmt 1 view -0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 0, uses_anonymous_args = 0
+ 211              		@ link register save eliminated.
+  45:DSP/FX/Reverb/comb.cpp **** 	return feedback;
+ 212              		.loc 1 45 2 view .LVU37
+  46:DSP/FX/Reverb/comb.cpp **** }
+ 213              		.loc 1 46 1 is_stmt 0 view .LVU38
+ 214 0000 90ED000A 		vldr.32	s0, [r0]
+ 215 0004 7047     		bx	lr
+ 216              		.cfi_endproc
+ 217              	.LFE553:
+ 219 0006 00BF     		.text
+ 220              	.Letext0:
+ 221              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 222              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 223              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7
+ 224              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 225              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 226              		.file 7 "DSP/FX/Reverb/comb.hpp"
+ 227              		.file 8 "<built-in>"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 comb.cpp
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:19     .text._ZN4combC2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:26     .text._ZN4combC2Ev:0000000000000000 _ZN4combC2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:26     .text._ZN4combC2Ev:0000000000000000 _ZN4combC1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:55     .text._ZN4comb9setbufferEPfi:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:62     .text._ZN4comb9setbufferEPfi:0000000000000000 _ZN4comb9setbufferEPfi
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:79     .text._ZN4comb4muteEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:86     .text._ZN4comb4muteEv:0000000000000000 _ZN4comb4muteEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:119    .text._ZN4comb7setdampEf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:126    .text._ZN4comb7setdampEf:0000000000000000 _ZN4comb7setdampEf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:150    .text._ZN4comb7getdampEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:157    .text._ZN4comb7getdampEv:0000000000000000 _ZN4comb7getdampEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:173    .text._ZN4comb11setfeedbackEf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:180    .text._ZN4comb11setfeedbackEf:0000000000000000 _ZN4comb11setfeedbackEf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:197    .text._ZN4comb11getfeedbackEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccUvCAKp.s:204    .text._ZN4comb11getfeedbackEv:0000000000000000 _ZN4comb11getfeedbackEv
+
+UNDEFINED SYMBOLS
+memset

@@ -2,7 +2,7 @@
 TARGET = LoopyTunes
 
 # Sources
-CPP_SOURCES = LoopyTunes.cpp DSP/Mixer.cpp Track.cpp DSP/FX/Delay.cpp Waveshaper.cpp Reverb/Reverb.cpp
+CPP_SOURCES = LoopyTunes.cpp DSP/Mixer.cpp Track.cpp DSP/FX/Delay.cpp Waveshaper.cpp  DSP/FX/Reverb/Reverb.cpp revmodel.cpp comb.cpp allpass.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../../../libDaisy/

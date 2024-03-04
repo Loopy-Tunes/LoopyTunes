@@ -1,0 +1,215 @@
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"Reverb.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN6Reverb4initEPN5daisy9DaisySeedE,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_ZN6Reverb4initEPN5daisy9DaisySeedE
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN6Reverb4initEPN5daisy9DaisySeedE:
+  27              	.LVL0:
+  28              	.LFB5646:
+  29              		.file 1 "DSP/FX/Reverb/Reverb.cpp"
+   1:DSP/FX/Reverb/Reverb.cpp **** #include "Reverb.h"
+   2:DSP/FX/Reverb/Reverb.cpp **** 
+   3:DSP/FX/Reverb/Reverb.cpp **** void Reverb::init(DaisySeed* seed)
+   4:DSP/FX/Reverb/Reverb.cpp **** {
+  30              		.loc 1 4 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   5:DSP/FX/Reverb/Reverb.cpp ****     
+   6:DSP/FX/Reverb/Reverb.cpp **** }
+  35              		.loc 1 6 1 is_stmt 0 view .LVU1
+  36 0000 7047     		bx	lr
+  37              		.cfi_endproc
+  38              	.LFE5646:
+  40 0002 00BF     		.section	.text._ZN6Reverb7processEv,"ax",%progbits
+  41              		.align	1
+  42              		.p2align 2,,3
+  43              		.global	_ZN6Reverb7processEv
+  44              		.syntax unified
+  45              		.thumb
+  46              		.thumb_func
+  48              	_ZN6Reverb7processEv:
+  49              	.LVL1:
+  50              	.LFB5647:
+   7:DSP/FX/Reverb/Reverb.cpp **** 
+   8:DSP/FX/Reverb/Reverb.cpp **** void Reverb::process()
+   9:DSP/FX/Reverb/Reverb.cpp **** {
+  51              		.loc 1 9 1 is_stmt 1 view -0
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s 			page 2
+
+
+  52              		.cfi_startproc
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55              		@ link register save eliminated.
+  10:DSP/FX/Reverb/Reverb.cpp **** 
+  11:DSP/FX/Reverb/Reverb.cpp **** }
+  56              		.loc 1 11 1 is_stmt 0 view .LVU3
+  57 0000 7047     		bx	lr
+  58              		.cfi_endproc
+  59              	.LFE5647:
+  61 0002 00BF     		.section	.text._ZN6Reverb16processReplacingEv,"ax",%progbits
+  62              		.align	1
+  63              		.p2align 2,,3
+  64              		.global	_ZN6Reverb16processReplacingEv
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  69              	_ZN6Reverb16processReplacingEv:
+  70              	.LFB6233:
+  71              		.cfi_startproc
+  72              		@ args = 0, pretend = 0, frame = 0
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74              		@ link register save eliminated.
+  75 0000 7047     		bx	lr
+  76              		.cfi_endproc
+  77              	.LFE6233:
+  79 0002 00BF     		.section	.text._ZN6Reverb7suspendEv,"ax",%progbits
+  80              		.align	1
+  81              		.p2align 2,,3
+  82              		.global	_ZN6Reverb7suspendEv
+  83              		.syntax unified
+  84              		.thumb
+  85              		.thumb_func
+  87              	_ZN6Reverb7suspendEv:
+  88              	.LFB6235:
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93 0000 7047     		bx	lr
+  94              		.cfi_endproc
+  95              	.LFE6235:
+  97 0002 00BF     		.section	.text._ZN6Reverb6resumeEv,"ax",%progbits
+  98              		.align	1
+  99              		.p2align 2,,3
+ 100              		.global	_ZN6Reverb6resumeEv
+ 101              		.syntax unified
+ 102              		.thumb
+ 103              		.thumb_func
+ 105              	_ZN6Reverb6resumeEv:
+ 106              	.LFB6237:
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 0
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110              		@ link register save eliminated.
+ 111 0000 7047     		bx	lr
+ 112              		.cfi_endproc
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s 			page 3
+
+
+ 113              	.LFE6237:
+ 115 0002 00BF     		.text
+ 116              	.Letext0:
+ 117              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 118              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 119              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 120              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 121              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 122              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 123              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 124              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 125              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 126              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 127              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 128              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 129              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 130              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 131              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 132              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 133              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 134              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 135              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 136              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 137              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 138              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
+ 139              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
+ 140              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h"
+ 141              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
+ 142              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/shared_ptr_base.
+ 143              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
+ 144              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
+ 145              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 146              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/concurrence.h"
+ 147              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 148              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 149              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 150              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 151              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 152              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 153              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 154              		.file 39 "../../../libDaisy//src/daisy_core.h"
+ 155              		.file 40 "../../../libDaisy//src/per/tim.h"
+ 156              		.file 41 "../../../libDaisy//src/sys/system.h"
+ 157              		.file 42 "../../../libDaisy//src/per/qspi.h"
+ 158              		.file 43 "../../../libDaisy//src/per/dac.h"
+ 159              		.file 44 "../../../libDaisy//src/per/sai.h"
+ 160              		.file 45 "../../../libDaisy//src/hid/audio.h"
+ 161              		.file 46 "../../../libDaisy//src/per/adc.h"
+ 162              		.file 47 "../../../libDaisy//src/hid/usb.h"
+ 163              		.file 48 "../../../libDaisy//src/hid/switch.h"
+ 164              		.file 49 "../../../libDaisy//src/util/wav_format.h"
+ 165              		.file 50 "../../../libDaisy//src/dev/max11300.h"
+ 166              		.file 51 "../../../libDaisy//src/daisy_seed.h"
+ 167              		.file 52 "../../../libDaisy//src/per/gpio.h"
+ 168              		.file 53 "../../../libDaisy//src/dev/sdram.h"
+ 169              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 170              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s 			page 4
+
+
+ 171              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 172              		.file 57 "../../../DaisySP//Source/Control/adenv.h"
+ 173              		.file 58 "../../../DaisySP//Source/Utility/dsp.h"
+ 174              		.file 59 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 175              		.file 60 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 176              		.file 61 "DSP/FX/Reverb/../../../Parameters/../Utils/Helpers.h"
+ 177              		.file 62 "DSP/FX/Reverb/../../../Parameters/AudioParameter.h"
+ 178              		.file 63 "DSP/FX/Reverb/../../../Parameters/BinaryParameter.h"
+ 179              		.file 64 "DSP/FX/Reverb/comb.hpp"
+ 180              		.file 65 "DSP/FX/Reverb/allpass.hpp"
+ 181              		.file 66 "../../../libDaisy//src/dev/sr_595.h"
+ 182              		.file 67 "DSP/FX/Reverb/tuning.h"
+ 183              		.file 68 "DSP/FX/Reverb/revmodel.hpp"
+ 184              		.file 69 "DSP/FX/Reverb/Reverb.h"
+ 185              		.file 70 "<built-in>"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Reverb.cpp
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:19     .text._ZN6Reverb4initEPN5daisy9DaisySeedE:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:26     .text._ZN6Reverb4initEPN5daisy9DaisySeedE:0000000000000000 _ZN6Reverb4initEPN5daisy9DaisySeedE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:41     .text._ZN6Reverb7processEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:48     .text._ZN6Reverb7processEv:0000000000000000 _ZN6Reverb7processEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:62     .text._ZN6Reverb16processReplacingEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:69     .text._ZN6Reverb16processReplacingEv:0000000000000000 _ZN6Reverb16processReplacingEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:80     .text._ZN6Reverb7suspendEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:87     .text._ZN6Reverb7suspendEv:0000000000000000 _ZN6Reverb7suspendEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:98     .text._ZN6Reverb6resumeEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cch6PV38.s:105    .text._ZN6Reverb6resumeEv:0000000000000000 _ZN6Reverb6resumeEv
+
+NO UNDEFINED SYMBOLS

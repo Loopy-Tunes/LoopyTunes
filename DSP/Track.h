@@ -3,6 +3,7 @@
 
 #include "FX/Waveshaper.h"
 #include "FX/Delay.h"
+#include "FX/Reverb/Reverb.h"
 #include "../Parameters/BinaryParameter.h"
 #include <utility>
 
@@ -48,6 +49,7 @@ private:
 
     Waveshaper shaper;
     Delay delay;
+    Reverb reverb;
 };
 
 #endif
