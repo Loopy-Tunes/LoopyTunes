@@ -20,6 +20,7 @@ TO DO:
 - Modularise track methods with ID enum
 - Reverb
 - Move dekay buffers to delay level
+- Remove prepare methods
 */
 
 // Hardware

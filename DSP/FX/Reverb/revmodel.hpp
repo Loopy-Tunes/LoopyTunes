@@ -80,7 +80,6 @@ private:
 	float	bufallpassR3[allpasstuningR3];
 	float	bufallpassL4[allpasstuningL4];
 	float	bufallpassR4[allpasstuningR4];
-	
 };
 
 #endif//_revmodel_

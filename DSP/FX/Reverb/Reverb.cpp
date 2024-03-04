@@ -10,22 +10,34 @@ void Reverb::init(DaisySeed* seed)
     width.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float w) { model.setwidth(w); });
 }
 
-void Reverb::process()
+void Reverb::tick()
 {
-
+    mode.tick();
+    size.tick();
+    damp.tick();
+    wet.tick();
+    dry.tick();
+    width.tick();
 }
 
-void Reverb::processReplacing()
+void Reverb::processBlock(float* input[2], long size)
 {
+    // need to add functionality so that it takes data from the read pointer
 
+    model.processmix(input[L], input[R], input[L], input[R], size, 0);
+}
+
+void Reverb::processBlockReplacing(float* input[2], long size)
+{
+    model.processreplace(input[L], input[R], input[L], input[R], size, 0);
 }
 
 void Reverb::suspend()
 {
-
+    model.mute();
 }
 
 void Reverb::resume()
 {
-
+    model.mute();
 }

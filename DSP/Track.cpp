@@ -36,6 +36,7 @@ void Track::tick()
     play.tick();
     shaper.tick();
     delay.tick();
+    reverb.tick();
 }
 
 void Track::clearBuffer()
@@ -135,6 +136,7 @@ void Track::processOutputBlock(float* left, float* right, size_t size)
 
     // shaper.processBlock(buffer, size, ph.readPos);
     // delay.processBlock(buffer, size, ph.readPos);
+    reverb.processBlock(buffer, size);
 
     for(size_t i = 0 ; i < size ; i++)
     {
