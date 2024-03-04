@@ -3,6 +3,7 @@
 
 #include "../../../Parameters/AudioParameter.h"
 #include "../../../Parameters/BinaryParameter.h"
+#include "revmodel.hpp"
 
 /*********************************************************************//**
  *  Class name: Reverb
@@ -25,7 +26,7 @@ public:
 
 private:
 
-    // model
+    revmodel model;
 
     BinaryParameterWrapper bypass;
     AudioParameterWrapper<float> mode;
