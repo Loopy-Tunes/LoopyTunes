@@ -7,7 +7,7 @@
 
 /*********************************************************************//**
  *  Class name: Reverb
- *  Function: Processes reverb effect for block of input sanples
+ *  Function: Processes reverb effect for block of input samples
  * 
  *  Port of the open-source Freeverb algorithm by Jezar (Dreampoint, 2000)
  *  https://github.com/sinshu/freeverb
