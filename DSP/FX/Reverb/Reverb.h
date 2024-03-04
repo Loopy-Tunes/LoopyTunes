@@ -19,8 +19,10 @@ class Reverb
 public:
 
     void init(DaisySeed* seed);
-    void process();
-    void processReplacing();
+    void tick();
+
+    void processBlock(float* input[2], long size);
+    void processBlockReplacing(float* input[2], long size);
     void suspend();
     void resume();
 
