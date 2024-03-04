@@ -6,7 +6,7 @@
 
 /************************************************************//**
  *  Class name: Delay
- *  Function: Processes delay effect for block of input sanples
+ *  Function: Processes delay effect for block of input samples
  ***************************************************************/
 using namespace daisysp;
 
