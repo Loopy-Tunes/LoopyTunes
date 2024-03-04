@@ -29,8 +29,8 @@ private:
     revmodel model;
 
     BinaryParameterWrapper bypass;
-    AudioParameterWrapper<float> mode;
-    AudioParameterWrapper<float> size;
+    AudioParameter<float> mode;
+    AudioParameter<float> size;
     AudioParameter<float> damp;
     AudioParameter<float> wet;
     AudioParameter<float> dry;
