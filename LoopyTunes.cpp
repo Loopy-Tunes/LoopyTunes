@@ -21,6 +21,7 @@ TO DO:
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
 - Figure out how to use bootloader
+- Rework bypass controls
 */
 
 // Hardware
