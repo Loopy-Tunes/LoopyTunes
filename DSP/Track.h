@@ -1,6 +1,7 @@
 #ifndef TRACK_H
 #define TRACK_H
 
+#include "FX/PitchShift.h"
 #include "FX/Waveshaper.h"
 #include "FX/Delay.h"
 #include "FX/Reverb/Reverb.h"
@@ -46,6 +47,7 @@ private:
     float* buffer[2];
     size_t bufferSize;
 
+    PitchShift pitchShift;
     Waveshaper shaper;
     Delay delay;
     Reverb reverb;
