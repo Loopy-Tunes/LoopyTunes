@@ -1,5 +1,4 @@
 #include "DSP/Mixer.h"
-#include "Architecture/ConnectionMatrix.h"
 
 using namespace daisy;
 using namespace daisysp;
@@ -10,7 +9,6 @@ TO DO:
 - Parameter update queue (is this needed?)
 - Parameter denormalisation (for display)
 - Decibel conversion
-- Output EQ profiles for different output sources (?)
 - LPF/HPF filters
 - Pitch shift
 - Block counter for handling parameter updates
@@ -19,9 +17,10 @@ TO DO:
 - Play/record LEDs
 - Modularise track methods with ID enum
 - Reverb
-- Remove prepare methods
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???)
+- Sort out warning in denormals
+- Figure out how to use bootloader
 */
 
 // Hardware
@@ -30,11 +29,9 @@ DaisySeed hw;
 // Global
 //int sample;
 
-// System - Flash
-ConnectionMatrix connectionMatrix;
-
-// DSP - SDRAM
+// DSP
 static Mixer mixer;
+DcBlock dcBlock;
 
 // UI - QSPI
 
@@ -93,6 +90,8 @@ void init()
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&hw, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
+
+	dcBlock.Init(hw.AudioSampleRate());
 }
 
 void initTrackIO()
@@ -107,6 +106,12 @@ void initTrackIO()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	for(size_t i = 0 ; i < size ; i++)
+	{
+		dcBlock.Process(in[L][i]);
+		dcBlock.Process(in[R][i]);
+	}
+
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
