@@ -28,11 +28,11 @@ public:
     
     void prepare();
     void calculateAutoGain();
-    void processBlock(float* buffer[2]);
+    void processBlock(float* buffer[2], size_t size);
 
-    void processSine(float* buffer[2]);
-    void processTanh(float* buffer[2]);
-    void processSignum(float* buffer[2]);
+    void processSine(float* buffer[2], size_t size);
+    void processTanh(float* buffer[2], size_t size);
+    void processSignum(float* buffer[2], size_t size);
     // wave shape 4 process 
     // wave shape 5 process 
 

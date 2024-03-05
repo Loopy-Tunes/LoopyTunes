@@ -36,12 +36,12 @@ void Delay::prepare()
 
 }
 
-void Delay::processBlock(float* buffer[2])
+void Delay::processBlock(float* buffer[2], size_t size)
 {
     if(bypass.value)
         return;
 
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {

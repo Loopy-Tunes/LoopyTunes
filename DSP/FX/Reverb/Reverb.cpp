@@ -20,20 +20,13 @@ void Reverb::tick()
     width.tick();
 }
 
-void Reverb::processBlock(float* input[2], float* output[2], long size, size_t readPos)
+void Reverb::processBlock(float* input[2], long size)
 {
     // need to add functionality so that it takes data from the read pointer
     if(bypass.value)
         return;
     
-    // are the temp buffers really needed?
-    // isn't the sample coming in pointing to that at ph.readPos anyway?
-
-    // read in track buffer from ph.readPos to input temp buffer
-
-    model.processmix(input[L], input[R], output[L], output[R], size, 0);
-
-    // read output into track buffer
+    model.processmix(input[L], input[R], input[L], input[R], size, 0);
 }
 
 void Reverb::processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos)
