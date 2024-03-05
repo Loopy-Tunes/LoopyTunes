@@ -22,6 +22,7 @@ TO DO:
 - Sort out warning in denormals
 - Figure out how to use bootloader
 - Rework bypass controls
+- Initial values system
 */
 
 // Hardware

@@ -17,7 +17,7 @@ public:
     void init(DaisySeed* seed);
     void tick();
 
-    void process(float* input[2]);
+    void process(float* input[2], size_t size);
 
     void setBypass() { bypass.value = !bypass.value; }
 
@@ -27,10 +27,10 @@ private:
     daisysp::PitchShifter shifter;
 
     BinaryParameterWrapper bypass;
+    AudioParameterWrapper<float> amount;
     AudioParameter<int> semitones;
     AudioParameter<u_int32_t> timbre;
     AudioParameter<float> rand;
-
 };
 
 #endif

@@ -2,6 +2,12 @@
 
 void PitchShift::init(DaisySeed* seed)
 {
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    {
+        buffer[L][i] = 0.0f;
+        buffer[R][i] = 0.0f;
+    }
+    
     shifter.init(seed->AudioSampleRate);
 
     //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
@@ -18,10 +24,20 @@ void PitchShift::tick()
     rand.tick();
 }
 
-void PitchShift::process(float* input[2])
+void PitchShift::process(float* input[2], size_t size)
 {
     if(bypass.value)
         return;
 
-    
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        buffer[L][i] = input[L][i];
+        buffer[R][i] = input[R][i];
+
+        shifter.Process(buffer[L][i]);
+        shifter.Process(buffer[R][i]);
+
+        input[L][i] = (input[L][i] * (1.f - amount.value)) + (buffer[L][i] * amount.value);
+        input[R][i] = (input[R][i] * (1.f - amount.value)) + (buffer[R][i] * amount.value);
+    }
 }
