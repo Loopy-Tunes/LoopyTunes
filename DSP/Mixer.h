@@ -19,7 +19,6 @@ public:
                                  DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2]);
     void tick();
 
-    void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
     void panChannels(size_t size);
     void mixOutput(size_t size);

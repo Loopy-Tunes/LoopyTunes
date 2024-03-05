@@ -110,11 +110,6 @@ void Track::incrementReadPos()
     }
 }
 
-void Track::prepare()
-{
-
-}
-
 void Track::processInputBlock(const float* left, const float* right, size_t size)
 {
     if(state != RECORDING)

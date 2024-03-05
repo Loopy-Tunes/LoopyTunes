@@ -22,7 +22,6 @@ public:
     inline void setBounce(float b) { bounce.value = b; }
     inline void setAmount(float a) { amount.value = a; }
 
-    void prepare();
     void processBlock(float* buffer[2], size_t size); 
 
 private:

@@ -30,12 +30,6 @@ void Delay::tick()
     amount.param.tick();
 }
 
-void Delay::prepare()
-{
-    
-
-}
-
 void Delay::processBlock(float* buffer[2], size_t size)
 {
     if(bypass.value)

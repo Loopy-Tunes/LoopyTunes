@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   23              		.thumb_func
   25              	_ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data:
   26              	.LVL0:
-  27              	.LFB6127:
+  27              	.LFB6126:
   28              		.file 1 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h"
    1:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // Implementation of std::function -*- C++ -*-
    2:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   28:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****  */
   29:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
   30:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** #ifndef _GLIBCXX_STD_FUNCTION_H
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 2
 
 
   31:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** #define _GLIBCXX_STD_FUNCTION_H 1
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   85:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   union [[gnu::may_alias]] _Any_data
   86:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   {
   87:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     void*       _M_access()       { return &_M_pod_data[0]; }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 3
 
 
   88:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     const void* _M_access() const { return &_M_pod_data[0]; }
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  142:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    }
  143:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  else // have stored a pointer
  144:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    return __source._M_access<_Functor*>();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 4
 
 
  145:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	}
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  199:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    case __destroy_functor:
  200:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	      _M_destroy(__dest, _Local_storage());
  201:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	      break;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 5
 
 
  202:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    }
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  256:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  257:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   template<typename _Signature, typename _Functor>
  258:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     class _Function_handler;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 6
 
 
  259:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   14:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** // GNU General Public License for more details.
   15:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** 
   16:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** // Under Section 7 of GPL version 3, you are granted additional
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 7
 
 
   17:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** // permissions described in the GCC Runtime Library Exception, version
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   71:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** 		  _Args&&... __args)
   72:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****     {
   73:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****       return ((*std::forward<_Tp>(__t)).*__f)(std::forward<_Args>(__args)...);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 8
 
 
   74:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****     }
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  128:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h **** 			    _Res>
  129:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****       >::value,
  130:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****       _Res
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 9
 
 
  131:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/invoke.h ****     >;
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   49              		.loc 3 24 35 is_stmt 0 view .LVU6
   50 0000 0368     		ldr	r3, [r0]
   51              	.LVL1:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 10
 
 
   52              	.LBB411:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   58 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
   59              		.loc 3 72 5 view .LVU10
   60 0004 012A     		cmp	r2, #1
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 11
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 11
 
 
   61 0006 08D0     		beq	.L2
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   79              		.loc 4 23 18 is_stmt 0 view .LVU18
   80 0012 0022     		movs	r2, #0
   24:DSP/FX/../../Parameters/../Utils/Helpers.h ****         readPos = 0; 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 12
 
 
   81              		.loc 4 24 17 view .LVU19
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  124              	.LBE416:
  125              	.LBE417:
  126              	.LBE418:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 13
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 13
 
 
  127              	.LBE419:
@@ -729,7 +729,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  132              		.loc 1 293 7 view .LVU32
  133 0024 7047     		bx	lr
  134              		.cfi_endproc
- 135              	.LFE6127:
+ 135              	.LFE6126:
  137 0026 00BF     		.section	.text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_d
  138              		.align	1
  139              		.p2align 2,,3
@@ -738,7 +738,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  142              		.thumb_func
  144              	_ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Man
  145              	.LVL7:
- 146              	.LFB6124:
+ 146              	.LFB6123:
  268:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 		 _Manager_operation __op)
  147              		.loc 1 268 7 is_stmt 1 view -0
  148              		.cfi_startproc
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  175 000a 7047     		bx	lr
  176              	.LVL11:
  177              	.L9:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 14
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 14
 
 
   87:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     const void* _M_access() const { return &_M_pod_data[0]; }
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  219              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new"
    1:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** // The -*- C++ -*- dynamic memory management header.
    2:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 15
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 15
 
 
    3:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** // Copyright (C) 1994-2020 Free Software Foundation, Inc.
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   57:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new ****   public:
   58:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new ****     bad_alloc() throw() { }
   59:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 16
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 16
 
 
   60:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** #if __cplusplus >= 201103L
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  114:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** 
  115:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** //@{
  116:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** /** These are replaceable signatures:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 17
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 17
 
 
  117:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new ****  *  - normal single new and delete (no arguments, throw @c bad_alloc on error)
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  171:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** #endif // __cpp_aligned_new
  172:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** 
  173:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** // Default placement versions of operator new.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 18
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 18
 
 
  174:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new **** _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
@@ -1049,7 +1049,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  239              		.loc 1 286 7 view .LVU58
  240 0018 7047     		bx	lr
  241              		.cfi_endproc
- 242              	.LFE6124:
+ 242              	.LFE6123:
  244 001a 00BF     		.section	.text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_
  245              		.align	1
  246              		.p2align 2,,3
@@ -1058,7 +1058,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  249              		.thumb_func
  251              	_ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Ma
  252              	.LVL16:
- 253              	.LFB6128:
+ 253              	.LFB6127:
  268:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 		 _Manager_operation __op)
  254              		.loc 1 268 7 is_stmt 1 view -0
  255              		.cfi_startproc
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  267              	.LBI494:
  181:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 		   _Manager_operation __op)
  268              		.loc 1 181 2 view .LVU62
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 19
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 19
 
 
  269              	.LBB495:
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  310 0010 7047     		bx	lr
  311              	.LVL22:
  312              	.L15:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 20
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 20
 
 
  313              	.LBB508:
@@ -1184,7 +1184,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  345              		.loc 1 286 7 view .LVU84
  346 0018 7047     		bx	lr
  347              		.cfi_endproc
- 348              	.LFE6128:
+ 348              	.LFE6127:
  350 001a 00BF     		.section	.text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_da
  351              		.align	1
  352              		.p2align 2,,3
@@ -1193,12 +1193,12 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  355              		.thumb_func
  357              	_ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data:
  358              	.LVL25:
- 359              	.LFB6123:
+ 359              	.LFB6122:
  289:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       {
  360              		.loc 1 289 7 is_stmt 1 view -0
  361              		.cfi_startproc
  362              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 21
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 21
 
 
  363              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   21:DSP/FX/../../Parameters/../Utils/Helpers.h ****     { 
  404              		.loc 4 21 10 view .LVU100
  405              	.LBB534:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 22
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 22
 
 
   23:DSP/FX/../../Parameters/../Utils/Helpers.h ****         readPos = 0; 
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   57:DSP/Track.cpp ****             break;
  451              		.loc 3 57 13 is_stmt 1 view .LVU113
   58:DSP/Track.cpp ****         case PLAYING:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 23
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 23
 
 
  452              		.loc 3 58 13 view .LVU114
@@ -1348,7 +1348,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  473              		.loc 1 293 7 view .LVU120
  474 0026 7047     		bx	lr
  475              		.cfi_endproc
- 476              	.LFE6123:
+ 476              	.LFE6122:
  478              		.section	.text._ZN5Track4initEPPf,"ax",%progbits
  479              		.align	1
  480              		.p2align 2,,3
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  501              		.loc 3 5 11 view .LVU124
  502 0002 0222     		movs	r2, #2
    7:DSP/Track.cpp ****     ti.loopLength = 0;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 24
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 24
 
 
  503              		.loc 3 7 16 view .LVU125
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  544 001c 1A44     		add	r2, r2, r3
  545              	.LBB554:
   12:DSP/Track.cpp **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 25
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 25
 
 
  546              		.loc 3 12 19 view .LVU139
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  584              		.loc 3 17 22 view .LVU157
  585 0034 2946     		mov	r1, r5
  586 0036 2046     		mov	r0, r4
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 26
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 26
 
 
  587 0038 0A4A     		ldr	r2, .L26+12
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  629 0058 00530700 		.word	480000
  630 005c FF4B1D00 		.word	1919999
  631 0060 FE973A00 		.word	3839998
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 27
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 27
 
 
  632 0064 004C1D00 		.word	1920000
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  311:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	{ };
  312:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  313:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       // Used so the return type convertibility checks aren't done when
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 28
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 28
 
 
  314:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       // performing overload resolution for copy construction/assignment.
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  368:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *
  369:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  The newly-created %function object will target a copy of
  370:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  @a __f. If @a __f is @c reference_wrapper<F>, then this function
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 29
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 29
 
 
  371:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  object will contain a reference to the function object @c
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  425:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  The target of @c *this is deallocated, leaving it empty.
  426:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        */
  427:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       function&
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 30
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 30
 
 
  428:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       operator=(nullptr_t) noexcept
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  482:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       {
  483:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	std::swap(_M_functor, __x._M_functor);
  484:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	std::swap(_M_manager, __x._M_manager);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 31
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 31
 
 
  485:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	std::swap(_M_invoker, __x._M_invoker);
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  539:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       template<typename _Functor> const _Functor* target() const noexcept;
  540:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       /// @}
  541:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** #endif
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 32
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 32
 
 
  542:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  596:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	}
  597:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     }
  598:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 33
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 33
 
 
  599:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   template<typename _Res, typename... _ArgTypes>
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   32:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h **** 
   33:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h **** #include <bits/c++config.h>
   34:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h **** #if __cplusplus < 201103L
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 34
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 34
 
 
   35:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h **** # include <bits/concept_check.h>
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   89:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****       static_assert(!std::is_lvalue_reference<_Tp>::value, "template argument"
   90:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h **** 		    " substituting _Tp is an lvalue reference type");
   91:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****       return static_cast<_Tp&&>(__t);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 35
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 35
 
 
   92:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****     }
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
    4:DSP/FX/../../Parameters/BinaryParameter.h **** #include "daisy_seed.h"
    5:DSP/FX/../../Parameters/BinaryParameter.h **** #include <functional>
    6:DSP/FX/../../Parameters/BinaryParameter.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 36
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 36
 
 
    7:DSP/FX/../../Parameters/BinaryParameter.h **** /*****************************************************************************//**
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  610:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    _M_manager = &_My_handler::_M_manager;
  748              		.loc 1 610 17 view .LVU195
  749 0022 0995     		str	r5, [sp, #36]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 37
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 37
 
 
  750              	.LBB645:
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  795 002c 089F     		ldr	r7, [sp, #32]
  796              	.LBE667:
  797              	.LBE666:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 38
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 38
 
 
  798              	.LBE665:
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  840              	.LBE659:
  841              	.LBE658:
  842              	.LBE657:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 39
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 39
 
 
  843              	.LBB672:
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  150:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****     _GLIBCXX20_CONSTEXPR
  151:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****     inline _Tp
  152:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****     __exchange(_Tp& __obj, _Up&& __new_val)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 40
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 40
 
 
  153:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h ****     {
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  855 004a 04AE     		add	r6, sp, #16
  856 004c 86E80300 		stm	r6, {r0, r1}
  857              		.loc 6 198 7 view .LVU224
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 41
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 41
 
 
  858 0050 93E80300 		ldm	r3, {r0, r1}
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  904              	.LBI685:
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     : public _Maybe_unary_or_binary_function<_Res, _ArgTypes...>,
  905              		.loc 1 303 11 is_stmt 1 view .LVU236
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 42
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 42
 
 
  906              	.LBB686:
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  245:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     }
  950              		.loc 1 245 12 is_stmt 0 view .LVU247
  951 007a 06A9     		add	r1, sp, #24
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 43
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 43
 
 
  952              	.LVL56:
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  993              	.LBE714:
  994              	.LBE711:
  995              	.LBE709:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 44
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 44
 
 
  996              	.LBE708:
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1044              	.LBB768:
  1045              	.LBI723:
   18:DSP/FX/../../Parameters/BinaryParameter.h ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 45
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 45
 
 
  1046              		.loc 7 18 17 is_stmt 1 view .LVU271
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1091              	.LBI735:
  498:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       { return !_M_empty(); }
  1092              		.loc 1 498 16 is_stmt 1 view .LVU282
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 46
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 46
 
 
  1093              	.LBB739:
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1133              		.loc 6 198 7 view .LVU296
  1134 00c2 92E80300 		ldm	r2, {r0, r1}
  1135 00c6 85E80300 		stm	r5, {r0, r1}
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 47
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 47
 
 
  1136              		.loc 6 199 7 view .LVU297
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1182              	.LBB756:
  1183              	.LBB757:
  1184              	.LBI757:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 48
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 48
 
 
  242:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     {
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1228              	.LVL69:
  245:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     }
  1229              		.loc 1 245 12 view .LVU320
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 49
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 49
 
 
  1230 00ee 0322     		movs	r2, #3
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1279 00fe 0D9F     		ldr	r7, [sp, #52]
  1280 0100 D9E7     		b	.L34
  1281              	.L53:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 50
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 50
 
 
  1282 0102 00BF     		.align	2
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1331              		.loc 3 30 5 is_stmt 1 view .LVU332
   30:DSP/Track.cpp **** }
  1332              		.loc 3 30 16 is_stmt 0 view .LVU333
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 51
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 51
 
 
  1333 000e 2946     		mov	r1, r5
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   26:DSP/FX/../../Parameters/BinaryParameter.h ****         btn.Debounce();
  1378              		.loc 7 26 9 view .LVU342
  1379              		.loc 7 26 21 is_stmt 0 view .LVU343
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 52
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 52
 
 
  1380 0004 1430     		adds	r0, r0, #20
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   45:../../../libDaisy//src/hid/switch.h ****     Initializes the switch object with a given port/pin combo.
   46:../../../libDaisy//src/hid/switch.h ****     \param pin port/pin object to tell the switch which hardware pin to use.
   47:../../../libDaisy//src/hid/switch.h ****     \param update_rate Does nothing. Backwards compatibility until next breaking update.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 53
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 53
 
 
   48:../../../libDaisy//src/hid/switch.h ****     \param t switch type -- Default: TYPE_MOMENTARY
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  614:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  615:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   template<typename _Res, typename... _ArgTypes>
  616:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     _Res
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 54
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 54
 
 
  617:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     function<_Res(_ArgTypes...)>::
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1450              	.LBB819:
  1451              	.LBI819:
   73:../../../libDaisy//src/hid/switch.h ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 55
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 55
 
 
  1452              		.loc 8 73 17 view .LVU366
@@ -3298,7 +3298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1499              	.LBE817:
   37:DSP/Track.cpp ****     delay.tick();
  1500              		.loc 3 37 5 is_stmt 1 view .LVU380
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 56
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 56
 
 
   37:DSP/Track.cpp ****     delay.tick();
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1548              		.thumb
  1549              		.thumb_func
  1551              	_ZN5Track11clearBufferEv:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 57
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 57
 
 
  1552              	.LVL96:
@@ -3418,7 +3418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1595 0024 019A     		ldr	r2, [sp, #4]
  1596 0026 0021     		movs	r1, #0
  1597 0028 2046     		mov	r0, r4
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 58
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 58
 
 
  1598              	.LBE830:
@@ -3478,7 +3478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1642              		.section	.text._ZN5Track14setIsRecordingEv,"ax",%progbits
  1643              		.align	1
  1644              		.p2align 2,,3
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 59
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 59
 
 
  1645              		.global	_ZN5Track14setIsRecordingEv
@@ -3538,7 +3538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
   68:DSP/Track.cpp **** 
  1688              		.loc 3 68 1 view .LVU425
  1689 0014 7047     		bx	lr
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 60
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 60
 
 
  1690              	.L86:
@@ -3598,7 +3598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1732              		.thumb_func
  1734              	_ZN5Track12setIsPlayingEv:
  1735              	.LVL106:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 61
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 61
 
 
  1736              	.LFB5667:
@@ -3658,7 +3658,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1776              		.loc 3 78 13 view .LVU457
   78:DSP/Track.cpp ****             break;
  1777              		.loc 3 78 19 is_stmt 0 view .LVU458
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 62
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 62
 
 
  1778 0018 0223     		movs	r3, #2
@@ -3718,7 +3718,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1822              		.loc 3 93 9 is_stmt 1 view .LVU471
  1823              		.loc 3 93 20 is_stmt 0 view .LVU472
  1824 0006 34BF     		ite	cc
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 63
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 63
 
 
  1825 0008 0133     		addcc	r3, r3, #1
@@ -3778,7 +3778,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1869 0010 03D0     		beq	.L101
  1870              	.L96:
  105:DSP/Track.cpp ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 64
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 64
 
 
  106:DSP/Track.cpp ****         if(ph.readPos >= ti.loopLength)
@@ -3831,687 +3831,661 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 1
  1902 0026 F4E7     		b	.L96
  1903              		.cfi_endproc
  1904              	.LFE5669:
- 1906              		.section	.text._ZN5Track7prepareEv,"ax",%progbits
+ 1906              		.section	.text._ZN5Track17processInputBlockEPKfS1_j,"ax",%progbits
  1907              		.align	1
  1908              		.p2align 2,,3
- 1909              		.global	_ZN5Track7prepareEv
+ 1909              		.global	_ZN5Track17processInputBlockEPKfS1_j
  1910              		.syntax unified
  1911              		.thumb
  1912              		.thumb_func
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 65
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 65
 
 
- 1914              	_ZN5Track7prepareEv:
+ 1914              	_ZN5Track17processInputBlockEPKfS1_j:
  1915              	.LVL115:
  1916              	.LFB5670:
  112:DSP/Track.cpp **** 
- 113:DSP/Track.cpp **** void Track::prepare()
+ 113:DSP/Track.cpp **** void Track::processInputBlock(const float* left, const float* right, size_t size)
  114:DSP/Track.cpp **** {
  1917              		.loc 3 114 1 is_stmt 1 view -0
  1918              		.cfi_startproc
  1919              		@ args = 0, pretend = 0, frame = 0
  1920              		@ frame_needed = 0, uses_anonymous_args = 0
- 1921              		@ link register save eliminated.
- 115:DSP/Track.cpp **** 
- 116:DSP/Track.cpp **** }
- 1922              		.loc 3 116 1 is_stmt 0 view .LVU498
- 1923 0000 7047     		bx	lr
- 1924              		.cfi_endproc
- 1925              	.LFE5670:
- 1927 0002 00BF     		.section	.text._ZN5Track17processInputBlockEPKfS1_j,"ax",%progbits
- 1928              		.align	1
- 1929              		.p2align 2,,3
- 1930              		.global	_ZN5Track17processInputBlockEPKfS1_j
- 1931              		.syntax unified
- 1932              		.thumb
- 1933              		.thumb_func
- 1935              	_ZN5Track17processInputBlockEPKfS1_j:
- 1936              	.LVL116:
- 1937              	.LFB5671:
+ 115:DSP/Track.cpp ****     if(state != RECORDING)
+ 1921              		.loc 3 115 5 view .LVU498
+ 114:DSP/Track.cpp ****     if(state != RECORDING)
+ 1922              		.loc 3 114 1 is_stmt 0 view .LVU499
+ 1923 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 1924              		.cfi_def_cfa_offset 20
+ 1925              		.cfi_offset 4, -20
+ 1926              		.cfi_offset 5, -16
+ 1927              		.cfi_offset 6, -12
+ 1928              		.cfi_offset 7, -8
+ 1929              		.cfi_offset 14, -4
+ 1930              		.loc 3 115 5 view .LVU500
+ 1931 0002 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
+ 1932 0004 D4B9     		cbnz	r4, .L102
+ 1933              	.LVL116:
+ 1934              	.LBB846:
+ 116:DSP/Track.cpp ****         return;
  117:DSP/Track.cpp **** 
- 118:DSP/Track.cpp **** void Track::processInputBlock(const float* left, const float* right, size_t size)
- 119:DSP/Track.cpp **** {
- 1938              		.loc 3 119 1 is_stmt 1 view -0
- 1939              		.cfi_startproc
- 1940              		@ args = 0, pretend = 0, frame = 0
- 1941              		@ frame_needed = 0, uses_anonymous_args = 0
- 120:DSP/Track.cpp ****     if(state != RECORDING)
- 1942              		.loc 3 120 5 view .LVU500
- 119:DSP/Track.cpp ****     if(state != RECORDING)
- 1943              		.loc 3 119 1 is_stmt 0 view .LVU501
- 1944 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 1945              		.cfi_def_cfa_offset 20
- 1946              		.cfi_offset 4, -20
- 1947              		.cfi_offset 5, -16
- 1948              		.cfi_offset 6, -12
- 1949              		.cfi_offset 7, -8
- 1950              		.cfi_offset 14, -4
- 1951              		.loc 3 120 5 view .LVU502
- 1952 0002 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
- 1953 0004 D4B9     		cbnz	r4, .L103
- 1954              	.LVL117:
- 1955              	.LBB846:
- 121:DSP/Track.cpp ****         return;
- 122:DSP/Track.cpp **** 
- 123:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 1956              		.loc 3 123 26 is_stmt 1 view .LVU503
- 1957 0006 CBB1     		cbz	r3, .L103
- 1958 0008 01EB8304 		add	r4, r1, r3, lsl #2
- 124:DSP/Track.cpp ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 66
+ 118:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 1935              		.loc 3 118 26 is_stmt 1 view .LVU501
+ 1936 0006 CBB1     		cbz	r3, .L102
+ 1937 0008 01EB8304 		add	r4, r1, r3, lsl #2
+ 119:DSP/Track.cpp ****     {
+ 120:DSP/Track.cpp ****         buffer[L][ph.writePos] = left[i];
+ 1938              		.loc 3 120 17 is_stmt 0 view .LVU502
+ 1939 000c 476D     		ldr	r7, [r0, #84]
+ 1940 000e 4368     		ldr	r3, [r0, #4]
+ 1941              	.LVL117:
+ 1942              	.LBB847:
+ 1943              	.LBB848:
+  90:DSP/Track.cpp ****         ph.writePos = 0;
+ 1944              		.loc 3 90 23 view .LVU503
+ 1945 0010 D0E91665 		ldrd	r6, r5, [r0, #88]
+ 1946              	.LVL118:
+ 1947              	.L105:
+  90:DSP/Track.cpp ****         ph.writePos = 0;
+ 1948              		.loc 3 90 23 view .LVU504
+ 1949              	.LBE848:
+ 1950              	.LBE847:
+ 1951              		.loc 3 120 9 is_stmt 1 view .LVU505
+ 1952              	.LBB854:
+ 1953              	.LBB849:
+  93:DSP/Track.cpp **** }
+ 1954              		.loc 3 93 9 view .LVU506
+ 1955              	.LBE849:
+ 1956              	.LBE854:
+ 1957              		.loc 3 120 40 is_stmt 0 view .LVU507
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 66
 
 
- 125:DSP/Track.cpp ****         buffer[L][ph.writePos] = left[i];
- 1959              		.loc 3 125 17 is_stmt 0 view .LVU504
- 1960 000c 476D     		ldr	r7, [r0, #84]
- 1961 000e 4368     		ldr	r3, [r0, #4]
- 1962              	.LVL118:
- 1963              	.LBB847:
- 1964              	.LBB848:
+ 1958 0014 F1EC017A 		vldmia.32	r1!, {s15}
+ 1959              		.loc 3 120 32 view .LVU508
+ 1960 0018 07EB830E 		add	lr, r7, r3, lsl #2
+ 1961              	.LBB855:
+ 1962              	.LBB850:
   90:DSP/Track.cpp ****         ph.writePos = 0;
- 1965              		.loc 3 90 23 view .LVU505
- 1966 0010 D0E91665 		ldrd	r6, r5, [r0, #88]
- 1967              	.LVL119:
- 1968              	.L106:
-  90:DSP/Track.cpp ****         ph.writePos = 0;
- 1969              		.loc 3 90 23 view .LVU506
- 1970              	.LBE848:
- 1971              	.LBE847:
- 1972              		.loc 3 125 9 is_stmt 1 view .LVU507
- 1973              	.LBB854:
- 1974              	.LBB849:
+ 1963              		.loc 3 90 5 view .LVU509
+ 1964 001c 9D42     		cmp	r5, r3
+ 1965              	.LBE850:
+ 1966              	.LBE855:
+ 121:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 1967              		.loc 3 121 32 view .LVU510
+ 1968 001e 06EB830C 		add	ip, r6, r3, lsl #2
+ 120:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
+ 1969              		.loc 3 120 32 view .LVU511
+ 1970 0022 CEED007A 		vstr.32	s15, [lr]
+ 1971              		.loc 3 121 9 is_stmt 1 view .LVU512
+ 1972              	.LBB856:
+ 1973              	.LBB851:
   93:DSP/Track.cpp **** }
- 1975              		.loc 3 93 9 view .LVU508
- 1976              	.LBE849:
- 1977              	.LBE854:
- 1978              		.loc 3 125 40 is_stmt 0 view .LVU509
- 1979 0014 F1EC017A 		vldmia.32	r1!, {s15}
- 1980              		.loc 3 125 32 view .LVU510
- 1981 0018 07EB830E 		add	lr, r7, r3, lsl #2
- 1982              	.LBB855:
- 1983              	.LBB850:
-  90:DSP/Track.cpp ****         ph.writePos = 0;
- 1984              		.loc 3 90 5 view .LVU511
- 1985 001c 9D42     		cmp	r5, r3
- 1986              	.LBE850:
- 1987              	.LBE855:
- 126:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
- 1988              		.loc 3 126 32 view .LVU512
- 1989 001e 06EB830C 		add	ip, r6, r3, lsl #2
- 125:DSP/Track.cpp ****         buffer[R][ph.writePos] = right[i];
- 1990              		.loc 3 125 32 view .LVU513
- 1991 0022 CEED007A 		vstr.32	s15, [lr]
- 1992              		.loc 3 126 9 is_stmt 1 view .LVU514
- 1993              	.LBB856:
- 1994              	.LBB851:
-  93:DSP/Track.cpp **** }
- 1995              		.loc 3 93 20 is_stmt 0 view .LVU515
- 1996 0026 03F10103 		add	r3, r3, #1
- 1997              	.LBE851:
- 1998              	.LBE856:
- 1999              		.loc 3 126 41 view .LVU516
- 2000 002a 52F804EB 		ldr	lr, [r2], #4	@ float
- 2001              	.LBB857:
- 2002              	.LBB852:
+ 1974              		.loc 3 93 20 is_stmt 0 view .LVU513
+ 1975 0026 03F10103 		add	r3, r3, #1
+ 1976              	.LBE851:
+ 1977              	.LBE856:
+ 1978              		.loc 3 121 41 view .LVU514
+ 1979 002a 52F804EB 		ldr	lr, [r2], #4	@ float
+ 1980              	.LBB857:
+ 1981              	.LBB852:
   91:DSP/Track.cpp ****     else
- 2003              		.loc 3 91 21 view .LVU517
- 2004 002e 98BF     		it	ls
- 2005 0030 0023     		movls	r3, #0
- 2006              	.LBE852:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 67
-
-
- 2007              	.LBE857:
- 123:DSP/Track.cpp ****     {
- 2008              		.loc 3 123 26 view .LVU518
- 2009 0032 8C42     		cmp	r4, r1
- 2010              		.loc 3 126 32 view .LVU519
- 2011 0034 CCF800E0 		str	lr, [ip]	@ float
- 127:DSP/Track.cpp **** 
- 128:DSP/Track.cpp ****         incrementWritePos();
- 2012              		.loc 3 128 9 is_stmt 1 view .LVU520
- 2013              	.LBB858:
- 2014              	.LBI847:
+ 1982              		.loc 3 91 21 view .LVU515
+ 1983 002e 98BF     		it	ls
+ 1984 0030 0023     		movls	r3, #0
+ 1985              	.LBE852:
+ 1986              	.LBE857:
+ 118:DSP/Track.cpp ****     {
+ 1987              		.loc 3 118 26 view .LVU516
+ 1988 0032 8C42     		cmp	r4, r1
+ 1989              		.loc 3 121 32 view .LVU517
+ 1990 0034 CCF800E0 		str	lr, [ip]	@ float
+ 122:DSP/Track.cpp **** 
+ 123:DSP/Track.cpp ****         incrementWritePos();
+ 1991              		.loc 3 123 9 is_stmt 1 view .LVU518
+ 1992              	.LBB858:
+ 1993              	.LBI847:
   88:DSP/Track.cpp **** {
- 2015              		.loc 3 88 6 view .LVU521
- 2016              	.LBB853:
+ 1994              		.loc 3 88 6 view .LVU519
+ 1995              	.LBB853:
   90:DSP/Track.cpp ****         ph.writePos = 0;
- 2017              		.loc 3 90 5 view .LVU522
- 2018              	.LBE853:
- 2019              	.LBE858:
- 123:DSP/Track.cpp ****     {
- 2020              		.loc 3 123 5 view .LVU523
- 123:DSP/Track.cpp ****     {
- 2021              		.loc 3 123 26 view .LVU524
- 2022 0038 ECD1     		bne	.L106
- 2023 003a 4360     		str	r3, [r0, #4]
- 2024              	.L103:
- 123:DSP/Track.cpp ****     {
- 2025              		.loc 3 123 26 is_stmt 0 view .LVU525
- 2026              	.LBE846:
- 129:DSP/Track.cpp ****     }
- 130:DSP/Track.cpp **** }
- 2027              		.loc 3 130 1 view .LVU526
- 2028 003c F0BD     		pop	{r4, r5, r6, r7, pc}
- 2029              		.cfi_endproc
- 2030              	.LFE5671:
- 2032 003e 00BF     		.section	.text._ZN5Track18processOutputBlockEPPfj,"ax",%progbits
- 2033              		.align	1
- 2034              		.p2align 2,,3
- 2035              		.global	_ZN5Track18processOutputBlockEPPfj
- 2036              		.syntax unified
- 2037              		.thumb
- 2038              		.thumb_func
- 2040              	_ZN5Track18processOutputBlockEPPfj:
+ 1996              		.loc 3 90 5 view .LVU520
+ 1997              	.LBE853:
+ 1998              	.LBE858:
+ 118:DSP/Track.cpp ****     {
+ 1999              		.loc 3 118 5 view .LVU521
+ 118:DSP/Track.cpp ****     {
+ 2000              		.loc 3 118 26 view .LVU522
+ 2001 0038 ECD1     		bne	.L105
+ 2002 003a 4360     		str	r3, [r0, #4]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 67
+
+
+ 2003              	.L102:
+ 118:DSP/Track.cpp ****     {
+ 2004              		.loc 3 118 26 is_stmt 0 view .LVU523
+ 2005              	.LBE846:
+ 124:DSP/Track.cpp ****     }
+ 125:DSP/Track.cpp **** }
+ 2006              		.loc 3 125 1 view .LVU524
+ 2007 003c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 2008              		.cfi_endproc
+ 2009              	.LFE5670:
+ 2011 003e 00BF     		.section	.text._ZN5Track18processOutputBlockEPPfj,"ax",%progbits
+ 2012              		.align	1
+ 2013              		.p2align 2,,3
+ 2014              		.global	_ZN5Track18processOutputBlockEPPfj
+ 2015              		.syntax unified
+ 2016              		.thumb
+ 2017              		.thumb_func
+ 2019              	_ZN5Track18processOutputBlockEPPfj:
+ 2020              	.LVL119:
+ 2021              	.LFB5671:
+ 126:DSP/Track.cpp **** 
+ 127:DSP/Track.cpp **** void Track::processOutputBlock(float* output[2], size_t size)
+ 128:DSP/Track.cpp **** {
+ 2022              		.loc 3 128 1 is_stmt 1 view -0
+ 2023              		.cfi_startproc
+ 2024              		@ args = 0, pretend = 0, frame = 8
+ 2025              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129:DSP/Track.cpp ****     if(state == STOPPED)
+ 2026              		.loc 3 129 5 view .LVU526
+ 128:DSP/Track.cpp ****     if(state == STOPPED)
+ 2027              		.loc 3 128 1 is_stmt 0 view .LVU527
+ 2028 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 2029              		.cfi_def_cfa_offset 32
+ 2030              		.cfi_offset 4, -32
+ 2031              		.cfi_offset 5, -28
+ 2032              		.cfi_offset 6, -24
+ 2033              		.cfi_offset 7, -20
+ 2034              		.cfi_offset 8, -16
+ 2035              		.cfi_offset 9, -12
+ 2036              		.cfi_offset 10, -8
+ 2037              		.cfi_offset 14, -4
+ 2038 0004 0546     		mov	r5, r0
+ 2039              		.loc 3 129 8 view .LVU528
+ 2040 0006 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
  2041              	.LVL120:
- 2042              	.LFB5672:
+ 128:DSP/Track.cpp ****     if(state == STOPPED)
+ 2042              		.loc 3 128 1 view .LVU529
+ 2043 0008 82B0     		sub	sp, sp, #8
+ 2044              		.cfi_def_cfa_offset 40
+ 2045              		.loc 3 129 5 view .LVU530
+ 2046 000a 0228     		cmp	r0, #2
+ 2047 000c 4ED0     		beq	.L112
+ 2048              	.LVL121:
+ 2049              	.LBB864:
+ 130:DSP/Track.cpp ****         return;
  131:DSP/Track.cpp **** 
- 132:DSP/Track.cpp **** void Track::processOutputBlock(float* output[2], size_t size)
- 133:DSP/Track.cpp **** {
- 2043              		.loc 3 133 1 is_stmt 1 view -0
- 2044              		.cfi_startproc
- 2045              		@ args = 0, pretend = 0, frame = 8
- 2046              		@ frame_needed = 0, uses_anonymous_args = 0
- 134:DSP/Track.cpp ****     if(state == STOPPED)
- 2047              		.loc 3 134 5 view .LVU528
- 133:DSP/Track.cpp ****     if(state == STOPPED)
- 2048              		.loc 3 133 1 is_stmt 0 view .LVU529
- 2049 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
- 2050              		.cfi_def_cfa_offset 32
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 68
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 68
 
 
- 2051              		.cfi_offset 4, -32
- 2052              		.cfi_offset 5, -28
- 2053              		.cfi_offset 6, -24
- 2054              		.cfi_offset 7, -20
- 2055              		.cfi_offset 8, -16
- 2056              		.cfi_offset 9, -12
- 2057              		.cfi_offset 10, -8
- 2058              		.cfi_offset 14, -4
- 2059 0004 0546     		mov	r5, r0
- 2060              		.loc 3 134 8 view .LVU530
- 2061 0006 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
- 2062              	.LVL121:
- 133:DSP/Track.cpp ****     if(state == STOPPED)
- 2063              		.loc 3 133 1 view .LVU531
- 2064 0008 82B0     		sub	sp, sp, #8
- 2065              		.cfi_def_cfa_offset 40
- 2066              		.loc 3 134 5 view .LVU532
- 2067 000a 0228     		cmp	r0, #2
- 2068 000c 4ED0     		beq	.L113
- 2069              	.LVL122:
- 2070              	.LBB864:
- 135:DSP/Track.cpp ****         return;
- 136:DSP/Track.cpp **** 
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2071              		.loc 3 137 26 is_stmt 1 view .LVU533
- 2072 000e 1646     		mov	r6, r2
- 2073 0010 AAB1     		cbz	r2, .L124
- 138:DSP/Track.cpp ****     {
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2074              		.loc 3 139 32 is_stmt 0 view .LVU534
- 2075 0012 6A6D     		ldr	r2, [r5, #84]
- 2076              	.LVL123:
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2077              		.loc 3 140 32 view .LVU535
- 2078 0014 AF6D     		ldr	r7, [r5, #88]
- 139:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2079              		.loc 3 139 37 view .LVU536
- 2080 0016 AC68     		ldr	r4, [r5, #8]
- 2081              		.loc 3 140 17 view .LVU537
- 2082 0018 D1E90031 		ldrd	r3, r1, [r1]
- 2083              	.LVL124:
- 2084              		.loc 3 140 17 view .LVU538
- 2085 001c 30B3     		cbz	r0, .L116
- 2086 001e 0128     		cmp	r0, #1
- 2087 0020 47D0     		beq	.L117
- 139:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2088              		.loc 3 139 44 view .LVU539
- 2089 0022 02EB8402 		add	r2, r2, r4, lsl #2
- 2090 0026 03EB860C 		add	ip, r3, r6, lsl #2
- 2091              		.loc 3 140 44 view .LVU540
- 2092 002a 07EB8404 		add	r4, r7, r4, lsl #2
- 2093              	.LVL125:
- 2094              	.L119:
- 139:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2095              		.loc 3 139 9 is_stmt 1 view .LVU541
- 139:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2096              		.loc 3 139 44 is_stmt 0 view .LVU542
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 69
-
-
- 2097 002e 1068     		ldr	r0, [r2]	@ float
- 139:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2098              		.loc 3 139 22 view .LVU543
- 2099 0030 43F8040B 		str	r0, [r3], #4	@ float
- 2100              		.loc 3 140 9 is_stmt 1 view .LVU544
- 137:DSP/Track.cpp ****     {
- 2101              		.loc 3 137 26 is_stmt 0 view .LVU545
- 2102 0034 9C45     		cmp	ip, r3
- 2103              		.loc 3 140 44 view .LVU546
- 2104 0036 2068     		ldr	r0, [r4]	@ float
- 2105              		.loc 3 140 22 view .LVU547
- 2106 0038 41F8040B 		str	r0, [r1], #4	@ float
- 141:DSP/Track.cpp ****         
- 142:DSP/Track.cpp ****         incrementReadPos();
- 2107              		.loc 3 142 9 is_stmt 1 view .LVU548
- 2108              	.LBB865:
- 2109              	.LBI865:
+ 2050              		.loc 3 132 26 is_stmt 1 view .LVU531
+ 2051 000e 1646     		mov	r6, r2
+ 2052 0010 AAB1     		cbz	r2, .L123
+ 133:DSP/Track.cpp ****     {
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2053              		.loc 3 134 32 is_stmt 0 view .LVU532
+ 2054 0012 6A6D     		ldr	r2, [r5, #84]
+ 2055              	.LVL122:
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2056              		.loc 3 135 32 view .LVU533
+ 2057 0014 AF6D     		ldr	r7, [r5, #88]
+ 134:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2058              		.loc 3 134 37 view .LVU534
+ 2059 0016 AC68     		ldr	r4, [r5, #8]
+ 2060              		.loc 3 135 17 view .LVU535
+ 2061 0018 D1E90031 		ldrd	r3, r1, [r1]
+ 2062              	.LVL123:
+ 2063              		.loc 3 135 17 view .LVU536
+ 2064 001c 30B3     		cbz	r0, .L115
+ 2065 001e 0128     		cmp	r0, #1
+ 2066 0020 47D0     		beq	.L116
+ 134:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2067              		.loc 3 134 44 view .LVU537
+ 2068 0022 02EB8402 		add	r2, r2, r4, lsl #2
+ 2069 0026 03EB860C 		add	ip, r3, r6, lsl #2
+ 2070              		.loc 3 135 44 view .LVU538
+ 2071 002a 07EB8404 		add	r4, r7, r4, lsl #2
+ 2072              	.LVL124:
+ 2073              	.L118:
+ 134:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2074              		.loc 3 134 9 is_stmt 1 view .LVU539
+ 134:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2075              		.loc 3 134 44 is_stmt 0 view .LVU540
+ 2076 002e 1068     		ldr	r0, [r2]	@ float
+ 134:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2077              		.loc 3 134 22 view .LVU541
+ 2078 0030 43F8040B 		str	r0, [r3], #4	@ float
+ 2079              		.loc 3 135 9 is_stmt 1 view .LVU542
+ 132:DSP/Track.cpp ****     {
+ 2080              		.loc 3 132 26 is_stmt 0 view .LVU543
+ 2081 0034 9C45     		cmp	ip, r3
+ 2082              		.loc 3 135 44 view .LVU544
+ 2083 0036 2068     		ldr	r0, [r4]	@ float
+ 2084              		.loc 3 135 22 view .LVU545
+ 2085 0038 41F8040B 		str	r0, [r1], #4	@ float
+ 136:DSP/Track.cpp ****         
+ 137:DSP/Track.cpp ****         incrementReadPos();
+ 2086              		.loc 3 137 9 is_stmt 1 view .LVU546
+ 2087              	.LBB865:
+ 2088              	.LBI865:
   96:DSP/Track.cpp **** {
- 2110              		.loc 3 96 6 view .LVU549
- 2111              	.LBB866:
+ 2089              		.loc 3 96 6 view .LVU547
+ 2090              	.LBB866:
   98:DSP/Track.cpp ****     {
- 2112              		.loc 3 98 5 view .LVU550
+ 2091              		.loc 3 98 5 view .LVU548
  104:DSP/Track.cpp ****     {
- 2113              		.loc 3 104 12 view .LVU551
- 2114              	.LBE866:
- 2115              	.LBE865:
- 137:DSP/Track.cpp ****     {
- 2116              		.loc 3 137 5 view .LVU552
- 137:DSP/Track.cpp ****     {
- 2117              		.loc 3 137 26 view .LVU553
- 2118 003c F7D1     		bne	.L119
- 2119              	.L124:
- 2120              	.LBE864:
- 143:DSP/Track.cpp ****     }
- 144:DSP/Track.cpp ****    
- 145:DSP/Track.cpp ****     shaper.processBlock(buffer, size); 
- 2121              		.loc 3 145 5 view .LVU554
- 2122              		.loc 3 145 25 is_stmt 0 view .LVU555
- 2123 003e 05F15401 		add	r1, r5, #84
- 2124              		.loc 3 145 24 view .LVU556
- 2125 0042 3246     		mov	r2, r6
- 2126 0044 05F16000 		add	r0, r5, #96
- 2127 0048 0191     		str	r1, [sp, #4]
- 2128 004a FFF7FEFF 		bl	_ZN10Waveshaper12processBlockEPPfj
- 2129              	.LVL126:
- 146:DSP/Track.cpp ****     delay.processBlock(buffer, size);
- 2130              		.loc 3 146 5 is_stmt 1 view .LVU557
- 2131              		.loc 3 146 23 is_stmt 0 view .LVU558
- 2132 004e 3246     		mov	r2, r6
- 2133 0050 0199     		ldr	r1, [sp, #4]
- 2134 0052 05F58C70 		add	r0, r5, #280
- 2135 0056 FFF7FEFF 		bl	_ZN5Delay12processBlockEPPfj
+ 2092              		.loc 3 104 12 view .LVU549
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 69
+
+
+ 2093              	.LBE866:
+ 2094              	.LBE865:
+ 132:DSP/Track.cpp ****     {
+ 2095              		.loc 3 132 5 view .LVU550
+ 132:DSP/Track.cpp ****     {
+ 2096              		.loc 3 132 26 view .LVU551
+ 2097 003c F7D1     		bne	.L118
+ 2098              	.L123:
+ 2099              	.LBE864:
+ 138:DSP/Track.cpp ****     }
+ 139:DSP/Track.cpp ****    
+ 140:DSP/Track.cpp ****     shaper.processBlock(buffer, size); 
+ 2100              		.loc 3 140 5 view .LVU552
+ 2101              		.loc 3 140 25 is_stmt 0 view .LVU553
+ 2102 003e 05F15401 		add	r1, r5, #84
+ 2103              		.loc 3 140 24 view .LVU554
+ 2104 0042 3246     		mov	r2, r6
+ 2105 0044 05F16000 		add	r0, r5, #96
+ 2106 0048 0191     		str	r1, [sp, #4]
+ 2107 004a FFF7FEFF 		bl	_ZN10Waveshaper12processBlockEPPfj
+ 2108              	.LVL125:
+ 141:DSP/Track.cpp ****     delay.processBlock(buffer, size);
+ 2109              		.loc 3 141 5 is_stmt 1 view .LVU555
+ 2110              		.loc 3 141 23 is_stmt 0 view .LVU556
+ 2111 004e 3246     		mov	r2, r6
+ 2112 0050 0199     		ldr	r1, [sp, #4]
+ 2113 0052 05F58C70 		add	r0, r5, #280
+ 2114 0056 FFF7FEFF 		bl	_ZN5Delay12processBlockEPPfj
+ 2115              	.LVL126:
+ 142:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
+ 2116              		.loc 3 142 5 is_stmt 1 view .LVU557
+ 2117              		.loc 3 142 24 is_stmt 0 view .LVU558
+ 2118 005a 3246     		mov	r2, r6
+ 2119 005c 0199     		ldr	r1, [sp, #4]
+ 2120 005e 05F5E870 		add	r0, r5, #464
+ 143:DSP/Track.cpp **** }...
+ 2121              		.loc 3 143 1 view .LVU559
+ 2122 0062 02B0     		add	sp, sp, #8
+ 2123              		.cfi_remember_state
+ 2124              		.cfi_def_cfa_offset 32
+ 2125              		@ sp needed
+ 2126 0064 BDE8F047 		pop	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 2127              		.cfi_restore 14
+ 2128              		.cfi_restore 10
+ 2129              		.cfi_restore 9
+ 2130              		.cfi_restore 8
+ 2131              		.cfi_restore 7
+ 2132              		.cfi_restore 6
+ 2133              		.cfi_restore 5
+ 2134              		.cfi_restore 4
+ 2135              		.cfi_def_cfa_offset 0
  2136              	.LVL127:
- 147:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
- 2137              		.loc 3 147 5 is_stmt 1 view .LVU559
- 2138              		.loc 3 147 24 is_stmt 0 view .LVU560
- 2139 005a 3246     		mov	r2, r6
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 70
+ 142:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
+ 2137              		.loc 3 142 24 view .LVU560
+ 2138 0068 FFF7FEBF 		b	_ZN6Reverb12processBlockEPPfl
+ 2139              	.LVL128:
+ 2140              	.L115:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 70
 
 
- 2140 005c 0199     		ldr	r1, [sp, #4]
- 2141 005e 05F5E870 		add	r0, r5, #464
- 148:DSP/Track.cpp **** }...
- 2142              		.loc 3 148 1 view .LVU561
- 2143 0062 02B0     		add	sp, sp, #8
- 2144              		.cfi_remember_state
- 2145              		.cfi_def_cfa_offset 32
- 2146              		@ sp needed
- 2147 0064 BDE8F047 		pop	{r4, r5, r6, r7, r8, r9, r10, lr}
- 2148              		.cfi_restore 14
- 2149              		.cfi_restore 10
- 2150              		.cfi_restore 9
- 2151              		.cfi_restore 8
- 2152              		.cfi_restore 7
- 2153              		.cfi_restore 6
- 2154              		.cfi_restore 5
- 2155              		.cfi_restore 4
- 2156              		.cfi_def_cfa_offset 0
- 2157              	.LVL128:
- 147:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
- 2158              		.loc 3 147 24 view .LVU562
- 2159 0068 FFF7FEBF 		b	_ZN6Reverb12processBlockEPPfl
- 2160              	.LVL129:
- 2161              	.L116:
- 2162              		.cfi_restore_state
- 147:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
- 2163              		.loc 3 147 24 view .LVU563
- 2164 006c 6868     		ldr	r0, [r5, #4]
- 2165 006e 03EB860A 		add	r10, r3, r6, lsl #2
- 2166 0072 0028     		cmp	r0, #0
- 2167              	.LBB895:
- 2168              	.LBB886:
- 2169              	.LBB877:
+ 2141              		.cfi_restore_state
+ 142:DSP/Track.cpp ****     reverb.processBlock(buffer, size);
+ 2142              		.loc 3 142 24 view .LVU561
+ 2143 006c 6868     		ldr	r0, [r5, #4]
+ 2144 006e 03EB860A 		add	r10, r3, r6, lsl #2
+ 2145 0072 0028     		cmp	r0, #0
+ 2146              	.LBB895:
+ 2147              	.LBB886:
+ 2148              	.LBB877:
  103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2170              		.loc 3 103 38 view .LVU564
- 2171 0074 00F1FF38 		add	r8, r0, #-1
- 2172 0078 0CBF     		ite	eq
- 2173 007a 4FF00009 		moveq	r9, #0
- 2174 007e C146     		movne	r9, r8
- 2175              	.LVL130:
- 2176              	.L123:
+ 2149              		.loc 3 103 38 view .LVU562
+ 2150 0074 00F1FF38 		add	r8, r0, #-1
+ 2151 0078 0CBF     		ite	eq
+ 2152 007a 4FF00009 		moveq	r9, #0
+ 2153 007e C146     		movne	r9, r8
+ 2154              	.LVL129:
+ 2155              	.L122:
  103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2177              		.loc 3 103 38 view .LVU565
- 2178              	.LBE877:
- 2179              	.LBE886:
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2180              		.loc 3 139 9 is_stmt 1 view .LVU566
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2181              		.loc 3 139 44 is_stmt 0 view .LVU567
- 2182 0080 02EB840C 		add	ip, r2, r4, lsl #2
- 2183              	.LBB887:
- 2184              	.LBB878:
+ 2156              		.loc 3 103 38 view .LVU563
+ 2157              	.LBE877:
+ 2158              	.LBE886:
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2159              		.loc 3 134 9 is_stmt 1 view .LVU564
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2160              		.loc 3 134 44 is_stmt 0 view .LVU565
+ 2161 0080 02EB840C 		add	ip, r2, r4, lsl #2
+ 2162              	.LBB887:
+ 2163              	.LBB878:
  103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2185              		.loc 3 103 24 view .LVU568
- 2186 0084 0028     		cmp	r0, #0
- 2187              	.LBE878:
- 2188              	.LBE887:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 71
+ 2164              		.loc 3 103 24 view .LVU566
+ 2165 0084 0028     		cmp	r0, #0
+ 2166              	.LBE878:
+ 2167              	.LBE887:
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2168              		.loc 3 135 44 view .LVU567
+ 2169 0086 07EB840E 		add	lr, r7, r4, lsl #2
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2170              		.loc 3 132 26 view .LVU568
+ 2171 008a 4C46     		mov	r4, r9
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2172              		.loc 3 134 44 view .LVU569
+ 2173 008c DCED007A 		vldr.32	s15, [ip]
+ 2174              	.LBB888:
+ 2175              	.LBB879:
+ 103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
+ 2176              		.loc 3 103 24 view .LVU570
+ 2177 0090 0CBF     		ite	eq
+ 2178 0092 8446     		moveq	ip, r0
+ 2179 0094 C446     		movne	ip, r8
+ 2180              	.LBE879:
+ 2181              	.LBE888:
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2182              		.loc 3 134 22 view .LVU571
+ 2183 0096 E3EC017A 		vstmia.32	r3!, {s15}
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2184              		.loc 3 135 9 is_stmt 1 view .LVU572
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 71
 
 
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2189              		.loc 3 140 44 view .LVU569
- 2190 0086 07EB840E 		add	lr, r7, r4, lsl #2
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2191              		.loc 3 137 26 view .LVU570
- 2192 008a 4C46     		mov	r4, r9
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2193              		.loc 3 139 44 view .LVU571
- 2194 008c DCED007A 		vldr.32	s15, [ip]
- 2195              	.LBB888:
- 2196              	.LBB879:
- 103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2197              		.loc 3 103 24 view .LVU572
- 2198 0090 0CBF     		ite	eq
- 2199 0092 8446     		moveq	ip, r0
- 2200 0094 C446     		movne	ip, r8
- 2201              	.LBE879:
- 2202              	.LBE888:
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2203              		.loc 3 139 22 view .LVU573
- 2204 0096 E3EC017A 		vstmia.32	r3!, {s15}
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2205              		.loc 3 140 9 is_stmt 1 view .LVU574
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2206              		.loc 3 137 26 is_stmt 0 view .LVU575
- 2207 009a 9A45     		cmp	r10, r3
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2208              		.loc 3 140 44 view .LVU576
- 2209 009c DEF800E0 		ldr	lr, [lr]	@ float
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2210              		.loc 3 140 22 view .LVU577
- 2211 00a0 41F804EB 		str	lr, [r1], #4	@ float
- 142:DSP/Track.cpp ****         incrementReadPos();
- 2212              		.loc 3 142 9 is_stmt 1 view .LVU578
- 2213              	.LVL131:
- 2214              	.LBB889:
+ 2185              		.loc 3 132 26 is_stmt 0 view .LVU573
+ 2186 009a 9A45     		cmp	r10, r3
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2187              		.loc 3 135 44 view .LVU574
+ 2188 009c DEF800E0 		ldr	lr, [lr]	@ float
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2189              		.loc 3 135 22 view .LVU575
+ 2190 00a0 41F804EB 		str	lr, [r1], #4	@ float
+ 137:DSP/Track.cpp ****         incrementReadPos();
+ 2191              		.loc 3 137 9 is_stmt 1 view .LVU576
+ 2192              	.LVL130:
+ 2193              	.LBB889:
   96:DSP/Track.cpp **** void Track::incrementReadPos()
- 2215              		.loc 3 96 6 view .LVU579
- 2216              	.LBB880:
+ 2194              		.loc 3 96 6 view .LVU577
+ 2195              	.LBB880:
   98:DSP/Track.cpp ****     if(state == RECORDING)
- 2217              		.loc 3 98 5 view .LVU580
+ 2196              		.loc 3 98 5 view .LVU578
  100:DSP/Track.cpp ****         if(ph.writePos <= 0)
- 2218              		.loc 3 100 9 view .LVU581
+ 2197              		.loc 3 100 9 view .LVU579
  103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2219              		.loc 3 103 24 is_stmt 0 view .LVU582
- 2220 00a4 C5F808C0 		str	ip, [r5, #8]
- 2221              	.LVL132:
+ 2198              		.loc 3 103 24 is_stmt 0 view .LVU580
+ 2199 00a4 C5F808C0 		str	ip, [r5, #8]
+ 2200              	.LVL131:
  103:DSP/Track.cpp ****             ph.readPos = ph.writePos - 1;
- 2222              		.loc 3 103 24 view .LVU583
- 2223              	.LBE880:
- 2224              	.LBE889:
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2225              		.loc 3 137 5 is_stmt 1 view .LVU584
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2226              		.loc 3 137 26 view .LVU585
- 2227 00a8 EAD1     		bne	.L123
- 2228 00aa C8E7     		b	.L124
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 72
+ 2201              		.loc 3 103 24 view .LVU581
+ 2202              	.LBE880:
+ 2203              	.LBE889:
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2204              		.loc 3 132 5 is_stmt 1 view .LVU582
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2205              		.loc 3 132 26 view .LVU583
+ 2206 00a8 EAD1     		bne	.L122
+ 2207 00aa C8E7     		b	.L123
+ 2208              	.LVL132:
+ 2209              	.L112:
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2210              		.loc 3 132 26 is_stmt 0 view .LVU584
+ 2211              	.LBE895:
+ 2212              		.loc 3 143 1 view .LVU585
+ 2213 00ac 02B0     		add	sp, sp, #8
+ 2214              		.cfi_remember_state
+ 2215              		.cfi_def_cfa_offset 32
+ 2216              		@ sp needed
+ 2217 00ae BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 2218              	.LVL133:
+ 2219              	.L116:
+ 2220              		.cfi_restore_state
+ 2221              		.loc 3 143 1 view .LVU586
+ 2222 00b2 D5F81080 		ldr	r8, [r5, #16]
+ 2223 00b6 03EB860E 		add	lr, r3, r6, lsl #2
+ 2224 00ba 02E0     		b	.L121
+ 2225              	.LVL134:
+ 2226              	.L119:
+ 2227              	.LBB896:
+ 2228              	.LBB890:
+ 2229              	.LBB881:
+ 2230              	.LBB867:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 72
 
 
- 2229              	.LVL133:
- 2230              	.L113:
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2231              		.loc 3 137 26 is_stmt 0 view .LVU586
- 2232              	.LBE895:
- 2233              		.loc 3 148 1 view .LVU587
- 2234 00ac 02B0     		add	sp, sp, #8
- 2235              		.cfi_remember_state
- 2236              		.cfi_def_cfa_offset 32
- 2237              		@ sp needed
- 2238 00ae BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
- 2239              	.LVL134:
- 2240              	.L117:
- 2241              		.cfi_restore_state
- 2242              		.loc 3 148 1 view .LVU588
- 2243 00b2 D5F81080 		ldr	r8, [r5, #16]
- 2244 00b6 03EB860E 		add	lr, r3, r6, lsl #2
- 2245 00ba 02E0     		b	.L122
- 2246              	.LVL135:
- 2247              	.L120:
- 2248              	.LBB896:
- 2249              	.LBB890:
- 2250              	.LBB881:
- 2251              	.LBB867:
- 2252              	.LBB868:
+ 2231              	.LBB868:
  109:DSP/Track.cpp ****             ph.readPos++;
- 2253              		.loc 3 109 23 view .LVU589
- 2254 00bc AC60     		str	r4, [r5, #8]
- 2255              	.L121:
+ 2232              		.loc 3 109 23 view .LVU587
+ 2233 00bc AC60     		str	r4, [r5, #8]
+ 2234              	.L120:
  109:DSP/Track.cpp ****             ph.readPos++;
- 2256              		.loc 3 109 23 view .LVU590
- 2257              	.LBE868:
- 2258              	.LBE867:
- 2259              	.LBE881:
- 2260              	.LBE890:
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2261              		.loc 3 137 5 is_stmt 1 view .LVU591
- 137:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
- 2262              		.loc 3 137 26 view .LVU592
- 2263 00be 7345     		cmp	r3, lr
- 2264 00c0 BDD0     		beq	.L124
- 2265              	.L122:
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2266              		.loc 3 139 9 view .LVU593
- 2267              	.LBB891:
- 2268              	.LBB882:
+ 2235              		.loc 3 109 23 view .LVU588
+ 2236              	.LBE868:
+ 2237              	.LBE867:
+ 2238              	.LBE881:
+ 2239              	.LBE890:
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2240              		.loc 3 132 5 is_stmt 1 view .LVU589
+ 132:DSP/Track.cpp ****     for(size_t i = 0 ; i < size ; i++)
+ 2241              		.loc 3 132 26 view .LVU590
+ 2242 00be 7345     		cmp	r3, lr
+ 2243 00c0 BDD0     		beq	.L123
+ 2244              	.L121:
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2245              		.loc 3 134 9 view .LVU591
+ 2246              	.LBB891:
+ 2247              	.LBB882:
  101:DSP/Track.cpp ****             ph.readPos = 0;
- 2269              		.loc 3 101 13 view .LVU594
- 2270              	.LBB873:
- 2271              	.LBB869:
+ 2248              		.loc 3 101 13 view .LVU592
+ 2249              	.LBB873:
+ 2250              	.LBB869:
  109:DSP/Track.cpp ****             ph.readPos++;
- 2272              		.loc 3 109 13 view .LVU595
- 2273              	.LBE869:
- 2274              	.LBE873:
- 2275              	.LBE882:
- 2276              	.LBE891:
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 73
-
-
- 2277              		.loc 3 139 44 is_stmt 0 view .LVU596
- 2278 00c2 02EB8400 		add	r0, r2, r4, lsl #2
- 2279              	.LBB892:
- 2280              	.LBB883:
- 2281              	.LBB874:
- 2282              	.LBB870:
+ 2251              		.loc 3 109 13 view .LVU593
+ 2252              	.LBE869:
+ 2253              	.LBE873:
+ 2254              	.LBE882:
+ 2255              	.LBE891:
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2256              		.loc 3 134 44 is_stmt 0 view .LVU594
+ 2257 00c2 02EB8400 		add	r0, r2, r4, lsl #2
+ 2258              	.LBB892:
+ 2259              	.LBB883:
+ 2260              	.LBB874:
+ 2261              	.LBB870:
  106:DSP/Track.cpp ****         if(ph.readPos >= ti.loopLength)
- 2283              		.loc 3 106 9 view .LVU597
- 2284 00c6 4445     		cmp	r4, r8
- 2285              	.LBE870:
- 2286              	.LBE874:
+ 2262              		.loc 3 106 9 view .LVU595
+ 2263 00c6 4445     		cmp	r4, r8
+ 2264              	.LBE870:
+ 2265              	.LBE874:
  101:DSP/Track.cpp ****             ph.readPos = 0;
- 2287              		.loc 3 101 24 view .LVU598
- 2288 00c8 4FF0000C 		mov	ip, #0
- 2289              	.LBE883:
- 2290              	.LBE892:
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2291              		.loc 3 139 44 view .LVU599
- 2292 00cc 0068     		ldr	r0, [r0]	@ float
- 139:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
- 2293              		.loc 3 139 22 view .LVU600
- 2294 00ce 43F8040B 		str	r0, [r3], #4	@ float
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2295              		.loc 3 140 9 is_stmt 1 view .LVU601
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2296              		.loc 3 140 44 is_stmt 0 view .LVU602
- 2297 00d2 07EB8400 		add	r0, r7, r4, lsl #2
- 2298              	.LBB893:
- 2299              	.LBB884:
- 2300              	.LBB875:
- 2301              	.LBB871:
+ 2266              		.loc 3 101 24 view .LVU596
+ 2267 00c8 4FF0000C 		mov	ip, #0
+ 2268              	.LBE883:
+ 2269              	.LBE892:
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2270              		.loc 3 134 44 view .LVU597
+ 2271 00cc 0068     		ldr	r0, [r0]	@ float
+ 134:DSP/Track.cpp ****         output[L][i] = buffer[L][ph.readPos];
+ 2272              		.loc 3 134 22 view .LVU598
+ 2273 00ce 43F8040B 		str	r0, [r3], #4	@ float
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2274              		.loc 3 135 9 is_stmt 1 view .LVU599
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 73
+
+
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2275              		.loc 3 135 44 is_stmt 0 view .LVU600
+ 2276 00d2 07EB8400 		add	r0, r7, r4, lsl #2
+ 2277              	.LBB893:
+ 2278              	.LBB884:
+ 2279              	.LBB875:
+ 2280              	.LBB871:
  109:DSP/Track.cpp ****             ph.readPos++;
- 2302              		.loc 3 109 23 view .LVU603
- 2303 00d6 04F10104 		add	r4, r4, #1
- 2304              	.LBE871:
- 2305              	.LBE875:
- 2306              	.LBE884:
- 2307              	.LBE893:
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2308              		.loc 3 140 44 view .LVU604
- 2309 00da 0068     		ldr	r0, [r0]	@ float
- 140:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
- 2310              		.loc 3 140 22 view .LVU605
- 2311 00dc 41F8040B 		str	r0, [r1], #4	@ float
- 142:DSP/Track.cpp ****         incrementReadPos();
- 2312              		.loc 3 142 9 is_stmt 1 view .LVU606
- 2313              	.LBB894:
+ 2281              		.loc 3 109 23 view .LVU601
+ 2282 00d6 04F10104 		add	r4, r4, #1
+ 2283              	.LBE871:
+ 2284              	.LBE875:
+ 2285              	.LBE884:
+ 2286              	.LBE893:
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2287              		.loc 3 135 44 view .LVU602
+ 2288 00da 0068     		ldr	r0, [r0]	@ float
+ 135:DSP/Track.cpp ****         output[R][i] = buffer[R][ph.readPos];
+ 2289              		.loc 3 135 22 view .LVU603
+ 2290 00dc 41F8040B 		str	r0, [r1], #4	@ float
+ 137:DSP/Track.cpp ****         incrementReadPos();
+ 2291              		.loc 3 137 9 is_stmt 1 view .LVU604
+ 2292              	.LBB894:
   96:DSP/Track.cpp **** void Track::incrementReadPos()
- 2314              		.loc 3 96 6 view .LVU607
- 2315              	.LBB885:
+ 2293              		.loc 3 96 6 view .LVU605
+ 2294              	.LBB885:
   98:DSP/Track.cpp ****     if(state == RECORDING)
- 2316              		.loc 3 98 5 view .LVU608
+ 2295              		.loc 3 98 5 view .LVU606
  104:DSP/Track.cpp ****     } else if(state == PLAYING)
- 2317              		.loc 3 104 12 view .LVU609
- 2318              	.LBB876:
- 2319              	.LBI867:
+ 2296              		.loc 3 104 12 view .LVU607
+ 2297              	.LBB876:
+ 2298              	.LBI867:
   96:DSP/Track.cpp **** void Track::incrementReadPos()
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 74
-
-
- 2320              		.loc 3 96 6 view .LVU610
- 2321              	.LBB872:
+ 2299              		.loc 3 96 6 view .LVU608
+ 2300              	.LBB872:
  106:DSP/Track.cpp ****         if(ph.readPos >= ti.loopLength)
- 2322              		.loc 3 106 9 view .LVU611
- 2323 00e0 ECD3     		bcc	.L120
- 2324              	.LBE872:
- 2325              	.LBE876:
+ 2301              		.loc 3 106 9 view .LVU609
+ 2302 00e0 ECD3     		bcc	.L119
+ 2303              	.LBE872:
+ 2304              	.LBE876:
  101:DSP/Track.cpp ****             ph.readPos = 0;
- 2326              		.loc 3 101 24 is_stmt 0 view .LVU612
- 2327 00e2 6446     		mov	r4, ip
- 2328 00e4 C5F808C0 		str	ip, [r5, #8]
- 2329 00e8 E9E7     		b	.L121
- 2330              	.LBE885:
- 2331              	.LBE894:
- 2332              	.LBE896:
- 2333              		.cfi_endproc
- 2334              	.LFE5672:
- 2336 00ea 00BF     		.text
- 2337              	.Letext0:
- 2338              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 2339              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 2340              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 2341              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 2342              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 2343              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 2344              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 2345              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 2346              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 2347              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
- 2348              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
- 2349              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 2350              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 2351              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 2352              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
- 2353              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 2354              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
- 2355              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
- 2356              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
- 2357              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
- 2358              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
- 2359              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
- 2360              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
- 2361              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
- 2362              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/shared_ptr_base.
- 2363              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
- 2364              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
- 2365              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 2366              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/concurrence.h"
- 2367              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 2368              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 2369              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
- 2370              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 2371              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 2372              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
- 2373              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
- 2374              		.file 45 "../../../libDaisy//src/daisy_core.h"
- 2375              		.file 46 "../../../libDaisy//src/per/tim.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 75
+ 2305              		.loc 3 101 24 is_stmt 0 view .LVU610
+ 2306 00e2 6446     		mov	r4, ip
+ 2307 00e4 C5F808C0 		str	ip, [r5, #8]
+ 2308 00e8 E9E7     		b	.L120
+ 2309              	.LBE885:
+ 2310              	.LBE894:
+ 2311              	.LBE896:
+ 2312              		.cfi_endproc
+ 2313              	.LFE5671:
+ 2315 00ea 00BF     		.text
+ 2316              	.Letext0:
+ 2317              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 2318              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 2319              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 2320              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 2321              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 74
 
 
- 2376              		.file 47 "../../../libDaisy//src/sys/system.h"
- 2377              		.file 48 "../../../libDaisy//src/per/qspi.h"
- 2378              		.file 49 "../../../libDaisy//src/per/dac.h"
- 2379              		.file 50 "../../../libDaisy//src/per/sai.h"
- 2380              		.file 51 "../../../libDaisy//src/hid/audio.h"
- 2381              		.file 52 "../../../libDaisy//src/per/adc.h"
- 2382              		.file 53 "../../../libDaisy//src/hid/usb.h"
- 2383              		.file 54 "../../../libDaisy//src/util/wav_format.h"
- 2384              		.file 55 "../../../libDaisy//src/dev/max11300.h"
- 2385              		.file 56 "../../../libDaisy//src/daisy_seed.h"
- 2386              		.file 57 "../../../libDaisy//src/per/gpio.h"
- 2387              		.file 58 "../../../libDaisy//src/dev/sdram.h"
- 2388              		.file 59 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 2389              		.file 60 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 2390              		.file 61 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
- 2391              		.file 62 "../../../DaisySP//Source/Control/adenv.h"
- 2392              		.file 63 "../../../DaisySP//Source/Utility/dsp.h"
- 2393              		.file 64 "../../../DaisySP//Source/Utility/delayline.h"
- 2394              		.file 65 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
- 2395              		.file 66 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
- 2396              		.file 67 "DSP/FX/../../Parameters/AudioParameter.h"
- 2397              		.file 68 "DSP/FX/Waveshaper.h"
- 2398              		.file 69 "DSP/FX/Delay.h"
- 2399              		.file 70 "DSP/FX/Reverb/comb.hpp"
- 2400              		.file 71 "DSP/FX/Reverb/allpass.hpp"
- 2401              		.file 72 "../../../libDaisy//src/dev/sr_595.h"
- 2402              		.file 73 "DSP/FX/Reverb/tuning.h"
- 2403              		.file 74 "DSP/FX/Reverb/revmodel.hpp"
- 2404              		.file 75 "DSP/FX/Reverb/Reverb.h"
- 2405              		.file 76 "DSP/Track.h"
- 2406              		.file 77 "<built-in>"
- 2407              		.file 78 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/functexcept.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s 			page 76
+ 2322              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 2323              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 2324              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 2325              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 2326              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 2327              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 2328              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 2329              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 2330              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 2331              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 2332              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 2333              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 2334              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 2335              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 2336              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 2337              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 2338              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
+ 2339              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
+ 2340              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
+ 2341              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/shared_ptr_base.
+ 2342              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
+ 2343              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
+ 2344              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 2345              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/concurrence.h"
+ 2346              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 2347              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 2348              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 2349              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 2350              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 2351              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 2352              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 2353              		.file 45 "../../../libDaisy//src/daisy_core.h"
+ 2354              		.file 46 "../../../libDaisy//src/per/tim.h"
+ 2355              		.file 47 "../../../libDaisy//src/sys/system.h"
+ 2356              		.file 48 "../../../libDaisy//src/per/qspi.h"
+ 2357              		.file 49 "../../../libDaisy//src/per/dac.h"
+ 2358              		.file 50 "../../../libDaisy//src/per/sai.h"
+ 2359              		.file 51 "../../../libDaisy//src/hid/audio.h"
+ 2360              		.file 52 "../../../libDaisy//src/per/adc.h"
+ 2361              		.file 53 "../../../libDaisy//src/hid/usb.h"
+ 2362              		.file 54 "../../../libDaisy//src/util/wav_format.h"
+ 2363              		.file 55 "../../../libDaisy//src/dev/max11300.h"
+ 2364              		.file 56 "../../../libDaisy//src/daisy_seed.h"
+ 2365              		.file 57 "../../../libDaisy//src/per/gpio.h"
+ 2366              		.file 58 "../../../libDaisy//src/dev/sdram.h"
+ 2367              		.file 59 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 2368              		.file 60 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 2369              		.file 61 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 2370              		.file 62 "../../../DaisySP//Source/Control/adenv.h"
+ 2371              		.file 63 "../../../DaisySP//Source/Utility/dsp.h"
+ 2372              		.file 64 "../../../DaisySP//Source/Utility/delayline.h"
+ 2373              		.file 65 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 2374              		.file 66 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 2375              		.file 67 "DSP/FX/../../Parameters/AudioParameter.h"
+ 2376              		.file 68 "DSP/FX/Waveshaper.h"
+ 2377              		.file 69 "DSP/FX/Delay.h"
+ 2378              		.file 70 "DSP/FX/Reverb/comb.hpp"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 75
+
+
+ 2379              		.file 71 "DSP/FX/Reverb/allpass.hpp"
+ 2380              		.file 72 "../../../libDaisy//src/dev/sr_595.h"
+ 2381              		.file 73 "DSP/FX/Reverb/tuning.h"
+ 2382              		.file 74 "DSP/FX/Reverb/revmodel.hpp"
+ 2383              		.file 75 "DSP/FX/Reverb/Reverb.h"
+ 2384              		.file 76 "DSP/Track.h"
+ 2385              		.file 77 "<built-in>"
+ 2386              		.file 78 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/functexcept.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s 			page 76
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Track.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:19     .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:25     .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:138    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:144    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:245    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:251    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:351    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:357    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:479    .text._ZN5Track4initEPPf:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:486    .text._ZN5Track4initEPPf:0000000000000000 _ZN5Track4initEPPf
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:629    .text._ZN5Track4initEPPf:0000000000000058 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:637    .text._ZN5Track6initIOE7TrackIO:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:644    .text._ZN5Track6initIOE7TrackIO:0000000000000000 _ZN5Track6initIOE7TrackIO
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1284   .text._ZN5Track6initIOE7TrackIO:0000000000000104 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1300   .text._ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1307   .text._ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE:0000000000000000 _ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1351   .text._ZN5Track4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1358   .text._ZN5Track4tickEv:0000000000000000 _ZN5Track4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1544   .text._ZN5Track11clearBufferEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1551   .text._ZN5Track11clearBufferEv:0000000000000000 _ZN5Track11clearBufferEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1643   .text._ZN5Track14setIsRecordingEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1650   .text._ZN5Track14setIsRecordingEv:0000000000000000 _ZN5Track14setIsRecordingEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1727   .text._ZN5Track12setIsPlayingEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1734   .text._ZN5Track12setIsPlayingEv:0000000000000000 _ZN5Track12setIsPlayingEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1801   .text._ZN5Track17incrementWritePosEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1808   .text._ZN5Track17incrementWritePosEv:0000000000000000 _ZN5Track17incrementWritePosEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1835   .text._ZN5Track16incrementReadPosEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1842   .text._ZN5Track16incrementReadPosEv:0000000000000000 _ZN5Track16incrementReadPosEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1907   .text._ZN5Track7prepareEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1914   .text._ZN5Track7prepareEv:0000000000000000 _ZN5Track7prepareEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1928   .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:1935   .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 _ZN5Track17processInputBlockEPKfS1_j
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:2033   .text._ZN5Track18processOutputBlockEPPfj:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccMlzcI4.s:2040   .text._ZN5Track18processOutputBlockEPPfj:0000000000000000 _ZN5Track18processOutputBlockEPPfj
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:19     .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:25     .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E9_M_invokeERKSt9_Any_data
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:138    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:144    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:245    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:251    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE0_E10_M_managerERSt9_Any_dataRKS5_St18_Manager_operation
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:351    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:357    .text._ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data:0000000000000000 _ZNSt17_Function_handlerIFvvEZN5Track6initIOE7TrackIOEUlvE_E9_M_invokeERKSt9_Any_data
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:479    .text._ZN5Track4initEPPf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:486    .text._ZN5Track4initEPPf:0000000000000000 _ZN5Track4initEPPf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:629    .text._ZN5Track4initEPPf:0000000000000058 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:637    .text._ZN5Track6initIOE7TrackIO:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:644    .text._ZN5Track6initIOE7TrackIO:0000000000000000 _ZN5Track6initIOE7TrackIO
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1284   .text._ZN5Track6initIOE7TrackIO:0000000000000104 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1300   .text._ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1307   .text._ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE:0000000000000000 _ZN5Track6initFXEPN5daisy9DaisySeedEPPN7daisysp9DelayLineIfLj240000EEE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1351   .text._ZN5Track4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1358   .text._ZN5Track4tickEv:0000000000000000 _ZN5Track4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1544   .text._ZN5Track11clearBufferEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1551   .text._ZN5Track11clearBufferEv:0000000000000000 _ZN5Track11clearBufferEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1643   .text._ZN5Track14setIsRecordingEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1650   .text._ZN5Track14setIsRecordingEv:0000000000000000 _ZN5Track14setIsRecordingEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1727   .text._ZN5Track12setIsPlayingEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1734   .text._ZN5Track12setIsPlayingEv:0000000000000000 _ZN5Track12setIsPlayingEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1801   .text._ZN5Track17incrementWritePosEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1808   .text._ZN5Track17incrementWritePosEv:0000000000000000 _ZN5Track17incrementWritePosEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1835   .text._ZN5Track16incrementReadPosEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1842   .text._ZN5Track16incrementReadPosEv:0000000000000000 _ZN5Track16incrementReadPosEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1907   .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:1914   .text._ZN5Track17processInputBlockEPKfS1_j:0000000000000000 _ZN5Track17processInputBlockEPKfS1_j
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:2012   .text._ZN5Track18processOutputBlockEPPfj:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc9iqxlh.s:2019   .text._ZN5Track18processOutputBlockEPPfj:0000000000000000 _ZN5Track18processOutputBlockEPPfj
 
 UNDEFINED SYMBOLS
 memset

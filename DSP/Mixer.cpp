@@ -86,11 +86,6 @@ void Mixer::tick()
     master.param.tick();
 }
 
-void Mixer::prepare()
-{
-
-}
-
 void Mixer::processInputBlock(const float* left, const float* right, size_t size)
 {
     track1.track.processInputBlock(left, right, size);

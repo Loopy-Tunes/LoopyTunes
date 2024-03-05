@@ -327,8 +327,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/Mixer.o
  .data          0x0000000000000000        0x0 build/Mixer.o
  .bss           0x0000000000000000        0x0 build/Mixer.o
- .text._ZN5Mixer7prepareEv
-                0x0000000000000000        0x4 build/Mixer.o
  .text._ZN5Mixer11panChannelsEj
                 0x0000000000000000       0xf4 build/Mixer.o
  .text._ZN5Mixer12panMixBufferEPPffj
@@ -348,18 +346,12 @@ Discarded input sections
                 0x0000000000000000       0x10 build/Track.o
  .text._ZN5Track16incrementReadPosEv
                 0x0000000000000000       0x28 build/Track.o
- .text._ZN5Track7prepareEv
-                0x0000000000000000        0x4 build/Track.o
  .text          0x0000000000000000        0x0 build/Delay.o
  .data          0x0000000000000000        0x0 build/Delay.o
  .bss           0x0000000000000000        0x0 build/Delay.o
- .text._ZN5Delay7prepareEv
-                0x0000000000000000        0x4 build/Delay.o
  .text          0x0000000000000000        0x0 build/Waveshaper.o
  .data          0x0000000000000000        0x0 build/Waveshaper.o
  .bss           0x0000000000000000        0x0 build/Waveshaper.o
- .text._ZN10Waveshaper7prepareEv
-                0x0000000000000000        0x4 build/Waveshaper.o
  .text._ZN10Waveshaper17calculateAutoGainEv
                 0x0000000000000000        0x4 build/Waveshaper.o
  .text._ZN10Waveshaper11processSineEPPfj
@@ -6343,544 +6335,544 @@ LOAD /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../..
 LOAD /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a
 LOAD /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a
 
-.debug_info     0x0000000000000000    0xe3312
+.debug_info     0x0000000000000000    0xe3110
  .debug_info    0x0000000000000000      0x1d0 build/startup_stm32h750xx.o
- .debug_info    0x00000000000001d0    0x108e8 build/LoopyTunes.o
- .debug_info    0x0000000000010ab8    0x125ad build/Mixer.o
- .debug_info    0x0000000000023065     0xade9 build/Track.o
- .debug_info    0x000000000002de4e     0xaded build/Delay.o
- .debug_info    0x0000000000038c3b     0xbdc7 build/Waveshaper.o
- .debug_info    0x0000000000044a02     0xd7fe build/Reverb.o
- .debug_info    0x0000000000052200     0x33f4 build/revmodel.o
- .debug_info    0x00000000000555f4     0x1a19 build/comb.o
- .debug_info    0x000000000005700d     0x195c build/allpass.o
- .debug_info    0x0000000000058969     0x51b4 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
- .debug_info    0x000000000005db1d     0x1485 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
- .debug_info    0x000000000005efa2     0x20f0 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
- .debug_info    0x0000000000061092     0x3336 ../../../libDaisy//build/libdaisy.a(sdram.o)
- .debug_info    0x00000000000643c8     0x31e3 ../../../libDaisy//build/libdaisy.a(audio.o)
- .debug_info    0x00000000000675ab     0x351a ../../../libDaisy//build/libdaisy.a(logger.o)
- .debug_info    0x000000000006aac5     0x177b ../../../libDaisy//build/libdaisy.a(switch.o)
- .debug_info    0x000000000006c240     0x3137 ../../../libDaisy//build/libdaisy.a(usb.o)
- .debug_info    0x000000000006f377     0x405c ../../../libDaisy//build/libdaisy.a(adc.o)
- .debug_info    0x00000000000733d3     0x3490 ../../../libDaisy//build/libdaisy.a(gpio.o)
- .debug_info    0x0000000000076863     0x6f26 ../../../libDaisy//build/libdaisy.a(i2c.o)
- .debug_info    0x000000000007d789     0x7e26 ../../../libDaisy//build/libdaisy.a(qspi.o)
- .debug_info    0x00000000000855af     0x4962 ../../../libDaisy//build/libdaisy.a(sai.o)
- .debug_info    0x0000000000089f11     0x52c8 ../../../libDaisy//build/libdaisy.a(system.o)
- .debug_info    0x000000000008f1d9      0xa4b ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
- .debug_info    0x000000000008fc24      0xc8a ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
- .debug_info    0x00000000000908ae     0x2852 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
- .debug_info    0x0000000000093100      0x8bd ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
- .debug_info    0x00000000000939bd     0x2805 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
- .debug_info    0x00000000000961c2      0x80c ../../../libDaisy//build/libdaisy.a(hal_map.o)
- .debug_info    0x00000000000969ce     0x16d6 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
- .debug_info    0x00000000000980a4     0x2f24 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
- .debug_info    0x000000000009afc8     0x2ecc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
- .debug_info    0x000000000009de94     0x13f0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
- .debug_info    0x000000000009f284      0xf2f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
- .debug_info    0x00000000000a01b3      0xd4d ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
- .debug_info    0x00000000000a0f00     0x1472 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
- .debug_info    0x00000000000a2372     0x6323 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
- .debug_info    0x00000000000a8695      0xe5a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
- .debug_info    0x00000000000a94ef     0x1a92 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
- .debug_info    0x00000000000aaf81      0xa59 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
- .debug_info    0x00000000000ab9da      0xf42 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
- .debug_info    0x00000000000ac91c     0x1ed9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
- .debug_info    0x00000000000ae7f5     0x1267 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
- .debug_info    0x00000000000afa5c     0x16c3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
- .debug_info    0x00000000000b111f     0x2063 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
- .debug_info    0x00000000000b3182     0x12ab ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
- .debug_info    0x00000000000b442d      0xd17 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
- .debug_info    0x00000000000b5144     0x22f2 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
- .debug_info    0x00000000000b7436     0x13fa ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
- .debug_info    0x00000000000b8830      0xe51 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
- .debug_info    0x00000000000b9681      0xfd1 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
- .debug_info    0x00000000000ba652      0x823 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
- .debug_info    0x00000000000bae75     0x16cc ../../../libDaisy//build/libdaisy.a(usbh_core.o)
- .debug_info    0x00000000000bc541      0xb92 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
- .debug_info    0x00000000000bd0d3     0x2dbb ../../../libDaisy//build/libdaisy.a(rng.o)
- .debug_info    0x00000000000bfe8e     0x74c5 ../../../libDaisy//build/libdaisy.a(spi.o)
- .debug_info    0x00000000000c7353     0x4fed ../../../libDaisy//build/libdaisy.a(tim.o)
- .debug_info    0x00000000000cc340     0x95cc ../../../libDaisy//build/libdaisy.a(uart.o)
- .debug_info    0x00000000000d590c     0x11ef ../../../libDaisy//build/libdaisy.a(dma.o)
- .debug_info    0x00000000000d6afb      0xffe ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
- .debug_info    0x00000000000d7af9     0x1bc0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
- .debug_info    0x00000000000d96b9     0x4b86 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
- .debug_info    0x00000000000de23f     0x19e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
- .debug_info    0x00000000000dfc24     0x28fc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
- .debug_info    0x00000000000e2520      0xdf2 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_info    0x00000000000001d0    0x1087c build/LoopyTunes.o
+ .debug_info    0x0000000000010a4c    0x1251a build/Mixer.o
+ .debug_info    0x0000000000022f66     0xad71 build/Track.o
+ .debug_info    0x000000000002dcd7     0xadab build/Delay.o
+ .debug_info    0x0000000000038a82     0xbd7e build/Waveshaper.o
+ .debug_info    0x0000000000044800     0xd7fe build/Reverb.o
+ .debug_info    0x0000000000051ffe     0x33f4 build/revmodel.o
+ .debug_info    0x00000000000553f2     0x1a19 build/comb.o
+ .debug_info    0x0000000000056e0b     0x195c build/allpass.o
+ .debug_info    0x0000000000058767     0x51b4 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_info    0x000000000005d91b     0x1485 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_info    0x000000000005eda0     0x20f0 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_info    0x0000000000060e90     0x3336 ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_info    0x00000000000641c6     0x31e3 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_info    0x00000000000673a9     0x351a ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_info    0x000000000006a8c3     0x177b ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_info    0x000000000006c03e     0x3137 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_info    0x000000000006f175     0x405c ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_info    0x00000000000731d1     0x3490 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_info    0x0000000000076661     0x6f26 ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_info    0x000000000007d587     0x7e26 ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_info    0x00000000000853ad     0x4962 ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_info    0x0000000000089d0f     0x52c8 ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_info    0x000000000008efd7      0xa4b ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_info    0x000000000008fa22      0xc8a ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_info    0x00000000000906ac     0x2852 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_info    0x0000000000092efe      0x8bd ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_info    0x00000000000937bb     0x2805 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_info    0x0000000000095fc0      0x80c ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_info    0x00000000000967cc     0x16d6 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_info    0x0000000000097ea2     0x2f24 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_info    0x000000000009adc6     0x2ecc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_info    0x000000000009dc92     0x13f0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_info    0x000000000009f082      0xf2f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_info    0x000000000009ffb1      0xd4d ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_info    0x00000000000a0cfe     0x1472 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_info    0x00000000000a2170     0x6323 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_info    0x00000000000a8493      0xe5a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_info    0x00000000000a92ed     0x1a92 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_info    0x00000000000aad7f      0xa59 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_info    0x00000000000ab7d8      0xf42 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_info    0x00000000000ac71a     0x1ed9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_info    0x00000000000ae5f3     0x1267 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_info    0x00000000000af85a     0x16c3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_info    0x00000000000b0f1d     0x2063 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_info    0x00000000000b2f80     0x12ab ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_info    0x00000000000b422b      0xd17 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_info    0x00000000000b4f42     0x22f2 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_info    0x00000000000b7234     0x13fa ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_info    0x00000000000b862e      0xe51 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_info    0x00000000000b947f      0xfd1 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_info    0x00000000000ba450      0x823 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_info    0x00000000000bac73     0x16cc ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_info    0x00000000000bc33f      0xb92 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_info    0x00000000000bced1     0x2dbb ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_info    0x00000000000bfc8c     0x74c5 ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_info    0x00000000000c7151     0x4fed ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_info    0x00000000000cc13e     0x95cc ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_info    0x00000000000d570a     0x11ef ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_info    0x00000000000d68f9      0xffe ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_info    0x00000000000d78f7     0x1bc0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_info    0x00000000000d94b7     0x4b86 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_info    0x00000000000de03d     0x19e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_info    0x00000000000dfa22     0x28fc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_info    0x00000000000e231e      0xdf2 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_abbrev   0x0000000000000000    0x14b73
+.debug_abbrev   0x0000000000000000    0x14b61
  .debug_abbrev  0x0000000000000000      0x136 build/startup_stm32h750xx.o
  .debug_abbrev  0x0000000000000136      0xc34 build/LoopyTunes.o
- .debug_abbrev  0x0000000000000d6a      0xdca build/Mixer.o
- .debug_abbrev  0x0000000000001b34      0xd77 build/Track.o
- .debug_abbrev  0x00000000000028ab      0xd03 build/Delay.o
- .debug_abbrev  0x00000000000035ae      0xce8 build/Waveshaper.o
- .debug_abbrev  0x0000000000004296      0xd44 build/Reverb.o
- .debug_abbrev  0x0000000000004fda      0x42f build/revmodel.o
- .debug_abbrev  0x0000000000005409      0x251 build/comb.o
- .debug_abbrev  0x000000000000565a      0x253 build/allpass.o
- .debug_abbrev  0x00000000000058ad      0x943 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
- .debug_abbrev  0x00000000000061f0      0x3dd ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
- .debug_abbrev  0x00000000000065cd      0x510 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
- .debug_abbrev  0x0000000000006add      0x4fe ../../../libDaisy//build/libdaisy.a(sdram.o)
- .debug_abbrev  0x0000000000006fdb      0x687 ../../../libDaisy//build/libdaisy.a(audio.o)
- .debug_abbrev  0x0000000000007662      0x74a ../../../libDaisy//build/libdaisy.a(logger.o)
- .debug_abbrev  0x0000000000007dac      0x49e ../../../libDaisy//build/libdaisy.a(switch.o)
- .debug_abbrev  0x000000000000824a      0x521 ../../../libDaisy//build/libdaisy.a(usb.o)
- .debug_abbrev  0x000000000000876b      0x7e6 ../../../libDaisy//build/libdaisy.a(adc.o)
- .debug_abbrev  0x0000000000008f51      0x5f7 ../../../libDaisy//build/libdaisy.a(gpio.o)
- .debug_abbrev  0x0000000000009548      0x99c ../../../libDaisy//build/libdaisy.a(i2c.o)
- .debug_abbrev  0x0000000000009ee4      0x8ea ../../../libDaisy//build/libdaisy.a(qspi.o)
- .debug_abbrev  0x000000000000a7ce      0x7c2 ../../../libDaisy//build/libdaisy.a(sai.o)
- .debug_abbrev  0x000000000000af90      0x8b8 ../../../libDaisy//build/libdaisy.a(system.o)
- .debug_abbrev  0x000000000000b848      0x14a ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
- .debug_abbrev  0x000000000000b992      0x3b5 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
- .debug_abbrev  0x000000000000bd47      0x352 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
- .debug_abbrev  0x000000000000c099      0x256 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
- .debug_abbrev  0x000000000000c2ef      0x435 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
- .debug_abbrev  0x000000000000c724      0x193 ../../../libDaisy//build/libdaisy.a(hal_map.o)
- .debug_abbrev  0x000000000000c8b7      0x2b5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
- .debug_abbrev  0x000000000000cb6c      0x31b ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
- .debug_abbrev  0x000000000000ce87      0x38d ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
- .debug_abbrev  0x000000000000d214      0x35f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
- .debug_abbrev  0x000000000000d573      0x343 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
- .debug_abbrev  0x000000000000d8b6      0x237 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
- .debug_abbrev  0x000000000000daed      0x331 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
- .debug_abbrev  0x000000000000de1e      0x3cb ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
- .debug_abbrev  0x000000000000e1e9      0x1e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
- .debug_abbrev  0x000000000000e3ce      0x386 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
- .debug_abbrev  0x000000000000e754      0x2eb ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
- .debug_abbrev  0x000000000000ea3f      0x327 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
- .debug_abbrev  0x000000000000ed66      0x300 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
- .debug_abbrev  0x000000000000f066      0x2d7 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
- .debug_abbrev  0x000000000000f33d      0x309 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
- .debug_abbrev  0x000000000000f646      0x334 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
- .debug_abbrev  0x000000000000f97a      0x25e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
- .debug_abbrev  0x000000000000fbd8      0x19b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
- .debug_abbrev  0x000000000000fd73      0x41b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
- .debug_abbrev  0x000000000001018e      0x2ff ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
- .debug_abbrev  0x000000000001048d      0x2d4 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
- .debug_abbrev  0x0000000000010761      0x38a ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
- .debug_abbrev  0x0000000000010aeb      0x18b ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
- .debug_abbrev  0x0000000000010c76      0x419 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
- .debug_abbrev  0x000000000001108f      0x296 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
- .debug_abbrev  0x0000000000011325      0x523 ../../../libDaisy//build/libdaisy.a(rng.o)
- .debug_abbrev  0x0000000000011848      0x9a4 ../../../libDaisy//build/libdaisy.a(spi.o)
- .debug_abbrev  0x00000000000121ec      0x851 ../../../libDaisy//build/libdaisy.a(tim.o)
- .debug_abbrev  0x0000000000012a3d      0xb85 ../../../libDaisy//build/libdaisy.a(uart.o)
- .debug_abbrev  0x00000000000135c2      0x1f6 ../../../libDaisy//build/libdaisy.a(dma.o)
- .debug_abbrev  0x00000000000137b8      0x2cd ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
- .debug_abbrev  0x0000000000013a85      0x3d0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
- .debug_abbrev  0x0000000000013e55      0x366 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
- .debug_abbrev  0x00000000000141bb      0x301 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
- .debug_abbrev  0x00000000000144bc      0x3f4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
- .debug_abbrev  0x00000000000148b0      0x2c3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_abbrev  0x0000000000000d6a      0xdbc build/Mixer.o
+ .debug_abbrev  0x0000000000001b26      0xd77 build/Track.o
+ .debug_abbrev  0x000000000000289d      0xd03 build/Delay.o
+ .debug_abbrev  0x00000000000035a0      0xce4 build/Waveshaper.o
+ .debug_abbrev  0x0000000000004284      0xd44 build/Reverb.o
+ .debug_abbrev  0x0000000000004fc8      0x42f build/revmodel.o
+ .debug_abbrev  0x00000000000053f7      0x251 build/comb.o
+ .debug_abbrev  0x0000000000005648      0x253 build/allpass.o
+ .debug_abbrev  0x000000000000589b      0x943 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_abbrev  0x00000000000061de      0x3dd ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_abbrev  0x00000000000065bb      0x510 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_abbrev  0x0000000000006acb      0x4fe ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_abbrev  0x0000000000006fc9      0x687 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_abbrev  0x0000000000007650      0x74a ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_abbrev  0x0000000000007d9a      0x49e ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_abbrev  0x0000000000008238      0x521 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_abbrev  0x0000000000008759      0x7e6 ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_abbrev  0x0000000000008f3f      0x5f7 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_abbrev  0x0000000000009536      0x99c ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_abbrev  0x0000000000009ed2      0x8ea ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_abbrev  0x000000000000a7bc      0x7c2 ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_abbrev  0x000000000000af7e      0x8b8 ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_abbrev  0x000000000000b836      0x14a ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_abbrev  0x000000000000b980      0x3b5 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_abbrev  0x000000000000bd35      0x352 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_abbrev  0x000000000000c087      0x256 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_abbrev  0x000000000000c2dd      0x435 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_abbrev  0x000000000000c712      0x193 ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_abbrev  0x000000000000c8a5      0x2b5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_abbrev  0x000000000000cb5a      0x31b ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_abbrev  0x000000000000ce75      0x38d ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_abbrev  0x000000000000d202      0x35f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_abbrev  0x000000000000d561      0x343 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_abbrev  0x000000000000d8a4      0x237 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_abbrev  0x000000000000dadb      0x331 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_abbrev  0x000000000000de0c      0x3cb ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_abbrev  0x000000000000e1d7      0x1e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_abbrev  0x000000000000e3bc      0x386 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_abbrev  0x000000000000e742      0x2eb ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_abbrev  0x000000000000ea2d      0x327 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_abbrev  0x000000000000ed54      0x300 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_abbrev  0x000000000000f054      0x2d7 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_abbrev  0x000000000000f32b      0x309 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_abbrev  0x000000000000f634      0x334 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_abbrev  0x000000000000f968      0x25e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_abbrev  0x000000000000fbc6      0x19b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_abbrev  0x000000000000fd61      0x41b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_abbrev  0x000000000001017c      0x2ff ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_abbrev  0x000000000001047b      0x2d4 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_abbrev  0x000000000001074f      0x38a ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_abbrev  0x0000000000010ad9      0x18b ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_abbrev  0x0000000000010c64      0x419 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_abbrev  0x000000000001107d      0x296 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_abbrev  0x0000000000011313      0x523 ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_abbrev  0x0000000000011836      0x9a4 ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_abbrev  0x00000000000121da      0x851 ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_abbrev  0x0000000000012a2b      0xb85 ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_abbrev  0x00000000000135b0      0x1f6 ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_abbrev  0x00000000000137a6      0x2cd ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_abbrev  0x0000000000013a73      0x3d0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_abbrev  0x0000000000013e43      0x366 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_abbrev  0x00000000000141a9      0x301 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_abbrev  0x00000000000144aa      0x3f4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_abbrev  0x000000000001489e      0x2c3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_aranges  0x0000000000000000     0x3118
+.debug_aranges  0x0000000000000000     0x3100
  .debug_aranges
                 0x0000000000000000       0x28 build/startup_stm32h750xx.o
  .debug_aranges
                 0x0000000000000028       0x58 build/LoopyTunes.o
  .debug_aranges
-                0x0000000000000080      0x108 build/Mixer.o
+                0x0000000000000080      0x100 build/Mixer.o
  .debug_aranges
-                0x0000000000000188       0x98 build/Track.o
+                0x0000000000000180       0x90 build/Track.o
  .debug_aranges
-                0x0000000000000220       0x68 build/Delay.o
+                0x0000000000000210       0x60 build/Delay.o
  .debug_aranges
-                0x0000000000000288       0x90 build/Waveshaper.o
+                0x0000000000000270       0x90 build/Waveshaper.o
  .debug_aranges
-                0x0000000000000318       0xa0 build/Reverb.o
+                0x0000000000000300       0xa0 build/Reverb.o
  .debug_aranges
-                0x00000000000003b8       0xa0 build/revmodel.o
+                0x00000000000003a0       0xa0 build/revmodel.o
  .debug_aranges
-                0x0000000000000458       0x50 build/comb.o
+                0x0000000000000440       0x50 build/comb.o
  .debug_aranges
-                0x00000000000004a8       0x40 build/allpass.o
+                0x0000000000000490       0x40 build/allpass.o
  .debug_aranges
-                0x00000000000004e8       0xb8 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+                0x00000000000004d0       0xb8 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
  .debug_aranges
-                0x00000000000005a0       0x28 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+                0x0000000000000588       0x28 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
  .debug_aranges
-                0x00000000000005c8       0x28 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+                0x00000000000005b0       0x28 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
  .debug_aranges
-                0x00000000000005f0       0x58 ../../../libDaisy//build/libdaisy.a(sdram.o)
+                0x00000000000005d8       0x58 ../../../libDaisy//build/libdaisy.a(sdram.o)
  .debug_aranges
-                0x0000000000000648       0xe8 ../../../libDaisy//build/libdaisy.a(audio.o)
+                0x0000000000000630       0xe8 ../../../libDaisy//build/libdaisy.a(audio.o)
  .debug_aranges
-                0x0000000000000730      0x118 ../../../libDaisy//build/libdaisy.a(logger.o)
+                0x0000000000000718      0x118 ../../../libDaisy//build/libdaisy.a(logger.o)
  .debug_aranges
-                0x0000000000000848       0x30 ../../../libDaisy//build/libdaisy.a(switch.o)
+                0x0000000000000830       0x30 ../../../libDaisy//build/libdaisy.a(switch.o)
  .debug_aranges
-                0x0000000000000878       0x50 ../../../libDaisy//build/libdaisy.a(usb.o)
+                0x0000000000000860       0x50 ../../../libDaisy//build/libdaisy.a(usb.o)
  .debug_aranges
-                0x00000000000008c8       0x98 ../../../libDaisy//build/libdaisy.a(adc.o)
+                0x00000000000008b0       0x98 ../../../libDaisy//build/libdaisy.a(adc.o)
  .debug_aranges
-                0x0000000000000960       0x80 ../../../libDaisy//build/libdaisy.a(gpio.o)
+                0x0000000000000948       0x80 ../../../libDaisy//build/libdaisy.a(gpio.o)
  .debug_aranges
-                0x00000000000009e0      0x130 ../../../libDaisy//build/libdaisy.a(i2c.o)
+                0x00000000000009c8      0x130 ../../../libDaisy//build/libdaisy.a(i2c.o)
  .debug_aranges
-                0x0000000000000b10      0x128 ../../../libDaisy//build/libdaisy.a(qspi.o)
+                0x0000000000000af8      0x128 ../../../libDaisy//build/libdaisy.a(qspi.o)
  .debug_aranges
-                0x0000000000000c38      0x100 ../../../libDaisy//build/libdaisy.a(sai.o)
+                0x0000000000000c20      0x100 ../../../libDaisy//build/libdaisy.a(sai.o)
  .debug_aranges
-                0x0000000000000d38       0xe0 ../../../libDaisy//build/libdaisy.a(system.o)
+                0x0000000000000d20       0xe0 ../../../libDaisy//build/libdaisy.a(system.o)
  .debug_aranges
-                0x0000000000000e18       0x28 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+                0x0000000000000e00       0x28 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
  .debug_aranges
-                0x0000000000000e40       0x78 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+                0x0000000000000e28       0x78 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
  .debug_aranges
-                0x0000000000000eb8      0x108 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+                0x0000000000000ea0      0x108 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
  .debug_aranges
-                0x0000000000000fc0       0x60 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+                0x0000000000000fa8       0x60 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
  .debug_aranges
-                0x0000000000001020       0xd8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+                0x0000000000001008       0xd8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
  .debug_aranges
-                0x00000000000010f8       0x30 ../../../libDaisy//build/libdaisy.a(hal_map.o)
+                0x00000000000010e0       0x30 ../../../libDaisy//build/libdaisy.a(hal_map.o)
  .debug_aranges
-                0x0000000000001128      0x198 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+                0x0000000000001110      0x198 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
  .debug_aranges
-                0x00000000000012c0       0xd8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+                0x00000000000012a8       0xd8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
  .debug_aranges
-                0x0000000000001398       0xe0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+                0x0000000000001380       0xe0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
  .debug_aranges
-                0x0000000000001478       0xb0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+                0x0000000000001460       0xb0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
  .debug_aranges
-                0x0000000000001528       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+                0x0000000000001510       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
  .debug_aranges
-                0x00000000000015b0       0x58 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+                0x0000000000001598       0x58 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
  .debug_aranges
-                0x0000000000001608       0xa0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+                0x00000000000015f0       0xa0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
  .debug_aranges
-                0x00000000000016a8      0x1d8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+                0x0000000000001690      0x1d8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
  .debug_aranges
-                0x0000000000001880       0x48 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+                0x0000000000001868       0x48 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
  .debug_aranges
-                0x00000000000018c8       0xc0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+                0x00000000000018b0       0xc0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
  .debug_aranges
-                0x0000000000001988       0x58 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+                0x0000000000001970       0x58 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
  .debug_aranges
-                0x00000000000019e0      0x128 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+                0x00000000000019c8      0x128 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
  .debug_aranges
-                0x0000000000001b08       0xf8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+                0x0000000000001af0       0xf8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
  .debug_aranges
-                0x0000000000001c00       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+                0x0000000000001be8       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
  .debug_aranges
-                0x0000000000001c88       0xd0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+                0x0000000000001c70       0xd0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
  .debug_aranges
-                0x0000000000001d58      0x130 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+                0x0000000000001d40      0x130 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
  .debug_aranges
-                0x0000000000001e88       0xc8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+                0x0000000000001e70       0xc8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
  .debug_aranges
-                0x0000000000001f50       0xc8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+                0x0000000000001f38       0xc8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
  .debug_aranges
-                0x0000000000002018      0x190 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+                0x0000000000002000      0x190 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
  .debug_aranges
-                0x00000000000021a8       0x90 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+                0x0000000000002190       0x90 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
  .debug_aranges
-                0x0000000000002238       0xa8 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+                0x0000000000002220       0xa8 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
  .debug_aranges
-                0x00000000000022e0       0x48 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+                0x00000000000022c8       0x48 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
  .debug_aranges
-                0x0000000000002328       0x50 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+                0x0000000000002310       0x50 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
  .debug_aranges
-                0x0000000000002378       0xa8 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+                0x0000000000002360       0xa8 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
  .debug_aranges
-                0x0000000000002420       0x38 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+                0x0000000000002408       0x38 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
  .debug_aranges
-                0x0000000000002458       0x40 ../../../libDaisy//build/libdaisy.a(rng.o)
+                0x0000000000002440       0x40 ../../../libDaisy//build/libdaisy.a(rng.o)
  .debug_aranges
-                0x0000000000002498      0x188 ../../../libDaisy//build/libdaisy.a(spi.o)
+                0x0000000000002480      0x188 ../../../libDaisy//build/libdaisy.a(spi.o)
  .debug_aranges
-                0x0000000000002620      0x140 ../../../libDaisy//build/libdaisy.a(tim.o)
+                0x0000000000002608      0x140 ../../../libDaisy//build/libdaisy.a(tim.o)
  .debug_aranges
-                0x0000000000002760      0x1f8 ../../../libDaisy//build/libdaisy.a(uart.o)
+                0x0000000000002748      0x1f8 ../../../libDaisy//build/libdaisy.a(uart.o)
  .debug_aranges
-                0x0000000000002958       0x38 ../../../libDaisy//build/libdaisy.a(dma.o)
+                0x0000000000002940       0x38 ../../../libDaisy//build/libdaisy.a(dma.o)
  .debug_aranges
-                0x0000000000002990       0xb0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+                0x0000000000002978       0xb0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
  .debug_aranges
-                0x0000000000002a40      0x138 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+                0x0000000000002a28      0x138 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
  .debug_aranges
-                0x0000000000002b78      0x278 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+                0x0000000000002b60      0x278 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
  .debug_aranges
-                0x0000000000002df0      0x108 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+                0x0000000000002dd8      0x108 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
  .debug_aranges
-                0x0000000000002ef8      0x1b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+                0x0000000000002ee0      0x1b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
  .debug_aranges
-                0x00000000000030b0       0x68 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+                0x0000000000003098       0x68 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_ranges   0x0000000000000000    0x11b60
+.debug_ranges   0x0000000000000000    0x11b48
  .debug_ranges  0x0000000000000000       0x18 build/startup_stm32h750xx.o
  .debug_ranges  0x0000000000000018     0x18c8 build/LoopyTunes.o
- .debug_ranges  0x00000000000018e0     0x1980 build/Mixer.o
- .debug_ranges  0x0000000000003260      0x620 build/Track.o
- .debug_ranges  0x0000000000003880      0xa30 build/Delay.o
- .debug_ranges  0x00000000000042b0      0xb40 build/Waveshaper.o
- .debug_ranges  0x0000000000004df0      0xea8 build/Reverb.o
- .debug_ranges  0x0000000000005c98      0x268 build/revmodel.o
- .debug_ranges  0x0000000000005f00       0x40 build/comb.o
- .debug_ranges  0x0000000000005f40       0x30 build/allpass.o
- .debug_ranges  0x0000000000005f70      0x280 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
- .debug_ranges  0x00000000000061f0       0x18 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
- .debug_ranges  0x0000000000006208       0x90 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
- .debug_ranges  0x0000000000006298      0x118 ../../../libDaisy//build/libdaisy.a(sdram.o)
- .debug_ranges  0x00000000000063b0      0xb68 ../../../libDaisy//build/libdaisy.a(audio.o)
- .debug_ranges  0x0000000000006f18      0x238 ../../../libDaisy//build/libdaisy.a(logger.o)
- .debug_ranges  0x0000000000007150       0x40 ../../../libDaisy//build/libdaisy.a(switch.o)
- .debug_ranges  0x0000000000007190       0xe0 ../../../libDaisy//build/libdaisy.a(usb.o)
- .debug_ranges  0x0000000000007270      0x388 ../../../libDaisy//build/libdaisy.a(adc.o)
- .debug_ranges  0x00000000000075f8      0x268 ../../../libDaisy//build/libdaisy.a(gpio.o)
- .debug_ranges  0x0000000000007860      0xa48 ../../../libDaisy//build/libdaisy.a(i2c.o)
- .debug_ranges  0x00000000000082a8      0xc78 ../../../libDaisy//build/libdaisy.a(qspi.o)
- .debug_ranges  0x0000000000008f20      0x390 ../../../libDaisy//build/libdaisy.a(sai.o)
- .debug_ranges  0x00000000000092b0      0x1c8 ../../../libDaisy//build/libdaisy.a(system.o)
- .debug_ranges  0x0000000000009478       0x18 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
- .debug_ranges  0x0000000000009490       0x98 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
- .debug_ranges  0x0000000000009528      0x278 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
- .debug_ranges  0x00000000000097a0      0x140 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
- .debug_ranges  0x00000000000098e0      0x1c8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
- .debug_ranges  0x0000000000009aa8       0x20 ../../../libDaisy//build/libdaisy.a(hal_map.o)
- .debug_ranges  0x0000000000009ac8      0x188 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
- .debug_ranges  0x0000000000009c50      0x6e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
- .debug_ranges  0x000000000000a330      0x450 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
- .debug_ranges  0x000000000000a780      0x158 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
- .debug_ranges  0x000000000000a8d8      0x138 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
- .debug_ranges  0x000000000000aa10       0x68 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
- .debug_ranges  0x000000000000aa78      0x208 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
- .debug_ranges  0x000000000000ac80     0x1368 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
- .debug_ranges  0x000000000000bfe8       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
- .debug_ranges  0x000000000000c070      0x180 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
- .debug_ranges  0x000000000000c1f0       0x60 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
- .debug_ranges  0x000000000000c250      0x130 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
- .debug_ranges  0x000000000000c380      0x2e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
- .debug_ranges  0x000000000000c660      0x1b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
- .debug_ranges  0x000000000000c818       0xf0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
- .debug_ranges  0x000000000000c908      0x5b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
- .debug_ranges  0x000000000000cec0       0xb8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
- .debug_ranges  0x000000000000cf78       0xb8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
- .debug_ranges  0x000000000000d030      0x270 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
- .debug_ranges  0x000000000000d2a0       0x80 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
- .debug_ranges  0x000000000000d320       0x98 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
- .debug_ranges  0x000000000000d3b8       0xf0 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
- .debug_ranges  0x000000000000d4a8       0x40 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
- .debug_ranges  0x000000000000d4e8      0x178 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
- .debug_ranges  0x000000000000d660       0x48 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
- .debug_ranges  0x000000000000d6a8       0xb0 ../../../libDaisy//build/libdaisy.a(rng.o)
- .debug_ranges  0x000000000000d758     0x12b0 ../../../libDaisy//build/libdaisy.a(spi.o)
- .debug_ranges  0x000000000000ea08      0x5d0 ../../../libDaisy//build/libdaisy.a(tim.o)
- .debug_ranges  0x000000000000efd8     0x1778 ../../../libDaisy//build/libdaisy.a(uart.o)
- .debug_ranges  0x0000000000010750       0x48 ../../../libDaisy//build/libdaisy.a(dma.o)
- .debug_ranges  0x0000000000010798      0x178 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
- .debug_ranges  0x0000000000010910      0x200 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
- .debug_ranges  0x0000000000010b10      0xa10 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
- .debug_ranges  0x0000000000011520      0x208 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
- .debug_ranges  0x0000000000011728      0x358 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
- .debug_ranges  0x0000000000011a80       0xe0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_ranges  0x00000000000018e0     0x1978 build/Mixer.o
+ .debug_ranges  0x0000000000003258      0x618 build/Track.o
+ .debug_ranges  0x0000000000003870      0xa28 build/Delay.o
+ .debug_ranges  0x0000000000004298      0xb40 build/Waveshaper.o
+ .debug_ranges  0x0000000000004dd8      0xea8 build/Reverb.o
+ .debug_ranges  0x0000000000005c80      0x268 build/revmodel.o
+ .debug_ranges  0x0000000000005ee8       0x40 build/comb.o
+ .debug_ranges  0x0000000000005f28       0x30 build/allpass.o
+ .debug_ranges  0x0000000000005f58      0x280 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_ranges  0x00000000000061d8       0x18 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_ranges  0x00000000000061f0       0x90 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_ranges  0x0000000000006280      0x118 ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_ranges  0x0000000000006398      0xb68 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_ranges  0x0000000000006f00      0x238 ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_ranges  0x0000000000007138       0x40 ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_ranges  0x0000000000007178       0xe0 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_ranges  0x0000000000007258      0x388 ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_ranges  0x00000000000075e0      0x268 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_ranges  0x0000000000007848      0xa48 ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_ranges  0x0000000000008290      0xc78 ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_ranges  0x0000000000008f08      0x390 ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_ranges  0x0000000000009298      0x1c8 ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_ranges  0x0000000000009460       0x18 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_ranges  0x0000000000009478       0x98 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_ranges  0x0000000000009510      0x278 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_ranges  0x0000000000009788      0x140 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_ranges  0x00000000000098c8      0x1c8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_ranges  0x0000000000009a90       0x20 ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_ranges  0x0000000000009ab0      0x188 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_ranges  0x0000000000009c38      0x6e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_ranges  0x000000000000a318      0x450 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_ranges  0x000000000000a768      0x158 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_ranges  0x000000000000a8c0      0x138 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_ranges  0x000000000000a9f8       0x68 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_ranges  0x000000000000aa60      0x208 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_ranges  0x000000000000ac68     0x1368 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_ranges  0x000000000000bfd0       0x88 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_ranges  0x000000000000c058      0x180 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_ranges  0x000000000000c1d8       0x60 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_ranges  0x000000000000c238      0x130 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_ranges  0x000000000000c368      0x2e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_ranges  0x000000000000c648      0x1b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_ranges  0x000000000000c800       0xf0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_ranges  0x000000000000c8f0      0x5b8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_ranges  0x000000000000cea8       0xb8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_ranges  0x000000000000cf60       0xb8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_ranges  0x000000000000d018      0x270 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_ranges  0x000000000000d288       0x80 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_ranges  0x000000000000d308       0x98 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_ranges  0x000000000000d3a0       0xf0 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_ranges  0x000000000000d490       0x40 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_ranges  0x000000000000d4d0      0x178 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_ranges  0x000000000000d648       0x48 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_ranges  0x000000000000d690       0xb0 ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_ranges  0x000000000000d740     0x12b0 ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_ranges  0x000000000000e9f0      0x5d0 ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_ranges  0x000000000000efc0     0x1778 ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_ranges  0x0000000000010738       0x48 ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_ranges  0x0000000000010780      0x178 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_ranges  0x00000000000108f8      0x200 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_ranges  0x0000000000010af8      0xa10 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_ranges  0x0000000000011508      0x208 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_ranges  0x0000000000011710      0x358 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_ranges  0x0000000000011a68       0xe0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_line     0x0000000000000000    0x523cb
+.debug_line     0x0000000000000000    0x52383
  .debug_line    0x0000000000000000      0x1d3 build/startup_stm32h750xx.o
  .debug_line    0x00000000000001d3     0x292e build/LoopyTunes.o
- .debug_line    0x0000000000002b01     0x2bf0 build/Mixer.o
- .debug_line    0x00000000000056f1     0x121b build/Track.o
- .debug_line    0x000000000000690c     0x13f0 build/Delay.o
- .debug_line    0x0000000000007cfc     0x170a build/Waveshaper.o
- .debug_line    0x0000000000009406     0x19ee build/Reverb.o
- .debug_line    0x000000000000adf4     0x1491 build/revmodel.o
- .debug_line    0x000000000000c285      0x293 build/comb.o
- .debug_line    0x000000000000c518      0x24a build/allpass.o
- .debug_line    0x000000000000c762      0xbd5 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
- .debug_line    0x000000000000d337      0x39b ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
- .debug_line    0x000000000000d6d2      0x674 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
- .debug_line    0x000000000000dd46      0x920 ../../../libDaisy//build/libdaisy.a(sdram.o)
- .debug_line    0x000000000000e666     0x1e42 ../../../libDaisy//build/libdaisy.a(audio.o)
- .debug_line    0x00000000000104a8      0xb15 ../../../libDaisy//build/libdaisy.a(logger.o)
- .debug_line    0x0000000000010fbd      0x4d4 ../../../libDaisy//build/libdaisy.a(switch.o)
- .debug_line    0x0000000000011491      0x7b3 ../../../libDaisy//build/libdaisy.a(usb.o)
- .debug_line    0x0000000000011c44      0xe81 ../../../libDaisy//build/libdaisy.a(adc.o)
- .debug_line    0x0000000000012ac5      0xb79 ../../../libDaisy//build/libdaisy.a(gpio.o)
- .debug_line    0x000000000001363e     0x1cea ../../../libDaisy//build/libdaisy.a(i2c.o)
- .debug_line    0x0000000000015328     0x2fdb ../../../libDaisy//build/libdaisy.a(qspi.o)
- .debug_line    0x0000000000018303     0x1370 ../../../libDaisy//build/libdaisy.a(sai.o)
- .debug_line    0x0000000000019673     0x1029 ../../../libDaisy//build/libdaisy.a(system.o)
- .debug_line    0x000000000001a69c      0x3e5 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
- .debug_line    0x000000000001aa81      0x3ca ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
- .debug_line    0x000000000001ae4b      0xa35 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
- .debug_line    0x000000000001b880      0x55c ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
- .debug_line    0x000000000001bddc      0x7e8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
- .debug_line    0x000000000001c5c4      0x1fb ../../../libDaisy//build/libdaisy.a(hal_map.o)
- .debug_line    0x000000000001c7bf      0x926 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
- .debug_line    0x000000000001d0e5     0x2aa3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
- .debug_line    0x000000000001fb88     0x24ab ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
- .debug_line    0x0000000000022033      0x7ce ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
- .debug_line    0x0000000000022801     0x1a2e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
- .debug_line    0x000000000002422f      0x78a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
- .debug_line    0x00000000000249b9     0x1034 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
- .debug_line    0x00000000000259ed     0x6ea9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
- .debug_line    0x000000000002c896      0x536 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
- .debug_line    0x000000000002cdcc     0x14c4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
- .debug_line    0x000000000002e290      0x529 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
- .debug_line    0x000000000002e7b9      0x990 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
- .debug_line    0x000000000002f149     0x1c5e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
- .debug_line    0x0000000000030da7     0x1222 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
- .debug_line    0x0000000000031fc9     0x19d4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
- .debug_line    0x000000000003399d     0x26e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
- .debug_line    0x0000000000036082      0xd85 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
- .debug_line    0x0000000000036e07      0x79b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
- .debug_line    0x00000000000375a2     0x2933 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
- .debug_line    0x0000000000039ed5      0x7f2 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
- .debug_line    0x000000000003a6c7      0x734 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
- .debug_line    0x000000000003adfb      0x7e6 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
- .debug_line    0x000000000003b5e1      0x279 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
- .debug_line    0x000000000003b85a      0xc95 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
- .debug_line    0x000000000003c4ef      0x2d7 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
- .debug_line    0x000000000003c7c6      0x48b ../../../libDaisy//build/libdaisy.a(rng.o)
- .debug_line    0x000000000003cc51     0x2a49 ../../../libDaisy//build/libdaisy.a(spi.o)
- .debug_line    0x000000000003f69a     0x11ed ../../../libDaisy//build/libdaisy.a(tim.o)
- .debug_line    0x0000000000040887     0x34e1 ../../../libDaisy//build/libdaisy.a(uart.o)
- .debug_line    0x0000000000043d68      0x362 ../../../libDaisy//build/libdaisy.a(dma.o)
- .debug_line    0x00000000000440ca     0x17e8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
- .debug_line    0x00000000000458b2     0x2885 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
- .debug_line    0x0000000000048137     0x50d3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
- .debug_line    0x000000000004d20a     0x134e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
- .debug_line    0x000000000004e558     0x3424 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
- .debug_line    0x000000000005197c      0xa4f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_line    0x0000000000002b01     0x2bd4 build/Mixer.o
+ .debug_line    0x00000000000056d5     0x1205 build/Track.o
+ .debug_line    0x00000000000068da     0x13db build/Delay.o
+ .debug_line    0x0000000000007cb5     0x1709 build/Waveshaper.o
+ .debug_line    0x00000000000093be     0x19ee build/Reverb.o
+ .debug_line    0x000000000000adac     0x1491 build/revmodel.o
+ .debug_line    0x000000000000c23d      0x293 build/comb.o
+ .debug_line    0x000000000000c4d0      0x24a build/allpass.o
+ .debug_line    0x000000000000c71a      0xbd5 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_line    0x000000000000d2ef      0x39b ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_line    0x000000000000d68a      0x674 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_line    0x000000000000dcfe      0x920 ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_line    0x000000000000e61e     0x1e42 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_line    0x0000000000010460      0xb15 ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_line    0x0000000000010f75      0x4d4 ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_line    0x0000000000011449      0x7b3 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_line    0x0000000000011bfc      0xe81 ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_line    0x0000000000012a7d      0xb79 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_line    0x00000000000135f6     0x1cea ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_line    0x00000000000152e0     0x2fdb ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_line    0x00000000000182bb     0x1370 ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_line    0x000000000001962b     0x1029 ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_line    0x000000000001a654      0x3e5 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_line    0x000000000001aa39      0x3ca ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_line    0x000000000001ae03      0xa35 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_line    0x000000000001b838      0x55c ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_line    0x000000000001bd94      0x7e8 ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_line    0x000000000001c57c      0x1fb ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_line    0x000000000001c777      0x926 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_line    0x000000000001d09d     0x2aa3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_line    0x000000000001fb40     0x24ab ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_line    0x0000000000021feb      0x7ce ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_line    0x00000000000227b9     0x1a2e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_line    0x00000000000241e7      0x78a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_line    0x0000000000024971     0x1034 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_line    0x00000000000259a5     0x6ea9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_line    0x000000000002c84e      0x536 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_line    0x000000000002cd84     0x14c4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_line    0x000000000002e248      0x529 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_line    0x000000000002e771      0x990 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_line    0x000000000002f101     0x1c5e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_line    0x0000000000030d5f     0x1222 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_line    0x0000000000031f81     0x19d4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_line    0x0000000000033955     0x26e5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_line    0x000000000003603a      0xd85 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_line    0x0000000000036dbf      0x79b ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_line    0x000000000003755a     0x2933 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_line    0x0000000000039e8d      0x7f2 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_line    0x000000000003a67f      0x734 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_line    0x000000000003adb3      0x7e6 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_line    0x000000000003b599      0x279 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_line    0x000000000003b812      0xc95 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_line    0x000000000003c4a7      0x2d7 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_line    0x000000000003c77e      0x48b ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_line    0x000000000003cc09     0x2a49 ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_line    0x000000000003f652     0x11ed ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_line    0x000000000004083f     0x34e1 ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_line    0x0000000000043d20      0x362 ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_line    0x0000000000044082     0x17e8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_line    0x000000000004586a     0x2885 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_line    0x00000000000480ef     0x50d3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_line    0x000000000004d1c2     0x134e ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_line    0x000000000004e510     0x3424 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_line    0x0000000000051934      0xa4f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_str      0x0000000000000000    0x1c5d0
+.debug_str      0x0000000000000000    0x1c572
  .debug_str     0x0000000000000000      0x22d build/startup_stm32h750xx.o
                                         0x289 (size before relaxing)
- .debug_str     0x000000000000022d     0x6a54 build/LoopyTunes.o
-                                       0x71c6 (size before relaxing)
- .debug_str     0x0000000000006c81     0x117f build/Mixer.o
-                                       0x7405 (size before relaxing)
- .debug_str     0x0000000000007e00      0x3e4 build/Track.o
-                                       0x6779 (size before relaxing)
- .debug_str     0x00000000000081e4      0xb65 build/Delay.o
+ .debug_str     0x000000000000022d     0x69f6 build/LoopyTunes.o
+                                       0x7168 (size before relaxing)
+ .debug_str     0x0000000000006c23     0x117f build/Mixer.o
+                                       0x73a7 (size before relaxing)
+ .debug_str     0x0000000000007da2      0x3e4 build/Track.o
+                                       0x672f (size before relaxing)
+ .debug_str     0x0000000000008186      0xb65 build/Delay.o
+                                       0x6271 (size before relaxing)
+ .debug_str     0x0000000000008ceb      0xb28 build/Waveshaper.o
                                        0x628d (size before relaxing)
- .debug_str     0x0000000000008d49      0xb28 build/Waveshaper.o
-                                       0x62af (size before relaxing)
- .debug_str     0x0000000000009871      0x304 build/Reverb.o
+ .debug_str     0x0000000000009813      0x304 build/Reverb.o
                                        0x5b4d (size before relaxing)
- .debug_str     0x0000000000009b75       0x6b build/revmodel.o
+ .debug_str     0x0000000000009b17       0x6b build/revmodel.o
                                        0x13af (size before relaxing)
- .debug_str     0x0000000000009be0       0x24 build/comb.o
+ .debug_str     0x0000000000009b82       0x24 build/comb.o
                                         0xd5a (size before relaxing)
- .debug_str     0x0000000000009c04       0x2a build/allpass.o
+ .debug_str     0x0000000000009ba6       0x2a build/allpass.o
                                         0xd27 (size before relaxing)
- .debug_str     0x0000000000009c2e      0x6be ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_str     0x0000000000009bd0      0x6be ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
                                        0x361b (size before relaxing)
- .debug_str     0x000000000000a2ec       0x29 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_str     0x000000000000a28e       0x29 ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
                                        0x1062 (size before relaxing)
- .debug_str     0x000000000000a315      0x4d4 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_str     0x000000000000a2b7      0x4d4 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
                                        0x177b (size before relaxing)
- .debug_str     0x000000000000a7e9      0xab1 ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_str     0x000000000000a78b      0xab1 ../../../libDaisy//build/libdaisy.a(sdram.o)
                                        0x1ae6 (size before relaxing)
- .debug_str     0x000000000000b29a      0x4a5 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_str     0x000000000000b23c      0x4a5 ../../../libDaisy//build/libdaisy.a(audio.o)
                                        0x115d (size before relaxing)
- .debug_str     0x000000000000b73f      0xa54 ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_str     0x000000000000b6e1      0xa54 ../../../libDaisy//build/libdaisy.a(logger.o)
                                        0x23bb (size before relaxing)
- .debug_str     0x000000000000c193       0x1f ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_str     0x000000000000c135       0x1f ../../../libDaisy//build/libdaisy.a(switch.o)
                                        0x1239 (size before relaxing)
- .debug_str     0x000000000000c1b2      0x8f0 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_str     0x000000000000c154      0x8f0 ../../../libDaisy//build/libdaisy.a(usb.o)
                                        0x1b6d (size before relaxing)
- .debug_str     0x000000000000caa2      0x9bb ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_str     0x000000000000ca44      0x9bb ../../../libDaisy//build/libdaisy.a(adc.o)
                                        0x24ab (size before relaxing)
- .debug_str     0x000000000000d45d       0xc6 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_str     0x000000000000d3ff       0xc6 ../../../libDaisy//build/libdaisy.a(gpio.o)
                                        0x15b5 (size before relaxing)
- .debug_str     0x000000000000d523     0x14ee ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_str     0x000000000000d4c5     0x14ee ../../../libDaisy//build/libdaisy.a(i2c.o)
                                        0x390f (size before relaxing)
- .debug_str     0x000000000000ea11      0x9ed ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_str     0x000000000000e9b3      0x9ed ../../../libDaisy//build/libdaisy.a(qspi.o)
                                        0x3588 (size before relaxing)
- .debug_str     0x000000000000f3fe      0x6d8 ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_str     0x000000000000f3a0      0x6d8 ../../../libDaisy//build/libdaisy.a(sai.o)
                                        0x22d4 (size before relaxing)
- .debug_str     0x000000000000fad6      0xcd7 ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_str     0x000000000000fa78      0xcd7 ../../../libDaisy//build/libdaisy.a(system.o)
                                        0x32ac (size before relaxing)
- .debug_str     0x00000000000107ad      0x197 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_str     0x000000000001074f      0x197 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
                                         0x5e6 (size before relaxing)
- .debug_str     0x0000000000010944      0x1c1 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_str     0x00000000000108e6      0x1c1 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
                                         0x853 (size before relaxing)
- .debug_str     0x0000000000010b05      0x48c ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_str     0x0000000000010aa7      0x48c ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
                                        0x1ab4 (size before relaxing)
- .debug_str     0x0000000000010f91      0x254 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_str     0x0000000000010f33      0x254 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
                                         0x54f (size before relaxing)
- .debug_str     0x00000000000111e5      0xb6f ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_str     0x0000000000011187      0xb6f ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
                                        0x2186 (size before relaxing)
- .debug_str     0x0000000000011d54       0x52 ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_str     0x0000000000011cf6       0x52 ../../../libDaisy//build/libdaisy.a(hal_map.o)
                                         0x548 (size before relaxing)
- .debug_str     0x0000000000011da6      0x702 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_str     0x0000000000011d48      0x702 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
                                        0x14f9 (size before relaxing)
- .debug_str     0x00000000000124a8      0x900 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_str     0x000000000001244a      0x900 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
                                        0x12f9 (size before relaxing)
- .debug_str     0x0000000000012da8      0x6be ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_str     0x0000000000012d4a      0x6be ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
                                        0x13c9 (size before relaxing)
- .debug_str     0x0000000000013466      0x323 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_str     0x0000000000013408      0x323 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
                                        0x105a (size before relaxing)
- .debug_str     0x0000000000013789      0x366 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_str     0x000000000001372b      0x366 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
                                         0x95f (size before relaxing)
- .debug_str     0x0000000000013aef       0xaa ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_str     0x0000000000013a91       0xaa ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
                                         0x6da (size before relaxing)
- .debug_str     0x0000000000013b99      0x2d4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_str     0x0000000000013b3b      0x2d4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
                                         0xb3d (size before relaxing)
- .debug_str     0x0000000000013e6d      0x69f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_str     0x0000000000013e0f      0x69f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
                                        0x10fb (size before relaxing)
- .debug_str     0x000000000001450c       0xb5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_str     0x00000000000144ae       0xb5 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
                                         0xb45 (size before relaxing)
- .debug_str     0x00000000000145c1      0x4b0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_str     0x0000000000014563      0x4b0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
                                         0xda8 (size before relaxing)
- .debug_str     0x0000000000014a71      0x17f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_str     0x0000000000014a13      0x17f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
                                         0x7f9 (size before relaxing)
- .debug_str     0x0000000000014bf0      0x4ec ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_str     0x0000000000014b92      0x4ec ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
                                         0x9ec (size before relaxing)
- .debug_str     0x00000000000150dc      0x2f3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_str     0x000000000001507e      0x2f3 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
                                         0xc61 (size before relaxing)
- .debug_str     0x00000000000153cf      0x26f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_str     0x0000000000015371      0x26f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
                                         0x9ff (size before relaxing)
- .debug_str     0x000000000001563e      0x529 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_str     0x00000000000155e0      0x529 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
                                         0xde7 (size before relaxing)
- .debug_str     0x0000000000015b67      0x361 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_str     0x0000000000015b09      0x361 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
                                         0xd0c (size before relaxing)
- .debug_str     0x0000000000015ec8      0x331 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_str     0x0000000000015e6a      0x331 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
                                         0xbba (size before relaxing)
- .debug_str     0x00000000000161f9      0x3b1 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_str     0x000000000001619b      0x3b1 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
                                         0x8b1 (size before relaxing)
- .debug_str     0x00000000000165aa      0x15f ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_str     0x000000000001654c      0x15f ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
                                         0xc8b (size before relaxing)
- .debug_str     0x0000000000016709      0x1e9 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_str     0x00000000000166ab      0x1e9 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
                                         0xccc (size before relaxing)
- .debug_str     0x00000000000168f2      0x13d ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_str     0x0000000000016894      0x13d ../../../libDaisy//build/libdaisy.a(usbd_core.o)
                                         0x884 (size before relaxing)
- .debug_str     0x0000000000016a2f       0xc3 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_str     0x00000000000169d1       0xc3 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
                                         0x77d (size before relaxing)
- .debug_str     0x0000000000016af2       0x4e ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_str     0x0000000000016a94       0x4e ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
                                         0x6aa (size before relaxing)
- .debug_str     0x0000000000016b40      0x1f9 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_str     0x0000000000016ae2      0x1f9 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
                                         0xd13 (size before relaxing)
- .debug_str     0x0000000000016d39       0x5c ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_str     0x0000000000016cdb       0x5c ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
                                         0xa9a (size before relaxing)
- .debug_str     0x0000000000016d95       0x23 ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_str     0x0000000000016d37       0x23 ../../../libDaisy//build/libdaisy.a(rng.o)
                                        0x1ab5 (size before relaxing)
- .debug_str     0x0000000000016db8     0x11bc ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_str     0x0000000000016d5a     0x11bc ../../../libDaisy//build/libdaisy.a(spi.o)
                                        0x33c1 (size before relaxing)
- .debug_str     0x0000000000017f74      0x733 ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_str     0x0000000000017f16      0x733 ../../../libDaisy//build/libdaisy.a(tim.o)
                                        0x2f0b (size before relaxing)
- .debug_str     0x00000000000186a7     0x1b4e ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_str     0x0000000000018649     0x1b4e ../../../libDaisy//build/libdaisy.a(uart.o)
                                        0x42f3 (size before relaxing)
- .debug_str     0x000000000001a1f5       0xa5 ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_str     0x000000000001a197       0xa5 ../../../libDaisy//build/libdaisy.a(dma.o)
                                         0xe5d (size before relaxing)
- .debug_str     0x000000000001a29a      0x43a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_str     0x000000000001a23c      0x43a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
                                         0xa33 (size before relaxing)
- .debug_str     0x000000000001a6d4      0x384 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_str     0x000000000001a676      0x384 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
                                         0xd7d (size before relaxing)
- .debug_str     0x000000000001aa58      0xd6f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_str     0x000000000001a9fa      0xd6f ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
                                        0x1667 (size before relaxing)
- .debug_str     0x000000000001b7c7      0x5c9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_str     0x000000000001b769      0x5c9 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
                                         0xf56 (size before relaxing)
- .debug_str     0x000000000001bd90      0x673 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_str     0x000000000001bd32      0x673 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
                                        0x131d (size before relaxing)
- .debug_str     0x000000000001c403      0x1cd ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_str     0x000000000001c3a5      0x1cd ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
                                         0xa61 (size before relaxing)
 
 .comment        0x0000000000000000       0x49
@@ -6952,142 +6944,142 @@ LOAD /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb
  .comment       0x0000000000000049       0x4a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
  .comment       0x0000000000000049       0x4a ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
 
-.debug_frame    0x0000000000000000     0xb768
+.debug_frame    0x0000000000000000     0xb728
  .debug_frame   0x0000000000000000       0x30 build/startup_stm32h750xx.o
  .debug_frame   0x0000000000000030      0x120 build/LoopyTunes.o
- .debug_frame   0x0000000000000150      0x2b8 build/Mixer.o
- .debug_frame   0x0000000000000408      0x1c4 build/Track.o
- .debug_frame   0x00000000000005cc      0x118 build/Delay.o
- .debug_frame   0x00000000000006e4      0x1e0 build/Waveshaper.o
- .debug_frame   0x00000000000008c4      0x18c build/Reverb.o
- .debug_frame   0x0000000000000a50      0x1b0 build/revmodel.o
- .debug_frame   0x0000000000000c00       0x80 build/comb.o
- .debug_frame   0x0000000000000c80       0x60 build/allpass.o
- .debug_frame   0x0000000000000ce0      0x208 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
- .debug_frame   0x0000000000000ee8       0x4c ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
- .debug_frame   0x0000000000000f34       0x58 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
- .debug_frame   0x0000000000000f8c      0x110 ../../../libDaisy//build/libdaisy.a(sdram.o)
- .debug_frame   0x000000000000109c      0x310 ../../../libDaisy//build/libdaisy.a(audio.o)
- .debug_frame   0x00000000000013ac      0x3d4 ../../../libDaisy//build/libdaisy.a(logger.o)
- .debug_frame   0x0000000000001780       0x9c ../../../libDaisy//build/libdaisy.a(switch.o)
- .debug_frame   0x000000000000181c       0xe4 ../../../libDaisy//build/libdaisy.a(usb.o)
- .debug_frame   0x0000000000001900      0x1c8 ../../../libDaisy//build/libdaisy.a(adc.o)
- .debug_frame   0x0000000000001ac8      0x1b4 ../../../libDaisy//build/libdaisy.a(gpio.o)
- .debug_frame   0x0000000000001c7c      0x578 ../../../libDaisy//build/libdaisy.a(i2c.o)
- .debug_frame   0x00000000000021f4      0x568 ../../../libDaisy//build/libdaisy.a(qspi.o)
- .debug_frame   0x000000000000275c      0x35c ../../../libDaisy//build/libdaisy.a(sai.o)
- .debug_frame   0x0000000000002ab8      0x26c ../../../libDaisy//build/libdaisy.a(system.o)
- .debug_frame   0x0000000000002d24       0x50 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
- .debug_frame   0x0000000000002d74      0x120 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
- .debug_frame   0x0000000000002e94      0x298 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
- .debug_frame   0x000000000000312c      0x130 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
- .debug_frame   0x000000000000325c      0x21c ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
- .debug_frame   0x0000000000003478       0x4c ../../../libDaisy//build/libdaisy.a(hal_map.o)
- .debug_frame   0x00000000000034c4      0x38c ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
- .debug_frame   0x0000000000003850      0x340 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
- .debug_frame   0x0000000000003b90      0x380 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
- .debug_frame   0x0000000000003f10      0x168 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
- .debug_frame   0x0000000000004078      0x218 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
- .debug_frame   0x0000000000004290      0x100 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
- .debug_frame   0x0000000000004390      0x230 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
- .debug_frame   0x00000000000045c0      0x864 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
- .debug_frame   0x0000000000004e24       0xcc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
- .debug_frame   0x0000000000004ef0      0x2e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
- .debug_frame   0x00000000000051d0       0xec ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
- .debug_frame   0x00000000000052bc      0x310 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
- .debug_frame   0x00000000000055cc      0x404 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
- .debug_frame   0x00000000000059d0      0x1c4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
- .debug_frame   0x0000000000005b94      0x288 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
- .debug_frame   0x0000000000005e1c      0x434 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
- .debug_frame   0x0000000000006250      0x2a8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
- .debug_frame   0x00000000000064f8      0x220 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
- .debug_frame   0x0000000000006718      0x4e4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
- .debug_frame   0x0000000000006bfc      0x174 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
- .debug_frame   0x0000000000006d70      0x1c8 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
- .debug_frame   0x0000000000006f38       0xc0 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
- .debug_frame   0x0000000000006ff8       0xb0 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
- .debug_frame   0x00000000000070a8      0x198 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
- .debug_frame   0x0000000000007240       0x68 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
- .debug_frame   0x00000000000072a8       0x94 ../../../libDaisy//build/libdaisy.a(rng.o)
- .debug_frame   0x000000000000733c      0x5d0 ../../../libDaisy//build/libdaisy.a(spi.o)
- .debug_frame   0x000000000000790c      0x348 ../../../libDaisy//build/libdaisy.a(tim.o)
- .debug_frame   0x0000000000007c54      0x72c ../../../libDaisy//build/libdaisy.a(uart.o)
- .debug_frame   0x0000000000008380       0x70 ../../../libDaisy//build/libdaisy.a(dma.o)
- .debug_frame   0x00000000000083f0      0x298 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
- .debug_frame   0x0000000000008688      0x4dc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
- .debug_frame   0x0000000000008b64      0xaa4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
- .debug_frame   0x0000000000009608      0x428 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
- .debug_frame   0x0000000000009a30      0x66c ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
- .debug_frame   0x000000000000a09c      0x188 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
- .debug_frame   0x000000000000a224       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(atexit_arm.o)
- .debug_frame   0x000000000000a244       0x68 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o)
- .debug_frame   0x000000000000a2ac       0x38 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-cosf.o)
- .debug_frame   0x000000000000a2e4       0x90 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
- .debug_frame   0x000000000000a374       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
- .debug_frame   0x000000000000a3b0       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
- .debug_frame   0x000000000000a3d0       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
- .debug_frame   0x000000000000a3f0       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
- .debug_frame   0x000000000000a418       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-calloc.o)
- .debug_frame   0x000000000000a438       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-cxa_atexit.o)
- .debug_frame   0x000000000000a460       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
- .debug_frame   0x000000000000a480       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-init.o)
- .debug_frame   0x000000000000a4ac       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x000000000000a4dc       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000000000000a504       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x000000000000a524       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-callocr.o)
- .debug_frame   0x000000000000a554       0x38 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x000000000000a58c       0x4c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x000000000000a5d8       0x9c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
- .debug_frame   0x000000000000a674       0x60 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x000000000000a6d4       0x74 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-printf.o)
- .debug_frame   0x000000000000a748       0x50 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-putchar.o)
- .debug_frame   0x000000000000a798       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x000000000000a7c4       0xcc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signal.o)
- .debug_frame   0x000000000000a890       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signalr.o)
- .debug_frame   0x000000000000a8cc       0x4c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-vsnprintf.o)
- .debug_frame   0x000000000000a918       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-writer.o)
- .debug_frame   0x000000000000a944       0x7c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-dtoa.o)
- .debug_frame   0x000000000000a9c0      0x14c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x000000000000ab0c       0x54 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fwalk.o)
- .debug_frame   0x000000000000ab60       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-localeconv.o)
- .debug_frame   0x000000000000aba0       0xb0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-lock.o)
- .debug_frame   0x000000000000ac50       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x000000000000ac80      0x250 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
- .debug_frame   0x000000000000aed0       0x90 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x000000000000af60       0xac /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x000000000000b00c       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-putc.o)
- .debug_frame   0x000000000000b048       0x5c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x000000000000b0a4       0x88 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-stdio.o)
- .debug_frame   0x000000000000b12c       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wbuf.o)
- .debug_frame   0x000000000000b16c       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wsetup.o)
- .debug_frame   0x000000000000b198       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-assert.o)
- .debug_frame   0x000000000000b1d8       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-closer.o)
- .debug_frame   0x000000000000b204       0x5c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fflush.o)
- .debug_frame   0x000000000000b260       0x64 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fprintf.o)
- .debug_frame   0x000000000000b2c4       0x48 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-locale.o)
- .debug_frame   0x000000000000b30c       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-lseekr.o)
- .debug_frame   0x000000000000b338       0x58 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-makebuf.o)
- .debug_frame   0x000000000000b390       0x48 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mbtowc_r.o)
- .debug_frame   0x000000000000b3d8       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x000000000000b400       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x000000000000b43c       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-readr.o)
- .debug_frame   0x000000000000b468       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wctomb_r.o)
- .debug_frame   0x000000000000b4a4       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fstatr.o)
- .debug_frame   0x000000000000b4d0       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-isattyr.o)
- .debug_frame   0x000000000000b4fc       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x000000000000b51c       0xac /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000000000000b5c8       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000000000000b5f4       0x34 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000000000000b628       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(close.o)
- .debug_frame   0x000000000000b648       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(fstat.o)
- .debug_frame   0x000000000000b668       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(getpid.o)
- .debug_frame   0x000000000000b688       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(isatty.o)
- .debug_frame   0x000000000000b6a8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(kill.o)
- .debug_frame   0x000000000000b6c8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(lseek.o)
- .debug_frame   0x000000000000b6e8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(read.o)
- .debug_frame   0x000000000000b708       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(sbrk.o)
- .debug_frame   0x000000000000b728       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(write.o)
- .debug_frame   0x000000000000b748       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000150      0x2a8 build/Mixer.o
+ .debug_frame   0x00000000000003f8      0x1b4 build/Track.o
+ .debug_frame   0x00000000000005ac      0x108 build/Delay.o
+ .debug_frame   0x00000000000006b4      0x1d0 build/Waveshaper.o
+ .debug_frame   0x0000000000000884      0x18c build/Reverb.o
+ .debug_frame   0x0000000000000a10      0x1b0 build/revmodel.o
+ .debug_frame   0x0000000000000bc0       0x80 build/comb.o
+ .debug_frame   0x0000000000000c40       0x60 build/allpass.o
+ .debug_frame   0x0000000000000ca0      0x208 ../../../libDaisy//build/libdaisy.a(daisy_seed.o)
+ .debug_frame   0x0000000000000ea8       0x4c ../../../libDaisy//build/libdaisy.a(codec_ak4556.o)
+ .debug_frame   0x0000000000000ef4       0x58 ../../../libDaisy//build/libdaisy.a(codec_wm8731.o)
+ .debug_frame   0x0000000000000f4c      0x110 ../../../libDaisy//build/libdaisy.a(sdram.o)
+ .debug_frame   0x000000000000105c      0x310 ../../../libDaisy//build/libdaisy.a(audio.o)
+ .debug_frame   0x000000000000136c      0x3d4 ../../../libDaisy//build/libdaisy.a(logger.o)
+ .debug_frame   0x0000000000001740       0x9c ../../../libDaisy//build/libdaisy.a(switch.o)
+ .debug_frame   0x00000000000017dc       0xe4 ../../../libDaisy//build/libdaisy.a(usb.o)
+ .debug_frame   0x00000000000018c0      0x1c8 ../../../libDaisy//build/libdaisy.a(adc.o)
+ .debug_frame   0x0000000000001a88      0x1b4 ../../../libDaisy//build/libdaisy.a(gpio.o)
+ .debug_frame   0x0000000000001c3c      0x578 ../../../libDaisy//build/libdaisy.a(i2c.o)
+ .debug_frame   0x00000000000021b4      0x568 ../../../libDaisy//build/libdaisy.a(qspi.o)
+ .debug_frame   0x000000000000271c      0x35c ../../../libDaisy//build/libdaisy.a(sai.o)
+ .debug_frame   0x0000000000002a78      0x26c ../../../libDaisy//build/libdaisy.a(system.o)
+ .debug_frame   0x0000000000002ce4       0x50 ../../../libDaisy//build/libdaisy.a(system_stm32h7xx.o)
+ .debug_frame   0x0000000000002d34      0x120 ../../../libDaisy//build/libdaisy.a(usbd_cdc_if.o)
+ .debug_frame   0x0000000000002e54      0x298 ../../../libDaisy//build/libdaisy.a(usbd_conf.o)
+ .debug_frame   0x00000000000030ec      0x130 ../../../libDaisy//build/libdaisy.a(usbd_desc.o)
+ .debug_frame   0x000000000000321c      0x21c ../../../libDaisy//build/libdaisy.a(usbh_conf.o)
+ .debug_frame   0x0000000000003438       0x4c ../../../libDaisy//build/libdaisy.a(hal_map.o)
+ .debug_frame   0x0000000000003484      0x38c ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal.o)
+ .debug_frame   0x0000000000003810      0x340 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc.o)
+ .debug_frame   0x0000000000003b50      0x380 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_adc_ex.o)
+ .debug_frame   0x0000000000003ed0      0x168 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_cortex.o)
+ .debug_frame   0x0000000000004038      0x218 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_dma.o)
+ .debug_frame   0x0000000000004250      0x100 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_gpio.o)
+ .debug_frame   0x0000000000004350      0x230 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_hcd.o)
+ .debug_frame   0x0000000000004580      0x864 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c.o)
+ .debug_frame   0x0000000000004de4       0xcc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_i2c_ex.o)
+ .debug_frame   0x0000000000004eb0      0x2e0 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd.o)
+ .debug_frame   0x0000000000005190       0xec ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pcd_ex.o)
+ .debug_frame   0x000000000000527c      0x310 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_pwr_ex.o)
+ .debug_frame   0x000000000000558c      0x404 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_qspi.o)
+ .debug_frame   0x0000000000005990      0x1c4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc.o)
+ .debug_frame   0x0000000000005b54      0x288 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_rcc_ex.o)
+ .debug_frame   0x0000000000005ddc      0x434 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sai.o)
+ .debug_frame   0x0000000000006210      0x2a8 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_sdram.o)
+ .debug_frame   0x00000000000064b8      0x220 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_fmc.o)
+ .debug_frame   0x00000000000066d8      0x4e4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_ll_usb.o)
+ .debug_frame   0x0000000000006bbc      0x174 ../../../libDaisy//build/libdaisy.a(usbd_cdc.o)
+ .debug_frame   0x0000000000006d30      0x1c8 ../../../libDaisy//build/libdaisy.a(usbd_core.o)
+ .debug_frame   0x0000000000006ef8       0xc0 ../../../libDaisy//build/libdaisy.a(usbd_ctlreq.o)
+ .debug_frame   0x0000000000006fb8       0xb0 ../../../libDaisy//build/libdaisy.a(usbd_ioreq.o)
+ .debug_frame   0x0000000000007068      0x198 ../../../libDaisy//build/libdaisy.a(usbh_core.o)
+ .debug_frame   0x0000000000007200       0x68 ../../../libDaisy//build/libdaisy.a(usbh_pipes.o)
+ .debug_frame   0x0000000000007268       0x94 ../../../libDaisy//build/libdaisy.a(rng.o)
+ .debug_frame   0x00000000000072fc      0x5d0 ../../../libDaisy//build/libdaisy.a(spi.o)
+ .debug_frame   0x00000000000078cc      0x348 ../../../libDaisy//build/libdaisy.a(tim.o)
+ .debug_frame   0x0000000000007c14      0x72c ../../../libDaisy//build/libdaisy.a(uart.o)
+ .debug_frame   0x0000000000008340       0x70 ../../../libDaisy//build/libdaisy.a(dma.o)
+ .debug_frame   0x00000000000083b0      0x298 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_mdma.o)
+ .debug_frame   0x0000000000008648      0x4dc ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_spi.o)
+ .debug_frame   0x0000000000008b24      0xaa4 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim.o)
+ .debug_frame   0x00000000000095c8      0x428 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_tim_ex.o)
+ .debug_frame   0x00000000000099f0      0x66c ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart.o)
+ .debug_frame   0x000000000000a05c      0x188 ../../../libDaisy//build/libdaisy.a(stm32h7xx_hal_uart_ex.o)
+ .debug_frame   0x000000000000a1e4       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(atexit_arm.o)
+ .debug_frame   0x000000000000a204       0x68 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(functional.o)
+ .debug_frame   0x000000000000a26c       0x38 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-cosf.o)
+ .debug_frame   0x000000000000a2a4       0x90 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-math_errf.o)
+ .debug_frame   0x000000000000a334       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_tanh.o)
+ .debug_frame   0x000000000000a370       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_expm1.o)
+ .debug_frame   0x000000000000a390       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libm.a(lib_a-sf_fabs.o)
+ .debug_frame   0x000000000000a3b0       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-abort.o)
+ .debug_frame   0x000000000000a3d8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-calloc.o)
+ .debug_frame   0x000000000000a3f8       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-cxa_atexit.o)
+ .debug_frame   0x000000000000a420       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-errno.o)
+ .debug_frame   0x000000000000a440       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000000000000a46c       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x000000000000a49c       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000000000000a4c4       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x000000000000a4e4       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-callocr.o)
+ .debug_frame   0x000000000000a514       0x38 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x000000000000a54c       0x4c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x000000000000a598       0x9c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+ .debug_frame   0x000000000000a634       0x60 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x000000000000a694       0x74 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-printf.o)
+ .debug_frame   0x000000000000a708       0x50 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-putchar.o)
+ .debug_frame   0x000000000000a758       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000000000000a784       0xcc /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signal.o)
+ .debug_frame   0x000000000000a850       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-signalr.o)
+ .debug_frame   0x000000000000a88c       0x4c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x000000000000a8d8       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-writer.o)
+ .debug_frame   0x000000000000a904       0x7c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-dtoa.o)
+ .debug_frame   0x000000000000a980      0x14c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x000000000000aacc       0x54 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x000000000000ab20       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-localeconv.o)
+ .debug_frame   0x000000000000ab60       0xb0 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x000000000000ac10       0x30 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x000000000000ac40      0x250 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mprec.o)
+ .debug_frame   0x000000000000ae90       0x90 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x000000000000af20       0xac /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x000000000000afcc       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-putc.o)
+ .debug_frame   0x000000000000b008       0x5c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x000000000000b064       0x88 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-stdio.o)
+ .debug_frame   0x000000000000b0ec       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x000000000000b12c       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x000000000000b158       0x40 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-assert.o)
+ .debug_frame   0x000000000000b198       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-closer.o)
+ .debug_frame   0x000000000000b1c4       0x5c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fflush.o)
+ .debug_frame   0x000000000000b220       0x64 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fprintf.o)
+ .debug_frame   0x000000000000b284       0x48 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-locale.o)
+ .debug_frame   0x000000000000b2cc       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x000000000000b2f8       0x58 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x000000000000b350       0x48 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x000000000000b398       0x28 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000000000000b3c0       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x000000000000b3fc       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-readr.o)
+ .debug_frame   0x000000000000b428       0x3c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-wctomb_r.o)
+ .debug_frame   0x000000000000b464       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x000000000000b490       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x000000000000b4bc       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000000000000b4dc       0xac /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000000000000b588       0x2c /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000000000000b5b4       0x34 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000000000000b5e8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(close.o)
+ .debug_frame   0x000000000000b608       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(fstat.o)
+ .debug_frame   0x000000000000b628       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(getpid.o)
+ .debug_frame   0x000000000000b648       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(isatty.o)
+ .debug_frame   0x000000000000b668       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(kill.o)
+ .debug_frame   0x000000000000b688       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(lseek.o)
+ .debug_frame   0x000000000000b6a8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(read.o)
+ .debug_frame   0x000000000000b6c8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(sbrk.o)
+ .debug_frame   0x000000000000b6e8       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(write.o)
+ .debug_frame   0x000000000000b708       0x20 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libnosys.a(_exit.o)
 
 .debug_loc      0x0000000000000000    0x5be2a
  .debug_loc     0x0000000000000000     0x41a3 build/LoopyTunes.o
@@ -7283,7 +7275,6 @@ DebugMon_Handler                                  build/startup_stm32h750xx.o
 Default_Handler                                   build/startup_stm32h750xx.o
 Delay::init(daisy::DaisySeed*, daisysp::DelayLine<float, 240000u>**) build/Delay.o
                                                   build/Track.o
-Delay::prepare()                                  build/Delay.o
 Delay::processBlock(float**, unsigned int)        build/Delay.o
                                                   build/Track.o
 Delay::tick()                                     build/Delay.o
@@ -8322,7 +8313,6 @@ Mixer::initTrackIO(daisy::DaisySeed*, TrackIO, TrackIO, TrackIO, TrackIO) build/
 Mixer::mixOutput(unsigned int)                    build/Mixer.o
 Mixer::panChannels(unsigned int)                  build/Mixer.o
 Mixer::panMixBuffer(float**, float, unsigned int) build/Mixer.o
-Mixer::prepare()                                  build/Mixer.o
 Mixer::processInputBlock(float const*, float const*, unsigned int) build/Mixer.o
                                                   build/LoopyTunes.o
 Mixer::processOutputBlock(float*, float*, unsigned int) build/Mixer.o
@@ -8462,7 +8452,6 @@ Track::initFX(daisy::DaisySeed*, daisysp::DelayLine<float, 240000u>**) build/Tra
                                                   build/Mixer.o
 Track::initIO(TrackIO)                            build/Track.o
                                                   build/Mixer.o
-Track::prepare()                                  build/Track.o
 Track::processInputBlock(float const*, float const*, unsigned int) build/Track.o
                                                   build/Mixer.o
 Track::processOutputBlock(float**, unsigned int)  build/Track.o
@@ -8830,7 +8819,6 @@ WWDG_IRQHandler                                   build/startup_stm32h750xx.o
 Waveshaper::calculateAutoGain()                   build/Waveshaper.o
 Waveshaper::init(daisy::DaisySeed*)               build/Waveshaper.o
                                                   build/Track.o
-Waveshaper::prepare()                             build/Waveshaper.o
 Waveshaper::processBlock(float**, unsigned int)   build/Waveshaper.o
                                                   build/Track.o
 Waveshaper::processSignum(float**, unsigned int)  build/Waveshaper.o
@@ -8895,8 +8883,8 @@ __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*,
 __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 __cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
-__cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
+__cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
 __cxxabiv1::__class_type_info::~__class_type_info() /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
 __cxxabiv1::__forced_unwind::~__forced_unwind()   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
 __cxxabiv1::__forced_unwind::~__forced_unwind()   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_exception.o)
@@ -9271,8 +9259,8 @@ checkPinMatch(GPIO_InitTypeDef*, dsy_gpio_pin, int) ../../../libDaisy//build/lib
 checkPinMatchSpi(GPIO_InitTypeDef*, dsy_gpio_pin, int) ../../../libDaisy//build/libdaisy.a(spi.o)
 cleanup_glue                                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-reent.o)
 comb::comb()                                      build/comb.o
-comb::comb()                                      build/comb.o
                                                   build/revmodel.o
+comb::comb()                                      build/comb.o
 comb::getdamp()                                   build/comb.o
 comb::getfeedback()                               build/comb.o
 comb::mute()                                      build/comb.o
@@ -9854,8 +9842,8 @@ revmodel::processmix(float*, float*, float*, float*, long, int) build/revmodel.o
 revmodel::processreplace(float*, float*, float*, float*, long, int) build/revmodel.o
                                                   build/Reverb.o
 revmodel::revmodel()                              build/revmodel.o
-revmodel::revmodel()                              build/revmodel.o
                                                   build/LoopyTunes.o
+revmodel::revmodel()                              build/revmodel.o
 revmodel::setdamp(float)                          build/revmodel.o
                                                   build/Reverb.o
 revmodel::setdry(float)                           build/revmodel.o
@@ -9914,8 +9902,8 @@ std::type_info::operator==(std::type_info const&) const /Library/DaisyToolchain/
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(si_class_type_info.o)
 std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
-std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
                                                   /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(class_type_info.o)
+std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
 std::type_info::~type_info()                      /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(tinfo.o)
 std::unexpected()                                 /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libstdc++_nano.a(eh_terminate.o)
 strcmp                                            /Library/DaisyToolchain/0.2.0/arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc_nano.a(lib_a-strcmp.o)

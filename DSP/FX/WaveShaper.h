@@ -26,7 +26,6 @@ public:
     inline void setWaveshape(int ws) { waveshape.value = ws; }
     inline void setAmount(float a) { amount.value = a; }
     
-    void prepare();
     void calculateAutoGain();
     void processBlock(float* buffer[2], size_t size);
 

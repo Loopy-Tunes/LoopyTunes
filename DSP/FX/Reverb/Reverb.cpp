@@ -27,7 +27,7 @@ void Reverb::processBlock(float* input[2], long size)
     
     model.processmix(input[L], input[R], output[L], output[R], size, 0);
 
-    for(size_t i = 0 ; i < size ; i++)
+    for(long i = 0 ; i < size ; i++)
     {
         input[L][i] = output[L][i];
         input[R][i] = output[R][i];
