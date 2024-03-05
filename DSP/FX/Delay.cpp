@@ -36,20 +36,20 @@ void Delay::prepare()
 
 }
 
-void Delay::processBlock(float* input[2], size_t size, size_t readPos)
+void Delay::processBlock(float* buffer[2])
 {
     if(bypass.value)
         return;
 
-    for(size_t i = readPos ; i < readPos + size ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float delay_b = delayLine[j]->Read();
-            float delay_o = input[j][i] + (delay_b * amount.value);
-            input[j][i] = delay_o;
-            float delay_n = input[j][i] + (delay_o * bounce.value);
-            delayLine[j]->Write(delay_n);
+            float delayB = delayLine[j]->Read();
+            float delayO = buffer[j][i] + (delayB * amount.value);
+            buffer[j][i] = delayO;
+            float delayN = buffer[j][i] + (delayO * bounce.value);
+            delayLine[j]->Write(delayN);
         }
     }
 }

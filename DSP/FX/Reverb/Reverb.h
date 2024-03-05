@@ -21,13 +21,15 @@ public:
     void init(DaisySeed* seed);
     void tick();
 
-    void processBlock(float* input[2], long size);
-    void processBlockReplacing(float* input[2], long size);
+    void processBlock(float* in[2], float* out[2], long size, size_t readPos);
+    void processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos);
     void suspend();
     void resume();
 
 private:
 
+    float* input[2][BLOCKLENGTH];
+    float* output[2][BLOCKLENGTH];
     revmodel model;
 
     BinaryParameterWrapper bypass;

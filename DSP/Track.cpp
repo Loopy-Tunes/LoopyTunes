@@ -129,20 +129,21 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
     }
 }
 
-void Track::processOutputBlock(float* left, float* right, size_t size)
+void Track::processOutputBlock(float* output[2], size_t size)
 {
     if(state == STOPPED)
         return;
 
-    // shaper.processBlock(buffer, size, ph.readPos);
-    // delay.processBlock(buffer, size, ph.readPos);
-    reverb.processBlock(buffer, size);
-
     for(size_t i = 0 ; i < size ; i++)
     {
-        left[i] = buffer[L][ph.readPos];
-        right[i] = buffer[R][ph.readPos];
+        output[L][i] = buffer[L][ph.readPos];
+        output[R][i] = buffer[R][ph.readPos];
         
         incrementReadPos();
     }
+    // process through effects
+
+    // shaper.processBlock(buffer, size, ph.readPos); 
+    // delay.processBlock(buffer, size, ph.readPos);
+    // reverb.processBlock(buffer, size);
 }

@@ -5,10 +5,13 @@
 #include "../../Parameters/BinaryParameter.h"
 #include <cmath>
 
-/************************************************************//**
- *  Class name: Delay
- *  Function: Processes delay effect for block of input sanples
- ***************************************************************/
+/*******************************************************************//**
+ *  Class name: Waveshaper
+ *  Function: Processes the input samples through a transfer function
+ * 
+ *  Based of Adhesion VST (Andrew Ford 2012)
+ *  https://github.com/Adhesion/adosin/tree/master
+ **********************************************************************/
 using namespace daisysp;
 
 class Waveshaper
@@ -25,11 +28,11 @@ public:
     
     void prepare();
     void calculateAutoGain();
-    void processBlock(float* input[2], size_t size, size_t readPos);
+    void processBlock(float* buffer[2]);
 
-    void processSine(float* input[2], size_t size, size_t readPos);
-    void processTanh(float* input[2], size_t size, size_t readPos);
-    void processSignum(float* input[2], size_t size, size_t readPos);
+    void processSine(float* buffer[2]);
+    void processTanh(float* buffer[2]);
+    void processSignum(float* buffer[2]);
     // wave shape 4 process 
     // wave shape 5 process 
 

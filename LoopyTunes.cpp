@@ -19,8 +19,10 @@ TO DO:
 - Play/record LEDs
 - Modularise track methods with ID enum
 - Reverb
-- Move dekay buffers to delay level
 - Remove prepare methods
+- Further audio refactor, try to only pass blocks of samples to fx processes
+- Maybe pass down only mix buffers, then can iterate through whole size
+- Mixer audio through
 */
 
 // Hardware
