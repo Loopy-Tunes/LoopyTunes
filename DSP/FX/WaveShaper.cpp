@@ -35,7 +35,7 @@ void Waveshaper::calculateAutoGain()
 
 }
 
-void Waveshaper::processBlock(float* buffer[2])
+void Waveshaper::processBlock(float* buffer[2], size_t size)
 {
     if(bypass.value)
         return;
@@ -51,20 +51,20 @@ void Waveshaper::processBlock(float* buffer[2])
     switch(waveshape.value)
     {
         case SINE:
-            processSine(buffer);
+            processSine(buffer, size);
         break;
         case TANH:
-            processTanh(buffer);
+            processTanh(buffer, size);
         break;
         case SIGNUM:
-            processSignum(buffer);
+            processSignum(buffer, size);
         break;
     }
 }
 
-void Waveshaper::processSine(float* buffer[2])
+void Waveshaper::processSine(float* buffer[2], size_t size)
 {
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
@@ -74,9 +74,9 @@ void Waveshaper::processSine(float* buffer[2])
     }
 }
 
-void Waveshaper::processTanh(float* buffer[2])
+void Waveshaper::processTanh(float* buffer[2], size_t size)
 {
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
@@ -86,9 +86,9 @@ void Waveshaper::processTanh(float* buffer[2])
     }
 }
 
-void Waveshaper::processSignum(float* buffer[2])
+void Waveshaper::processSignum(float* buffer[2], size_t size)
 {
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
