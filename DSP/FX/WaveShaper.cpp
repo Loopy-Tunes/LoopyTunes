@@ -25,11 +25,6 @@ void Waveshaper::tick()
     amount.param.tick();
 }
 
-void Waveshaper::prepare()
-{
-
-}
-
 void Waveshaper::calculateAutoGain()
 {
 
