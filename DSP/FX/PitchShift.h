@@ -23,7 +23,7 @@ public:
 
 private:
 
-    float* buffer[2][BLOCKLENGTH];
+    float buffer[2][BLOCKLENGTH];
     daisysp::PitchShifter shifter;
 
     BinaryParameterWrapper bypass;

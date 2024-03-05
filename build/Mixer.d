@@ -93,7 +93,7 @@ build/Mixer.o: DSP/Mixer.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Mixer.h DSP/Track.h DSP/FX/Waveshaper.h \
+ DSP/Mixer.h DSP/Track.h DSP/FX/PitchShift.h \
  DSP/FX/../../Parameters/AudioParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
@@ -233,8 +233,8 @@ build/Mixer.o: DSP/Mixer.cpp \
  ../../../DaisySP//Source/Utility/smooth_random.h \
  DSP/FX/../../Parameters/../Utils/Helpers.h \
  DSP/FX/../../Parameters/../Utils/Constants.h \
- DSP/FX/../../Parameters/BinaryParameter.h DSP/FX/Delay.h \
- DSP/FX/Reverb/Reverb.h \
+ DSP/FX/../../Parameters/BinaryParameter.h DSP/FX/Waveshaper.h \
+ DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
  DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
  DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
@@ -336,7 +336,7 @@ build/Mixer.o: DSP/Mixer.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Mixer.h:
 DSP/Track.h:
-DSP/FX/Waveshaper.h:
+DSP/FX/PitchShift.h:
 DSP/FX/../../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
@@ -494,6 +494,7 @@ DSP/FX/../../Parameters/AudioParameter.h:
 DSP/FX/../../Parameters/../Utils/Helpers.h:
 DSP/FX/../../Parameters/../Utils/Constants.h:
 DSP/FX/../../Parameters/BinaryParameter.h:
+DSP/FX/Waveshaper.h:
 DSP/FX/Delay.h:
 DSP/FX/Reverb/Reverb.h:
 DSP/FX/Reverb/../../../Parameters/AudioParameter.h:

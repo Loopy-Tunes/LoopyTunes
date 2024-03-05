@@ -26,14 +26,18 @@ void Track::initIO(TrackIO io)
 
 void Track::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
 {
+    pitchShift.init(seed);
     delay.init(seed, dl);
     shaper.init(seed);
+    reverb.init(seed);
 }
 
 void Track::tick()
 {
     record.tick();
     play.tick();
+
+    pitchShift.tick();
     shaper.tick();
     delay.tick();
     reverb.tick();
@@ -137,7 +141,8 @@ void Track::processOutputBlock(float* output[2], size_t size)
         incrementReadPos();
     }
    
-    shaper.processBlock(buffer, size); 
-    delay.processBlock(buffer, size);
-    reverb.processBlock(buffer, size);
+    pitchShift.process(output, size);
+    shaper.processBlock(output, size); 
+    delay.processBlock(output, size);
+    reverb.processBlock(output, size);
 }
