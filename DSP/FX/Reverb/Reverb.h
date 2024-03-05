@@ -28,6 +28,7 @@ public:
 
 private:
 
+    float output[2][BLOCKLENGTH];
     revmodel model;
 
     BinaryParameterWrapper bypass;

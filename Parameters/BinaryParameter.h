@@ -26,8 +26,6 @@ public:
         btn.Debounce();
         if(btn.FallingEdge())
             callback();
-        
-        System::Delay(5);
     }
 
 private:
