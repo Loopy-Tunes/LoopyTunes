@@ -13,11 +13,15 @@ SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
 include $(SYSTEM_FILES_DIR)/Makefile
 
 # Bootloader / optimisation
-OPT = -O3
+OPT = -Os
 APP_TYPE = BOOT_QSPI
+
+# Custom linker scripts
+LDSCRIPT = ./STM32H750IB_my_flash.lds
 
 # Debug
 DEBUG = 1
 
 # Flags
 LDFLAGS += -u _printf_float
+

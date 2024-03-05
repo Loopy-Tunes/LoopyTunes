@@ -11,6 +11,7 @@ void PitchShift::init(DaisySeed* seed)
     shifter.Init(seed->AudioSampleRate());
 
     //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
+    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float a) { amount.value = a; });
     semitones.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (int s) { shifter.SetTransposition(s); });
     timbre.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (u_int32_t t) { shifter.SetDelSize(t); });
     rand.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float r) { shifter.SetFun(r); });
