@@ -20,9 +20,8 @@ TO DO:
 - Modularise track methods with ID enum
 - Reverb
 - Remove prepare methods
-- Further audio refactor, try to only pass blocks of samples to fx processes
-- Maybe pass down only mix buffers, then can iterate through whole size
 - Mixer audio through
+- Remove clicks at ends of loops (interpolation???)
 */
 
 // Hardware

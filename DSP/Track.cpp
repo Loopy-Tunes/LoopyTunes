@@ -141,8 +141,7 @@ void Track::processOutputBlock(float* output[2], size_t size)
         
         incrementReadPos();
     }
-    // process through effects
-
+   
     shaper.processBlock(buffer, size); 
     delay.processBlock(buffer, size);
     reverb.processBlock(buffer, size);

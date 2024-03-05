@@ -22,11 +22,16 @@ void Reverb::tick()
 
 void Reverb::processBlock(float* input[2], long size)
 {
-    // need to add functionality so that it takes data from the read pointer
     if(bypass.value)
         return;
     
-    model.processmix(input[L], input[R], input[L], input[R], size, 0);
+    model.processmix(input[L], input[R], output[L], output[R], size, 0);
+
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        input[L][i] = output[L][i];
+        input[R][i] = output[R][i];
+    }
 }
 
 void Reverb::processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos)
