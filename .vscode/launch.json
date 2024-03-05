@@ -18,14 +18,14 @@
         "reset init",
         "gdb_breakpoint_override hard"
       ],
-      "preLaunchTask": "build_and_run",
+      "preLaunchTask": "build_all_debug",
       "preRestartCommands": [
         "load",
         "enable breakpoint",
         "monitor reset"
       ],
       "request": "launch",
-      "runToMain": false,
+      "runToMain": true,
       "servertype": "openocd",
       "showDevDebugOutput": true,
       "svdFile": "${workspaceRoot}/.vscode/STM32H750x.svd",
