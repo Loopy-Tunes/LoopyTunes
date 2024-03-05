@@ -35,12 +35,12 @@ void Waveshaper::calculateAutoGain()
 
 }
 
-void Waveshaper::processBlock(float* input[2], size_t size, size_t readPos)
+void Waveshaper::processBlock(float* buffer[2])
 {
     if(bypass.value)
         return;
 
-    for(size_t i = 0 ; i < size + readPos ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
@@ -51,49 +51,49 @@ void Waveshaper::processBlock(float* input[2], size_t size, size_t readPos)
     switch(waveshape.value)
     {
         case SINE:
-            processSine(input, size, readPos);
+            processSine(buffer);
         break;
         case TANH:
-            processTanh(input, size, readPos);
+            processTanh(buffer);
         break;
         case SIGNUM:
-            processSignum(input, size, readPos);
+            processSignum(buffer);
         break;
     }
 }
 
-void Waveshaper::processSine(float* input[2], size_t size, size_t readPos)
+void Waveshaper::processSine(float* buffer[2])
 {
-    for(size_t i = readPos ; i < readPos + size ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = cos(input[j][i]);
-            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
+            float output = cos(buffer[j][i]);
+            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
         }
     }
 }
 
-void Waveshaper::processTanh(float* input[2], size_t size, size_t readPos)
+void Waveshaper::processTanh(float* buffer[2])
 {
-    for(size_t i = readPos ; i < readPos + size ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = tanh(input[j][i]);
-            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
+            float output = tanh(buffer[j][i]);
+            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
         }
     }
 }
 
-void Waveshaper::processSignum(float* input[2], size_t size, size_t readPos)
+void Waveshaper::processSignum(float* buffer[2])
 {
-    for(size_t i = readPos ; i < readPos + size ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = (0 < input[j][i]) - (input[j][i] < 0);
-            input[j][i] = (1.f - amount.value) * input[j][i] + output * amount.value;
+            float output = (0 < buffer[j][i]) - (buffer[j][i] < 0);
+            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
         }
     }
 }

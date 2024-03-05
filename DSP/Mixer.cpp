@@ -130,10 +130,10 @@ void Mixer::mixOutput(size_t size)
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
 {
-    track1.track.processOutputBlock(track1.buffer[L], track1.buffer[R], size);
-    track2.track.processOutputBlock(track2.buffer[L], track2.buffer[R], size);
-    track3.track.processOutputBlock(track3.buffer[L], track3.buffer[R], size);
-    track4.track.processOutputBlock(track4.buffer[L], track4.buffer[R], size);
+    track1.track.processOutputBlock(track1.buffer, size);
+    track2.track.processOutputBlock(track2.buffer, size);
+    track3.track.processOutputBlock(track3.buffer, size);
+    track4.track.processOutputBlock(track4.buffer, size);
 
     //panChannels(size);
     mixOutput(size);

@@ -23,7 +23,7 @@ public:
     inline void setAmount(float a) { amount.value = a; }
 
     void prepare();
-    void processBlock(float* input[2], size_t size, size_t readPos); 
+    void processBlock(float* buffer[2]); 
 
 private:
 

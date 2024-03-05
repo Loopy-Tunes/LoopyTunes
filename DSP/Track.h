@@ -33,7 +33,7 @@ public:
 
     void prepare();
     void processInputBlock(const float* left, const float* right, size_t size);
-    void processOutputBlock(float* left, float* right, size_t size);
+    void processOutputBlock(float* output[2], size_t size);
 
 private:
 
