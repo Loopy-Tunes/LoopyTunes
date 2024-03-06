@@ -26,7 +26,7 @@ SECTIONS
 		. = ALIGN(4);
 		KEEP(*(.isr_vector))
 		. = ALIGN(4);
-	} > FLASH
+	} > QSPIFLASH
 
 	.text :
 	{
@@ -103,7 +103,7 @@ SECTIONS
 		_edata = .;
 
 		PROVIDE(__data_end__ = _edata);
-	} > SRAM AT >FLASH
+	} > QSPIFLASH AT >FLASH
 
 	_sidata = LOADADDR(.data);
 
@@ -120,7 +120,7 @@ SECTIONS
 		_ebss = .;
 
 		PROVIDE(__bss_end__ = _ebss);
-	} > SRAM
+	} > QSPIFLASH
 
 	PROVIDE(end = .); 
 
@@ -169,7 +169,7 @@ SECTIONS
 	_sisdram_text = LOADADDR(.sdram_text);
 	*/
 
-	.sdram_bss (NOLOAD) :
+	.sdram_bss (NOLOAD) : 
 	{
 		. = ALIGN(4);
 		_ssdram_bss = .;

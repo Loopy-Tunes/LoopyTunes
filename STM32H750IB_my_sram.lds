@@ -45,7 +45,7 @@ SECTIONS
 		. = ALIGN(4);
 		_etext = .;
 
-	} > SRAM
+	} > FLASH
 
 	.ARM.extab :
 	{
@@ -135,7 +135,7 @@ SECTIONS
 		_ebss = .;
 
 		PROVIDE(__bss_end__ = _ebss);
-	} > DTCMRAM
+	} > SRAM
 
 	.dtcmram_bss (NOLOAD) :
 	{

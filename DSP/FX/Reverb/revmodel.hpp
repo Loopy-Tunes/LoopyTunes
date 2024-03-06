@@ -54,7 +54,7 @@ private:
 	allpass	allpassR[numallpasses];
 
 	// Buffers for the combs
-	float	bufcombL1[combtuningL1];
+	float 	bufcombL1[combtuningL1];
 	float	bufcombR1[combtuningR1];
 	float	bufcombL2[combtuningL2];
 	float	bufcombR2[combtuningR2];
