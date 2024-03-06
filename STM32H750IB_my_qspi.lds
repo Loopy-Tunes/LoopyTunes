@@ -118,7 +118,7 @@ SECTIONS
 		_edata = .;
 
 		PROVIDE(__data_end__ = _edata);
-	} > QSPIFLASH
+	} > SRAM AT > QSPIFLASH
 
 	_sidata = LOADADDR(.data);
 
@@ -135,7 +135,7 @@ SECTIONS
 		_ebss = .;
 
 		PROVIDE(__bss_end__ = _ebss);
-	} > QSPIFLASH
+	} > SRAM
 
 	.dtcmram_bss (NOLOAD) :
 	{

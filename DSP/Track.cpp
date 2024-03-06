@@ -29,7 +29,7 @@ void Track::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
     //pitchShift.init(seed);
     delay.init(seed, dl);
     shaper.init(seed);
-    reverb.init(seed);
+    //reverb.init(seed);
 }
 
 void Track::tick()
@@ -40,7 +40,7 @@ void Track::tick()
     //pitchShift.tick();
     shaper.tick();
     delay.tick();
-    reverb.tick();
+    //reverb.tick();
 }
 
 void Track::clearBuffer()
