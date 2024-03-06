@@ -26,7 +26,7 @@ SECTIONS
 		. = ALIGN(4);
 		KEEP(*(.isr_vector))
 		. = ALIGN(4);
-	} > QSPIFLASH
+	} > FLASH
 
 	.text :
 	{
