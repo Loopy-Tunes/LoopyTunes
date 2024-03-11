@@ -20,6 +20,7 @@ TO DO:
 - Sort out warning in denormals
 - Rework bypass controls
 - Initial values system
+- Reverb mix system
 */
 
 // Hardware
