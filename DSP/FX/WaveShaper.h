@@ -3,6 +3,7 @@
 
 #include "../../Parameters/AudioParameter.h"
 #include "../../Parameters/BinaryParameter.h"
+#include "../../Parameters/DefaultValues.h"
 #include <cmath>
 
 /*******************************************************************//**
@@ -19,12 +20,13 @@ class Waveshaper
 public:
 
     void init(DaisySeed* seed);
+    void setDefaultValues();
     void tick();
 
     inline void setBypass() { bypass.value = !bypass.value; }
+    inline void setAmount(float a) { amount.value = a; }
     inline void setInput(float i) { input.value = i; }
     inline void setWaveshape(int ws) { waveshape.value = ws; }
-    inline void setAmount(float a) { amount.value = a; }
     
     void calculateAutoGain();
     void processBlock(float* buffer[2], size_t size);
@@ -38,9 +40,9 @@ public:
 private:
 
     BinaryParameterWrapper bypass;
+    AudioParameterWrapper<float> amount;
     AudioParameterWrapper<float> input;
     AudioParameterWrapper<int> waveshape;
-    AudioParameterWrapper<float> amount;
 
     float gain;
 };

@@ -3,6 +3,7 @@
 
 #include "../../../Parameters/AudioParameter.h"
 #include "../../../Parameters/BinaryParameter.h"
+#include "../../../Parameters/DefaultValues.h"
 #include "revmodel.hpp"
 
 /*********************************************************************//**
@@ -19,6 +20,7 @@ class Reverb
 public:
 
     void init(DaisySeed* seed);
+    void setDefaultValues();
     void tick();
 
     void setAmount(float mix);

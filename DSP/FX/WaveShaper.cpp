@@ -5,24 +5,29 @@ using namespace daisysp;
 void Waveshaper::init(DaisySeed* seed)
 {
     //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
+    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); }); // to be set to encoder
     input.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float i) { setInput(i); }); // to be set to encoder
     waveshape.param.init(seed, 0, 3, LINEAR, ChannelIDs::AMP2, [this] (int ws) { setWaveshape(ws); }); // to be set to encoder
-    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); }); // to be set to encoder
 
-    bypass.value = false;
-    input.value = 0;
-    waveshape.value = 1;
-    amount.value = 1;
+    setDefaultValues();
+}
+
+ void Waveshaper::setDefaultValues()
+ {
+    bypass.value = waveshaperDefs.bypass;
+    amount.value = waveshaperDefs.amount;
+    input.value = waveshaperDefs.input;
+    waveshape.value = waveshaperDefs.waveshape;
 
     gain = 0;
-}
+ }
 
 void Waveshaper::tick()
 {
     bypass.param.tick();
+    amount.param.tick();
     input.param.tick();
     waveshape.param.tick();
-    amount.param.tick();
 }
 
 void Waveshaper::calculateAutoGain()

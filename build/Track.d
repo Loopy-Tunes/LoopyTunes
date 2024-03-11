@@ -93,10 +93,7 @@ build/Track.o: DSP/Track.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/Track.h DSP/FX/PitchShift.h ../../../DaisySP//Source/Utility/dsp.h \
- ../../../DaisySP//Source/Utility/delayline.h \
- ../../../DaisySP//Source/Control/phasor.h \
- DSP/FX/../../Parameters/AudioParameter.h \
+ DSP/Track.h DSP/FX/PitchShift.h DSP/FX/../../Parameters/AudioParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
  ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/per/tim.h \
@@ -167,8 +164,10 @@ build/Track.o: DSP/Track.cpp \
  ../../../DaisySP//Source/Control/adenv.h \
  ../../../DaisySP//Source/Control/adsr.h \
  ../../../DaisySP//Source/Control/line.h \
+ ../../../DaisySP//Source/Control/phasor.h \
  ../../../DaisySP//Source/Drums/analogbassdrum.h \
  ../../../DaisySP//Source/Synthesis/oscillator.h \
+ ../../../DaisySP//Source/Utility/dsp.h \
  ../../../DaisySP//Source/Filters/svf.h \
  ../../../DaisySP//Source/Drums/analogsnaredrum.h \
  ../../../DaisySP//Source/Drums/hihat.h \
@@ -181,6 +180,7 @@ build/Track.o: DSP/Track.cpp \
  ../../../DaisySP//Source/Effects/autowah.h \
  ../../../DaisySP//Source/Effects/bitcrush.h \
  ../../../DaisySP//Source/Effects/chorus.h \
+ ../../../DaisySP//Source/Utility/delayline.h \
  ../../../DaisySP//Source/Effects/decimator.h \
  ../../../DaisySP//Source/Effects/flanger.h \
  ../../../DaisySP//Source/Effects/fold.h \
@@ -232,10 +232,12 @@ build/Track.o: DSP/Track.cpp \
  ../../../DaisySP//Source/Utility/smooth_random.h \
  DSP/FX/../../Parameters/../Utils/Helpers.h \
  DSP/FX/../../Parameters/../Utils/Constants.h \
- DSP/FX/../../Parameters/BinaryParameter.h DSP/FX/Waveshaper.h \
+ DSP/FX/../../Parameters/BinaryParameter.h \
+ DSP/FX/../../Parameters/DefaultValues.h DSP/FX/Waveshaper.h \
  DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
  DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
+ DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
  DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
  DSP/FX/Reverb/denormals.h DSP/FX/Reverb/allpass.hpp \
  DSP/FX/Reverb/tuning.h DSP/../Parameters/BinaryParameter.h
@@ -335,9 +337,6 @@ build/Track.o: DSP/Track.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/Track.h:
 DSP/FX/PitchShift.h:
-../../../DaisySP//Source/Utility/dsp.h:
-../../../DaisySP//Source/Utility/delayline.h:
-../../../DaisySP//Source/Control/phasor.h:
 DSP/FX/../../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
@@ -426,8 +425,10 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Control/adenv.h:
 ../../../DaisySP//Source/Control/adsr.h:
 ../../../DaisySP//Source/Control/line.h:
+../../../DaisySP//Source/Control/phasor.h:
 ../../../DaisySP//Source/Drums/analogbassdrum.h:
 ../../../DaisySP//Source/Synthesis/oscillator.h:
+../../../DaisySP//Source/Utility/dsp.h:
 ../../../DaisySP//Source/Filters/svf.h:
 ../../../DaisySP//Source/Drums/analogsnaredrum.h:
 ../../../DaisySP//Source/Drums/hihat.h:
@@ -440,6 +441,7 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Effects/autowah.h:
 ../../../DaisySP//Source/Effects/bitcrush.h:
 ../../../DaisySP//Source/Effects/chorus.h:
+../../../DaisySP//Source/Utility/delayline.h:
 ../../../DaisySP//Source/Effects/decimator.h:
 ../../../DaisySP//Source/Effects/flanger.h:
 ../../../DaisySP//Source/Effects/fold.h:
@@ -492,11 +494,13 @@ DSP/FX/../../Parameters/AudioParameter.h:
 DSP/FX/../../Parameters/../Utils/Helpers.h:
 DSP/FX/../../Parameters/../Utils/Constants.h:
 DSP/FX/../../Parameters/BinaryParameter.h:
+DSP/FX/../../Parameters/DefaultValues.h:
 DSP/FX/Waveshaper.h:
 DSP/FX/Delay.h:
 DSP/FX/Reverb/Reverb.h:
 DSP/FX/Reverb/../../../Parameters/AudioParameter.h:
 DSP/FX/Reverb/../../../Parameters/BinaryParameter.h:
+DSP/FX/Reverb/../../../Parameters/DefaultValues.h:
 DSP/FX/Reverb/revmodel.hpp:
 DSP/FX/Reverb/comb.hpp:
 DSP/FX/Reverb/denormals.h:

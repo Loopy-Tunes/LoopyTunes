@@ -8,11 +8,17 @@ void Reverb::init(DaisySeed* seed)
     //damp.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float d) { model.setdamp(d); });
     //width.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float w) { model.setwidth(w); });
 
-    // set default values
-    model.setdamp(1.f);
-    model.setroomsize(0.5);
-    model.setdamp(0.5);
-    model.setwidth(0.5);
+    setDefaultValues();
+}
+
+void Reverb::setDefaultValues()
+{
+    bypass.value = reverbDefs.bypass;
+    setAmount(reverbDefs.amount);
+    model.setmode(reverbDefs.mode);
+    model.setroomsize(reverbDefs.size);
+    model.setdamp(reverbDefs.damp);
+    model.setwidth(reverbDefs.width);
 }
 
 void Reverb::tick()

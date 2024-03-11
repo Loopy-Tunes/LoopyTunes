@@ -8,19 +8,16 @@ TO DO:
 - AudioParameter value smoothing / ramping
 - Parameter update queue (is this needed?)
 - Parameter denormalisation (for display)
-- Decibel conversion
 - LPF/HPF filters
 - Block counter for handling parameter updates
 - Encoder driver
 - Output Limiter
 - Play/record LEDs
-- Reverb
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
 - Rework bypass controls
 - Initial values system
-- Reverb mix system
 - Resolve problems with waveshaper
 */
 
@@ -34,8 +31,6 @@ DaisySeed hw;
 Mixer mixer;
 
 // UI - QSPI
-
-// testing
 
 // buffers
 namespace Buffers

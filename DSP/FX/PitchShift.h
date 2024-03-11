@@ -1,17 +1,9 @@
 #ifndef PITCHSHIFTER_H
 #define PITCHSHIFTER_H
 
-#include <stdint.h>
-#include <cmath>
-#ifdef USE_ARM_DSP
-#include "arm_math.h"
-#endif
-#include "Utility/dsp.h"
-#include "Utility/delayline.h"
-#include "Control/phasor.h"
-
 #include "../../Parameters/AudioParameter.h"
 #include "../../Parameters/BinaryParameter.h"
+#include "../../Parameters/DefaultValues.h"
 
 /************************************************************//**
  *  Class name: PitchShift
@@ -24,6 +16,7 @@ class PitchShift
 public:
 
     void init(DaisySeed* seed);
+    void setDefaultValues();
     void tick();
 
     void process(float* input[2], size_t size);

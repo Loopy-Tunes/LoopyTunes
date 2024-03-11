@@ -12,22 +12,27 @@ void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
     }
 
     //bypass.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (int b) { setBypass(b); }); // to be set to encoder
-    size.init(seed, 0, 10000, LINEAR, ChannelIDs::AMP2, [this] (size_t s) { setDelay(s); }); 
-    bounce.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float b) { setBounce(b); }); 
     amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float a) { setAmount(a); }); 
+    size.init(seed, 0, 10000, LINEAR, ChannelIDs::AMP2, [this] (size_t s) { setDelay(s); }); 
+    feedback.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float f) { setFeedback(f); }); 
 
-    bypass.value = false; // set to 0 when pots working
-    bounce.value = 0.8;
-    amount.value = 0.5;
-    setDelay(40000);
+    setDefaultValues();
+}
+
+void Delay::setDefaultValues()
+{
+    bypass.value = delayDefs.bypass;
+    amount.value = delayDefs.amount;
+    setDelay(delayDefs.size);
+    feedback.value = delayDefs.feedback;
 }
 
 void Delay::tick()
 {
     bypass.param.tick();
-    size.tick();
-    bounce.param.tick();
     amount.param.tick();
+    size.tick();
+    feedback.param.tick();
 }
 
 void Delay::processBlock(float* buffer[2], size_t size)
@@ -42,7 +47,7 @@ void Delay::processBlock(float* buffer[2], size_t size)
             float delayB = delayLine[j]->Read();
             float delayO = buffer[j][i] + (delayB * amount.value);
             buffer[j][i] = delayO;
-            float delayN = buffer[j][i] + (delayO * bounce.value);
+            float delayN = buffer[j][i] + (delayO * feedback.value);
             delayLine[j]->Write(delayN);
         }
     }

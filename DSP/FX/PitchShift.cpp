@@ -15,10 +15,16 @@ void PitchShift::init(DaisySeed* seed)
     semitones.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (int s) { shifter.SetTransposition(s); });
     rand.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float r) { shifter.SetFun(r); });
 
-    // set default values 
-    bypass.value = false;
-    amount.param.setIsSelected(true);
-    amount.value = 1;
+    setDefaultValues();
+}
+
+void PitchShift::setDefaultValues()
+{
+    bypass.value = pitchShifterDefs.bypass;
+    amount.value = pitchShifterDefs.amount;
+    shifter.SetTransposition(pitchShifterDefs.semitones);
+    shifter.SetFun(pitchShifterDefs.rand);
+
     shifter.SetDelSize(2400);
 }
 
