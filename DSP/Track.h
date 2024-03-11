@@ -47,10 +47,10 @@ private:
     float* buffer[2];
     size_t bufferSize;
 
-    //PitchShift pitchShift;
+    PitchShift pitchShift;
     Waveshaper shaper;
     Delay delay;
-    //Reverb reverb;
+    Reverb reverb;
 };
 
 #endif

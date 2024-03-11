@@ -9,7 +9,7 @@
  *  Class name: Waveshaper
  *  Function: Processes the input samples through a transfer function
  * 
- *  Based of Adhesion VST (Andrew Ford 2012)
+ *  Based off of Adhesion VST (Andrew Ford 2012)
  *  https://github.com/Adhesion/adosin/tree/master
  **********************************************************************/
 using namespace daisysp;

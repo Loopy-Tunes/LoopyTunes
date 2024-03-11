@@ -15,7 +15,7 @@ include $(SYSTEM_FILES_DIR)/Makefile
 # Optimisation
 OPT = -Os
 
-# Linker scripts
+# Boot management
 LDSCRIPT ?= ./STM32H750IB_my_qspi.lds
 USBPID = $(DAISY_PID)
 FLASH_ADDRESS ?= $(QSPI_ADDRESS)

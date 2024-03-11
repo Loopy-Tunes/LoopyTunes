@@ -94,6 +94,9 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
  DSP/Mixer.h DSP/Track.h DSP/FX/PitchShift.h \
+ ../../../DaisySP//Source/Utility/dsp.h \
+ ../../../DaisySP//Source/Utility/delayline.h \
+ ../../../DaisySP//Source/Control/phasor.h \
  DSP/FX/../../Parameters/AudioParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
@@ -165,10 +168,8 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  ../../../DaisySP//Source/Control/adenv.h \
  ../../../DaisySP//Source/Control/adsr.h \
  ../../../DaisySP//Source/Control/line.h \
- ../../../DaisySP//Source/Control/phasor.h \
  ../../../DaisySP//Source/Drums/analogbassdrum.h \
  ../../../DaisySP//Source/Synthesis/oscillator.h \
- ../../../DaisySP//Source/Utility/dsp.h \
  ../../../DaisySP//Source/Filters/svf.h \
  ../../../DaisySP//Source/Drums/analogsnaredrum.h \
  ../../../DaisySP//Source/Drums/hihat.h \
@@ -181,7 +182,6 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  ../../../DaisySP//Source/Effects/autowah.h \
  ../../../DaisySP//Source/Effects/bitcrush.h \
  ../../../DaisySP//Source/Effects/chorus.h \
- ../../../DaisySP//Source/Utility/delayline.h \
  ../../../DaisySP//Source/Effects/decimator.h \
  ../../../DaisySP//Source/Effects/flanger.h \
  ../../../DaisySP//Source/Effects/fold.h \
@@ -337,6 +337,9 @@ build/LoopyTunes.o: LoopyTunes.cpp \
 DSP/Mixer.h:
 DSP/Track.h:
 DSP/FX/PitchShift.h:
+../../../DaisySP//Source/Utility/dsp.h:
+../../../DaisySP//Source/Utility/delayline.h:
+../../../DaisySP//Source/Control/phasor.h:
 DSP/FX/../../Parameters/AudioParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
@@ -425,10 +428,8 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Control/adenv.h:
 ../../../DaisySP//Source/Control/adsr.h:
 ../../../DaisySP//Source/Control/line.h:
-../../../DaisySP//Source/Control/phasor.h:
 ../../../DaisySP//Source/Drums/analogbassdrum.h:
 ../../../DaisySP//Source/Synthesis/oscillator.h:
-../../../DaisySP//Source/Utility/dsp.h:
 ../../../DaisySP//Source/Filters/svf.h:
 ../../../DaisySP//Source/Drums/analogsnaredrum.h:
 ../../../DaisySP//Source/Drums/hihat.h:
@@ -441,7 +442,6 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Effects/autowah.h:
 ../../../DaisySP//Source/Effects/bitcrush.h:
 ../../../DaisySP//Source/Effects/chorus.h:
-../../../DaisySP//Source/Utility/delayline.h:
 ../../../DaisySP//Source/Effects/decimator.h:
 ../../../DaisySP//Source/Effects/flanger.h:
 ../../../DaisySP//Source/Effects/fold.h:

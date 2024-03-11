@@ -10,17 +10,14 @@ TO DO:
 - Parameter denormalisation (for display)
 - Decibel conversion
 - LPF/HPF filters
-- Pitch shift
 - Block counter for handling parameter updates
 - Encoder driver
 - Output Limiter
 - Play/record LEDs
-- Modularise track methods with ID enum
 - Reverb
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
-- Figure out how to use bootloader
 - Rework bypass controls
 - Initial values system
 */
