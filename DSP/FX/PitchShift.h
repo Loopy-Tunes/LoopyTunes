@@ -38,7 +38,6 @@ private:
     BinaryParameterWrapper bypass;
     AudioParameterWrapper<float> amount;
     AudioParameter<int> semitones;
-    AudioParameter<u_int32_t> timbre;
     AudioParameter<float> rand;
 };
 

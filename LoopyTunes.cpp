@@ -103,7 +103,7 @@ void initTrackIO()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	mixer.processInputBlock(in[L], in[L], size);
+	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
 
