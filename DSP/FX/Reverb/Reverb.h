@@ -21,6 +21,8 @@ public:
     void init(DaisySeed* seed);
     void tick();
 
+    void setAmount(float mix);
+
     void processBlock(float* input[2], long size);
     void processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos);
     void suspend();
@@ -32,11 +34,10 @@ private:
     revmodel model;
 
     BinaryParameterWrapper bypass;
+    AudioParameter<float> amount;
     AudioParameter<float> mode;
     AudioParameter<float> size;
     AudioParameter<float> damp;
-    AudioParameter<float> wet;
-    AudioParameter<float> dry;
     AudioParameter<float> width;
 };
 

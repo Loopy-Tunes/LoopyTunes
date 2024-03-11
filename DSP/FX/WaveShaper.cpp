@@ -4,12 +4,12 @@ using namespace daisysp;
 
 void Waveshaper::init(DaisySeed* seed)
 {
-    bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
+    //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
     input.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float i) { setInput(i); }); // to be set to encoder
-    waveshape.param.init(seed, 0, 3, LINEAR, ChannelIDs::ENCODER, [this] (int ws) { setWaveshape(ws); }); // to be set to encoder
-    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float a) { setAmount(a); }); // to be set to encoder
+    waveshape.param.init(seed, 0, 3, LINEAR, ChannelIDs::AMP2, [this] (int ws) { setWaveshape(ws); }); // to be set to encoder
+    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); }); // to be set to encoder
 
-    bypass.value = true;
+    bypass.value = false;
     input.value = 0;
     waveshape.value = 1;
     amount.value = 1;

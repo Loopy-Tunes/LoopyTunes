@@ -21,6 +21,7 @@ TO DO:
 - Rework bypass controls
 - Initial values system
 - Reverb mix system
+- Resolve problems with waveshaper
 */
 
 // Hardware

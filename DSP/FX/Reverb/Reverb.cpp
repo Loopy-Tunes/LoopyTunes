@@ -2,11 +2,10 @@
 
 void Reverb::init(DaisySeed* seed)
 {
+    amount.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); });
     mode.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float m) { model.setmode(m); });
     size.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float s) { model.setroomsize(s); });
     //damp.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float d) { model.setdamp(d); });
-    wet.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float w) { model.setwet(w); });
-    dry.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float d) { model.setdry(d); });
     //width.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float w) { model.setwidth(w); });
 
     // set default values
@@ -18,12 +17,20 @@ void Reverb::init(DaisySeed* seed)
 
 void Reverb::tick()
 {
+    amount.tick();
     mode.tick();
     size.tick();
     //damp.tick();
-    wet.tick();
-    dry.tick();
     //width.tick();
+}
+
+void Reverb::setAmount(float mix)
+{
+    float wet = mix;
+    float dry = 1.f - mix;
+
+    model.setwet(wet);
+    model.setdry(dry);
 }
 
 void Reverb::processBlock(float* input[2], long size)
