@@ -17,7 +17,6 @@ TO DO:
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
 - Rework bypass controls
-- Initial values system
 - Resolve problems with waveshaper
 */
 
@@ -25,7 +24,7 @@ TO DO:
 DaisySeed hw;
 
 // Global
-//int sample;
+int sample;
 
 // DSP
 Mixer mixer;
@@ -80,7 +79,7 @@ void init()
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// initialise global variables
-	// sample = 0;
+	sample = 0;
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
@@ -100,6 +99,16 @@ void initTrackIO()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	if(sample >= MACROBLOCK)
+	{
+		mixer.tick();
+		sample = 0;
+	}
+	else
+	{
+		sample += 4;
+	}
+
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
@@ -125,6 +134,6 @@ int main(void)
 	
 	while(1) 
 	{
-		mixer.tick();
+		//mixer.tick();
 	}
 }
