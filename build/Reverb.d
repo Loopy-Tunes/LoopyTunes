@@ -234,6 +234,7 @@ build/Reverb.o: DSP/FX/Reverb/Reverb.cpp \
  DSP/FX/Reverb/../../../Parameters/../Utils/Helpers.h \
  DSP/FX/Reverb/../../../Parameters/../Utils/Constants.h \
  DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
+ DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
  DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
  DSP/FX/Reverb/denormals.h DSP/FX/Reverb/allpass.hpp \
  DSP/FX/Reverb/tuning.h
@@ -489,6 +490,7 @@ DSP/FX/Reverb/../../../Parameters/AudioParameter.h:
 DSP/FX/Reverb/../../../Parameters/../Utils/Helpers.h:
 DSP/FX/Reverb/../../../Parameters/../Utils/Constants.h:
 DSP/FX/Reverb/../../../Parameters/BinaryParameter.h:
+DSP/FX/Reverb/../../../Parameters/DefaultValues.h:
 DSP/FX/Reverb/revmodel.hpp:
 DSP/FX/Reverb/comb.hpp:
 DSP/FX/Reverb/denormals.h:

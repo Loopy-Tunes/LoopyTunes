@@ -3,6 +3,7 @@
 
 #include "../../Parameters/AudioParameter.h"
 #include "../../Parameters/BinaryParameter.h"
+#include "../../Parameters/DefaultValues.h"
 
 /************************************************************//**
  *  Class name: PitchShift
@@ -15,6 +16,7 @@ class PitchShift
 public:
 
     void init(DaisySeed* seed);
+    void setDefaultValues();
     void tick();
 
     void process(float* input[2], size_t size);
@@ -29,7 +31,6 @@ private:
     BinaryParameterWrapper bypass;
     AudioParameterWrapper<float> amount;
     AudioParameter<int> semitones;
-    AudioParameter<u_int32_t> timbre;
     AudioParameter<float> rand;
 };
 

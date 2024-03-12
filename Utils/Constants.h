@@ -10,6 +10,6 @@
 #define R 1
 
 #define ADCINPUTS 6
-#define SUBBLOCKSIZE 1024
+#define MACROBLOCK 512
 
 #define NO_OPT __attribute__((optimize(0)))

@@ -120,7 +120,7 @@ SECTIONS
 		_ebss = .;
 
 		PROVIDE(__bss_end__ = _ebss);
-	} > SRAM
+	} > SDRAM
 
 	PROVIDE(end = .); 
 
@@ -169,7 +169,7 @@ SECTIONS
 	_sisdram_text = LOADADDR(.sdram_text);
 	*/
 
-	.sdram_bss (NOLOAD) :
+	.sdram_bss (NOLOAD) : 
 	{
 		. = ALIGN(4);
 		_ssdram_bss = .;

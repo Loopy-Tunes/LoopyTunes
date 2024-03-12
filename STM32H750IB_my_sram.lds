@@ -45,7 +45,11 @@ SECTIONS
 		. = ALIGN(4);
 		_etext = .;
 
+<<<<<<< HEAD
 	} > SRAM
+=======
+	} > FLASH
+>>>>>>> current
 
 	.ARM.extab :
 	{
@@ -135,7 +139,11 @@ SECTIONS
 		_ebss = .;
 
 		PROVIDE(__bss_end__ = _ebss);
+<<<<<<< HEAD
 	} > DTCMRAM
+=======
+	} > SRAM
+>>>>>>> current
 
 	.dtcmram_bss (NOLOAD) :
 	{

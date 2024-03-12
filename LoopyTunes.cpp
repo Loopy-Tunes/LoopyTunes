@@ -6,38 +6,26 @@ using namespace daisysp;
 /*
 TO DO:
 - AudioParameter value smoothing / ramping
-- Parameter update queue (is this needed?)
-- Parameter denormalisation (for display)
-- Decibel conversion
 - LPF/HPF filters
-- Pitch shift
-- Block counter for handling parameter updates
 - Encoder driver
 - Output Limiter
-- Play/record LEDs
-- Modularise track methods with ID enum
-- Reverb
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
-- Figure out how to use bootloader
 - Rework bypass controls
-- Initial values system
+- Resolve problems with waveshaper
 */
 
 // Hardware
 DaisySeed hw;
 
 // Global
-//int sample;
+size_t sample;
 
 // DSP
-static Mixer mixer;
-DcBlock dcBlock;
+Mixer mixer;
 
 // UI - QSPI
-
-// testing
 
 // buffers
 namespace Buffers
@@ -81,19 +69,18 @@ namespace Buffers
 void init()
 {
 	// initialise Daisy Seed
+	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// initialise global variables
-	//sample = 0;
+	sample = 0;
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&hw, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
-
-	dcBlock.Init(hw.AudioSampleRate());
 }
 
 void initTrackIO()
@@ -108,10 +95,14 @@ void initTrackIO()
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	for(size_t i = 0 ; i < size ; i++)
+	if(sample >= MACROBLOCK)
 	{
-		dcBlock.Process(in[L][i]);
-		dcBlock.Process(in[R][i]);
+		mixer.tick();
+		sample = 0;
+	}
+	else
+	{
+		sample += size;
 	}
 
 	mixer.processInputBlock(in[L], in[R], size);
@@ -139,6 +130,6 @@ int main(void)
 	
 	while(1) 
 	{
-		mixer.tick();
+		//mixer.tick();
 	}
 }
