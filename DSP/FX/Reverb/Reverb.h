@@ -26,7 +26,6 @@ public:
     void setAmount(float mix);
 
     void processBlock(float* input[2], long size);
-    void processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos);
     void suspend();
     void resume();
 

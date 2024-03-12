@@ -137,14 +137,14 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        mix[L][i] *= master.value;
-        mix[R][i] *= master.value;
+        //mix[L][i] *= master.value;
+        //mix[R][i] *= master.value;
 
-        limiter.ProcessBlock(&mix[L][i], size, 0.f);
-        limiter.ProcessBlock(&mix[R][i], size, 0.f);
+        //limiter.ProcessBlock(&mix[L][i], size, 0.f);
+        //limiter.ProcessBlock(&mix[R][i], size, 0.f);
 
-        left[i] = mix[L][i];
-        right[i] = mix[R][i];
+        left[i] = mix[L][i] * master.value;
+        right[i] = mix[R][i] * master.value;
     }
 }
 

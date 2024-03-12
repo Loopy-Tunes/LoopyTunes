@@ -37,8 +37,8 @@ void Delay::tick()
 
 void Delay::processBlock(float* buffer[2], size_t size)
 {
-    if(bypass.value)
-        return;
+    //if(bypass.value)
+        //return;
 
     for(size_t i = 0 ; i < size ; i++)
     {

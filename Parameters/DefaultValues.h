@@ -23,7 +23,7 @@ static const struct ReverbDefaults
 {
 	int bypass = 1;
 	float amount = 0.5;
-	float mode = 1;
+	float mode = 0;
 	float size = 0.5;
 	float damp = 0.5;
 	float width = 0.5;

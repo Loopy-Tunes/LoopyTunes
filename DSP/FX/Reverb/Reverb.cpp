@@ -2,13 +2,14 @@
 
 void Reverb::init(DaisySeed* seed)
 {
-    amount.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); });
-    mode.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float m) { model.setmode(m); });
+    amount.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { model.setwet(a); });
+    //mode.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float m) { model.setmode(m); });
     size.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float s) { model.setroomsize(s); });
-    //damp.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float d) { model.setdamp(d); });
+    damp.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float d) { model.setdamp(d); });
     //width.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float w) { model.setwidth(w); });
 
-    setDefaultValues();
+    model.setdry(0.8);
+    //setDefaultValues();
 }
 
 void Reverb::setDefaultValues()
@@ -24,9 +25,9 @@ void Reverb::setDefaultValues()
 void Reverb::tick()
 {
     amount.tick();
-    mode.tick();
+    //mode.tick();
     size.tick();
-    //damp.tick();
+    damp.tick();
     //width.tick();
 }
 
@@ -51,14 +52,6 @@ void Reverb::processBlock(float* input[2], long size)
         input[L][i] = output[L][i];
         input[R][i] = output[R][i];
     }
-}
-
-void Reverb::processBlockReplacing(float* input[2], float* output[2], long size, size_t readPos)
-{
-    if(bypass.value)
-        return;
-
-    model.processreplace(input[L], input[R], output[L], output[R], size, 0);
 }
 
 void Reverb::suspend()

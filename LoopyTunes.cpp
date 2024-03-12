@@ -10,10 +10,12 @@ TO DO:
 - Encoder driver
 - Output Limiter
 - Mixer audio through
-- Remove clicks at ends of loops (interpolation???)
+- Remove clicks at ends of loops (interpolation???) (static envelope???)
 - Sort out warning in denormals
 - Rework bypass controls
 - Resolve problems with waveshaper
+- Parameter scaling
+- Playback speed
 */
 
 // Hardware
