@@ -16,6 +16,7 @@ TO DO:
 - Resolve problems with waveshaper
 - Parameter scaling
 - Playback speed
+- Look into setting up adafruit
 */
 
 // Hardware

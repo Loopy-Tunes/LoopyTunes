@@ -24,7 +24,7 @@ public:
     inline void setFeedback(float b) { feedback.value = b; }
     inline void setAmount(float a) { amount.value = a; }
 
-    void processBlock(float* buffer[2], size_t size); 
+    void processBlock(float* input[2], size_t size); 
 
 private:
 

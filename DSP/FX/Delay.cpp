@@ -35,7 +35,7 @@ void Delay::tick()
     feedback.param.tick();
 }
 
-void Delay::processBlock(float* buffer[2], size_t size)
+void Delay::processBlock(float* input[2], size_t size)
 {
     //if(bypass.value)
         //return;
@@ -45,9 +45,9 @@ void Delay::processBlock(float* buffer[2], size_t size)
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
             float delayB = delayLine[j]->Read();
-            float delayO = buffer[j][i] + (delayB * amount.value);
-            buffer[j][i] = delayO;
-            float delayN = buffer[j][i] + (delayO * feedback.value);
+            float delayO = input[j][i] + (delayB * amount.value);
+            input[j][i] = delayO;
+            float delayN = input[j][i] + (delayO * feedback.value);
             delayLine[j]->Write(delayN);
         }
     }
