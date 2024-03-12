@@ -68,6 +68,8 @@ private:
     AudioParameterWrapper<float> master;
     float* mix[2];
     size_t bufferSize;
+
+    daisysp::Limiter limiter;
 };
 
 #endif

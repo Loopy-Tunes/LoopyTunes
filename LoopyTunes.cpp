@@ -6,13 +6,9 @@ using namespace daisysp;
 /*
 TO DO:
 - AudioParameter value smoothing / ramping
-- Parameter update queue (is this needed?)
-- Parameter denormalisation (for display)
 - LPF/HPF filters
-- Block counter for handling parameter updates
 - Encoder driver
 - Output Limiter
-- Play/record LEDs
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???)
 - Sort out warning in denormals
@@ -24,7 +20,7 @@ TO DO:
 DaisySeed hw;
 
 // Global
-int sample;
+size_t sample;
 
 // DSP
 Mixer mixer;
@@ -106,7 +102,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	}
 	else
 	{
-		sample += 4;
+		sample += size;
 	}
 
 	mixer.processInputBlock(in[L], in[R], size);

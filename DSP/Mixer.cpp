@@ -23,6 +23,8 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
 
     mixDiv = 0;
     master.param.init(seed, 0, 1, LINEAR, ChannelIDs::MASTER, [this] ( float v) { setMasterVolume(v); }); 
+
+    limiter.Init();
 }
 
 void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2])
@@ -135,8 +137,14 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        left[i] = mix[L][i] * master.value;
-        right[i] = mix[R][i] * master.value;
+        mix[L][i] *= master.value;
+        mix[R][i] *= master.value;
+
+        limiter.ProcessBlock(&mix[L][i], size, 0.f);
+        limiter.ProcessBlock(&mix[R][i], size, 0.f);
+
+        left[i] = mix[L][i];
+        right[i] = mix[R][i];
     }
 }
 
