@@ -66,9 +66,9 @@ public:
         }
     }
 
-    void setParameter(std::string newParam)
+    void setCurrentParam(std::string newParam)
     { 
-        for(int i = 0 ; i < parameters.size() ; i++)
+        for(unsigned int i = 0 ; i < parameters.size() ; i++)
         {
             if(parameters[i]->getID() == newParam)
             {
