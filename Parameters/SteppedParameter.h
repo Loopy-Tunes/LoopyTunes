@@ -3,6 +3,7 @@
 
 #include "daisy_seed.h"
 #include "daisysp.h"
+#include "../Drivers/EncoderDriver.h"
 #include "../Utils/Helpers.h"
 #include "../Utils/Constants.h"
 #include <string>
@@ -18,15 +19,15 @@ class SteppedParameter
 {
 public:
 
-    void init(float mi, float ma, float st, std::string paramType, std::string track)
+    void init(EncoderDriver* driver, float mi, float ma, float st, std::string paramType, std::string track)
     {
-        ID = std::strcat(paramType, track);
+        ID = paramType + track;
 
         min = mi;
         max = ma;
         step = st;
 
-        // add pointer to class instance to parameter vector in encoder driver
+        driver->addParameter(this);
     }
 
     void increment(){ callback(step); }
@@ -38,14 +39,12 @@ public:
 
 private:
 
-    // pointer to driver
-
     std::string ID;
     float min;
     float max;
     float step;
 
-    std::function<void()> callback;
+    std::function<void(float)> callback;
 };
 
 struct SteppedParameterWrapper

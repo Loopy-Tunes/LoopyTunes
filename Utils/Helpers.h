@@ -1,6 +1,8 @@
 #include "stddef.h"
 #include <algorithm>
 
+typedef const std::string ID;
+
 // channel IDs
 enum ChannelIDs
 {

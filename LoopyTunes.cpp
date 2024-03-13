@@ -6,15 +6,14 @@ using namespace daisysp;
 /*
 TO DO:
 - LPF/HPF filters
-- Encoder driver
-- Output Limiter
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
-- Sort out warning in denormals
-- Rework bypass controls
 - Resolve problems with waveshaper
 - Playback speed
 - Look into setting up adafruit
+- doxygen comments
+- min/max checking for encoder params
+- add navigation mode for encoder click
 */
 
 // Hardware
