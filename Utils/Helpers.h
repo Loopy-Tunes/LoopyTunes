@@ -8,8 +8,7 @@ enum ChannelIDs
     AMP2,
     AMP3,
     AMP4,
-    MASTER,
-    ENCODER
+    MASTER
 };
 
 // playhead

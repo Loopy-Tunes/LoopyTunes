@@ -14,9 +14,10 @@ TO DO:
 - Sort out warning in denormals
 - Rework bypass controls
 - Resolve problems with waveshaper
-- Parameter scaling
+- Encoder parameter
 - Playback speed
 - Look into setting up adafruit
+- Remove encoder ADC and audio parameter stuff
 */
 
 // Hardware
@@ -125,7 +126,6 @@ int main(void)
 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
 	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
-	configs[ChannelIDs::ENCODER].InitSingle(seed::A10);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	

@@ -34,16 +34,10 @@ public:
         curve = c;
         channelID = ID;
         callback = cb;
-
-        if(channelID != ChannelIDs::ENCODER)
-            isSelected = true;
     }
     
     inline void tick() 
     {
-        if(!isSelected)
-            return;
-
         float newInput = hw->adc.GetFloat(channelID);
         if(newInput > (input + jitter) || newInput < (input - jitter))
         {
@@ -66,7 +60,6 @@ public:
         }
     }
 
-    inline void setIsSelected(bool s) { isSelected = s; }
     inline type getValue() { return curVal; }
     
 private:
@@ -78,7 +71,6 @@ private:
     type curVal, min, max;
     uint8_t channelID;
     CurveType curve;
-    bool isSelected;
 
     std::function<void(type)> callback;
 };
