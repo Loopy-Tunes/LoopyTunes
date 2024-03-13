@@ -5,7 +5,6 @@ using namespace daisysp;
 
 /*
 TO DO:
-- AudioParameter value smoothing / ramping
 - LPF/HPF filters
 - Encoder driver
 - Output Limiter
@@ -14,10 +13,8 @@ TO DO:
 - Sort out warning in denormals
 - Rework bypass controls
 - Resolve problems with waveshaper
-- Encoder parameter
 - Playback speed
 - Look into setting up adafruit
-- Remove encoder ADC and audio parameter stuff
 */
 
 // Hardware

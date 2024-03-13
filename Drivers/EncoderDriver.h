@@ -7,10 +7,34 @@ class EncoderDriver
 {
 public:
 
+    void init()
+    {
+
+    }
+
+    void tick()
+    {
+
+    }
+
+    void debounce()
+    {
+
+    }
+
+    void armEncoder()
+    {
+
+    }
+
+    void setParameter(std::string param)
+    { 
+
+    }
 
 private:
 
-
+    
 
 };
 

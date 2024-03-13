@@ -14,12 +14,11 @@
 
 using namespace daisy;
 
-template<class type>
 class SteppedParameter
 {
 public:
 
-    void init(type mi, type ma, type st, std::string paramType, std::string track)
+    void init(float mi, float ma, float st, std::string paramType, std::string track)
     {
         ID = std::strcat(paramType, track);
 
@@ -34,26 +33,25 @@ public:
     void decrement(){ callback(-step); }
 
     std::string getID() { return ID; }
-    type getMin() { return min; }
-    type getMax() { return max; }
+    float getMin() { return min; }
+    float getMax() { return max; }
 
 private:
 
     // pointer to driver
 
     std::string ID;
-    type min;
-    type max;
-    type step;
+    float min;
+    float max;
+    float step;
 
     std::function<void()> callback;
 };
 
-template<class type>
 struct SteppedParameterWrapper
 {
-    SteppedParameter<type> param;
-    type value;
+    SteppedParameter param;
+    float value;
 };
 
 #endif
