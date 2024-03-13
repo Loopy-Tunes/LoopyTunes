@@ -41,7 +41,7 @@ struct TrackIO
 
 // track state
 enum TrackState
-{
+{   
     RECORDING = 0,
     PLAYING,
     STOPPED
