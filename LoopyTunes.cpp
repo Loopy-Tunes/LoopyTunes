@@ -13,6 +13,7 @@ TO DO:
 - Look into setting up adafruit
 - doxygen comments
 - add navigation mode for encoder click
+- delay size param float -> size type
 */
 
 // Hardware
@@ -25,6 +26,7 @@ size_t sample;
 Mixer mixer;
 
 // UI - QSPI
+EncoderDriver encoderDriver;
 
 // buffers
 namespace Buffers

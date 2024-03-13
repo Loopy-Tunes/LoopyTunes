@@ -2,21 +2,21 @@
 
 using namespace daisysp;
 
-void Waveshaper::init(DaisySeed* seed)
+void Waveshaper::init(EncoderDriver* driver, std::string trackID)
 {
-    //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
-    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { setAmount(a); }); // to be set to encoder
-    input.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float i) { setInput(i); }); // to be set to encoder
-    waveshape.param.init(seed, 0, 3, LINEAR, ChannelIDs::AMP2, [this] (int ws) { setWaveshape(ws); }); // to be set to encoder
+    bypass.param.init(driver, 0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
+    amount.param.init(driver, 0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
+    inputGain.param.init(driver, 0, 1, 0.05, ParameterIDs::Waveshaper::inputGain, trackID, [this] (float i) { setInputGain(i); });
+    waveshape.param.init(driver, 0, 3, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
 
-    setDefaultValues();
+    setDefaultValues(); 
 }
 
  void Waveshaper::setDefaultValues()
  {
     bypass.value = waveshaperDefs.bypass;
     amount.value = waveshaperDefs.amount;
-    input.value = waveshaperDefs.input;
+    inputGain.value = waveshaperDefs.input;
     waveshape.value = waveshaperDefs.waveshape;
 
     gain = 0;
@@ -24,10 +24,7 @@ void Waveshaper::init(DaisySeed* seed)
 
 void Waveshaper::tick()
 {
-    bypass.param.tick();
-    amount.param.tick();
-    input.param.tick();
-    waveshape.param.tick();
+
 }
 
 void Waveshaper::calculateAutoGain()
@@ -48,7 +45,8 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
         }
     }
     
-    switch(waveshape.value)
+    int shape = waveshape.value;
+    switch(shape)
     {
         case SINE:
             processSine(buffer, size);

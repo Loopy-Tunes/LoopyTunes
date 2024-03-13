@@ -3,9 +3,8 @@
 
 #include "daisy_seed.h"
 #include "daisysp.h"
+#include "ParameterIDs.h"
 #include "../Drivers/EncoderDriver.h"
-#include "../Utils/Helpers.h"
-#include "../Utils/Constants.h"
 #include <string>
 
 /***********************************************************************************//**
@@ -15,17 +14,20 @@
 
 using namespace daisy;
 
+class EncoderDriver;
 class SteppedParameter
 {
 public:
 
-    void init(EncoderDriver* driver, float mi, float ma, float st, std::string paramType, std::string track)
+    void init(EncoderDriver* driver, float mi, float ma, float st, std::string paramType, std::string track, std::function<void(float)> cb)
     {
-        ID = paramType + track;
+        paramID = paramType + track;
 
         min = mi;
         max = ma;
         step = st;
+
+        callback = cb;
 
         driver->addParameter(this);
     }
@@ -39,6 +41,7 @@ public:
 
         callback(curVal); 
     }
+
     void decrement()
     { 
         if(curVal <= min)
@@ -49,13 +52,13 @@ public:
         callback(curVal); 
     }
 
-    std::string getID() { return ID; }
+    std::string getID() { return paramID; }
     float getMin() { return min; }
     float getMax() { return max; }
 
 private:
 
-    std::string ID;
+    std::string paramID;
     float min;
     float max;
     float curVal;

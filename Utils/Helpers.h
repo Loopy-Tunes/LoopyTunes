@@ -1,8 +1,6 @@
 #include "stddef.h"
 #include <algorithm>
 
-typedef const std::string ID;
-
 // channel IDs
 enum ChannelIDs
 {
@@ -47,13 +45,6 @@ enum TrackState
     RECORDING = 0,
     PLAYING,
     STOPPED
-};
-
-enum Funcs
-{
-    SINE = 0,
-    TANH,
-    SIGNUM
 };
 
 // curve types

@@ -1,5 +1,6 @@
 #include <string>
-#include "../Utils/Helpers.h"
+
+typedef const std::string ID;
 
 namespace ParameterIDs
 {

@@ -235,7 +235,12 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  DSP/FX/../../Parameters/../Utils/Constants.h \
  DSP/FX/../../Parameters/BinaryParameter.h \
  DSP/FX/../../Parameters/DefaultValues.h DSP/FX/Waveshaper.h \
- DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
+ DSP/FX/../../Drivers/EncoderDriver.h \
+ DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
+ DSP/FX/../../Drivers/../Parameters/ParameterIDs.h \
+ DSP/FX/../../Drivers/../Parameters/../Drivers/EncoderDriver.h \
+ DSP/FX/../../Drivers/../Parameters/../Drivers/../Parameters/SteppedParameter.h \
+ DSP/FX/../../Utils/Constants.h DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
  DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
  DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
@@ -498,6 +503,12 @@ DSP/FX/../../Parameters/../Utils/Constants.h:
 DSP/FX/../../Parameters/BinaryParameter.h:
 DSP/FX/../../Parameters/DefaultValues.h:
 DSP/FX/Waveshaper.h:
+DSP/FX/../../Drivers/EncoderDriver.h:
+DSP/FX/../../Drivers/../Parameters/SteppedParameter.h:
+DSP/FX/../../Drivers/../Parameters/ParameterIDs.h:
+DSP/FX/../../Drivers/../Parameters/../Drivers/EncoderDriver.h:
+DSP/FX/../../Drivers/../Parameters/../Drivers/../Parameters/SteppedParameter.h:
+DSP/FX/../../Utils/Constants.h:
 DSP/FX/Delay.h:
 DSP/FX/Reverb/Reverb.h:
 DSP/FX/Reverb/../../../Parameters/AudioParameter.h:

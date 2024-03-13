@@ -1,9 +1,9 @@
 #ifndef WAVESHAPER_H
 #define WAVESHAPER_H
 
-#include "../../Parameters/AudioParameter.h"
-#include "../../Parameters/BinaryParameter.h"
 #include "../../Parameters/DefaultValues.h"
+#include "../../Drivers/EncoderDriver.h"
+#include "../../Utils/Constants.h"
 #include <cmath>
 
 /*******************************************************************//**
@@ -19,14 +19,14 @@ class Waveshaper
 {
 public:
 
-    void init(DaisySeed* seed);
+    void init(EncoderDriver* driver, std::string trackID);
     void setDefaultValues();
     void tick();
 
-    inline void setBypass() { bypass.value = !bypass.value; }
+    inline void setBypass(float b) { bypass.value = b; }
     inline void setAmount(float a) { amount.value = a; }
-    inline void setInput(float i) { input.value = i; }
-    inline void setWaveshape(int ws) { waveshape.value = ws; }
+    inline void setInputGain(float i) { inputGain.value = i; }
+    inline void setWaveshape(float ws) { waveshape.value = ws; }
     
     void calculateAutoGain();
     void processBlock(float* buffer[2], size_t size);
@@ -39,10 +39,17 @@ public:
 
 private:
 
-    BinaryParameterWrapper bypass;
-    AudioParameterWrapper<float> amount;
-    AudioParameterWrapper<float> input;
-    AudioParameterWrapper<int> waveshape;
+    enum Funcs
+    {
+        SINE = 0,
+        TANH,
+        SIGNUM
+    };
+
+    SteppedParameterWrapper bypass;
+    SteppedParameterWrapper amount;
+    SteppedParameterWrapper inputGain;
+    SteppedParameterWrapper waveshape;
 
     float gain;
 };

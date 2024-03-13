@@ -1,7 +1,7 @@
 #ifndef ENCODERDRIVER_H
 #define ENMCODERRIVER_H
 
-#include "Parameters/SteppedParameter.h"
+#include "../Parameters/SteppedParameter.h"
 
 /*****************************************************************************//**
  *  Class name: EncoderDriver
@@ -11,6 +11,7 @@
  *  https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h
  ********************************************************************************/
 
+class SteppedParameter;
 class EncoderDriver
 {
 public:
@@ -56,11 +57,12 @@ public:
     {
         switch (state)
         {
-        case DISARMED:
-            state = ARMED;
+            case DISARMED:
+                state = ARMED;
             break;
-        case ARMED:
-            state = DISARMED;
+            case ARMED:
+                state = DISARMED;
+            break;
         }
     }
 
