@@ -30,8 +30,24 @@ public:
         driver->addParameter(this);
     }
 
-    void increment(){ callback(step); }
-    void decrement(){ callback(-step); }
+    void increment()
+    { 
+        if(curVal >= max)
+            curVal = max;
+        else
+            curVal += step;
+
+        callback(curVal); 
+    }
+    void decrement()
+    { 
+        if(curVal <= min)
+            curVal = min;
+        else
+            curVal -= step;
+
+        callback(curVal); 
+    }
 
     std::string getID() { return ID; }
     float getMin() { return min; }
@@ -42,6 +58,7 @@ private:
     std::string ID;
     float min;
     float max;
+    float curVal;
     float step;
 
     std::function<void(float)> callback;

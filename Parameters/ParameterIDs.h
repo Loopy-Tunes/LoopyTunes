@@ -18,7 +18,7 @@ namespace ParameterIDs
         ID bypass = effect + "Bypass";
         ID amount = effect + "Amount";
         ID semitones = effect+ "Semitones";
-        ID random = effect+ "Random";
+        ID random = effect + "Random";
     };
 
     namespace Waveshaper

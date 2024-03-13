@@ -12,7 +12,6 @@ TO DO:
 - Playback speed
 - Look into setting up adafruit
 - doxygen comments
-- min/max checking for encoder params
 - add navigation mode for encoder click
 */
 
