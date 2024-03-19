@@ -18,21 +18,33 @@ public:
 
     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b)
     {
-        // init gpio
+        btn.Init(button);
+        
+        channelA.pin = a;
+        channelB.pin = b;
+        channelA.mode = DSY_GPIO_MODE_INPUT;
+        channelB.mode = DSY_GPIO_MODE_INPUT;
+        channelA.pull = DSY_GPIO_PULLUP;
+        channelB.pull = DSY_GPIO_PULLUP;
+        dsy_gpio_init(&channelA);
+        dsy_gpio_init(&channelB);
 
         state = DISARMED;
         prevUpdate = System::GetNow();
         isUpdated = false;
         currentParam = 0;
-        valueA = 0;
-        valueB = 0;
+        valueA = 0xFF;
+        valueB = 0xFF;
     }
 
     void tick()
     {
-        now = System::GetNow();
+        btn.Debounce();
+        if(btn.FallingEdge())
+            buttonCallback();
 
-        if(now - prevUpdate >= 1)
+        now = System::GetNow();
+        if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
         {
             prevUpdate = now;
 
@@ -40,17 +52,27 @@ public:
             valueA = (valueA << 1) | dsy_gpio_read(&channelA);
             valueB = (valueB << 1) | dsy_gpio_read(&channelB);
 
-            if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
-            {
-                parameters[currentParam]->increment();
-            }
-            else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
-            {
-                parameters[currentParam]->decrement();
-            }
-        }
+            if(state == DISARMED)
+                return;
 
-        btn.Debounce();
+            if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
+                parameters[currentParam]->increment();
+            else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
+                parameters[currentParam]->decrement();
+        }
+    }
+
+    void buttonCallback()
+    {
+        // add logic for navigation or parameter select
+        /*
+            if mode = navigation
+                move to next view
+            else if mode = parameter control
+                changeState()
+        */
+
+        changeState();
     }
 
     void changeState()
