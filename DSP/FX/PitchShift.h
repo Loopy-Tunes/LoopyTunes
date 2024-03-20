@@ -16,23 +16,24 @@ class PitchShift
 {
 public:
 
-    void init(DaisySeed* seed);
+    void init(EncoderDriver* driver, std::string trackID);
     void setDefaultValues();
     void tick();
 
-    void process(float* input[2], size_t size);
+    void setBypass(float b) { bypass.value = b; }
+    void setAmount(float a) { amount.value = a; }
 
-    void setBypass() { bypass.value = !bypass.value; }
+    void process(float* input[2], size_t size);
 
 private:
 
     float buffer[2][BLOCKLENGTH];
     daisysp::PitchShifter shifter;
 
-    BinaryParameterWrapper bypass;
-    AudioParameterWrapper<float> amount;
-    AudioParameter<int> semitones;
-    AudioParameter<float> rand;
+    SteppedParameterWrapper bypass;
+    SteppedParameterWrapper amount;
+    SteppedParameterWrapper semitones;
+    SteppedParameterWrapper rand;
 };
 
 #endif

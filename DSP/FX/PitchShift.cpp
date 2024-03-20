@@ -1,6 +1,6 @@
 #include "PitchShift.h"
 
-void PitchShift::init(DaisySeed* seed)
+void PitchShift::init(EncoderDriver* driver, std::string trackID)
 {
     for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
@@ -10,10 +10,10 @@ void PitchShift::init(DaisySeed* seed)
     
     shifter.Init(48000);
 
-    //bypass.param.init(daisy::seed::D5, 1000, [this]{ setBypass(); }); // CHECK THIS
-    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float a) { amount.value = a; });
-    semitones.init(seed, -12, 12, LINEAR, ChannelIDs::AMP3, [this] (int s) { shifter.SetTransposition(s); });
-    rand.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float r) { shifter.SetFun(r); });
+    bypass.param.init(0, 1, 1, ParameterIDs::PitchShifter::bypass, trackID, [this] (float b) { setBypass(b); });
+    amount.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::amount, trackID, [this] (float a) { setAmount(a); });
+    semitones.param.init(-12, 12, 1, ParameterIDs::PitchShifter::semitones, trackID, [this] (float s) { shifter.SetTransposition(s); });
+    rand.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::random, trackID, [this] (float r) { shifter.SetFun(r); });
 
     setDefaultValues();
 }
@@ -30,16 +30,13 @@ void PitchShift::setDefaultValues()
 
 void PitchShift::tick()
 {
-    //bypass.tick();
-    amount.param.tick();
-    semitones.tick();
-    rand.tick();
+    
 }
 
 void PitchShift::process(float* input[2], size_t size)
 {
-    //if(bypass.value)
-        //return;
+    if(bypass.value == 1)
+        return;
 
     for(size_t i = 0 ; i < size ; i++)
     {

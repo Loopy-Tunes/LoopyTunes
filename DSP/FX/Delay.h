@@ -5,6 +5,7 @@
 #include "../../Parameters/BinaryParameter.h"
 #include "../../Parameters/DefaultValues.h"
 #include "../../Drivers/EncoderDriver.h"
+#include "../../Utils/Helpers.h"
 
 /************************************************************//**
  *  Class name: Delay
@@ -16,11 +17,11 @@ class Delay
 {
 public:
 
-    void init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
+    void init(EncoderDriver* driver, std::string trackID, DelayLine<float, MAXDELAY>* dl[2]);
     void setDefaultValues();
     void tick();
 
-    inline void setBypass() { bypass.value = !bypass.value; }
+    inline void setBypass(float b) { bypass.value = b; }
     inline void setDelay(size_t s) { delayLine[L]->SetDelay(s), delayLine[R]->SetDelay(s); }
     inline void setFeedback(float b) { feedback.value = b; }
     inline void setAmount(float a) { amount.value = a; }
@@ -29,10 +30,10 @@ public:
 
 private:
 
-    BinaryParameterWrapper bypass;
-    AudioParameterWrapper<float> amount;
-    AudioParameter<size_t> size;
-    AudioParameterWrapper<float> feedback;
+    SteppedParameterWrapper bypass;
+    SteppedParameterWrapper amount;
+    SteppedParameterWrapper size;
+    SteppedParameterWrapper feedback;
 
     DelayLine<float, MAXDELAY>* delayLine[2];
 };

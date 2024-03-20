@@ -2,7 +2,7 @@
 
 using namespace daisysp;
 
-void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
+void Delay::init(EncoderDriver* driver, std::string trackID, DelayLine<float, MAXDELAY>* dl[2])
 {
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
     {
@@ -11,10 +11,10 @@ void Delay::init(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
         delayLine[i]->Reset();
     }
 
-    //bypass.param.init(seed, 0, 1, LINEAR, ChannelIDs::TEMP1, [this] (int b) { setBypass(b); }); // to be set to encoder
-    amount.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float a) { setAmount(a); }); 
-    size.init(seed, 0, 10000, LINEAR, ChannelIDs::AMP2, [this] (size_t s) { setDelay(s); }); 
-    feedback.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float f) { setFeedback(f); }); 
+    bypass.param.init(0, 1, 1, ParameterIDs::Delay::bypass, trackID, [this] (float b) { setBypass(b); });
+    amount.param.init(0, 1, 0.05, ParameterIDs::Delay::amount, trackID, [this] (float a) { setAmount(a); });
+    size.param.init(0, 10000, 10, ParameterIDs::Delay::size, trackID, [this] (float s) { setDelay(toSize(s)); });
+    feedback.param.init(0, 1, 0.05, ParameterIDs::Delay::feedback, trackID, [this] (float f) {setFeedback(f); });
 
     setDefaultValues();
 }
@@ -29,16 +29,13 @@ void Delay::setDefaultValues()
 
 void Delay::tick()
 {
-    bypass.param.tick();
-    amount.param.tick();
-    size.tick();
-    feedback.param.tick();
+
 }
 
 void Delay::processBlock(float* input[2], size_t size)
 {
-    //if(bypass.value)
-        //return;
+    if(bypass.value == 1)
+        return;
 
     for(size_t i = 0 ; i < size ; i++)
     {
