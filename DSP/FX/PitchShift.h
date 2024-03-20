@@ -4,6 +4,7 @@
 #include "../../Parameters/AudioParameter.h"
 #include "../../Parameters/BinaryParameter.h"
 #include "../../Parameters/DefaultValues.h"
+#include "../../Drivers/EncoderDriver.h"
 
 /************************************************************//**
  *  Class name: PitchShift

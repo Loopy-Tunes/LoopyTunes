@@ -10,10 +10,11 @@ TO DO:
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
 - Resolve problems with waveshaper
 - Playback speed
-- Look into setting up adafruit
 - doxygen comments
 - add navigation mode for encoder click
-- delay size param float -> size type
+- encoder pass down to dsp classes
+- add stepped parameter instances to encoder 
+- test reverb dry/wet
 */
 
 // Hardware

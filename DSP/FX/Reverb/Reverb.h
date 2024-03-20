@@ -4,6 +4,7 @@
 #include "../../../Parameters/AudioParameter.h"
 #include "../../../Parameters/BinaryParameter.h"
 #include "../../../Parameters/DefaultValues.h"
+#include "../../../Drivers/EncoderDriver.h"
 #include "revmodel.hpp"
 
 /*********************************************************************//**
@@ -19,10 +20,11 @@ class Reverb
 {
 public:
 
-    void init(DaisySeed* seed);
+    void init(EncoderDriver* driver, std::string trackID);
     void setDefaultValues();
     void tick();
 
+    void setBypass(float b) {bypass.value = b; }
     void setAmount(float mix);
 
     void processBlock(float* input[2], long size);
@@ -34,12 +36,12 @@ private:
     float output[2][BLOCKLENGTH];
     revmodel model;
 
-    BinaryParameterWrapper bypass;
-    AudioParameter<float> amount;
-    AudioParameter<float> mode;
-    AudioParameter<float> size;
-    AudioParameter<float> damp;
-    AudioParameter<float> width;
+    SteppedParameterWrapper bypass;
+    SteppedParameterWrapper amount;
+    SteppedParameterWrapper mode;
+    SteppedParameterWrapper size;
+    SteppedParameterWrapper damp;
+    SteppedParameterWrapper width;
 };
 
 #endif

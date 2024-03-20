@@ -4,7 +4,7 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "ParameterIDs.h"
-#include "../Drivers/EncoderDriver.h"
+// #include "../Drivers/EncoderDriver.h"
 #include <string>
 
 /***********************************************************************************//**
@@ -14,12 +14,11 @@
 
 using namespace daisy;
 
-class EncoderDriver;
 class SteppedParameter
 {
 public:
 
-    void init(EncoderDriver* driver, float mi, float ma, float st, std::string paramType, std::string track, std::function<void(float)> cb)
+    void init(float mi, float ma, float st, std::string paramType, std::string track, std::function<void(float)> cb)
     {
         paramID = paramType + track;
 
@@ -28,8 +27,6 @@ public:
         step = st;
 
         callback = cb;
-
-        driver->addParameter(this);
     }
 
     void increment()

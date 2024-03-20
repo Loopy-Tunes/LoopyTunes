@@ -4,10 +4,10 @@ using namespace daisysp;
 
 void Waveshaper::init(EncoderDriver* driver, std::string trackID)
 {
-    bypass.param.init(driver, 0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
-    amount.param.init(driver, 0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
-    inputGain.param.init(driver, 0, 1, 0.05, ParameterIDs::Waveshaper::inputGain, trackID, [this] (float i) { setInputGain(i); });
-    waveshape.param.init(driver, 0, 3, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
+    bypass.param.init(0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
+    amount.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
+    inputGain.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::inputGain, trackID, [this] (float i) { setInputGain(i); });
+    waveshape.param.init(0, 3, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
 
     setDefaultValues(); 
 }
@@ -34,7 +34,7 @@ void Waveshaper::calculateAutoGain()
 
 void Waveshaper::processBlock(float* buffer[2], size_t size)
 {
-    if(bypass.value)
+    if(bypass.value == 1)
         return;
 
     for(size_t i = 0 ; i < BLOCKLENGTH ; i++)

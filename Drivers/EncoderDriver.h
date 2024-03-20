@@ -11,7 +11,6 @@
  *  https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h
  ********************************************************************************/
 
-class SteppedParameter;
 class EncoderDriver
 {
 public:

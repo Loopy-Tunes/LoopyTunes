@@ -1,15 +1,16 @@
 #include "Reverb.h"
 
-void Reverb::init(DaisySeed* seed)
+void Reverb::init(EncoderDriver* driver, std::string trackID)
 {
-    amount.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float a) { model.setwet(a); });
-    //mode.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float m) { model.setmode(m); });
-    size.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float s) { model.setroomsize(s); });
-    damp.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float d) { model.setdamp(d); });
-    //width.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float w) { model.setwidth(w); });
+    bypass.param.init(0, 1, 1, ParameterIDs::Reverb::bypass, trackID, [this] (float b) { setBypass(b); });
+    amount.param.init(0, 1, 0.05, ParameterIDs::Reverb::amount, trackID, [this] (float a) { setAmount(a); });
+    mode.param.init(0, 1, 0.25, ParameterIDs::Reverb::mode, trackID, [this] (float m) { model.setmode(m); });
+    size.param.init(0, 1, 0.05, ParameterIDs::Reverb::size, trackID, [this] (float s) { model.setroomsize(s); });
+    damp.param.init(0, 1, 0.05, ParameterIDs::Reverb::damp, trackID, [this] (float d) { model.setdamp(d); });
+    width.param.init(0, 1, 0.05, ParameterIDs::Reverb::width, trackID, [this] (float w) { model.setwidth(w); });
 
     model.setdry(0.8);
-    //setDefaultValues();
+    setDefaultValues();
 }
 
 void Reverb::setDefaultValues()
@@ -24,11 +25,7 @@ void Reverb::setDefaultValues()
 
 void Reverb::tick()
 {
-    amount.tick();
-    //mode.tick();
-    size.tick();
-    damp.tick();
-    //width.tick();
+
 }
 
 void Reverb::setAmount(float mix)
@@ -42,8 +39,8 @@ void Reverb::setAmount(float mix)
 
 void Reverb::processBlock(float* input[2], long size)
 {
-    //if(bypass.value)
-        //return;
+    if(bypass.value == 1)
+        return;
     
     model.processreplace(input[L], input[R], output[L], output[R], size, 0);
 

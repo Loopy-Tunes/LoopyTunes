@@ -53,3 +53,9 @@ enum CurveType
     LINEAR = 0,
     EXP
 };
+
+template<typename type>
+type toSize(type toConvert)
+{
+    return round((size_t)toConvert);
+}
