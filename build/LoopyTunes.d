@@ -233,17 +233,13 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  ../../../DaisySP//Source/Utility/smooth_random.h \
  DSP/FX/../../Parameters/../Utils/Helpers.h \
  DSP/FX/../../Parameters/../Utils/Constants.h \
- DSP/FX/../../Parameters/BinaryParameter.h \
  DSP/FX/../../Parameters/DefaultValues.h \
  DSP/FX/../../Drivers/EncoderDriver.h \
  DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
  DSP/FX/../../Drivers/../Parameters/ParameterIDs.h DSP/FX/Waveshaper.h \
- DSP/FX/../../Utils/Constants.h DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
- DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
- DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
+ DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
  DSP/FX/Reverb/../../../Drivers/EncoderDriver.h \
- DSP/FX/Reverb/../../../Drivers/../Parameters/SteppedParameter.h \
  DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
  DSP/FX/Reverb/denormals.h DSP/FX/Reverb/allpass.hpp \
  DSP/FX/Reverb/tuning.h DSP/../Parameters/BinaryParameter.h
@@ -500,20 +496,15 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Utility/smooth_random.h:
 DSP/FX/../../Parameters/../Utils/Helpers.h:
 DSP/FX/../../Parameters/../Utils/Constants.h:
-DSP/FX/../../Parameters/BinaryParameter.h:
 DSP/FX/../../Parameters/DefaultValues.h:
 DSP/FX/../../Drivers/EncoderDriver.h:
 DSP/FX/../../Drivers/../Parameters/SteppedParameter.h:
 DSP/FX/../../Drivers/../Parameters/ParameterIDs.h:
 DSP/FX/Waveshaper.h:
-DSP/FX/../../Utils/Constants.h:
 DSP/FX/Delay.h:
 DSP/FX/Reverb/Reverb.h:
-DSP/FX/Reverb/../../../Parameters/AudioParameter.h:
-DSP/FX/Reverb/../../../Parameters/BinaryParameter.h:
 DSP/FX/Reverb/../../../Parameters/DefaultValues.h:
 DSP/FX/Reverb/../../../Drivers/EncoderDriver.h:
-DSP/FX/Reverb/../../../Drivers/../Parameters/SteppedParameter.h:
 DSP/FX/Reverb/revmodel.hpp:
 DSP/FX/Reverb/comb.hpp:
 DSP/FX/Reverb/denormals.h:

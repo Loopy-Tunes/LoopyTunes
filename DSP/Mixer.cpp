@@ -12,14 +12,10 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
         mix[R][j] = 0.0f;
     }
 
-    track1.track.init(t1);
-    // init fx
-    track2.track.init(t2);
-    // init fx
-    track3.track.init(t3);
-    // init fx
-    track4.track.init(t4);
-    // init fx
+    track1.track.init(t1, ParameterIDs::Tracks::Track1);
+    track2.track.init(t2, ParameterIDs::Tracks::Track1);
+    track3.track.init(t3, ParameterIDs::Tracks::Track1);
+    track4.track.init(t4, ParameterIDs::Tracks::Track1);
 
     mixDiv = 0;
     master.param.init(seed, 0, 1, LINEAR, ChannelIDs::MASTER, [this] ( float v) { setMasterVolume(v); }); 
@@ -56,13 +52,13 @@ void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, Tra
     track4.track.initIO(t4);
 }
 
-void Mixer::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
-                                    DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2])
+void Mixer::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
+                                          DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2])
 {
-    track1.track.initFX(seed, t1);
-    track2.track.initFX(seed, t2);
-    track3.track.initFX(seed, t3);
-    track4.track.initFX(seed, t4);
+    track1.track.initFX(driver, t1);
+    track2.track.initFX(driver, t2);
+    track3.track.initFX(driver, t3);
+    track4.track.initFX(driver, t4);
 }
 
 void Mixer::tick()

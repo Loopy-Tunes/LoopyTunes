@@ -1,10 +1,9 @@
 #ifndef REVERB_H
 #define REVERB_H
 
-#include "../../../Parameters/AudioParameter.h"
-#include "../../../Parameters/BinaryParameter.h"
 #include "../../../Parameters/DefaultValues.h"
 #include "../../../Drivers/EncoderDriver.h"
+#include "../../../Utils/Constants.h"
 #include "revmodel.hpp"
 
 /*********************************************************************//**

@@ -1,5 +1,5 @@
 #ifndef ENCODERDRIVER_H
-#define ENMCODERRIVER_H
+#define ENCODERDRIVER_H
 
 #include "../Parameters/SteppedParameter.h"
 
