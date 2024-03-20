@@ -1,7 +1,9 @@
 #include "Track.h"
 
-void Track::init(float* mem[2])
+void Track::init(float* mem[2], std::string ID)
 {
+    trackID = ID;
+
     state = STOPPED;
     ph.reset();
     ti.isEmpty = true;
@@ -24,12 +26,12 @@ void Track::initIO(TrackIO io)
     play.init(io.play, 1000, [this]{ setIsPlaying(); });
 }
 
-void Track::initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2])
+void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
 {
-    pitchShift.init(seed);
-    delay.init(seed, dl);
-    shaper.init(seed);
-    reverb.init(seed);
+    pitchShift.init(driver, trackID);
+    delay.init(driver, trackID, dl);
+    shaper.init(driver, trackID);
+    reverb.init(driver, trackID);
 }
 
 void Track::tick()

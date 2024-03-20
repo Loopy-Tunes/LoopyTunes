@@ -238,8 +238,7 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  DSP/FX/../../Drivers/EncoderDriver.h \
  DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
  DSP/FX/../../Drivers/../Parameters/ParameterIDs.h DSP/FX/Waveshaper.h \
- DSP/FX/../../Utils/Constants.h DSP/FX/Delay.h \
- DSP/FX/../../Utils/Helpers.h DSP/FX/Reverb/Reverb.h \
+ DSP/FX/../../Utils/Constants.h DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/AudioParameter.h \
  DSP/FX/Reverb/../../../Parameters/BinaryParameter.h \
  DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
@@ -509,7 +508,6 @@ DSP/FX/../../Drivers/../Parameters/ParameterIDs.h:
 DSP/FX/Waveshaper.h:
 DSP/FX/../../Utils/Constants.h:
 DSP/FX/Delay.h:
-DSP/FX/../../Utils/Helpers.h:
 DSP/FX/Reverb/Reverb.h:
 DSP/FX/Reverb/../../../Parameters/AudioParameter.h:
 DSP/FX/Reverb/../../../Parameters/BinaryParameter.h:

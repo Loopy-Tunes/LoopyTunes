@@ -5,7 +5,6 @@
 #include "../../Parameters/BinaryParameter.h"
 #include "../../Parameters/DefaultValues.h"
 #include "../../Drivers/EncoderDriver.h"
-#include "../../Utils/Helpers.h"
 
 /************************************************************//**
  *  Class name: Delay

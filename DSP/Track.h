@@ -17,9 +17,9 @@ class Track
 {
 public:
 
-    void init(float* mem[2]);
+    void init(float* mem[2], std::string ID);
     void initIO(TrackIO io);
-    void initFX(DaisySeed* seed, DelayLine<float, MAXDELAY>* dl[2]);
+    void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
     void clearBuffer();
 
@@ -36,6 +36,8 @@ public:
     void processOutputBlock(float* output[2], size_t size);
 
 private:
+
+    std::string trackID;
 
     TrackState state;
     Playhead ph;
