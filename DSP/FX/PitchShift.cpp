@@ -15,6 +15,11 @@ void PitchShift::init(EncoderDriver* driver, std::string trackID)
     semitones.param.init(-12, 12, 1, ParameterIDs::PitchShifter::semitones, trackID, [this] (float s) { shifter.SetTransposition(s); });
     rand.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::random, trackID, [this] (float r) { shifter.SetFun(r); });
 
+    driver->addParameter(&bypass.param);
+    driver->addParameter(&amount.param);
+    driver->addParameter(&semitones.param);
+    driver->addParameter(&rand.param);
+
     setDefaultValues();
 }
 

@@ -236,7 +236,7 @@ build/Track.o: DSP/Track.cpp \
  DSP/FX/../../Drivers/EncoderDriver.h \
  DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
  DSP/FX/../../Drivers/../Parameters/ParameterIDs.h DSP/FX/Waveshaper.h \
- DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
+ DSP/FX/Filter.h DSP/FX/Delay.h DSP/FX/Reverb/Reverb.h \
  DSP/FX/Reverb/../../../Parameters/DefaultValues.h \
  DSP/FX/Reverb/../../../Drivers/EncoderDriver.h \
  DSP/FX/Reverb/revmodel.hpp DSP/FX/Reverb/comb.hpp \
@@ -499,6 +499,7 @@ DSP/FX/../../Drivers/EncoderDriver.h:
 DSP/FX/../../Drivers/../Parameters/SteppedParameter.h:
 DSP/FX/../../Drivers/../Parameters/ParameterIDs.h:
 DSP/FX/Waveshaper.h:
+DSP/FX/Filter.h:
 DSP/FX/Delay.h:
 DSP/FX/Reverb/Reverb.h:
 DSP/FX/Reverb/../../../Parameters/DefaultValues.h:

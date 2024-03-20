@@ -5,10 +5,10 @@
 #include "../../Parameters/DefaultValues.h"
 #include "../../Drivers/EncoderDriver.h"
 
-/************************************************************//**
+/***************************************************************************************//**
  *  Class name: PitchShift
- *  Function: Pitch shifts a block of input samples n semitones
- ***************************************************************/
+ *  Function: Wrapper for DaisySP pitch shifter class that pitch shifts a block of samples
+ ******************************************************************************************/
 using namespace daisysp;
 
 class PitchShift

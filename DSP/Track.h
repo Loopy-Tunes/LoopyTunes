@@ -3,6 +3,7 @@
 
 #include "FX/PitchShift.h"
 #include "FX/Waveshaper.h"
+#include "FX/Filter.h"
 #include "FX/Delay.h"
 #include "FX/Reverb/Reverb.h"
 #include "../Parameters/BinaryParameter.h"
@@ -51,6 +52,7 @@ private:
 
     PitchShift pitchShift;
     Waveshaper shaper;
+    Filter filter;
     Delay delay;
     Reverb reverb;
 };

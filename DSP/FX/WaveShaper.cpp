@@ -9,7 +9,10 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
     inputGain.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::inputGain, trackID, [this] (float i) { setInputGain(i); });
     waveshape.param.init(0, 3, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
 
-
+    driver->addParameter(&bypass.param);
+    driver->addParameter(&amount.param);
+    driver->addParameter(&inputGain.param);
+    driver->addParameter(&waveshape.param);
 
     setDefaultValues(); 
 }

@@ -9,12 +9,13 @@ TO DO:
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
 - Resolve problems with waveshaper
+- Replace tanh with fast tanh
 - Playback speed
 - doxygen comments
 - add navigation mode for encoder click
-- encoder pass down to dsp classes
-- add stepped parameter instances to encoder 
 - test reverb dry/wet
+- pin assignment list
+- filter default values
 */
 
 // Hardware

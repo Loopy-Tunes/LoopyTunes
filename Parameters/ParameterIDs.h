@@ -32,6 +32,17 @@ namespace ParameterIDs
         ID waveshape = effect + "Waveshape";
     };
 
+    namespace Filter
+    {
+        ID effect = "Filter";
+
+        ID bypass = effect + "Bypass";
+        ID amount = effect + "Amount";
+        ID frequency = effect + "Frequency";
+        ID resonance = effect + "Resonance";
+        ID mode = effect + "Mode";
+    };
+
     namespace Delay
     {
         ID effect = "Delay";
