@@ -15,6 +15,16 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
     driver->addParameter(&waveshape.param);
 
     setDefaultValues(); 
+
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    {
+        for(u_int8_t j = 0 ; j < 2 ; j++)
+        {
+            inputAG[j][i] = 0;
+            outputAG[j][i] = 0; 
+            diffAG[j][i] = 0;  
+        }
+    }
 }
 
  void Waveshaper::setDefaultValues()
@@ -23,8 +33,6 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
     amount.value = waveshaperDefs.amount;
     inputGain.value = waveshaperDefs.input;
     waveshape.value = waveshaperDefs.waveshape;
-
-    gain = 0;
  }
 
 void Waveshaper::tick()
@@ -32,9 +40,48 @@ void Waveshaper::tick()
 
 }
 
-void Waveshaper::calculateAutoGain()
-{
+inline void Waveshaper::setInputAG(float* buffer[2], size_t size) 
+{  
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        for(u_int8_t j = 0 ; j < 2 ; j++)
+        {
+            //inputAG[j][i] = **buffer[j][i]; 
+        }
+    }
+}
 
+inline void Waveshaper::setOutputAG(float* buffer[2], size_t size) 
+{ 
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        for(u_int8_t j = 0 ; j < 2 ; j++)
+        {
+            //outputAG[j][i] = **buffer[j][i]; 
+        }
+    } 
+}
+
+void Waveshaper::calculateAutoGain(size_t size)
+{
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        for(u_int8_t j = 0 ; j < 2 ; j++)
+        {
+            diffAG[j][i] = outputAG[j][i] - inputAG[j][i];
+        }
+    }
+}
+
+void Waveshaper::applyAutoGain(float* buffer[2], size_t size)
+{
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        for(uint_fast8_t j = 0 ; j < 2 ; j++)
+        {
+            buffer[j][i] -= diffAG[j][i];
+        }
+    }
 }
 
 void Waveshaper::processBlock(float* buffer[2], size_t size)
@@ -42,14 +89,16 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
     if(bypass.value == 1)
         return;
 
+    setInputAG(buffer, size);
+
     for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            //input[i][j] = input[i][j] * input.value;
+            buffer[j][i] *= inputGain.value;
         }
     }
-    
+
     int shape = waveshape.value;
     switch(shape)
     {
@@ -63,6 +112,10 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
             processSignum(buffer, size);
         break;
     }
+
+    setOutputAG(buffer, size);
+    calculateAutoGain(size_t size);
+    applyAutoGain(buffer, size);
 }
 
 void Waveshaper::processSine(float* buffer[2], size_t size)

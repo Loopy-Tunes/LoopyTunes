@@ -5,7 +5,6 @@ using namespace daisysp;
 
 /*
 TO DO:
-- LPF/HPF filters
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
 - Resolve problems with waveshaper
@@ -14,8 +13,12 @@ TO DO:
 - doxygen comments
 - add navigation mode for encoder click
 - test reverb dry/wet
-- pin assignment list
+- test filters
 - filter default values
+- test encoder
+- sort memory overflow
+- refactor mixing algortihm
+- test auto gain feature
 */
 
 // Hardware
