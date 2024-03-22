@@ -19,6 +19,7 @@ TO DO:
 - sort memory overflow
 - refactor mixing algortihm
 - test auto gain feature
+- change static sample rate setting to getting into from system
 */
 
 // Hardware

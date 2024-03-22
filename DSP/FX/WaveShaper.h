@@ -25,29 +25,36 @@ public:
 
     inline void setBypass(float b) { bypass.value = b; }
     inline void setAmount(float a) { amount.value = a; }
-    inline void setInputGain(float i) { inputGain.value = i; }
+    inline void setFuncControl(float fc) { funcControl.value = fc; }
     inline void setWaveshape(float ws) { waveshape.value = ws; }
     
+    inline void scaleControlParam();
+
     inline void setInputAG(float* buffer[2], size_t size);
     inline void setOutputAG(float* buffer[2], size_t size);
     inline void calculateAutoGain(size_t size);
     inline void applyAutoGain(float* buffer[2], size_t size);
 
     void processBlock(float* buffer[2], size_t size);
-    void processSine(float* buffer[2], size_t size);
-    void processTanh(float* buffer[2], size_t size);
-    void processSignum(float* buffer[2], size_t size);
-    // wave shape 4 process 
-    // wave shape 5 process 
+    void processClipper(float* buffer[2], size_t size);
+    void processFolder(float* buffer[2], size_t size);
+    void processLFO(float* buffer[2], size_t size);
+    void processBitReducer(float* buffer[2], size_t size);
 
 private:
 
     enum Funcs
     {
-        SINE = 0,
-        TANH,
-        SIGNUM
+        CLIPPER = 0,
+        FOLDER,
+        LFO,
+        BITREDUCER
     };
+
+    Wavefolder folder;
+    Oscillator lfo;
+
+    int bits;
 
     float inputAG[2][BLOCKLENGTH];
     float outputAG[2][BLOCKLENGTH];
@@ -55,7 +62,7 @@ private:
 
     SteppedParameterWrapper bypass;
     SteppedParameterWrapper amount;
-    SteppedParameterWrapper inputGain;
+    SteppedParameterWrapper funcControl;
     SteppedParameterWrapper waveshape;
 };
 

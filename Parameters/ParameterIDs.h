@@ -28,7 +28,7 @@ namespace ParameterIDs
 
         ID bypass = effect + "Bypass";
         ID amount = effect + "Amount";
-        ID inputGain = effect + "InputGain";
+        ID funcControl = effect + "FuncControl";
         ID waveshape = effect + "Waveshape";
     };
 

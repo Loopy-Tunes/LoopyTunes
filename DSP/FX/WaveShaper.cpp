@@ -4,14 +4,22 @@ using namespace daisysp;
 
 void Waveshaper::init(EncoderDriver* driver, std::string trackID)
 {
+    folder.Init();
+    lfo.Init(48000);
+    lfo.SetWaveform(0);
+    lfo.SetAmp(0.5);
+    lfo.Reset(0);
+
+    bits = 0;
+
     bypass.param.init(0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
-    inputGain.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::inputGain, trackID, [this] (float i) { setInputGain(i); });
-    waveshape.param.init(0, 3, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
+    funcControl.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
+    waveshape.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
 
     driver->addParameter(&bypass.param);
     driver->addParameter(&amount.param);
-    driver->addParameter(&inputGain.param);
+    driver->addParameter(&funcControl.param);
     driver->addParameter(&waveshape.param);
 
     setDefaultValues(); 
@@ -31,13 +39,28 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
  {
     bypass.value = waveshaperDefs.bypass;
     amount.value = waveshaperDefs.amount;
-    inputGain.value = waveshaperDefs.input;
+    funcControl.value = waveshaperDefs.input;
     waveshape.value = waveshaperDefs.waveshape;
  }
 
 void Waveshaper::tick()
 {
 
+}
+
+inline void Waveshaper::scaleControlParam()
+{
+    int shape = waveshape.value;
+
+    switch(shape)
+    {
+        case LFO:
+            // set lfo frequency
+        break;
+        case BITREDUCER:
+            // set bit reduction value
+        break;
+    }
 }
 
 inline void Waveshaper::setInputAG(float* buffer[2], size_t size) 
@@ -91,65 +114,82 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
 
     setInputAG(buffer, size);
 
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    int shape = waveshape.value;
+    if(shape == CLIPPER || shape == FOLDER)
     {
-        for(uint_fast8_t j = 0 ; j < 2 ; j++)
+        for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
         {
-            buffer[j][i] *= inputGain.value;
+            for(uint_fast8_t j = 0 ; j < 2 ; j++)
+            {
+                buffer[j][i] *= funcControl.value;
+            }
         }
     }
 
-    int shape = waveshape.value;
     switch(shape)
     {
-        case SINE:
-            processSine(buffer, size);
+        case CLIPPER:
+            processClipper(buffer, size);
         break;
-        case TANH:
-            processTanh(buffer, size);
+        case FOLDER:
+            processFolder(buffer, size);
         break;
-        case SIGNUM:
-            processSignum(buffer, size);
+        case LFO:
+            processLFO(buffer, size);
+        break;
+        case BITREDUCER:
+            processBitReducer(buffer, size);
         break;
     }
 
-    setOutputAG(buffer, size);
-    calculateAutoGain(size_t size);
-    applyAutoGain(buffer, size);
+    if(shape == CLIPPER || shape == FOLDER)
+    {
+        setOutputAG(buffer, size);
+        calculateAutoGain(size);
+        applyAutoGain(buffer, size);
+    }
 }
 
-void Waveshaper::processSine(float* buffer[2], size_t size)
+void Waveshaper::processClipper(float* buffer[2], size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = cos(buffer[j][i]);
-            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
+            
+        }
+    }
+} 
+
+void Waveshaper::processFolder(float* buffer[2], size_t size)
+{
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        for(uint_fast8_t j = 0 ; j < 2 ; j++)
+        {
+            buffer[j][i] = folder.Process(buffer[j][i]);
         }
     }
 }
 
-void Waveshaper::processTanh(float* buffer[2], size_t size)
+void Waveshaper::processLFO(float* buffer[2], size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = tanh(buffer[j][i]);
-            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
+            buffer[j][i] *= lfo.Process();
         }
     }
-}
+} 
 
-void Waveshaper::processSignum(float* buffer[2], size_t size)
+void Waveshaper::processBitReducer(float* buffer[2], size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            float output = (0 < buffer[j][i]) - (buffer[j][i] < 0);
-            buffer[j][i] = (1.f - amount.value) * buffer[j][i] + output * amount.value;
+            
         }
     }
 }
