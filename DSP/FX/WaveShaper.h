@@ -54,6 +54,8 @@ private:
     Wavefolder folder;
     Oscillator lfo;
 
+    float lfoMin;
+    float lfoMax;
     int bits;
 
     float inputAG[2][BLOCKLENGTH];
