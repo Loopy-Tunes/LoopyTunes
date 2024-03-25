@@ -12,6 +12,9 @@
  * 
  *  Inspired by Adhesion VST (Andrew Ford 2012)
  *  https://github.com/Adhesion/adosin/tree/master
+ *  Uses fast tanh by John ffitch for the clipper algortihm
+ *  Bit reduction algortihm based off Decimator from musicdsp
+ *  https://www.musicdsp.org/en/latest/Effects/124-decimator.html 
  **********************************************************************/
 using namespace daisysp;
 
@@ -54,8 +57,10 @@ private:
     Wavefolder folder;
     Oscillator lfo;
 
-    float lfoMin;
-    float lfoMax;
+    float lfoMin, lfoMax;
+    float lfoFreq;
+    int bitsMin, bitsMax;
+    float bitRate, bitCount;
     int bits;
 
     float inputAG[2][BLOCKLENGTH];

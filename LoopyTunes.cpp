@@ -7,8 +7,6 @@ using namespace daisysp;
 TO DO:
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
-- Resolve problems with waveshaper
-- Replace tanh with fast tanh
 - Playback speed
 - doxygen comments
 - add navigation mode for encoder click
@@ -20,6 +18,7 @@ TO DO:
 - refactor mixing algortihm
 - test auto gain feature
 - change static sample rate setting to getting into from system
+- find better version of fast tanh
 */
 
 // Hardware

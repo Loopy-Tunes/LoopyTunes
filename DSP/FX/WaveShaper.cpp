@@ -10,6 +10,14 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
     lfo.SetAmp(0.5);
     lfo.Reset(0);
 
+    lfoMin = 20;
+    lfoMax = 128;
+    lfoFreq = 0;
+
+    bitsMin = 4;
+    bitsMax = 16;
+    bitRate = 0.5;
+    bitCount = 0;
     bits = 0;
 
     bypass.param.init(0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
@@ -55,10 +63,11 @@ inline void Waveshaper::scaleControlParam()
     switch(shape)
     {
         case LFO:
-            // set lfo frequency
+            lfoFreq = (funcControl.value - 1) * (lfoMax - lfoMin) / (1 - 0) + lfoMin;
+            lfo.SetFreq(lfoFreq);
         break;
         case BITREDUCER:
-            // set bit reduction value
+            bits = (funcControl.value - 1) * (bitsMax - bitsMin) / (1 - 0) + bitsMin;
         break;
     }
 }
@@ -69,7 +78,7 @@ inline void Waveshaper::setInputAG(float* buffer[2], size_t size)
     {
         for(u_int8_t j = 0 ; j < 2 ; j++)
         {
-            //inputAG[j][i] = **buffer[j][i]; 
+            inputAG[j][i] = buffer[j][i]; 
         }
     }
 }
@@ -80,7 +89,7 @@ inline void Waveshaper::setOutputAG(float* buffer[2], size_t size)
     {
         for(u_int8_t j = 0 ; j < 2 ; j++)
         {
-            //outputAG[j][i] = **buffer[j][i]; 
+            outputAG[j][i] = buffer[j][i]; 
         }
     } 
 }
@@ -156,7 +165,22 @@ void Waveshaper::processClipper(float* buffer[2], size_t size)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            
+            int sign = 1;
+            if(buffer[j][i] < 0)
+            {
+                sign = -1;
+                buffer[j][i] = -buffer[j][i];
+                buffer[j][i] *= sign;
+            }
+            else if(buffer[j][i] >= 4.0f)
+            {
+                buffer[j][i] = sign;
+            }
+            else if(buffer[j][i] < 0.5f)
+            {
+                buffer[j][i] *= sign;
+            }
+            buffer[j][i] = sign * tanhf(buffer[j][i]);
         }
     }
 } 
@@ -185,11 +209,19 @@ void Waveshaper::processLFO(float* buffer[2], size_t size)
 
 void Waveshaper::processBitReducer(float* buffer[2], size_t size)
 {
+    long int m = 1 << (bits-1);
+
     for(size_t i = 0 ; i < size ; i++)
     {
+        bitCount += bitRate;
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            
+            if(bitCount >= 1)
+            {
+                buffer[j][i] = (long int)(buffer[j][i] * m) / (float)m;
+                if(j == 2)
+                    bitCount = 0;
+            }
         }
     }
 }
