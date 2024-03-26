@@ -15,8 +15,11 @@ class EncoderDriver
 {
 public:
 
-    void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b)
+    void init(DaisySeed* seed, dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b)
     {
+        // for testing
+        hw = seed;
+
         btn.Init(button);
         
         channelA.pin = a;
@@ -55,9 +58,15 @@ public:
                 return;
 
             if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
+            {
                 parameters[currentParam]->increment();
+                hw->PrintLine("increment");
+            }
             else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
+            {
                 parameters[currentParam]->decrement();
+                hw->PrintLine("decrement");
+            }
         }
     }
 
@@ -105,6 +114,9 @@ public:
     }
 
 private:
+
+    // for testing
+    DaisySeed* hw;
 
     enum EncoderState
     {

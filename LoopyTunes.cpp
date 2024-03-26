@@ -12,13 +12,13 @@ TO DO:
 - add navigation mode for encoder click
 - test reverb dry/wet
 - test filters
+- test pitch shift with new buffer size
 - filter default values
 - test encoder
-- sort memory overflow
 - refactor mixing algortihm
 - test auto gain feature
-- change static sample rate setting to getting into from system
 - find better version of fast tanh
+- add destructors
 */
 
 // Hardware
@@ -87,6 +87,9 @@ void init()
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
+
+	// initialise GUI
+	encoderDriver.init(&hw, seed::D4, seed::D13, seed::D14);
 }
 
 void initTrackIO()

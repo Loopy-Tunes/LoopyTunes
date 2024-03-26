@@ -16,7 +16,7 @@ void Reverb::init(EncoderDriver* driver, std::string trackID)
     driver->addParameter(&damp.param);
     driver->addParameter(&width.param);
 
-    model.setdry(0.8);
+    model.setdry(1);
     setDefaultValues();
 }
 

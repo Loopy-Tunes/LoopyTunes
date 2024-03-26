@@ -8,7 +8,7 @@ void PitchShift::init(EncoderDriver* driver, std::string trackID)
         buffer[R][i] = 0.0f;
     }
     
-    shifter.Init(48000);
+    shifter.Init(4800);
 
     bypass.param.init(0, 1, 1, ParameterIDs::PitchShifter::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::amount, trackID, [this] (float a) { setAmount(a); });

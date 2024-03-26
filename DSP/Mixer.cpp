@@ -102,6 +102,9 @@ void Mixer::mixOutput(size_t size)
 {
     setMixDiv();
 
+    // if mix = 0
+        // audio through
+
     for(size_t i = 0 ; i < size ; i++)
     {
         mix[L][i] = (track1.getCurVal(L, i) 
