@@ -30,19 +30,14 @@ void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
 {
     pitchShift.init(driver, trackID);
     delay.init(driver, trackID, dl);
-    shaper.init(driver, trackID);
-    reverb.init(driver, trackID);
+    //shaper.init(driver, trackID);
+    //reverb.init(driver, trackID);
 }
 
 void Track::tick()
 {
     record.tick();
     play.tick();
-
-    pitchShift.tick();
-    shaper.tick();
-    delay.tick();
-    reverb.tick();
 }
 
 void Track::clearBuffer()
@@ -145,6 +140,6 @@ void Track::processOutputBlock(float* output[2], size_t size)
    
     pitchShift.process(output, size);
     //shaper.processBlock(output, size); 
-    //delay.processBlock(output, size);
+    delay.processBlock(output, size);
     //reverb.processBlock(output, size);
 }

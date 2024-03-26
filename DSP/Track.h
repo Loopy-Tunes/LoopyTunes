@@ -51,10 +51,10 @@ private:
     size_t bufferSize;
 
     PitchShift pitchShift;
-    Waveshaper shaper;
-    Filter filter;
+    //Waveshaper shaper;
+    //Filter filter;
     Delay delay;
-    Reverb reverb;
+    //Reverb reverb;
 };
 
 #endif

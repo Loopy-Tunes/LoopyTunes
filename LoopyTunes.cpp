@@ -19,6 +19,8 @@ TO DO:
 - test auto gain feature
 - find better version of fast tanh
 - add destructors
+- output LPF to remove noise
+- test mixing
 */
 
 // Hardware
@@ -83,13 +85,13 @@ void init()
 	// initialise global variables
 	sample = 0;
 
+	// initialise GUI
+	encoderDriver.init(seed::D4, seed::D13, seed::D14);
+
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
-
-	// initialise GUI
-	encoderDriver.init(&hw, seed::D4, seed::D13, seed::D14);
 }
 
 void initTrackIO()
@@ -102,17 +104,23 @@ void initTrackIO()
 	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
 }
 
-void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+inline void tick(size_t size)
 {
 	if(sample >= MACROBLOCK)
 	{
 		mixer.tick();
+		//encoderDriver.tick();
 		sample = 0;
 	}
 	else
 	{
 		sample += size;
 	}
+}
+
+void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+{
+	tick(size);
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
@@ -139,5 +147,6 @@ int main(void)
 	while(1) 
 	{
 		//mixer.tick();
+		//encoderDriver.tick();
 	}
 }

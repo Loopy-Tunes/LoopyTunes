@@ -24,6 +24,11 @@ public:
         reso.init(0, 1, 0.05, ParameterIDs::Filter::resonance, trackID, [this] (float r) { setReso(r); });
         mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
 
+        driver->addParameter(&bypass.param);
+        driver->addParameter(&freq);
+        driver->addParameter(&reso);
+        driver->addParameter(&mode);
+
         setDefaultValues();
     }
 
