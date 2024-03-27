@@ -1,5 +1,4 @@
 #include "stddef.h"
-#pragma once
 
 #define BLOCKLENGTH 4
 #define SAMPLERATE 48000

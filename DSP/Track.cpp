@@ -1,11 +1,5 @@
 #include "Track.h"
 
-Track::~Track()
-{
-    for(uint_fast8_t i = 0 ; i < 2 ; i++)
-        buffer[i] = nullptr;
-}
-
 void Track::init(float* mem[2], std::string ID)
 {
     trackID = ID;
@@ -34,7 +28,7 @@ void Track::initIO(TrackIO io)
 
 void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
 {
-    pitchShift.init(driver, trackID);
+    //pitchShift.init(driver, trackID);
     delay.init(driver, trackID, dl);
     //shaper.init(driver, trackID);
     //reverb.init(driver, trackID);
@@ -144,7 +138,7 @@ void Track::processOutputBlock(float* output[2], size_t size)
         incrementReadPos();
     }
    
-    pitchShift.process(output, size);
+    //pitchShift.process(output, size);
     //shaper.processBlock(output, size); 
     delay.processBlock(output, size);
     //reverb.processBlock(output, size);

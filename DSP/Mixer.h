@@ -12,8 +12,6 @@ class Mixer
 {
 public:
 
-    ~Mixer();
-
     void init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
     void initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2]);
     void initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, TrackIO t4);

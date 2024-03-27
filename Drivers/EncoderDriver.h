@@ -15,7 +15,7 @@ class EncoderDriver
 {
 public:
 
-    void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b)
+    void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
     {
         btn.Init(button);
         
@@ -31,6 +31,10 @@ public:
         state = DISARMED;
         prevUpdate = System::GetNow();
         isUpdated = false;
+
+        isNavigation = false;
+        navCallback = navCb;
+
         currentParam = 0;
         valueA = 0xFF;
         valueB = 0xFF;
@@ -61,17 +65,17 @@ public:
         }
     }
 
+    void setIsNavigation(bool isNav)
+    {
+        isNavigation = isNav;
+    }
+
     void buttonCallback()
     {
-        // add logic for navigation or parameter select
-        /*
-            if mode = navigation
-                move to next view
-            else if mode = parameter control
-                changeState()
-        */
-
-        changeState();
+        if(isNavigation)
+            navCallback();
+        else 
+            changeState();
     }
 
     void changeState()
@@ -115,6 +119,9 @@ private:
     bool isUpdated;
     uint32_t prevUpdate;
     uint32_t now;
+
+    bool isNavigation;
+    std::function<void()> navCallback;
 
     int currentParam;
     std::vector<SteppedParameter*> parameters;

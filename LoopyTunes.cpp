@@ -7,7 +7,6 @@ using namespace daisysp;
 TO DO:
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
-- Playback speed
 - doxygen comments
 - add navigation mode for encoder click
 - test reverb dry/wet
@@ -17,8 +16,6 @@ TO DO:
 - test encoder
 - refactor mixing algortihm
 - test auto gain feature
-- find better version of fast tanh
-- add destructors
 - output LPF to remove noise
 - test mixing
 */
@@ -77,16 +74,21 @@ namespace Buffers
 void init()
 {
 	// initialise Daisy Seed
-	hw.Configure();
-	hw.Init();
+	hw.Init(true); // true = boost enabled
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+
+	for(size_t i = 0 ; i < 3 ; i++)
+    {
+        Buffers::t1m[L][i] = 0.0f;
+        Buffers::t1m[R][i] = 0.0f;
+    }
 
 	// initialise global variables
 	sample = 0;
 
 	// initialise GUI
-	encoderDriver.init(seed::D4, seed::D13, seed::D14);
+	//encoderDriver.init(seed::D4, seed::D13, seed::D14);
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
