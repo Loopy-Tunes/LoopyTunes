@@ -18,6 +18,8 @@ class Track
 {
 public:
 
+    ~Track();
+
     void init(float* mem[2], std::string ID);
     void initIO(TrackIO io);
     void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2]);

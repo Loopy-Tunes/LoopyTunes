@@ -1,5 +1,11 @@
 #include "Track.h"
 
+Track::~Track()
+{
+    for(uint_fast8_t i = 0 ; i < 2 ; i++)
+        buffer[i] = nullptr;
+}
+
 void Track::init(float* mem[2], std::string ID)
 {
     trackID = ID;

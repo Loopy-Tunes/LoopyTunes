@@ -1,5 +1,11 @@
 #include "Mixer.h"
 
+Mixer::~Mixer()
+{
+    for(uint_fast8_t i = 0 ; i < 2 ; i++)
+        mix[i] = nullptr;
+}
+
 void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
     bufferSize = SAMPLERATE * DURATION;

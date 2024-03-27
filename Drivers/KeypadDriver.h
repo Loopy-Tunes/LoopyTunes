@@ -1,7 +1,7 @@
 #ifndef KEYPADDRIVER_H
 #define KEYPADDRIVER_H
 
-#include "Parameters/BinaryParameter.h"
+#include "../Parameters/BinaryParameter.h"
 
 /*****************************************************************************//**
  *  Class name: KeypadDriver
