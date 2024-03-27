@@ -32,8 +32,8 @@ size_t sample;
 // DSP
 Mixer mixer;
 
-// UI - QSPI
-EncoderDriver encoderDriver;
+// UI
+static EncoderDriver encoderDriver;
 
 // buffers
 namespace Buffers
@@ -109,7 +109,7 @@ inline void tick(size_t size)
 	if(sample >= MACROBLOCK)
 	{
 		mixer.tick();
-		//encoderDriver.tick();
+		encoderDriver.tick();
 		sample = 0;
 	}
 	else
@@ -120,8 +120,6 @@ inline void tick(size_t size)
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	tick(size);
-
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
@@ -146,7 +144,7 @@ int main(void)
 	
 	while(1) 
 	{
-		//mixer.tick();
-		//encoderDriver.tick();
+		mixer.tick();
+		encoderDriver.tick();
 	}
 }

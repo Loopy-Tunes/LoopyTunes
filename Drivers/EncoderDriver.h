@@ -39,7 +39,7 @@ public:
     void tick()
     {
         btn.Debounce();
-        if(btn.FallingEdge())
+        if(btn.Pressed())
             buttonCallback();
 
         now = System::GetNow();
@@ -53,12 +53,11 @@ public:
 
             if(state == DISARMED)
                 return;
-            /*
+            
             if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
                 parameters[currentParam]->increment();
             else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
                 parameters[currentParam]->decrement();
-            */
         }
     }
 
@@ -90,7 +89,7 @@ public:
 
     void setCurrentParam(std::string newParam)
     { 
-        for(unsigned int i = 0 ; i < parameters.size() ; i++)
+        for(int i = 0 ; i < parameters.size() ; i++)
         {
             if(parameters[i]->getID() == newParam)
             {

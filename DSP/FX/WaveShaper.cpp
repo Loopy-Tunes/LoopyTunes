@@ -25,10 +25,10 @@ void Waveshaper::init(EncoderDriver* driver, std::string trackID)
     funcControl.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
     waveshape.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
 
-    driver->addParameter(&bypass.param);
-    driver->addParameter(&amount.param);
-    driver->addParameter(&funcControl.param);
-    driver->addParameter(&waveshape.param);
+    //driver->addParameter(&bypass.param);
+    //driver->addParameter(&amount.param);
+    //driver->addParameter(&funcControl.param);
+    //driver->addParameter(&waveshape.param);
 
     setDefaultValues(); 
 
