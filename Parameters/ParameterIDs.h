@@ -2,69 +2,67 @@
 #define PARAMETERIDS_H
 #pragma once
 
-#include <string>
-
 namespace ParameterIDs
 {
     namespace Tracks
     {
-        const std::string Track1 = "1";
-        const std::string Track2 = "2";
-        const std::string Track3 = "3";
-        const std::string Track4 = "4";
+        const int Track1 = 100;
+        const int Track2 = 200;
+        const int Track3 = 300;
+        const int Track4 = 400;
     }
 
     namespace PitchShifter
     {
-        const std::string effect = "PitchShifter";
+        const int effect = 10;
 
-        const std::string bypass = effect + "Bypass";
-        const std::string amount = effect + "Amount";
-        const std::string semitones = effect+ "Semitones";
-        const std::string random = effect + "Random";
+        const int bypass = effect + 1;
+        const int amount = effect + 2;
+        const int semitone = effect + 3;
+        const int random = effect + 4;
     }
 
     namespace Waveshaper
     {
-        const std::string effect = "Waveshaper";
+        const int effect = 20;
 
-        const std::string bypass = effect + "Bypass";
-        const std::string amount = effect + "Amount";
-        const std::string funcControl = effect + "FuncControl";
-        const std::string waveshape = effect + "Waveshape";
+        const int bypass = effect + 1;
+        const int amount = effect + 2;
+        const int funcControl = effect + 3;
+        const int waveshape = effect + 4;
     }
 
     namespace Filter
     {
-        const std::string effect = "Filter";
+        const int effect = 30;
 
-        const std::string bypass = effect + "Bypass";
-        const std::string frequency = effect + "Frequency";
-        const std::string amount = effect + "Amount";
-        const std::string resonance = effect + "Resonance";
-        const std::string mode = effect + "Mode";
+        const int bypass = effect + 1;
+        const int frequency = effect + 2;
+        const int amount = effect + 3;
+        const int resonance = effect + 4;
+        const int mode = effect + 5;
     }
 
     namespace Delay
     {
-        const std::string effect = "Delay";
+        const int effect = 40;
 
-        const std::string bypass = effect + "Bypass";
-        const std::string amount = effect + "Amount";
-        const std::string size = effect + "Size";
-        const std::string feedback = effect + "Feedback";
+        const int bypass = effect + 1;
+        const int amount = effect + 2;
+        const int size = effect + 3;
+        const int feedback = effect + 4;
     }
 
     namespace Reverb
     {
-        const std::string effect = "Reverb";
+        const int effect = 50;
 
-        const std::string bypass = effect + "Bypass";
-        const std::string amount = effect + "Amount";
-        const std::string mode = effect + "Mode";
-        const std::string size = effect + "size";
-        const std::string damp = effect + "Damp";
-        const std::string width = effect + "Width";
+        const int bypass = effect + 1;
+        const int amount = effect + 2;
+        const int mode = effect + 3;
+        const int size = effect + 4;
+        const int damp = effect + 5;
+        const int width = effect + 6;
     }
 }
 
