@@ -119,7 +119,7 @@ void Mixer::mixOutput(size_t size)
                     / mixDiv;
     }
 
-    // pass mix buffer through limiter
+    // pass mix bus through limiter
 }
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)

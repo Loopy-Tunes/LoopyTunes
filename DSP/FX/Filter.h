@@ -15,73 +15,25 @@ class Filter
 {
 public:
 
-    void init(EncoderDriver* driver, int trackID)
-    {
-        filter.Init(48000);
-        
-        bypass.param.init(0, 1, 1, ParameterIDs::Filter::bypass, trackID, [this] (float b) { setBypass(b); });
-        freq.init(0, 1, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) {setFreq(f); });
-        reso.init(0, 1, 0.05, ParameterIDs::Filter::resonance, trackID, [this] (float r) { setReso(r); });
-        mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
-
-        //driver->addParameter(&bypass.param);
-        //driver->addParameter(&freq);
-        //driver->addParameter(&reso);
-        //driver->addParameter(&mode);
-
-        setDefaultValues();
-    }
-
-    void setDefaultValues()
-    {
-
-    }
+    void init(EncoderDriver* driver, int trackID);
+    void setDefaultValues();
 
     void setBypass(float b) { bypass.value = b; }
-    void setFreq(float f) { filter.SetFreq(f); }
-    void setReso(float r) { filter.SetRes(r); }
+    void setFreq(float f) { }//filter.SetFreq(f); }
+    void setReso(float r) { }//filter.SetRes(r); }
+    void setMode(float m);
 
-    void setMode(float m)
-    {
-        if(m == 0)
-            state = LOWPASS;
-        else
-            state = HIGHPASS;
-    }
-
-    void processBlock(float* buffer[2], size_t size)
-    {
-        if(bypass.value == 1)
-            return;
-
-        for(size_t i = 0 ; i < size ; i++)
-        {
-            for(u_int8_t j = 0 ; j < 2 ; j++)
-            {
-                filter.Process(buffer[j][i]);
-
-                switch(state)
-                {
-                case LOWPASS:
-                    buffer[j][i] = filter.Low();
-                    break;
-                case HIGHPASS:
-                    buffer[j][i] = filter.High();
-                    break;
-                }
-            }
-        }
-    }
+    void processBlock(float* buffer[2], size_t size);
 
 private:
 
-    enum State
+    enum Mode
     {
         LOWPASS = 0,
         HIGHPASS
-    } state;
+    } filterMode;
 
-    Svf filter;
+    //Svf filter;
     SteppedParameterWrapper bypass;
     SteppedParameter freq;
     SteppedParameter reso;

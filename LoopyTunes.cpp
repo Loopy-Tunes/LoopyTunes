@@ -30,7 +30,7 @@ size_t sample;
 Mixer mixer;
 
 // UI
-static EncoderDriver encoderDriver;
+EncoderDriver encoderDriver;
 
 // buffers
 namespace Buffers
@@ -88,7 +88,7 @@ void init()
 	sample = 0;
 
 	// initialise GUI
-	//encoderDriver.init(seed::D4, seed::D13, seed::D14);
+	//encoderDriver.init(seed::D4, seed::D13, seed::D14, nullptr);
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
@@ -122,6 +122,8 @@ inline void tick(size_t size)
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	tick(size);
+
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
 }
