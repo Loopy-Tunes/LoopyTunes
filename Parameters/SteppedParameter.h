@@ -4,7 +4,6 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "ParameterIDs.h"
-// #include "../Drivers/EncoderDriver.h"
 #include <string>
 
 /***********************************************************************************//**
