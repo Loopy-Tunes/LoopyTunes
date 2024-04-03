@@ -1,6 +1,6 @@
 #include "Reverb.h"
 
-void Reverb::init(EncoderDriver* driver, std::string trackID)
+void Reverb::init(EncoderDriver* driver, int trackID)
 {
     bypass.param.init(0, 1, 1, ParameterIDs::Reverb::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Reverb::amount, trackID, [this] (float a) { setAmount(a); });

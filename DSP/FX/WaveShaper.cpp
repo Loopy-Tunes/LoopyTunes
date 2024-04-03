@@ -2,7 +2,7 @@
 
 using namespace daisysp;
 
-void Waveshaper::init(EncoderDriver* driver, std::string trackID)
+void Waveshaper::init(EncoderDriver* driver, int trackID)
 {
     folder.Init();
     lfo.Init(48000);

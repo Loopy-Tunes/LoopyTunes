@@ -91,7 +91,7 @@ public:
         }
     }
 
-    void setCurrentParam(std::string newParam)
+    void setCurrentParam(int newParam)
     { 
         for(unsigned int i = 0 ; i < parameters.size() ; i++)
         {

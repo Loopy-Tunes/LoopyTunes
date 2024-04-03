@@ -2,7 +2,7 @@
 
 using namespace daisysp;
 
-void Delay::init(EncoderDriver* driver, std::string trackID, DelayLine<float, MAXDELAY>* dl[2])
+void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>* dl[2])
 {
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
     {

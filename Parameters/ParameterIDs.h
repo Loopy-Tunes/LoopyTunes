@@ -18,7 +18,7 @@ namespace ParameterIDs
 
         const int bypass = effect + 1;
         const int amount = effect + 2;
-        const int semitone = effect + 3;
+        const int semitones = effect + 3;
         const int random = effect + 4;
     }
 

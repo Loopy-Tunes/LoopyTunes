@@ -15,7 +15,7 @@ class PitchShift
 {
 public:
 
-    void init(EncoderDriver* driver, std::string trackID);
+    void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
     void tick();
 

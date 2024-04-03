@@ -1,6 +1,6 @@
 #include "PitchShift.h"
 
-void PitchShift::init(EncoderDriver* driver, std::string trackID)
+void PitchShift::init(EncoderDriver* driver, int trackID)
 {
     for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {

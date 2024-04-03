@@ -1,6 +1,6 @@
 #include "Track.h"
 
-void Track::init(float* mem[2], std::string ID)
+void Track::init(float* mem[2], int ID)
 {
     trackID = ID;
 

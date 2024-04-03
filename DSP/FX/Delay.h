@@ -16,7 +16,7 @@ class Delay
 {
 public:
 
-    void init(EncoderDriver* driver, std::string trackID, DelayLine<float, MAXDELAY>* dl[2]);
+    void init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>* dl[2]);
     void setDefaultValues();
     void tick();
 
