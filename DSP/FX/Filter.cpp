@@ -2,7 +2,7 @@
 
 void Filter::init(EncoderDriver* driver, int trackID)
 {
-    //filter.Init(48000);
+    filter.Init(48000);
     
     bypass.param.init(0, 1, 1, ParameterIDs::Filter::bypass, trackID, [this] (float b) { setBypass(b); });
     freq.init(0, 1, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) {setFreq(f); });
@@ -39,15 +39,15 @@ void Filter::processBlock(float* buffer[2], size_t size)
     {
         for(u_int8_t j = 0 ; j < 2 ; j++)
         {
-            //filter.Process(buffer[j][i]);
+            filter.Process(buffer[j][i]);
 
             switch(filterMode)
             {
                 case LOWPASS:
-                //buffer[j][i] = filter.Low();
+                    buffer[j][i] = filter.Low();
                 break;
                 case HIGHPASS:
-                    //buffer[j][i] = filter.High();
+                    buffer[j][i] = filter.High();
                 break;
             }
         }

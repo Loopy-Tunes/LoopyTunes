@@ -7,14 +7,13 @@ using namespace daisysp;
 TO DO:
 - Mixer audio through
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
-- doxygen comments
 - add navigation mode for encoder click
 - test reverb dry/wet
 - test filters
 - test pitch shift with new buffer size
 - filter default values
+- filter scaling for low pass / high pass
 - test encoder
-- refactor mixing algortihm
 - test auto gain feature
 - output LPF to remove noise
 - test mixing

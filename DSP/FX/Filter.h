@@ -19,8 +19,8 @@ public:
     void setDefaultValues();
 
     void setBypass(float b) { bypass.value = b; }
-    void setFreq(float f) { }//filter.SetFreq(f); }
-    void setReso(float r) { }//filter.SetRes(r); }
+    void setFreq(float f) { filter.SetFreq(f); }
+    void setReso(float r) { filter.SetRes(r); }
     void setMode(float m);
 
     void processBlock(float* buffer[2], size_t size);
@@ -33,7 +33,7 @@ private:
         HIGHPASS
     } filterMode;
 
-    //Svf filter;
+    Svf filter;
     SteppedParameterWrapper bypass;
     SteppedParameter freq;
     SteppedParameter reso;

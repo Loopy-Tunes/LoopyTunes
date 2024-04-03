@@ -15,7 +15,7 @@ static const struct WaveshaperDefaults
 {
 	float bypass = 1;
     float input = 0.5;
-    float waveshape = 0;
+    float mode = 0;
     float amount = 0.5;
 } waveshaperDefs;
 

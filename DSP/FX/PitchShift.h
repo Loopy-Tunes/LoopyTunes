@@ -32,7 +32,6 @@ private:
     SteppedParameterWrapper bypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper semitones;
-    SteppedParameterWrapper rand;
 };
 
 #endif

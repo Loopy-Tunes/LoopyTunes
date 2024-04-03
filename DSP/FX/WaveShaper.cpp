@@ -4,6 +4,16 @@ using namespace daisysp;
 
 void Waveshaper::init(EncoderDriver* driver, int trackID)
 {
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    {
+        for(u_int8_t j = 0 ; j < 2 ; j++)
+        {
+            inputAG[j][i] = 0;
+            outputAG[j][i] = 0; 
+            diffAG[j][i] = 0;  
+        }
+    }
+
     folder.Init();
     lfo.Init(48000);
     lfo.SetWaveform(0);
@@ -23,24 +33,14 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     bypass.param.init(0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
     funcControl.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
-    waveshape.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float ws) { setWaveshape(ws); });
+    mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float m) { setMode(m); });
 
     //driver->addParameter(&bypass.param);
     //driver->addParameter(&amount.param);
     //driver->addParameter(&funcControl.param);
     //driver->addParameter(&waveshape.param);
 
-    setDefaultValues(); 
-
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
-    {
-        for(u_int8_t j = 0 ; j < 2 ; j++)
-        {
-            inputAG[j][i] = 0;
-            outputAG[j][i] = 0; 
-            diffAG[j][i] = 0;  
-        }
-    }
+    setDefaultValues();
 }
 
  void Waveshaper::setDefaultValues()
@@ -48,7 +48,7 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     bypass.value = waveshaperDefs.bypass;
     amount.value = waveshaperDefs.amount;
     funcControl.value = waveshaperDefs.input;
-    waveshape.value = waveshaperDefs.waveshape;
+    mode.value = waveshaperDefs.mode;
  }
 
 void Waveshaper::tick()
@@ -58,9 +58,9 @@ void Waveshaper::tick()
 
 inline void Waveshaper::scaleControlParam()
 {
-    int shape = waveshape.value;
+    int modeCheck = mode.value;
 
-    switch(shape)
+    switch(modeCheck)
     {
         case LFO:
             lfoFreq = (funcControl.value - 1) * (lfoMax - lfoMin) / (1 - 0) + lfoMin;
@@ -123,8 +123,8 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
 
     setInputAG(buffer, size);
 
-    int shape = waveshape.value;
-    if(shape == CLIPPER || shape == FOLDER)
+    int modeCheck = mode.value;
+    if(modeCheck == CLIPPER || modeCheck == FOLDER)
     {
         for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
         {
@@ -135,7 +135,7 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
         }
     }
 
-    switch(shape)
+    switch(modeCheck)
     {
         case CLIPPER:
             processClipper(buffer, size);
@@ -151,7 +151,7 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
         break;
     }
 
-    if(shape == CLIPPER || shape == FOLDER)
+    if(modeCheck == CLIPPER || modeCheck == FOLDER)
     {
         setOutputAG(buffer, size);
         calculateAutoGain(size);

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   34              	.LBB483:
   35              	.LBI483:
   36              		.file 2 "../../../libDaisy//src/sys/system.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 2
 
 
    1:../../../libDaisy//src/sys/system.h **** #ifndef DSY_SYSTEM_H
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   55:../../../libDaisy//src/sys/system.h ****         SysClkFreq cpu_freq;
   56:../../../libDaisy//src/sys/system.h ****         bool       use_dcache;
   57:../../../libDaisy//src/sys/system.h ****         bool       use_icache;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 3
 
 
   58:../../../libDaisy//src/sys/system.h ****         bool       skip_clocks;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    9:../../../libDaisy//src/hid/usb.h ****     @{
   10:../../../libDaisy//src/hid/usb.h **** */
   11:../../../libDaisy//src/hid/usb.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 4
 
 
   12:../../../libDaisy//src/hid/usb.h **** {
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   18:../../../libDaisy//src/per/adc.h **** using a struct like this allows us to add more configuration
   19:../../../libDaisy//src/per/adc.h **** later without breaking existing functionality.
   20:../../../libDaisy//src/per/adc.h **** */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 5
 
 
   21:../../../libDaisy//src/per/adc.h **** 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   75:../../../libDaisy//src/per/adc.h ****                  size_t          mux_channels,
   76:../../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin    mux_0,
   77:../../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin    mux_1 = {DSY_GPIOX, 0},
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 6
 
 
   78:../../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin    mux_2 = {DSY_GPIOX, 0},
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   16:../../../libDaisy//src/hid/audio.h ****  *             1. Create and Initialize an SaiHandle or two depending on your requirements
   17:../../../libDaisy//src/hid/audio.h ****  *             2. Initialize the Audio Handle with the desired settings and the Initialized SaiHand
   18:../../../libDaisy//src/hid/audio.h ****  *             3. If the connected codec requires special configuration or initialization, do so
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 7
 
 
   19:../../../libDaisy//src/hid/audio.h ****  *             4. Write a callback method using either the AudioCallback or the InterleavingAudioCa
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   73:../../../libDaisy//src/hid/audio.h ****     typedef void (*AudioCallback)(InputBuffer  in,
   74:../../../libDaisy//src/hid/audio.h ****                                   OutputBuffer out,
   75:../../../libDaisy//src/hid/audio.h ****                                   size_t       size);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 8
 
 
   76:../../../libDaisy//src/hid/audio.h **** 
@@ -468,69 +468,68 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    7:LoopyTunes.cpp **** TO DO:
    8:LoopyTunes.cpp **** - Mixer audio through
    9:LoopyTunes.cpp **** - Remove clicks at ends of loops (interpolation???) (static envelope???)
-  10:LoopyTunes.cpp **** - doxygen comments
-  11:LoopyTunes.cpp **** - add navigation mode for encoder click
-  12:LoopyTunes.cpp **** - test reverb dry/wet
-  13:LoopyTunes.cpp **** - test filters
-  14:LoopyTunes.cpp **** - test pitch shift with new buffer size
-  15:LoopyTunes.cpp **** - filter default values
+  10:LoopyTunes.cpp **** - add navigation mode for encoder click
+  11:LoopyTunes.cpp **** - test reverb dry/wet
+  12:LoopyTunes.cpp **** - test filters
+  13:LoopyTunes.cpp **** - test pitch shift with new buffer size
+  14:LoopyTunes.cpp **** - filter default values
+  15:LoopyTunes.cpp **** - filter scaling for low pass / high pass
   16:LoopyTunes.cpp **** - test encoder
-  17:LoopyTunes.cpp **** - refactor mixing algortihm
-  18:LoopyTunes.cpp **** - test auto gain feature
-  19:LoopyTunes.cpp **** - output LPF to remove noise
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 9
+  17:LoopyTunes.cpp **** - test auto gain feature
+  18:LoopyTunes.cpp **** - output LPF to remove noise
+  19:LoopyTunes.cpp **** - test mixing
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 9
 
 
-  20:LoopyTunes.cpp **** - test mixing
-  21:LoopyTunes.cpp **** */
-  22:LoopyTunes.cpp **** 
-  23:LoopyTunes.cpp **** // Hardware
-  24:LoopyTunes.cpp **** DaisySeed hw;
-  25:LoopyTunes.cpp **** 
-  26:LoopyTunes.cpp **** // Global
-  27:LoopyTunes.cpp **** size_t sample;
-  28:LoopyTunes.cpp **** 
-  29:LoopyTunes.cpp **** // DSP
-  30:LoopyTunes.cpp **** Mixer mixer;
-  31:LoopyTunes.cpp **** 
-  32:LoopyTunes.cpp **** // UI
-  33:LoopyTunes.cpp **** EncoderDriver encoderDriver;
-  34:LoopyTunes.cpp **** 
-  35:LoopyTunes.cpp **** // buffers
-  36:LoopyTunes.cpp **** namespace Buffers
-  37:LoopyTunes.cpp **** {
-  38:LoopyTunes.cpp **** 	// Sample Buffers
-  39:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
-  40:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
-  41:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
-  42:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
-  43:LoopyTunes.cpp **** 
-  44:LoopyTunes.cpp **** 	float* track1Ptr[2] = {track1[L], track1[R]};
-  45:LoopyTunes.cpp **** 	float* track2Ptr[2] = {track2[L], track2[R]};
-  46:LoopyTunes.cpp **** 	float* track3Ptr[2] = {track3[L], track3[R]};
-  47:LoopyTunes.cpp **** 	float* track4Ptr[2] = {track4[L], track4[R]};
-  48:LoopyTunes.cpp **** 
-  49:LoopyTunes.cpp **** 	// Mix Buffers
-  50:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
-  51:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t1m[2][BLOCKLENGTH];
-  52:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t2m[2][BLOCKLENGTH];
-  53:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t3m[2][BLOCKLENGTH];
-  54:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t4m[2][BLOCKLENGTH];
-  55:LoopyTunes.cpp **** 
-  56:LoopyTunes.cpp **** 	float* mixPtr[2] = {mix[L], mix[R]};
-  57:LoopyTunes.cpp **** 	float* t1mPtr[2] = {t1m[L], t1m[R]};
-  58:LoopyTunes.cpp **** 	float* t2mPtr[2] = {t2m[L], t2m[R]};
-  59:LoopyTunes.cpp **** 	float* t3mPtr[2] = {t3m[L], t3m[R]};
-  60:LoopyTunes.cpp **** 	float* t4mPtr[2] = {t4m[L], t4m[R]};
-  61:LoopyTunes.cpp **** 
-  62:LoopyTunes.cpp **** 	// Delay Lines
-  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t1delay[2];
-  74              		.loc 6 63 43 is_stmt 1 view -0
+  20:LoopyTunes.cpp **** */
+  21:LoopyTunes.cpp **** 
+  22:LoopyTunes.cpp **** // Hardware
+  23:LoopyTunes.cpp **** DaisySeed hw;
+  24:LoopyTunes.cpp **** 
+  25:LoopyTunes.cpp **** // Global
+  26:LoopyTunes.cpp **** size_t sample;
+  27:LoopyTunes.cpp **** 
+  28:LoopyTunes.cpp **** // DSP
+  29:LoopyTunes.cpp **** Mixer mixer;
+  30:LoopyTunes.cpp **** 
+  31:LoopyTunes.cpp **** // UI
+  32:LoopyTunes.cpp **** EncoderDriver encoderDriver;
+  33:LoopyTunes.cpp **** 
+  34:LoopyTunes.cpp **** // buffers
+  35:LoopyTunes.cpp **** namespace Buffers
+  36:LoopyTunes.cpp **** {
+  37:LoopyTunes.cpp **** 	// Sample Buffers
+  38:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track1[2][SAMPLERATE * DURATION];
+  39:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track2[2][SAMPLERATE * DURATION];
+  40:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
+  41:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
+  42:LoopyTunes.cpp **** 
+  43:LoopyTunes.cpp **** 	float* track1Ptr[2] = {track1[L], track1[R]};
+  44:LoopyTunes.cpp **** 	float* track2Ptr[2] = {track2[L], track2[R]};
+  45:LoopyTunes.cpp **** 	float* track3Ptr[2] = {track3[L], track3[R]};
+  46:LoopyTunes.cpp **** 	float* track4Ptr[2] = {track4[L], track4[R]};
+  47:LoopyTunes.cpp **** 
+  48:LoopyTunes.cpp **** 	// Mix Buffers
+  49:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
+  50:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t1m[2][BLOCKLENGTH];
+  51:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t2m[2][BLOCKLENGTH];
+  52:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t3m[2][BLOCKLENGTH];
+  53:LoopyTunes.cpp **** 	float DSY_SDRAM_BSS t4m[2][BLOCKLENGTH];
+  54:LoopyTunes.cpp **** 
+  55:LoopyTunes.cpp **** 	float* mixPtr[2] = {mix[L], mix[R]};
+  56:LoopyTunes.cpp **** 	float* t1mPtr[2] = {t1m[L], t1m[R]};
+  57:LoopyTunes.cpp **** 	float* t2mPtr[2] = {t2m[L], t2m[R]};
+  58:LoopyTunes.cpp **** 	float* t3mPtr[2] = {t3m[L], t3m[R]};
+  59:LoopyTunes.cpp **** 	float* t4mPtr[2] = {t4m[L], t4m[R]};
+  60:LoopyTunes.cpp **** 
+  61:LoopyTunes.cpp **** 	// Delay Lines
+  62:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t1delay[2];
+  74              		.loc 6 62 43 is_stmt 1 view -0
   75              		.cfi_startproc
   76              		@ args = 0, pretend = 0, frame = 0
   77              		@ frame_needed = 0, uses_anonymous_args = 0
   78              		@ link register save eliminated.
-  79              		.loc 6 63 43 is_stmt 0 view .LVU11
+  79              		.loc 6 62 43 is_stmt 0 view .LVU11
   80 0000 7047     		bx	lr
   81              		.cfi_endproc
   82              	.LFE6363:
@@ -538,10 +537,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   85              		.align	1
   86              		.syntax unified
   87              		.thumb
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 10
-
-
   88              		.thumb_func
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 10
+
+
   90              	__tcf_2:
   91              	.LFB6376:
   92              		.cfi_startproc
@@ -598,10 +597,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    7:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // terms of the GNU General Public License as published by the
    8:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // Free Software Foundation; either version 3, or (at your option)
    9:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // any later version.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 11
-
-
   10:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 11
+
+
   11:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // This library is distributed in the hope that it will be useful,
   12:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
   13:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -658,10 +657,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   64:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   /**
   65:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****    *  Trait identifying "location-invariant" types, meaning that the
   66:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****    *  address of the object (or any of its members) will not escape.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 12
-
-
   67:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****    *  Trivially copyable types are location-invariant and users can
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 12
+
+
   68:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****    *  specialize this trait for other types.
   69:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****    */
   70:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   template<typename _Tp>
@@ -718,10 +717,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  121:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  122:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     template<typename _Functor>
  123:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       class _Base_manager
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 13
-
-
  124:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 13
+
+
  125:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       protected:
  126:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	static const bool __stored_locally =
  127:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	(__is_location_invariant<_Functor>::value
@@ -778,10 +777,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  178:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  179:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       public:
  180:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	static bool
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 14
-
-
  181:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	_M_manager(_Any_data& __dest, const _Any_data& __source,
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 14
+
+
  182:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 		   _Manager_operation __op)
  183:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	{
  184:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  switch (__op)
@@ -838,10 +837,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  235:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	static void
  236:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	_M_init_functor(_Any_data& __functor, _Functor&& __f, false_type)
  237:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	{ __functor._M_access<_Functor*>() = new _Functor(std::move(__f)); }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 15
-
-
  238:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       };
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 15
+
+
  239:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     _Function_base() : _M_manager(nullptr) { }
  241:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
@@ -898,10 +897,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  188              	.LVL3:
  189              	.LFB6361:
  190              		.file 8 "DSP/FX/../../Drivers/EncoderDriver.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 16
-
-
    1:DSP/FX/../../Drivers/EncoderDriver.h **** #ifndef ENCODERDRIVER_H
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 16
+
+
    2:DSP/FX/../../Drivers/EncoderDriver.h **** #define ENCODERDRIVER_H
    3:DSP/FX/../../Drivers/EncoderDriver.h **** 
    4:DSP/FX/../../Drivers/EncoderDriver.h **** #include "../Parameters/SteppedParameter.h"
@@ -958,10 +957,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   34:../../../libDaisy//src/hid/switch.h ****     enum Pull
   35:../../../libDaisy//src/hid/switch.h ****     {
   36:../../../libDaisy//src/hid/switch.h ****         PULL_UP,   /**< & */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 17
-
-
   37:../../../libDaisy//src/hid/switch.h ****         PULL_DOWN, /**< & */
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 17
+
+
   38:../../../libDaisy//src/hid/switch.h ****         PULL_NONE, /**< & */
   39:../../../libDaisy//src/hid/switch.h ****     };
   40:../../../libDaisy//src/hid/switch.h **** 
@@ -1018,10 +1017,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   43:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * and its documentation for any purpose is hereby granted without fee,
   44:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * provided that the above copyright notice appear in all copies and
   45:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * that both that copyright notice and this permission notice appear
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 18
-
-
   46:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * in supporting documentation.  Silicon Graphics makes no
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 18
+
+
   47:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * representations about the suitability of this  software for any
   48:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * purpose.  It is provided "as is" without express or implied warranty.
   49:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  */
@@ -1078,10 +1077,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  100:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  101:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
  102:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 19
-
-
  103:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	: _M_start(__x._M_start), _M_finish(__x._M_finish),
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 19
+
+
  104:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _M_end_of_storage(__x._M_end_of_storage)
  105:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	{ __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
  106:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
@@ -1138,10 +1137,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  157:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	template<typename = _Tp_alloc_type>
  158:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  struct _Asan
  159:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 20
-
-
  160:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    typedef typename __gnu_cxx::__alloc_traits<_Tp_alloc_type>
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 20
+
+
  161:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      ::size_type size_type;
  162:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  163:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    static void _S_shrink(_Vector_impl&, size_type) { }
@@ -1198,10 +1197,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  214:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  215:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      ~_Reinit()
  216:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 21
-
-
  217:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		// Mark unused capacity as invalid after reallocation.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 21
+
+
  218:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		if (_M_impl._M_start)
  219:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		  _S_adjust(_M_impl, _M_impl._M_end_of_storage,
  220:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 			    _M_impl._M_finish);
@@ -1258,10 +1257,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  271:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  272:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     public:
  273:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef _Alloc allocator_type;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 22
-
-
  274:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 22
+
+
  275:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Tp_alloc_type&
  276:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
  277:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return this->_M_impl; }
@@ -1318,10 +1317,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  328:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Vector_base(const allocator_type& __a, _Vector_base&& __x)
  329:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _M_impl(_Tp_alloc_type(__a), std::move(__x._M_impl))
  330:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 23
-
-
  331:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 23
+
+
  332:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  333:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       ~_Vector_base() _GLIBCXX_NOEXCEPT
  334:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
@@ -1378,10 +1377,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  385:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****    *  memory and size allocation.  Subscripting ( @c [] ) access is
  386:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****    *  also provided as with C-style arrays.
  387:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****   */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 24
-
-
  388:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****   template<typename _Tp, typename _Alloc = std::allocator<_Tp> >
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 24
+
+
  389:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     class vector : protected _Vector_base<_Tp, _Alloc>
  390:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     {
  391:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #ifdef _GLIBCXX_CONCEPT_CHECKS
@@ -1438,10 +1437,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  442:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  443:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       static constexpr bool
  444:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _S_use_relocate()
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 25
-
-
  445:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 25
+
+
  446:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	// Instantiating std::__relocate_a might cause an error outside the
  447:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	// immediate context (in __relocate_object_a's noexcept-specifier),
  448:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	// so only do it if we know the type can be move-inserted into *this.
@@ -1498,10 +1497,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  499:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  500:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
  501:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 26
-
-
  502:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Creates a %vector with default constructed elements.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 26
+
+
  503:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __n  The number of elements to initially create.
  504:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __a  An allocator.
  505:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
@@ -1558,10 +1557,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  556:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
  557:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	this->_M_impl._M_finish =
  558:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 27
-
-
  559:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      this->_M_impl._M_start,
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 27
+
+
  560:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      _M_get_Tp_allocator());
  561:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
  562:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
@@ -1618,10 +1617,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  613:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  614:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  615:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Builds a %vector from an initializer list.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 28
-
-
  616:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __l  An initializer_list.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 28
+
+
  617:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __a  An allocator.
  618:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
  619:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Create a %vector consisting of copies of the elements in the
@@ -1678,10 +1677,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  670:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
  671:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  672:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 29
-
-
  673:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  The dtor only erases the elements, and note that if the
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 29
+
+
  674:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  elements themselves are pointers, the pointed-to memory is
  675:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  not touched in any way.  Managing the pointer is the user's
  676:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  responsibility.
@@ -1738,10 +1737,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   38:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** # include <ext/numeric_traits.h>
   39:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** #endif
   40:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 30
-
-
   41:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** namespace std _GLIBCXX_VISIBILITY(default)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 30
+
+
   42:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** {
   43:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
   44:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
@@ -1798,10 +1797,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   95:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *
   96:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        * @c Alloc::pointer if that type exists, otherwise @c value_type*
   97:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 31
-
-
   98:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       using pointer = __detected_or_t<value_type*, __pointer, _Alloc>;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 31
+
+
   99:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
  100:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     private:
  101:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       // Select _Func<_Alloc> or pointer_traits<pointer>::rebind<_Tp>
@@ -1858,10 +1857,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  152:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        * <tt> pointer_traits<pointer>::rebind<const void> </tt>
  153:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       */
  154:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       using const_void_pointer = typename _Ptr<__cv_pointer, const void>::type;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 32
-
-
  155:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 32
+
+
  156:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       /**
  157:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        * @brief   The allocator's difference type
  158:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *
@@ -1918,10 +1917,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  209:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	using rebind_alloc = __alloc_rebind<_Alloc, _Tp>;
  210:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       template<typename _Tp>
  211:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	using rebind_traits = allocator_traits<rebind_alloc<_Tp>>;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 33
-
-
  212:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 33
+
+
  213:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     private:
  214:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       template<typename _Alloc2>
  215:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	static constexpr auto
@@ -1978,10 +1977,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  266:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	noexcept(noexcept(__a.destroy(__p)))
  267:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	-> decltype(__a.destroy(__p))
  268:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	{ __a.destroy(__p); }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 34
-
-
  269:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 34
+
+
  270:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       template<typename _Alloc2, typename _Tp>
  271:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	static _GLIBCXX14_CONSTEXPR void
  272:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	_S_destroy(_Alloc2&, _Tp* __p, ...)
@@ -2038,10 +2037,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  323:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *
  324:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  Returns <tt> a.allocate(n, hint) </tt> if that expression is
  325:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  well-formed, otherwise returns @c a.allocate(n)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 35
-
-
  326:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       */
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 35
+
+
  327:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       _GLIBCXX_NODISCARD static _GLIBCXX20_CONSTEXPR pointer
  328:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       allocate(_Alloc& __a, size_type __n, const_void_pointer __hint)
  329:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       { return _S_allocate(__a, __n, __hint, 0); }
@@ -2098,10 +2097,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  380:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *
  381:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  Returns @c __a.max_size() if that expression is well-formed,
  382:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  otherwise returns @c numeric_limits<size_type>::max()
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 36
-
-
  383:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       */
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 36
+
+
  384:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       static _GLIBCXX20_CONSTEXPR size_type
  385:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       max_size(const _Alloc& __a) noexcept
  386:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       { return _S_max_size(__a, 0); }
@@ -2158,10 +2157,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  437:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       using propagate_on_container_move_assignment = true_type;
  438:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
  439:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       /// How the allocator is propagated on swap
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 37
-
-
  440:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       using propagate_on_container_swap = false_type;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 37
+
+
  441:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
  442:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       /// Whether all instances of the allocator type compare equal.
  443:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       using is_always_equal = true_type;
@@ -2218,10 +2217,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  494:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       /**
  495:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @brief  Construct an object of type `_Up`
  496:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @param  __a  An allocator.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 38
-
-
  497:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @param  __p  Pointer to memory of suitable size and alignment for
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 38
+
+
  498:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *	       an object of type `_Up`.
  499:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @param  __args Constructor arguments.
  500:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *
@@ -2278,10 +2277,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  551:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 
  552:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       /**
  553:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @brief  Obtain an allocator to use when copying a container.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 39
-
-
  554:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @param  __rhs  An allocator.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 39
+
+
  555:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****        *  @return @c __rhs
  556:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       */
  557:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       static _GLIBCXX20_CONSTEXPR allocator_type
@@ -2338,10 +2337,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  608:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     __alloc_on_move(_Alloc& __one, _Alloc& __two)
  609:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     {
  610:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       typedef allocator_traits<_Alloc> __traits;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 40
-
-
  611:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       typedef typename __traits::propagate_on_container_move_assignment __pocma;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 40
+
+
  612:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** #if __cplusplus >= 201703L
  613:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       if constexpr (__pocma::value)
  614:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	__one = std::move(__two);
@@ -2398,10 +2397,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  665:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****   // true if _Alloc::value_type is CopyInsertable into containers using _Alloc
  666:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****   // (might be wrong if _Alloc::construct exists but is not constrained,
  667:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****   // i.e. actually trying to use it would still be invalid. Use with caution.)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 41
-
-
  668:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****   template<typename _Alloc>
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 41
+
+
  669:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     struct __is_copy_insertable
  670:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     : __is_alloc_insertable_impl<_Alloc,
  671:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 				 typename _Alloc::value_type const&>::type
@@ -2458,10 +2457,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  722:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	     _Allocator& __alloc)
  723:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****     {
  724:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h ****       for (; __first != __last; ++__first)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 42
-
-
  725:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** #if __cplusplus < 201103L
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 42
+
+
  726:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	__alloc.destroy(std::__addressof(*__first));
  727:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** #else
  728:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h **** 	allocator_traits<_Allocator>::destroy(__alloc,
@@ -2518,10 +2517,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    4:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** //
    5:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** // This file is part of the GNU ISO C++ Library.  This library is free
    6:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** // software; you can redistribute it and/or modify it under the
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 43
-
-
    7:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** // terms of the GNU General Public License as published by the
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 43
+
+
    8:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** // Free Software Foundation; either version 3, or (at your option)
    9:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** // any later version.
   10:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 
@@ -2578,10 +2577,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   61:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** #if __cplusplus <= 201703L
   62:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       typedef _Tp*       pointer;
   63:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       typedef const _Tp* const_pointer;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 44
-
-
   64:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       typedef _Tp&       reference;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 44
+
+
   65:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       typedef const _Tp& const_reference;
   66:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 
   67:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       template<typename _Tp1>
@@ -2638,10 +2637,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  118:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 	    return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp), __al));
  119:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 	  }
  120:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** #endif
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 45
-
-
  121:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 45
+
+
  122:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       }
  123:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h **** 
  124:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h ****       // __p is not permitted to be a null pointer.
@@ -2698,10 +2697,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    2:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 
    3:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** // Copyright (C) 2001-2020 Free Software Foundation, Inc.
    4:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** //
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 46
-
-
    5:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 46
+
+
    6:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** // software; you can redistribute it and/or modify it under the
    7:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** // terms of the GNU General Public License as published by the
    8:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** // Free Software Foundation; either version 3, or (at your option)
@@ -2758,10 +2757,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   59:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****    *  @addtogroup allocators
   60:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****    *  @{
   61:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****    */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 47
-
-
   62:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 47
+
+
   63:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****   // Since C++20 the primary template should be used for allocator<void>,
   64:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****   // but then it would have a non-trivial default ctor and dtor, which
   65:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****   // would be an ABI change. So C++20 still uses the allocator<void> explicit
@@ -2818,10 +2817,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  116:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	void
  117:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	destroy(_Up* __p)
  118:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	noexcept(std::is_nothrow_destructible<_Up>::value)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 48
-
-
  119:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	{ __p->~_Up(); }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 48
+
+
  120:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** #endif // C++17
  121:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** #endif // C++11
  122:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****     };
@@ -2878,10 +2877,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  173:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** #endif
  174:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 
  175:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h ****       template<typename _Tp1>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 49
-
-
  176:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	_GLIBCXX20_CONSTEXPR
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 49
+
+
  177:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 	allocator(const allocator<_Tp1>&) _GLIBCXX_NOTHROW { }
  178:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** 
  179:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h **** #if __cpp_constexpr_dynamic_alloc
@@ -2938,10 +2937,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  279:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    __dest._M_access<_Functor*>() = _Base::_M_get_pointer(__source);
  280:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    break;
  281:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 50
-
-
  282:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  default:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 50
+
+
  283:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	    _Base::_M_manager(__dest, __source, __op);
  284:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  }
  285:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	return false;
@@ -2998,10 +2997,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    5:DSP/Mixer.h   **** 
    6:DSP/Mixer.h   **** /********************************************//**
    7:DSP/Mixer.h   ****  *  Class name: Mixer
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 51
-
-
    8:DSP/Mixer.h   ****  *  Function: Mixes outputs of track classes
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 51
+
+
    9:DSP/Mixer.h   ****  ***********************************************/
   10:DSP/Mixer.h   **** 
   11:DSP/Mixer.h   **** class Mixer
@@ -3058,10 +3057,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
    8:DSP/Track.h   **** #include "FX/Reverb/Reverb.h"
    9:DSP/Track.h   **** #include "../Parameters/BinaryParameter.h"
   10:DSP/Track.h   **** #include <utility>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 52
-
-
   11:DSP/Track.h   **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 52
+
+
   12:DSP/Track.h   **** /**********************************************************//**
   13:DSP/Track.h   ****  *  Class name: Track
   14:DSP/Track.h   ****  *  Function: Processes audio buffer and FX for each track
@@ -3118,10 +3117,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  323:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  324:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       // [3.7.2.1] construct/copy/destroy
  325:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 53
-
-
  326:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       /**
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 53
+
+
  327:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  @brief Default construct creates an empty function call wrapper.
  328:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  @post @c !(bool)*this
  329:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        */
@@ -3178,10 +3177,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  369              		.loc 7 240 42 view .LVU60
  370 0004 0263     		str	r2, [r0, #48]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 54
-
-
  371              	.LVL10:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 54
+
+
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  372              		.loc 7 240 42 view .LVU61
  373              	.LBE604:
@@ -3238,10 +3237,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  404              	.LBB614:
  405              	.LBI614:
  406              		.file 19 "DSP/FX/../../Drivers/../Parameters/SteppedParameter.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 55
-
-
    1:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** #ifndef STEPPEDPARAMETER_H
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 55
+
+
    2:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** #define STEPPEDPARAMETER_H
    3:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
    4:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** #include "daisy_seed.h"
@@ -3298,10 +3297,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   55:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** private:
   56:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
   57:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     int paramID;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 56
-
-
   58:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float min;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 56
+
+
   59:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float max;
   60:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float curVal;
   61:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float step;
@@ -3358,10 +3357,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  444              	.LBE623:
  445              	.LBE622:
  446              	.LBE621:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 57
-
-
  447              	.LBE620:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 57
+
+
  448              	.LBE619:
  449              	.LBB624:
  450              	.LBI624:
@@ -3418,10 +3417,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  493              	.LBE613:
  494              	.LBE642:
  495              	.LBB643:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 58
-
-
  496              	.LBI634:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 58
+
+
   22:DSP/FX/../../Parameters/AudioParameter.h **** {
   23:DSP/FX/../../Parameters/AudioParameter.h **** public:
   24:DSP/FX/../../Parameters/AudioParameter.h **** 
@@ -3478,10 +3477,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   75:DSP/FX/../../Parameters/AudioParameter.h ****     std::function<void(type)> callback;
   76:DSP/FX/../../Parameters/AudioParameter.h **** };
   77:DSP/FX/../../Parameters/AudioParameter.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 59
-
-
   78:DSP/FX/../../Parameters/AudioParameter.h **** template <class type>
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 59
+
+
   79:DSP/FX/../../Parameters/AudioParameter.h **** struct AudioParameterWrapper
  497              		.loc 17 79 8 is_stmt 1 view .LVU94
  498              	.LBB641:
@@ -3538,10 +3537,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  541              	.LBE649:
  542              	.LBE648:
  543              	.LBE647:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 60
-
-
  544              	.LBE646:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 60
+
+
  545              	.LBE645:
  546              	.LBE644:
  547              		.loc 14 46 12 view .LVU106
@@ -3598,10 +3597,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  597              	.LVL21:
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     : public _Maybe_unary_or_binary_function<_Res, _ArgTypes...>,
  598              		.loc 7 303 11 view .LVU114
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 61
-
-
  599 0008 FFF7FEFF 		bl	_ZNSt14_Function_baseD2Ev
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 61
+
+
  600              	.LVL22:
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     : public _Maybe_unary_or_binary_function<_Res, _ArgTypes...>,
  601              		.loc 7 303 11 view .LVU115
@@ -3658,10 +3657,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  646              	.LBE709:
  647              	.LBE708:
  648              	.LBB712:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 62
-
-
  649              	.LBI712:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 62
+
+
  650              		.loc 19 66 8 is_stmt 1 view .LVU126
  651              	.LBB713:
  652              	.LBI713:
@@ -3718,10 +3717,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  695 0030 FFF7FEFF 		bl	_ZNSt14_Function_baseD2Ev
  696              	.LVL27:
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     : public _Maybe_unary_or_binary_function<_Res, _ArgTypes...>,
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 63
-
-
  697              		.loc 7 303 11 is_stmt 0 view .LVU137
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 63
+
+
  698              	.LBE723:
  699              	.LBE722:
  700              	.LBE721:
@@ -3778,10 +3777,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  747              	.LFE5645:
  749              		.weak	_ZN5Mixer12MixerChannelD1Ev
  750              		.thumb_set _ZN5Mixer12MixerChannelD1Ev,_ZN5Mixer12MixerChannelD2Ev
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 64
-
-
  751              		.section	.text._ZN5MixerD2Ev,"axG",%progbits,_ZN5MixerD5Ev,comdat
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 64
+
+
  752              		.align	1
  753              		.weak	_ZN5MixerD2Ev
  754              		.syntax unified
@@ -3838,10 +3837,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  779              	.LBI736:
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     : public _Maybe_unary_or_binary_function<_Res, _ArgTypes...>,
  780              		.loc 7 303 11 view .LVU155
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 65
-
-
  781              	.LBE736:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 65
+
+
  782              	.LBE735:
  783              	.LBE734:
  784              	.LBE732:
@@ -3898,146 +3897,146 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  829              		.thumb_set _ZN5MixerD1Ev,_ZN5MixerD2Ev
  830              		.section	.text._Z4initv,"ax",%progbits
  831              		.align	1
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 66
-
-
  832              		.global	_Z4initv
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 66
+
+
  833              		.syntax unified
  834              		.thumb
  835              		.thumb_func
  837              	_Z4initv:
  838              	.LFB5662:
-  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
-  65:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
-  66:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
-  67:LoopyTunes.cpp **** 
-  68:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t1delayPtr[2] = {&t1delay[L], &t1delay[R]};
-  69:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t2delayPtr[2] = {&t2delay[L], &t2delay[R]};
-  70:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t3delayPtr[2] = {&t3delay[L], &t3delay[R]};
-  71:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t4delayPtr[2] = {&t4delay[L], &t4delay[R]};
-  72:LoopyTunes.cpp **** };
-  73:LoopyTunes.cpp **** 
-  74:LoopyTunes.cpp **** void init()
-  75:LoopyTunes.cpp **** {
- 839              		.loc 6 75 1 is_stmt 1 view -0
+  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
+  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
+  65:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
+  66:LoopyTunes.cpp **** 
+  67:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t1delayPtr[2] = {&t1delay[L], &t1delay[R]};
+  68:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t2delayPtr[2] = {&t2delay[L], &t2delay[R]};
+  69:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t3delayPtr[2] = {&t3delay[L], &t3delay[R]};
+  70:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY>* t4delayPtr[2] = {&t4delay[L], &t4delay[R]};
+  71:LoopyTunes.cpp **** };
+  72:LoopyTunes.cpp **** 
+  73:LoopyTunes.cpp **** void init()
+  74:LoopyTunes.cpp **** {
+ 839              		.loc 6 74 1 is_stmt 1 view -0
  840              		.cfi_startproc
  841              		@ args = 0, pretend = 0, frame = 0
  842              		@ frame_needed = 0, uses_anonymous_args = 0
-  76:LoopyTunes.cpp **** 	// initialise Daisy Seed
-  77:LoopyTunes.cpp **** 	hw.Init(true); // true = boost enabled
- 843              		.loc 6 77 2 view .LVU164
   75:LoopyTunes.cpp **** 	// initialise Daisy Seed
- 844              		.loc 6 75 1 is_stmt 0 view .LVU165
+  76:LoopyTunes.cpp **** 	hw.Init(true); // true = boost enabled
+ 843              		.loc 6 76 2 view .LVU164
+  74:LoopyTunes.cpp **** 	// initialise Daisy Seed
+ 844              		.loc 6 74 1 is_stmt 0 view .LVU165
  845 0000 1FB5     		push	{r0, r1, r2, r3, r4, lr}
  846              		.cfi_def_cfa_offset 24
  847              		.cfi_offset 4, -8
  848              		.cfi_offset 14, -4
- 849              		.loc 6 77 9 view .LVU166
+ 849              		.loc 6 76 9 view .LVU166
  850 0002 1C4C     		ldr	r4, .L22
  851 0004 0121     		movs	r1, #1
  852 0006 2046     		mov	r0, r4
  853 0008 FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
  854              	.LVL37:
-  78:LoopyTunes.cpp **** 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
- 855              		.loc 6 78 2 is_stmt 1 view .LVU167
- 856              		.loc 6 78 22 is_stmt 0 view .LVU168
+  77:LoopyTunes.cpp **** 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
+ 855              		.loc 6 77 2 is_stmt 1 view .LVU167
+ 856              		.loc 6 77 22 is_stmt 0 view .LVU168
  857 000c 2046     		mov	r0, r4
  858 000e 0421     		movs	r1, #4
  859 0010 FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
  860              	.LVL38:
-  79:LoopyTunes.cpp **** 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
- 861              		.loc 6 79 2 is_stmt 1 view .LVU169
- 862              		.loc 6 79 23 is_stmt 0 view .LVU170
+  78:LoopyTunes.cpp **** 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+ 861              		.loc 6 78 2 is_stmt 1 view .LVU169
+ 862              		.loc 6 78 23 is_stmt 0 view .LVU170
  863 0014 2046     		mov	r0, r4
  864 0016 0321     		movs	r1, #3
  865 0018 FFF7FEFF 		bl	_ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
  866              	.LVL39:
-  80:LoopyTunes.cpp **** 
-  81:LoopyTunes.cpp **** 	for(size_t i = 0 ; i < 3 ; i++)
- 867              		.loc 6 81 2 is_stmt 1 view .LVU171
+  79:LoopyTunes.cpp **** 
+  80:LoopyTunes.cpp **** 	for(size_t i = 0 ; i < 3 ; i++)
+ 867              		.loc 6 80 2 is_stmt 1 view .LVU171
  868              	.LBB742:
- 869              		.loc 6 81 23 view .LVU172
-  82:LoopyTunes.cpp ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 67
+ 869              		.loc 6 80 23 view .LVU172
+  81:LoopyTunes.cpp ****     {
+  82:LoopyTunes.cpp ****         Buffers::t1m[L][i] = 0.0f;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 67
 
 
-  83:LoopyTunes.cpp ****         Buffers::t1m[L][i] = 0.0f;
- 870              		.loc 6 83 9 view .LVU173
- 871              		.loc 6 83 28 is_stmt 0 view .LVU174
+ 870              		.loc 6 82 9 view .LVU173
+ 871              		.loc 6 82 28 is_stmt 0 view .LVU174
  872 001c 164B     		ldr	r3, .L22+4
  873 001e 0022     		movs	r2, #0
  874              	.LBE742:
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
-  85:LoopyTunes.cpp ****     }
-  86:LoopyTunes.cpp **** 
-  87:LoopyTunes.cpp **** 	// initialise global variables
-  88:LoopyTunes.cpp **** 	sample = 0;
-  89:LoopyTunes.cpp **** 
-  90:LoopyTunes.cpp **** 	// initialise GUI
-  91:LoopyTunes.cpp **** 	//encoderDriver.init(seed::D4, seed::D13, seed::D14, nullptr);
-  92:LoopyTunes.cpp **** 
-  93:LoopyTunes.cpp **** 	// initialise DSP
-  94:LoopyTunes.cpp **** 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffe
- 875              		.loc 6 94 12 view .LVU175
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+  84:LoopyTunes.cpp ****     }
+  85:LoopyTunes.cpp **** 
+  86:LoopyTunes.cpp **** 	// initialise global variables
+  87:LoopyTunes.cpp **** 	sample = 0;
+  88:LoopyTunes.cpp **** 
+  89:LoopyTunes.cpp **** 	// initialise GUI
+  90:LoopyTunes.cpp **** 	//encoderDriver.init(seed::D4, seed::D13, seed::D14, nullptr);
+  91:LoopyTunes.cpp **** 
+  92:LoopyTunes.cpp **** 	// initialise DSP
+  93:LoopyTunes.cpp **** 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffe
+ 875              		.loc 6 93 12 view .LVU175
  876 0020 2146     		mov	r1, r4
  877 0022 1648     		ldr	r0, .L22+8
  878              	.LBB743:
-  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 879              		.loc 6 83 28 view .LVU176
+  82:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 879              		.loc 6 82 28 view .LVU176
  880 0024 1A60     		str	r2, [r3]	@ float
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 881              		.loc 6 84 9 is_stmt 1 view .LVU177
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 882              		.loc 6 84 28 is_stmt 0 view .LVU178
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 881              		.loc 6 83 9 is_stmt 1 view .LVU177
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 882              		.loc 6 83 28 is_stmt 0 view .LVU178
  883 0026 1A61     		str	r2, [r3, #16]	@ float
-  81:LoopyTunes.cpp ****     {
- 884              		.loc 6 81 2 is_stmt 1 view .LVU179
+  80:LoopyTunes.cpp ****     {
+ 884              		.loc 6 80 2 is_stmt 1 view .LVU179
  885              	.LVL40:
-  81:LoopyTunes.cpp ****     {
- 886              		.loc 6 81 23 view .LVU180
-  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 887              		.loc 6 83 9 view .LVU181
-  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 888              		.loc 6 83 28 is_stmt 0 view .LVU182
+  80:LoopyTunes.cpp ****     {
+ 886              		.loc 6 80 23 view .LVU180
+  82:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 887              		.loc 6 82 9 view .LVU181
+  82:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 888              		.loc 6 82 28 is_stmt 0 view .LVU182
  889 0028 5A60     		str	r2, [r3, #4]	@ float
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 890              		.loc 6 84 9 is_stmt 1 view .LVU183
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 891              		.loc 6 84 28 is_stmt 0 view .LVU184
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 890              		.loc 6 83 9 is_stmt 1 view .LVU183
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 891              		.loc 6 83 28 is_stmt 0 view .LVU184
  892 002a 5A61     		str	r2, [r3, #20]	@ float
-  81:LoopyTunes.cpp ****     {
- 893              		.loc 6 81 2 is_stmt 1 view .LVU185
+  80:LoopyTunes.cpp ****     {
+ 893              		.loc 6 80 2 is_stmt 1 view .LVU185
  894              	.LVL41:
-  81:LoopyTunes.cpp ****     {
- 895              		.loc 6 81 23 view .LVU186
-  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 896              		.loc 6 83 9 view .LVU187
-  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 897              		.loc 6 83 28 is_stmt 0 view .LVU188
+  80:LoopyTunes.cpp ****     {
+ 895              		.loc 6 80 23 view .LVU186
+  82:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 896              		.loc 6 82 9 view .LVU187
+  82:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 897              		.loc 6 82 28 is_stmt 0 view .LVU188
  898 002c 9A60     		str	r2, [r3, #8]	@ float
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
- 899              		.loc 6 84 9 is_stmt 1 view .LVU189
-  84:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 68
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 899              		.loc 6 83 9 is_stmt 1 view .LVU189
+  83:LoopyTunes.cpp ****         Buffers::t1m[R][i] = 0.0f;
+ 900              		.loc 6 83 28 is_stmt 0 view .LVU190
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 68
 
 
- 900              		.loc 6 84 28 is_stmt 0 view .LVU190
  901 002e 9A61     		str	r2, [r3, #24]	@ float
-  81:LoopyTunes.cpp ****     {
- 902              		.loc 6 81 2 is_stmt 1 view .LVU191
+  80:LoopyTunes.cpp ****     {
+ 902              		.loc 6 80 2 is_stmt 1 view .LVU191
  903              	.LVL42:
-  81:LoopyTunes.cpp ****     {
- 904              		.loc 6 81 23 view .LVU192
+  80:LoopyTunes.cpp ****     {
+ 904              		.loc 6 80 23 view .LVU192
  905              	.LBE743:
-  88:LoopyTunes.cpp **** 
- 906              		.loc 6 88 2 view .LVU193
-  88:LoopyTunes.cpp **** 
- 907              		.loc 6 88 9 is_stmt 0 view .LVU194
+  87:LoopyTunes.cpp **** 
+ 906              		.loc 6 87 2 view .LVU193
+  87:LoopyTunes.cpp **** 
+ 907              		.loc 6 87 9 is_stmt 0 view .LVU194
  908 0030 0022     		movs	r2, #0
  909 0032 134B     		ldr	r3, .L22+12
  910 0034 1A60     		str	r2, [r3]
- 911              		.loc 6 94 2 is_stmt 1 view .LVU195
- 912              		.loc 6 94 12 is_stmt 0 view .LVU196
+ 911              		.loc 6 93 2 is_stmt 1 view .LVU195
+ 912              		.loc 6 93 12 is_stmt 0 view .LVU196
  913 0036 134B     		ldr	r3, .L22+16
  914 0038 134A     		ldr	r2, .L22+20
  915 003a 0293     		str	r3, [sp, #8]
@@ -4048,9 +4047,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  920 0044 134B     		ldr	r3, .L22+32
  921 0046 FFF7FEFF 		bl	_ZN5Mixer4initEPN5daisy9DaisySeedEPPfS4_S4_S4_S4_
  922              	.LVL43:
-  95:LoopyTunes.cpp **** 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
- 923              		.loc 6 95 2 is_stmt 1 view .LVU197
- 924              		.loc 6 95 23 is_stmt 0 view .LVU198
+  94:LoopyTunes.cpp **** 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
+ 923              		.loc 6 94 2 is_stmt 1 view .LVU197
+ 924              		.loc 6 94 23 is_stmt 0 view .LVU198
  925 004a 134B     		ldr	r3, .L22+36
  926 004c 134A     		ldr	r2, .L22+40
  927 004e 0093     		str	r3, [sp]
@@ -4059,9 +4058,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  930 0054 0948     		ldr	r0, .L22+8
  931 0056 FFF7FEFF 		bl	_ZN5Mixer15initMixChannelsEPPfS1_S1_S1_
  932              	.LVL44:
-  96:LoopyTunes.cpp **** 	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffer
- 933              		.loc 6 96 2 is_stmt 1 view .LVU199
- 934              		.loc 6 96 14 is_stmt 0 view .LVU200
+  95:LoopyTunes.cpp **** 	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffer
+ 933              		.loc 6 95 2 is_stmt 1 view .LVU199
+ 934              		.loc 6 95 14 is_stmt 0 view .LVU200
  935 005a 134B     		ldr	r3, .L22+52
  936 005c 134A     		ldr	r2, .L22+56
  937 005e 0193     		str	r3, [sp, #4]
@@ -4072,16 +4071,16 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  942 0068 134B     		ldr	r3, .L22+68
  943 006a FFF7FEFF 		bl	_ZN5Mixer6initFXEP13EncoderDriverPPN7daisysp9DelayLineIfLj240000EEES6_S6_S6_
  944              	.LVL45:
-  97:LoopyTunes.cpp **** }
- 945              		.loc 6 97 1 view .LVU201
+  96:LoopyTunes.cpp **** }
+ 945              		.loc 6 96 1 view .LVU201
  946 006e 04B0     		add	sp, sp, #16
  947              		.cfi_def_cfa_offset 8
  948              		@ sp needed
  949 0070 10BD     		pop	{r4, pc}
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 69
-
-
  950              	.L23:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 69
+
+
  951 0072 00BF     		.align	2
  952              	.L22:
  953 0074 00000000 		.word	.LANCHOR0
@@ -4112,96 +4111,96 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  979              		.thumb_func
  981              	_Z11initTrackIOv:
  982              	.LFB5663:
-  98:LoopyTunes.cpp **** 
-  99:LoopyTunes.cpp **** void initTrackIO()
- 100:LoopyTunes.cpp **** {
- 983              		.loc 6 100 1 is_stmt 1 view -0
+  97:LoopyTunes.cpp **** 
+  98:LoopyTunes.cpp **** void initTrackIO()
+  99:LoopyTunes.cpp **** {
+ 983              		.loc 6 99 1 is_stmt 1 view -0
  984              		.cfi_startproc
  985              		@ args = 0, pretend = 0, frame = 32
  986              		@ frame_needed = 0, uses_anonymous_args = 0
- 101:LoopyTunes.cpp **** 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
- 987              		.loc 6 101 2 view .LVU203
  100:LoopyTunes.cpp **** 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
- 988              		.loc 6 100 1 is_stmt 0 view .LVU204
+ 987              		.loc 6 100 2 view .LVU203
+  99:LoopyTunes.cpp **** 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
+ 988              		.loc 6 99 1 is_stmt 0 view .LVU204
  989 0000 10B5     		push	{r4, lr}
  990              		.cfi_def_cfa_offset 8
  991              		.cfi_offset 4, -8
  992              		.cfi_offset 14, -4
- 993              		.loc 6 101 10 view .LVU205
+ 993              		.loc 6 100 10 view .LVU205
  994 0002 0623     		movs	r3, #6
- 100:LoopyTunes.cpp **** 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
- 995              		.loc 6 100 1 view .LVU206
+  99:LoopyTunes.cpp **** 	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
+ 995              		.loc 6 99 1 view .LVU206
  996 0004 8EB0     		sub	sp, sp, #56
  997              		.cfi_def_cfa_offset 64
- 998              		.loc 6 101 10 view .LVU207
+ 998              		.loc 6 100 10 view .LVU207
  999 0006 0022     		movs	r2, #0
  1000 0008 0121     		movs	r1, #1
  1001 000a 8DF81A30 		strb	r3, [sp, #26]
  1002 000e 0223     		movs	r3, #2
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 70
+ 101:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 70
 
 
- 102:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
- 1003              		.loc 6 102 10 view .LVU208
+ 1003              		.loc 6 101 10 view .LVU208
  1004 0010 8DF82010 		strb	r1, [sp, #32]
  1005 0014 0420     		movs	r0, #4
  1006 0016 8DF82130 		strb	r3, [sp, #33]
  1007 001a 0524     		movs	r4, #5
  1008 001c 8DF82320 		strb	r2, [sp, #35]
- 103:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
- 1009              		.loc 6 103 10 view .LVU209
+ 102:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
+ 1009              		.loc 6 102 10 view .LVU209
  1010 0020 8DF82830 		strb	r3, [sp, #40]
  1011 0024 8DF82920 		strb	r2, [sp, #41]
  1012 0028 8DF82B20 		strb	r2, [sp, #43]
  1013 002c 8DF82C10 		strb	r1, [sp, #44]
- 101:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
- 1014              		.loc 6 101 10 view .LVU210
+ 100:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
+ 1014              		.loc 6 100 10 view .LVU210
  1015 0030 8DF81820 		strb	r2, [sp, #24]
  1016 0034 8DF81920 		strb	r2, [sp, #25]
- 104:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
- 1017              		.loc 6 104 10 view .LVU211
+ 103:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
+ 1017              		.loc 6 103 10 view .LVU211
  1018 0038 0322     		movs	r2, #3
- 101:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
- 1019              		.loc 6 101 10 view .LVU212
+ 100:LoopyTunes.cpp **** 	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
+ 1019              		.loc 6 100 10 view .LVU212
  1020 003a 8DF81B30 		strb	r3, [sp, #27]
  1021 003e 8DF81C10 		strb	r1, [sp, #28]
- 102:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
- 1022              		.loc 6 102 2 is_stmt 1 view .LVU213
- 1023              		.loc 6 104 10 is_stmt 0 view .LVU214
+ 101:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
+ 1022              		.loc 6 101 2 is_stmt 1 view .LVU213
+ 1023              		.loc 6 103 10 is_stmt 0 view .LVU214
  1024 0042 0C21     		movs	r1, #12
  1025 0044 8DF83130 		strb	r3, [sp, #49]
  1026 0048 8DF83430 		strb	r3, [sp, #52]
- 105:LoopyTunes.cpp **** 
- 106:LoopyTunes.cpp **** 	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
- 1027              		.loc 6 106 19 view .LVU215
+ 104:LoopyTunes.cpp **** 
+ 105:LoopyTunes.cpp **** 	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
+ 1027              		.loc 6 105 19 view .LVU215
  1028 004c 0EAB     		add	r3, sp, #56
- 102:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
- 1029              		.loc 6 102 10 view .LVU216
+ 101:LoopyTunes.cpp **** 	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
+ 1029              		.loc 6 101 10 view .LVU216
  1030 004e 8DF82200 		strb	r0, [sp, #34]
  1031 0052 8DF82440 		strb	r4, [sp, #36]
- 103:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
- 1032              		.loc 6 103 2 is_stmt 1 view .LVU217
- 104:LoopyTunes.cpp **** 
- 1033              		.loc 6 104 2 view .LVU218
- 1034              		.loc 6 106 2 view .LVU219
- 103:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
- 1035              		.loc 6 103 10 is_stmt 0 view .LVU220
+ 102:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
+ 1032              		.loc 6 102 2 is_stmt 1 view .LVU217
+ 103:LoopyTunes.cpp **** 
+ 1033              		.loc 6 103 2 view .LVU218
+ 1034              		.loc 6 105 2 view .LVU219
+ 102:LoopyTunes.cpp **** 	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
+ 1035              		.loc 6 102 10 is_stmt 0 view .LVU220
  1036 0056 8DF82A00 		strb	r0, [sp, #42]
- 104:LoopyTunes.cpp **** 
- 1037              		.loc 6 104 10 view .LVU221
+ 103:LoopyTunes.cpp **** 
+ 1037              		.loc 6 103 10 view .LVU221
  1038 005a 8DF83020 		strb	r2, [sp, #48]
  1039 005e 8DF83320 		strb	r2, [sp, #51]
  1040 0062 8DF83210 		strb	r1, [sp, #50]
- 1041              		.loc 6 106 19 view .LVU222
+ 1041              		.loc 6 105 19 view .LVU222
  1042 0066 13E90300 		ldmdb	r3, {r0, r1}
  1043 006a 0490     		str	r0, [sp, #16]
  1044 006c 8DF81410 		strb	r1, [sp, #20]
  1045 0070 DDE90A01 		ldrd	r0, r1, [sp, #40]
  1046 0074 0290     		str	r0, [sp, #8]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 71
-
-
  1047 0076 8DF80C10 		strb	r1, [sp, #12]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 71
+
+
  1048 007a DDE90801 		ldrd	r0, r1, [sp, #32]
  1049 007e 0090     		str	r0, [sp]
  1050 0080 8DF80410 		strb	r1, [sp, #4]
@@ -4210,8 +4209,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1053 0088 DDE90623 		ldrd	r2, r3, [sp, #24]
  1054 008c FFF7FEFF 		bl	_ZN5Mixer11initTrackIOEPN5daisy9DaisySeedE7TrackIOS3_S3_S3_
  1055              	.LVL46:
- 107:LoopyTunes.cpp **** }
- 1056              		.loc 6 107 1 view .LVU223
+ 106:LoopyTunes.cpp **** }
+ 1056              		.loc 6 106 1 view .LVU223
  1057 0090 0EB0     		add	sp, sp, #56
  1058              		.cfi_def_cfa_offset 8
  1059              		@ sp needed
@@ -4258,10 +4257,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  354:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  The newly-created %function contains the target of @a __x
  355:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  (if it has one).
  356:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 72
-
-
  357:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       function(function&& __x) noexcept : _Function_base()
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 72
+
+
  358:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       {
  359:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	__x.swap(*this);
  360:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       }
@@ -4318,10 +4317,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  411:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  object, then this operation will not throw an %exception.
  412:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        */
  413:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       function&
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 73
-
-
  414:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       operator=(function&& __x) noexcept
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 73
+
+
  415:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       {
  416:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	function(std::move(__x)).swap(*this);
  417:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	return *this;
@@ -4378,10 +4377,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  468:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  function(__f).swap(*this);
  469:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	  return *this;
  470:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 	}
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 74
-
-
  471:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 74
+
+
  472:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       // [3.7.2.2] function modifiers
  473:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  474:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       /**
@@ -4438,10 +4437,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  525:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  526:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       /**
  527:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  @brief Access the stored target function object.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 75
-
-
  528:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 75
+
+
  529:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  @return Returns a pointer to the stored target function object,
  530:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  if @c typeid(_Functor).equals(target_type()); otherwise, a NULL
  531:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****        *  pointer.
@@ -4498,10 +4497,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  582:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     function(_Functor) -> function<_Signature>;
  583:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** #endif
  584:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 76
-
-
  585:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   // Out-of-line member definitions.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 76
+
+
  586:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****   template<typename _Res, typename... _ArgTypes>
  587:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     function<_Res(_ArgTypes...)>::
  588:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     function(const function& __x)
@@ -4558,10 +4557,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  620:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****       if (_M_empty())
  1095              		.loc 7 620 7 view .LVU229
  1096 0002 8268     		ldr	r2, [r0, #8]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 77
-
-
  617:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h ****     operator()(_ArgTypes... __args) const
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 77
+
+
  1097              		.loc 7 617 5 view .LVU230
  1098 0004 8DED010A 		vstr.32	s0, [sp, #4]
  1099              		.loc 7 620 7 view .LVU231
@@ -4618,10 +4617,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   36:DSP/FX/../../Drivers/EncoderDriver.h ****         navCallback = navCb;
   37:DSP/FX/../../Drivers/EncoderDriver.h **** 
   38:DSP/FX/../../Drivers/EncoderDriver.h ****         currentParam = 0;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 78
-
-
   39:DSP/FX/../../Drivers/EncoderDriver.h ****         valueA = 0xFF;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 78
+
+
   40:DSP/FX/../../Drivers/EncoderDriver.h ****         valueB = 0xFF;
   41:DSP/FX/../../Drivers/EncoderDriver.h ****     }
   42:DSP/FX/../../Drivers/EncoderDriver.h **** 
@@ -4678,10 +4677,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   64:../../../libDaisy//src/hid/switch.h ****     In order for events not to be missed, its important that the Edge/Pressed checks
   65:../../../libDaisy//src/hid/switch.h ****     be made at the same rate as the debounce function is being called.
   66:../../../libDaisy//src/hid/switch.h ****     */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 79
-
-
   67:../../../libDaisy//src/hid/switch.h ****     void Debounce();
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 79
+
+
   68:../../../libDaisy//src/hid/switch.h **** 
   69:../../../libDaisy//src/hid/switch.h ****     /** \return true if a button was just pressed. */
   70:../../../libDaisy//src/hid/switch.h ****     inline bool RisingEdge() const { return updated_ ? state_ == 0x7f : false; }
@@ -4738,10 +4737,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1165              		.loc 8 73 10 view .LVU247
  1166              	.LBB773:
   74:DSP/FX/../../Drivers/EncoderDriver.h ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 80
-
-
   75:DSP/FX/../../Drivers/EncoderDriver.h ****         if(isNavigation)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 80
+
+
  1167              		.loc 8 75 9 view .LVU248
  1168 0012 237B     		ldrb	r3, [r4, #12]	@ zero_extendqisi2
  1169 0014 002B     		cmp	r3, #0
@@ -4798,10 +4797,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1208 002c 6368     		ldr	r3, [r4, #4]
   49:DSP/FX/../../Drivers/EncoderDriver.h ****         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
  1209              		.loc 8 49 13 view .LVU261
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 81
-
-
  1210 002e A060     		str	r0, [r4, #8]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 81
+
+
   50:DSP/FX/../../Drivers/EncoderDriver.h ****         {
  1211              		.loc 8 50 9 is_stmt 1 view .LVU262
  1212 0030 9842     		cmp	r0, r3
@@ -4858,10 +4857,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1246              		.loc 8 56 36 view .LVU279
  1247 005e 2843     		orrs	r0, r0, r5
  1248 0060 C0B2     		uxtb	r0, r0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 82
-
-
   56:DSP/FX/../../Drivers/EncoderDriver.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 82
+
+
  1249              		.loc 8 56 20 view .LVU280
  1250 0062 84F84900 		strb	r0, [r4, #73]
   58:DSP/FX/../../Drivers/EncoderDriver.h ****                 return;
@@ -4918,10 +4917,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  712:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _Alloc_traits::_S_propagate_on_move_assign()
  713:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  || _Alloc_traits::_S_always_equal();
  714:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	_M_move_assign(std::move(__x), __bool_constant<__move_storage>());
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 83
-
-
  715:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	return *this;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 83
+
+
  716:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
  717:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  718:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
@@ -4978,10 +4977,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  769:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	{ _M_assign_dispatch(__first, __last, __false_type()); }
  770:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #else
  771:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       template<typename _InputIterator>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 84
-
-
  772:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	void
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 84
+
+
  773:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	assign(_InputIterator __first, _InputIterator __last)
  774:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	{
  775:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  // Check whether it's an integral type.  If so, it's not an iterator.
@@ -5038,10 +5037,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  826:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  element order.
  827:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
  828:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       iterator
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 85
-
-
  829:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       end() _GLIBCXX_NOEXCEPT
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 85
+
+
  830:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return iterator(this->_M_impl._M_finish); }
  831:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  832:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
@@ -5098,10 +5097,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  883:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       const_iterator
  884:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       cbegin() const noexcept
  885:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return const_iterator(this->_M_impl._M_start); }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 86
-
-
  886:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 86
+
+
  887:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  888:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read-only (constant) iterator that points one past
  889:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  the last element in the %vector.  Iteration is done in
@@ -5158,10 +5157,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  940:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _M_default_append(__new_size - size());
  941:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	else if (__new_size < size())
  942:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _M_erase_at_end(this->_M_impl._M_start + __new_size);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 87
-
-
  943:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 87
+
+
  944:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  945:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  946:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Resizes the %vector to the specified number of elements.
@@ -5218,10 +5217,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  997:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       size_type
  998:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       capacity() const _GLIBCXX_NOEXCEPT
  999:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return size_type(this->_M_impl._M_end_of_storage
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 88
-
-
 1000:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 			 - this->_M_impl._M_start); }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 88
+
+
 1001:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
 1002:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
 1003:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns true if the %vector is empty.  (Thus begin() would
@@ -5278,10 +5277,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   31:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
  1274              		.loc 19 31 10 is_stmt 1 view .LVU288
  1275              	.LBB783:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 89
-
-
   33:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = max;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 89
+
+
  1276              		.loc 19 33 9 view .LVU289
   33:DSP/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = max;
  1277              		.loc 19 33 12 is_stmt 0 view .LVU290
@@ -5338,10 +5337,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   79:DSP/FX/../../Drivers/EncoderDriver.h ****     }
   80:DSP/FX/../../Drivers/EncoderDriver.h **** 
   81:DSP/FX/../../Drivers/EncoderDriver.h ****     void changeState()
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 90
-
-
  1318              		.loc 8 81 10 view .LVU300
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 90
+
+
  1319              	.LBB779:
   82:DSP/FX/../../Drivers/EncoderDriver.h ****     {
   83:DSP/FX/../../Drivers/EncoderDriver.h ****         switch (state)
@@ -5398,10 +5397,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1356              		.loc 8 43 10 is_stmt 1 view .LVU314
  1357              	.LBB791:
   64:DSP/FX/../../Drivers/EncoderDriver.h ****         }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 91
-
-
  1358              		.loc 8 64 17 view .LVU315
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 91
+
+
  1359              	.LBB789:
  1360              	.LBI789:
  1361              		.loc 10 1043 7 view .LVU316
@@ -5452,34 +5451,34 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1400              	_Z13AudioCallbackPKPKfPPfj:
  1401              	.LVL68:
  1402              	.LFB5665:
- 108:LoopyTunes.cpp **** 
- 109:LoopyTunes.cpp **** inline void tick(size_t size)
- 110:LoopyTunes.cpp **** {
- 111:LoopyTunes.cpp **** 	if(sample >= MACROBLOCK)
- 112:LoopyTunes.cpp **** 	{
- 113:LoopyTunes.cpp **** 		mixer.tick();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 92
+ 107:LoopyTunes.cpp **** 
+ 108:LoopyTunes.cpp **** inline void tick(size_t size)
+ 109:LoopyTunes.cpp **** {
+ 110:LoopyTunes.cpp **** 	if(sample >= MACROBLOCK)
+ 111:LoopyTunes.cpp **** 	{
+ 112:LoopyTunes.cpp **** 		mixer.tick();
+ 113:LoopyTunes.cpp **** 		encoderDriver.tick();
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 92
 
 
- 114:LoopyTunes.cpp **** 		encoderDriver.tick();
- 115:LoopyTunes.cpp **** 		sample = 0;
- 116:LoopyTunes.cpp **** 	}
- 117:LoopyTunes.cpp **** 	else
- 118:LoopyTunes.cpp **** 	{
- 119:LoopyTunes.cpp **** 		sample += size;
- 120:LoopyTunes.cpp **** 	}
- 121:LoopyTunes.cpp **** }
- 122:LoopyTunes.cpp **** 
- 123:LoopyTunes.cpp **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
- 124:LoopyTunes.cpp **** {
- 1403              		.loc 6 124 1 is_stmt 1 view -0
+ 114:LoopyTunes.cpp **** 		sample = 0;
+ 115:LoopyTunes.cpp **** 	}
+ 116:LoopyTunes.cpp **** 	else
+ 117:LoopyTunes.cpp **** 	{
+ 118:LoopyTunes.cpp **** 		sample += size;
+ 119:LoopyTunes.cpp **** 	}
+ 120:LoopyTunes.cpp **** }
+ 121:LoopyTunes.cpp **** 
+ 122:LoopyTunes.cpp **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+ 123:LoopyTunes.cpp **** {
+ 1403              		.loc 6 123 1 is_stmt 1 view -0
  1404              		.cfi_startproc
  1405              		@ args = 0, pretend = 0, frame = 8
  1406              		@ frame_needed = 0, uses_anonymous_args = 0
- 125:LoopyTunes.cpp **** 	tick(size);
- 1407              		.loc 6 125 2 view .LVU327
  124:LoopyTunes.cpp **** 	tick(size);
- 1408              		.loc 6 124 1 is_stmt 0 view .LVU328
+ 1407              		.loc 6 124 2 view .LVU327
+ 123:LoopyTunes.cpp **** 	tick(size);
+ 1408              		.loc 6 123 1 is_stmt 0 view .LVU328
  1409 0000 73B5     		push	{r0, r1, r4, r5, r6, lr}
  1410              		.cfi_def_cfa_offset 24
  1411              		.cfi_offset 4, -16
@@ -5488,108 +5487,108 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1414              		.cfi_offset 14, -4
  1415              	.LBB798:
  1416              	.LBB799:
- 111:LoopyTunes.cpp **** 	{
- 1417              		.loc 6 111 12 view .LVU329
+ 110:LoopyTunes.cpp **** 	{
+ 1417              		.loc 6 110 12 view .LVU329
  1418 0002 124E     		ldr	r6, .L47
  1419              	.LBE799:
  1420              	.LBE798:
- 124:LoopyTunes.cpp **** 	tick(size);
- 1421              		.loc 6 124 1 view .LVU330
+ 123:LoopyTunes.cpp **** 	tick(size);
+ 1421              		.loc 6 123 1 view .LVU330
  1422 0004 1346     		mov	r3, r2
  1423              	.LVL69:
  1424              	.LBB806:
  1425              	.LBI798:
- 109:LoopyTunes.cpp **** {
- 1426              		.loc 6 109 13 is_stmt 1 view .LVU331
+ 108:LoopyTunes.cpp **** {
+ 1426              		.loc 6 108 13 is_stmt 1 view .LVU331
  1427              	.LBB803:
- 111:LoopyTunes.cpp **** 	{
- 1428              		.loc 6 111 2 view .LVU332
+ 110:LoopyTunes.cpp **** 	{
+ 1428              		.loc 6 110 2 view .LVU332
  1429              	.LBE803:
  1430              	.LBE806:
- 124:LoopyTunes.cpp **** 	tick(size);
- 1431              		.loc 6 124 1 is_stmt 0 view .LVU333
+ 123:LoopyTunes.cpp **** 	tick(size);
+ 1431              		.loc 6 123 1 is_stmt 0 view .LVU333
  1432 0006 0546     		mov	r5, r0
  1433 0008 0C46     		mov	r4, r1
  1434              	.LBB807:
  1435              	.LBB804:
- 111:LoopyTunes.cpp **** 	{
- 1436              		.loc 6 111 12 view .LVU334
+ 110:LoopyTunes.cpp **** 	{
+ 1436              		.loc 6 110 12 view .LVU334
  1437 000a 3268     		ldr	r2, [r6]
  1438              	.LVL70:
- 111:LoopyTunes.cpp **** 	{
- 1439              		.loc 6 111 2 view .LVU335
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 93
-
-
+ 110:LoopyTunes.cpp **** 	{
+ 1439              		.loc 6 110 2 view .LVU335
  1440 000c B2F5007F 		cmp	r2, #512
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 93
+
+
  1441 0010 18D3     		bcc	.L45
  1442              	.LBB800:
  1443              	.LBB801:
- 113:LoopyTunes.cpp **** 		encoderDriver.tick();
- 1444              		.loc 6 113 13 view .LVU336
+ 112:LoopyTunes.cpp **** 		encoderDriver.tick();
+ 1444              		.loc 6 112 13 view .LVU336
  1445 0012 0F48     		ldr	r0, .L47+4
  1446              	.LVL71:
- 113:LoopyTunes.cpp **** 		encoderDriver.tick();
- 1447              		.loc 6 113 13 view .LVU337
+ 112:LoopyTunes.cpp **** 		encoderDriver.tick();
+ 1447              		.loc 6 112 13 view .LVU337
  1448 0014 0193     		str	r3, [sp, #4]
  1449              	.LBE801:
  1450              	.LBI800:
- 109:LoopyTunes.cpp **** {
- 1451              		.loc 6 109 13 is_stmt 1 view .LVU338
+ 108:LoopyTunes.cpp **** {
+ 1451              		.loc 6 108 13 is_stmt 1 view .LVU338
  1452              	.LVL72:
  1453              	.LBB802:
- 113:LoopyTunes.cpp **** 		encoderDriver.tick();
- 1454              		.loc 6 113 3 view .LVU339
- 113:LoopyTunes.cpp **** 		encoderDriver.tick();
- 1455              		.loc 6 113 13 is_stmt 0 view .LVU340
+ 112:LoopyTunes.cpp **** 		encoderDriver.tick();
+ 1454              		.loc 6 112 3 view .LVU339
+ 112:LoopyTunes.cpp **** 		encoderDriver.tick();
+ 1455              		.loc 6 112 13 is_stmt 0 view .LVU340
  1456 0016 FFF7FEFF 		bl	_ZN5Mixer4tickEv
  1457              	.LVL73:
- 114:LoopyTunes.cpp **** 		sample = 0;
- 1458              		.loc 6 114 3 is_stmt 1 view .LVU341
- 114:LoopyTunes.cpp **** 		sample = 0;
- 1459              		.loc 6 114 21 is_stmt 0 view .LVU342
+ 113:LoopyTunes.cpp **** 		sample = 0;
+ 1458              		.loc 6 113 3 is_stmt 1 view .LVU341
+ 113:LoopyTunes.cpp **** 		sample = 0;
+ 1459              		.loc 6 113 21 is_stmt 0 view .LVU342
  1460 001a 0E48     		ldr	r0, .L47+8
  1461 001c FFF7FEFF 		bl	_ZN13EncoderDriver4tickEv
  1462              	.LVL74:
- 115:LoopyTunes.cpp **** 	}
- 1463              		.loc 6 115 3 is_stmt 1 view .LVU343
- 115:LoopyTunes.cpp **** 	}
- 1464              		.loc 6 115 10 is_stmt 0 view .LVU344
+ 114:LoopyTunes.cpp **** 	}
+ 1463              		.loc 6 114 3 is_stmt 1 view .LVU343
+ 114:LoopyTunes.cpp **** 	}
+ 1464              		.loc 6 114 10 is_stmt 0 view .LVU344
  1465 0020 0022     		movs	r2, #0
- 121:LoopyTunes.cpp **** 
- 1466              		.loc 6 121 1 view .LVU345
+ 120:LoopyTunes.cpp **** 
+ 1466              		.loc 6 120 1 view .LVU345
  1467 0022 019B     		ldr	r3, [sp, #4]
- 115:LoopyTunes.cpp **** 	}
- 1468              		.loc 6 115 10 view .LVU346
+ 114:LoopyTunes.cpp **** 	}
+ 1468              		.loc 6 114 10 view .LVU346
  1469 0024 3260     		str	r2, [r6]
  1470              	.LVL75:
  1471              	.L46:
- 115:LoopyTunes.cpp **** 	}
- 1472              		.loc 6 115 10 view .LVU347
+ 114:LoopyTunes.cpp **** 	}
+ 1472              		.loc 6 114 10 view .LVU347
  1473              	.LBE802:
  1474              	.LBE800:
  1475              	.LBE804:
  1476              	.LBE807:
- 126:LoopyTunes.cpp **** 
- 127:LoopyTunes.cpp **** 	mixer.processInputBlock(in[L], in[R], size);
- 1477              		.loc 6 127 2 is_stmt 1 view .LVU348
- 1478              		.loc 6 127 25 is_stmt 0 view .LVU349
+ 125:LoopyTunes.cpp **** 
+ 126:LoopyTunes.cpp **** 	mixer.processInputBlock(in[L], in[R], size);
+ 1477              		.loc 6 126 2 is_stmt 1 view .LVU348
+ 1478              		.loc 6 126 25 is_stmt 0 view .LVU349
  1479 0026 0A48     		ldr	r0, .L47+4
  1480 0028 0193     		str	r3, [sp, #4]
  1481 002a D5E90012 		ldrd	r1, r2, [r5]
  1482 002e FFF7FEFF 		bl	_ZN5Mixer17processInputBlockEPKfS1_j
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 94
-
-
  1483              	.LVL76:
- 128:LoopyTunes.cpp **** 	mixer.processOutputBlock(out[L], out[R], size);
- 1484              		.loc 6 128 2 is_stmt 1 view .LVU350
- 1485              		.loc 6 128 26 is_stmt 0 view .LVU351
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 94
+
+
+ 127:LoopyTunes.cpp **** 	mixer.processOutputBlock(out[L], out[R], size);
+ 1484              		.loc 6 127 2 is_stmt 1 view .LVU350
+ 1485              		.loc 6 127 26 is_stmt 0 view .LVU351
  1486 0032 019B     		ldr	r3, [sp, #4]
  1487 0034 0648     		ldr	r0, .L47+4
  1488 0036 D4E90012 		ldrd	r1, r2, [r4]
- 129:LoopyTunes.cpp **** }
- 1489              		.loc 6 129 1 view .LVU352
+ 128:LoopyTunes.cpp **** }
+ 1489              		.loc 6 128 1 view .LVU352
  1490 003a 02B0     		add	sp, sp, #8
  1491              		.cfi_remember_state
  1492              		.cfi_def_cfa_offset 16
@@ -5601,18 +5600,18 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1498              		.cfi_restore 4
  1499              		.cfi_def_cfa_offset 0
  1500              	.LVL77:
- 128:LoopyTunes.cpp **** 	mixer.processOutputBlock(out[L], out[R], size);
- 1501              		.loc 6 128 26 view .LVU353
+ 127:LoopyTunes.cpp **** 	mixer.processOutputBlock(out[L], out[R], size);
+ 1501              		.loc 6 127 26 view .LVU353
  1502 0040 FFF7FEBF 		b	_ZN5Mixer18processOutputBlockEPfS0_j
  1503              	.LVL78:
  1504              	.L45:
  1505              		.cfi_restore_state
  1506              	.LBB808:
  1507              	.LBB805:
- 119:LoopyTunes.cpp **** 	}
- 1508              		.loc 6 119 3 is_stmt 1 view .LVU354
- 119:LoopyTunes.cpp **** 	}
- 1509              		.loc 6 119 10 is_stmt 0 view .LVU355
+ 118:LoopyTunes.cpp **** 	}
+ 1508              		.loc 6 118 3 is_stmt 1 view .LVU354
+ 118:LoopyTunes.cpp **** 	}
+ 1509              		.loc 6 118 10 is_stmt 0 view .LVU355
  1510 0044 1A44     		add	r2, r2, r3
  1511 0046 3260     		str	r2, [r6]
  1512 0048 EDE7     		b	.L46
@@ -5634,60 +5633,60 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1529              		.thumb_func
  1531              	main:
  1532              	.LFB5666:
- 130:LoopyTunes.cpp **** 
- 131:LoopyTunes.cpp **** int main(void)
- 132:LoopyTunes.cpp **** {
- 1533              		.loc 6 132 1 is_stmt 1 view -0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 95
-
-
+ 129:LoopyTunes.cpp **** 
+ 130:LoopyTunes.cpp **** int main(void)
+ 131:LoopyTunes.cpp **** {
+ 1533              		.loc 6 131 1 is_stmt 1 view -0
  1534              		.cfi_startproc
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 95
+
+
  1535              		@ Volatile: function does not return.
  1536              		@ args = 0, pretend = 0, frame = 112
  1537              		@ frame_needed = 0, uses_anonymous_args = 0
- 133:LoopyTunes.cpp **** 	init();
- 1538              		.loc 6 133 2 view .LVU357
  132:LoopyTunes.cpp **** 	init();
- 1539              		.loc 6 132 1 is_stmt 0 view .LVU358
+ 1538              		.loc 6 132 2 view .LVU357
+ 131:LoopyTunes.cpp **** 	init();
+ 1539              		.loc 6 131 1 is_stmt 0 view .LVU358
  1540 0000 00B5     		push	{lr}
  1541              		.cfi_def_cfa_offset 4
  1542              		.cfi_offset 14, -4
- 134:LoopyTunes.cpp **** 	initTrackIO();
- 135:LoopyTunes.cpp **** 	hw.StartAudio(AudioCallback);
- 136:LoopyTunes.cpp **** 
- 137:LoopyTunes.cpp **** 	// handle ADC init
- 138:LoopyTunes.cpp **** 	AdcChannelConfig configs[ADCINPUTS];
- 139:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
- 1543              		.loc 6 139 38 view .LVU359
+ 133:LoopyTunes.cpp **** 	initTrackIO();
+ 134:LoopyTunes.cpp **** 	hw.StartAudio(AudioCallback);
+ 135:LoopyTunes.cpp **** 
+ 136:LoopyTunes.cpp **** 	// handle ADC init
+ 137:LoopyTunes.cpp **** 	AdcChannelConfig configs[ADCINPUTS];
+ 138:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
+ 1543              		.loc 6 138 38 view .LVU359
  1544 0002 0224     		movs	r4, #2
- 132:LoopyTunes.cpp **** 	init();
- 1545              		.loc 6 132 1 view .LVU360
+ 131:LoopyTunes.cpp **** 	init();
+ 1545              		.loc 6 131 1 view .LVU360
  1546 0004 9DB0     		sub	sp, sp, #116
  1547              		.cfi_def_cfa_offset 120
- 1548              		.loc 6 139 38 view .LVU361
+ 1548              		.loc 6 138 38 view .LVU361
  1549 0006 0025     		movs	r5, #0
- 133:LoopyTunes.cpp **** 	initTrackIO();
- 1550              		.loc 6 133 6 view .LVU362
+ 132:LoopyTunes.cpp **** 	initTrackIO();
+ 1550              		.loc 6 132 6 view .LVU362
  1551 0008 FFF7FEFF 		bl	_Z4initv
  1552              	.LVL79:
- 134:LoopyTunes.cpp **** 	initTrackIO();
- 1553              		.loc 6 134 2 is_stmt 1 view .LVU363
- 134:LoopyTunes.cpp **** 	initTrackIO();
- 1554              		.loc 6 134 13 is_stmt 0 view .LVU364
+ 133:LoopyTunes.cpp **** 	initTrackIO();
+ 1553              		.loc 6 133 2 is_stmt 1 view .LVU363
+ 133:LoopyTunes.cpp **** 	initTrackIO();
+ 1554              		.loc 6 133 13 is_stmt 0 view .LVU364
  1555 000c FFF7FEFF 		bl	_Z11initTrackIOv
  1556              	.LVL80:
- 135:LoopyTunes.cpp **** 
- 1557              		.loc 6 135 2 is_stmt 1 view .LVU365
- 135:LoopyTunes.cpp **** 
- 1558              		.loc 6 135 15 is_stmt 0 view .LVU366
+ 134:LoopyTunes.cpp **** 
+ 1557              		.loc 6 134 2 is_stmt 1 view .LVU365
+ 134:LoopyTunes.cpp **** 
+ 1558              		.loc 6 134 15 is_stmt 0 view .LVU366
  1559 0010 2449     		ldr	r1, .L51
  1560 0012 2548     		ldr	r0, .L51+4
  1561 0014 FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
  1562              	.LVL81:
- 138:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
- 1563              		.loc 6 138 2 is_stmt 1 view .LVU367
- 1564              		.loc 6 139 2 view .LVU368
- 1565              		.loc 6 139 38 is_stmt 0 view .LVU369
+ 137:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
+ 1563              		.loc 6 137 2 is_stmt 1 view .LVU367
+ 1564              		.loc 6 138 2 view .LVU368
+ 1565              		.loc 6 138 38 is_stmt 0 view .LVU369
  1566 0018 8DF80040 		strb	r4, [sp]
  1567 001c 8DF80150 		strb	r5, [sp, #1]
  1568 0020 2246     		mov	r2, r4
@@ -5695,13 +5694,13 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1570 0024 05A8     		add	r0, sp, #20
  1571 0026 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pinNS0_15ConversionSpeedE
  1572              	.LVL82:
- 140:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP2].InitSingle(seed::A1);
- 1573              		.loc 6 140 2 is_stmt 1 view .LVU370
- 1574              		.loc 6 140 38 is_stmt 0 view .LVU371
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 96
-
-
+ 139:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP2].InitSingle(seed::A1);
+ 1573              		.loc 6 139 2 is_stmt 1 view .LVU370
+ 1574              		.loc 6 139 38 is_stmt 0 view .LVU371
  1575 002a 0323     		movs	r3, #3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 96
+
+
  1576 002c 8DF80450 		strb	r5, [sp, #4]
  1577 0030 2246     		mov	r2, r4
  1578 0032 8DF80530 		strb	r3, [sp, #5]
@@ -5709,9 +5708,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1580 003a 0199     		ldr	r1, [sp, #4]
  1581 003c FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pinNS0_15ConversionSpeedE
  1582              	.LVL83:
- 141:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
- 1583              		.loc 6 141 2 is_stmt 1 view .LVU372
- 1584              		.loc 6 141 38 is_stmt 0 view .LVU373
+ 140:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
+ 1583              		.loc 6 140 2 is_stmt 1 view .LVU372
+ 1584              		.loc 6 140 38 is_stmt 0 view .LVU373
  1585 0040 0123     		movs	r3, #1
  1586 0042 2246     		mov	r2, r4
  1587 0044 0EA8     		add	r0, sp, #56
@@ -5720,9 +5719,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1590 004e 0299     		ldr	r1, [sp, #8]
  1591 0050 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pinNS0_15ConversionSpeedE
  1592              	.LVL84:
- 142:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
- 1593              		.loc 6 142 2 is_stmt 1 view .LVU374
- 1594              		.loc 6 142 38 is_stmt 0 view .LVU375
+ 141:LoopyTunes.cpp **** 	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
+ 1593              		.loc 6 141 2 is_stmt 1 view .LVU374
+ 1594              		.loc 6 141 38 is_stmt 0 view .LVU375
  1595 0054 0723     		movs	r3, #7
  1596 0056 8DF80C50 		strb	r5, [sp, #12]
  1597 005a 2246     		mov	r2, r4
@@ -5731,9 +5730,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1600 0064 0399     		ldr	r1, [sp, #12]
  1601 0066 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pinNS0_15ConversionSpeedE
  1602              	.LVL85:
- 143:LoopyTunes.cpp **** 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
- 1603              		.loc 6 143 2 is_stmt 1 view .LVU376
- 1604              		.loc 6 143 40 is_stmt 0 view .LVU377
+ 142:LoopyTunes.cpp **** 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
+ 1603              		.loc 6 142 2 is_stmt 1 view .LVU376
+ 1604              		.loc 6 142 40 is_stmt 0 view .LVU377
  1605 006a 8DF81050 		strb	r5, [sp, #16]
  1606 006e 8DF81140 		strb	r4, [sp, #17]
  1607 0072 2246     		mov	r2, r4
@@ -5741,27 +5740,27 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1609 0076 17A8     		add	r0, sp, #92
  1610 0078 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pinNS0_15ConversionSpeedE
  1611              	.LVL86:
- 144:LoopyTunes.cpp **** 	hw.adc.Init(configs, ADCINPUTS);
- 1612              		.loc 6 144 2 is_stmt 1 view .LVU378
- 1613              		.loc 6 144 13 is_stmt 0 view .LVU379
+ 143:LoopyTunes.cpp **** 	hw.adc.Init(configs, ADCINPUTS);
+ 1612              		.loc 6 143 2 is_stmt 1 view .LVU378
+ 1613              		.loc 6 143 13 is_stmt 0 view .LVU379
  1614 007c 0423     		movs	r3, #4
  1615 007e 0522     		movs	r2, #5
  1616 0080 05A9     		add	r1, sp, #20
  1617 0082 0A48     		ldr	r0, .L51+8
  1618 0084 FFF7FEFF 		bl	_ZN5daisy9AdcHandle4InitEPNS_16AdcChannelConfigEjNS0_12OverSamplingE
  1619              	.LVL87:
- 145:LoopyTunes.cpp **** 	hw.adc.Start();
- 1620              		.loc 6 145 2 is_stmt 1 view .LVU380
- 1621              		.loc 6 145 14 is_stmt 0 view .LVU381
+ 144:LoopyTunes.cpp **** 	hw.adc.Start();
+ 1620              		.loc 6 144 2 is_stmt 1 view .LVU380
+ 1621              		.loc 6 144 14 is_stmt 0 view .LVU381
  1622 0088 0848     		ldr	r0, .L51+8
  1623 008a FFF7FEFF 		bl	_ZN5daisy9AdcHandle5StartEv
  1624              	.LVL88:
- 146:LoopyTunes.cpp **** 	
- 147:LoopyTunes.cpp **** 	hw.StartLog();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 97
+ 145:LoopyTunes.cpp **** 	
+ 146:LoopyTunes.cpp **** 	hw.StartLog();
+ 1625              		.loc 6 146 2 is_stmt 1 view .LVU382
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 97
 
 
- 1625              		.loc 6 147 2 is_stmt 1 view .LVU382
  1626              	.LBB809:
  1627              	.LBI809:
   23:../../../libDaisy//src/daisy_seed.h **** 
@@ -5818,10 +5817,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   74:../../../libDaisy//src/daisy_seed.h ****     /** Changes to a new multichannel callback
   75:../../../libDaisy//src/daisy_seed.h ****      */
   76:../../../libDaisy//src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 98
-
-
   77:../../../libDaisy//src/daisy_seed.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 98
+
+
   78:../../../libDaisy//src/daisy_seed.h ****     /** Stops the audio if it is running. */
   79:../../../libDaisy//src/daisy_seed.h ****     void StopAudio();
   80:../../../libDaisy//src/daisy_seed.h **** 
@@ -5878,10 +5877,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  131:../../../libDaisy//src/daisy_seed.h ****     /** Start the logging session. Optionally wait for terminal connection before proceeding.
  132:../../../libDaisy//src/daisy_seed.h ****     */
  133:../../../libDaisy//src/daisy_seed.h ****     static void StartLog(bool wait_for_pc = false)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 99
-
-
  1628              		.loc 1 133 17 view .LVU383
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 99
+
+
  1629              	.LBB810:
  134:../../../libDaisy//src/daisy_seed.h ****     {
  135:../../../libDaisy//src/daisy_seed.h ****         Log::StartLog(wait_for_pc);
@@ -5894,24 +5893,24 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1636              		.loc 1 135 22 view .LVU386
  1637              	.LBE810:
  1638              	.LBE809:
- 148:LoopyTunes.cpp **** 	
- 149:LoopyTunes.cpp **** 	while(1) 
- 1639              		.loc 6 149 2 is_stmt 1 discriminator 1 view .LVU387
- 150:LoopyTunes.cpp **** 	{
- 151:LoopyTunes.cpp **** 		mixer.tick();
- 1640              		.loc 6 151 3 discriminator 1 view .LVU388
- 1641              		.loc 6 151 13 is_stmt 0 discriminator 1 view .LVU389
+ 147:LoopyTunes.cpp **** 	
+ 148:LoopyTunes.cpp **** 	while(1) 
+ 1639              		.loc 6 148 2 is_stmt 1 discriminator 1 view .LVU387
+ 149:LoopyTunes.cpp **** 	{
+ 150:LoopyTunes.cpp **** 		mixer.tick();
+ 1640              		.loc 6 150 3 discriminator 1 view .LVU388
+ 1641              		.loc 6 150 13 is_stmt 0 discriminator 1 view .LVU389
  1642 0094 0648     		ldr	r0, .L51+12
  1643 0096 FFF7FEFF 		bl	_ZN5Mixer4tickEv
  1644              	.LVL90:
- 152:LoopyTunes.cpp **** 		encoderDriver.tick();
- 1645              		.loc 6 152 3 is_stmt 1 discriminator 1 view .LVU390
- 1646              		.loc 6 152 21 is_stmt 0 discriminator 1 view .LVU391
+ 151:LoopyTunes.cpp **** 		encoderDriver.tick();
+ 1645              		.loc 6 151 3 is_stmt 1 discriminator 1 view .LVU390
+ 1646              		.loc 6 151 21 is_stmt 0 discriminator 1 view .LVU391
  1647 009a 0648     		ldr	r0, .L51+16
  1648 009c FFF7FEFF 		bl	_ZN13EncoderDriver4tickEv
  1649              	.LVL91:
- 149:LoopyTunes.cpp **** 	{
- 1650              		.loc 6 149 2 is_stmt 1 discriminator 1 view .LVU392
+ 148:LoopyTunes.cpp **** 	{
+ 1650              		.loc 6 148 2 is_stmt 1 discriminator 1 view .LVU392
  1651 00a0 F8E7     		b	.L50
  1652              	.L52:
  1653 00a2 00BF     		.align	2
@@ -5930,18 +5929,18 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1667              		.thumb_func
  1669              	_GLOBAL__sub_I_hw:
  1670              	.LFB6370:
- 153:LoopyTunes.cpp **** 	}
- 154:LoopyTunes.cpp **** }
- 1671              		.loc 6 154 1 view -0
+ 152:LoopyTunes.cpp **** 	}
+ 153:LoopyTunes.cpp **** }
+ 1671              		.loc 6 153 1 view -0
  1672              		.cfi_startproc
  1673              		@ args = 0, pretend = 0, frame = 0
  1674              		@ frame_needed = 0, uses_anonymous_args = 0
  1675              	.LBB865:
  1676              	.LBI865:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 100
+ 1677              		.loc 6 153 1 view .LVU394
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 100
 
 
- 1677              		.loc 6 154 1 view .LVU394
  1678              	.LVL92:
  1679              	.LBB866:
  1680              	.LBB867:
@@ -5998,10 +5997,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   44:../../../libDaisy//src/per/qspi.h ****          *  \param E_HAL_ERROR - HAL code did not return HAL_OK.
   45:../../../libDaisy//src/per/qspi.h ****          *  \param E_SWITCHING_MODES - An error was encountered while switching QSPI peripheral mod
   46:../../../libDaisy//src/per/qspi.h ****          *  \param E_INVALID_MODE - QSPI should not be written to while the program is executing fr
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 101
-
-
   47:../../../libDaisy//src/per/qspi.h ****          */
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 101
+
+
   48:../../../libDaisy//src/per/qspi.h ****     enum Status
   49:../../../libDaisy//src/per/qspi.h ****     {
   50:../../../libDaisy//src/per/qspi.h ****         GOOD = 0,
@@ -6058,10 +6057,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  101:../../../libDaisy//src/per/qspi.h ****     Result Init(const Config& config);
  102:../../../libDaisy//src/per/qspi.h **** 
  103:../../../libDaisy//src/per/qspi.h ****     /** Returns the current config. */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 102
-
-
  104:../../../libDaisy//src/per/qspi.h ****     const Config& GetConfig() const;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 102
+
+
  105:../../../libDaisy//src/per/qspi.h **** 
  106:../../../libDaisy//src/per/qspi.h ****     // Couldn't this just be called before anything else in init? That
  107:../../../libDaisy//src/per/qspi.h ****     // would make manually calling it unnecessary.
@@ -6118,10 +6117,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  158:../../../libDaisy//src/per/qspi.h ****      *  The memory at this address is read-only
  159:../../../libDaisy//src/per/qspi.h ****      *  to write to it use the Write function.
  160:../../../libDaisy//src/per/qspi.h ****      * 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 103
-
-
  161:../../../libDaisy//src/per/qspi.h ****      *  \param offset returns the pointer starting this 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 103
+
+
  162:../../../libDaisy//src/per/qspi.h ****      *                many bytes into the memory
  163:../../../libDaisy//src/per/qspi.h ****     */
  164:../../../libDaisy//src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
@@ -6133,7 +6132,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1690              	.LBE867:
  1691              	.LBE866:
  1692              	.LBE865:
- 1693              		.loc 6 154 1 is_stmt 0 view .LVU397
+ 1693              		.loc 6 153 1 is_stmt 0 view .LVU397
  1694 0000 38B5     		push	{r3, r4, r5, lr}
  1695              		.cfi_def_cfa_offset 16
  1696              		.cfi_offset 3, -16
@@ -6162,8 +6161,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1718 0006 224D     		ldr	r5, .L54+4
  1719              	.LBE892:
  1720              	.LBE891:
-  24:LoopyTunes.cpp **** 
- 1721              		.loc 6 24 11 view .LVU400
+  23:LoopyTunes.cpp **** 
+ 1721              		.loc 6 23 11 view .LVU400
  1722 0008 224A     		ldr	r2, .L54+8
  1723 000a 2349     		ldr	r1, .L54+12
  1724              	.LBB914:
@@ -6178,10 +6177,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1733              	.LBE872:
  1734              	.LBE873:
  1735              	.LBE875:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 104
-
-
  1736              	.LBB876:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 104
+
+
  1737              	.LBI876:
   95:../../../libDaisy//src/hid/audio.h ****     ~AudioHandle() {}
  1738              		.loc 5 95 5 is_stmt 1 view .LVU403
@@ -6238,10 +6237,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   30:../../../libDaisy//src/per/dac.h **** 
   31:../../../libDaisy//src/per/dac.h ****     /** Selects which channel(s) will be configured for use. */
   32:../../../libDaisy//src/per/dac.h ****     enum class Channel
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 105
-
-
   33:../../../libDaisy//src/per/dac.h ****     {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 105
+
+
   34:../../../libDaisy//src/per/dac.h ****         ONE,
   35:../../../libDaisy//src/per/dac.h ****         TWO,
   36:../../../libDaisy//src/per/dac.h ****         BOTH,
@@ -6298,10 +6297,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1758              	.LBB882:
  1759              		.loc 22 84 33 is_stmt 0 view .LVU409
  1760 0010 0462     		str	r4, [r0, #32]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 106
-
-
  1761              	.LVL95:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 106
+
+
  1762              		.loc 22 84 33 view .LVU410
  1763              	.LBE882:
  1764              	.LBE881:
@@ -6358,10 +6357,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   33:../../../libDaisy//src/per/sai.h ****  *  sai_config.pin_config.sck  = {DSY_GPIOE, 5};
   34:../../../libDaisy//src/per/sai.h ****  *  sai_config.pin_config.sa   = {DSY_GPIOE, 6};
   35:../../../libDaisy//src/per/sai.h ****  *  sai_config.pin_config.sb   = {DSY_GPIOE, 3};
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 107
-
-
   36:../../../libDaisy//src/per/sai.h ****  *  // Then Initialize
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 107
+
+
   37:../../../libDaisy//src/per/sai.h ****  *  SaiHandle sai;
   38:../../../libDaisy//src/per/sai.h ****  *  sai.Init(sai_config);
   39:../../../libDaisy//src/per/sai.h ****  *  // Now you can use it:
@@ -6418,10 +6417,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   90:../../../libDaisy//src/per/sai.h ****         Peripheral periph;
   91:../../../libDaisy//src/per/sai.h ****         struct
   92:../../../libDaisy//src/per/sai.h ****         {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 108
-
-
   93:../../../libDaisy//src/per/sai.h ****             dsy_gpio_pin mclk, fs, sck, sa, sb;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 108
+
+
   94:../../../libDaisy//src/per/sai.h ****         } pin_config;
   95:../../../libDaisy//src/per/sai.h ****         SampleRate sr;
   96:../../../libDaisy//src/per/sai.h ****         BitDepth   bit_depth;
@@ -6449,8 +6448,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1788              	.LBE885:
  1789              	.LBE889:
  1790              	.LBE914:
-  24:LoopyTunes.cpp **** 
- 1791              		.loc 6 24 11 view .LVU418
+  23:LoopyTunes.cpp **** 
+ 1791              		.loc 6 23 11 view .LVU418
  1792 0014 FFF7FEFF 		bl	__aeabi_atexit
  1793              	.LVL97:
  1794              	.LBB915:
@@ -6478,18 +6477,18 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   21:DSP/FX/../../Parameters/AudioParameter.h **** {
  1815              		.loc 17 21 7 view .LVU421
  1816              	.LBB895:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 109
-
-
  1817 0036 05F2DC53 		addw	r3, r5, #1500
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 109
+
+
  1818 003a 1849     		ldr	r1, .L54+16
  1819              	.LBE895:
  1820              	.LBE894:
  1821              	.LBE893:
  1822              	.LBE911:
  1823              	.LBE915:
-  30:LoopyTunes.cpp **** 
- 1824              		.loc 6 30 7 is_stmt 0 view .LVU422
+  29:LoopyTunes.cpp **** 
+ 1824              		.loc 6 29 7 is_stmt 0 view .LVU422
  1825 003c 2846     		mov	r0, r5
  1826 003e 154A     		ldr	r2, .L54+8
  1827              	.LBB916:
@@ -6518,8 +6517,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1847              	.LBE908:
  1848              	.LBE912:
  1849              	.LBE916:
-  30:LoopyTunes.cpp **** 
- 1850              		.loc 6 30 7 is_stmt 0 view .LVU426
+  29:LoopyTunes.cpp **** 
+ 1850              		.loc 6 29 7 is_stmt 0 view .LVU426
  1851 0042 1749     		ldr	r1, .L54+20
  1852              	.LBB917:
  1853              	.LBB913:
@@ -6538,10 +6537,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  1865              		.loc 7 240 42 view .LVU428
  1866              	.LBE900:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 110
-
-
  1867              	.LBE899:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 110
+
+
  1868              	.LBE901:
  1869              	.LBE902:
  1870              	.LBE903:
@@ -6557,8 +6556,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1878              	.LBE910:
  1879              	.LBE913:
  1880              	.LBE917:
-  30:LoopyTunes.cpp **** 
- 1881              		.loc 6 30 7 view .LVU431
+  29:LoopyTunes.cpp **** 
+ 1881              		.loc 6 29 7 view .LVU431
  1882 0048 FFF7FEFF 		bl	__aeabi_atexit
  1883              	.LVL104:
  1884              	.LBB918:
@@ -6585,8 +6584,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1901              	.LBE920:
  1902              	.LBE919:
  1903              	.LBE918:
-  33:LoopyTunes.cpp **** 
- 1904              		.loc 6 33 15 view .LVU436
+  32:LoopyTunes.cpp **** 
+ 1904              		.loc 6 32 15 view .LVU436
  1905 004e 114A     		ldr	r2, .L54+8
  1906 0050 1549     		ldr	r1, .L54+28
  1907              	.LBB944:
@@ -6598,10 +6597,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  1913              		.loc 7 240 42 view .LVU437
  1914 0052 8461     		str	r4, [r0, #24]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 111
-
-
  1915              	.LVL105:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 111
+
+
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h **** 
  1916              		.loc 7 240 42 view .LVU438
  1917              	.LBE924:
@@ -6658,10 +6657,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
   41:../../../libDaisy//src/hid/switch.h ****     ~Switch() {}
  1958              		.loc 9 41 5 is_stmt 0 view .LVU449
  1959              	.LBE942:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 112
-
-
  1960              	.LBB943:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 112
+
+
  1961              	.LBB941:
  1962              	.LBB940:
  1963              	.LBB939:
@@ -6677,51 +6676,51 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  1972              	.LBE941:
  1973              	.LBE943:
  1974              	.LBE944:
-  33:LoopyTunes.cpp **** 
- 1975              		.loc 6 33 15 view .LVU451
+  32:LoopyTunes.cpp **** 
+ 1975              		.loc 6 32 15 view .LVU451
  1976 005a FFF7FEFF 		bl	__aeabi_atexit
  1977              	.LVL107:
-  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
- 1978              		.loc 6 63 52 is_stmt 1 view .LVU452
-  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
- 1979              		.loc 6 63 43 is_stmt 0 view .LVU453
+  62:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
+ 1978              		.loc 6 62 52 is_stmt 1 view .LVU452
+  62:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t2delay[2];
+ 1979              		.loc 6 62 43 is_stmt 0 view .LVU453
  1980 005e 0D4A     		ldr	r2, .L54+8
  1981 0060 1249     		ldr	r1, .L54+32
  1982 0062 2046     		mov	r0, r4
  1983 0064 FFF7FEFF 		bl	__aeabi_atexit
  1984              	.LVL108:
-  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
- 1985              		.loc 6 64 52 is_stmt 1 view .LVU454
-  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
- 1986              		.loc 6 64 43 is_stmt 0 view .LVU455
+  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
+ 1985              		.loc 6 63 52 is_stmt 1 view .LVU454
+  63:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t3delay[2];
+ 1986              		.loc 6 63 43 is_stmt 0 view .LVU455
  1987 0068 0A4A     		ldr	r2, .L54+8
  1988 006a 1149     		ldr	r1, .L54+36
  1989 006c 2046     		mov	r0, r4
  1990 006e FFF7FEFF 		bl	__aeabi_atexit
  1991              	.LVL109:
-  65:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
- 1992              		.loc 6 65 52 is_stmt 1 view .LVU456
-  65:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
- 1993              		.loc 6 65 43 is_stmt 0 view .LVU457
+  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
+ 1992              		.loc 6 64 52 is_stmt 1 view .LVU456
+  64:LoopyTunes.cpp **** 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t4delay[2];
+ 1993              		.loc 6 64 43 is_stmt 0 view .LVU457
  1994 0072 084A     		ldr	r2, .L54+8
  1995 0074 0F49     		ldr	r1, .L54+40
  1996 0076 2046     		mov	r0, r4
  1997 0078 FFF7FEFF 		bl	__aeabi_atexit
  1998              	.LVL110:
-  66:LoopyTunes.cpp **** 
- 1999              		.loc 6 66 52 is_stmt 1 view .LVU458
-  66:LoopyTunes.cpp **** 
- 2000              		.loc 6 66 43 is_stmt 0 view .LVU459
+  65:LoopyTunes.cpp **** 
+ 1999              		.loc 6 65 52 is_stmt 1 view .LVU458
+  65:LoopyTunes.cpp **** 
+ 2000              		.loc 6 65 43 is_stmt 0 view .LVU459
  2001 007c 2046     		mov	r0, r4
  2002 007e 054A     		ldr	r2, .L54+8
  2003 0080 0D49     		ldr	r1, .L54+44
  2004              	.LBE945:
  2005              	.LBE947:
- 2006              		.loc 6 154 1 view .LVU460
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 113
-
-
+ 2006              		.loc 6 153 1 view .LVU460
  2007 0082 BDE83840 		pop	{r3, r4, r5, lr}
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 113
+
+
  2008              		.cfi_restore 14
  2009              		.cfi_restore 5
  2010              		.cfi_restore 4
@@ -6729,8 +6728,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2012              		.cfi_def_cfa_offset 0
  2013              	.LBB948:
  2014              	.LBB946:
-  66:LoopyTunes.cpp **** 
- 2015              		.loc 6 66 43 view .LVU461
+  65:LoopyTunes.cpp **** 
+ 2015              		.loc 6 65 43 view .LVU461
  2016 0086 FFF7FEBF 		b	__aeabi_atexit
  2017              	.LVL111:
  2018              	.L55:
@@ -6778,10 +6777,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2061              		.global	_ZN7Buffers9track2PtrE
  2062              		.global	_ZN7Buffers9track1PtrE
  2063              		.global	_ZN7Buffers6track4E
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 114
-
-
  2064              		.global	_ZN7Buffers6track3E
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 114
+
+
  2065              		.global	_ZN7Buffers6track2E
  2066              		.global	_ZN7Buffers6track1E
  2067              		.global	encoderDriver
@@ -6838,10 +6837,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2120              	_ZN7Buffers10t3delayPtrE:
  2121 0000 00000000 		.word	_ZN7Buffers7t3delayE
  2122 0004 0CA60E00 		.word	_ZN7Buffers7t3delayE+960012
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 115
-
-
  2123              		.section	.data._ZN7Buffers10t4delayPtrE,"aw"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 115
+
+
  2124              		.align	2
  2125              		.set	.LANCHOR16,. + 0
  2128              	_ZN7Buffers10t4delayPtrE:
@@ -6898,10 +6897,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2195              		.section	.data._ZN7Buffers9track4PtrE,"aw"
  2196              		.align	2
  2197              		.set	.LANCHOR6,. + 0
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 116
-
-
  2200              	_ZN7Buffers9track4PtrE:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 116
+
+
  2201 0000 00000000 		.word	_ZN7Buffers6track4E
  2202 0004 004C1D00 		.word	_ZN7Buffers6track4E+1920000
  2203              		.section	.sdram_bss,"aw"
@@ -6958,10 +6957,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2240              	_ZN7Buffers3mixE:
  2241 7530e0 00000000 		.space	3840000
  2241      00000000 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 117
-
-
  2241      00000000 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 117
+
+
  2241      00000000 
  2241      00000000 
  2244              	_ZN7Buffers6track4E:
@@ -7018,10 +7017,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2285              		.file 49 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/shared_ptr_base.
  2286              		.file 50 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
  2287              		.file 51 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 118
-
-
  2288              		.file 52 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/vector.tcc"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 118
+
+
  2289              		.file 53 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
  2290              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/move.h"
  2291              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
@@ -7062,109 +7061,109 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 1
  2326              		.file 90 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/functexcept.h"
  2327              		.file 91 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/new"
  2328              		.file 92 "<built-in>"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 119
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 119
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LoopyTunes.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:19     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:25     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:25     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:66     .text.__tcf_0:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:71     .text.__tcf_0:0000000000000000 __tcf_0
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:85     .text.__tcf_2:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:90     .text.__tcf_2:0000000000000000 __tcf_2
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:101    .text.__tcf_3:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:106    .text.__tcf_3:0000000000000000 __tcf_3
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:117    .text.__tcf_1:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:122    .text.__tcf_1:0000000000000000 __tcf_1
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:133    .text._ZNSt14_Function_baseD2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:139    .text._ZNSt14_Function_baseD2Ev:0000000000000000 _ZNSt14_Function_baseD2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:139    .text._ZNSt14_Function_baseD2Ev:0000000000000000 _ZNSt14_Function_baseD1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:181    .text._ZN13EncoderDriverD2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:187    .text._ZN13EncoderDriverD2Ev:0000000000000000 _ZN13EncoderDriverD2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:187    .text._ZN13EncoderDriverD2Ev:0000000000000000 _ZN13EncoderDriverD1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:313    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:319    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 _ZN5Mixer12MixerChannelC2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:552    .text._ZN5Mixer12MixerChannelC2Ev:000000000000002c $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:319    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 _ZN5Mixer12MixerChannelC1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:559    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:565    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 _ZN5Mixer12MixerChannelD2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:565    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 _ZN5Mixer12MixerChannelD1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:752    .text._ZN5MixerD2Ev:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:758    .text._ZN5MixerD2Ev:0000000000000000 _ZN5MixerD2Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:758    .text._ZN5MixerD2Ev:0000000000000000 _ZN5MixerD1Ev
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:831    .text._Z4initv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:837    .text._Z4initv:0000000000000000 _Z4initv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:953    .text._Z4initv:0000000000000074 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:975    .text._Z11initTrackIOv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:981    .text._Z11initTrackIOv:0000000000000000 _Z11initTrackIOv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1064   .text._Z11initTrackIOv:0000000000000094 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1070   .text._ZNKSt8functionIFvfEEclEf:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1076   .text._ZNKSt8functionIFvfEEclEf:0000000000000000 _ZNKSt8functionIFvfEEclEf
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1119   .text._ZN13EncoderDriver4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1125   .text._ZN13EncoderDriver4tickEv:0000000000000000 _ZN13EncoderDriver4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1394   .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1400   .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1516   .text._Z13AudioCallbackPKPKfPPfj:000000000000004c $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1525   .text.startup.main:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1531   .text.startup.main:0000000000000000 main
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1655   .text.startup.main:00000000000000a4 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1664   .text.startup._GLOBAL__sub_I_hw:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:1669   .text.startup._GLOBAL__sub_I_hw:0000000000000000 _GLOBAL__sub_I_hw
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2021   .text.startup._GLOBAL__sub_I_hw:000000000000008c $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2039   .init_array:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2128   .data._ZN7Buffers10t4delayPtrE:0000000000000000 _ZN7Buffers10t4delayPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2120   .data._ZN7Buffers10t3delayPtrE:0000000000000000 _ZN7Buffers10t3delayPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2112   .data._ZN7Buffers10t2delayPtrE:0000000000000000 _ZN7Buffers10t2delayPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2104   .data._ZN7Buffers10t1delayPtrE:0000000000000000 _ZN7Buffers10t1delayPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2212   .sdram_bss:0000000000000020 _ZN7Buffers7t4delayE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2216   .sdram_bss:00000000001d4c38 _ZN7Buffers7t3delayE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2220   .sdram_bss:00000000003a9850 _ZN7Buffers7t2delayE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2224   .sdram_bss:000000000057e468 _ZN7Buffers7t1delayE
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 120
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:19     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:25     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:25     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:66     .text.__tcf_0:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:71     .text.__tcf_0:0000000000000000 __tcf_0
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:85     .text.__tcf_2:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:90     .text.__tcf_2:0000000000000000 __tcf_2
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:101    .text.__tcf_3:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:106    .text.__tcf_3:0000000000000000 __tcf_3
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:117    .text.__tcf_1:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:122    .text.__tcf_1:0000000000000000 __tcf_1
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:133    .text._ZNSt14_Function_baseD2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:139    .text._ZNSt14_Function_baseD2Ev:0000000000000000 _ZNSt14_Function_baseD2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:139    .text._ZNSt14_Function_baseD2Ev:0000000000000000 _ZNSt14_Function_baseD1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:181    .text._ZN13EncoderDriverD2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:187    .text._ZN13EncoderDriverD2Ev:0000000000000000 _ZN13EncoderDriverD2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:187    .text._ZN13EncoderDriverD2Ev:0000000000000000 _ZN13EncoderDriverD1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:313    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:319    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 _ZN5Mixer12MixerChannelC2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:552    .text._ZN5Mixer12MixerChannelC2Ev:000000000000002c $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:319    .text._ZN5Mixer12MixerChannelC2Ev:0000000000000000 _ZN5Mixer12MixerChannelC1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:559    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:565    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 _ZN5Mixer12MixerChannelD2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:565    .text._ZN5Mixer12MixerChannelD2Ev:0000000000000000 _ZN5Mixer12MixerChannelD1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:752    .text._ZN5MixerD2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:758    .text._ZN5MixerD2Ev:0000000000000000 _ZN5MixerD2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:758    .text._ZN5MixerD2Ev:0000000000000000 _ZN5MixerD1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:831    .text._Z4initv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:837    .text._Z4initv:0000000000000000 _Z4initv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:953    .text._Z4initv:0000000000000074 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:975    .text._Z11initTrackIOv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:981    .text._Z11initTrackIOv:0000000000000000 _Z11initTrackIOv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1064   .text._Z11initTrackIOv:0000000000000094 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1070   .text._ZNKSt8functionIFvfEEclEf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1076   .text._ZNKSt8functionIFvfEEclEf:0000000000000000 _ZNKSt8functionIFvfEEclEf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1119   .text._ZN13EncoderDriver4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1125   .text._ZN13EncoderDriver4tickEv:0000000000000000 _ZN13EncoderDriver4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1394   .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1400   .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1516   .text._Z13AudioCallbackPKPKfPPfj:000000000000004c $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1525   .text.startup.main:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1531   .text.startup.main:0000000000000000 main
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1655   .text.startup.main:00000000000000a4 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1664   .text.startup._GLOBAL__sub_I_hw:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:1669   .text.startup._GLOBAL__sub_I_hw:0000000000000000 _GLOBAL__sub_I_hw
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2021   .text.startup._GLOBAL__sub_I_hw:000000000000008c $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2039   .init_array:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2128   .data._ZN7Buffers10t4delayPtrE:0000000000000000 _ZN7Buffers10t4delayPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2120   .data._ZN7Buffers10t3delayPtrE:0000000000000000 _ZN7Buffers10t3delayPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2112   .data._ZN7Buffers10t2delayPtrE:0000000000000000 _ZN7Buffers10t2delayPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2104   .data._ZN7Buffers10t1delayPtrE:0000000000000000 _ZN7Buffers10t1delayPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2212   .sdram_bss:0000000000000020 _ZN7Buffers7t4delayE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2216   .sdram_bss:00000000001d4c38 _ZN7Buffers7t3delayE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2220   .sdram_bss:00000000003a9850 _ZN7Buffers7t2delayE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2224   .sdram_bss:000000000057e468 _ZN7Buffers7t1delayE
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 120
 
 
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2168   .data._ZN7Buffers6t4mPtrE:0000000000000000 _ZN7Buffers6t4mPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2160   .data._ZN7Buffers6t3mPtrE:0000000000000000 _ZN7Buffers6t3mPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2152   .data._ZN7Buffers6t2mPtrE:0000000000000000 _ZN7Buffers6t2mPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2144   .data._ZN7Buffers6t1mPtrE:0000000000000000 _ZN7Buffers6t1mPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2136   .data._ZN7Buffers6mixPtrE:0000000000000000 _ZN7Buffers6mixPtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2228   .sdram_bss:0000000000753080 _ZN7Buffers3t4mE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2232   .sdram_bss:00000000007530a0 _ZN7Buffers3t3mE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2236   .sdram_bss:00000000007530c0 _ZN7Buffers3t2mE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2208   .sdram_bss:0000000000000000 _ZN7Buffers3t1mE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2240   .sdram_bss:00000000007530e0 _ZN7Buffers3mixE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2200   .data._ZN7Buffers9track4PtrE:0000000000000000 _ZN7Buffers9track4PtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2192   .data._ZN7Buffers9track3PtrE:0000000000000000 _ZN7Buffers9track3PtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2184   .data._ZN7Buffers9track2PtrE:0000000000000000 _ZN7Buffers9track2PtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2176   .data._ZN7Buffers9track1PtrE:0000000000000000 _ZN7Buffers9track1PtrE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2244   .sdram_bss:0000000000afc8e0 _ZN7Buffers6track4E
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2248   .sdram_bss:0000000000ea60e0 _ZN7Buffers6track3E
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2252   .sdram_bss:000000000124f8e0 _ZN7Buffers6track2E
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2256   .sdram_bss:00000000015f90e0 _ZN7Buffers6track1E
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2076   .bss.encoderDriver:0000000000000000 encoderDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2090   .bss.mixer:0000000000000000 mixer
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2097   .bss.sample:0000000000000000 sample
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2083   .bss.hw:0000000000000000 hw
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2072   .bss.encoderDriver:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2079   .bss.hw:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2086   .bss.mixer:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2093   .bss.sample:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2100   .data._ZN7Buffers10t1delayPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2108   .data._ZN7Buffers10t2delayPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2116   .data._ZN7Buffers10t3delayPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2124   .data._ZN7Buffers10t4delayPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2132   .data._ZN7Buffers6mixPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2140   .data._ZN7Buffers6t1mPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2148   .data._ZN7Buffers6t2mPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2156   .data._ZN7Buffers6t3mPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2164   .data._ZN7Buffers6t4mPtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2172   .data._ZN7Buffers9track1PtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2180   .data._ZN7Buffers9track2PtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2188   .data._ZN7Buffers9track3PtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2196   .data._ZN7Buffers9track4PtrE:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s:2204   .sdram_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2168   .data._ZN7Buffers6t4mPtrE:0000000000000000 _ZN7Buffers6t4mPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2160   .data._ZN7Buffers6t3mPtrE:0000000000000000 _ZN7Buffers6t3mPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2152   .data._ZN7Buffers6t2mPtrE:0000000000000000 _ZN7Buffers6t2mPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2144   .data._ZN7Buffers6t1mPtrE:0000000000000000 _ZN7Buffers6t1mPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2136   .data._ZN7Buffers6mixPtrE:0000000000000000 _ZN7Buffers6mixPtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2228   .sdram_bss:0000000000753080 _ZN7Buffers3t4mE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2232   .sdram_bss:00000000007530a0 _ZN7Buffers3t3mE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2236   .sdram_bss:00000000007530c0 _ZN7Buffers3t2mE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2208   .sdram_bss:0000000000000000 _ZN7Buffers3t1mE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2240   .sdram_bss:00000000007530e0 _ZN7Buffers3mixE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2200   .data._ZN7Buffers9track4PtrE:0000000000000000 _ZN7Buffers9track4PtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2192   .data._ZN7Buffers9track3PtrE:0000000000000000 _ZN7Buffers9track3PtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2184   .data._ZN7Buffers9track2PtrE:0000000000000000 _ZN7Buffers9track2PtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2176   .data._ZN7Buffers9track1PtrE:0000000000000000 _ZN7Buffers9track1PtrE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2244   .sdram_bss:0000000000afc8e0 _ZN7Buffers6track4E
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2248   .sdram_bss:0000000000ea60e0 _ZN7Buffers6track3E
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2252   .sdram_bss:000000000124f8e0 _ZN7Buffers6track2E
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2256   .sdram_bss:00000000015f90e0 _ZN7Buffers6track1E
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2076   .bss.encoderDriver:0000000000000000 encoderDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2090   .bss.mixer:0000000000000000 mixer
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2097   .bss.sample:0000000000000000 sample
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2083   .bss.hw:0000000000000000 hw
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2072   .bss.encoderDriver:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2079   .bss.hw:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2086   .bss.mixer:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2093   .bss.sample:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2100   .data._ZN7Buffers10t1delayPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2108   .data._ZN7Buffers10t2delayPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2116   .data._ZN7Buffers10t3delayPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2124   .data._ZN7Buffers10t4delayPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2132   .data._ZN7Buffers6mixPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2140   .data._ZN7Buffers6t1mPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2148   .data._ZN7Buffers6t2mPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2156   .data._ZN7Buffers6t3mPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2164   .data._ZN7Buffers6t4mPtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2172   .data._ZN7Buffers9track1PtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2180   .data._ZN7Buffers9track2PtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2188   .data._ZN7Buffers9track3PtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2196   .data._ZN7Buffers9track4PtrE:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s:2204   .sdram_bss:0000000000000000 $d
                            .group:0000000000000000 _ZN5daisy9DaisySeedD5Ev
                            .group:0000000000000000 _ZNSt14_Function_baseD5Ev
                            .group:0000000000000000 _ZN13EncoderDriverD5Ev
@@ -7182,7 +7181,7 @@ _ZN5Mixer15initMixChannelsEPPfS1_S1_S1_
 _ZN5Mixer6initFXEP13EncoderDriverPPN7daisysp9DelayLineIfLj240000EEES6_S6_S6_
 _ZN5Mixer11initTrackIOEPN5daisy9DaisySeedE7TrackIOS3_S3_S3_
 _ZSt25__throw_bad_function_callv
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccneZ5vR.s 			page 121
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccLtFXUB.s 			page 121
 
 
 _ZN5daisy6Switch8DebounceEv

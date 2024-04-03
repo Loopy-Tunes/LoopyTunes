@@ -9,16 +9,15 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
     }
     
     shifter.Init(4800);
+    shifter.SetFun(0.f);
 
     bypass.param.init(0, 1, 1, ParameterIDs::PitchShifter::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::amount, trackID, [this] (float a) { setAmount(a); });
     semitones.param.init(-12, 12, 1, ParameterIDs::PitchShifter::semitones, trackID, [this] (float s) { shifter.SetTransposition(s); });
-    rand.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::random, trackID, [this] (float r) { shifter.SetFun(r); });
 
     //driver->addParameter(&bypass.param);
     //driver->addParameter(&amount.param);
     //driver->addParameter(&semitones.param);
-    //driver->addParameter(&rand.param);
 
     setDefaultValues();
 }

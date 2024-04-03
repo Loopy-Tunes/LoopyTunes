@@ -29,7 +29,7 @@ public:
     inline void setBypass(float b) { bypass.value = b; }
     inline void setAmount(float a) { amount.value = a; }
     inline void setFuncControl(float fc) { funcControl.value = fc; }
-    inline void setWaveshape(float ws) { waveshape.value = ws; }
+    inline void setMode(float m) { mode.value = m; }
     
     inline void scaleControlParam();
 
@@ -70,7 +70,7 @@ private:
     SteppedParameterWrapper bypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper funcControl;
-    SteppedParameterWrapper waveshape;
+    SteppedParameterWrapper mode;
 };
 
 #endif
