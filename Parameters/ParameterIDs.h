@@ -1,67 +1,65 @@
 #include <string>
 
-typedef const std::string ID;
-
 namespace ParameterIDs
 {
     namespace Tracks
     {
-        ID Track1 = "1";
-        ID Track2 = "2";
-        ID Track3 = "3";
-        ID Track4 = "4";
-    };
+        static const std::string Track1 = "1";
+        static const std::string Track2 = "2";
+        static const std::string Track3 = "3";
+        static const std::string Track4 = "4";
+    }
 
     namespace PitchShifter
     {
-        ID effect = "PitchShifter";
+        static const std::string effect = "PitchShifter";
 
-        ID bypass = effect + "Bypass";
-        ID amount = effect + "Amount";
-        ID semitones = effect+ "Semitones";
-        ID random = effect + "Random";
-    };
+        static const std::string bypass = effect + "Bypass";
+        static const std::string amount = effect + "Amount";
+        static const std::string semitones = effect+ "Semitones";
+        static const std::string random = effect + "Random";
+    }
 
     namespace Waveshaper
     {
-        ID effect = "Waveshaper";
+        static const std::string effect = "Waveshaper";
 
-        ID bypass = effect + "Bypass";
-        ID amount = effect + "Amount";
-        ID funcControl = effect + "FuncControl";
-        ID waveshape = effect + "Waveshape";
-    };
+        static const std::string bypass = effect + "Bypass";
+        static const std::string amount = effect + "Amount";
+        static const std::string funcControl = effect + "FuncControl";
+        static const std::string waveshape = effect + "Waveshape";
+    }
 
     namespace Filter
     {
-        ID effect = "Filter";
+        static const std::string effect = "Filter";
 
-        ID bypass = effect + "Bypass";
-        ID amount = effect + "Amount";
-        ID frequency = effect + "Frequency";
-        ID resonance = effect + "Resonance";
-        ID mode = effect + "Mode";
-    };
+        static const std::string bypass = effect + "Bypass";
+        static const std::string amount = effect + "Amount";
+        static const std::string frequency = effect + "Frequency";
+        static const std::string resonance = effect + "Resonance";
+        static const std::string mode = effect + "Mode";
+    }
 
     namespace Delay
     {
-        ID effect = "Delay";
+        static const std::string effect = "Delay";
 
-        ID bypass = effect + "Bypass";
-        ID amount = effect + "Amount";
-        ID size = effect + "Size";
-        ID feedback = effect + "Feedback";
-    };
+        static const std::string bypass = effect + "Bypass";
+        static const std::string amount = effect + "Amount";
+        static const std::string size = effect + "Size";
+        static const std::string feedback = effect + "Feedback";
+    }
 
     namespace Reverb
     {
-        ID effect = "Reverb";
+        static const std::string effect = "Reverb";
 
-        ID bypass = effect + "Bypass";
-        ID amount = effect + "Amount";
-        ID mode = effect + "Mode";
-        ID size = effect + "size";
-        ID damp = effect + "Damp";
-        ID width = effect + "Width";
-    };
+        static const std::string bypass = effect + "Bypass";
+        static const std::string amount = effect + "Amount";
+        static const std::string mode = effect + "Mode";
+        static const std::string size = effect + "size";
+        static const std::string damp = effect + "Damp";
+        static const std::string width = effect + "Width";
+    }
 };

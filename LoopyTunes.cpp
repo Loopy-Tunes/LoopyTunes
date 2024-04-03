@@ -74,7 +74,7 @@ namespace Buffers
 void init()
 {
 	// initialise Daisy Seed
-	hw.Init(true); // true = boost enabled
+	hw.Init(); // true = boost enabled
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
