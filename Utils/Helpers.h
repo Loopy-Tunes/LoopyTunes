@@ -1,7 +1,7 @@
 #include "stddef.h"
 #include <algorithm>
 
-// channel IDs
+// ADC channelIDs
 enum ChannelIDs
 {
     AMP1 = 0,
@@ -29,14 +29,6 @@ struct TrackInformation
 {
     bool isEmpty;
     size_t loopLength;
-};
-
-// track I/O
-struct TrackIO
-{
-    ChannelIDs amp;
-    dsy_gpio_pin record;
-    dsy_gpio_pin play;
 };
 
 // track state

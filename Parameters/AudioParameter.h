@@ -22,7 +22,7 @@ class AudioParameter
 {
 public:
 
-    void init(DaisySeed* seed, type mi, type ma, CurveType c, uint8_t ID, std::function<void(type)> cb)
+    void init(DaisySeed* seed, type mi, type ma, CurveType c, int ID, std::function<void(type)> cb)
     {
         hw = seed;
         input = 0;

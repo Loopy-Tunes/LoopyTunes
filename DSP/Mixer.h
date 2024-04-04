@@ -14,7 +14,6 @@ public:
 
     void init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
     void initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2]);
-    void initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, TrackIO t4);
     void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
                                        DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2]);
     void tick();
@@ -30,10 +29,10 @@ public:
     void setIsRecording() { track1.track.setIsRecording(); }
     void setIsPlaying() { track1.track.setIsPlaying(); }
 
-    void setTrack1Pan(float p){ track1.pan.value = p; }
-    void setTrack2Pan(float p){ track2.pan.value = p; }
-    void setTrack3Pan(float p){ track3.pan.value = p; }
-    void setTrack4Pan(float p){ track4.pan.value = p; }
+    //void setTrack1Pan(float p){ track1.pan.value = p; }
+    //void setTrack2Pan(float p){ track2.pan.value = p; }
+    //void setTrack3Pan(float p){ track3.pan.value = p; }
+    //void setTrack4Pan(float p){ track4.pan.value = p; }
 
     void setTrack1Gain(float g){ track1.gain.value = g; }
     void setTrack2Gain(float g){ track2.gain.value = g; }
@@ -47,7 +46,7 @@ private:
     {
         Track track;
         float* buffer[2];
-        AudioParameterWrapper<float> pan;
+        //AudioParameterWrapper<float> pan;
         AudioParameterWrapper<float> gain;
 
         inline float getCurVal(int chan, size_t index)

@@ -18,8 +18,7 @@ class Track
 {
 public:
 
-    void init(float* mem[2], int ID);
-    void initIO(TrackIO io);
+    void init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p);
     void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
     void clearBuffer();
@@ -53,7 +52,7 @@ private:
     //PitchShift pitchShift;
     //Waveshaper shaper;
     //Filter filter;
-    Delay delay;
+    //Delay delay;
     //Reverb reverb;
 };
 

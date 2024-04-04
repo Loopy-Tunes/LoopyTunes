@@ -1,8 +1,11 @@
 #include "Track.h"
 
-void Track::init(float* mem[2], int ID)
+void Track::init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p)
 {
     trackID = ID;
+
+    record.init(r, 1000, [this]{ setIsRecording(); });
+    play.init(p, 1000, [this]{ setIsPlaying(); });
 
     state = STOPPED;
     ph.reset();
@@ -16,16 +19,10 @@ void Track::init(float* mem[2], int ID)
     clearBuffer();
 }
 
-void Track::initIO(TrackIO io)
-{
-    record.init(io.record, 1000, [this]{ setIsRecording(); });
-    play.init(io.play, 1000, [this]{ setIsPlaying(); });
-}
-
 void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
 {
     //pitchShift.init(driver, trackID);
-    delay.init(driver, trackID, dl);
+    //delay.init(driver, trackID, dl);
     //shaper.init(driver, trackID);
     //reverb.init(driver, trackID);
 }
@@ -136,6 +133,6 @@ void Track::processOutputBlock(float* output[2], size_t size)
    
     //pitchShift.process(output, size);
     //shaper.processBlock(output, size); 
-    delay.processBlock(output, size);
+    //delay.processBlock(output, size);
     //reverb.processBlock(output, size);
 }

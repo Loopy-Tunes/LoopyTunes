@@ -12,10 +12,15 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
         mix[R][i] = 0.0f;
     }
     
-    track1.track.init(t1, ParameterIDs::Tracks::Track1);
-    track2.track.init(t2, ParameterIDs::Tracks::Track1);
-    track3.track.init(t3, ParameterIDs::Tracks::Track1);
-    track4.track.init(t4, ParameterIDs::Tracks::Track1);
+    track1.track.init(t1, ParameterIDs::Tracks::Track1, seed::D19, seed::D20);
+    track2.track.init(t2, ParameterIDs::Tracks::Track2, seed::D21, seed::D22);
+    track3.track.init(t3, ParameterIDs::Tracks::Track3, seed::D23, seed::D24);
+    track4.track.init(t4, ParameterIDs::Tracks::Track4, seed::D6, seed::D5);
+
+    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
+    track2.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float g) { setTrack2Gain(g); });
+    track3.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float g) { setTrack3Gain(g); });
+    track4.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float g) { setTrack4Gain(g); });
 
     mixDiv = 0;
     master.param.init(seed, 0, 1, LINEAR, ChannelIDs::MASTER, [this] ( float v) { setMasterVolume(v); }); 
@@ -32,19 +37,6 @@ void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[
         track3.buffer[i] = t3[i];
         track4.buffer[i] = t4[i];
     }
-}
-
-void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, TrackIO t4)
-{
-    track1.gain.param.init(seed, 0, 1, LINEAR, t1.amp, [this] (float g) { setTrack1Gain(g); });
-    track2.gain.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float g) { setTrack2Gain(g); });
-    track3.gain.param.init(seed, 0, 1, LINEAR, t3.amp, [this] (float g) { setTrack3Gain(g); });
-    track4.gain.param.init(seed, 0, 1, LINEAR, t4.amp, [this] (float g) { setTrack4Gain(g); });
-
-    track1.track.initIO(t1);
-    track2.track.initIO(t2);
-    track3.track.initIO(t3);
-    track4.track.initIO(t4);
 }
 
 void Mixer::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
@@ -87,32 +79,30 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
 
 void Mixer::panChannels(size_t size)
 {
-    panMixBuffer(track1.buffer, track1.pan.value, size);
-    panMixBuffer(track2.buffer, track2.pan.value, size);
-    panMixBuffer(track3.buffer, track3.pan.value, size);
-    panMixBuffer(track4.buffer, track4.pan.value, size);
+    //panMixBuffer(track1.buffer, track1.pan.value, size);
+    //panMixBuffer(track2.buffer, track2.pan.value, size);
+    //panMixBuffer(track3.buffer, track3.pan.value, size);
+    //panMixBuffer(track4.buffer, track4.pan.value, size);
 }
 
 void Mixer::mixOutput(size_t size)
 {
     setMixDiv();
 
-    // process panning
-    
     // if mix = 0
         // audio through
 /*
     for(size_t i = 0 ; i < size ; i++)
     {
-        mix[L][i] = (track1.getCurVal(L, i) * track1.gain.value
-                    + track2.getCurVal(L, i) * track2.gain.value
-                    + track3.getCurVal(L, i) * track3.gain.value
-                    + track4.getCurVal(L, i)) * track4.gain.value
+        mix[L][i] = (track1.getCurVal(L, i)
+                    + track2.getCurVal(L, i)
+                    + track3.getCurVal(L, i)
+                    + track4.getCurVal(L, i))
                     / mixDiv;
-        mix[R][i] = (track1.getCurVal(R, i) * track1.gain.value
-                    + track2.getCurVal(R, i) * track2.gain.value
-                    + track3.getCurVal(R, i) * track3.gain.value
-                    + track4.getCurVal(R, i)) *track4.gain.value
+        mix[R][i] = (track1.getCurVal(R, i)
+                    + track2.getCurVal(R, i)
+                    + track3.getCurVal(R, i)
+                    + track4.getCurVal(R, i))
                     / mixDiv;
     }
 */  

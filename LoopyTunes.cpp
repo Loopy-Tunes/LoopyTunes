@@ -88,9 +88,6 @@ void init()
         Buffers::t1m[R][i] = 0.0f;
     }
 
-	// initialise global variables
-	//sample = 0;
-
 	// initialise GUI
 	encoderDriver.init(seed::D4, seed::D13, seed::D14, navCallback);
 
@@ -98,16 +95,6 @@ void init()
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
-}
-
-void initTrackIO()
-{
-	TrackIO t1IO {ChannelIDs::AMP1, seed::D19, seed::D20};
-	TrackIO t2IO {ChannelIDs::AMP2, seed::D21, seed::D22};
-	TrackIO t3IO {ChannelIDs::AMP3, seed::D23, seed::D24};
-	TrackIO t4IO {ChannelIDs::AMP4, seed::D6, seed::D5};
-
-	mixer.initTrackIO(&hw, t1IO, t2IO, t3IO, t4IO);
 }
 
 inline void tick(size_t size)
@@ -126,7 +113,7 @@ inline void tick(size_t size)
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	tick(size);
+	//tick(size);
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
@@ -135,8 +122,10 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 int main(void)
 {
 	init();
-	initTrackIO();
 	hw.StartAudio(AudioCallback);
+
+	// init global variabls
+	sample = 0;
 
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
@@ -150,7 +139,7 @@ int main(void)
 	
 	while(1) 
 	{
-		//mixer.tick();
+		mixer.tick();
 		//encoderDriver.tick();
 	}
 }
