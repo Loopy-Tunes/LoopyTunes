@@ -41,11 +41,6 @@ void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, Tra
     track3.gain.param.init(seed, 0, 1, LINEAR, t3.amp, [this] (float g) { setTrack3Gain(g); });
     track4.gain.param.init(seed, 0, 1, LINEAR, t4.amp, [this] (float g) { setTrack4Gain(g); });
 
-    track1.pan.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float p) { setTrack1Pan(p); });
-    track2.pan.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float p) { setTrack2Pan(p); });
-    track3.pan.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float p) { setTrack3Pan(p); });
-    track4.pan.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float p) { setTrack4Pan(p); });
-
     track1.track.initIO(t1);
     track2.track.initIO(t2);
     track3.track.initIO(t3);
@@ -65,19 +60,19 @@ void Mixer::tick()
 {
     track1.track.tick();
     track1.gain.param.tick();
-    track1.pan.param.tick();
+    //track1.pan.param.tick();
 
     track2.track.tick();
     track2.gain.param.tick();
-    track2.pan.param.tick();
+    //track2.pan.param.tick();
 
     track3.track.tick();
     track3.gain.param.tick();
-    track3.pan.param.tick();
+    //track3.pan.param.tick();
 
     track4.track.tick();
     track4.gain.param.tick();
-    track4.pan.param.tick();
+    //track4.pan.param.tick();
 
     master.param.tick();
 }
@@ -102,24 +97,30 @@ void Mixer::mixOutput(size_t size)
 {
     setMixDiv();
 
+    // process panning
+    
     // if mix = 0
         // audio through
-
+/*
     for(size_t i = 0 ; i < size ; i++)
     {
-        mix[L][i] = (track1.getCurVal(L, i) 
-                    + track2.getCurVal(L, i) 
-                    + track3.getCurVal(L, i) 
-                    + track4.getCurVal(L, i)) 
+        mix[L][i] = (track1.getCurVal(L, i) * track1.gain.value
+                    + track2.getCurVal(L, i) * track2.gain.value
+                    + track3.getCurVal(L, i) * track3.gain.value
+                    + track4.getCurVal(L, i)) * track4.gain.value
                     / mixDiv;
-        mix[R][i] = (track1.getCurVal(R, i) 
-                    + track2.getCurVal(R, i) 
-                    + track3.getCurVal(R, i) 
-                    + track4.getCurVal(R, i)) 
+        mix[R][i] = (track1.getCurVal(R, i) * track1.gain.value
+                    + track2.getCurVal(R, i) * track2.gain.value
+                    + track3.getCurVal(R, i) * track3.gain.value
+                    + track4.getCurVal(R, i)) *track4.gain.value
                     / mixDiv;
     }
-
-    // pass mix bus through limiter
+*/  
+    for(size_t i = 0 ; i < size ; i++)
+    {
+        mix[L][i] = track1.getCurVal(L, i);
+        mix[R][i] = track1.getCurVal(R, i);
+    }
 }
 
 void Mixer::processOutputBlock(float* left, float* right, size_t size)
@@ -134,11 +135,11 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        limiter.ProcessBlock(&mix[L][i], size, 0.f);
-        limiter.ProcessBlock(&mix[R][i], size, 0.f);
+        //limiter.ProcessBlock(&mix[L][i], size, 0.f);
+        //limiter.ProcessBlock(&mix[R][i], size, 0.f);
 
-        left[i] = mix[L][i] * master.value;
-        right[i] = mix[R][i] * master.value;
+        left[i] = mix[L][i];// * master.value;
+        right[i] = mix[R][i];// * master.value;
     }
 }
 

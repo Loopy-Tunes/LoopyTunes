@@ -23,7 +23,7 @@ TO DO:
 DaisySeed hw;
 
 // Global
-size_t sample;
+volatile size_t sample;
 
 // DSP
 Mixer mixer;
@@ -70,6 +70,11 @@ namespace Buffers
 	DelayLine<float, MAXDELAY>* t4delayPtr[2] = {&t4delay[L], &t4delay[R]};
 };
 
+void navCallback()
+{
+
+}
+
 void init()
 {
 	// initialise Daisy Seed
@@ -84,10 +89,10 @@ void init()
     }
 
 	// initialise global variables
-	sample = 0;
+	//sample = 0;
 
 	// initialise GUI
-	//encoderDriver.init(seed::D4, seed::D13, seed::D14, nullptr);
+	encoderDriver.init(seed::D4, seed::D13, seed::D14, navCallback);
 
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
@@ -143,11 +148,9 @@ int main(void)
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	
-	hw.StartLog();
-	
 	while(1) 
 	{
-		mixer.tick();
-		encoderDriver.tick();
+		//mixer.tick();
+		//encoderDriver.tick();
 	}
 }
