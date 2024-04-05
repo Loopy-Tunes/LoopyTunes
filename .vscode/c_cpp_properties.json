@@ -32,7 +32,10 @@
                 "${workspaceFolder}/../../../DaisySP//**"
             ],
             "name": "macOS",
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "${default}",
+            "compilerArgs": [
+                "-fsanitize=undefined"
+            ]
         }
     ],
     "version": 4

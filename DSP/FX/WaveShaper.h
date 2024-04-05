@@ -24,7 +24,6 @@ public:
 
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
-    void tick();
 
     inline void setBypass(float b) { bypass.value = b; }
     inline void setAmount(float a) { amount.value = a; }

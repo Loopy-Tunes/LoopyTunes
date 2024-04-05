@@ -16,10 +16,10 @@ void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>*
     size.param.init(0, 10000, 10, ParameterIDs::Delay::size, trackID, [this] (float s) { setDelay(toSize(s)); });
     feedback.param.init(0, 1, 0.05, ParameterIDs::Delay::feedback, trackID, [this] (float f) {setFeedback(f); });
 
-    //driver->addParameter(&bypass.param);
-    //driver->addParameter(&amount.param);
-    //driver->addParameter(&size.param);
-    //driver->addParameter(&feedback.param);
+    driver->addParameter(&bypass.param);
+    driver->addParameter(&amount.param);
+    driver->addParameter(&size.param);
+    driver->addParameter(&feedback.param);
 
     setDefaultValues();
 }
@@ -30,11 +30,6 @@ void Delay::setDefaultValues()
     amount.value = delayDefs.amount;
     setDelay(delayDefs.size);
     feedback.value = delayDefs.feedback;
-}
-
-void Delay::tick()
-{
-
 }
 
 void Delay::processBlock(float* input[2], size_t size)

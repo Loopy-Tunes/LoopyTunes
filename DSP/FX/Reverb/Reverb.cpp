@@ -9,12 +9,12 @@ void Reverb::init(EncoderDriver* driver, int trackID)
     damp.param.init(0, 1, 0.05, ParameterIDs::Reverb::damp, trackID, [this] (float d) { model.setdamp(d); });
     width.param.init(0, 1, 0.05, ParameterIDs::Reverb::width, trackID, [this] (float w) { model.setwidth(w); });
 
-    //driver->addParameter(&bypass.param);
-    //driver->addParameter(&amount.param);
-    //driver->addParameter(&mode.param);
-    //driver->addParameter(&size.param);
-    //driver->addParameter(&damp.param);
-    //driver->addParameter(&width.param);
+    driver->addParameter(&bypass.param);
+    driver->addParameter(&amount.param);
+    driver->addParameter(&mode.param);
+    driver->addParameter(&size.param);
+    driver->addParameter(&damp.param);
+    driver->addParameter(&width.param);
 
     model.setdry(1);
     setDefaultValues();
@@ -28,11 +28,6 @@ void Reverb::setDefaultValues()
     model.setroomsize(reverbDefs.size);
     model.setdamp(reverbDefs.damp);
     model.setwidth(reverbDefs.width);
-}
-
-void Reverb::tick()
-{
-
 }
 
 void Reverb::setAmount(float mix)

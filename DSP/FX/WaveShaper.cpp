@@ -35,10 +35,10 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     funcControl.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
     mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float m) { setMode(m); });
 
-    //driver->addParameter(&bypass.param);
-    //driver->addParameter(&amount.param);
-    //driver->addParameter(&funcControl.param);
-    //driver->addParameter(&waveshape.param);
+    driver->addParameter(&bypass.param);
+    driver->addParameter(&amount.param);
+    driver->addParameter(&funcControl.param);
+    driver->addParameter(&mode.param);
 
     setDefaultValues();
 }
@@ -50,11 +50,6 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     funcControl.value = waveshaperDefs.input;
     mode.value = waveshaperDefs.mode;
  }
-
-void Waveshaper::tick()
-{
-
-}
 
 inline void Waveshaper::scaleControlParam()
 {
