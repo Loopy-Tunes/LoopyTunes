@@ -30,7 +30,7 @@ size_t sample;
 Mixer mixer;
 
 // UI
-EncoderDriver encoderDriver;
+EncoderDriver encoder;
 
 // buffers
 namespace Buffers
@@ -89,13 +89,10 @@ void init()
         Buffers::t1m[R][i] = 0.0f;
     }
 
-	// initialise GUI
-	encoderDriver.init(seed::D4, seed::D13, seed::D14, navCallback);
-
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
-	mixer.initFX(&encoderDriver, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
+	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
 }
 
 inline void tick(size_t size)
@@ -103,7 +100,7 @@ inline void tick(size_t size)
 	if(sample >= MACROBLOCK)
 	{
 		mixer.tick();
-		encoderDriver.tick();
+		//encoder.tick();
 		sample = 0;
 	}
 	else
@@ -138,9 +135,10 @@ int main(void)
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 	
+	// initialise drivers
+	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+
 	while(1) 
 	{
-		//mixer.tick();
-		//encoderDriver.tick();
 	}
 }
