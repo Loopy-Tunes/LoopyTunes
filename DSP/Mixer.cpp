@@ -40,10 +40,10 @@ void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[
 
 void Mixer::initTrackIO(DaisySeed* seed, TrackIO t1, TrackIO t2, TrackIO t3, TrackIO t4)
 {
-    track1.gain.param.init(seed, 0, 1, LINEAR, t1.amp, [this] (float g) { setTrack1Gain(g); });
-    track2.gain.param.init(seed, 0, 1, LINEAR, t2.amp, [this] (float g) { setTrack2Gain(g); });
-    track3.gain.param.init(seed, 0, 1, LINEAR, t3.amp, [this] (float g) { setTrack3Gain(g); });
-    track4.gain.param.init(seed, 0, 1, LINEAR, t4.amp, [this] (float g) { setTrack4Gain(g); });
+    track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
+    track2.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float g) { setTrack2Gain(g); });
+    track3.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP3, [this] (float g) { setTrack3Gain(g); });
+    track4.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP4, [this] (float g) { setTrack4Gain(g); });
 
     track1.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack1Pan(p); });
     track2.pan.param.init(seed, 0, 1, LINEAR, ChannelIDs::ENCODER, [this] (float p) { setTrack2Pan(p); });
