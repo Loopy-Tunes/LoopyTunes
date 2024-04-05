@@ -38,6 +38,9 @@ public:
         currentParam = 0;
         valueA = 0xFF;
         valueB = 0xFF;
+
+        // FOR TESTING
+        currentParam = 4;
     }
 
     void tick()
@@ -45,6 +48,9 @@ public:
         btn.Debounce();
         if(btn.Pressed())
             buttonCallback();
+
+        if(isNavigation)
+            return;
 
         now = System::GetNow();
         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.

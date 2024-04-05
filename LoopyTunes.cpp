@@ -103,7 +103,7 @@ inline void tick(size_t size)
 	if(sample >= MACROBLOCK)
 	{
 		mixer.tick();
-		//encoderDriver.tick();
+		encoderDriver.tick();
 		sample = 0;
 	}
 	else
