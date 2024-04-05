@@ -1,9 +1,9 @@
 #ifndef PITCHSHIFTER_H
 #define PITCHSHIFTER_H
 
-#include "../../Parameters/AudioParameter.h"
 #include "../../Parameters/DefaultValues.h"
 #include "../../Drivers/EncoderDriver.h"
+#include "../../Utils/Constants.h"
 
 /***************************************************************************************//**
  *  Class name: PitchShift

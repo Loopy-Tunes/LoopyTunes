@@ -93,7 +93,9 @@ build/PitchShift.o: DSP/FX/PitchShift.cpp \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- DSP/FX/PitchShift.h DSP/FX/../../Parameters/AudioParameter.h \
+ DSP/FX/PitchShift.h DSP/FX/../../Parameters/DefaultValues.h \
+ DSP/FX/../../Drivers/EncoderDriver.h \
+ DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
  ../../../libDaisy//src/daisy_seed.h ../../../libDaisy//src/daisy.h \
  ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h \
  ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/per/tim.h \
@@ -217,12 +219,8 @@ build/PitchShift.o: DSP/FX/PitchShift.cpp \
  ../../../DaisySP//Source/Utility/metro.h \
  ../../../DaisySP//Source/Utility/samplehold.h \
  ../../../DaisySP//Source/Utility/smooth_random.h \
- DSP/FX/../../Parameters/../Utils/Helpers.h \
- DSP/FX/../../Parameters/../Utils/Constants.h \
- DSP/FX/../../Parameters/DefaultValues.h \
- DSP/FX/../../Drivers/EncoderDriver.h \
- DSP/FX/../../Drivers/../Parameters/SteppedParameter.h \
- DSP/FX/../../Drivers/../Parameters/ParameterIDs.h
+ DSP/FX/../../Drivers/../Parameters/ParameterIDs.h \
+ DSP/FX/../../Utils/Constants.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -318,7 +316,9 @@ build/PitchShift.o: DSP/FX/PitchShift.cpp \
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 DSP/FX/PitchShift.h:
-DSP/FX/../../Parameters/AudioParameter.h:
+DSP/FX/../../Parameters/DefaultValues.h:
+DSP/FX/../../Drivers/EncoderDriver.h:
+DSP/FX/../../Drivers/../Parameters/SteppedParameter.h:
 ../../../libDaisy//src/daisy_seed.h:
 ../../../libDaisy//src/daisy.h:
 ../../../libDaisy//src/daisy_core.h:
@@ -460,9 +460,5 @@ DSP/FX/../../Parameters/AudioParameter.h:
 ../../../DaisySP//Source/Utility/metro.h:
 ../../../DaisySP//Source/Utility/samplehold.h:
 ../../../DaisySP//Source/Utility/smooth_random.h:
-DSP/FX/../../Parameters/../Utils/Helpers.h:
-DSP/FX/../../Parameters/../Utils/Constants.h:
-DSP/FX/../../Parameters/DefaultValues.h:
-DSP/FX/../../Drivers/EncoderDriver.h:
-DSP/FX/../../Drivers/../Parameters/SteppedParameter.h:
 DSP/FX/../../Drivers/../Parameters/ParameterIDs.h:
+DSP/FX/../../Utils/Constants.h:

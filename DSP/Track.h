@@ -6,6 +6,7 @@
 #include "FX/Filter.h"
 #include "FX/Delay.h"
 #include "FX/Reverb/Reverb.h"
+#include "../Parameters/AudioParameter.h"
 #include "../Parameters/BinaryParameter.h"
 #include <utility>
 
