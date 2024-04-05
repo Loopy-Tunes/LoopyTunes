@@ -52,19 +52,15 @@ void Mixer::tick()
 {
     track1.track.tick();
     track1.gain.param.tick();
-    //track1.pan.param.tick();
 
     track2.track.tick();
     track2.gain.param.tick();
-    //track2.pan.param.tick();
 
     track3.track.tick();
     track3.gain.param.tick();
-    //track3.pan.param.tick();
 
     track4.track.tick();
     track4.gain.param.tick();
-    //track4.pan.param.tick();
 
     master.param.tick();
 }
