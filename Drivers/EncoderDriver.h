@@ -17,6 +17,17 @@ public:
 
     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
     {
+        state = DISARMED;
+        prevUpdate = 0;
+        isUpdated = false;
+
+        isNavigation = false;
+        navCallback = navCb;
+
+        currentParam = 0;
+        valueA = 0xFF;
+        valueB = 0xFF;
+
         btn.Init(button);
         
         channelA.pin = a;
@@ -28,17 +39,6 @@ public:
         dsy_gpio_init(&channelA);
         dsy_gpio_init(&channelB);
 
-        state = DISARMED;
-        prevUpdate = System::GetNow();
-        isUpdated = false;
-
-        isNavigation = false;
-        navCallback = navCb;
-
-        currentParam = 0;
-        valueA = 0xFF;
-        valueB = 0xFF;
-
         // FOR TESTING
         currentParam = 4;
     }
@@ -49,10 +49,10 @@ public:
         if(btn.Pressed())
             buttonCallback();
 
-        if(isNavigation)
-            return;
-
-        now = System::GetNow();
+        //if(isNavigation)
+            //return;
+        /*
+        u_int32_t now = System::GetNow();
         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
         {
             prevUpdate = now;
@@ -69,6 +69,7 @@ public:
                     parameters[currentParam]->decrement();
             }
         }
+        */
     }
 
     void setIsNavigation(bool isNav)
@@ -124,7 +125,6 @@ private:
 
     bool isUpdated;
     uint32_t prevUpdate;
-    uint32_t now;
 
     bool isNavigation;
     std::function<void()> navCallback;

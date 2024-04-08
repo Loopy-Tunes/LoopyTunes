@@ -136,7 +136,7 @@ int main(void)
 	hw.adc.Start();
 	
 	// initialise drivers
-	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+	//encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
 
 	while(1) 
 	{
