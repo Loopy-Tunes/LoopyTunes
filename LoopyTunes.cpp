@@ -25,6 +25,7 @@ DaisySeed hw;
 
 // Global
 size_t sample;
+size_t prevSample;
 
 // DSP
 Mixer mixer;
@@ -83,16 +84,10 @@ void init()
 	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
-	for(size_t i = 0 ; i < 3 ; i++)
-    {
-        Buffers::t1m[L][i] = 0.0f;
-        Buffers::t1m[R][i] = 0.0f;
-    }
-
 	// initialise DSP
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
-	//mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
+	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
 }
 
 inline void tick(size_t size)
@@ -100,7 +95,7 @@ inline void tick(size_t size)
 	if(sample >= MACROBLOCK)
 	{
 		mixer.tick();
-		//encoder.tick();
+		encoder.tick();
 		sample = 0;
 	}
 	else
@@ -125,6 +120,9 @@ int main(void)
 	// init global variabls
 	sample = 0;
 
+	// initialise drivers
+	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
@@ -134,11 +132,10 @@ int main(void)
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
-	
-	// initialise drivers
-	//encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
 
 	while(1) 
 	{
+		//mixer.tick();
+		//encoder.tick();
 	}
 }

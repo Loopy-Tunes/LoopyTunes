@@ -45,13 +45,6 @@ public:
 
     void tick()
     {
-        btn.Debounce();
-        if(btn.Pressed())
-            buttonCallback();
-
-        //if(isNavigation)
-            //return;
-        /*
         u_int32_t now = System::GetNow();
         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
         {
@@ -61,7 +54,7 @@ public:
             valueA = (valueA << 1) | dsy_gpio_read(&channelA);
             valueB = (valueB << 1) | dsy_gpio_read(&channelB);
 
-            if(state != DISARMED)
+            if(state != DISARMED && !isNavigation)
             {
                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
                     parameters[currentParam]->increment();
@@ -69,7 +62,10 @@ public:
                     parameters[currentParam]->decrement();
             }
         }
-        */
+
+        btn.Debounce();
+        if(btn.Pressed())
+            buttonCallback();
     }
 
     void setIsNavigation(bool isNav)
