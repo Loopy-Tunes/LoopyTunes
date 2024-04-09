@@ -16,53 +16,47 @@ namespace ParameterIDs
     {
         const int effect = 10;
 
-        const int bypass = effect + 1;
-        const int amount = effect + 2;
-        const int semitones = effect + 3;
-        const int random = effect + 4;
+        const int amount = effect + 1;
+        const int semitones = effect + 2;
+        const int random = effect + 3;
     }
 
     namespace Waveshaper
     {
         const int effect = 20;
 
-        const int bypass = effect + 1;
-        const int amount = effect + 2;
-        const int funcControl = effect + 3;
-        const int waveshape = effect + 4;
+        const int amount = effect + 1;
+        const int funcControl = effect + 2;
+        const int waveshape = effect + 3;
     }
 
     namespace Filter
     {
         const int effect = 30;
 
-        const int bypass = effect + 1;
+        const int mode = effect + 1;
         const int frequency = effect + 2;
-        const int amount = effect + 3;
-        const int resonance = effect + 4;
-        const int mode = effect + 5;
+        const int resonance = effect + 3;
     }
 
     namespace Delay
     {
         const int effect = 40;
 
-        const int bypass = effect + 1;
-        const int amount = effect + 2;
-        const int size = effect + 3;
-        const int feedback = effect + 4;
+        const int amount = effect + 1;
+        const int size = effect + 2;
+        const int feedback = effect + 3;
     }
 
     namespace Reverb
     {
         const int effect = 50;
 
-        const int bypass = effect + 1;
-        const int amount = effect + 2;
-        const int mode = effect + 3;
-        const int size = effect + 4;
-        const int damp = effect + 5;
-        const int width = effect + 6;
+        const int amount = effect + 1;
+        const int mode = effect + 2;
+        const int size = effect + 3;
+        const int damp = effect + 4;
+        const int width = effect + 5;
     }
 }
 

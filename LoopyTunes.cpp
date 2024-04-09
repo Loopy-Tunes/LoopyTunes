@@ -9,13 +9,10 @@ TO DO:
 - Remove clicks at ends of loops (interpolation???) (static envelope???)
 - test reverb dry/wet
 - test filters
-- test pitch shift with new buffer size
-- filter default values
-- test encoder
 - test auto gain feature
 - output LPF to remove noise
 - test mixing
-- turn bypass to boolean
+- GUI hierarchy
 */
 
 // Hardware

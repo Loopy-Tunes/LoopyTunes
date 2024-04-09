@@ -21,7 +21,7 @@ public:
     void setBypass(bool b) { isBypass = b; }
     void setAmount(float a) { amount.value = a; }
 
-    void process(float* input[2], size_t size);
+    void processBlock(float* input[2], size_t size);
 
 private:
 

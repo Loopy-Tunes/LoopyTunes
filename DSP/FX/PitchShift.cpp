@@ -30,7 +30,7 @@ void PitchShift::setDefaultValues()
     shifter.SetDelSize(2400);
 }
 
-void PitchShift::process(float* input[2], size_t size)
+void PitchShift::processBlock(float* input[2], size_t size)
 {
     if(isBypass)
         return;

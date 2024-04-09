@@ -40,6 +40,11 @@ public:
         index.row--;
     }
 
+    bool isTopPressed() { return top.isPressed(); }
+    bool isBottomPressed() { return bottom.isPressed(); }
+    bool isRightPressed() { return right.isPressed(); }
+    bool isLeftPressed() { return left.isPressed(); }
+
 private:
 
     struct Index

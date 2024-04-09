@@ -87,7 +87,7 @@ void Mixer::mixOutput(size_t size)
 
     // if mix = 0
         // audio through
-/*
+
     for(size_t i = 0 ; i < size ; i++)
     {
         mix[L][i] = (track1.getCurVal(L, i)
@@ -100,12 +100,6 @@ void Mixer::mixOutput(size_t size)
                     + track3.getCurVal(R, i)
                     + track4.getCurVal(R, i))
                     / mixDiv;
-    }
-*/  
-    for(size_t i = 0 ; i < size ; i++)
-    {
-        mix[L][i] = track1.getCurVal(L, i);
-        mix[R][i] = track1.getCurVal(R, i);
     }
 }
 

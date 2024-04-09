@@ -133,6 +133,7 @@ void Track::processOutputBlock(float* output[2], size_t size)
    
     //pitchShift.process(output, size);
     //shaper.processBlock(output, size); 
+    filter.processBlock(output, size);
     //delay.processBlock(output, size);
     //reverb.processBlock(output, size);
 }

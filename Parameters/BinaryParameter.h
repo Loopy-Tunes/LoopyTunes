@@ -28,6 +28,8 @@ public:
             callback();
     }
 
+    bool isPressed() { return btn.Pressed(); }
+
 private:
 
     Switch btn;

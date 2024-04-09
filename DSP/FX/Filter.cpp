@@ -19,6 +19,9 @@ void Filter::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&reso);
 
     setDefaultValues();
+
+    // testing  
+    isBypass = false;
 }
 
 void Filter::setDefaultValues()

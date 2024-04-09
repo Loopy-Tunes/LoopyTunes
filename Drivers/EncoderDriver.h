@@ -40,7 +40,7 @@ public:
         dsy_gpio_init(&channelB);
 
         // FOR TESTING
-        currentParam = 4;
+        currentParam = 132;
     }
 
     void tick()
