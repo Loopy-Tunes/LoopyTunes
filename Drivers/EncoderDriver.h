@@ -57,9 +57,9 @@ public:
             if(state != DISARMED && !isNavigation)
             {
                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
-                    parameters[currentParam]->increment();
-                else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
                     parameters[currentParam]->decrement();
+                else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
+                    parameters[currentParam]->increment();
             }
         }
 

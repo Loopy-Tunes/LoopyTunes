@@ -21,10 +21,10 @@ void Track::init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p)
 
 void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
 {
-    //pitchShift.init(driver, trackID);
-    //delay.init(driver, trackID, dl);
-    //shaper.init(driver, trackID);
-    //reverb.init(driver, trackID);
+    pitchShift.init(driver, trackID);
+    delay.init(driver, trackID, dl);
+    shaper.init(driver, trackID);
+    reverb.init(driver, trackID);
 }
 
 void Track::tick()
