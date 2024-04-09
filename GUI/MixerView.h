@@ -25,7 +25,7 @@ private:
     TrackView track2;
     TrackView track3;
     TrackView track4;
-
+    
     bool isOpen;
 };
 

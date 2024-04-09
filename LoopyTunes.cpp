@@ -88,14 +88,18 @@ void init()
 	mixer.init(&hw, Buffers::mixPtr, Buffers::track1Ptr, Buffers::track2Ptr, Buffers::track3Ptr, Buffers::track4Ptr);
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
+
+	// inbitialise GUI
+	mixerView.init();
 }
 
 inline void tick(size_t size)
 {
 	if(sample >= MACROBLOCK)
 	{
-		mixer.tick();
 		encoder.tick();
+		mixer.tick();
+		mixerView.tick();
 		sample = 0;
 	}
 	else

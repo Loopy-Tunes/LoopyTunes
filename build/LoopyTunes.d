@@ -230,7 +230,9 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  DSP/FX/Reverb/allpass.hpp DSP/FX/Reverb/tuning.h \
  DSP/../Parameters/AudioParameter.h DSP/../Parameters/../Utils/Helpers.h \
  DSP/../Parameters/../Utils/Constants.h \
- DSP/../Parameters/BinaryParameter.h GUI/MixerView.h GUI/TrackView.h
+ DSP/../Parameters/BinaryParameter.h GUI/MixerView.h GUI/TrackView.h \
+ GUI/FX/PitchShiftView.h GUI/FX/WaveshaperView.h GUI/FX/FilterView.h \
+ GUI/FX/ReverbView.h GUI/FX/DelayView.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -492,3 +494,8 @@ DSP/../Parameters/../Utils/Constants.h:
 DSP/../Parameters/BinaryParameter.h:
 GUI/MixerView.h:
 GUI/TrackView.h:
+GUI/FX/PitchShiftView.h:
+GUI/FX/WaveshaperView.h:
+GUI/FX/FilterView.h:
+GUI/FX/ReverbView.h:
+GUI/FX/DelayView.h:
