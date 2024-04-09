@@ -81,6 +81,8 @@ public:
             changeState();
     }
 
+    bool getButtonState() { return btn.Pressed(); }
+
     void changeState()
     {
         switch (state)

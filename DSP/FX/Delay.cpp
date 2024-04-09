@@ -26,10 +26,10 @@ void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>*
 
 void Delay::setDefaultValues()
 {
-    bypass.value = delayDefs.bypass;
-    amount.value = delayDefs.amount;
+    setBypass(delayDefs.bypass);
+    setAmount(delayDefs.amount);
     setDelay(delayDefs.size);
-    feedback.value = delayDefs.feedback;
+    setFeedback(delayDefs.feedback);
 }
 
 void Delay::processBlock(float* input[2], size_t size)

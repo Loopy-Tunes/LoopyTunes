@@ -24,8 +24,8 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
 
 void PitchShift::setDefaultValues()
 {
-    bypass.value = pitchShifterDefs.bypass;
-    amount.value = pitchShifterDefs.amount;
+    setBypass(pitchShifterDefs.bypass);
+    setAmount(pitchShifterDefs.amount);
     shifter.SetTransposition(pitchShifterDefs.semitones);
     shifter.SetFun(pitchShifterDefs.rand);
 

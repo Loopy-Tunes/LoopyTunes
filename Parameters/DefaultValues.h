@@ -14,10 +14,18 @@ static const struct PitchShifterDefaults
 static const struct WaveshaperDefaults
 {
 	float bypass = 1;
-    float input = 0.5;
-    float mode = 0;
     float amount = 0.5;
+	float funcControl = 0;
+    float mode = 0;
 } waveshaperDefs;
+
+static const struct FilterDefaults
+{
+	float bypass = 1;
+	float frequency = 0.5;
+	float resonance = 0;
+	float mode = 0;
+} filterDefs;
 
 static const struct ReverbDefaults
 {

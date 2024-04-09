@@ -45,10 +45,10 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
 
  void Waveshaper::setDefaultValues()
  {
-    bypass.value = waveshaperDefs.bypass;
-    amount.value = waveshaperDefs.amount;
-    funcControl.value = waveshaperDefs.input;
-    mode.value = waveshaperDefs.mode;
+    setBypass(waveshaperDefs.bypass);
+    setAmount(waveshaperDefs.amount);
+    setFuncControl(funcControl.value = waveshaperDefs.funcControl);
+    setMode(waveshaperDefs.mode);
  }
 
 inline void Waveshaper::scaleControlParam()

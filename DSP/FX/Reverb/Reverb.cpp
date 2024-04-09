@@ -22,7 +22,7 @@ void Reverb::init(EncoderDriver* driver, int trackID)
 
 void Reverb::setDefaultValues()
 {
-    bypass.value = reverbDefs.bypass;
+    setBypass(reverbDefs.bypass);
     setAmount(reverbDefs.amount);
     model.setmode(reverbDefs.mode);
     model.setroomsize(reverbDefs.size);

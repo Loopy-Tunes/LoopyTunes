@@ -18,6 +18,8 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
 
+    void scaleFreq(float f);
+
     void setBypass(float b) { bypass.value = b; }
     void setFreq(float f) { filter.SetFreq(f); }
     void setReso(float r) { filter.SetRes(r); }
@@ -34,10 +36,14 @@ private:
     } filterMode;
 
     Svf filter;
+
+    float lpMin, lpMax;
+    float hpMin, hpMax;
+
     SteppedParameterWrapper bypass;
+    SteppedParameter mode;
     SteppedParameter freq;
     SteppedParameter reso;
-    SteppedParameter mode;
 };
 
 #endif
