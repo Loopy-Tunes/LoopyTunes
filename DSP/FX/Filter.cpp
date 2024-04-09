@@ -10,12 +10,10 @@ void Filter::init(EncoderDriver* driver, int trackID)
     lpMin = 20.f;
     lpMax = 200000.f;
 
-    bypass.param.init(0, 1, 1, ParameterIDs::Filter::bypass, trackID, [this] (float b) { setBypass(b); });
     mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
     freq.init(0, 1, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) {scaleFreq(f); });
     reso.init(0, 1, 0.05, ParameterIDs::Filter::resonance, trackID, [this] (float r) { setReso(r); });
 
-    driver->addParameter(&bypass.param);
     driver->addParameter(&mode);
     driver->addParameter(&freq);
     driver->addParameter(&reso);
@@ -58,7 +56,7 @@ void Filter::setMode(float m)
 
 void Filter::processBlock(float* buffer[2], size_t size)
 {
-   if(bypass.value == 1)
+   if(isBypass)
         return;
 
     for(size_t i = 0 ; i < size ; i++)

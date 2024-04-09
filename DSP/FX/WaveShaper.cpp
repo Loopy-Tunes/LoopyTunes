@@ -30,12 +30,10 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     bitCount = 0;
     bits = 0;
 
-    bypass.param.init(0, 1, 1, ParameterIDs::Waveshaper::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
     funcControl.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
     mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float m) { setMode(m); });
 
-    driver->addParameter(&bypass.param);
     driver->addParameter(&amount.param);
     driver->addParameter(&funcControl.param);
     driver->addParameter(&mode.param);
@@ -113,7 +111,7 @@ void Waveshaper::applyAutoGain(float* buffer[2], size_t size)
 
 void Waveshaper::processBlock(float* buffer[2], size_t size)
 {
-    if(bypass.value == 1)
+    if(isBypass)
         return;
 
     setInputAG(buffer, size);

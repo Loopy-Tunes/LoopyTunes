@@ -2,14 +2,12 @@
 
 void Reverb::init(EncoderDriver* driver, int trackID)
 {
-    bypass.param.init(0, 1, 1, ParameterIDs::Reverb::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Reverb::amount, trackID, [this] (float a) { setAmount(a); });
     mode.param.init(0, 1, 0.25, ParameterIDs::Reverb::mode, trackID, [this] (float m) { model.setmode(m); });
     size.param.init(0, 1, 0.05, ParameterIDs::Reverb::size, trackID, [this] (float s) { model.setroomsize(s); });
     damp.param.init(0, 1, 0.05, ParameterIDs::Reverb::damp, trackID, [this] (float d) { model.setdamp(d); });
     width.param.init(0, 1, 0.05, ParameterIDs::Reverb::width, trackID, [this] (float w) { model.setwidth(w); });
 
-    driver->addParameter(&bypass.param);
     driver->addParameter(&amount.param);
     driver->addParameter(&mode.param);
     driver->addParameter(&size.param);
@@ -41,7 +39,7 @@ void Reverb::setAmount(float mix)
 
 void Reverb::processBlock(float* input[2], long size)
 {
-    if(bypass.value == 1)
+    if(isBypass)
         return;
     
     model.processreplace(input[L], input[R], output[L], output[R], size, 0);

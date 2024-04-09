@@ -19,7 +19,7 @@ public:
     void init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>* dl[2]);
     void setDefaultValues();
 
-    inline void setBypass(float b) { bypass.value = b; }
+    inline void setBypass(bool b) { isBypass = b; }
     inline void setDelay(size_t s) { delayLine[0]->SetDelay(s), delayLine[1]->SetDelay(s); }
     inline void setFeedback(float b) { feedback.value = b; }
     inline void setAmount(float a) { amount.value = a; }
@@ -34,7 +34,7 @@ private:
         return round((size_t)toConvert);
     }
 
-    SteppedParameterWrapper bypass;
+    bool isBypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper size;
     SteppedParameterWrapper feedback;

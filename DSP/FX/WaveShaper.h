@@ -25,7 +25,7 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
 
-    inline void setBypass(float b) { bypass.value = b; }
+    inline void setBypass(bool b) { isBypass = b; }
     inline void setAmount(float a) { amount.value = a; }
     inline void setFuncControl(float fc) { funcControl.value = fc; }
     inline void setMode(float m) { mode.value = m; }
@@ -66,7 +66,7 @@ private:
     float outputAG[2][BLOCKLENGTH];
     float diffAG[2][BLOCKLENGTH];
 
-    SteppedParameterWrapper bypass;
+    bool isBypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper funcControl;
     SteppedParameterWrapper mode;

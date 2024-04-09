@@ -18,7 +18,7 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
 
-    void setBypass(float b) { bypass.value = b; }
+    void setBypass(bool b) { isBypass = b; }
     void setAmount(float a) { amount.value = a; }
 
     void process(float* input[2], size_t size);
@@ -28,7 +28,7 @@ private:
     float buffer[2][BLOCKLENGTH];
     daisysp::PitchShifter shifter;
 
-    SteppedParameterWrapper bypass;
+    bool isBypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper semitones;
 };

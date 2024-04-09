@@ -5,7 +5,7 @@
 
 static const struct PitchShifterDefaults
 {
-	float bypass = 1;
+	bool bypass = true;
 	float amount = 0.5;
 	float semitones = 12;
 	float rand = 0;
@@ -13,7 +13,7 @@ static const struct PitchShifterDefaults
 
 static const struct WaveshaperDefaults
 {
-	float bypass = 1;
+	bool bypass = true;
     float amount = 0.5;
 	float funcControl = 0;
     float mode = 0;
@@ -21,7 +21,7 @@ static const struct WaveshaperDefaults
 
 static const struct FilterDefaults
 {
-	float bypass = 1;
+	bool bypass = true;
 	float frequency = 0.5;
 	float resonance = 0;
 	float mode = 0;
@@ -29,7 +29,7 @@ static const struct FilterDefaults
 
 static const struct ReverbDefaults
 {
-	float bypass = 1;
+	bool bypass = true;
 	float amount = 0.5;
 	float mode = 0;
 	float size = 0.5;
@@ -39,7 +39,7 @@ static const struct ReverbDefaults
 
 static const struct DelayDefaults
 {
-	int bypass = 1;
+	bool bypass = true;
 	float amount = 0.5;
 	size_t size = 5000;
 	float feedback = 0.5;

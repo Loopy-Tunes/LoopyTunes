@@ -20,7 +20,7 @@ public:
 
     void scaleFreq(float f);
 
-    void setBypass(float b) { bypass.value = b; }
+    void setBypass(bool b) { isBypass = b; }
     void setFreq(float f) { filter.SetFreq(f); }
     void setReso(float r) { filter.SetRes(r); }
     void setMode(float m);
@@ -40,7 +40,7 @@ private:
     float lpMin, lpMax;
     float hpMin, hpMax;
 
-    SteppedParameterWrapper bypass;
+    bool isBypass;
     SteppedParameter mode;
     SteppedParameter freq;
     SteppedParameter reso;

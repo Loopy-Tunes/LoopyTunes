@@ -22,7 +22,7 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
 
-    void setBypass(float b) {bypass.value = b; }
+    void setBypass(bool b) { isBypass = b; }
     void setAmount(float mix);
 
     void processBlock(float* input[2], long size);
@@ -34,7 +34,7 @@ private:
     float output[2][BLOCKLENGTH];
     revmodel model;
 
-    SteppedParameterWrapper bypass;
+    bool isBypass;
     SteppedParameterWrapper amount;
     SteppedParameterWrapper mode;
     SteppedParameterWrapper size;

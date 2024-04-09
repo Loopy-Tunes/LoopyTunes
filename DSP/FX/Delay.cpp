@@ -11,12 +11,10 @@ void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>*
         delayLine[i]->Reset();
     }
 
-    bypass.param.init(0, 1, 1, ParameterIDs::Delay::bypass, trackID, [this] (float b) { setBypass(b); });
     amount.param.init(0, 1, 0.05, ParameterIDs::Delay::amount, trackID, [this] (float a) { setAmount(a); });
     size.param.init(0, 10000, 10, ParameterIDs::Delay::size, trackID, [this] (float s) { setDelay(toSize(s)); });
     feedback.param.init(0, 1, 0.05, ParameterIDs::Delay::feedback, trackID, [this] (float f) {setFeedback(f); });
 
-    driver->addParameter(&bypass.param);
     driver->addParameter(&amount.param);
     driver->addParameter(&size.param);
     driver->addParameter(&feedback.param);
@@ -34,7 +32,7 @@ void Delay::setDefaultValues()
 
 void Delay::processBlock(float* input[2], size_t size)
 {
-    if(bypass.value == 1)
+    if(isBypass)
         return;
 
     for(size_t i = 0 ; i < size ; i++)
