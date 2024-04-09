@@ -1,4 +1,5 @@
 #include "DSP/Mixer.h"
+#include "GUI/MixerView.h"
 
 using namespace daisy;
 using namespace daisysp;
@@ -13,6 +14,7 @@ TO DO:
 - output LPF to remove noise
 - test mixing
 - GUI hierarchy
+- Doxygen docs
 */
 
 // Hardware
@@ -26,7 +28,10 @@ size_t prevSample;
 Mixer mixer;
 
 // UI
+MixerView mixerView;
 EncoderDriver encoder;
+// keypad driver
+// lcd driver
 
 // buffers
 namespace Buffers
