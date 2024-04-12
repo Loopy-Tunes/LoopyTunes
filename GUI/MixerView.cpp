@@ -21,6 +21,11 @@ void MixerView::paint()
 
 }
 
+void MixerView::clear()
+{
+    
+}
+
 void MixerView::updateAmplitudes()
 {
 

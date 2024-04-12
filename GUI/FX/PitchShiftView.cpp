@@ -1,6 +1,6 @@
 #include "PitchShiftView.h"
 
-void PitchShiftView::init(int id)
+void PitchShiftView::init(int ID)
 {
 
 
@@ -13,6 +13,16 @@ void PitchShiftView::tick()
 }
 
 void PitchShiftView::paint()
+{
+
+}
+
+void PitchShiftView::clear()
+{
+
+}
+
+void PitchShiftView::updateParameters()
 {
 
 }

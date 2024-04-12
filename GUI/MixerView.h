@@ -16,6 +16,7 @@ public:
     void tick();
 
     void paint();
+    void clear();
 
     void updateAmplitudes();
 
@@ -25,7 +26,7 @@ private:
     TrackView track2;
     TrackView track3;
     TrackView track4;
-    
+
     bool isOpen;
 };
 

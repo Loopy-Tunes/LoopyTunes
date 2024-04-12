@@ -16,3 +16,13 @@ void DelayView::paint()
 {
 
 }
+
+void DelayView::clear()
+{
+
+}
+
+void DelayView::updateParameters()
+{
+
+}

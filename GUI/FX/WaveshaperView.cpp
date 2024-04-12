@@ -14,3 +14,13 @@ void WaveshaperView::paint()
 {
 
 }
+
+void WaveshaperView::clear()
+{
+
+}
+
+void WaveshaperView::updateParameters()
+{
+
+}

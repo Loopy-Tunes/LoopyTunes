@@ -14,6 +14,9 @@ public:
     void tick();
 
     void paint();
+    void clear();
+
+    void updateParameters();
 
 private:
 

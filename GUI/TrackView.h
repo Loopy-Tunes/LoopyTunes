@@ -21,6 +21,7 @@ public:
     void tick();
 
     void paint();
+    void clear();
 
 private:
 

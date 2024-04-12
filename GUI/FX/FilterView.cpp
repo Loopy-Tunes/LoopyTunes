@@ -16,3 +16,13 @@ void FilterView::paint()
 {
 
 }
+
+void FilterView::clear()
+{
+
+}
+
+void FilterView::updateParameters()
+{
+
+}

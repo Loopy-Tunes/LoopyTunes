@@ -16,3 +16,13 @@ void ReverbView::paint()
 {
 
 }
+
+void ReverbView::clear()
+{
+
+}
+
+void ReverbView::updateParameters()
+{
+
+}

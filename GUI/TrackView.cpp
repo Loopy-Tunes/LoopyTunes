@@ -21,3 +21,8 @@ void TrackView::paint()
 {
 
 }
+
+void TrackView::clear()
+{
+
+}
