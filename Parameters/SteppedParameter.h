@@ -17,9 +17,9 @@ class SteppedParameter
 {
 public:
 
-    void init(float mi, float ma, float st, int paramType, int track, std::function<void(float)> cb)
+    void init(float mi, float ma, float st, int param, int track, std::function<void(float)> cb)
     {
-        paramID = paramType + track;
+        paramID = param + track;
 
         min = mi;
         max = ma;
@@ -57,7 +57,7 @@ private:
     int paramID;
     float min;
     float max;
-    float curVal;
+    volatile float curVal;
     float step;
 
     std::function<void(float)> callback;

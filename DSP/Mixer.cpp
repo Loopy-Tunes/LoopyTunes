@@ -1,16 +1,8 @@
 #include "Mixer.h"
 
-void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
+void Mixer::init(DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
     bufferSize = SAMPLERATE * DURATION;
-    for(uint_fast8_t i = 0 ; i < 2 ; i++)
-        mix[i] = m[i];
-
-    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
-    {
-        mix[L][i] = 0.0f;
-        mix[R][i] = 0.0f;
-    }
     
     track1.track.init(t1, ParameterIDs::Tracks::Track1, seed::D19, seed::D20);
     track2.track.init(t2, ParameterIDs::Tracks::Track2, seed::D21, seed::D22);
@@ -28,14 +20,30 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
     limiter.Init();
 }
 
-void Mixer::initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2])
+void Mixer::initMixChannels(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2])
 {
-    for(int i = 0 ; i < 2 ; i++)
+    for(int i = 0 ; i < 2 ; i++) // assign pointers
     {
+        mix[i] = m[i];
+
         track1.buffer[i] = t1[i];
         track2.buffer[i] = t2[i];
         track3.buffer[i] = t3[i];
         track4.buffer[i] = t4[i];
+    }
+
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++) // initialise
+    {
+        mix[L][i] = 0.0f;
+        mix[R][i] = 0.0f;
+        track1.buffer[L][i] = 0.0f;
+        track1.buffer[R][i] = 0.0f;
+        track2.buffer[L][i] = 0.0f;
+        track2.buffer[R][i] = 0.0f;
+        track3.buffer[L][i] = 0.0f;
+        track3.buffer[R][i] = 0.0f;
+        track4.buffer[L][i] = 0.0f;
+        track4.buffer[R][i] = 0.0f;
     }
 }
 
@@ -118,8 +126,8 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
         //limiter.ProcessBlock(&mix[L][i], size, 0.f);
         //limiter.ProcessBlock(&mix[R][i], size, 0.f);
 
-        left[i] = track1.getCurVal(L, i);
-        right[i] = track1.getCurVal(R, i);
+        left[i] = mix[L][i] * master.value;
+        right[i] = mix[R][i] * master.value;
     }
 }
 

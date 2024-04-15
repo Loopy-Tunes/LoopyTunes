@@ -17,6 +17,8 @@ public:
 
     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
     {
+        parameters.reserve(70);
+
         state = DISARMED;
         prevUpdate = 0;
         isUpdated = false;
@@ -40,7 +42,7 @@ public:
         dsy_gpio_init(&channelB);
 
         // FOR TESTING
-        currentParam = 132;
+        state = ARMED;
     }
 
     void tick()
@@ -96,11 +98,11 @@ public:
         }
     }
 
-    void setCurrentParam(int newParam)
+    void setCurrentParam(int newID)
     { 
         for(unsigned int i = 0 ; i < parameters.size() ; i++)
         {
-            if(parameters[i]->getID() == newParam)
+            if(parameters[i]->getID() == newID)
             {
                 currentParam = i;
                 break;

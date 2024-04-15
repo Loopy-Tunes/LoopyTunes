@@ -8,7 +8,7 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
         buffer[R][i] = 0.0f;
     }
     
-    shifter.Init(4800);
+    shifter.Init(48000);
     shifter.SetFun(0.f);
 
     amount.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::amount, trackID, [this] (float a) { setAmount(a); });
@@ -21,6 +21,8 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
 
     // FOR TESTING
     setBypass(false);
+    setAmount(1);
+    shifter.SetTransposition(8);
 }
 
 void PitchShift::setDefaultValues()

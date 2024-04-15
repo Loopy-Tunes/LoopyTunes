@@ -131,7 +131,7 @@ void Track::processOutputBlock(float* output[2], size_t size)
         incrementReadPos();
     }
    
-    //pitchShift.processBlock(output, size);
+    pitchShift.processBlock(output, size);
     //shaper.processBlock(output, size); 
     //filter.processBlock(output, size);
     //delay.processBlock(output, size);

@@ -12,8 +12,8 @@ class Mixer
 {
 public:
 
-    void init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
-    void initMixChannels(float* t1[2], float* t2[2], float* t3[2], float* t4[2]);
+    void init(DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], float* t4[2]); 
+    void initMixChannels(float* m[2], float* t1[2], float* t2[2], float* t3[2], float* t4[2]);
     void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* t1[2], DelayLine<float, MAXDELAY>* t2[2], 
                                        DelayLine<float, MAXDELAY>* t3[2], DelayLine<float, MAXDELAY>* t4[2]);
     void tick();
