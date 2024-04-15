@@ -21,29 +21,18 @@ public:
     void scaleFreq(float f);
 
     void setBypass(bool b) { isBypass = b; }
-    void setFreq(float f) { filter.SetFreq(f); }
-    void setReso(float r) { filter.SetRes(r); }
+    void setFreq(float f) { filter.SetFrequency(f); }
     void setMode(float m);
 
     void processBlock(float* buffer[2], size_t size);
 
 private:
 
-    enum Mode
-    {
-        LOWPASS = 0,
-        HIGHPASS
-    } filterMode;
-
-    Svf filter;
-
-    float lpMin, lpMax;
-    float hpMin, hpMax;
+    OnePole filter;
 
     bool isBypass;
     SteppedParameter mode;
     SteppedParameter freq;
-    SteppedParameter reso;
 };
 
 #endif

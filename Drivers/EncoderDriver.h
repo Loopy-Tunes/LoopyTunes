@@ -43,7 +43,7 @@ public:
 
         // FOR TESTING
         state = ARMED;
-        currentParam = 1;
+        currentParam = 6;
     }
 
     void tick()

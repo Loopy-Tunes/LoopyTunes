@@ -22,9 +22,8 @@ static const struct WaveshaperDefaults
 static const struct FilterDefaults
 {
 	bool bypass = true;
-	float frequency = 0.5;
-	float resonance = 0;
 	float mode = 0;
+	float frequency = 0.5;
 } filterDefs;
 
 static const struct ReverbDefaults
