@@ -11,7 +11,7 @@ void Filter::init(EncoderDriver* driver, int trackID)
     lpMax = 200000.f;
 
     mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
-    freq.init(0, 1, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) {scaleFreq(f); });
+    freq.init(0, 1, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) { setFreq(f); });
     reso.init(0, 1, 0.05, ParameterIDs::Filter::resonance, trackID, [this] (float r) { setReso(r); });
 
     driver->addParameter(&mode);
@@ -22,6 +22,8 @@ void Filter::init(EncoderDriver* driver, int trackID)
 
     // testing  
     isBypass = false;
+    setMode(0);
+    setReso(0);
 }
 
 void Filter::setDefaultValues()

@@ -18,11 +18,6 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&semitones.param);
 
     setDefaultValues();
-
-    // FOR TESTING
-    setBypass(false);
-    setAmount(1);
-    shifter.SetTransposition(8);
 }
 
 void PitchShift::setDefaultValues()

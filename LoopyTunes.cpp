@@ -140,7 +140,7 @@ int main(void)
 	hw.StartLog();
 
 	// FOR TESTING
-	encoder.setCurrentParam(ParameterIDs::Tracks::Track1 + ParameterIDs::PitchShifter::semitones);
+	//encoder.setCurrentParam(ParameterIDs::Tracks::Track1 + ParameterIDs::PitchShifter::semitones);
 
 	while(1) 
 	{
