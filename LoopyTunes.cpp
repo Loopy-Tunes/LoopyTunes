@@ -42,23 +42,23 @@ namespace Buffers
 	float DSY_SDRAM_BSS track3[2][SAMPLERATE * DURATION];
 	float DSY_SDRAM_BSS track4[2][SAMPLERATE * DURATION];
 
-	float* track1Ptr[2] = {track1[L], track1[R]};
-	float* track2Ptr[2] = {track2[L], track2[R]};
-	float* track3Ptr[2] = {track3[L], track3[R]};
-	float* track4Ptr[2] = {track4[L], track4[R]};
+	float* DSY_SDRAM_BSS track1Ptr[2] = {track1[L], track1[R]};
+	float* DSY_SDRAM_BSS track2Ptr[2] = {track2[L], track2[R]};
+	float* DSY_SDRAM_BSS track3Ptr[2] = {track3[L], track3[R]};
+	float* DSY_SDRAM_BSS track4Ptr[2] = {track4[L], track4[R]};
 
 	// Mix Buffers
-	float DSY_SDRAM_BSS mix[2][SAMPLERATE * DURATION];
+	float DSY_SDRAM_BSS mix[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t1m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t2m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t3m[2][BLOCKLENGTH];
 	float DSY_SDRAM_BSS t4m[2][BLOCKLENGTH];
 
-	float* mixPtr[2] = {mix[L], mix[R]};
-	float* t1mPtr[2] = {t1m[L], t1m[R]};
-	float* t2mPtr[2] = {t2m[L], t2m[R]};
-	float* t3mPtr[2] = {t3m[L], t3m[R]};
-	float* t4mPtr[2] = {t4m[L], t4m[R]};
+	float* DSY_SDRAM_BSS mixPtr[2] = {mix[L], mix[R]};
+	float* DSY_SDRAM_BSS t1mPtr[2] = {t1m[L], t1m[R]};
+	float* DSY_SDRAM_BSS t2mPtr[2] = {t2m[L], t2m[R]};
+	float* DSY_SDRAM_BSS t3mPtr[2] = {t3m[L], t3m[R]};
+	float* DSY_SDRAM_BSS t4mPtr[2] = {t4m[L], t4m[R]};
 
 	// Delay Lines
 	DelayLine<float, MAXDELAY> DSY_SDRAM_BSS t1delay[2];
@@ -89,8 +89,8 @@ void init()
 	mixer.initMixChannels(Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
 
-	// inbitialise GUI
-	mixerView.init();
+	// initialise GUI
+	//mixerView.init();
 }
 
 inline void tick(size_t size)
@@ -99,7 +99,7 @@ inline void tick(size_t size)
 	{
 		encoder.tick();
 		mixer.tick();
-		mixerView.tick();
+		//mixerView.tick();
 		sample = 0;
 	}
 	else
@@ -136,6 +136,8 @@ int main(void)
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
+
+	hw.StartLog();
 
 	while(1) 
 	{

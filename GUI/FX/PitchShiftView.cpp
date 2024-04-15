@@ -9,7 +9,7 @@ void PitchShiftView::init(int ID)
 
 void PitchShiftView::tick()
 {
-
+    updateParameters();
 }
 
 void PitchShiftView::paint()
@@ -24,5 +24,5 @@ void PitchShiftView::clear()
 
 void PitchShiftView::updateParameters()
 {
-
+    
 }

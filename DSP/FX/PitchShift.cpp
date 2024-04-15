@@ -18,6 +18,9 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&semitones.param);
 
     setDefaultValues();
+
+    // FOR TESTING
+    setBypass(false);
 }
 
 void PitchShift::setDefaultValues()

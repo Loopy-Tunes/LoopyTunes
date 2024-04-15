@@ -9,6 +9,7 @@ void DelayView::init(int ID)
 
 void DelayView::tick()
 {
+    updateParameters();
 
 }
 

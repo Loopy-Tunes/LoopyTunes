@@ -6,7 +6,7 @@ void Mixer::init(DaisySeed* seed, float* m[2], float* t1[2], float* t2[2], float
     for(uint_fast8_t i = 0 ; i < 2 ; i++)
         mix[i] = m[i];
 
-    for(size_t i = 0 ; i < bufferSize ; i++)
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
     {
         mix[L][i] = 0.0f;
         mix[R][i] = 0.0f;
@@ -118,8 +118,8 @@ void Mixer::processOutputBlock(float* left, float* right, size_t size)
         //limiter.ProcessBlock(&mix[L][i], size, 0.f);
         //limiter.ProcessBlock(&mix[R][i], size, 0.f);
 
-        left[i] = mix[L][i];// * master.value;
-        right[i] = mix[R][i];// * master.value;
+        left[i] = track1.getCurVal(L, i);
+        right[i] = track1.getCurVal(R, i);
     }
 }
 

@@ -13,10 +13,10 @@ void Track::init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p)
     ti.loopLength = 0;
 
     bufferSize = SAMPLERATE * DURATION;
-    for(uint_fast8_t i = 0 ; i < 2 ; i++)
-        buffer[i] = mem[i];
+    buffer[L] = mem[L];
+    buffer[R] = mem[R];
 
-    clearBuffer();
+    resetBuffer();
 }
 
 void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
@@ -33,7 +33,7 @@ void Track::tick()
     play.tick();
 }
 
-void Track::clearBuffer()
+void Track::resetBuffer()
 {
     for(size_t i = 0 ; i < bufferSize ; i++)
     {
@@ -111,8 +111,8 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        buffer[L][ph.writePos] = left[i];
-        buffer[R][ph.writePos] = right[i];
+        buffer[L][ph.writePos] = left[i] * 30;
+        buffer[R][ph.writePos] = right[i] * 30;
 
         incrementWritePos();
     }
@@ -131,9 +131,9 @@ void Track::processOutputBlock(float* output[2], size_t size)
         incrementReadPos();
     }
    
-    //pitchShift.process(output, size);
+    //pitchShift.processBlock(output, size);
     //shaper.processBlock(output, size); 
-    filter.processBlock(output, size);
+    //filter.processBlock(output, size);
     //delay.processBlock(output, size);
     //reverb.processBlock(output, size);
 }

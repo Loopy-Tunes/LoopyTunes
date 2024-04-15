@@ -9,7 +9,9 @@ void ReverbView::init(int ID)
 
 void ReverbView::tick()
 {
-
+    updateParameters();
+    
+     
 }
 
 void ReverbView::paint()

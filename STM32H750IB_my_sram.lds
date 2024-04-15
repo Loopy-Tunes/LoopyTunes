@@ -119,7 +119,7 @@ SECTIONS
 		_edata = .;
 
 		PROVIDE(__data_end__ = _edata);
-	} > DTCMRAM AT > SRAM
+	} > SRAM
 
 	_sidata = LOADADDR(.data);
 

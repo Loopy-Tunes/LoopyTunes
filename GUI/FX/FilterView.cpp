@@ -9,7 +9,9 @@ void FilterView::init(int ID)
 
 void FilterView::tick()
 {
+    updateParameters();
 
+    
 }
 
 void FilterView::paint()

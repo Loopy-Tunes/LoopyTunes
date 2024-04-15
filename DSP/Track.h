@@ -22,7 +22,7 @@ public:
     void init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p);
     void initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2]);
     void tick();
-    void clearBuffer();
+    void resetBuffer();
 
     void setIsRecording();
     void setIsPlaying();
