@@ -51,6 +51,7 @@ public:
     int getID() { return paramID; }
     float getMin() { return min; }
     float getMax() { return max; }
+    float getCurVal() { return curVal; }
 
 private:
 

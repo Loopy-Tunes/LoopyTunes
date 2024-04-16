@@ -27,7 +27,7 @@ public:
 
     inline void setBypass(bool b) { isBypass = b; }
     inline void setAmount(float a) { amount.value = a; }
-    inline void setFuncControl(float fc) { funcControl.value = fc; }
+    inline void setFuncControl(float fc);
     inline void setMode(float m) { mode.value = m; }
     
     inline void scaleControlParam();

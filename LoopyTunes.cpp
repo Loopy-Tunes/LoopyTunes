@@ -7,13 +7,8 @@ using namespace daisysp;
 /*
 TO DO:
 - Mixer audio through
-- Remove clicks at ends of loops (interpolation???) (static envelope???)
+- seamless looping
 - test reverb dry/wet
-- test filters
-- test auto gain feature
-- output LPF to remove noise
-- test mixing
-- GUI hierarchy
 - Doxygen docs
 */
 
@@ -22,7 +17,6 @@ DaisySeed hw;
 
 // Global
 size_t sample;
-size_t prevSample;
 
 // DSP
 Mixer mixer;
@@ -139,12 +133,7 @@ int main(void)
 
 	hw.StartLog();
 
-	// FOR TESTING
-	//encoder.setCurrentParam(ParameterIDs::Tracks::Track1 + ParameterIDs::PitchShifter::semitones);
-
 	while(1) 
 	{
-		//mixer.tick();
-		//encoder.tick();
 	}
 }

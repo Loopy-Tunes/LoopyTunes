@@ -5,16 +5,12 @@ void Filter::init(EncoderDriver* driver, int trackID)
     filter.Init();
 
     mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
-    freq.init(0, 0.495, 0.05, ParameterIDs::Filter::frequency, trackID, [this] (float f) { setFreq(f); });
+    freq.init(0, 0.490, 0.01, ParameterIDs::Filter::frequency, trackID, [this] (float f) { setFreq(f); });
 
     driver->addParameter(&mode);
     driver->addParameter(&freq);
 
     setDefaultValues();
-
-    // testing  
-    isBypass = false;
-    setMode(0);
 }
 
 void Filter::setDefaultValues()

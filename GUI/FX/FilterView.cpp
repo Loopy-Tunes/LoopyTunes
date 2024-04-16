@@ -16,7 +16,7 @@ void FilterView::tick()
 
 void FilterView::paint()
 {
-
+    
 }
 
 void FilterView::clear()
