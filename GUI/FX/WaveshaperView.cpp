@@ -13,7 +13,9 @@ void WaveshaperView::init(int ID, EncoderDriver* driver)
 
 void WaveshaperView::tick()
 {
-
+    amount.tick();
+    funcControl.tick();
+    mode.tick();
 }
 
 void WaveshaperView::repaint()

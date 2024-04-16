@@ -12,7 +12,8 @@ void PitchShiftView::init(int ID, EncoderDriver* driver)
 
 void PitchShiftView::tick()
 {
-    
+    amount.tick();
+    semitones.tick();
 }
 
 void PitchShiftView::repaint()

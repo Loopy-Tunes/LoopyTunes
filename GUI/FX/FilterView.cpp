@@ -13,7 +13,9 @@ void FilterView::init(int ID, EncoderDriver* driver)
 
 void FilterView::tick()
 {
-
+    mode.tick();
+    frequency.tick();
+    resonance.tick();
 }
 
 void FilterView::repaint()

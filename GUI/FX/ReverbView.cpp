@@ -12,7 +12,8 @@ void ReverbView::init(int ID, EncoderDriver* driver)
 
 void ReverbView::tick()
 {
-
+    amount.tick();
+    size.tick();
 }
 
 void ReverbView::repaint()

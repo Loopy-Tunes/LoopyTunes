@@ -119,9 +119,6 @@ int main(void)
 	// init global variabls
 	sample = 0;
 
-	// initialise drivers
-	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
 	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
@@ -132,7 +129,8 @@ int main(void)
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 
-	hw.StartLog();
+	// initialise drivers
+	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
 
 	while(1) 
 	{
