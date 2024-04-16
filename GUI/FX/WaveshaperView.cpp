@@ -3,10 +3,11 @@
 void WaveshaperView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
-    
+
     lcd = uid;
     keypad = kpd;
 
+    // init bypass
     amount.init(trackID + ParameterIDs::Waveshaper::amount, driver, lcd);
     funcControl.init(trackID + ParameterIDs::Waveshaper::funcControl, driver, lcd);
     mode.init(trackID + ParameterIDs::Waveshaper::mode, driver, lcd);
@@ -23,7 +24,8 @@ void WaveshaperView::tick()
 
 void WaveshaperView::repaint()
 {
-
+    if(!isOpen)
+        return;
 }
 
 void WaveshaperView::clear()

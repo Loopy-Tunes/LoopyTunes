@@ -23,7 +23,7 @@ public:
         prevUpdate = 0;
         isUpdated = false;
 
-        isNavigation = false;
+        isNavigation = true;
         navCallback = navCb;
 
         currentParam = 0;
@@ -122,6 +122,8 @@ public:
         {
             if(parameters[i]->getID() == paramID)
                 return parameters[i];
+            else
+                return nullptr;
         }
     }
 

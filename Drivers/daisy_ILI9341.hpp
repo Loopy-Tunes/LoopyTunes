@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DAISY_ILI9341_HPP
+#define DAISY_ILI9341_HPP
 
 #include <cstring>
 
@@ -1117,3 +1118,5 @@ class UiDriver
 
     uint16_t fps = 0;
 }; 
+
+#endif

@@ -4,6 +4,7 @@
 #include "../../Drivers/EncoderDriver.h"
 #include "../../Drivers/daisy_ILI9341.hpp"
 #include "../../Drivers/KeypadDriver.h"
+#include "BypassButton.h"
 
 /********************************************************//**
  *  Class name: SteppedSlider

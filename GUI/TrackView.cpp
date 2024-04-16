@@ -25,7 +25,8 @@ void TrackView::tick()
 
 void TrackView::repaint()
 {
-
+    if(!isOpen)
+        return;
 }
 
 void TrackView::clear()

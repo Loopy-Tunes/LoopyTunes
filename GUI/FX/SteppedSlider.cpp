@@ -23,6 +23,7 @@ void SteppedSlider::tick()
 
 void SteppedSlider::setSelected()
 {
+    encoder->setIsNavigation(false);
     encoder->setCurrentParam(paramID);
 }
 

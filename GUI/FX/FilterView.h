@@ -25,7 +25,7 @@ private:
     UiDriver* lcd;
     KeypadDriver* keypad;
 
-    // bypass
+    BypassButton bypass;
     SteppedSlider mode;
     SteppedSlider frequency;
     SteppedSlider resonance;

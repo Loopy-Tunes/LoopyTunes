@@ -76,7 +76,7 @@ void init()
 {
 	// initialise Daisy Seed
 	hw.Init(true); // true = boost enabled
-	hw.SetAudioBlockSize(BLOCKLENGTH); // number of samples handled per callback
+	hw.SetAudioBlockSize(BLOCKLENGTH); 
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// initialise DSP
@@ -86,8 +86,8 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+	lcd.Init();
 	// keypad driver
-	// lcd
 
 	// initialise GUI
 	mixerView.init(&hw, &encoder, &lcd, &keypad);
@@ -97,9 +97,11 @@ inline void tick(size_t size)
 {
 	if(sample >= MACROBLOCK)
 	{
+		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		//mixerView.tick();
+		mixerView.tick();
+		lcd.Update();
 		sample = 0;
 	}
 	else
@@ -136,5 +138,6 @@ int main(void)
 
 	while(1) 
 	{
+		
 	}
 }

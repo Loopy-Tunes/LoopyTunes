@@ -236,8 +236,8 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  GUI/FX/../../Drivers/daisy_ILI9341.hpp \
  GUI/FX/../../Drivers/KeypadDriver.h \
  GUI/FX/../../Drivers/../Parameters/BinaryParameter.h \
- GUI/FX/WaveshaperView.h GUI/FX/FilterView.h GUI/FX/ReverbView.h \
- GUI/FX/DelayView.h
+ GUI/FX/BypassButton.h GUI/FX/WaveshaperView.h GUI/FX/FilterView.h \
+ GUI/FX/ReverbView.h GUI/FX/DelayView.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -506,6 +506,7 @@ GUI/FX/../../Drivers/EncoderDriver.h:
 GUI/FX/../../Drivers/daisy_ILI9341.hpp:
 GUI/FX/../../Drivers/KeypadDriver.h:
 GUI/FX/../../Drivers/../Parameters/BinaryParameter.h:
+GUI/FX/BypassButton.h:
 GUI/FX/WaveshaperView.h:
 GUI/FX/FilterView.h:
 GUI/FX/ReverbView.h:

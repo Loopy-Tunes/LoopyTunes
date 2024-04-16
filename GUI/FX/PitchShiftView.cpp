@@ -3,10 +3,11 @@
 void PitchShiftView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
-    
+
     lcd = uid;
     keypad = kpd;
 
+    // init bypass
     amount.init(trackID + ParameterIDs::PitchShifter::amount, driver, lcd);
     semitones.init(trackID + ParameterIDs::PitchShifter::semitones, driver, lcd);
 
@@ -21,7 +22,8 @@ void PitchShiftView::tick()
 
 void PitchShiftView::repaint()
 {
-
+    if(!isOpen)
+        return;
 }
 
 void PitchShiftView::clear()

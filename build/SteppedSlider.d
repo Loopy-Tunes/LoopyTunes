@@ -221,7 +221,8 @@ build/SteppedSlider.o: GUI/FX/SteppedSlider.cpp \
  GUI/FX/../../Drivers/../Parameters/ParameterIDs.h \
  GUI/FX/../../Drivers/daisy_ILI9341.hpp \
  GUI/FX/../../Drivers/KeypadDriver.h \
- GUI/FX/../../Drivers/../Parameters/BinaryParameter.h
+ GUI/FX/../../Drivers/../Parameters/BinaryParameter.h \
+ GUI/FX/BypassButton.h
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -464,3 +465,4 @@ GUI/FX/../../Drivers/../Parameters/ParameterIDs.h:
 GUI/FX/../../Drivers/daisy_ILI9341.hpp:
 GUI/FX/../../Drivers/KeypadDriver.h:
 GUI/FX/../../Drivers/../Parameters/BinaryParameter.h:
+GUI/FX/BypassButton.h:

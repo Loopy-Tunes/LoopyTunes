@@ -31,7 +31,8 @@ void MixerView::tick()
 
 void MixerView::repaint()
 {
-
+    if(!isOpen)
+        return;
 }
 
 void MixerView::clear()
