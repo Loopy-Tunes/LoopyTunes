@@ -22,11 +22,6 @@ void AudioSlider::tick()
     }
 }
 
-void AudioSlider::paint()
-{
-
-}
-
 void AudioSlider::repaint()
 {
     

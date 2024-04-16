@@ -27,7 +27,7 @@ namespace ParameterIDs
 
         const int amount = effect + 1;
         const int funcControl = effect + 2;
-        const int waveshape = effect + 3;
+        const int mode = effect + 3;
     }
 
     namespace Filter

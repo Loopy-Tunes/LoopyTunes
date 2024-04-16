@@ -23,10 +23,14 @@ private:
     // lcd driver pointer
     // keypad driver
 
-    // parameter controls
+    int trackID;
+
+    // bypass
+    SteppedSlider amount;
+    SteppedSlider size;
+    SteppedSlider feedback; 
 
     bool isOpen;
-    int effectID;
 };
 
 #endif

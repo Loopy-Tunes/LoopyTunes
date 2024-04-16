@@ -2,9 +2,12 @@
 
 void PitchShiftView::init(int ID, EncoderDriver* driver)
 {
+    trackID = ID;
 
+    amount.init(trackID + ParameterIDs::PitchShifter::amount, driver);
+    semitones.init(trackID + ParameterIDs::PitchShifter::semitones, driver);
 
-    effectID = ID;
+    isOpen = false;
 }
 
 void PitchShiftView::tick()

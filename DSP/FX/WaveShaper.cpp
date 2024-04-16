@@ -32,7 +32,7 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
 
     amount.param.init(0, 1, 0.05, ParameterIDs::Waveshaper::amount, trackID, [this] (float a) { setAmount(a); });
     funcControl.param.init(0, 1, 0.02, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
-    mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::waveshape, trackID, [this] (float m) { setMode(m); });
+    mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::mode, trackID, [this] (float m) { setMode(m); });
 
     driver->addParameter(&amount.param);
     driver->addParameter(&funcControl.param);

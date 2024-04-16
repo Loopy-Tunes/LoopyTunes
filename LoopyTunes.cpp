@@ -10,6 +10,7 @@ TO DO:
 - seamless looping
 - test reverb dry/wet
 - Doxygen docs
+- bypass UI class
 */
 
 // Hardware

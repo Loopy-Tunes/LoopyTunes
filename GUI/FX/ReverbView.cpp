@@ -2,12 +2,17 @@
 
 void ReverbView::init(int ID, EncoderDriver* driver)
 {
-    effectID = ID;
+    trackID = ID;
+
+    amount.init(trackID + ParameterIDs::Reverb::amount, driver);
+    size.init(trackID + ParameterIDs::Reverb::size, driver);
+
+    isOpen = false;
 }
 
 void ReverbView::tick()
 {
-    
+
 }
 
 void ReverbView::repaint()

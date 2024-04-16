@@ -17,7 +17,6 @@ public:
     void init(int ID, DaisySeed* seed);
     void tick();
 
-    void paint();
     void repaint();
 
 private:

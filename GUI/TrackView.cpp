@@ -7,11 +7,11 @@ void TrackView::init(int ID, EncoderDriver* driver)
 
     trackID = ID;
 
-    pitchShiftView.init(ID + ParameterIDs::PitchShifter::effect, driver);
-    waveshaperView.init(ID + ParameterIDs::Waveshaper::effect, driver);
-    filterView.init(ID + ParameterIDs::Filter::effect, driver);
-    reverbView.init(ID + ParameterIDs::Reverb::effect, driver);
-    delayView.init(ID + ParameterIDs::Delay::effect, driver);
+    pitchShiftView.init(ID, driver);
+    waveshaperView.init(ID, driver);
+    filterView.init(ID, driver);
+    reverbView.init(ID, driver);
+    delayView.init(ID, driver);
 }
 
 void TrackView::tick()
