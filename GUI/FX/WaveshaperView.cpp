@@ -1,28 +1,21 @@
 #include "WaveshaperView.h"
 
-void WaveshaperView::init(int ID)
+void WaveshaperView::init(int ID, EncoderDriver* driver)
 {
 
 }
 
 void WaveshaperView::tick()
 {
-    updateParameters();
 
-    
 }
 
-void WaveshaperView::paint()
+void WaveshaperView::repaint()
 {
 
 }
 
 void WaveshaperView::clear()
-{
-
-}
-
-void WaveshaperView::updateParameters()
 {
 
 }

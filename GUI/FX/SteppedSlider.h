@@ -1,6 +1,9 @@
 #ifndef STEPPEDSLIDER_H
 #define STEPPEDSLIDER_H
 
+#include "../../Drivers/EncoderDriver.h"
+
+
 /********************************************************//**
  *  Class name: SteppedSlider
  *  Function: Slider for representing stepped parameters
@@ -10,7 +13,7 @@ class SteppedSlider
 {
 public:
 
-    void init(int ID);
+    void init(int ID, EncoderDriver* ed);
     void tick();
 
     void setIsSelected(bool s) { isSelected = s; }
@@ -20,10 +23,10 @@ public:
 
 private:
 
-    // pointer to driver
+    EncoderDriver* driver;
     
     int paramID;
-    // pointer to parameter
+    SteppedParameter* param;
     float prevVal;
     bool isSelected;
 };

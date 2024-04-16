@@ -1,6 +1,6 @@
 #include "FilterView.h"
 
-void FilterView::init(int ID)
+void FilterView::init(int ID, EncoderDriver* driver)
 {
 
 
@@ -9,22 +9,15 @@ void FilterView::init(int ID)
 
 void FilterView::tick()
 {
-    updateParameters();
 
-    
 }
 
-void FilterView::paint()
+void FilterView::repaint()
 {
-    
+
 }
 
 void FilterView::clear()
-{
-
-}
-
-void FilterView::updateParameters()
 {
 
 }

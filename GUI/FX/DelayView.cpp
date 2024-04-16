@@ -1,6 +1,6 @@
 #include "DelayView.h"
 
-void DelayView::init(int ID)
+void DelayView::init(int ID, EncoderDriver* driver)
 {
 
 
@@ -9,21 +9,15 @@ void DelayView::init(int ID)
 
 void DelayView::tick()
 {
-    updateParameters();
 
 }
 
-void DelayView::paint()
+void DelayView::repaint()
 {
 
 }
 
 void DelayView::clear()
-{
-
-}
-
-void DelayView::updateParameters()
 {
 
 }

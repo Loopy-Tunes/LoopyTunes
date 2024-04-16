@@ -1,6 +1,8 @@
 #ifndef PITCHSHIFTIEW_H
 #define PITCHSHIFTVIEW_H
 
+#include "SteppedSlider.h"
+
 /*************************************************//**
  *  Class name: PitchShiftView
  *  Function: FX level GUI class for the pitch shift
@@ -10,13 +12,11 @@ class PitchShiftView
 {
 public:
 
-    void init(int ID);
+    void init(int ID, EncoderDriver* driver);
     void tick();
 
-    void paint();
+    void repaint();
     void clear();
-
-    void updateParameters();
 
 private:
 

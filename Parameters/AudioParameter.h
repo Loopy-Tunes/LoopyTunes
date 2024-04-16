@@ -69,7 +69,7 @@ private:
     const float jitter = 0.01f;
 
     type curVal, min, max;
-    uint8_t channelID;
+    int channelID;
     CurveType curve;
 
     std::function<void(type)> callback;

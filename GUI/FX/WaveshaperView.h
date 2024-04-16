@@ -1,6 +1,8 @@
 #ifndef WAVESHAPERVIEW_H
 #define WAVESHAPERVIEW_H
 
+#include "SteppedSlider.h"
+
 /*************************************************//**
  *  Class name: WaveshaperView
  *  Function: FX level GUI class for the Waveshaper
@@ -10,13 +12,11 @@ class WaveshaperView
 {
 public:
 
-    void init(int ID);
+    void init(int ID, EncoderDriver* driver);
     void tick();
 
-    void paint();
+    void repaint();
     void clear();
-
-    void updateParameters();
 
 private:
 

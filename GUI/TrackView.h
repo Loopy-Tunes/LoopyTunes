@@ -17,10 +17,10 @@ class TrackView
 {
 public:
 
-    void init(int ID);
+    void init(int ID, EncoderDriver* driver);
     void tick();
 
-    void paint();
+    void repaint();
     void clear();
 
 private:

@@ -1,6 +1,7 @@
 #ifndef MIXERVIEW_H
 #define MIXERVIEW_H
 
+#include "AudioSlider.h"
 #include "TrackView.h"
 
 /********************************************//**
@@ -12,15 +13,18 @@ class MixerView
 {
 public:
 
-    void init();
+    void init(DaisySeed* seed, EncoderDriver* driver);
     void tick();
 
-    void paint();
+    void repaint();
     void clear();
 
-    void updateAmplitudes();
-
 private:
+
+    AudioSlider amp1;
+    AudioSlider amp2;
+    AudioSlider amp3;
+    AudioSlider amp4;
 
     TrackView track1;
     TrackView track2;

@@ -116,6 +116,15 @@ public:
         parameters.push_back(newParam);
     }
 
+    SteppedParameter* getParameter(int paramID)
+    {
+        for(unsigned int i = 0 ; i < parameters.size() ; i++)
+        {
+            if(parameters[i]->getID() == paramID)
+                return parameters[i];
+        }
+    }
+
 private:
 
     enum EncoderState

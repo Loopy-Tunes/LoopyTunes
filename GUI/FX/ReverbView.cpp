@@ -1,30 +1,21 @@
 #include "ReverbView.h"
 
-void ReverbView::init(int ID)
+void ReverbView::init(int ID, EncoderDriver* driver)
 {
-
-
     effectID = ID;
 }
 
 void ReverbView::tick()
 {
-    updateParameters();
     
-     
 }
 
-void ReverbView::paint()
+void ReverbView::repaint()
 {
 
 }
 
 void ReverbView::clear()
-{
-
-}
-
-void ReverbView::updateParameters()
 {
 
 }

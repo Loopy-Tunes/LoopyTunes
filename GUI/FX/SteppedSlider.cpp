@@ -1,17 +1,21 @@
-void SteppedSlider::init(int ID)
+#include "SteppedSlider.h"
+
+void SteppedSlider::init(int ID, EncoderDriver* ed)
 {
-    // set driver pointer
+    driver = ed;
     
     paramID = ID;
-    // fetch param from driver
+    param = driver->getParameter(paramID);
 
-    prevValue = 0;
+    prevVal = 0;
     isSelected = false;
 }
 
 void SteppedSlider::tick()
 {
-
+    // fetch curVal from slider pointer
+    // if changed
+        // repaint
 }
 
 void SteppedSlider::paint()
@@ -22,6 +26,4 @@ void SteppedSlider::paint()
 void SteppedSlider::repaint()
 {
     // update slider if value has changed
-
-    // fetch curVal from slider pointer
 }
