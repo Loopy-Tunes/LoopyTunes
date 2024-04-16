@@ -1,11 +1,14 @@
 #include "ReverbView.h"
 
-void ReverbView::init(int ID, EncoderDriver* driver)
+void ReverbView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
+    
+    lcd = uid;
+    keypad = kpd;
 
-    amount.init(trackID + ParameterIDs::Reverb::amount, driver);
-    size.init(trackID + ParameterIDs::Reverb::size, driver);
+    amount.init(trackID + ParameterIDs::Reverb::amount, driver, lcd);
+    size.init(trackID + ParameterIDs::Reverb::size, driver, lcd);
 
     isOpen = false;
 }

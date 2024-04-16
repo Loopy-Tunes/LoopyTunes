@@ -1,0 +1,301 @@
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 4
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"FilterView.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver,"ax",%progbits
+  19              		.align	1
+  20              		.global	_ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	_ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:
+  26              	.LVL0:
+  27              	.LFB5101:
+  28              		.file 1 "GUI/FX/FilterView.cpp"
+   1:GUI/FX/FilterView.cpp **** #include "FilterView.h"
+   2:GUI/FX/FilterView.cpp **** 
+   3:GUI/FX/FilterView.cpp **** void FilterView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
+   4:GUI/FX/FilterView.cpp **** {
+  29              		.loc 1 4 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 4, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+   5:GUI/FX/FilterView.cpp ****     trackID = ID;
+  33              		.loc 1 5 5 view .LVU1
+   4:GUI/FX/FilterView.cpp ****     trackID = ID;
+  34              		.loc 1 4 1 is_stmt 0 view .LVU2
+  35 0000 38B5     		push	{r3, r4, r5, lr}
+  36              		.cfi_def_cfa_offset 16
+  37              		.cfi_offset 3, -16
+  38              		.cfi_offset 4, -12
+  39              		.cfi_offset 5, -8
+  40              		.cfi_offset 14, -4
+   4:GUI/FX/FilterView.cpp ****     trackID = ID;
+  41              		.loc 1 4 1 view .LVU3
+  42 0002 0446     		mov	r4, r0
+  43 0004 1546     		mov	r5, r2
+   6:GUI/FX/FilterView.cpp ****     
+   7:GUI/FX/FilterView.cpp ****     lcd = uid;
+  44              		.loc 1 7 9 view .LVU4
+  45 0006 C0E90013 		strd	r1, r3, [r0]
+   8:GUI/FX/FilterView.cpp ****     keypad = kpd;
+  46              		.loc 1 8 5 is_stmt 1 view .LVU5
+  47              		.loc 1 8 12 is_stmt 0 view .LVU6
+  48 000a 0498     		ldr	r0, [sp, #16]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 2
+
+
+  49              	.LVL1:
+   9:GUI/FX/FilterView.cpp **** 
+  10:GUI/FX/FilterView.cpp ****     mode.init(trackID + ParameterIDs::Filter::mode, driver, lcd);
+  50              		.loc 1 10 14 view .LVU7
+  51 000c 1F31     		adds	r1, r1, #31
+  52              	.LVL2:
+   8:GUI/FX/FilterView.cpp ****     keypad = kpd;
+  53              		.loc 1 8 12 view .LVU8
+  54 000e A060     		str	r0, [r4, #8]
+  55              		.loc 1 10 5 is_stmt 1 view .LVU9
+  56              		.loc 1 10 14 is_stmt 0 view .LVU10
+  57 0010 04F10C00 		add	r0, r4, #12
+  58 0014 FFF7FEFF 		bl	_ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
+  59              	.LVL3:
+  11:GUI/FX/FilterView.cpp ****     frequency.init(trackID + ParameterIDs::Filter::frequency, driver, lcd);
+  60              		.loc 1 11 5 is_stmt 1 view .LVU11
+  61              		.loc 1 11 19 is_stmt 0 view .LVU12
+  62 0018 2046     		mov	r0, r4
+  63 001a 6368     		ldr	r3, [r4, #4]
+  64 001c 2A46     		mov	r2, r5
+  65 001e 50F8201B 		ldr	r1, [r0], #32
+  66 0022 2031     		adds	r1, r1, #32
+  67 0024 FFF7FEFF 		bl	_ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
+  68              	.LVL4:
+  12:GUI/FX/FilterView.cpp ****     resonance.init(trackID + ParameterIDs::Filter::resonance, driver, lcd);
+  69              		.loc 1 12 5 is_stmt 1 view .LVU13
+  70              		.loc 1 12 19 is_stmt 0 view .LVU14
+  71 0028 2046     		mov	r0, r4
+  72 002a 6368     		ldr	r3, [r4, #4]
+  73 002c 2A46     		mov	r2, r5
+  74 002e 50F8341B 		ldr	r1, [r0], #52
+  75 0032 2131     		adds	r1, r1, #33
+  76 0034 FFF7FEFF 		bl	_ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
+  77              	.LVL5:
+  13:GUI/FX/FilterView.cpp **** 
+  14:GUI/FX/FilterView.cpp ****     isOpen = false;
+  78              		.loc 1 14 5 is_stmt 1 view .LVU15
+  79              		.loc 1 14 12 is_stmt 0 view .LVU16
+  80 0038 0023     		movs	r3, #0
+  81 003a 84F84830 		strb	r3, [r4, #72]
+  15:GUI/FX/FilterView.cpp **** }
+  82              		.loc 1 15 1 view .LVU17
+  83 003e 38BD     		pop	{r3, r4, r5, pc}
+  84              		.loc 1 15 1 view .LVU18
+  85              		.cfi_endproc
+  86              	.LFE5101:
+  88              		.section	.text._ZN10FilterView4tickEv,"ax",%progbits
+  89              		.align	1
+  90              		.global	_ZN10FilterView4tickEv
+  91              		.syntax unified
+  92              		.thumb
+  93              		.thumb_func
+  95              	_ZN10FilterView4tickEv:
+  96              	.LVL6:
+  97              	.LFB5102:
+  16:GUI/FX/FilterView.cpp **** 
+  17:GUI/FX/FilterView.cpp **** void FilterView::tick()
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 3
+
+
+  18:GUI/FX/FilterView.cpp **** {
+  98              		.loc 1 18 1 is_stmt 1 view -0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+  19:GUI/FX/FilterView.cpp ****     mode.tick();
+ 102              		.loc 1 19 5 view .LVU20
+  18:GUI/FX/FilterView.cpp ****     mode.tick();
+ 103              		.loc 1 18 1 is_stmt 0 view .LVU21
+ 104 0000 10B5     		push	{r4, lr}
+ 105              		.cfi_def_cfa_offset 8
+ 106              		.cfi_offset 4, -8
+ 107              		.cfi_offset 14, -4
+  18:GUI/FX/FilterView.cpp ****     mode.tick();
+ 108              		.loc 1 18 1 view .LVU22
+ 109 0002 0446     		mov	r4, r0
+ 110              		.loc 1 19 14 view .LVU23
+ 111 0004 0C30     		adds	r0, r0, #12
+ 112              	.LVL7:
+ 113              		.loc 1 19 14 view .LVU24
+ 114 0006 FFF7FEFF 		bl	_ZN13SteppedSlider4tickEv
+ 115              	.LVL8:
+  20:GUI/FX/FilterView.cpp ****     frequency.tick();
+ 116              		.loc 1 20 5 is_stmt 1 view .LVU25
+ 117              		.loc 1 20 19 is_stmt 0 view .LVU26
+ 118 000a 04F12000 		add	r0, r4, #32
+ 119 000e FFF7FEFF 		bl	_ZN13SteppedSlider4tickEv
+ 120              	.LVL9:
+  21:GUI/FX/FilterView.cpp ****     resonance.tick();
+ 121              		.loc 1 21 5 is_stmt 1 view .LVU27
+ 122              		.loc 1 21 19 is_stmt 0 view .LVU28
+ 123 0012 04F13400 		add	r0, r4, #52
+  22:GUI/FX/FilterView.cpp **** }
+ 124              		.loc 1 22 1 view .LVU29
+ 125 0016 BDE81040 		pop	{r4, lr}
+ 126              		.cfi_restore 14
+ 127              		.cfi_restore 4
+ 128              		.cfi_def_cfa_offset 0
+ 129              	.LVL10:
+  21:GUI/FX/FilterView.cpp ****     resonance.tick();
+ 130              		.loc 1 21 19 view .LVU30
+ 131 001a FFF7FEBF 		b	_ZN13SteppedSlider4tickEv
+ 132              	.LVL11:
+  21:GUI/FX/FilterView.cpp ****     resonance.tick();
+ 133              		.loc 1 21 19 view .LVU31
+ 134              		.cfi_endproc
+ 135              	.LFE5102:
+ 137              		.section	.text._ZN10FilterView7repaintEv,"ax",%progbits
+ 138              		.align	1
+ 139              		.global	_ZN10FilterView7repaintEv
+ 140              		.syntax unified
+ 141              		.thumb
+ 142              		.thumb_func
+ 144              	_ZN10FilterView7repaintEv:
+ 145              	.LVL12:
+ 146              	.LFB5103:
+  23:GUI/FX/FilterView.cpp **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 4
+
+
+  24:GUI/FX/FilterView.cpp **** void FilterView::repaint()
+  25:GUI/FX/FilterView.cpp **** {
+ 147              		.loc 1 25 1 is_stmt 1 view -0
+ 148              		.cfi_startproc
+ 149              		@ args = 0, pretend = 0, frame = 0
+ 150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151              		@ link register save eliminated.
+  26:GUI/FX/FilterView.cpp **** 
+  27:GUI/FX/FilterView.cpp **** }
+ 152              		.loc 1 27 1 is_stmt 0 view .LVU33
+ 153 0000 7047     		bx	lr
+ 154              		.cfi_endproc
+ 155              	.LFE5103:
+ 157              		.section	.text._ZN10FilterView5clearEv,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	_ZN10FilterView5clearEv
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 164              	_ZN10FilterView5clearEv:
+ 165              	.LFB5851:
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169              		@ link register save eliminated.
+ 170 0000 7047     		bx	lr
+ 171              		.cfi_endproc
+ 172              	.LFE5851:
+ 174              		.text
+ 175              	.Letext0:
+ 176              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 177              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 178              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 179              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 180              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 181              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 182              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 183              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 184              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 185              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 186              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 187              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 188              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 189              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 190              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 191              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 192              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 193              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 194              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 195              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 196              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 197              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
+ 198              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
+ 199              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h"
+ 200              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
+ 201              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
+ 202              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 5
+
+
+ 203              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h"
+ 204              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h"
+ 205              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h"
+ 206              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/vector.tcc"
+ 207              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
+ 208              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 209              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
+ 210              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
+ 211              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 212              		.file 38 "<built-in>"
+ 213              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 214              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 215              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 216              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 217              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 218              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 219              		.file 45 "../../../libDaisy//src/daisy_core.h"
+ 220              		.file 46 "../../../libDaisy//src/hid/switch.h"
+ 221              		.file 47 "../../../libDaisy//src/per/spi.h"
+ 222              		.file 48 "../../../libDaisy//src/hid/disp/graphics_common.h"
+ 223              		.file 49 "../../../libDaisy//src/util/wav_format.h"
+ 224              		.file 50 "../../../libDaisy//src/dev/max11300.h"
+ 225              		.file 51 "../../../libDaisy//src/daisy_seed.h"
+ 226              		.file 52 "../../../libDaisy//src/per/gpio.h"
+ 227              		.file 53 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 228              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 229              		.file 55 "../../../libDaisy//src/util/oled_fonts.h"
+ 230              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 231              		.file 57 "../../../DaisySP//Source/Control/adenv.h"
+ 232              		.file 58 "../../../DaisySP//Source/Utility/dsp.h"
+ 233              		.file 59 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 234              		.file 60 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 235              		.file 61 "GUI/FX/../../Drivers/../Parameters/ParameterIDs.h"
+ 236              		.file 62 "GUI/FX/../../Drivers/../Parameters/SteppedParameter.h"
+ 237              		.file 63 "GUI/FX/../../Drivers/EncoderDriver.h"
+ 238              		.file 64 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
+ 239              		.file 65 "GUI/FX/../../Drivers/../Parameters/BinaryParameter.h"
+ 240              		.file 66 "GUI/FX/../../Drivers/KeypadDriver.h"
+ 241              		.file 67 "GUI/FX/SteppedSlider.h"
+ 242              		.file 68 "GUI/FX/FilterView.h"
+ 243              		.file 69 "../../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 FilterView.cpp
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:19     .text._ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:25     .text._ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:89     .text._ZN10FilterView4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:95     .text._ZN10FilterView4tickEv:0000000000000000 _ZN10FilterView4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:138    .text._ZN10FilterView7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:144    .text._ZN10FilterView7repaintEv:0000000000000000 _ZN10FilterView7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:158    .text._ZN10FilterView5clearEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccRI6fwj.s:164    .text._ZN10FilterView5clearEv:0000000000000000 _ZN10FilterView5clearEv
+
+UNDEFINED SYMBOLS
+_ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
+_ZN13SteppedSlider4tickEv

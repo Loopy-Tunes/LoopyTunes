@@ -1,11 +1,14 @@
 #include "PitchShiftView.h"
 
-void PitchShiftView::init(int ID, EncoderDriver* driver)
+void PitchShiftView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
+    
+    lcd = uid;
+    keypad = kpd;
 
-    amount.init(trackID + ParameterIDs::PitchShifter::amount, driver);
-    semitones.init(trackID + ParameterIDs::PitchShifter::semitones, driver);
+    amount.init(trackID + ParameterIDs::PitchShifter::amount, driver, lcd);
+    semitones.init(trackID + ParameterIDs::PitchShifter::semitones, driver, lcd);
 
     isOpen = false;
 }

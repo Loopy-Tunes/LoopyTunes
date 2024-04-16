@@ -5,6 +5,7 @@
 #include "daisysp.h"
 #include "ParameterIDs.h"
 #include <string>
+#include <functional>
 
 /***********************************************************************************//**
  *  Class name: SteppedParameter

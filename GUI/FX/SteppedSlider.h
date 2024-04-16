@@ -2,7 +2,8 @@
 #define STEPPEDSLIDER_H
 
 #include "../../Drivers/EncoderDriver.h"
-
+#include "../../Drivers/daisy_ILI9341.hpp"
+#include "../../Drivers/KeypadDriver.h"
 
 /********************************************************//**
  *  Class name: SteppedSlider
@@ -13,22 +14,20 @@ class SteppedSlider
 {
 public:
 
-    void init(int ID, EncoderDriver* ed);
+    void init(int ID, EncoderDriver* ed, UiDriver* uid);
     void tick();
 
-    void setIsSelected(bool s) { isSelected = s; }
-
-    void paint();
+    void setSelected();
     void repaint();
 
 private:
 
-    EncoderDriver* driver;
+    EncoderDriver* encoder;
+    UiDriver* lcd;
     
     int paramID;
     SteppedParameter* param;
-    float prevVal;
-    bool isSelected;
+    float curVal;
 };
 
 #endif

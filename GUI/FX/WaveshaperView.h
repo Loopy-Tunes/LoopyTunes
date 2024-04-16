@@ -12,7 +12,7 @@ class WaveshaperView
 {
 public:
 
-    void init(int ID, EncoderDriver* driver);
+    void init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd);
     void tick();
 
     void repaint();
@@ -20,10 +20,10 @@ public:
 
 private:
 
-    // lcd driver pointer
-    // keypad driver
-
     int trackID;
+
+    UiDriver* lcd;
+    KeypadDriver* keypad;
 
     // bypass
     SteppedSlider amount;

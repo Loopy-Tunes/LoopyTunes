@@ -1,12 +1,15 @@
 #include "DelayView.h"
 
-void DelayView::init(int ID, EncoderDriver* driver)
+void DelayView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
 
-    amount.init(trackID + ParameterIDs::Delay::amount, driver);
-    size.init(trackID + ParameterIDs::Delay::size, driver);
-    feedback.init(trackID + ParameterIDs::Delay::feedback, driver);
+    lcd = uid;
+    keypad = kpd;
+
+    amount.init(trackID + ParameterIDs::Delay::amount, driver, lcd);
+    size.init(trackID + ParameterIDs::Delay::size, driver, lcd);
+    feedback.init(trackID + ParameterIDs::Delay::feedback, driver, lcd);
 
     isOpen = false;
 }

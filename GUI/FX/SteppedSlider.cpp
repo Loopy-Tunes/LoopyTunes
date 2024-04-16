@@ -1,29 +1,32 @@
 #include "SteppedSlider.h"
 
-void SteppedSlider::init(int ID, EncoderDriver* ed)
+void SteppedSlider::init(int ID, EncoderDriver* ed, UiDriver* uid)
 {
-    driver = ed;
+    encoder = ed;
+    lcd = uid;
     
     paramID = ID;
-    param = driver->getParameter(paramID);
+    param = encoder->getParameter(paramID);
 
-    prevVal = 0;
-    isSelected = false;
+    curVal = 0;
 }
 
 void SteppedSlider::tick()
 {
-    // fetch curVal from slider pointer
-    // if changed
-        // repaint
+    float newVal = param->getCurVal();
+    if(newVal != curVal)
+    {
+        curVal = newVal;
+        repaint();
+    }
 }
 
-void SteppedSlider::paint()
+void SteppedSlider::setSelected()
 {
-    // paint slider
+    encoder->setCurrentParam(paramID);
 }
 
 void SteppedSlider::repaint()
 {
-    // update slider if value has changed
+    // paint slider using curVal
 }

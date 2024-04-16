@@ -1,17 +1,17 @@
 #include "TrackView.h"
 
-void TrackView::init(int ID, EncoderDriver* driver)
+void TrackView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
-    // lcd driver pointer
-    // keypad driver pointer
-
     trackID = ID;
 
-    pitchShiftView.init(ID, driver);
-    waveshaperView.init(ID, driver);
-    filterView.init(ID, driver);
-    reverbView.init(ID, driver);
-    delayView.init(ID, driver);
+    lcd = uid;
+    keypad = kpd;
+
+    pitchShiftView.init(ID, driver, lcd, keypad);
+    waveshaperView.init(ID, driver, lcd, keypad);
+    filterView.init(ID, driver, lcd, keypad);
+    reverbView.init(ID, driver, lcd, keypad);
+    delayView.init(ID, driver, lcd, keypad);
 }
 
 void TrackView::tick()

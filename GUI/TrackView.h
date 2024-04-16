@@ -17,7 +17,7 @@ class TrackView
 {
 public:
 
-    void init(int ID, EncoderDriver* driver);
+    void init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd);
     void tick();
 
     void repaint();
@@ -25,8 +25,10 @@ public:
 
 private:
 
-    // lcd driver pointer
-    // keypad driver pointer
+    int trackID;
+
+    UiDriver* lcd;
+    KeypadDriver* keypad;
 
     PitchShiftView pitchShiftView;
     WaveshaperView waveshaperView;
@@ -35,7 +37,6 @@ private:
     DelayView delayView;
 
     bool isOpen;
-    int trackID;
 };
 
 #endif

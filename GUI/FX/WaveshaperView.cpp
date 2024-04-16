@@ -1,12 +1,15 @@
 #include "WaveshaperView.h"
 
-void WaveshaperView::init(int ID, EncoderDriver* driver)
+void WaveshaperView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
 {
     trackID = ID;
+    
+    lcd = uid;
+    keypad = kpd;
 
-    amount.init(trackID + ParameterIDs::Waveshaper::amount, driver);
-    funcControl.init(trackID + ParameterIDs::Waveshaper::funcControl, driver);
-    mode.init(trackID + ParameterIDs::Waveshaper::mode, driver);
+    amount.init(trackID + ParameterIDs::Waveshaper::amount, driver, lcd);
+    funcControl.init(trackID + ParameterIDs::Waveshaper::funcControl, driver, lcd);
+    mode.init(trackID + ParameterIDs::Waveshaper::mode, driver, lcd);
 
     isOpen = false;
 }

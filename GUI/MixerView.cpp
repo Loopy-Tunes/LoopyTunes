@@ -1,16 +1,19 @@
 #include "MixerView.h"
 
-void MixerView::init(DaisySeed* seed, EncoderDriver* driver)
+void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, UiDriver* uid, KeypadDriver* kpd)
 {
+    lcd = uid;
+    keypad = kpd;
+
     amp1.init(0, seed);
     amp2.init(1, seed);
     amp3.init(2, seed);
     amp4.init(3, seed);
 
-    track1.init(ParameterIDs::Tracks::Track1, driver);
-    track2.init(ParameterIDs::Tracks::Track2, driver);
-    track3.init(ParameterIDs::Tracks::Track3, driver);
-    track4.init(ParameterIDs::Tracks::Track4, driver);
+    track1.init(ParameterIDs::Tracks::Track1, encoder, lcd, keypad);
+    track2.init(ParameterIDs::Tracks::Track2, encoder, lcd, keypad);
+    track3.init(ParameterIDs::Tracks::Track3, encoder, lcd, keypad);
+    track4.init(ParameterIDs::Tracks::Track4, encoder, lcd, keypad);
 }
 
 void MixerView::tick()

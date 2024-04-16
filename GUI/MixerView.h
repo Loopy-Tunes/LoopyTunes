@@ -13,13 +13,16 @@ class MixerView
 {
 public:
 
-    void init(DaisySeed* seed, EncoderDriver* driver);
+    void init(DaisySeed* seed, EncoderDriver* encoder, UiDriver* uid, KeypadDriver* kpd);
     void tick();
 
     void repaint();
     void clear();
 
 private:
+
+    UiDriver* lcd;
+    KeypadDriver* keypad;
 
     AudioSlider amp1;
     AudioSlider amp2;

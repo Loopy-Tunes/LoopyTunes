@@ -25,8 +25,8 @@ Mixer mixer;
 // UI
 MixerView mixerView;
 EncoderDriver encoder;
-// keypad driver
-// lcd driver
+UiDriver lcd;
+KeypadDriver keypad;
 
 // buffers
 namespace Buffers
@@ -84,8 +84,13 @@ void init()
 	mixer.initMixChannels(Buffers::mixPtr, Buffers::t1mPtr, Buffers::t2mPtr, Buffers::t3mPtr, Buffers::t4mPtr);
 	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
 
+	// initialise hardware controls
+	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+	// keypad driver
+	// lcd
+
 	// initialise GUI
-	//mixerView.init();
+	mixerView.init(&hw, &encoder, &lcd, &keypad);
 }
 
 inline void tick(size_t size)
@@ -128,9 +133,6 @@ int main(void)
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
-
-	// initialise drivers
-	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
 
 	while(1) 
 	{
