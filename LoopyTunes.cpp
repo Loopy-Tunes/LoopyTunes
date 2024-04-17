@@ -136,6 +136,9 @@ int main(void)
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 
+	lcd.Fill(COLOR_BLACK);
+    //lcd.Update();
+
 	while(1) 
 	{
 		

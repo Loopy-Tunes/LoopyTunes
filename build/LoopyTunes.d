@@ -233,8 +233,7 @@ build/LoopyTunes.o: LoopyTunes.cpp \
  DSP/../Parameters/BinaryParameter.h GUI/MixerView.h GUI/AudioSlider.h \
  GUI/TrackView.h GUI/FX/PitchShiftView.h GUI/FX/SteppedSlider.h \
  GUI/FX/../../Drivers/EncoderDriver.h \
- GUI/FX/../../Drivers/daisy_ILI9341.hpp \
- GUI/FX/../../Drivers/KeypadDriver.h \
+ GUI/FX/../../Drivers/daisy_ILI9341.h GUI/FX/../../Drivers/KeypadDriver.h \
  GUI/FX/../../Drivers/../Parameters/BinaryParameter.h \
  GUI/FX/BypassButton.h GUI/FX/WaveshaperView.h GUI/FX/FilterView.h \
  GUI/FX/ReverbView.h GUI/FX/DelayView.h
@@ -503,7 +502,7 @@ GUI/TrackView.h:
 GUI/FX/PitchShiftView.h:
 GUI/FX/SteppedSlider.h:
 GUI/FX/../../Drivers/EncoderDriver.h:
-GUI/FX/../../Drivers/daisy_ILI9341.hpp:
+GUI/FX/../../Drivers/daisy_ILI9341.h:
 GUI/FX/../../Drivers/KeypadDriver.h:
 GUI/FX/../../Drivers/../Parameters/BinaryParameter.h:
 GUI/FX/BypassButton.h:
