@@ -1,4 +1,4 @@
-build/ILI9341_ui_driver.o: Drivers/ILI9341_ui_driver.cpp \
+build/daisy_ILI9341.o: Drivers/daisy_ILI9341.cpp \
  ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h \
