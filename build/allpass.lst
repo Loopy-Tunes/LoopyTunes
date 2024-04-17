@@ -1,0 +1,234 @@
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 4
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"allpass.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN7allpassC2Ev,"ax",%progbits
+  19              		.align	1
+  20              		.global	_ZN7allpassC2Ev
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	_ZN7allpassC2Ev:
+  26              	.LVL0:
+  27              	.LFB546:
+  28              		.file 1 "DSP/FX/Reverb/allpass.cpp"
+   1:DSP/FX/Reverb/allpass.cpp **** // Allpass filter implementation
+   2:DSP/FX/Reverb/allpass.cpp **** //
+   3:DSP/FX/Reverb/allpass.cpp **** // Written by Jezar at Dreampoint, June 2000
+   4:DSP/FX/Reverb/allpass.cpp **** // http://www.dreampoint.co.uk
+   5:DSP/FX/Reverb/allpass.cpp **** // This code is public domain
+   6:DSP/FX/Reverb/allpass.cpp **** 
+   7:DSP/FX/Reverb/allpass.cpp **** #include "allpass.hpp"
+   8:DSP/FX/Reverb/allpass.cpp **** 
+   9:DSP/FX/Reverb/allpass.cpp **** allpass::allpass()
+  29              		.loc 1 9 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              	.LBB2:
+  10:DSP/FX/Reverb/allpass.cpp **** {
+  11:DSP/FX/Reverb/allpass.cpp **** 	bufidx = 0;
+  35              		.loc 1 11 2 view .LVU1
+  36              		.loc 1 11 9 is_stmt 0 view .LVU2
+  37 0000 0022     		movs	r2, #0
+  38 0002 C260     		str	r2, [r0, #12]
+  39              	.LBE2:
+  12:DSP/FX/Reverb/allpass.cpp **** }
+  40              		.loc 1 12 1 view .LVU3
+  41 0004 7047     		bx	lr
+  42              		.cfi_endproc
+  43              	.LFE546:
+  45              		.global	_ZN7allpassC1Ev
+  46              		.thumb_set _ZN7allpassC1Ev,_ZN7allpassC2Ev
+  47              		.section	.text._ZN7allpass9setbufferEPfi,"ax",%progbits
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s 			page 2
+
+
+  48              		.align	1
+  49              		.global	_ZN7allpass9setbufferEPfi
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  54              	_ZN7allpass9setbufferEPfi:
+  55              	.LVL1:
+  56              	.LFB548:
+  13:DSP/FX/Reverb/allpass.cpp **** 
+  14:DSP/FX/Reverb/allpass.cpp **** void allpass::setbuffer(float *buf, int size) 
+  15:DSP/FX/Reverb/allpass.cpp **** {
+  57              		.loc 1 15 1 is_stmt 1 view -0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  16:DSP/FX/Reverb/allpass.cpp **** 	buffer = buf; 
+  62              		.loc 1 16 2 view .LVU5
+  17:DSP/FX/Reverb/allpass.cpp **** 	bufsize = size;
+  63              		.loc 1 17 10 is_stmt 0 view .LVU6
+  64 0000 C0E90112 		strd	r1, r2, [r0, #4]
+  18:DSP/FX/Reverb/allpass.cpp **** }
+  65              		.loc 1 18 1 view .LVU7
+  66 0004 7047     		bx	lr
+  67              		.cfi_endproc
+  68              	.LFE548:
+  70              		.section	.text._ZN7allpass4muteEv,"ax",%progbits
+  71              		.align	1
+  72              		.global	_ZN7allpass4muteEv
+  73              		.syntax unified
+  74              		.thumb
+  75              		.thumb_func
+  77              	_ZN7allpass4muteEv:
+  78              	.LVL2:
+  79              	.LFB549:
+  19:DSP/FX/Reverb/allpass.cpp **** 
+  20:DSP/FX/Reverb/allpass.cpp **** void allpass::mute()
+  21:DSP/FX/Reverb/allpass.cpp **** {
+  80              		.loc 1 21 1 is_stmt 1 view -0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  22:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+  84              		.loc 1 22 2 view .LVU9
+  21:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+  85              		.loc 1 21 1 is_stmt 0 view .LVU10
+  86 0000 10B5     		push	{r4, lr}
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 4, -8
+  89              		.cfi_offset 14, -4
+  90              	.LBB3:
+  91              		.loc 1 22 11 view .LVU11
+  92 0002 0023     		movs	r3, #0
+  93              		.loc 1 22 18 view .LVU12
+  94 0004 8468     		ldr	r4, [r0, #8]
+  95              	.LVL3:
+  96              	.L5:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s 			page 3
+
+
+  97              		.loc 1 22 17 is_stmt 1 discriminator 3 view .LVU13
+  98 0006 9C42     		cmp	r4, r3
+  99 0008 06DD     		ble	.L3
+  23:DSP/FX/Reverb/allpass.cpp **** 		buffer[i]=0;
+ 100              		.loc 1 23 3 discriminator 2 view .LVU14
+ 101              		.loc 1 23 12 is_stmt 0 discriminator 2 view .LVU15
+ 102 000a 4268     		ldr	r2, [r0, #4]
+ 103 000c 0021     		movs	r1, #0
+ 104 000e 02EB8302 		add	r2, r2, r3, lsl #2
+  22:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+ 105              		.loc 1 22 2 discriminator 2 view .LVU16
+ 106 0012 0133     		adds	r3, r3, #1
+ 107              	.LVL4:
+ 108              		.loc 1 23 12 discriminator 2 view .LVU17
+ 109 0014 1160     		str	r1, [r2]	@ float
+  22:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+ 110              		.loc 1 22 2 is_stmt 1 discriminator 2 view .LVU18
+ 111              	.LVL5:
+  22:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+ 112              		.loc 1 22 2 is_stmt 0 discriminator 2 view .LVU19
+ 113 0016 F6E7     		b	.L5
+ 114              	.L3:
+  22:DSP/FX/Reverb/allpass.cpp **** 	for (int i=0; i<bufsize; i++)
+ 115              		.loc 1 22 2 discriminator 2 view .LVU20
+ 116              	.LBE3:
+  24:DSP/FX/Reverb/allpass.cpp **** }
+ 117              		.loc 1 24 1 view .LVU21
+ 118 0018 10BD     		pop	{r4, pc}
+ 119              		.cfi_endproc
+ 120              	.LFE549:
+ 122              		.section	.text._ZN7allpass11setfeedbackEf,"ax",%progbits
+ 123              		.align	1
+ 124              		.global	_ZN7allpass11setfeedbackEf
+ 125              		.syntax unified
+ 126              		.thumb
+ 127              		.thumb_func
+ 129              	_ZN7allpass11setfeedbackEf:
+ 130              	.LVL6:
+ 131              	.LFB550:
+  25:DSP/FX/Reverb/allpass.cpp **** 
+  26:DSP/FX/Reverb/allpass.cpp **** void allpass::setfeedback(float val) 
+  27:DSP/FX/Reverb/allpass.cpp **** {
+ 132              		.loc 1 27 1 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136              		@ link register save eliminated.
+  28:DSP/FX/Reverb/allpass.cpp **** 	feedback = val;
+ 137              		.loc 1 28 2 view .LVU23
+ 138              		.loc 1 28 11 is_stmt 0 view .LVU24
+ 139 0000 80ED000A 		vstr.32	s0, [r0]
+  29:DSP/FX/Reverb/allpass.cpp **** }
+ 140              		.loc 1 29 1 view .LVU25
+ 141 0004 7047     		bx	lr
+ 142              		.cfi_endproc
+ 143              	.LFE550:
+ 145              		.section	.text._ZN7allpass11getfeedbackEv,"ax",%progbits
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s 			page 4
+
+
+ 146              		.align	1
+ 147              		.global	_ZN7allpass11getfeedbackEv
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	_ZN7allpass11getfeedbackEv:
+ 153              	.LVL7:
+ 154              	.LFB551:
+  30:DSP/FX/Reverb/allpass.cpp **** 
+  31:DSP/FX/Reverb/allpass.cpp **** float allpass::getfeedback() 
+  32:DSP/FX/Reverb/allpass.cpp **** {
+ 155              		.loc 1 32 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159              		@ link register save eliminated.
+  33:DSP/FX/Reverb/allpass.cpp **** 	return feedback;
+ 160              		.loc 1 33 2 view .LVU27
+  34:DSP/FX/Reverb/allpass.cpp **** }
+ 161              		.loc 1 34 1 is_stmt 0 view .LVU28
+ 162 0000 90ED000A 		vldr.32	s0, [r0]
+ 163 0004 7047     		bx	lr
+ 164              		.cfi_endproc
+ 165              	.LFE551:
+ 167              		.text
+ 168              	.Letext0:
+ 169              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 170              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 171              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7
+ 172              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 173              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 174              		.file 7 "DSP/FX/Reverb/allpass.hpp"
+ 175              		.file 8 "<built-in>"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 allpass.cpp
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:19     .text._ZN7allpassC2Ev:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:25     .text._ZN7allpassC2Ev:0000000000000000 _ZN7allpassC2Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:25     .text._ZN7allpassC2Ev:0000000000000000 _ZN7allpassC1Ev
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:48     .text._ZN7allpass9setbufferEPfi:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:54     .text._ZN7allpass9setbufferEPfi:0000000000000000 _ZN7allpass9setbufferEPfi
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:71     .text._ZN7allpass4muteEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:77     .text._ZN7allpass4muteEv:0000000000000000 _ZN7allpass4muteEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:123    .text._ZN7allpass11setfeedbackEf:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:129    .text._ZN7allpass11setfeedbackEf:0000000000000000 _ZN7allpass11setfeedbackEf
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:146    .text._ZN7allpass11getfeedbackEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccPObMEk.s:152    .text._ZN7allpass11getfeedbackEv:0000000000000000 _ZN7allpass11getfeedbackEv
+
+NO UNDEFINED SYMBOLS
