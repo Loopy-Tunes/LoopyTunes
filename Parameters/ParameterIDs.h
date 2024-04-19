@@ -1,6 +1,5 @@
 #ifndef PARAMETERIDS_H
 #define PARAMETERIDS_H
-#pragma once
 
 namespace ParameterIDs
 {

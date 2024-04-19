@@ -219,7 +219,9 @@ build/MixerView.o: GUI/MixerView.cpp \
  ../../../DaisySP//Source/Utility/metro.h \
  ../../../DaisySP//Source/Utility/samplehold.h \
  ../../../DaisySP//Source/Utility/smooth_random.h \
- GUI/FX/../../Drivers/daisy_ILI9341.h GUI/FX/../../Drivers/KeypadDriver.h \
+ GUI/FX/../../Drivers/../Parameters/ParameterIDs.h \
+ GUI/FX/../../Drivers/daisy_ILI9341.hpp \
+ GUI/FX/../../Drivers/KeypadDriver.h \
  GUI/FX/../../Drivers/../Parameters/BinaryParameter.h \
  GUI/FX/BypassButton.h GUI/FX/WaveshaperView.h GUI/FX/FilterView.h \
  GUI/FX/ReverbView.h GUI/FX/DelayView.h
@@ -466,7 +468,8 @@ GUI/FX/../../Drivers/../Parameters/SteppedParameter.h:
 ../../../DaisySP//Source/Utility/metro.h:
 ../../../DaisySP//Source/Utility/samplehold.h:
 ../../../DaisySP//Source/Utility/smooth_random.h:
-GUI/FX/../../Drivers/daisy_ILI9341.h:
+GUI/FX/../../Drivers/../Parameters/ParameterIDs.h:
+GUI/FX/../../Drivers/daisy_ILI9341.hpp:
 GUI/FX/../../Drivers/KeypadDriver.h:
 GUI/FX/../../Drivers/../Parameters/BinaryParameter.h:
 GUI/FX/BypassButton.h:

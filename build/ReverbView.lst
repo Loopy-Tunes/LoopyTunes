@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   23              		.thumb_func
   25              	_ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:
   26              	.LVL0:
-  27              	.LFB5100:
+  27              	.LFB5103:
   28              		.file 1 "GUI/FX/ReverbView.cpp"
    1:GUI/FX/ReverbView.cpp **** #include "ReverbView.h"
    2:GUI/FX/ReverbView.cpp **** 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   46              		.loc 1 8 5 is_stmt 1 view .LVU5
   47              		.loc 1 8 12 is_stmt 0 view .LVU6
   48 000a 0498     		ldr	r0, [sp, #16]
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 2
 
 
   49              	.LVL1:
@@ -97,7 +97,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   74 002e 38BD     		pop	{r3, r4, r5, pc}
   75              		.loc 1 15 1 view .LVU16
   76              		.cfi_endproc
-  77              	.LFE5100:
+  77              	.LFE5103:
   79              		.section	.text._ZN10ReverbView4tickEv,"ax",%progbits
   80              		.align	1
   81              		.global	_ZN10ReverbView4tickEv
@@ -106,7 +106,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   84              		.thumb_func
   86              	_ZN10ReverbView4tickEv:
   87              	.LVL5:
-  88              	.LFB5101:
+  88              	.LFB5104:
   16:GUI/FX/ReverbView.cpp **** 
   17:GUI/FX/ReverbView.cpp **** void ReverbView::tick()
   18:GUI/FX/ReverbView.cpp **** {
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   93              		.loc 1 19 5 view .LVU18
   18:GUI/FX/ReverbView.cpp ****     amount.tick();
   94              		.loc 1 18 1 is_stmt 0 view .LVU19
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 3
 
 
   95 0000 10B5     		push	{r4, lr}
@@ -152,7 +152,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
   20:GUI/FX/ReverbView.cpp ****     size.tick();
  119              		.loc 1 20 14 view .LVU27
  120              		.cfi_endproc
- 121              	.LFE5101:
+ 121              	.LFE5104:
  123              		.section	.text._ZN10ReverbView7repaintEv,"ax",%progbits
  124              		.align	1
  125              		.global	_ZN10ReverbView7repaintEv
@@ -161,7 +161,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
  128              		.thumb_func
  130              	_ZN10ReverbView7repaintEv:
  131              	.LVL10:
- 132              	.LFB5102:
+ 132              	.LFB5105:
   22:GUI/FX/ReverbView.cpp **** 
   23:GUI/FX/ReverbView.cpp **** void ReverbView::repaint()
   24:GUI/FX/ReverbView.cpp **** {
@@ -177,8 +177,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
  139              		.loc 1 27 1 is_stmt 0 view .LVU30
  140 0000 7047     		bx	lr
  141              		.cfi_endproc
- 142              	.LFE5102:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 4
+ 142              	.LFE5105:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 4
 
 
  144              		.section	.text._ZN10ReverbView5clearEv,"ax",%progbits
@@ -188,14 +188,14 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
  148              		.thumb
  149              		.thumb_func
  151              	_ZN10ReverbView5clearEv:
- 152              	.LFB5850:
+ 152              	.LFB5853:
  153              		.cfi_startproc
  154              		@ args = 0, pretend = 0, frame = 0
  155              		@ frame_needed = 0, uses_anonymous_args = 0
  156              		@ link register save eliminated.
  157 0000 7047     		bx	lr
  158              		.cfi_endproc
- 159              	.LFE5850:
+ 159              	.LFE5853:
  161              		.text
  162              	.Letext0:
  163              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
  200              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
  201              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
  202              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 5
 
 
  203              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
@@ -263,26 +263,26 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 1
  222              		.file 61 "GUI/FX/../../Drivers/../Parameters/ParameterIDs.h"
  223              		.file 62 "GUI/FX/../../Drivers/../Parameters/SteppedParameter.h"
  224              		.file 63 "GUI/FX/../../Drivers/EncoderDriver.h"
- 225              		.file 64 "GUI/FX/../../Drivers/daisy_ILI9341.h"
+ 225              		.file 64 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
  226              		.file 65 "GUI/FX/../../Drivers/../Parameters/BinaryParameter.h"
  227              		.file 66 "GUI/FX/../../Drivers/KeypadDriver.h"
  228              		.file 67 "GUI/FX/BypassButton.h"
  229              		.file 68 "GUI/FX/SteppedSlider.h"
  230              		.file 69 "GUI/FX/ReverbView.h"
  231              		.file 70 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ReverbView.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:19     .text._ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:25     .text._ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:80     .text._ZN10ReverbView4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:86     .text._ZN10ReverbView4tickEv:0000000000000000 _ZN10ReverbView4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:124    .text._ZN10ReverbView7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:130    .text._ZN10ReverbView7repaintEv:0000000000000000 _ZN10ReverbView7repaintEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:145    .text._ZN10ReverbView5clearEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccSRA2Wn.s:151    .text._ZN10ReverbView5clearEv:0000000000000000 _ZN10ReverbView5clearEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:19     .text._ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:25     .text._ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN10ReverbView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:80     .text._ZN10ReverbView4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:86     .text._ZN10ReverbView4tickEv:0000000000000000 _ZN10ReverbView4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:124    .text._ZN10ReverbView7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:130    .text._ZN10ReverbView7repaintEv:0000000000000000 _ZN10ReverbView7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:145    .text._ZN10ReverbView5clearEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccgjT5gq.s:151    .text._ZN10ReverbView5clearEv:0000000000000000 _ZN10ReverbView5clearEv
 
 UNDEFINED SYMBOLS
 _ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver

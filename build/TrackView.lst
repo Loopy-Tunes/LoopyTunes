@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
   23              		.thumb_func
   25              	_ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:
   26              	.LVL0:
-  27              	.LFB5100:
+  27              	.LFB5103:
   28              		.file 1 "GUI/TrackView.cpp"
    1:GUI/TrackView.cpp **** #include "TrackView.h"
    2:GUI/TrackView.cpp **** 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
    6:GUI/TrackView.cpp **** 
    7:GUI/TrackView.cpp ****     lcd = uid;
    8:GUI/TrackView.cpp ****     keypad = kpd;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 2
 
 
   48              		.loc 1 8 12 view .LVU5
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
   94 0054 2946     		mov	r1, r5
   95 0056 0693     		str	r3, [sp, #24]
   96              	.LVL6:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 3
 
 
   97              		.loc 1 14 19 view .LVU19
@@ -143,7 +143,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
   14:GUI/TrackView.cpp ****     delayView.init(ID, driver, lcd, keypad);
  114              		.loc 1 14 19 view .LVU22
  115              		.cfi_endproc
- 116              	.LFE5100:
+ 116              	.LFE5103:
  118              		.section	.text._ZN9TrackView4tickEv,"ax",%progbits
  119              		.align	1
  120              		.global	_ZN9TrackView4tickEv
@@ -152,7 +152,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  123              		.thumb_func
  125              	_ZN9TrackView4tickEv:
  126              	.LVL9:
- 127              	.LFB5101:
+ 127              	.LFB5104:
   16:GUI/TrackView.cpp **** 
   17:GUI/TrackView.cpp **** void TrackView::tick()
   18:GUI/TrackView.cpp **** {
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  144 0006 FFF7FEFF 		bl	_ZN14PitchShiftView4tickEv
  145              	.LVL11:
   20:GUI/TrackView.cpp ****     waveshaperView.tick();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 4
 
 
  146              		.loc 1 20 5 is_stmt 1 view .LVU29
@@ -216,7 +216,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
   23:GUI/TrackView.cpp ****     delayView.tick();
  173              		.loc 1 23 19 view .LVU39
  174              		.cfi_endproc
- 175              	.LFE5101:
+ 175              	.LFE5104:
  177              		.section	.text._ZN9TrackView7repaintEv,"ax",%progbits
  178              		.align	1
  179              		.global	_ZN9TrackView7repaintEv
@@ -225,7 +225,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  182              		.thumb_func
  184              	_ZN9TrackView7repaintEv:
  185              	.LVL17:
- 186              	.LFB5102:
+ 186              	.LFB5105:
   25:GUI/TrackView.cpp **** 
   26:GUI/TrackView.cpp **** void TrackView::repaint()
   27:GUI/TrackView.cpp **** {
@@ -238,13 +238,13 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  192              		.loc 1 28 5 view .LVU41
   29:GUI/TrackView.cpp ****         return;
   30:GUI/TrackView.cpp **** }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 5
 
 
  193              		.loc 1 30 1 is_stmt 0 view .LVU42
  194 0000 7047     		bx	lr
  195              		.cfi_endproc
- 196              	.LFE5102:
+ 196              	.LFE5105:
  198              		.section	.text._ZN9TrackView5clearEv,"ax",%progbits
  199              		.align	1
  200              		.global	_ZN9TrackView5clearEv
@@ -252,14 +252,14 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  202              		.thumb
  203              		.thumb_func
  205              	_ZN9TrackView5clearEv:
- 206              	.LFB5850:
+ 206              	.LFB5853:
  207              		.cfi_startproc
  208              		@ args = 0, pretend = 0, frame = 0
  209              		@ frame_needed = 0, uses_anonymous_args = 0
  210              		@ link register save eliminated.
  211 0000 7047     		bx	lr
  212              		.cfi_endproc
- 213              	.LFE5850:
+ 213              	.LFE5853:
  215              		.text
  216              	.Letext0:
  217              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  250              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
  251              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
  252              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 6
 
 
  253              		.file 38 "<built-in>"
@@ -327,7 +327,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  276              		.file 61 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
  277              		.file 62 "GUI/FX/../../Drivers/../Parameters/SteppedParameter.h"
  278              		.file 63 "GUI/FX/../../Drivers/EncoderDriver.h"
- 279              		.file 64 "GUI/FX/../../Drivers/daisy_ILI9341.h"
+ 279              		.file 64 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
  280              		.file 65 "GUI/FX/../../Drivers/../Parameters/BinaryParameter.h"
  281              		.file 66 "GUI/FX/../../Drivers/KeypadDriver.h"
  282              		.file 67 "GUI/FX/BypassButton.h"
@@ -339,19 +339,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 1
  288              		.file 73 "GUI/FX/DelayView.h"
  289              		.file 74 "GUI/TrackView.h"
  290              		.file 75 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 TrackView.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:19     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:25     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:119    .text._ZN9TrackView4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:125    .text._ZN9TrackView4tickEv:0000000000000000 _ZN9TrackView4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:178    .text._ZN9TrackView7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:184    .text._ZN9TrackView7repaintEv:0000000000000000 _ZN9TrackView7repaintEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:199    .text._ZN9TrackView5clearEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclDz6dA.s:205    .text._ZN9TrackView5clearEv:0000000000000000 _ZN9TrackView5clearEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:19     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:25     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:119    .text._ZN9TrackView4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:125    .text._ZN9TrackView4tickEv:0000000000000000 _ZN9TrackView4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:178    .text._ZN9TrackView7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:184    .text._ZN9TrackView7repaintEv:0000000000000000 _ZN9TrackView7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:199    .text._ZN9TrackView5clearEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cctF24Cf.s:205    .text._ZN9TrackView5clearEv:0000000000000000 _ZN9TrackView5clearEv
 
 UNDEFINED SYMBOLS
 _ZN14PitchShiftView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver

@@ -19,7 +19,6 @@ public:
     {
         parameters.reserve(70);
 
-        state = DISARMED;
         prevUpdate = 0;
         isUpdated = false;
 
@@ -42,7 +41,6 @@ public:
         dsy_gpio_init(&channelB);
 
         // FOR TESTING
-        state = ARMED;
         currentParam = 3;
     }
 
@@ -57,7 +55,7 @@ public:
             valueA = (valueA << 1) | dsy_gpio_read(&channelA);
             valueB = (valueB << 1) | dsy_gpio_read(&channelB);
 
-            if(state != DISARMED && !isNavigation)
+            if(!isNavigation)
             {
                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
                     parameters[currentParam]->decrement();
@@ -80,24 +78,9 @@ public:
     {
         if(isNavigation)
             navCallback();
-        else 
-            changeState();
     }
 
     bool getButtonState() { return btn.Pressed(); }
-
-    void changeState()
-    {
-        switch (state)
-        {
-            case DISARMED:
-                state = ARMED;
-            break;
-            case ARMED:
-                state = DISARMED;
-            break;
-        }
-    }
 
     void setCurrentParam(int newID)
     { 
@@ -128,12 +111,6 @@ public:
     }
 
 private:
-
-    enum EncoderState
-    {
-        DISARMED,
-        ARMED
-    } state;
 
     bool isUpdated;
     uint32_t prevUpdate;

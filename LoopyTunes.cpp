@@ -137,7 +137,7 @@ int main(void)
 	hw.adc.Start();
 
 	lcd.Fill(COLOR_BLACK);
-    //lcd.Update();
+    lcd.Update();
 
 	while(1) 
 	{
