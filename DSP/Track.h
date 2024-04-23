@@ -38,6 +38,20 @@ public:
 
 private:
 
+    void setLoopStart()
+    {
+        startPos = bufferSize - ((startPos * SAMPLERATE) / 1000);
+    }
+
+    float calculateLoop(float input, int channel)
+    {
+        float d1 = bufferSize - ph.readPos;
+        float d2 = startPos + ph.readPos;
+        float sample = ((input * d1) + (buffer[channel][0] * d2)) / (d1 + d2);
+
+        return sample;
+    }
+
     int trackID;
 
     TrackState state;
@@ -49,6 +63,9 @@ private:
 
     float* buffer[2];
     size_t bufferSize;
+
+    float loopStart;
+    float startPos;
 
     PitchShift pitchShift;
     Waveshaper shaper;

@@ -6,11 +6,11 @@ using namespace daisysp;
 
 /*
 TO DO:
-- Mixer audio through
-- seamless looping
 - test reverb dry/wet
 - Doxygen docs
 - bypass UI class
+- fix bit reducer
+- test seamless looping algorithm
 */
 
 // Hardware
@@ -86,11 +86,11 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-	lcd.Init();
+	//lcd.Init();
 	// keypad driver
 
 	// initialise GUI
-	mixerView.init(&hw, &encoder, &lcd, &keypad);
+	//mixerView.init(&hw, &encoder, &lcd, &keypad);
 }
 
 inline void tick(size_t size)
@@ -100,8 +100,8 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		mixerView.tick();
-		lcd.Update();
+		//mixerView.tick();
+		//lcd.Update();
 		sample = 0;
 	}
 	else
@@ -119,8 +119,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 }
 
 int main(void)
-{
-	init();
+{	init();
 	hw.StartAudio(AudioCallback);
 
 	// init global variabls
@@ -136,8 +135,8 @@ int main(void)
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 
-	lcd.Fill(COLOR_BLACK);
-    lcd.Update();
+	//lcd.Fill(COLOR_BLACK);
+    //lcd.Update();
 
 	while(1) 
 	{

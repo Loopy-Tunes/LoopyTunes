@@ -15,8 +15,10 @@ void Track::init(float* mem[2], int ID, dsy_gpio_pin r, dsy_gpio_pin p)
     bufferSize = SAMPLERATE * DURATION;
     buffer[L] = mem[L];
     buffer[R] = mem[R];
-
     resetBuffer();
+
+    loopStart = 15;
+    startPos = 0;
 }
 
 void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
@@ -51,6 +53,7 @@ void Track::setIsRecording()
         case RECORDING:
             state = STOPPED;
             ti.loopLength = ph.writePos;
+            setLoopStart();
             break;
         case PLAYING:
             state = RECORDING;
@@ -113,8 +116,8 @@ void Track::processInputBlock(const float* left, const float* right, size_t size
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        buffer[L][ph.writePos] = left[i] * 30;
-        buffer[R][ph.writePos] = right[i] * 30;
+        buffer[L][ph.writePos] = left[i];
+        buffer[R][ph.writePos] = right[i];
 
         incrementWritePos();
     }
@@ -129,6 +132,9 @@ void Track::processOutputBlock(float* output[2], size_t size)
     {
         output[L][i] = buffer[L][ph.readPos];
         output[R][i] = buffer[R][ph.readPos];
+
+        //output[L][i] = calculateLoop(buffer[L][ph.readPos], L);
+        //output[R][i] = calculateLoop(buffer[R][ph.readPos], R);
         
         incrementReadPos();
     }
