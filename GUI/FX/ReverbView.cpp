@@ -7,7 +7,7 @@ void ReverbView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver
     lcd = uid;
     keypad = kpd;
 
-    // init bypass
+    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Reverb::amount, driver, lcd);
     size.init(trackID + ParameterIDs::Reverb::size, driver, lcd);
 

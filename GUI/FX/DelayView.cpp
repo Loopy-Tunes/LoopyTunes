@@ -7,7 +7,7 @@ void DelayView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
     lcd = uid;
     keypad = kpd;
 
-    // init bypass
+    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Delay::amount, driver, lcd);
     size.init(trackID + ParameterIDs::Delay::size, driver, lcd);
     feedback.init(trackID + ParameterIDs::Delay::feedback, driver, lcd);
@@ -17,7 +17,7 @@ void DelayView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
 
 void DelayView::tick()
 {
-    
+
     amount.tick();
     size.tick();
     feedback.tick();

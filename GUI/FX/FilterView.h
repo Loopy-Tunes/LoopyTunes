@@ -33,6 +33,7 @@ private:
     SteppedSlider resonance;
 
     bool isOpen;
+    int bypassIndexes[4] = {2, 7, 12, 17};
 };
 
 #endif

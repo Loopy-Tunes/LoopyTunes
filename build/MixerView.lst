@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
   48              	.LVL1:
    4:GUI/MixerView.cpp ****     lcd = uid;
   49              		.loc 1 4 1 view .LVU7
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 2
 
 
   50 0008 0E46     		mov	r6, r1
@@ -118,14 +118,14 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
   96 004c FFF7FEFF 		bl	_ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
   97              	.LVL9:
   14:GUI/MixerView.cpp ****     track2.init(ParameterIDs::Tracks::Track2, encoder, lcd, keypad);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 3
 
 
   98              		.loc 1 14 5 is_stmt 1 view .LVU22
   99              		.loc 1 14 16 is_stmt 0 view .LVU23
  100 0050 6368     		ldr	r3, [r4, #4]
  101 0052 2A46     		mov	r2, r5
- 102 0054 04F51170 		add	r0, r4, #580
+ 102 0054 04F52170 		add	r0, r4, #644
  103 0058 0093     		str	r3, [sp]
  104 005a C821     		movs	r1, #200
  105 005c 2368     		ldr	r3, [r4]
@@ -136,7 +136,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  109              		.loc 1 15 16 is_stmt 0 view .LVU25
  110 0062 6368     		ldr	r3, [r4, #4]
  111 0064 2A46     		mov	r2, r5
- 112 0066 04F58660 		add	r0, r4, #1072
+ 112 0066 04F59660 		add	r0, r4, #1200
  113 006a 0093     		str	r3, [sp]
  114 006c 4FF49671 		mov	r1, #300
  115 0070 2368     		ldr	r3, [r4]
@@ -151,7 +151,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  123 007e 0693     		str	r3, [sp, #24]
  124              	.LVL12:
  125              		.loc 1 16 16 view .LVU28
- 126 0080 04F21C60 		addw	r0, r4, #1564
+ 126 0080 04F2DC60 		addw	r0, r4, #1756
  127 0084 2368     		ldr	r3, [r4]
   17:GUI/MixerView.cpp **** }
  128              		.loc 1 17 1 view .LVU29
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  148              		.global	_ZN9MixerView4tickEv
  149              		.syntax unified
  150              		.thumb
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 4
 
 
  151              		.thumb_func
@@ -237,8 +237,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
   27:GUI/MixerView.cpp ****     track2.tick();
  194              		.loc 1 27 5 is_stmt 1 view .LVU46
  195              		.loc 1 27 16 is_stmt 0 view .LVU47
- 196 002a 04F51170 		add	r0, r4, #580
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 5
+ 196 002a 04F52170 		add	r0, r4, #644
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 5
 
 
  197 002e FFF7FEFF 		bl	_ZN9TrackView4tickEv
@@ -246,13 +246,13 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
   28:GUI/MixerView.cpp ****     track3.tick();
  199              		.loc 1 28 5 is_stmt 1 view .LVU48
  200              		.loc 1 28 16 is_stmt 0 view .LVU49
- 201 0032 04F58660 		add	r0, r4, #1072
+ 201 0032 04F59660 		add	r0, r4, #1200
  202 0036 FFF7FEFF 		bl	_ZN9TrackView4tickEv
  203              	.LVL23:
   29:GUI/MixerView.cpp ****     track4.tick();
  204              		.loc 1 29 5 is_stmt 1 view .LVU50
  205              		.loc 1 29 16 is_stmt 0 view .LVU51
- 206 003a 04F21C60 		addw	r0, r4, #1564
+ 206 003a 04F2DC60 		addw	r0, r4, #1756
   30:GUI/MixerView.cpp **** 
   31:GUI/MixerView.cpp ****     if(isOpen)
   32:GUI/MixerView.cpp ****         repaint();
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  241              		.align	1
  242              		.global	_ZN9MixerView5clearEv
  243              		.syntax unified
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 6
 
 
  244              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  300              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
  301              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
  302              		.file 45 "../../../libDaisy//src/daisy_core.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 7
 
 
  303              		.file 46 "../../../libDaisy//src/per/tim.h"
@@ -402,19 +402,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 1
  341              		.file 84 "GUI/TrackView.h"
  342              		.file 85 "GUI/MixerView.h"
  343              		.file 86 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MixerView.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:19     .text._ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:25     .text._ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:147    .text._ZN9MixerView4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:153    .text._ZN9MixerView4tickEv:0000000000000000 _ZN9MixerView4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:221    .text._ZN9MixerView7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:227    .text._ZN9MixerView7repaintEv:0000000000000000 _ZN9MixerView7repaintEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:241    .text._ZN9MixerView5clearEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccT3mqX4.s:247    .text._ZN9MixerView5clearEv:0000000000000000 _ZN9MixerView5clearEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:19     .text._ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:25     .text._ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9MixerView4initEPN5daisy9DaisySeedEP13EncoderDriverP8UiDriverP12KeypadDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:147    .text._ZN9MixerView4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:153    .text._ZN9MixerView4tickEv:0000000000000000 _ZN9MixerView4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:221    .text._ZN9MixerView7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:227    .text._ZN9MixerView7repaintEv:0000000000000000 _ZN9MixerView7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:241    .text._ZN9MixerView5clearEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cc8IgHM8.s:247    .text._ZN9MixerView5clearEv:0000000000000000 _ZN9MixerView5clearEv
 
 UNDEFINED SYMBOLS
 _ZN11AudioSlider4initEiPN5daisy9DaisySeedE

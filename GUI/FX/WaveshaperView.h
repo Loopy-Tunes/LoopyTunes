@@ -33,6 +33,7 @@ private:
     SteppedSlider mode;
 
     bool isOpen;
+    int bypassIndexes[4] = {1, 6, 11, 16};
 };
 
 #endif

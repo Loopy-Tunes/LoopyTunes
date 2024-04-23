@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
    6:GUI/TrackView.cpp **** 
    7:GUI/TrackView.cpp ****     lcd = uid;
    8:GUI/TrackView.cpp ****     keypad = kpd;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 2
 
 
   48              		.loc 1 8 12 view .LVU5
@@ -94,7 +94,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
   72 002c A368     		ldr	r3, [r4, #8]
   73 002e 3246     		mov	r2, r6
   74 0030 2946     		mov	r1, r5
-  75 0032 04F1D000 		add	r0, r4, #208
+  75 0032 04F1E000 		add	r0, r4, #224
   76 0036 0093     		str	r3, [sp]
   77 0038 6368     		ldr	r3, [r4, #4]
   78 003a FFF7FEFF 		bl	_ZN10FilterView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
@@ -105,7 +105,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
   82 003e A368     		ldr	r3, [r4, #8]
   83 0040 3246     		mov	r2, r6
   84 0042 2946     		mov	r1, r5
-  85 0044 04F5C270 		add	r0, r4, #388
+  85 0044 04F5DA70 		add	r0, r4, #436
   86 0048 0093     		str	r3, [sp]
   87 004a 6368     		ldr	r3, [r4, #4]
   88 004c FFF7FEFF 		bl	_ZN9DelayView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
@@ -118,11 +118,11 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
   94 0054 2946     		mov	r1, r5
   95 0056 0693     		str	r3, [sp, #24]
   96              	.LVL6:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 3
 
 
   97              		.loc 1 14 20 view .LVU19
-  98 0058 04F59A70 		add	r0, r4, #308
+  98 0058 04F5AA70 		add	r0, r4, #340
   99 005c 6368     		ldr	r3, [r4, #4]
   15:GUI/TrackView.cpp **** }
  100              		.loc 1 15 1 view .LVU20
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
  144 0006 FFF7FEFF 		bl	_ZN14PitchShiftView4tickEv
  145              	.LVL11:
   20:GUI/TrackView.cpp ****     waveshaperView.tick();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 4
 
 
  146              		.loc 1 20 5 is_stmt 1 view .LVU29
@@ -189,19 +189,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
   21:GUI/TrackView.cpp ****     filterView.tick();
  151              		.loc 1 21 5 is_stmt 1 view .LVU31
  152              		.loc 1 21 20 is_stmt 0 view .LVU32
- 153 0012 04F1D000 		add	r0, r4, #208
+ 153 0012 04F1E000 		add	r0, r4, #224
  154 0016 FFF7FEFF 		bl	_ZN10FilterView4tickEv
  155              	.LVL13:
   22:GUI/TrackView.cpp ****     delayView.tick();
  156              		.loc 1 22 5 is_stmt 1 view .LVU33
  157              		.loc 1 22 19 is_stmt 0 view .LVU34
- 158 001a 04F5C270 		add	r0, r4, #388
+ 158 001a 04F5DA70 		add	r0, r4, #436
  159 001e FFF7FEFF 		bl	_ZN9DelayView4tickEv
  160              	.LVL14:
   23:GUI/TrackView.cpp ****     reverbView.tick();
  161              		.loc 1 23 5 is_stmt 1 view .LVU35
  162              		.loc 1 23 20 is_stmt 0 view .LVU36
- 163 0022 04F59A70 		add	r0, r4, #308
+ 163 0022 04F5AA70 		add	r0, r4, #340
   24:GUI/TrackView.cpp **** 
   25:GUI/TrackView.cpp ****     if(isOpen)
   26:GUI/TrackView.cpp ****         repaint();
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
  190              		@ frame_needed = 0, uses_anonymous_args = 0
  191              		@ link register save eliminated.
   31:GUI/TrackView.cpp ****     
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 5
 
 
   32:GUI/TrackView.cpp **** }
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
  248              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
  249              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
  250              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 6
 
 
  251              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
@@ -340,19 +340,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 1
  287              		.file 73 "GUI/FX/DelayView.h"
  288              		.file 74 "GUI/TrackView.h"
  289              		.file 75 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 TrackView.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:19     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:25     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:119    .text._ZN9TrackView4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:125    .text._ZN9TrackView4tickEv:0000000000000000 _ZN9TrackView4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:178    .text._ZN9TrackView7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:184    .text._ZN9TrackView7repaintEv:0000000000000000 _ZN9TrackView7repaintEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:198    .text._ZN9TrackView5clearEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccNyxjZy.s:204    .text._ZN9TrackView5clearEv:0000000000000000 _ZN9TrackView5clearEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:19     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:25     .text._ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver:0000000000000000 _ZN9TrackView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:119    .text._ZN9TrackView4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:125    .text._ZN9TrackView4tickEv:0000000000000000 _ZN9TrackView4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:178    .text._ZN9TrackView7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:184    .text._ZN9TrackView7repaintEv:0000000000000000 _ZN9TrackView7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:198    .text._ZN9TrackView5clearEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAmsmeQ.s:204    .text._ZN9TrackView5clearEv:0000000000000000 _ZN9TrackView5clearEv
 
 UNDEFINED SYMBOLS
 _ZN14PitchShiftView4initEiP13EncoderDriverP8UiDriverP12KeypadDriver

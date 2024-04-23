@@ -32,6 +32,7 @@ private:
     SteppedSlider size;
 
     bool isOpen;
+    int bypassIndexes[4] = {4, 9, 14, 19};
 };
 
 #endif

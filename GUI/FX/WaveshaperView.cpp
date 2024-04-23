@@ -7,7 +7,7 @@ void WaveshaperView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDr
     lcd = uid;
     keypad = kpd;
 
-    // init bypass
+    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Waveshaper::amount, driver, lcd);
     funcControl.init(trackID + ParameterIDs::Waveshaper::funcControl, driver, lcd);
     mode.init(trackID + ParameterIDs::Waveshaper::mode, driver, lcd);
