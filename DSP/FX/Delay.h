@@ -19,7 +19,7 @@ public:
     void init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>* dl[2]);
     void setDefaultValues();
 
-    inline void setBypass(bool b) { isBypass = b; }
+    inline void setBypass() { isBypass = !isBypass; }
     inline void setDelay(size_t s) { delayLine[0]->SetDelay(s), delayLine[1]->SetDelay(s); }
     inline void setFeedback(float b) { feedback.value = b; }
     inline void setAmount(float a) { amount.value = a; }

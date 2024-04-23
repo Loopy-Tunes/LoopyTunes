@@ -81,6 +81,7 @@ public:
     }
 
     bool getButtonState() { return btn.Pressed(); }
+    std::function<void()> getBypassCallback(size_t index) { return bypassCallbacks.at(index); }
 
     void setCurrentParam(int newID)
     { 
@@ -97,6 +98,11 @@ public:
     void addParameter(SteppedParameter* newParam)
     {
         parameters.push_back(newParam);
+    }
+
+    void addBypassCallback(std::function<void()> newCallback)
+    {
+        bypassCallbacks.push_back(newCallback);
     }
 
     SteppedParameter* getParameter(int paramID)
@@ -120,6 +126,7 @@ private:
 
     int currentParam;
     std::vector<SteppedParameter*> parameters;
+    std::vector<std::function<void()>> bypassCallbacks;
 
     Switch btn;
     dsy_gpio channelA;

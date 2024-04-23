@@ -15,6 +15,7 @@ void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>*
     size.param.init(0, 10000, 10, ParameterIDs::Delay::size, trackID, [this] (float s) { setDelay(toSize(s)); });
     feedback.param.init(0, 1, 0.05, ParameterIDs::Delay::feedback, trackID, [this] (float f) {setFeedback(f); });
 
+    driver->addBypassCallback([this] { setBypass(); });
     driver->addParameter(&amount.param);
     driver->addParameter(&size.param);
     driver->addParameter(&feedback.param);
@@ -24,7 +25,7 @@ void Delay::init(EncoderDriver* driver, int trackID, DelayLine<float, MAXDELAY>*
 
 void Delay::setDefaultValues()
 {
-    setBypass(delayDefs.bypass);
+    isBypass = true;
     setAmount(delayDefs.amount);
     setDelay(delayDefs.size);
     setFeedback(delayDefs.feedback);

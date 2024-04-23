@@ -10,8 +10,8 @@ void TrackView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
     pitchShiftView.init(ID, driver, lcd, keypad);
     waveshaperView.init(ID, driver, lcd, keypad);
     filterView.init(ID, driver, lcd, keypad);
-    reverbView.init(ID, driver, lcd, keypad);
     delayView.init(ID, driver, lcd, keypad);
+    reverbView.init(ID, driver, lcd, keypad);
 }
 
 void TrackView::tick()
@@ -19,14 +19,16 @@ void TrackView::tick()
     pitchShiftView.tick();
     waveshaperView.tick();
     filterView.tick();
-    reverbView.tick();
     delayView.tick();
+    reverbView.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void TrackView::repaint()
 {
-    if(!isOpen)
-        return;
+    
 }
 
 void TrackView::clear()

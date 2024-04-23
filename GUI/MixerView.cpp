@@ -27,12 +27,14 @@ void MixerView::tick()
     track2.tick();
     track3.tick();
     track4.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void MixerView::repaint()
 {
-    if(!isOpen)
-        return;
+    
 }
 
 void MixerView::clear()

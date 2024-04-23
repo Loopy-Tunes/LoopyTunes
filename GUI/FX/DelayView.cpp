@@ -17,15 +17,18 @@ void DelayView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
 
 void DelayView::tick()
 {
+    
     amount.tick();
     size.tick();
     feedback.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void DelayView::repaint()
 {
-    if(!isOpen)
-        return;
+   
 }
 
 void DelayView::clear()

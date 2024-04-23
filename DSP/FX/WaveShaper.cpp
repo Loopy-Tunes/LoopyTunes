@@ -34,6 +34,7 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     funcControl.param.init(0, 1, 0.02, ParameterIDs::Waveshaper::funcControl, trackID, [this] (float fc) { setFuncControl(fc); });
     mode.param.init(0, 4, 1, ParameterIDs::Waveshaper::mode, trackID, [this] (float m) { setMode(m); });
 
+    driver->addBypassCallback([this] { setBypass(); });
     driver->addParameter(&amount.param);
     driver->addParameter(&funcControl.param);
     driver->addParameter(&mode.param);
@@ -41,14 +42,13 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     setDefaultValues();
 
     // FOR TESTING
-    setBypass(false);
     setMode(BITREDUCER);
     setAmount(1);
 }
 
  void Waveshaper::setDefaultValues()
  {
-    setBypass(waveshaperDefs.bypass);
+    isBypass = true;
     setAmount(waveshaperDefs.amount);
     setFuncControl(waveshaperDefs.funcControl);
     setMode(waveshaperDefs.mode);

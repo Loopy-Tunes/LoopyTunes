@@ -20,12 +20,14 @@ void WaveshaperView::tick()
     amount.tick();
     funcControl.tick();
     mode.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void WaveshaperView::repaint()
 {
-    if(!isOpen)
-        return;
+    
 }
 
 void WaveshaperView::clear()

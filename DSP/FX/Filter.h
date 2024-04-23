@@ -18,7 +18,7 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
     
-    void setBypass(bool b) { isBypass = b; }
+    void setBypass() { isBypass = !isBypass; }
     void setFreq(float f) { filter.SetFrequency(f); }
     void setMode(float m);
 

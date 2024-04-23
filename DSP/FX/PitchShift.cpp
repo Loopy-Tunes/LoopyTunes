@@ -14,6 +14,7 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
     amount.param.init(0, 1, 0.05, ParameterIDs::PitchShifter::amount, trackID, [this] (float a) { setAmount(a); });
     semitones.param.init(-12, 12, 1, ParameterIDs::PitchShifter::semitones, trackID, [this] (float s) { shifter.SetTransposition(s); });
 
+    driver->addBypassCallback([this] { setBypass(); });
     driver->addParameter(&amount.param);
     driver->addParameter(&semitones.param);
 
@@ -22,7 +23,7 @@ void PitchShift::init(EncoderDriver* driver, int trackID)
 
 void PitchShift::setDefaultValues()
 {
-    setBypass(pitchShifterDefs.bypass);
+    isBypass = true;
     setAmount(pitchShifterDefs.amount);
     shifter.SetTransposition(pitchShifterDefs.semitones);
     shifter.SetFun(pitchShifterDefs.rand);

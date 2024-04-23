@@ -22,7 +22,7 @@ public:
     void init(EncoderDriver* driver, int trackID);
     void setDefaultValues();
 
-    void setBypass(bool b) { isBypass = b; }
+    void setBypass() { isBypass = !isBypass; }
     void setAmount(float mix);
 
     void processBlock(float* input[2], long size);

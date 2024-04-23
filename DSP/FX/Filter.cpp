@@ -7,6 +7,7 @@ void Filter::init(EncoderDriver* driver, int trackID)
     mode.init(0, 1, 1, ParameterIDs::Filter::mode, trackID, [this] (float m) { setMode(m); });
     freq.init(0, 0.490, 0.01, ParameterIDs::Filter::frequency, trackID, [this] (float f) { setFreq(f); });
 
+    driver->addBypassCallback([this] { setBypass(); });
     driver->addParameter(&mode);
     driver->addParameter(&freq);
 
@@ -15,7 +16,7 @@ void Filter::init(EncoderDriver* driver, int trackID)
 
 void Filter::setDefaultValues()
 {
-    setBypass(filterDefs.bypass);
+    isBypass = true;
     setMode(filterDefs.mode);
     setFreq(filterDefs.frequency);
 }

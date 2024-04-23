@@ -18,12 +18,14 @@ void ReverbView::tick()
 {
     amount.tick();
     size.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void ReverbView::repaint()
 {
-    if(!isOpen)
-        return;
+    
 }
 
 void ReverbView::clear()

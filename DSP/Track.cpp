@@ -27,7 +27,6 @@ void Track::initFX(EncoderDriver* driver, DelayLine<float, MAXDELAY>* dl[2])
     shaper.init(driver, trackID);
     filter.init(driver, trackID);
     delay.init(driver, trackID, dl);
-    shaper.init(driver, trackID);
     reverb.init(driver, trackID);
 }
 

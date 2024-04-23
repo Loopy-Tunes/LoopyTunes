@@ -20,12 +20,14 @@ void FilterView::tick()
     mode.tick();
     frequency.tick();
     resonance.tick();
+
+    if(isOpen)
+        repaint();
 }
 
 void FilterView::repaint()
 {
-    if(!isOpen)
-        return;
+   
 }
 
 void FilterView::clear()

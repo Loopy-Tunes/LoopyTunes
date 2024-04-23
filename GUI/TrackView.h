@@ -23,6 +23,8 @@ public:
     void repaint();
     void clear();
 
+    void setIsOpen(bool state) { isOpen = state; }
+
 private:
 
     int trackID;

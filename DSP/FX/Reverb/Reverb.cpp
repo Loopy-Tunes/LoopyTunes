@@ -8,6 +8,7 @@ void Reverb::init(EncoderDriver* driver, int trackID)
     damp.param.init(0, 1, 0.05, ParameterIDs::Reverb::damp, trackID, [this] (float d) { model.setdamp(d); });
     width.param.init(0, 1, 0.05, ParameterIDs::Reverb::width, trackID, [this] (float w) { model.setwidth(w); });
 
+    driver->addBypassCallback([this] { setBypass(); });
     driver->addParameter(&amount.param);
     driver->addParameter(&mode.param);
     driver->addParameter(&size.param);
@@ -20,7 +21,7 @@ void Reverb::init(EncoderDriver* driver, int trackID)
 
 void Reverb::setDefaultValues()
 {
-    setBypass(reverbDefs.bypass);
+    isBypass = true;
     setAmount(reverbDefs.amount);
     model.setmode(reverbDefs.mode);
     model.setroomsize(reverbDefs.size);

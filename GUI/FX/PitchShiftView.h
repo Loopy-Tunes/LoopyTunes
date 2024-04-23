@@ -18,6 +18,8 @@ public:
     void repaint();
     void clear();
 
+    void setIsOpen(bool state) { isOpen = state; }
+
 private:
 
     int trackID;
@@ -30,6 +32,7 @@ private:
     SteppedSlider semitones;
 
     bool isOpen;
+    int bypassIndexes[4] = {0, 5, 10, 15};
 };
 
 #endif
