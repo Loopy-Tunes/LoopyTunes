@@ -32,6 +32,9 @@ private:
     SteppedSlider amount;
     SteppedSlider semitones;
 
+    int numberOfParameters = 2;
+    const char* parameterNames[2] = {"Amount", "Semitones"};
+
     bool isOpen;
     bool isPainted;
     int bypassIndexes[4] = {0, 5, 10, 15};

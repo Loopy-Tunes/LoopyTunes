@@ -33,6 +33,9 @@ private:
     SteppedSlider size;
     SteppedSlider feedback; 
 
+    int numberOfParameters = 3;
+    const char* parameterNames[3] = {"Amount", "Size", "Feedback"};
+
     bool isOpen;
     bool isPainted;
     int bypassIndexes[4] = {2, 7, 12, 17};

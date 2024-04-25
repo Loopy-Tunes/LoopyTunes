@@ -40,6 +40,6 @@ void AudioSlider::repaint(int index, bool selected)
         // Write the channel number underneath the bar
         lcd->WriteString(std::to_string(channelID).c_str(), bar_x + (StyleSheet::Mixer::faderWidth / 2) - 5, StyleSheet::Mixer::mixerBottom + 10, Font_7x10, StyleSheet::Mixer::textColor);
     
-        isDifferent = false;
+        isUpdated = false;
     }
 }

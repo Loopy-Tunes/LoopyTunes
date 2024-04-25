@@ -33,6 +33,9 @@ private:
     SteppedSlider funcControl;
     SteppedSlider mode;
 
+    int numberOfParameters = 3;
+    const char* parameterNames[3] = {"Amount", "Function Control", "Mode"};
+
     bool isOpen;
     bool isPainted;
     int bypassIndexes[4] = {1, 6, 11, 16};

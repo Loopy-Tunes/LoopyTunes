@@ -33,6 +33,9 @@ private:
     SteppedSlider frequency;
     SteppedSlider resonance;
 
+    int numberOfParameters = 3;
+    const char* parameterNames[3] = {"Mode", "Frequency", "Resonance"};
+
     bool isOpen;
     bool isPainted;
     int bypassIndexes[4] = {2, 7, 12, 17};
