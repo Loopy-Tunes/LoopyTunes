@@ -11,6 +11,7 @@ TO DO:
 - bypass UI class
 - fix bit reducer
 - test seamless looping algorithm
+- fix bit reducer
 */
 
 // Hardware

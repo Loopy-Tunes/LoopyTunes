@@ -43,7 +43,7 @@ private:
         startPos = bufferSize - ((startPos * SAMPLERATE) / 1000);
     }
 
-    float calculateLoop(float input, int channel)
+    inline float calculateLoop(float input, int channel)
     {
         float d1 = bufferSize - ph.readPos;
         float d2 = startPos + ph.readPos;

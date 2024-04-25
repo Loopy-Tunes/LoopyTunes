@@ -2,7 +2,7 @@
 #define BYPASSBUTTON_H
 
 #include "../../Drivers/EncoderDriver.h"
-#include <functional>
+#include "StyleSheet.h"
 
 /********************************************************//**
  *  Class name: BypassButton
