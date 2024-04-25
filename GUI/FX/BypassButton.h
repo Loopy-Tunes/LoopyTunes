@@ -25,7 +25,7 @@ public:
     {
         if(isSelected && encoder->getButtonState())
         {
-            callback;
+            callback();
         }
     }
 
