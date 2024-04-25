@@ -7,11 +7,12 @@ void ReverbView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver
     lcd = uid;
     keypad = kpd;
 
-    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
+    bypass.init(driver, uid, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Reverb::amount, driver, lcd);
     size.init(trackID + ParameterIDs::Reverb::size, driver, lcd);
 
     isOpen = false;
+    isPainted = false;
 }
 
 void ReverbView::tick()

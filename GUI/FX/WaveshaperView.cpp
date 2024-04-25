@@ -7,12 +7,13 @@ void WaveshaperView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDr
     lcd = uid;
     keypad = kpd;
 
-    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
+    bypass.init(driver, uid, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Waveshaper::amount, driver, lcd);
     funcControl.init(trackID + ParameterIDs::Waveshaper::funcControl, driver, lcd);
     mode.init(trackID + ParameterIDs::Waveshaper::mode, driver, lcd);
 
     isOpen = false;
+    isPainted = false;
 }
 
 void WaveshaperView::tick()
@@ -59,8 +60,6 @@ void WaveshaperView::repaint()
             // Slider border
             lcd->DrawRect(Rectangle(StyleSheet::Effects::sliderOffsetX, paramY, StyleSheet::Effects::sliderWidth, StyleSheet::Effects::sliderHeight), (i == currentParam) ? COLOR_GREEN : COLOR_BLUE);
         }
-
-
 
         isPainted = true;
     }

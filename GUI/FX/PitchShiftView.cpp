@@ -7,11 +7,12 @@ void PitchShiftView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDr
     lcd = uid;
     keypad = kpd;
 
-    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
+    bypass.init(driver, uid, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::PitchShifter::amount, driver, lcd);
     semitones.init(trackID + ParameterIDs::PitchShifter::semitones, driver, lcd);
 
     isOpen = false;
+    isPainted = false;
 }
 
 void PitchShiftView::tick()
@@ -57,8 +58,6 @@ void PitchShiftView::repaint()
             // Slider border
             lcd->DrawRect(Rectangle(StyleSheet::Effects::sliderOffsetX, paramY, StyleSheet::Effects::sliderWidth, StyleSheet::Effects::sliderHeight), (i == currentParam) ? COLOR_GREEN : COLOR_BLUE);
         }
-
-
 
         isPainted = true;
     }

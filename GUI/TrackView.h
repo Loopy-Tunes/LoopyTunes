@@ -38,6 +38,8 @@ private:
     ReverbView reverbView;
     DelayView delayView;
 
+    int selectedEffectIndex;
+
     bool isOpen;
     bool isPainted;
 };

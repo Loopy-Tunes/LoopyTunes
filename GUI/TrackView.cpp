@@ -12,6 +12,10 @@ void TrackView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
     filterView.init(ID, driver, lcd, keypad);
     delayView.init(ID, driver, lcd, keypad);
     reverbView.init(ID, driver, lcd, keypad);
+
+    selectedEffectIndex = 0;
+    isOpen = false;
+    isPainted = false;
 }
 
 void TrackView::tick()

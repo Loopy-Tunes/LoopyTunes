@@ -20,6 +20,7 @@ public:
 
     void setIsOpen(bool state) { isOpen = state; }
     void setIsPainted(bool state) { isPainted = state; }
+    void setCurrentParam(int newParam) { currentParam = newParam; }
 
 private:
 
@@ -35,6 +36,7 @@ private:
 
     int numberOfParameters = 3;
     const char* parameterNames[3] = {"Amount", "Function Control", "Mode"};
+    int currentParam = 0;
 
     bool isOpen;
     bool isPainted;

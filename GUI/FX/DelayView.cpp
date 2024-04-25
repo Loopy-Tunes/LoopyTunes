@@ -7,12 +7,13 @@ void DelayView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver*
     lcd = uid;
     keypad = kpd;
 
-    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
+    bypass.init(driver, uid, driver->getBypassCallback(bypassIndexes[ID-1]));
     amount.init(trackID + ParameterIDs::Delay::amount, driver, lcd);
     size.init(trackID + ParameterIDs::Delay::size, driver, lcd);
     feedback.init(trackID + ParameterIDs::Delay::feedback, driver, lcd);
 
     isOpen = false;
+    isPainted = false;
 }
 
 void DelayView::tick()
@@ -60,8 +61,6 @@ void DelayView::repaint()
             // Slider border
             lcd->DrawRect(Rectangle(StyleSheet::Effects::sliderOffsetX, paramY, StyleSheet::Effects::sliderWidth, StyleSheet::Effects::sliderHeight), (i == currentParam) ? COLOR_GREEN : COLOR_BLUE);
         }
-
-
 
         isPainted = true;
     }

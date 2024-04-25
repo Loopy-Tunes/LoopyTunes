@@ -7,12 +7,13 @@ void FilterView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver
     lcd = uid;
     keypad = kpd;
 
-    bypass.init(driver, driver->getBypassCallback(bypassIndexes[ID-1]));
+    bypass.init(driver, uid, driver->getBypassCallback(bypassIndexes[ID-1]));
     mode.init(trackID + ParameterIDs::Filter::mode, driver, lcd);
     frequency.init(trackID + ParameterIDs::Filter::frequency, driver, lcd);
     resonance.init(trackID + ParameterIDs::Filter::resonance, driver, lcd);
 
     isOpen = false;
+    isPainted = false;
 }
 
 void FilterView::tick()
@@ -59,8 +60,6 @@ void FilterView::repaint()
             // Slider border
             lcd->DrawRect(Rectangle(StyleSheet::Effects::sliderOffsetX, paramY, StyleSheet::Effects::sliderWidth, StyleSheet::Effects::sliderHeight), (i == currentParam) ? COLOR_GREEN : COLOR_BLUE);
         }
-
-
 
         isPainted = true;
     }
