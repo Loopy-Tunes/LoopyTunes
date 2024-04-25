@@ -27,7 +27,11 @@ void WaveshaperView::tick()
 
 void WaveshaperView::repaint()
 {
-    
+    if(isPainted)
+        return;
+
+
+    isPainted = false;
 }
 
 void WaveshaperView::clear()

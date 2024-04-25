@@ -28,7 +28,11 @@ void DelayView::tick()
 
 void DelayView::repaint()
 {
-   
+   if(isPainted)
+        return;
+
+
+    isPainted = false;
 }
 
 void DelayView::clear()

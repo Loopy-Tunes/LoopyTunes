@@ -25,7 +25,11 @@ void PitchShiftView::tick()
 
 void PitchShiftView::repaint()
 {
+    if(isPainted)
+        return;
 
+
+    isPainted = false;
 }
 
 void PitchShiftView::clear()

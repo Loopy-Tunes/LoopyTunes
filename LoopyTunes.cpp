@@ -87,11 +87,15 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-	//lcd.Init();
+	lcd.Init();
+	lcd.Fill(COLOR_BLACK);
+	lcd.Update();
 	// keypad driver
 
 	// initialise GUI
-	//mixerView.init(&hw, &encoder, &lcd, &keypad);
+	mixerView.init(&hw, &encoder, &lcd, &keypad);
+
+	System::Delay(100);
 }
 
 inline void tick(size_t size)
@@ -101,8 +105,8 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		//mixerView.tick();
-		//lcd.Update();
+		mixerView.tick();
+		lcd.Update();
 		sample = 0;
 	}
 	else
@@ -120,7 +124,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 }
 
 int main(void)
-{	init();
+{	
+	init();
 	hw.StartAudio(AudioCallback);
 
 	// init global variabls

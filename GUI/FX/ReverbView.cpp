@@ -25,7 +25,11 @@ void ReverbView::tick()
 
 void ReverbView::repaint()
 {
-    
+    if(isPainted)
+        return;
+
+
+    isPainted = false;
 }
 
 void ReverbView::clear()

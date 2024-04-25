@@ -27,7 +27,11 @@ void FilterView::tick()
 
 void FilterView::repaint()
 {
-   
+   if(isPainted)
+        return;
+
+
+    isPainted = false;
 }
 
 void FilterView::clear()

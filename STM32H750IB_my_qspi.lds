@@ -105,7 +105,7 @@ SECTIONS
 		_esram1_bss = .;
 
 		PROVIDE(__sram1_bss_end__ = _esram1_bss);
-	} > RAM_D2
+	} > SDRAM
 
 	.data :
 	{

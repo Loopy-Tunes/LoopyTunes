@@ -19,6 +19,7 @@ public:
     void clear();
 
     void setIsOpen(bool state) { isOpen = state; }
+    void setIsPainted(bool state) { isPainted = state; }
 
 private:
 
@@ -32,6 +33,7 @@ private:
     SteppedSlider size;
 
     bool isOpen;
+    bool isPainted;
     int bypassIndexes[4] = {4, 9, 14, 19};
 };
 

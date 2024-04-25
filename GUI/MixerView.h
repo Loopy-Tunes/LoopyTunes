@@ -19,7 +19,9 @@ public:
     void repaint();
     void clear();
 
+    void setSelectedChannel(int channel) { selectedChannel = channel; }
     void setIsOpen(bool state) { isOpen = state; }
+    void setIsPainted(bool state) { isPainted = state; }
 
 private:
 
@@ -31,12 +33,16 @@ private:
     AudioSlider amp3;
     AudioSlider amp4;
 
+    int selectedChannel;
+    std::array<AudioSlider, 4> ampSliders = {amp1, amp2, amp3, amp4};
+
     TrackView track1;
     TrackView track2;
     TrackView track3;
     TrackView track4;
 
     bool isOpen;
+    bool isPainted;
 };
 
 #endif

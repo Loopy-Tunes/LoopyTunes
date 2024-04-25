@@ -39,6 +39,7 @@ private:
     DelayView delayView;
 
     bool isOpen;
+    bool isPainted;
 };
 
 #endif
