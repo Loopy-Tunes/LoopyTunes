@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   23              		.thumb_func
   25              	_ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver:
   26              	.LVL0:
-  27              	.LFB5106:
+  27              	.LFB5105:
   28              		.file 1 "GUI/FX/SteppedSlider.cpp"
    1:GUI/FX/SteppedSlider.cpp **** #include "SteppedSlider.h"
    2:GUI/FX/SteppedSlider.cpp **** 
@@ -45,8 +45,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
    7:GUI/FX/SteppedSlider.cpp ****     
    8:GUI/FX/SteppedSlider.cpp ****     paramID = ID;
   37              		.loc 1 8 5 is_stmt 1 view .LVU3
-  38              	.LBB31:
-  39              	.LBB32:
+  38              	.LBB29:
+  39              	.LBB30:
   40              		.file 2 "GUI/FX/../../Drivers/EncoderDriver.h"
    1:GUI/FX/../../Drivers/EncoderDriver.h **** #ifndef ENCODERDRIVER_H
    2:GUI/FX/../../Drivers/EncoderDriver.h **** #define ENCODERDRIVER_H
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
    8:GUI/FX/../../Drivers/EncoderDriver.h ****  *  Function: Driver for the encoder input, controls the value of FX parameters
    9:GUI/FX/../../Drivers/EncoderDriver.h ****  * 
   10:GUI/FX/../../Drivers/EncoderDriver.h ****  *  Based off of Encoder class from libDaisy (Stephen Hensley, 2019)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 2
 
 
   11:GUI/FX/../../Drivers/EncoderDriver.h ****  *  https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h
@@ -68,131 +68,163 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   15:GUI/FX/../../Drivers/EncoderDriver.h **** {
   16:GUI/FX/../../Drivers/EncoderDriver.h **** public:
   17:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  18:GUI/FX/../../Drivers/EncoderDriver.h ****     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
-  19:GUI/FX/../../Drivers/EncoderDriver.h ****     {
-  20:GUI/FX/../../Drivers/EncoderDriver.h ****         parameters.reserve(70);
-  21:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  22:GUI/FX/../../Drivers/EncoderDriver.h ****         prevUpdate = 0;
-  23:GUI/FX/../../Drivers/EncoderDriver.h ****         isUpdated = false;
-  24:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  25:GUI/FX/../../Drivers/EncoderDriver.h ****         isNavigation = true;
-  26:GUI/FX/../../Drivers/EncoderDriver.h ****         navCallback = navCb;
-  27:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  28:GUI/FX/../../Drivers/EncoderDriver.h ****         currentParam = 0;
-  29:GUI/FX/../../Drivers/EncoderDriver.h ****         valueA = 0xFF;
-  30:GUI/FX/../../Drivers/EncoderDriver.h ****         valueB = 0xFF;
+  18:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+  19:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Initialises the driver
+  20:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param button The pin used for the centre push button
+  21:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param a The pin used for channel A of the encoder
+  22:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param b The pin used for channel B of the encoder
+  23:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param navCb The function used for navigation
+  24:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+  25:GUI/FX/../../Drivers/EncoderDriver.h ****     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
+  26:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+  27:GUI/FX/../../Drivers/EncoderDriver.h ****         parameters.reserve(70);
+  28:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  29:GUI/FX/../../Drivers/EncoderDriver.h ****         prevUpdate = 0;
+  30:GUI/FX/../../Drivers/EncoderDriver.h ****         isUpdated = false;
   31:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  32:GUI/FX/../../Drivers/EncoderDriver.h ****         btn.Init(button);
-  33:GUI/FX/../../Drivers/EncoderDriver.h ****         
-  34:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.pin = a;
-  35:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.pin = b;
-  36:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.mode = DSY_GPIO_MODE_INPUT;
-  37:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.mode = DSY_GPIO_MODE_INPUT;
-  38:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.pull = DSY_GPIO_PULLUP;
-  39:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.pull = DSY_GPIO_PULLUP;
-  40:GUI/FX/../../Drivers/EncoderDriver.h ****         dsy_gpio_init(&channelA);
-  41:GUI/FX/../../Drivers/EncoderDriver.h ****         dsy_gpio_init(&channelB);
-  42:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  43:GUI/FX/../../Drivers/EncoderDriver.h ****         // FOR TESTING
-  44:GUI/FX/../../Drivers/EncoderDriver.h ****         currentParam = 3;
-  45:GUI/FX/../../Drivers/EncoderDriver.h ****     }
-  46:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  47:GUI/FX/../../Drivers/EncoderDriver.h ****     void tick()
-  48:GUI/FX/../../Drivers/EncoderDriver.h ****     {
-  49:GUI/FX/../../Drivers/EncoderDriver.h ****         u_int32_t now = System::GetNow();
-  50:GUI/FX/../../Drivers/EncoderDriver.h ****         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
-  51:GUI/FX/../../Drivers/EncoderDriver.h ****         {
-  52:GUI/FX/../../Drivers/EncoderDriver.h ****             prevUpdate = now;
+  32:GUI/FX/../../Drivers/EncoderDriver.h ****         isNavigation = true;
+  33:GUI/FX/../../Drivers/EncoderDriver.h ****         navCallback = navCb;
+  34:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  35:GUI/FX/../../Drivers/EncoderDriver.h ****         currentParam = 0;
+  36:GUI/FX/../../Drivers/EncoderDriver.h ****         valueA = 0xFF;
+  37:GUI/FX/../../Drivers/EncoderDriver.h ****         valueB = 0xFF;
+  38:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  39:GUI/FX/../../Drivers/EncoderDriver.h ****         btn.Init(button);
+  40:GUI/FX/../../Drivers/EncoderDriver.h ****         
+  41:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.pin = a;
+  42:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.pin = b;
+  43:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.mode = DSY_GPIO_MODE_INPUT;
+  44:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.mode = DSY_GPIO_MODE_INPUT;
+  45:GUI/FX/../../Drivers/EncoderDriver.h ****         channelA.pull = DSY_GPIO_PULLUP;
+  46:GUI/FX/../../Drivers/EncoderDriver.h ****         channelB.pull = DSY_GPIO_PULLUP;
+  47:GUI/FX/../../Drivers/EncoderDriver.h ****         dsy_gpio_init(&channelA);
+  48:GUI/FX/../../Drivers/EncoderDriver.h ****         dsy_gpio_init(&channelB);
+  49:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  50:GUI/FX/../../Drivers/EncoderDriver.h ****         // FOR TESTING
+  51:GUI/FX/../../Drivers/EncoderDriver.h ****         currentParam = 3;
+  52:GUI/FX/../../Drivers/EncoderDriver.h ****     }
   53:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  54:GUI/FX/../../Drivers/EncoderDriver.h ****             // Shift Button states to debounce
-  55:GUI/FX/../../Drivers/EncoderDriver.h ****             valueA = (valueA << 1) | dsy_gpio_read(&channelA);
-  56:GUI/FX/../../Drivers/EncoderDriver.h ****             valueB = (valueB << 1) | dsy_gpio_read(&channelB);
-  57:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  58:GUI/FX/../../Drivers/EncoderDriver.h ****             if(!isNavigation)
-  59:GUI/FX/../../Drivers/EncoderDriver.h ****             {
-  60:GUI/FX/../../Drivers/EncoderDriver.h ****                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
-  61:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->decrement();
-  62:GUI/FX/../../Drivers/EncoderDriver.h ****                 else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
-  63:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->increment();
-  64:GUI/FX/../../Drivers/EncoderDriver.h ****             }
-  65:GUI/FX/../../Drivers/EncoderDriver.h ****         }
-  66:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  67:GUI/FX/../../Drivers/EncoderDriver.h ****         btn.Debounce();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 3
+  54:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+  55:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Polls the inputs to see if a change has occured
+  56:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+  57:GUI/FX/../../Drivers/EncoderDriver.h ****     void tick()
+  58:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+  59:GUI/FX/../../Drivers/EncoderDriver.h ****         u_int32_t now = System::GetNow();
+  60:GUI/FX/../../Drivers/EncoderDriver.h ****         if(now - prevUpdate >= 1) // adjust to change update rate, 1 = 1000Hz, 2 = 2000Hz etc.
+  61:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+  62:GUI/FX/../../Drivers/EncoderDriver.h ****             prevUpdate = now;
+  63:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  64:GUI/FX/../../Drivers/EncoderDriver.h ****             // Shift Button states to debounce
+  65:GUI/FX/../../Drivers/EncoderDriver.h ****             valueA = (valueA << 1) | dsy_gpio_read(&channelA);
+  66:GUI/FX/../../Drivers/EncoderDriver.h ****             valueB = (valueB << 1) | dsy_gpio_read(&channelB);
+  67:GUI/FX/../../Drivers/EncoderDriver.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 3
 
 
-  68:GUI/FX/../../Drivers/EncoderDriver.h ****         if(btn.Pressed())
-  69:GUI/FX/../../Drivers/EncoderDriver.h ****             buttonCallback();
-  70:GUI/FX/../../Drivers/EncoderDriver.h ****     }
-  71:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  72:GUI/FX/../../Drivers/EncoderDriver.h ****     void setIsNavigation(bool isNav)
-  73:GUI/FX/../../Drivers/EncoderDriver.h ****     {
-  74:GUI/FX/../../Drivers/EncoderDriver.h ****         isNavigation = isNav;
-  75:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+  68:GUI/FX/../../Drivers/EncoderDriver.h ****             if(!isNavigation)
+  69:GUI/FX/../../Drivers/EncoderDriver.h ****             {
+  70:GUI/FX/../../Drivers/EncoderDriver.h ****                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
+  71:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->decrement();
+  72:GUI/FX/../../Drivers/EncoderDriver.h ****                 else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
+  73:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->increment();
+  74:GUI/FX/../../Drivers/EncoderDriver.h ****             }
+  75:GUI/FX/../../Drivers/EncoderDriver.h ****         }
   76:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  77:GUI/FX/../../Drivers/EncoderDriver.h ****     void buttonCallback()
-  78:GUI/FX/../../Drivers/EncoderDriver.h ****     {
-  79:GUI/FX/../../Drivers/EncoderDriver.h ****         if(isNavigation)
-  80:GUI/FX/../../Drivers/EncoderDriver.h ****             navCallback();
-  81:GUI/FX/../../Drivers/EncoderDriver.h ****     }
-  82:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  83:GUI/FX/../../Drivers/EncoderDriver.h ****     bool getButtonState() { return btn.Pressed(); }
-  84:GUI/FX/../../Drivers/EncoderDriver.h ****     std::function<void()> getBypassCallback(size_t index) { return bypassCallbacks.at(index); }
-  85:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  86:GUI/FX/../../Drivers/EncoderDriver.h ****     void setCurrentParam(int newID)
-  87:GUI/FX/../../Drivers/EncoderDriver.h ****     { 
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         for(unsigned int i = 0 ; i < parameters.size() ; i++)
-  89:GUI/FX/../../Drivers/EncoderDriver.h ****         {
-  90:GUI/FX/../../Drivers/EncoderDriver.h ****             if(parameters[i]->getID() == newID)
-  91:GUI/FX/../../Drivers/EncoderDriver.h ****             {
-  92:GUI/FX/../../Drivers/EncoderDriver.h ****                 currentParam = i;
-  93:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
-  94:GUI/FX/../../Drivers/EncoderDriver.h ****             }
-  95:GUI/FX/../../Drivers/EncoderDriver.h ****         }
-  96:GUI/FX/../../Drivers/EncoderDriver.h ****     }
-  97:GUI/FX/../../Drivers/EncoderDriver.h **** 
-  98:GUI/FX/../../Drivers/EncoderDriver.h ****     void addParameter(SteppedParameter* newParam)
-  99:GUI/FX/../../Drivers/EncoderDriver.h ****     {
- 100:GUI/FX/../../Drivers/EncoderDriver.h ****         parameters.push_back(newParam);
- 101:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 102:GUI/FX/../../Drivers/EncoderDriver.h **** 
- 103:GUI/FX/../../Drivers/EncoderDriver.h ****     void addBypassCallback(std::function<void()> newCallback)
- 104:GUI/FX/../../Drivers/EncoderDriver.h ****     {
- 105:GUI/FX/../../Drivers/EncoderDriver.h ****         bypassCallbacks.push_back(newCallback);
- 106:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 107:GUI/FX/../../Drivers/EncoderDriver.h **** 
- 108:GUI/FX/../../Drivers/EncoderDriver.h ****     SteppedParameter* getParameter(int paramID)
- 109:GUI/FX/../../Drivers/EncoderDriver.h ****     {
- 110:GUI/FX/../../Drivers/EncoderDriver.h ****         for(unsigned int i = 0 ; i < parameters.size() ; i++)
- 111:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 112:GUI/FX/../../Drivers/EncoderDriver.h ****             if(parameters[i]->getID() == paramID)
-  41              		.loc 2 112 36 is_stmt 0 view .LVU4
+  77:GUI/FX/../../Drivers/EncoderDriver.h ****         btn.Debounce();
+  78:GUI/FX/../../Drivers/EncoderDriver.h ****         if(btn.Pressed())
+  79:GUI/FX/../../Drivers/EncoderDriver.h ****             buttonCallback();
+  80:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+  81:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  82:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+  83:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief The callback function executed when the centre button 
+  84:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+  85:GUI/FX/../../Drivers/EncoderDriver.h ****     void buttonCallback()
+  86:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+  87:GUI/FX/../../Drivers/EncoderDriver.h ****         if(isNavigation)
+  88:GUI/FX/../../Drivers/EncoderDriver.h ****             navCallback();
+  89:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+  90:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  91:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+  92:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Gets the state of the encoder's centre button
+  93:GUI/FX/../../Drivers/EncoderDriver.h ****     * @return If the button is pressed or not
+  94:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+  95:GUI/FX/../../Drivers/EncoderDriver.h ****     bool getButtonState() { return btn.Pressed(); }
+  96:GUI/FX/../../Drivers/EncoderDriver.h **** 
+  97:GUI/FX/../../Drivers/EncoderDriver.h ****     /********************************************************************************//**
+  98:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Gets the bypass callback for a given index from the bypassCallbacks vector
+  99:GUI/FX/../../Drivers/EncoderDriver.h ****     ************************************************************************************/
+ 100:GUI/FX/../../Drivers/EncoderDriver.h ****     std::function<void()> getBypassCallback(size_t index) { return bypassCallbacks.at(index); }
+ 101:GUI/FX/../../Drivers/EncoderDriver.h **** 
+ 102:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+ 103:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Sets the current parameter the encoder is assigned to
+ 104:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param newID The ID of the parameter the encoder is to be assigned to
+ 105:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+ 106:GUI/FX/../../Drivers/EncoderDriver.h ****     void setCurrentParam(int newID)
+ 107:GUI/FX/../../Drivers/EncoderDriver.h ****     { 
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         for(unsigned int i = 0 ; i < parameters.size() ; i++)
+ 109:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 110:GUI/FX/../../Drivers/EncoderDriver.h ****             if(parameters[i]->getID() == newID)
+ 111:GUI/FX/../../Drivers/EncoderDriver.h ****             {
+ 112:GUI/FX/../../Drivers/EncoderDriver.h ****                 currentParam = i;
+ 113:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
+ 114:GUI/FX/../../Drivers/EncoderDriver.h ****             }
+ 115:GUI/FX/../../Drivers/EncoderDriver.h ****         }
+ 116:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+ 117:GUI/FX/../../Drivers/EncoderDriver.h **** 
+ 118:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+ 119:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Adds a parameter to the parameter vector
+ 120:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param newParam A pointer to the parameter to be added to the vector
+ 121:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+ 122:GUI/FX/../../Drivers/EncoderDriver.h ****     void addParameter(SteppedParameter* newParam)
+ 123:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+ 124:GUI/FX/../../Drivers/EncoderDriver.h ****         parameters.push_back(newParam);
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 4
+
+
+ 125:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+ 126:GUI/FX/../../Drivers/EncoderDriver.h **** 
+ 127:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+ 128:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Adds a bypass callback to the bypassCallbacks vector
+ 129:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param newCallback The callback function to be added
+ 130:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+ 131:GUI/FX/../../Drivers/EncoderDriver.h ****     void addBypassCallback(std::function<void()> newCallback)
+ 132:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+ 133:GUI/FX/../../Drivers/EncoderDriver.h ****         bypassCallbacks.push_back(newCallback);
+ 134:GUI/FX/../../Drivers/EncoderDriver.h ****     }
+ 135:GUI/FX/../../Drivers/EncoderDriver.h **** 
+ 136:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
+ 137:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Gets a pointer to the parameter with the given index
+ 138:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param paramID The ID of the parameter to be fetched
+ 139:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
+ 140:GUI/FX/../../Drivers/EncoderDriver.h ****     SteppedParameter* getParameter(int paramID)
+ 141:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+ 142:GUI/FX/../../Drivers/EncoderDriver.h ****         for(unsigned int i = 0 ; i < parameters.size() ; i++)
+ 143:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 144:GUI/FX/../../Drivers/EncoderDriver.h ****             if(parameters[i]->getID() == paramID)
+  41              		.loc 2 144 36 is_stmt 0 view .LVU4
   42 0004 136A     		ldr	r3, [r2, #32]
   43              	.LVL1:
-  44              		.loc 2 112 36 view .LVU5
-  45              	.LBE32:
-  46              	.LBE31:
+  44              		.loc 2 144 36 view .LVU5
+  45              	.LBE30:
+  46              	.LBE29:
   47              		.loc 1 8 13 view .LVU6
   48 0006 8160     		str	r1, [r0, #8]
    9:GUI/FX/SteppedSlider.cpp ****     param = encoder->getParameter(paramID);
   49              		.loc 1 9 5 is_stmt 1 view .LVU7
   50              	.LVL2:
-  51              	.LBB37:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 4
-
-
-  52              	.LBI31:
- 108:GUI/FX/../../Drivers/EncoderDriver.h ****     {
-  53              		.loc 2 108 23 view .LVU8
-  54              	.LBE37:
- 110:GUI/FX/../../Drivers/EncoderDriver.h ****         {
-  55              		.loc 2 110 9 view .LVU9
-  56              	.LBB38:
-  57              	.LBB36:
- 110:GUI/FX/../../Drivers/EncoderDriver.h ****         {
-  58              		.loc 2 110 36 view .LVU10
-  59              	.LBB33:
-  60              	.LBI33:
+  51              	.LBB35:
+  52              	.LBI29:
+ 140:GUI/FX/../../Drivers/EncoderDriver.h ****     {
+  53              		.loc 2 140 23 view .LVU8
+  54              	.LBE35:
+ 142:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+  55              		.loc 2 142 9 view .LVU9
+  56              	.LBB36:
+  57              	.LBB34:
+ 142:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+  58              		.loc 2 142 36 view .LVU10
+  59              	.LBB31:
+  60              	.LBI31:
   61              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h"
    1:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // Vector implementation -*- C++ -*-
    2:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
@@ -206,6 +238,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   10:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   11:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // This library is distributed in the hope that it will be useful,
   12:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 5
+
+
   13:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   14:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // GNU General Public License for more details.
   15:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
@@ -238,9 +273,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   42:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * Permission to use, copy, modify, distribute and sell this software
   43:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * and its documentation for any purpose is hereby granted without fee,
   44:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * provided that the above copyright notice appear in all copies and
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 5
-
-
   45:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * that both that copyright notice and this permission notice appear
   46:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * in supporting documentation.  Silicon Graphics makes no
   47:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****  * representations about the suitability of this  software for any
@@ -266,6 +298,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   67:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
   68:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   69:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #include <debug/assertions.h>
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 6
+
+
   70:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   71:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if _GLIBCXX_SANITIZE_STD_ALLOCATOR && _GLIBCXX_SANITIZE_VECTOR
   72:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** extern "C" void
@@ -298,9 +333,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   99:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	{ }
  100:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  101:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 6
-
-
  102:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
  103:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	: _M_start(__x._M_start), _M_finish(__x._M_finish),
  104:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _M_end_of_storage(__x._M_end_of_storage)
@@ -326,6 +358,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  124:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  __x._M_copy_data(__tmp);
  125:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	}
  126:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       };
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 7
+
+
  127:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  128:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       struct _Vector_impl
  129:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	: public _Tp_alloc_type, public _Vector_impl_data
@@ -358,9 +393,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  156:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if _GLIBCXX_SANITIZE_STD_ALLOCATOR && _GLIBCXX_SANITIZE_VECTOR
  157:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	template<typename = _Tp_alloc_type>
  158:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  struct _Asan
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 7
-
-
  159:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  {
  160:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    typedef typename __gnu_cxx::__alloc_traits<_Tp_alloc_type>
  161:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      ::size_type size_type;
@@ -386,6 +418,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  181:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  182:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    // Adjust ASan annotation for [_M_start, _M_end_of_storage) to
  183:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    // mark end of valid region as __curr instead of __prev.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 8
+
+
  184:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    static void
  185:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    _S_adjust(_Vector_impl& __impl, pointer __prev, pointer __curr)
  186:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    {
@@ -418,9 +453,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  213:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      }
  214:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  215:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      ~_Reinit()
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 8
-
-
  216:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      {
  217:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		// Mark unused capacity as invalid after reallocation.
  218:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		if (_M_impl._M_start)
@@ -446,6 +478,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  238:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      ~_Grow() { if (_M_n) _S_shrink(_M_impl, _M_n); }
  239:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  240:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      void _M_grew(size_type __n) { _M_n -= __n; }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 9
+
+
  241:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  242:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
  243:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      _Grow(const _Grow&) = delete;
@@ -478,9 +513,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  270:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       };
  271:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  272:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     public:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 9
-
-
  273:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef _Alloc allocator_type;
  274:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  275:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Tp_alloc_type&
@@ -506,6 +538,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  295:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  296:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       // Kept for ABI compatibility.
  297:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if !_GLIBCXX_INLINE_VERSION
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 10
+
+
  298:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Vector_base(size_t __n)
  299:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _M_impl()
  300:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { _M_create_storage(__n); }
@@ -538,9 +573,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  327:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  328:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Vector_base(const allocator_type& __a, _Vector_base&& __x)
  329:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _M_impl(_Tp_alloc_type(__a), std::move(__x._M_impl))
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 10
-
-
  330:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { }
  331:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
  332:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
@@ -566,6 +598,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  352:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
  353:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	if (__p)
  354:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  _Tr::deallocate(_M_impl, __p, __n);
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 11
+
+
  355:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
  356:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  357:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     protected:
@@ -598,9 +633,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  384:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****    *  elements in any order and saves the user from worrying about
  385:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****    *  memory and size allocation.  Subscripting ( @c [] ) access is
  386:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****    *  also provided as with C-style arrays.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 11
-
-
  387:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****   */
  388:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****   template<typename _Tp, typename _Alloc = std::allocator<_Tp> >
  389:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     class vector : protected _Vector_base<_Tp, _Alloc>
@@ -626,6 +658,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  409:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef _Vector_base<_Tp, _Alloc>			_Base;
  410:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef typename _Base::_Tp_alloc_type		_Tp_alloc_type;
  411:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type>	_Alloc_traits;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 12
+
+
  412:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  413:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     public:
  414:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef _Tp					value_type;
@@ -658,9 +693,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  441:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return false; }
  442:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  443:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       static constexpr bool
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 12
-
-
  444:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _S_use_relocate()
  445:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
  446:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	// Instantiating std::__relocate_a might cause an error outside the
@@ -686,6 +718,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  466:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		  _Tp_alloc_type& __alloc) noexcept
  467:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
  468:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	using __do_it = __bool_constant<_S_use_relocate()>;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 13
+
+
  469:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
  470:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
  471:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif // C++11
@@ -718,9 +753,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  498:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _Base(__a) { }
  499:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  500:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 13
-
-
  501:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  502:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Creates a %vector with default constructed elements.
  503:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __n  The number of elements to initially create.
@@ -746,6 +778,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  523:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	     const allocator_type& __a = allocator_type())
  524:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _Base(_S_check_init_len(__n, __a), __a)
  525:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { _M_fill_initialize(__n, __value); }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 14
+
+
  526:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #else
  527:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  528:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Creates a %vector with copies of an exemplar element.
@@ -778,9 +813,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  555:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
  556:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
  557:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	this->_M_impl._M_finish =
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 14
-
-
  558:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
  559:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      this->_M_impl._M_start,
  560:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      _M_get_Tp_allocator());
@@ -806,6 +838,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  580:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      this->_M_impl._M_start,
  581:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 				      _M_get_Tp_allocator());
  582:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 15
+
+
  583:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  584:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     private:
  585:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       vector(vector&& __rv, const allocator_type& __m, true_type) noexcept
@@ -838,9 +873,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  612:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { }
  613:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  614:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 15
-
-
  615:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Builds a %vector from an initializer list.
  616:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __l  An initializer_list.
  617:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __a  An allocator.
@@ -866,6 +898,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  637:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __last  An input iterator.
  638:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __a  An allocator.
  639:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 16
+
+
  640:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Create a %vector consisting of copies of the elements from
  641:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  [first,last).
  642:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
@@ -898,9 +933,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  669:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	}
  670:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
  671:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 16
-
-
  672:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  673:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  The dtor only erases the elements, and note that if the
  674:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  elements themselves are pointers, the pointed-to memory is
@@ -926,6 +958,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  694:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       vector&
  695:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       operator=(const vector& __x);
  696:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 17
+
+
  697:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
  698:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  699:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  %Vector move assignment operator.
@@ -958,9 +993,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  726:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  that the resulting %vector's size is the same as the number
  727:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  of elements assigned.
  728:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 17
-
-
  729:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       vector&
  730:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       operator=(initializer_list<value_type> __l)
  731:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
@@ -986,6 +1018,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  751:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  752:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  753:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Assigns a range to a %vector.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 18
+
+
  754:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __first  An input iterator.
  755:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __last   An input iterator.
  756:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
@@ -1018,9 +1053,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  783:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Assigns an initializer list to a %vector.
  784:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __l  An initializer_list.
  785:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 18
-
-
  786:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  This function fills a %vector with copies of the elements in the
  787:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  initializer list @a __l.
  788:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
@@ -1046,6 +1078,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  808:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  element order.
  809:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
  810:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       iterator
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 19
+
+
  811:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       begin() _GLIBCXX_NOEXCEPT
  812:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return iterator(this->_M_impl._M_start); }
  813:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
@@ -1078,9 +1113,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  840:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  841:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  842:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read/write reverse iterator that points to the
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 19
-
-
  843:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  last element in the %vector.  Iteration is done in reverse
  844:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  element order.
  845:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
@@ -1106,6 +1138,9 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  865:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       rend() _GLIBCXX_NOEXCEPT
  866:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return reverse_iterator(begin()); }
  867:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 20
+
+
  868:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  869:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read-only (constant) reverse iterator that points
  870:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  to one before the first element in the %vector.  Iteration
@@ -1138,9 +1173,6 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  897:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read-only (constant) reverse iterator that points
  898:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  to the last element in the %vector.  Iteration is done in
  899:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  reverse element order.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 20
-
-
  900:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
  901:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       const_reverse_iterator
  902:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       crbegin() const noexcept
@@ -1162,13 +1194,16 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  918:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       size() const _GLIBCXX_NOEXCEPT
   62              		.loc 3 918 7 view .LVU11
   63              		.loc 3 918 7 is_stmt 0 view .LVU12
-  64              	.LBE33:
-  65              		.loc 2 112 13 is_stmt 1 view .LVU13
-  66              		.loc 2 112 36 is_stmt 0 view .LVU14
+  64              	.LBE31:
+  65              		.loc 2 144 13 is_stmt 1 view .LVU13
+  66              		.loc 2 144 36 is_stmt 0 view .LVU14
   67 0008 1B68     		ldr	r3, [r3]
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 21
+
+
   68              	.LVL3:
-  69              	.LBB34:
-  70              	.LBI34:
+  69              	.LBB32:
+  70              	.LBI32:
   71              		.file 4 "GUI/FX/../../Drivers/../Parameters/SteppedParameter.h"
    1:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #ifndef STEPPEDPARAMETER_H
    2:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #define STEPPEDPARAMETER_H
@@ -1190,61 +1225,80 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   18:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** {
   19:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** public:
   20:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  21:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void init(float mi, float ma, float st, int param, int track, std::function<void(float)> cb)
-  22:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     {
-  23:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         paramID = param + track;
-  24:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  25:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         min = mi;
-  26:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         max = ma;
-  27:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         step = st;
-  28:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 21
+  21:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /*****************************************************************//**
+  22:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Initialises an instance of the class
+  23:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param mi The lowest value the instance should decrement to
+  24:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param ma The highest value the instance should increment to
+  25:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param st The value the instance should increment/decrement by
+  26:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param param The ID of the parameters the instance is assigned to
+  27:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param track The ID of the track the instance is assigned to
+  28:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @param cb The callback function executed when the value changes
+  29:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     ********************************************************************/
+  30:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void init(float mi, float ma, float st, int param, int track, std::function<void(float)> cb)
+  31:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     {
+  32:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         paramID = param + track;
+  33:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  34:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         min = mi;
+  35:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         max = ma;
+  36:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         step = st;
+  37:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  38:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback = cb;
+  39:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
+  40:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     
+  41:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  42:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Increments the instance's value and executes the callback
+  43:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  44:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void increment()
+  45:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
+  46:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         if(curVal >= max)
+  47:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = max;
+  48:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         else
+  49:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal += step;
+  50:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  51:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback(curVal); 
+  52:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
+  53:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 22
 
 
-  29:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback = cb;
-  30:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
-  31:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  32:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void increment()
-  33:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
-  34:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         if(curVal >= max)
-  35:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = max;
-  36:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         else
-  37:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal += step;
-  38:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  39:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback(curVal); 
-  40:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
-  41:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  42:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void decrement()
-  43:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
-  44:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         if(curVal <= min)
-  45:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = min;
-  46:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         else
-  47:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal -= step;
-  48:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  49:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback(curVal); 
-  50:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
-  51:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
-  52:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     int getID() { return paramID; }
-  72              		.loc 4 52 9 is_stmt 1 view .LVU15
-  73              	.LBB35:
-  74              		.loc 4 52 19 view .LVU16
-  75              		.loc 4 52 19 is_stmt 0 view .LVU17
-  76              	.LBE35:
-  77              	.LBE34:
-  78              		.loc 2 112 13 view .LVU18
+  54:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  55:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Decrements the instance's value and executes the callback
+  56:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  57:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     void decrement()
+  58:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
+  59:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         if(curVal <= min)
+  60:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = min;
+  61:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         else
+  62:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal -= step;
+  63:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  64:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback(curVal); 
+  65:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     }
+  66:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  67:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  68:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Fetches the instance's full ID
+  69:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @return The ID of the instance
+  70:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  71:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     int getID() { return paramID; }
+  72              		.loc 4 71 9 is_stmt 1 view .LVU15
+  73              	.LBB33:
+  74              		.loc 4 71 19 view .LVU16
+  75              		.loc 4 71 19 is_stmt 0 view .LVU17
+  76              	.LBE33:
+  77              	.LBE32:
+  78              		.loc 2 144 13 view .LVU18
   79 000a 1A68     		ldr	r2, [r3]
   80              	.LVL4:
- 113:GUI/FX/../../Drivers/EncoderDriver.h ****                 return parameters[i];
- 114:GUI/FX/../../Drivers/EncoderDriver.h ****             else
- 115:GUI/FX/../../Drivers/EncoderDriver.h ****                 return nullptr;
-  81              		.loc 2 115 24 view .LVU19
+ 145:GUI/FX/../../Drivers/EncoderDriver.h ****                 return parameters[i];
+ 146:GUI/FX/../../Drivers/EncoderDriver.h ****             else
+ 147:GUI/FX/../../Drivers/EncoderDriver.h ****                 return nullptr;
+  81              		.loc 2 147 24 view .LVU19
   82 000c 9142     		cmp	r1, r2
   83 000e 18BF     		it	ne
   84 0010 0023     		movne	r3, #0
   85              	.LVL5:
-  86              		.loc 2 115 24 view .LVU20
-  87              	.LBE36:
-  88              	.LBE38:
+  86              		.loc 2 147 24 view .LVU20
+  87              	.LBE34:
+  88              	.LBE36:
   89              		.loc 1 9 11 view .LVU21
   90 0012 C360     		str	r3, [r0, #12]
   10:GUI/FX/SteppedSlider.cpp **** 
@@ -1257,19 +1311,19 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   95              		.loc 1 12 1 view .LVU24
   96 0018 7047     		bx	lr
   97              		.cfi_endproc
-  98              	.LFE5106:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 22
-
-
+  98              	.LFE5105:
  100              		.section	.text._ZN13SteppedSlider4tickEv,"ax",%progbits
  101              		.align	1
  102              		.global	_ZN13SteppedSlider4tickEv
  103              		.syntax unified
  104              		.thumb
  105              		.thumb_func
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 23
+
+
  107              	_ZN13SteppedSlider4tickEv:
  108              	.LVL6:
- 109              	.LFB5107:
+ 109              	.LFB5106:
   13:GUI/FX/SteppedSlider.cpp **** 
   14:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::tick()
   15:GUI/FX/SteppedSlider.cpp **** {
@@ -1283,32 +1337,50 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  116              		.loc 1 16 20 is_stmt 0 view .LVU27
  117 0000 C368     		ldr	r3, [r0, #12]
  118              	.LVL7:
- 119              	.LBB39:
- 120              	.LBI39:
-  53:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMin() { return min; }
-  54:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMax() { return max; }
-  55:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getCurVal() { return curVal; }
- 121              		.loc 4 55 11 is_stmt 1 view .LVU28
- 122              	.LBB40:
- 123              		.loc 4 55 25 view .LVU29
- 124              	.LBE40:
- 125              	.LBE39:
+ 119              	.LBB37:
+ 120              	.LBI37:
+  72:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  73:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  74:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Fetches the lowest value the instance decrements to
+  75:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @return The miminum value
+  76:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  77:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMin() { return min; }
+  78:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  79:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  80:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Fetches the highest value the instance increments to
+  81:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @return The maximum value
+  82:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  83:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMax() { return max; }
+  84:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+  85:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     /***************************************************************//**
+  86:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @brief Fetches the current value of the instance
+  87:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     * @return The current value
+  88:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     *******************************************************************/
+  89:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getCurVal() { return curVal; }
+ 121              		.loc 4 89 11 is_stmt 1 view .LVU28
+ 122              	.LBB38:
+ 123              		.loc 4 89 25 view .LVU29
+ 124              	.LBE38:
+ 125              	.LBE37:
   17:GUI/FX/SteppedSlider.cpp ****     if(newVal != curVal)
  126              		.loc 1 17 5 is_stmt 0 view .LVU30
  127 0002 90ED047A 		vldr.32	s14, [r0, #16]
- 128              	.LBB42:
- 129              	.LBB41:
- 130              		.loc 4 55 32 view .LVU31
+ 128              	.LBB40:
+ 129              	.LBB39:
+ 130              		.loc 4 89 32 view .LVU31
  131 0006 D3ED037A 		vldr.32	s15, [r3, #12]
  132              	.LVL8:
- 133              		.loc 4 55 32 view .LVU32
- 134              	.LBE41:
- 135              	.LBE42:
+ 133              		.loc 4 89 32 view .LVU32
+ 134              	.LBE39:
+ 135              	.LBE40:
  136              		.loc 1 17 5 is_stmt 1 view .LVU33
  137 000a B4EE677A 		vcmp.f32	s14, s15
  138 000e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   18:GUI/FX/SteppedSlider.cpp ****     {
   19:GUI/FX/SteppedSlider.cpp ****         curVal = newVal;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 24
+
+
  139              		.loc 1 19 9 view .LVU34
  140              		.loc 1 19 16 is_stmt 0 view .LVU35
  141 0012 18BF     		it	ne
@@ -1316,29 +1388,25 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
   20:GUI/FX/SteppedSlider.cpp ****         repaint();
  143              		.loc 1 20 9 is_stmt 1 view .LVU36
  144              	.LVL9:
- 145              	.LBB43:
- 146              	.LBI43:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 23
-
-
+ 145              	.LBB41:
+ 146              	.LBI41:
   21:GUI/FX/SteppedSlider.cpp ****     }
   22:GUI/FX/SteppedSlider.cpp **** }
   23:GUI/FX/SteppedSlider.cpp **** 
   24:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::setSelected()
   25:GUI/FX/SteppedSlider.cpp **** {
-  26:GUI/FX/SteppedSlider.cpp ****     encoder->setIsNavigation(false);
-  27:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
-  28:GUI/FX/SteppedSlider.cpp **** }
-  29:GUI/FX/SteppedSlider.cpp **** 
-  30:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::repaint()
- 147              		.loc 1 30 6 view .LVU37
- 148              		.loc 1 30 6 is_stmt 0 view .LVU38
- 149              	.LBE43:
+  26:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+  27:GUI/FX/SteppedSlider.cpp **** }
+  28:GUI/FX/SteppedSlider.cpp **** 
+  29:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::repaint()
+ 147              		.loc 1 29 6 view .LVU37
+ 148              		.loc 1 29 6 is_stmt 0 view .LVU38
+ 149              	.LBE41:
   22:GUI/FX/SteppedSlider.cpp **** 
  150              		.loc 1 22 1 view .LVU39
  151 0018 7047     		bx	lr
  152              		.cfi_endproc
- 153              	.LFE5107:
+ 153              	.LFE5106:
  155              		.section	.text._ZN13SteppedSlider11setSelectedEv,"ax",%progbits
  156              		.align	1
  157              		.global	_ZN13SteppedSlider11setSelectedEv
@@ -1347,247 +1415,225 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 1
  160              		.thumb_func
  162              	_ZN13SteppedSlider11setSelectedEv:
  163              	.LVL10:
- 164              	.LFB5108:
-  25:GUI/FX/SteppedSlider.cpp ****     encoder->setIsNavigation(false);
+ 164              	.LFB5107:
+  25:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
  165              		.loc 1 25 1 is_stmt 1 view -0
  166              		.cfi_startproc
  167              		@ args = 0, pretend = 0, frame = 0
  168              		@ frame_needed = 0, uses_anonymous_args = 0
-  26:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+  26:GUI/FX/SteppedSlider.cpp **** }
  169              		.loc 1 26 5 view .LVU41
  170 0000 0168     		ldr	r1, [r0]
- 171              	.LVL11:
- 172              	.LBB55:
- 173              	.LBI55:
-  72:GUI/FX/../../Drivers/EncoderDriver.h ****     {
- 174              		.loc 2 72 10 view .LVU42
- 175              	.LBB56:
-  74:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 176              		.loc 2 74 9 view .LVU43
-  74:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 177              		.loc 2 74 22 is_stmt 0 view .LVU44
- 178 0002 0023     		movs	r3, #0
- 179              	.LBE56:
- 180              	.LBE55:
-  25:GUI/FX/SteppedSlider.cpp ****     encoder->setIsNavigation(false);
- 181              		.loc 1 25 1 view .LVU45
- 182 0004 30B5     		push	{r4, r5, lr}
- 183              		.cfi_def_cfa_offset 12
- 184              		.cfi_offset 4, -12
- 185              		.cfi_offset 5, -8
- 186              		.cfi_offset 14, -4
-  27:GUI/FX/SteppedSlider.cpp **** }
- 187              		.loc 1 27 29 view .LVU46
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 24
+  25:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+ 171              		.loc 1 25 1 is_stmt 0 view .LVU42
+ 172 0002 30B5     		push	{r4, r5, lr}
+ 173              		.cfi_def_cfa_offset 12
+ 174              		.cfi_offset 4, -12
+ 175              		.cfi_offset 5, -8
+ 176              		.cfi_offset 14, -4
+  26:GUI/FX/SteppedSlider.cpp **** }
+ 177              		.loc 1 26 29 view .LVU43
+ 178 0004 8468     		ldr	r4, [r0, #8]
+ 179              	.LVL11:
+ 180              	.LBB51:
+ 181              	.LBI51:
+ 106:GUI/FX/../../Drivers/EncoderDriver.h ****     { 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 25
 
 
- 188 0006 8468     		ldr	r4, [r0, #8]
- 189              	.LBB58:
- 190              	.LBB57:
-  74:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 191              		.loc 2 74 22 view .LVU47
- 192 0008 0B72     		strb	r3, [r1, #8]
- 193              	.LVL12:
-  74:GUI/FX/../../Drivers/EncoderDriver.h ****     }
- 194              		.loc 2 74 22 view .LVU48
- 195              	.LBE57:
- 196              	.LBE58:
-  27:GUI/FX/SteppedSlider.cpp **** }
- 197              		.loc 1 27 5 is_stmt 1 view .LVU49
- 198              	.LBB59:
- 199              	.LBI59:
-  86:GUI/FX/../../Drivers/EncoderDriver.h ****     { 
- 200              		.loc 2 86 10 view .LVU50
- 201              	.LBE59:
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 202              		.loc 2 88 9 view .LVU51
- 203              	.LBB67:
- 204              	.LBB60:
- 205              	.LBB61:
- 206              	.LBB62:
+ 182              		.loc 2 106 10 is_stmt 1 view .LVU44
+ 183              	.LBE51:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 184              		.loc 2 108 9 view .LVU45
+ 185              	.LBB59:
+ 186              	.LBB52:
+ 187              	.LBB53:
+ 188              	.LBB54:
  919:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
- 207              		.loc 3 919 50 is_stmt 0 view .LVU52
- 208 000a D1E90802 		ldrd	r0, r2, [r1, #32]
- 209              	.LVL13:
- 210              		.loc 3 919 50 view .LVU53
- 211 000e 121A     		subs	r2, r2, r0
- 212 0010 9210     		asrs	r2, r2, #2
- 213              	.LVL14:
- 214              	.L8:
- 215              		.loc 3 919 50 view .LVU54
- 216              	.LBE62:
- 217              	.LBE61:
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 218              		.loc 2 88 36 is_stmt 1 view .LVU55
- 219              	.LBB63:
- 220              	.LBI61:
+ 189              		.loc 3 919 50 is_stmt 0 view .LVU46
+ 190 0006 D1E90803 		ldrd	r0, r3, [r1, #32]
+ 191              	.LVL12:
+ 192              		.loc 3 919 50 view .LVU47
+ 193 000a 1B1A     		subs	r3, r3, r0
+ 194 000c 9A10     		asrs	r2, r3, #2
+ 195              	.LBE54:
+ 196              	.LBE53:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 197              		.loc 2 108 26 view .LVU48
+ 198 000e 0023     		movs	r3, #0
+ 199              	.LVL13:
+ 200              	.L8:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 201              		.loc 2 108 36 is_stmt 1 view .LVU49
+ 202              	.LBB55:
+ 203              	.LBI53:
  918:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
- 221              		.loc 3 918 7 view .LVU56
+ 204              		.loc 3 918 7 view .LVU50
  918:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
- 222              		.loc 3 918 7 is_stmt 0 view .LVU57
- 223              	.LBE63:
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 224              		.loc 2 88 36 view .LVU58
- 225 0012 9A42     		cmp	r2, r3
- 226 0014 05D0     		beq	.L5
-  90:GUI/FX/../../Drivers/EncoderDriver.h ****             {
- 227              		.loc 2 90 13 is_stmt 1 view .LVU59
- 228              	.LVL15:
- 229              	.LBB64:
- 230              	.LBI64:
-  52:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMin() { return min; }
- 231              		.loc 4 52 9 view .LVU60
- 232              	.LBB65:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 25
+ 205              		.loc 3 918 7 is_stmt 0 view .LVU51
+ 206              	.LBE55:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 207              		.loc 2 108 36 view .LVU52
+ 208 0010 9A42     		cmp	r2, r3
+ 209 0012 05D0     		beq	.L5
+ 110:GUI/FX/../../Drivers/EncoderDriver.h ****             {
+ 210              		.loc 2 110 13 is_stmt 1 view .LVU53
+ 211              	.LVL14:
+ 212              	.LBB56:
+ 213              	.LBI56:
+  71:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+ 214              		.loc 4 71 9 view .LVU54
+ 215              	.LBB57:
+  71:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+ 216              		.loc 4 71 19 view .LVU55
+  71:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+ 217              		.loc 4 71 26 is_stmt 0 view .LVU56
+ 218 0014 50F82350 		ldr	r5, [r0, r3, lsl #2]
+ 219              	.LBE57:
+ 220              	.LBE56:
+ 110:GUI/FX/../../Drivers/EncoderDriver.h ****             {
+ 221              		.loc 2 110 13 view .LVU57
+ 222 0018 2D68     		ldr	r5, [r5]
+ 223 001a AC42     		cmp	r4, r5
+ 224 001c 01D1     		bne	.L7
+ 112:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
+ 225              		.loc 2 112 17 is_stmt 1 view .LVU58
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 26
 
 
-  52:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMin() { return min; }
- 233              		.loc 4 52 19 view .LVU61
-  52:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     float getMin() { return min; }
- 234              		.loc 4 52 26 is_stmt 0 view .LVU62
- 235 0016 50F82350 		ldr	r5, [r0, r3, lsl #2]
- 236              	.LBE65:
- 237              	.LBE64:
-  90:GUI/FX/../../Drivers/EncoderDriver.h ****             {
- 238              		.loc 2 90 13 view .LVU63
- 239 001a 2D68     		ldr	r5, [r5]
- 240 001c AC42     		cmp	r4, r5
- 241 001e 01D1     		bne	.L7
-  92:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
- 242              		.loc 2 92 17 is_stmt 1 view .LVU64
-  92:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
- 243              		.loc 2 92 30 is_stmt 0 view .LVU65
- 244 0020 CB61     		str	r3, [r1, #28]
-  93:GUI/FX/../../Drivers/EncoderDriver.h ****             }
- 245              		.loc 2 93 17 is_stmt 1 view .LVU66
- 246              	.L5:
-  93:GUI/FX/../../Drivers/EncoderDriver.h ****             }
- 247              		.loc 2 93 17 is_stmt 0 view .LVU67
- 248              	.LBE60:
- 249              	.LBE67:
-  28:GUI/FX/SteppedSlider.cpp **** 
- 250              		.loc 1 28 1 view .LVU68
- 251 0022 30BD     		pop	{r4, r5, pc}
- 252              	.LVL16:
- 253              	.L7:
- 254              	.LBB68:
- 255              	.LBB66:
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 256              		.loc 2 88 9 is_stmt 1 view .LVU69
- 257 0024 0133     		adds	r3, r3, #1
- 258              	.LVL17:
-  88:GUI/FX/../../Drivers/EncoderDriver.h ****         {
- 259              		.loc 2 88 9 is_stmt 0 view .LVU70
- 260 0026 F4E7     		b	.L8
- 261              	.LBE66:
- 262              	.LBE68:
- 263              		.cfi_endproc
- 264              	.LFE5108:
- 266              		.section	.text._ZN13SteppedSlider7repaintEv,"ax",%progbits
- 267              		.align	1
- 268              		.global	_ZN13SteppedSlider7repaintEv
- 269              		.syntax unified
- 270              		.thumb
- 271              		.thumb_func
- 273              	_ZN13SteppedSlider7repaintEv:
- 274              	.LVL18:
- 275              	.LFB5109:
-  31:GUI/FX/SteppedSlider.cpp **** {
- 276              		.loc 1 31 1 is_stmt 1 view -0
- 277              		.cfi_startproc
- 278              		@ args = 0, pretend = 0, frame = 0
- 279              		@ frame_needed = 0, uses_anonymous_args = 0
- 280              		@ link register save eliminated.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 26
+ 112:GUI/FX/../../Drivers/EncoderDriver.h ****                 break;
+ 226              		.loc 2 112 30 is_stmt 0 view .LVU59
+ 227 001e CB61     		str	r3, [r1, #28]
+ 113:GUI/FX/../../Drivers/EncoderDriver.h ****             }
+ 228              		.loc 2 113 17 is_stmt 1 view .LVU60
+ 229              	.L5:
+ 113:GUI/FX/../../Drivers/EncoderDriver.h ****             }
+ 230              		.loc 2 113 17 is_stmt 0 view .LVU61
+ 231              	.LBE52:
+ 232              	.LBE59:
+  27:GUI/FX/SteppedSlider.cpp **** 
+ 233              		.loc 1 27 1 view .LVU62
+ 234 0020 30BD     		pop	{r4, r5, pc}
+ 235              	.LVL15:
+ 236              	.L7:
+ 237              	.LBB60:
+ 238              	.LBB58:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 239              		.loc 2 108 9 is_stmt 1 view .LVU63
+ 240 0022 0133     		adds	r3, r3, #1
+ 241              	.LVL16:
+ 108:GUI/FX/../../Drivers/EncoderDriver.h ****         {
+ 242              		.loc 2 108 9 is_stmt 0 view .LVU64
+ 243 0024 F4E7     		b	.L8
+ 244              	.LBE58:
+ 245              	.LBE60:
+ 246              		.cfi_endproc
+ 247              	.LFE5107:
+ 249              		.section	.text._ZN13SteppedSlider7repaintEv,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	_ZN13SteppedSlider7repaintEv
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 256              	_ZN13SteppedSlider7repaintEv:
+ 257              	.LVL17:
+ 258              	.LFB5108:
+  30:GUI/FX/SteppedSlider.cpp **** {
+ 259              		.loc 1 30 1 is_stmt 1 view -0
+ 260              		.cfi_startproc
+ 261              		@ args = 0, pretend = 0, frame = 0
+ 262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 263              		@ link register save eliminated.
+  31:GUI/FX/SteppedSlider.cpp ****     // paint slider using curVal
+  32:GUI/FX/SteppedSlider.cpp **** }...
+ 264              		.loc 1 32 1 is_stmt 0 view .LVU66
+ 265 0000 7047     		bx	lr
+ 266              		.cfi_endproc
+ 267              	.LFE5108:
+ 269              		.text
+ 270              	.Letext0:
+ 271              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 272              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 273              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 274              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 275              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 276              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 27
 
 
-  32:GUI/FX/SteppedSlider.cpp ****     // paint slider using curVal
-  33:GUI/FX/SteppedSlider.cpp **** }...
- 281              		.loc 1 33 1 is_stmt 0 view .LVU72
- 282 0000 7047     		bx	lr
- 283              		.cfi_endproc
- 284              	.LFE5109:
- 286              		.text
- 287              	.Letext0:
- 288              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 289              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 290              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 291              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 292              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 293              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 294              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 295              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 296              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 297              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
- 298              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
- 299              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 300              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 301              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 302              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
- 303              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 304              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
- 305              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
- 306              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
- 307              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h"
- 308              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
- 309              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
- 310              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
- 311              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
- 312              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
- 313              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
- 314              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
- 315              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h"
- 316              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h"
- 317              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/vector.tcc"
- 318              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
- 319              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 320              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
- 321              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
- 322              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 323              		.file 40 "<built-in>"
- 324              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 325              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
- 326              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 327              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 328              		.file 45 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
- 329              		.file 46 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
- 330              		.file 47 "../../../libDaisy//src/daisy_core.h"
- 331              		.file 48 "../../../libDaisy//src/hid/switch.h"
- 332              		.file 49 "../../../libDaisy//src/per/spi.h"
- 333              		.file 50 "../../../libDaisy//src/hid/disp/graphics_common.h"
- 334              		.file 51 "../../../libDaisy//src/util/wav_format.h"
- 335              		.file 52 "../../../libDaisy//src/dev/max11300.h"
- 336              		.file 53 "../../../libDaisy//src/daisy_seed.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 27
+ 277              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 278              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 279              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 280              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 281              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 282              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 283              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 284              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 285              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 286              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 287              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 288              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
+ 289              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
+ 290              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_function.h"
+ 291              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
+ 292              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/refwrap.h"
+ 293              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 294              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 295              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 296              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 297              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_function.h"
+ 298              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h"
+ 299              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h"
+ 300              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/vector.tcc"
+ 301              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
+ 302              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 303              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
+ 304              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
+ 305              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 306              		.file 40 "<built-in>"
+ 307              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 308              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 309              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 310              		.file 44 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 311              		.file 45 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 312              		.file 46 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 313              		.file 47 "../../../libDaisy//src/daisy_core.h"
+ 314              		.file 48 "../../../libDaisy//src/hid/switch.h"
+ 315              		.file 49 "../../../libDaisy//src/per/spi.h"
+ 316              		.file 50 "../../../libDaisy//src/hid/disp/graphics_common.h"
+ 317              		.file 51 "../../../libDaisy//src/util/wav_format.h"
+ 318              		.file 52 "../../../libDaisy//src/dev/max11300.h"
+ 319              		.file 53 "../../../libDaisy//src/daisy_seed.h"
+ 320              		.file 54 "../../../libDaisy//src/per/gpio.h"
+ 321              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 322              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 323              		.file 57 "../../../libDaisy//src/util/oled_fonts.h"
+ 324              		.file 58 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 325              		.file 59 "GUI/FX/../../Drivers/../Parameters/BinaryParameter.h"
+ 326              		.file 60 "../../../DaisySP//Source/Control/adenv.h"
+ 327              		.file 61 "../../../DaisySP//Source/Utility/dsp.h"
+ 328              		.file 62 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 329              		.file 63 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 330              		.file 64 "GUI/FX/../../Drivers/../Parameters/ParameterIDs.h"
+ 331              		.file 65 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
+ 332              		.file 66 "GUI/FX/StyleSheet.h"
+ 333              		.file 67 "../../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 28
 
 
- 337              		.file 54 "../../../libDaisy//src/per/gpio.h"
- 338              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 339              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 340              		.file 57 "../../../libDaisy//src/util/oled_fonts.h"
- 341              		.file 58 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
- 342              		.file 59 "GUI/FX/../../Drivers/../Parameters/BinaryParameter.h"
- 343              		.file 60 "../../../DaisySP//Source/Control/adenv.h"
- 344              		.file 61 "../../../DaisySP//Source/Utility/dsp.h"
- 345              		.file 62 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
- 346              		.file 63 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
- 347              		.file 64 "GUI/FX/../../Drivers/../Parameters/ParameterIDs.h"
- 348              		.file 65 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
- 349              		.file 66 "GUI/FX/StyleSheet.h"
- 350              		.file 67 "../../../libDaisy//src/dev/sr_595.h"
- 351              		.file 68 "GUI/FX/SteppedSlider.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s 			page 28
+ 334              		.file 68 "GUI/FX/SteppedSlider.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SteppedSlider.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:19     .text._ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:25     .text._ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver:0000000000000000 _ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:101    .text._ZN13SteppedSlider4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:107    .text._ZN13SteppedSlider4tickEv:0000000000000000 _ZN13SteppedSlider4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:156    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:162    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 _ZN13SteppedSlider11setSelectedEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:267    .text._ZN13SteppedSlider7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccZa8HUF.s:273    .text._ZN13SteppedSlider7repaintEv:0000000000000000 _ZN13SteppedSlider7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:19     .text._ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:25     .text._ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver:0000000000000000 _ZN13SteppedSlider4initEiP13EncoderDriverP8UiDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:101    .text._ZN13SteppedSlider4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:107    .text._ZN13SteppedSlider4tickEv:0000000000000000 _ZN13SteppedSlider4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:156    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:162    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 _ZN13SteppedSlider11setSelectedEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:250    .text._ZN13SteppedSlider7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//cclQMoD8.s:256    .text._ZN13SteppedSlider7repaintEv:0000000000000000 _ZN13SteppedSlider7repaintEv
 
 NO UNDEFINED SYMBOLS

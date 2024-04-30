@@ -13,6 +13,12 @@ class BypassButton
 {
 public:
 
+    /***********************************************************************//**
+    * @brief Initialises the instance
+    * @param ed A pointer to the encoder driver
+    * @param uid A pointer to the LCD driver
+    * @param bypassCallback The function to be called when the bypass is set
+    ***************************************************************************/
     void init(EncoderDriver* ed, UiDriver* uid, std::function<void()> bypassCallback)
     {
         encoder = ed;
@@ -23,6 +29,9 @@ public:
         isBypassed = true;
     }
 
+    /***********************************************************************//**
+    * @brief Checks if the bypass state needs to be changed
+    ***************************************************************************/
     void tick()
     {
         if(isSelected && encoder->getButtonState())
@@ -32,6 +41,9 @@ public:
         }
     }
 
+    /***********************************************************************//**
+    * @brief Handles the repainting of the button
+    ***************************************************************************/
     void repaint()
     {
         // Draw on/off button for Bypass
@@ -43,6 +55,10 @@ public:
         lcd->WriteString(isBypassed ? "On" : "Off", 20, StyleSheet::Effects::headerHeight + 20, Font_11x18, StyleSheet::Effects::textColor);
     }
 
+    /***********************************************************************//**
+    * @brief Sets if the button is selected on the interface
+    * @param state Sets the bypass state of the instance
+    ***************************************************************************/
     void setIsSelected(bool state) { isSelected = state; } // called when the bypass button is selected
 
 private:

@@ -4,13 +4,20 @@
 using namespace daisy;
 using namespace daisysp;
 
+
+// DOXYGEN TEMPLATE
+/**********************************************************//**
+ * @brief Function description
+ * @param arg1
+ * @param arg2
+ * @param arg3
+ *************************************************************/
+
+
 /*
 TO DO:
-- test reverb dry/wet
-- Doxygen docs
 - test seamless looping algorithm
 - fix bit reducer
-- waveshaper amount control
 */
 
 // Hardware
@@ -72,6 +79,9 @@ void navCallback()
 
 }
 
+/**********************************************************//**
+ * @brief Initialises the program and hardware
+ *************************************************************/
 void init()
 {
 	// initialise Daisy Seed
@@ -86,17 +96,21 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-	lcd.Init();
-	lcd.Fill(COLOR_BLACK);
-	lcd.Update();
+	//lcd.Init();
+	//lcd.Fill(COLOR_BLACK);
+	//lcd.Update();
 	// keypad driver
 
 	// initialise GUI
-	mixerView.init(&hw, &encoder, &lcd, &keypad);
+	//mixerView.init(&hw, &encoder, &lcd, &keypad);
 
 	System::Delay(100);
 }
 
+/***************************************************************************************************//**
+ * @brief Handles the processing of the inputs and updating of the audio processing and GUI branches
+ * @param size The size of the block of samples
+ ******************************************************************************************************/
 inline void tick(size_t size)
 {
 	if(sample >= MACROBLOCK)
@@ -104,8 +118,8 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		mixerView.tick();
-		lcd.Update();
+		//mixerView.tick();
+		//lcd.Update();
 		sample = 0;
 	}
 	else
@@ -114,12 +128,26 @@ inline void tick(size_t size)
 	}
 }
 
+/*******************************************************************************//**
+ * @brief This is where audio data is inputted to and outputted from the software
+ * @param in The input to the Daisy Seed
+ * @param out The output to the Daisy Seed
+ * @param size The number of samples in the block
+ **********************************************************************************/
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	for(size_t i = 0; i < size; i++)
+    {
+        out[L][i] = in[L][i];
+        out[R][i] = in[R][i];
+    }
+
+	/*
 	tick(size);
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
+	*/
 }
 
 int main(void)
@@ -139,9 +167,6 @@ int main(void)
 	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
-
-	//lcd.Fill(COLOR_BLACK);
-    //lcd.Update();
 
 	while(1) 
 	{

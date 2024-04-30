@@ -1,7 +1,10 @@
 #include "stddef.h"
 #include <algorithm>
 
-// ADC channelIDs
+// ADC Channel IDs
+/***********************************************************************//**
+* @brief Represents the channel IDs for easy assignment and access
+***************************************************************************/
 enum ChannelIDs
 {
     AMP1 = 0,
@@ -11,27 +14,20 @@ enum ChannelIDs
     MASTER
 };
 
-// playhead
-struct Playhead
-{
-    size_t writePos;
-    size_t readPos;
-
-    void reset() 
-    { 
-        writePos = 0;
-        readPos = 0; 
-    }
-};
-
-// track information
+// Track information
+/***********************************************************************//**
+* @brief Struct definition for storing track information
+***************************************************************************/
 struct TrackInformation
 {
     bool isEmpty;
     size_t loopLength;
 };
 
-// track state
+// Track state
+/***********************************************************************//**
+* @brief Struct definition for monitoring track state
+***************************************************************************/
 enum TrackState
 {   
     RECORDING = 0,
@@ -39,7 +35,10 @@ enum TrackState
     STOPPED
 };
 
-// curve types
+// Curve types
+/***********************************************************************//**
+* @brief Struct definition for types of curve used to process values
+***************************************************************************/
 enum CurveType
 {
     LINEAR = 0,

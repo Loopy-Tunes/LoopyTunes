@@ -52,7 +52,7 @@ void Track::setIsRecording()
         case RECORDING:
             state = STOPPED;
             ti.loopLength = ph.writePos;
-            setLoopStart();
+            //setLoopStart();
             break;
         case PLAYING:
             state = RECORDING;

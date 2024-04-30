@@ -51,13 +51,3 @@ void Reverb::processBlock(float* input[2], long size)
         input[R][i] = output[R][i];
     }
 }
-
-void Reverb::suspend()
-{
-    model.mute();
-}
-
-void Reverb::resume()
-{
-    model.mute();
-}

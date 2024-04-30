@@ -15,6 +15,13 @@ class EncoderDriver
 {
 public:
 
+    /***********************************************************************//**
+    * @brief Initialises the driver
+    * @param button The pin used for the centre push button
+    * @param a The pin used for channel A of the encoder
+    * @param b The pin used for channel B of the encoder
+    * @param navCb The function used for navigation
+    ***************************************************************************/
     void init(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function<void()> navCb)
     {
         parameters.reserve(70);
@@ -44,6 +51,9 @@ public:
         currentParam = 3;
     }
 
+    /***********************************************************************//**
+    * @brief Polls the inputs to see if a change has occured
+    ***************************************************************************/
     void tick()
     {
         u_int32_t now = System::GetNow();
@@ -69,20 +79,30 @@ public:
             buttonCallback();
     }
 
-    void setIsNavigation(bool isNav)
-    {
-        isNavigation = isNav;
-    }
-
+    /***********************************************************************//**
+    * @brief The callback function executed when the centre button 
+    ***************************************************************************/
     void buttonCallback()
     {
         if(isNavigation)
             navCallback();
     }
 
+    /***********************************************************************//**
+    * @brief Gets the state of the encoder's centre button
+    * @return If the button is pressed or not
+    ***************************************************************************/
     bool getButtonState() { return btn.Pressed(); }
+
+    /********************************************************************************//**
+    * @brief Gets the bypass callback for a given index from the bypassCallbacks vector
+    ************************************************************************************/
     std::function<void()> getBypassCallback(size_t index) { return bypassCallbacks.at(index); }
 
+    /***********************************************************************//**
+    * @brief Sets the current parameter the encoder is assigned to
+    * @param newID The ID of the parameter the encoder is to be assigned to
+    ***************************************************************************/
     void setCurrentParam(int newID)
     { 
         for(unsigned int i = 0 ; i < parameters.size() ; i++)
@@ -95,16 +115,28 @@ public:
         }
     }
 
+    /***********************************************************************//**
+    * @brief Adds a parameter to the parameter vector
+    * @param newParam A pointer to the parameter to be added to the vector
+    ***************************************************************************/
     void addParameter(SteppedParameter* newParam)
     {
         parameters.push_back(newParam);
     }
 
+    /***********************************************************************//**
+    * @brief Adds a bypass callback to the bypassCallbacks vector
+    * @param newCallback The callback function to be added
+    ***************************************************************************/
     void addBypassCallback(std::function<void()> newCallback)
     {
         bypassCallbacks.push_back(newCallback);
     }
 
+    /***********************************************************************//**
+    * @brief Gets a pointer to the parameter with the given index
+    * @param paramID The ID of the parameter to be fetched
+    ***************************************************************************/
     SteppedParameter* getParameter(int paramID)
     {
         for(unsigned int i = 0 ; i < parameters.size() ; i++)

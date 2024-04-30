@@ -29,14 +29,14 @@ void Filter::setMode(float m)
         filter.SetFilterMode(daisysp::OnePole::FilterMode::FILTER_MODE_HIGH_PASS);
 }
 
-void Filter::processBlock(float* buffer[2], size_t size)
+void Filter::processBlock(float* input[2], size_t size)
 {
    if(isBypass)
         return;
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        filter.ProcessBlock(buffer[L], size);
-        filter.ProcessBlock(buffer[R], size);
+        filter.ProcessBlock(input[L], size);
+        filter.ProcessBlock(input[R], size);
     }
 }

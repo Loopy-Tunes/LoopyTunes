@@ -22,6 +22,15 @@ class AudioParameter
 {
 public:
 
+    /**************************************************************************************//**
+    * @brief Initialises an instance of the class
+    * @param seed A pointer to the program's instance of the hardware
+    * @param mi The minimum value the parameter's input should be scaled too
+    * @param ma The maximum value the parameter's input should be scaled too
+    * @param c The type of curve that should be used to scale the input
+    * @param ID The channel ID for the ADC channel the instance is assigned too
+    * @param cb The callback function that should be executed when the input values changes
+    ******************************************************************************************/
     void init(DaisySeed* seed, type mi, type ma, CurveType c, int ID, std::function<void(type)> cb)
     {
         hw = seed;
@@ -36,6 +45,9 @@ public:
         callback = cb;
     }
     
+    /*******************************************************************//**
+    * @brief Handles the polling of the assigned ADC channel
+    ***********************************************************************/
     inline void tick() 
     {
         float newInput = hw->adc.GetFloat(channelID);
@@ -47,6 +59,9 @@ public:
         }
     }
 
+    /***************************************************************************//**
+    * @brief Scales the input value according to the assigned curve
+    *******************************************************************************/
     void processCurve()
     {
         switch(curve)
@@ -60,6 +75,10 @@ public:
         }
     }
 
+    /**********************************************************//**
+    * @brief Fetches the current value of the instance
+    * @return the current value
+    *************************************************************/
     inline type getValue() { return curVal; }
     
 private:
