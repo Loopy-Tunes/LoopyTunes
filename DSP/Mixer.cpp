@@ -83,10 +83,10 @@ void Mixer::processInputBlock(const float* left, const float* right, size_t size
 
 void Mixer::panChannels(size_t size)
 {
-    //panMixBuffer(track1.buffer, track1.pan.value, size);
-    //panMixBuffer(track2.buffer, track2.pan.value, size);
-    //panMixBuffer(track3.buffer, track3.pan.value, size);
-    //panMixBuffer(track4.buffer, track4.pan.value, size);
+    panMixBuffer(track1.buffer, track1.pan.value, size);
+    panMixBuffer(track2.buffer, track2.pan.value, size);
+    panMixBuffer(track3.buffer, track3.pan.value, size);
+    panMixBuffer(track4.buffer, track4.pan.value, size);
 }
 
 void Mixer::mixOutput(size_t size)

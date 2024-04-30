@@ -8,10 +8,9 @@ using namespace daisysp;
 TO DO:
 - test reverb dry/wet
 - Doxygen docs
-- bypass UI class
-- fix bit reducer
 - test seamless looping algorithm
 - fix bit reducer
+- waveshaper amount control
 */
 
 // Hardware

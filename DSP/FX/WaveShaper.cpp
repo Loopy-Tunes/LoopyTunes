@@ -120,12 +120,21 @@ void Waveshaper::applyAutoGain(float* buffer[2], size_t size)
     }
 }
 
-void Waveshaper::processBlock(float* buffer[2], size_t size)
+void Waveshaper::processBlock(float* input[2], size_t size)
 {
     if(isBypass)
         return;
 
-    setInputAG(buffer, size);
+    setInputAG(input, size);
+
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    {
+        for(uint_fast8_t j = 0 ; j < 2 ; j++)
+        {
+            buffer[L][i] = input[L][i];
+            buffer[L][i] = input[R][i];
+        }
+    }
 
     int modeCheck = mode.value;
     if(modeCheck == CLIPPER || modeCheck == FOLDER)
@@ -134,7 +143,7 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
         {
             for(uint_fast8_t j = 0 ; j < 2 ; j++)
             {
-                buffer[j][i] *= funcControl.value;
+                input[j][i] *= funcControl.value;
             }
         }
     }
@@ -142,65 +151,74 @@ void Waveshaper::processBlock(float* buffer[2], size_t size)
     switch(modeCheck)
     {
         case CLIPPER:
-            processClipper(buffer, size);
+            processClipper(input, size);
         break;
         case FOLDER:
-            processFolder(buffer, size);
+            processFolder(input, size);
         break;
         case LFO:
-            processLFO(buffer, size);
+            processLFO(input, size);
         break;
         case BITREDUCER:
-            processBitReducer(buffer, size);
+            processBitReducer(input, size);
         break;
     }
 
     if(modeCheck == CLIPPER || modeCheck == FOLDER)
     {
-        setOutputAG(buffer, size);
+        setOutputAG(input, size);
         calculateAutoGain(size);
-        applyAutoGain(buffer, size);
+        applyAutoGain(input, size);
+    }
+
+    for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
+    {
+        for(uint_fast8_t j = 0 ; j < 2 ; j++)
+        {
+            input[L][i] = (input[L][i] * (1.f - amount.value)) + (buffer[L][i] * amount.value);
+            input[R][i] = (input[R][i] * (1.f - amount.value)) + (buffer[R][i] * amount.value);
+        }
     }
 }
 
-void Waveshaper::processClipper(float* buffer[2], size_t size)
+void Waveshaper::processClipper(float* input[2], size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
             int sign = 1;
-            if(buffer[j][i] < 0)
+            if(input[j][i] < 0)
             {
                 sign = -1;
-                buffer[j][i] = -buffer[j][i];
-                buffer[j][i] *= sign;
+                input[j][i] = -input[j][i];
+                input[j][i] *= sign;
             }
-            else if(buffer[j][i] >= 4.0f)
+            else if(input[j][i] >= 4.0f)
             {
-                buffer[j][i] = sign;
+                input[j][i] = sign;
             }
-            else if(buffer[j][i] < 0.5f)
+            else if(input[j][i] < 0.5f)
             {
-                buffer[j][i] *= sign;
+                input[j][i] *= sign;
             }
-            buffer[j][i] = sign * tanhf(buffer[j][i]);
+            input[j][i] = sign * tanhf(input[j][i]);
         }
     }
 } 
 
-void Waveshaper::processFolder(float* buffer[2], size_t size)
+void Waveshaper::processFolder(float* input[2], size_t size)
 {
     for(size_t i = 0 ; i < size ; i++)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            buffer[j][i] = folder.Process(buffer[j][i]);
+            input[j][i] = folder.Process(input[j][i]);
         }
     }
 }
 
-void Waveshaper::processLFO(float* buffer[2], size_t size)
+void Waveshaper::processLFO(float* input[2], size_t size)
 {
     float lfoVal = lfo.Process();
 
@@ -208,12 +226,12 @@ void Waveshaper::processLFO(float* buffer[2], size_t size)
     {
         for(uint_fast8_t j = 0 ; j < 2 ; j++)
         {
-            buffer[j][i] *= lfoVal;
+            input[j][i] *= lfoVal;
         }
     }
 } 
 
-void Waveshaper::processBitReducer(float* buffer[2], size_t size)
+void Waveshaper::processBitReducer(float* input[2], size_t size)
 {
     long int m = 1 << (bits-1);
 
@@ -224,7 +242,7 @@ void Waveshaper::processBitReducer(float* buffer[2], size_t size)
         {
             if(bitCount >= 1)
             {
-                buffer[j][i] = (long int)(buffer[j][i] * m) / (float)m;
+                input[j][i] = (long int)(input[j][i] * m) / (float)m;
                 if(j == 2)
                     bitCount = 0;
             }

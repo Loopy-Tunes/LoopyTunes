@@ -46,7 +46,7 @@ private:
     {
         Track track;
         float* buffer[2];
-        //AudioParameterWrapper<float> pan;
+        AudioParameterWrapper<float> pan;
         AudioParameterWrapper<float> gain;
 
         inline float getCurVal(int chan, size_t index)

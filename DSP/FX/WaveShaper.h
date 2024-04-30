@@ -37,11 +37,11 @@ public:
     inline void calculateAutoGain(size_t size);
     inline void applyAutoGain(float* buffer[2], size_t size);
 
-    void processBlock(float* buffer[2], size_t size);
-    void processClipper(float* buffer[2], size_t size);
-    void processFolder(float* buffer[2], size_t size);
-    void processLFO(float* buffer[2], size_t size);
-    void processBitReducer(float* buffer[2], size_t size);
+    void processBlock(float* input[2], size_t size);
+    void processClipper(float* input[2], size_t size);
+    void processFolder(float* input[2], size_t size);
+    void processLFO(float* input[2], size_t size);
+    void processBitReducer(float* input[2], size_t size);
 
 private:
 
@@ -62,6 +62,7 @@ private:
     float bitRate, bitCount;
     int bits;
 
+    float buffer[2][BLOCKLENGTH];
     float inputAG[2][BLOCKLENGTH];
     float outputAG[2][BLOCKLENGTH];
     float diffAG[2][BLOCKLENGTH];
