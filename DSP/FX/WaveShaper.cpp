@@ -17,7 +17,7 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     folder.Init();
     lfo.Init(48000);
     lfo.SetWaveform(0);
-    lfo.SetAmp(0.5);
+    lfo.SetAmp(0.75);
     lfo.Reset(0);
 
     lfoMin = 20;
@@ -40,6 +40,12 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&mode.param);
 
     setDefaultValues();
+
+    // for testing
+    isBypass = false;
+    setMode(LFO);
+    setAmount(1);
+    setFuncControl(0.5);
 }
 
  void Waveshaper::setDefaultValues()
@@ -133,7 +139,7 @@ void Waveshaper::processBlock(float* input[2], size_t size)
     }
 
     int modeCheck = mode.value;
-    if(modeCheck == CLIPPER || modeCheck == FOLDER)
+    if(mode.value == CLIPPER || mode.value == FOLDER)
     {
         for(size_t i = 0 ; i < BLOCKLENGTH ; i++)
         {
