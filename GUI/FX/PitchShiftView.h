@@ -17,10 +17,9 @@ public:
     * @brief Initialises the instance
     * @param ID The ID of the track view the instance belongs to
     * @param encoder A pointer to the encoder driver
-    * @param uid A pointer to the LCD driver
     * @param kpd A pointer to the keypad driver
     ***************************************************************************/
-    void init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd);
+    void init(int ID, EncoderDriver* driver, KeypadDriver* kpd);
     
     /***********************************************************************//**
     * @brief Handles the updating of the view
@@ -56,7 +55,6 @@ private:
 
     int trackID;
 
-    UiDriver* lcd;
     KeypadDriver* keypad;
 
     BypassButton bypass;

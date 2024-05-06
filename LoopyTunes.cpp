@@ -31,7 +31,6 @@ Mixer mixer;
 // UI
 MixerView mixerView;
 EncoderDriver encoder;
-UiDriver lcd;
 KeypadDriver keypad;
 
 // buffers
@@ -101,7 +100,7 @@ void init()
 	// keypad driver
 
 	// initialise GUI
-	mixerView.init(&hw, &encoder, &lcd, &keypad);
+	mixerView.init(&hw, &encoder, &keypad);
 
 	System::Delay(100);
 }

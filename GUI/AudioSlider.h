@@ -20,9 +20,8 @@ public:
     * @brief Initialises the instance
     * @param ID The channel ID of the ADC channel the slider is assigned to
     * @param seed A pointer to the hardware instance
-    * @param uid A pointer to the LCD driver
     ***************************************************************************/
-    void init(int ID, DaisySeed* seed, UiDriver* uid);
+    void init(int ID, DaisySeed* seed);
 
     /***********************************************************************//**
     * @brief Handles the updating of the slider
@@ -39,7 +38,6 @@ public:
 private:
 
     DaisySeed* hw;
-    UiDriver* lcd;
 
     float input;
     const float jitter = 0.01f;

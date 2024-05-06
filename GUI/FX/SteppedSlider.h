@@ -17,9 +17,8 @@ public:
     * @brief Initialises the instance
     * @param ID The ID of the parameter the instance is assigned to
     * @param ed A pointer to the encoder driver
-    * @param uid A pointer to the LCD driver
     ***************************************************************************/
-    void init(int ID, EncoderDriver* ed, UiDriver* uid);
+    void init(int ID, EncoderDriver* ed);
     
     /***************************************************************************//**
     * @brief Handles the updating of the slider to reflect any backend changes
@@ -39,7 +38,6 @@ public:
 private:
 
     EncoderDriver* encoder;
-    UiDriver* lcd;
     
     int paramID;
     SteppedParameter* param;

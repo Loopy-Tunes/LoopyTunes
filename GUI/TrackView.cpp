@@ -1,17 +1,16 @@
 #include "TrackView.h"
 
-void TrackView::init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd)
+void TrackView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {
     trackID = ID;
 
-    lcd = uid;
     keypad = kpd;
 
-    pitchShiftView.init(ID, driver, lcd, keypad);
-    waveshaperView.init(ID, driver, lcd, keypad);
-    filterView.init(ID, driver, lcd, keypad);
-    delayView.init(ID, driver, lcd, keypad);
-    reverbView.init(ID, driver, lcd, keypad);
+    pitchShiftView.init(ID, driver, keypad);
+    waveshaperView.init(ID, driver, keypad);
+    filterView.init(ID, driver, keypad);
+    delayView.init(ID, driver, keypad);
+    reverbView.init(ID, driver, keypad);
 
     selectedEffectIndex = 0;
     isOpen = false;
@@ -36,13 +35,13 @@ void TrackView::repaint()
     {
         // Track label box and text 
         Rectangle trackLabelRect(10, 10, StyleSheet::Tracks::displayWidth - 20, 50);  
-        lcd->DrawRect(trackLabelRect, StyleSheet::Tracks::borderColor);
-        lcd->WriteString(("Track " + std::to_string(trackID)).c_str(), 20, 15, StyleSheet::Tracks::largerFont, COLOR_CYAN);
+        lcd.DrawRect(trackLabelRect, StyleSheet::Tracks::borderColor);
+        lcd.WriteString(("Track " + std::to_string(trackID)).c_str(), 20, 15, StyleSheet::Tracks::largerFont, COLOR_CYAN);
 
         // Draw the effects label box 
         Rectangle effectsLabelRect(10, 65, 150, 30);
-        lcd->DrawRect(effectsLabelRect, StyleSheet::Tracks::borderColor);
-        lcd->WriteString("Effects", 50, 70, Font_11x18, COLOR_CYAN);
+        lcd.DrawRect(effectsLabelRect, StyleSheet::Tracks::borderColor);
+        lcd.WriteString("Effects", 50, 70, Font_11x18, COLOR_CYAN);
 
         // Top position for effect boxes
         int effectsYStart = 96; 
@@ -110,18 +109,18 @@ void TrackView::repaint()
         {
             int effectTop = effectsYStart + i * (effectBoxHeight + 1); 
             uint16_t fillColor = (i == selectedEffectIndex) ? StyleSheet::Tracks::selectedEffectColor : StyleSheet::Tracks::effectBoxColor;
-            lcd->FillRect(Rectangle(11, effectTop + 1, 148, effectBoxHeight - 2), fillColor);
-            lcd->DrawRect(Rectangle(10, effectTop, 150, effectBoxHeight), StyleSheet::Tracks::borderColor);
-            lcd->WriteString(effects[i], 20, effectTop + (effectBoxHeight - StyleSheet::Tracks::smallerFontHeight) / 2, StyleSheet::Tracks::smallerFont, StyleSheet::Tracks::text_color);
+            lcd.FillRect(Rectangle(11, effectTop + 1, 148, effectBoxHeight - 2), fillColor);
+            lcd.DrawRect(Rectangle(10, effectTop, 150, effectBoxHeight), StyleSheet::Tracks::borderColor);
+            lcd.WriteString(effects[i], 20, effectTop + (effectBoxHeight - StyleSheet::Tracks::smallerFontHeight) / 2, StyleSheet::Tracks::smallerFont, StyleSheet::Tracks::text_color);
         }
 
         // Draw the description label box and the larger description box
         Rectangle descLabelRect(170, 65, StyleSheet::Tracks::displayWidth - 180, 30);
-        lcd->DrawRect(descLabelRect, StyleSheet::Tracks::borderColor);
-        lcd->WriteString("Description", 180, 70, Font_11x18, COLOR_CYAN);
+        lcd.DrawRect(descLabelRect, StyleSheet::Tracks::borderColor);
+        lcd.WriteString("Description", 180, 70, Font_11x18, COLOR_CYAN);
 
         Rectangle descRect(170, effectsYStart, StyleSheet::Tracks::displayWidth - 180, descriptionBoxHeight);
-        lcd->DrawRect(descRect, StyleSheet::Tracks::borderColor);
+        lcd.DrawRect(descRect, StyleSheet::Tracks::borderColor);
 
         // Calculate the number of lines for the selected effect's description
         int numDescriptionLines = sizeof(descriptions[selectedEffectIndex]) / sizeof(descriptions[selectedEffectIndex][0]);
@@ -130,7 +129,7 @@ void TrackView::repaint()
         int currentY = effectsYStart + 10;
         for (int i = 0; i < numDescriptionLines; i++) 
         {
-            lcd->WriteString(descriptions[selectedEffectIndex][i], 175, currentY, StyleSheet::Tracks::smallerFont, StyleSheet::Tracks::text_color);
+            lcd.WriteString(descriptions[selectedEffectIndex][i], 175, currentY, StyleSheet::Tracks::smallerFont, StyleSheet::Tracks::text_color);
             currentY += StyleSheet::Tracks::smallerFontHeight + 2; // Adding a little space between lines for readability
         }
 

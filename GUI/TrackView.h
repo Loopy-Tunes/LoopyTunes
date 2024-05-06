@@ -21,10 +21,9 @@ public:
     * @brief Initialises the instance
     * @param seed A pointer to the hardware instance
     * @param encoder A pointer to the encoder driver
-    * @param uid A pointer to the LCD driver
     * @param kpd A pointer to the keypad driver
     ***************************************************************************/
-    void init(int ID, EncoderDriver* driver, UiDriver* uid, KeypadDriver* kpd);
+    void init(int ID, EncoderDriver* driver,  KeypadDriver* kpd);
     
     /***********************************************************************//**
     * @brief Handles the updating of the view
@@ -50,7 +49,7 @@ private:
 
     int trackID;
 
-    static UiDriver* lcd;
+    //static UiDriver* lcd;
     KeypadDriver* keypad;
 
     PitchShiftView pitchShiftView;

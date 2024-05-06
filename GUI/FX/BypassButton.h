@@ -16,13 +16,11 @@ public:
     /***********************************************************************//**
     * @brief Initialises the instance
     * @param ed A pointer to the encoder driver
-    * @param uid A pointer to the LCD driver
     * @param bypassCallback The function to be called when the bypass is set
     ***************************************************************************/
-    void init(EncoderDriver* ed, UiDriver* uid, std::function<void()> bypassCallback)
+    void init(EncoderDriver* ed, std::function<void()> bypassCallback)
     {
         encoder = ed;
-        lcd = uid;
 
         callback = bypassCallback;
         isSelected = false;

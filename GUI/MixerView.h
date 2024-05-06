@@ -17,10 +17,9 @@ public:
     * @brief Initialises the mixer view and all other GUI classes
     * @param seed A pointer to the hardware instance
     * @param encoder A pointer to the encoder driver
-    * @param uid A pointer to the LCD driver
     * @param kpd A pointer to the keypad driver
     ***************************************************************************/
-    void init(DaisySeed* seed, EncoderDriver* encoder, UiDriver* uid, KeypadDriver* kpd);
+    void init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd);
 
     /***********************************************************************//**
     * @brief Handles the updating of the view
@@ -55,7 +54,6 @@ public:
 
 private:
 
-    UiDriver* lcd;
     KeypadDriver* keypad;
 
     AudioSlider amp1;

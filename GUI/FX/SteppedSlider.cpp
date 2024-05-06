@@ -1,9 +1,8 @@
 #include "SteppedSlider.h"
 
-void SteppedSlider::init(int ID, EncoderDriver* ed, UiDriver* uid)
+void SteppedSlider::init(int ID, EncoderDriver* ed)
 {
     encoder = ed;
-    lcd = uid;
     
     paramID = ID;
     param = encoder->getParameter(paramID);

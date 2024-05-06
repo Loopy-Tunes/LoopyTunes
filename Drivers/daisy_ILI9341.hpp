@@ -331,7 +331,6 @@ class UiDriver
 {
   public:
     
-
     enum class Orientation
     {
         Default = 0,
@@ -1118,5 +1117,7 @@ class UiDriver
 
     uint16_t fps = 0;
 }; 
+
+static UiDriver lcd;
 
 #endif
