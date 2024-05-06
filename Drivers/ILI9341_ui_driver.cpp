@@ -8,3 +8,4 @@ uint8_t DSY_SDRAM_BSS
     ILI9341SpiTransport::color_mem[ILI9341SpiTransport::buffer_size / 2]
     = {0};
 
+UiDriver lcd;

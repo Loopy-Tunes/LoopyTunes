@@ -15,11 +15,6 @@ void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd)
     track2.init(2, encoder, keypad);
     track3.init(3, encoder, keypad);
     track4.init(4, encoder, keypad);
-
-    // TESTING
-    isOpen = true;
-    isPainted = false;
-    repaint();
 }
 
 void MixerView::tick()

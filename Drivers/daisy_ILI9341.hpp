@@ -1118,6 +1118,6 @@ class UiDriver
     uint16_t fps = 0;
 }; 
 
-static UiDriver lcd;
+extern UiDriver lcd;
 
 #endif

@@ -40,11 +40,6 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&mode.param);
 
     setDefaultValues();
-
-    // FOR TESTING
-    setMode(BITREDUCER);
-    setAmount(1);
-    setFuncControl(0.8);
 }
 
  void Waveshaper::setDefaultValues()
