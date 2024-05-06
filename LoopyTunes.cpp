@@ -17,7 +17,6 @@ using namespace daisysp;
 /*
 TO DO:
 - test seamless looping algorithm
-- fix bit reducer
 */
 
 // Hardware
@@ -96,13 +95,13 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-	//lcd.Init();
+	lcd.Init();
 	//lcd.Fill(COLOR_BLACK);
 	//lcd.Update();
 	// keypad driver
 
 	// initialise GUI
-	//mixerView.init(&hw, &encoder, &lcd, &keypad);
+	mixerView.init(&hw, &encoder, &lcd, &keypad);
 
 	System::Delay(100);
 }
@@ -136,18 +135,10 @@ inline void tick(size_t size)
  **********************************************************************************/
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
-	for(size_t i = 0; i < size; i++)
-    {
-        out[L][i] = in[L][i];
-        out[R][i] = in[R][i];
-    }
-
-	/*
 	tick(size);
 
 	mixer.processInputBlock(in[L], in[R], size);
 	mixer.processOutputBlock(out[L], out[R], size);
-	*/
 }
 
 int main(void)
@@ -155,7 +146,7 @@ int main(void)
 	init();
 	hw.StartAudio(AudioCallback);
 
-	// init global variabls
+	// init global variables
 	sample = 0;
 
 	// handle ADC init

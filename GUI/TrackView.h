@@ -50,7 +50,7 @@ private:
 
     int trackID;
 
-    UiDriver* lcd;
+    static UiDriver* lcd;
     KeypadDriver* keypad;
 
     PitchShiftView pitchShiftView;
