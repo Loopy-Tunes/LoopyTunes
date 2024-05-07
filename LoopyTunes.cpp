@@ -13,12 +13,6 @@ using namespace daisysp;
  * @param arg3
  *************************************************************/
 
-
-/*
-TO DO:
-- test seamless looping algorithm
-*/
-
 // Hardware
 DaisySeed hw;
 
@@ -94,13 +88,11 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
-	lcd.Init();
-	//lcd.Fill(COLOR_BLACK);
-	//lcd.Update();
 	// keypad driver
 
 	// initialise GUI
 	mixerView.init(&hw, &encoder, &keypad);
+	lcd.Init();
 
 	System::Delay(100);
 }
@@ -117,7 +109,7 @@ inline void tick(size_t size)
 		encoder.tick();
 		mixer.tick();
 		//mixerView.tick();
-		//lcd.Update();
+		lcd.Update();
 		sample = 0;
 	}
 	else

@@ -62,6 +62,9 @@ void Track::setIsRecording()
             break;
     }
 
+    if(state == RECORDING)
+        resetBuffer();
+
     ph.reset();
 }
 

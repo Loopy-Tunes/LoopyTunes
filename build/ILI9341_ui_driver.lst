@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -18,22 +18,22 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.section	.text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE,"ax",%progbits
+  18              		.section	.text.startup._GLOBAL__sub_I_frame_buffer,"ax",%progbits
   19              		.align	1
   20              		.syntax unified
   21              		.thumb
   22              		.thumb_func
-  24              	_GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:
+  24              	_GLOBAL__sub_I_frame_buffer:
   25              	.LFB2635:
   26              		.file 1 "Drivers/ILI9341_ui_driver.cpp"
    1:Drivers/ILI9341_ui_driver.cpp **** #include "daisy_ILI9341.hpp"
    2:Drivers/ILI9341_ui_driver.cpp **** 
    3:Drivers/ILI9341_ui_driver.cpp **** uint8_t DMA_BUFFER_MEM_SECTION
-   4:Drivers/ILI9341_ui_driver.cpp ****     ILI9341SpiTransport::frame_buffer[ILI9341SpiTransport::buffer_size]
+   4:Drivers/ILI9341_ui_driver.cpp ****     frame_buffer[ILI9341SpiTransport::buffer_size]
    5:Drivers/ILI9341_ui_driver.cpp ****     = {0}; // DMA max (?) 65536 // full screen - 153600
    6:Drivers/ILI9341_ui_driver.cpp **** 
    7:Drivers/ILI9341_ui_driver.cpp **** uint8_t DSY_SDRAM_BSS
-   8:Drivers/ILI9341_ui_driver.cpp ****     ILI9341SpiTransport::color_mem[ILI9341SpiTransport::buffer_size / 2]
+   8:Drivers/ILI9341_ui_driver.cpp ****     color_mem[ILI9341SpiTransport::buffer_size / 2]
    9:Drivers/ILI9341_ui_driver.cpp ****     = {0};
   10:Drivers/ILI9341_ui_driver.cpp **** 
   11:Drivers/ILI9341_ui_driver.cpp **** UiDriver lcd;...
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
    6:Drivers/daisy_ILI9341.hpp **** #include "daisy_seed.h"
    7:Drivers/daisy_ILI9341.hpp **** #include <util/oled_fonts.h>
    8:Drivers/daisy_ILI9341.hpp **** #include <hid/disp/graphics_common.h>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 2
 
 
    9:Drivers/daisy_ILI9341.hpp **** 
@@ -101,309 +101,310 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   46:Drivers/daisy_ILI9341.hpp ****     NUMBER_OF_TFT_COLORS,
   47:Drivers/daisy_ILI9341.hpp **** };
   48:Drivers/daisy_ILI9341.hpp **** 
-  49:Drivers/daisy_ILI9341.hpp **** /**
-  50:Drivers/daisy_ILI9341.hpp ****  * SPI Transport for ILI9341 TFT display devices
-  51:Drivers/daisy_ILI9341.hpp ****  */
-  52:Drivers/daisy_ILI9341.hpp **** class ILI9341SpiTransport
-  53:Drivers/daisy_ILI9341.hpp **** {
-  54:Drivers/daisy_ILI9341.hpp ****   public:
-  55:Drivers/daisy_ILI9341.hpp ****     void Init()
-  56:Drivers/daisy_ILI9341.hpp ****     {
-  57:Drivers/daisy_ILI9341.hpp ****         // Initialize SPI
-  58:Drivers/daisy_ILI9341.hpp ****         SpiHandle::Config spi_config;
-  59:Drivers/daisy_ILI9341.hpp ****         spi_config.periph    = SpiHandle::Config::Peripheral::SPI_1;
-  60:Drivers/daisy_ILI9341.hpp ****         spi_config.mode      = SpiHandle::Config::Mode::MASTER;
-  61:Drivers/daisy_ILI9341.hpp ****         spi_config.direction = SpiHandle::Config::Direction::TWO_LINES_TX_ONLY;
-  62:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_polarity  = SpiHandle::Config::ClockPolarity::LOW;
-  63:Drivers/daisy_ILI9341.hpp ****         spi_config.baud_prescaler  = SpiHandle::Config::BaudPrescaler::PS_2;
-  64:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_phase     = SpiHandle::Config::ClockPhase::ONE_EDGE;
-  65:Drivers/daisy_ILI9341.hpp ****         spi_config.nss             = SpiHandle::Config::NSS::HARD_OUTPUT;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 3
+  49:Drivers/daisy_ILI9341.hpp **** extern uint8_t DMA_BUFFER_MEM_SECTION frame_buffer[153600];
+  50:Drivers/daisy_ILI9341.hpp **** extern uint8_t DSY_SDRAM_BSS          color_mem[153600 / 2];
+  51:Drivers/daisy_ILI9341.hpp **** 
+  52:Drivers/daisy_ILI9341.hpp **** /**
+  53:Drivers/daisy_ILI9341.hpp ****  * SPI Transport for ILI9341 TFT display devices
+  54:Drivers/daisy_ILI9341.hpp ****  */
+  55:Drivers/daisy_ILI9341.hpp **** class ILI9341SpiTransport
+  56:Drivers/daisy_ILI9341.hpp **** {
+  57:Drivers/daisy_ILI9341.hpp ****   public:
+  58:Drivers/daisy_ILI9341.hpp ****     void Init()
+  59:Drivers/daisy_ILI9341.hpp ****     {
+  60:Drivers/daisy_ILI9341.hpp ****         // Initialize SPI
+  61:Drivers/daisy_ILI9341.hpp ****         SpiHandle::Config spi_config;
+  62:Drivers/daisy_ILI9341.hpp ****         spi_config.periph    = SpiHandle::Config::Peripheral::SPI_1;
+  63:Drivers/daisy_ILI9341.hpp ****         spi_config.mode      = SpiHandle::Config::Mode::MASTER;
+  64:Drivers/daisy_ILI9341.hpp ****         spi_config.direction = SpiHandle::Config::Direction::TWO_LINES_TX_ONLY;
+  65:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_polarity  = SpiHandle::Config::ClockPolarity::LOW;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 3
 
 
-  66:Drivers/daisy_ILI9341.hpp ****         spi_config.datasize        = 8;
-  67:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.sclk = {DSY_GPIOG, 11};
-  68:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.mosi = {DSY_GPIOB, 5};
-  69:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.nss  = {DSY_GPIOG, 10};
-  70:Drivers/daisy_ILI9341.hpp ****         // spi_config.pin_config.miso = {DSY_GPIOX, 0}; // not used
-  71:Drivers/daisy_ILI9341.hpp **** 
-  72:Drivers/daisy_ILI9341.hpp ****         // v0.1 mix up
-  73:Drivers/daisy_ILI9341.hpp ****         //uint8_t dc_pin    = 16;
-  74:Drivers/daisy_ILI9341.hpp ****         //uint8_t reset_pin = 22;
-  75:Drivers/daisy_ILI9341.hpp **** 
-  76:Drivers/daisy_ILI9341.hpp ****         // DC pin
-  77:Drivers/daisy_ILI9341.hpp ****         pin_dc_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-  78:Drivers/daisy_ILI9341.hpp ****         pin_dc_.pin  = seed::D12;
-  79:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_dc_);
-  80:Drivers/daisy_ILI9341.hpp ****         // Reset pin
-  81:Drivers/daisy_ILI9341.hpp ****         pin_reset_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-  82:Drivers/daisy_ILI9341.hpp ****         pin_reset_.pin  = seed::D11;
-  83:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_reset_);
-  84:Drivers/daisy_ILI9341.hpp ****         // CS pin
-  85:Drivers/daisy_ILI9341.hpp ****         pin_cs_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-  86:Drivers/daisy_ILI9341.hpp ****         pin_cs_.pin  = spi_config.pin_config.nss;
-  87:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_cs_);
-  88:Drivers/daisy_ILI9341.hpp **** 
-  89:Drivers/daisy_ILI9341.hpp ****         spi_.Init(spi_config);
-  90:Drivers/daisy_ILI9341.hpp **** 
-  91:Drivers/daisy_ILI9341.hpp ****         InitPalette();
-  92:Drivers/daisy_ILI9341.hpp ****     };
+  66:Drivers/daisy_ILI9341.hpp ****         spi_config.baud_prescaler  = SpiHandle::Config::BaudPrescaler::PS_2;
+  67:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_phase     = SpiHandle::Config::ClockPhase::ONE_EDGE;
+  68:Drivers/daisy_ILI9341.hpp ****         spi_config.nss             = SpiHandle::Config::NSS::HARD_OUTPUT;
+  69:Drivers/daisy_ILI9341.hpp ****         spi_config.datasize        = 8;
+  70:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.sclk = {DSY_GPIOG, 11};
+  71:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.mosi = {DSY_GPIOB, 5};
+  72:Drivers/daisy_ILI9341.hpp ****         spi_config.pin_config.nss  = {DSY_GPIOG, 10};
+  73:Drivers/daisy_ILI9341.hpp ****         // spi_config.pin_config.miso = {DSY_GPIOX, 0}; // not used
+  74:Drivers/daisy_ILI9341.hpp **** 
+  75:Drivers/daisy_ILI9341.hpp ****         // v0.1 mix up
+  76:Drivers/daisy_ILI9341.hpp ****         //uint8_t dc_pin    = 16;
+  77:Drivers/daisy_ILI9341.hpp ****         //uint8_t reset_pin = 22;
+  78:Drivers/daisy_ILI9341.hpp **** 
+  79:Drivers/daisy_ILI9341.hpp ****         // DC pin
+  80:Drivers/daisy_ILI9341.hpp ****         pin_dc_.mode = DSY_GPIO_MODE_OUTPUT_PP;
+  81:Drivers/daisy_ILI9341.hpp ****         pin_dc_.pin  = seed::D12;
+  82:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_dc_);
+  83:Drivers/daisy_ILI9341.hpp ****         // Reset pin
+  84:Drivers/daisy_ILI9341.hpp ****         pin_reset_.mode = DSY_GPIO_MODE_OUTPUT_PP;
+  85:Drivers/daisy_ILI9341.hpp ****         pin_reset_.pin  = seed::D11;
+  86:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_reset_);
+  87:Drivers/daisy_ILI9341.hpp ****         // CS pin
+  88:Drivers/daisy_ILI9341.hpp ****         pin_cs_.mode = DSY_GPIO_MODE_OUTPUT_PP;
+  89:Drivers/daisy_ILI9341.hpp ****         pin_cs_.pin  = spi_config.pin_config.nss;
+  90:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_cs_);
+  91:Drivers/daisy_ILI9341.hpp **** 
+  92:Drivers/daisy_ILI9341.hpp ****         spi_.Init(spi_config);
   93:Drivers/daisy_ILI9341.hpp **** 
-  94:Drivers/daisy_ILI9341.hpp ****     void Reset()
-  95:Drivers/daisy_ILI9341.hpp ****     {
-  96:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_reset_, 0);
-  97:Drivers/daisy_ILI9341.hpp ****         System::Delay(10);
-  98:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_reset_, 1);
-  99:Drivers/daisy_ILI9341.hpp ****         System::Delay(120);
- 100:Drivers/daisy_ILI9341.hpp ****     }
- 101:Drivers/daisy_ILI9341.hpp **** 
- 102:Drivers/daisy_ILI9341.hpp ****     /*void ClearBuffer(uint16_t color) { 
- 103:Drivers/daisy_ILI9341.hpp ****         for (size_t i = 0; i < buffer_size / 2; i++) {
- 104:Drivers/daisy_ILI9341.hpp ****             frame_buffer[i * 2] = color >> 8;
- 105:Drivers/daisy_ILI9341.hpp ****             frame_buffer[i * 2 + 1] = color & 0xFF; // new function
- 106:Drivers/daisy_ILI9341.hpp ****         }
- 107:Drivers/daisy_ILI9341.hpp ****     }*/
- 108:Drivers/daisy_ILI9341.hpp **** 
- 109:Drivers/daisy_ILI9341.hpp ****     // an internal function to handle SPI DMA callbacks
- 110:Drivers/daisy_ILI9341.hpp ****     // called when an DMA transmission completes and the next driver must be updated
- 111:Drivers/daisy_ILI9341.hpp ****     static void TxCompleteCallback(void* context, SpiHandle::Result result)
- 112:Drivers/daisy_ILI9341.hpp ****     {
- 113:Drivers/daisy_ILI9341.hpp ****         if(result == SpiHandle::Result::OK)
- 114:Drivers/daisy_ILI9341.hpp ****         {
- 115:Drivers/daisy_ILI9341.hpp ****             auto transport     = static_cast<ILI9341SpiTransport*>(context);
- 116:Drivers/daisy_ILI9341.hpp ****             auto transfer_size = transport->GetTransferSize();
- 117:Drivers/daisy_ILI9341.hpp ****             transport->remaining_buff -= transfer_size;
- 118:Drivers/daisy_ILI9341.hpp ****             if(transport->remaining_buff > 0)
- 119:Drivers/daisy_ILI9341.hpp ****             {
- 120:Drivers/daisy_ILI9341.hpp ****                 uint8_t* next_buffer_ptr = transport->frame_buffer + (transport->buffer_size - tran
- 121:Drivers/daisy_ILI9341.hpp ****                 transport->SendDataDMA(
- 122:Drivers/daisy_ILI9341.hpp ****                    &frame_buffer[buffer_size - transport->remaining_buff],
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 4
+  94:Drivers/daisy_ILI9341.hpp ****         InitPalette();
+  95:Drivers/daisy_ILI9341.hpp ****     };
+  96:Drivers/daisy_ILI9341.hpp **** 
+  97:Drivers/daisy_ILI9341.hpp ****     void Reset()
+  98:Drivers/daisy_ILI9341.hpp ****     {
+  99:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_reset_, 0);
+ 100:Drivers/daisy_ILI9341.hpp ****         System::Delay(10);
+ 101:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_reset_, 1);
+ 102:Drivers/daisy_ILI9341.hpp ****         System::Delay(120);
+ 103:Drivers/daisy_ILI9341.hpp ****     }
+ 104:Drivers/daisy_ILI9341.hpp **** 
+ 105:Drivers/daisy_ILI9341.hpp ****     /*void ClearBuffer(uint16_t color) { 
+ 106:Drivers/daisy_ILI9341.hpp ****         for (size_t i = 0; i < buffer_size / 2; i++) {
+ 107:Drivers/daisy_ILI9341.hpp ****             frame_buffer[i * 2] = color >> 8;
+ 108:Drivers/daisy_ILI9341.hpp ****             frame_buffer[i * 2 + 1] = color & 0xFF; // new function
+ 109:Drivers/daisy_ILI9341.hpp ****         }
+ 110:Drivers/daisy_ILI9341.hpp ****     }*/
+ 111:Drivers/daisy_ILI9341.hpp **** 
+ 112:Drivers/daisy_ILI9341.hpp ****     // an internal function to handle SPI DMA callbacks
+ 113:Drivers/daisy_ILI9341.hpp ****     // called when an DMA transmission completes and the next driver must be updated
+ 114:Drivers/daisy_ILI9341.hpp ****     static void TxCompleteCallback(void* context, SpiHandle::Result result)
+ 115:Drivers/daisy_ILI9341.hpp ****     {
+ 116:Drivers/daisy_ILI9341.hpp ****         if(result == SpiHandle::Result::OK)
+ 117:Drivers/daisy_ILI9341.hpp ****         {
+ 118:Drivers/daisy_ILI9341.hpp ****             auto transport     = static_cast<ILI9341SpiTransport*>(context);
+ 119:Drivers/daisy_ILI9341.hpp ****             auto transfer_size = transport->GetTransferSize();
+ 120:Drivers/daisy_ILI9341.hpp ****             transport->remaining_buff -= transfer_size;
+ 121:Drivers/daisy_ILI9341.hpp ****             if(transport->remaining_buff > 0)
+ 122:Drivers/daisy_ILI9341.hpp ****             {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 4
 
 
- 123:Drivers/daisy_ILI9341.hpp ****                     transfer_size);
- 124:Drivers/daisy_ILI9341.hpp ****                     
- 125:Drivers/daisy_ILI9341.hpp **** 
- 126:Drivers/daisy_ILI9341.hpp ****                 // 16bit transfer             uncommented
- 127:Drivers/daisy_ILI9341.hpp ****                 // transport->SendDataDMA(
- 128:Drivers/daisy_ILI9341.hpp ****                   //   &frame_buffer[2 * transport->buf_chunk_size],
- 129:Drivers/daisy_ILI9341.hpp ****                     // transport->buf_chunk_size);
- 130:Drivers/daisy_ILI9341.hpp ****             }
- 131:Drivers/daisy_ILI9341.hpp ****             else
- 132:Drivers/daisy_ILI9341.hpp ****             {
- 133:Drivers/daisy_ILI9341.hpp ****                 //System::Delay(120);
- 134:Drivers/daisy_ILI9341.hpp ****                 transport->dma_busy = false;
- 135:Drivers/daisy_ILI9341.hpp ****                 
- 136:Drivers/daisy_ILI9341.hpp **** 
- 137:Drivers/daisy_ILI9341.hpp ****                 // 8 bit transfer
- 138:Drivers/daisy_ILI9341.hpp ****                 // auto* spi_h = transport->spi_.GetHandle();
- 139:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Instance->CFG1 &= ~SPI_CFG1_DSIZE_3;
- 140:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Instance->CFG2 &= ~SPI_CFG2_LSBFRST;
- 141:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Init.DataSize = SPI_DATASIZE_8BIT;
- 142:Drivers/daisy_ILI9341.hpp ****             }
- 143:Drivers/daisy_ILI9341.hpp ****         }
- 144:Drivers/daisy_ILI9341.hpp ****     }
- 145:Drivers/daisy_ILI9341.hpp **** 
- 146:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendDataDMA()
- 147:Drivers/daisy_ILI9341.hpp ****     {
- 148:Drivers/daisy_ILI9341.hpp ****         remaining_buff = buffer_size;
- 149:Drivers/daisy_ILI9341.hpp ****         //System::Delay(120);
- 150:Drivers/daisy_ILI9341.hpp ****         dma_busy       = true;
- 151:Drivers/daisy_ILI9341.hpp ****         
- 152:Drivers/daisy_ILI9341.hpp **** 
- 153:Drivers/daisy_ILI9341.hpp ****         // auto* spi_h = spi_.GetHandle();
- 154:Drivers/daisy_ILI9341.hpp ****         // spi_h->Instance->CFG1 |= SPI_CFG1_DSIZE_3;
- 155:Drivers/daisy_ILI9341.hpp ****         // spi_h->Instance->CFG2 |= SPI_CFG2_LSBFRST;
- 156:Drivers/daisy_ILI9341.hpp ****         // spi_h->Init.DataSize = SPI_DATASIZE_16BIT; // 15;
- 157:Drivers/daisy_ILI9341.hpp **** 
- 158:Drivers/daisy_ILI9341.hpp ****         return SendDataDMA(frame_buffer, buf_chunk_size);
- 159:Drivers/daisy_ILI9341.hpp ****     };
+ 123:Drivers/daisy_ILI9341.hpp ****                 uint8_t* next_buffer_ptr = frame_buffer + (transport->buffer_size - transport->rema
+ 124:Drivers/daisy_ILI9341.hpp ****                 transport->SendDataDMA(
+ 125:Drivers/daisy_ILI9341.hpp ****                    &frame_buffer[buffer_size - transport->remaining_buff],
+ 126:Drivers/daisy_ILI9341.hpp ****                     transfer_size);
+ 127:Drivers/daisy_ILI9341.hpp ****                     
+ 128:Drivers/daisy_ILI9341.hpp **** 
+ 129:Drivers/daisy_ILI9341.hpp ****                 // 16bit transfer             uncommented
+ 130:Drivers/daisy_ILI9341.hpp ****                 // transport->SendDataDMA(
+ 131:Drivers/daisy_ILI9341.hpp ****                   //   &frame_buffer[2 * transport->buf_chunk_size],
+ 132:Drivers/daisy_ILI9341.hpp ****                     // transport->buf_chunk_size);
+ 133:Drivers/daisy_ILI9341.hpp ****             }
+ 134:Drivers/daisy_ILI9341.hpp ****             else
+ 135:Drivers/daisy_ILI9341.hpp ****             {
+ 136:Drivers/daisy_ILI9341.hpp ****                 //System::Delay(120);
+ 137:Drivers/daisy_ILI9341.hpp ****                 transport->dma_busy = false;
+ 138:Drivers/daisy_ILI9341.hpp ****                 
+ 139:Drivers/daisy_ILI9341.hpp **** 
+ 140:Drivers/daisy_ILI9341.hpp ****                 // 8 bit transfer
+ 141:Drivers/daisy_ILI9341.hpp ****                 // auto* spi_h = transport->spi_.GetHandle();
+ 142:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Instance->CFG1 &= ~SPI_CFG1_DSIZE_3;
+ 143:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Instance->CFG2 &= ~SPI_CFG2_LSBFRST;
+ 144:Drivers/daisy_ILI9341.hpp ****                 // spi_h->Init.DataSize = SPI_DATASIZE_8BIT;
+ 145:Drivers/daisy_ILI9341.hpp ****             }
+ 146:Drivers/daisy_ILI9341.hpp ****         }
+ 147:Drivers/daisy_ILI9341.hpp ****     }
+ 148:Drivers/daisy_ILI9341.hpp **** 
+ 149:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendDataDMA()
+ 150:Drivers/daisy_ILI9341.hpp ****     {
+ 151:Drivers/daisy_ILI9341.hpp ****         remaining_buff = buffer_size;
+ 152:Drivers/daisy_ILI9341.hpp ****         //System::Delay(120);
+ 153:Drivers/daisy_ILI9341.hpp ****         dma_busy       = true;
+ 154:Drivers/daisy_ILI9341.hpp ****         
+ 155:Drivers/daisy_ILI9341.hpp **** 
+ 156:Drivers/daisy_ILI9341.hpp ****         // auto* spi_h = spi_.GetHandle();
+ 157:Drivers/daisy_ILI9341.hpp ****         // spi_h->Instance->CFG1 |= SPI_CFG1_DSIZE_3;
+ 158:Drivers/daisy_ILI9341.hpp ****         // spi_h->Instance->CFG2 |= SPI_CFG2_LSBFRST;
+ 159:Drivers/daisy_ILI9341.hpp ****         // spi_h->Init.DataSize = SPI_DATASIZE_16BIT; // 15;
  160:Drivers/daisy_ILI9341.hpp **** 
- 161:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendDataDMA(uint8_t* buff, size_t size)
- 162:Drivers/daisy_ILI9341.hpp ****     {
- 163:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 1);
- 164:Drivers/daisy_ILI9341.hpp ****         return spi_.DmaTransmit(buff, size, nullptr, &TxCompleteCallback, this);
- 165:Drivers/daisy_ILI9341.hpp ****     };
- 166:Drivers/daisy_ILI9341.hpp **** 
- 167:Drivers/daisy_ILI9341.hpp ****     uint32_t GetTransferSize() const
- 168:Drivers/daisy_ILI9341.hpp ****     {
- 169:Drivers/daisy_ILI9341.hpp ****         return remaining_buff < buf_chunk_size ? remaining_buff
- 170:Drivers/daisy_ILI9341.hpp ****                                                : buf_chunk_size;
- 171:Drivers/daisy_ILI9341.hpp ****         // return remaining_buff < 2 * buf_chunk_size ? remaining_buff // uncommented these two lin
- 172:Drivers/daisy_ILI9341.hpp ****           //                                         : 2 * buf_chunk_size;
- 173:Drivers/daisy_ILI9341.hpp ****     }
- 174:Drivers/daisy_ILI9341.hpp **** 
- 175:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendCommand(uint8_t cmd)
- 176:Drivers/daisy_ILI9341.hpp ****     {
- 177:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 0);
- 178:Drivers/daisy_ILI9341.hpp ****         return spi_.BlockingTransmit(&cmd, 1);
- 179:Drivers/daisy_ILI9341.hpp ****     };
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 5
+ 161:Drivers/daisy_ILI9341.hpp ****         return SendDataDMA(frame_buffer, buf_chunk_size);
+ 162:Drivers/daisy_ILI9341.hpp ****     };
+ 163:Drivers/daisy_ILI9341.hpp **** 
+ 164:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendDataDMA(uint8_t* buff, size_t size)
+ 165:Drivers/daisy_ILI9341.hpp ****     {
+ 166:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 1);
+ 167:Drivers/daisy_ILI9341.hpp ****         return spi_.DmaTransmit(buff, size, nullptr, &TxCompleteCallback, this);
+ 168:Drivers/daisy_ILI9341.hpp ****     };
+ 169:Drivers/daisy_ILI9341.hpp **** 
+ 170:Drivers/daisy_ILI9341.hpp ****     uint32_t GetTransferSize() const
+ 171:Drivers/daisy_ILI9341.hpp ****     {
+ 172:Drivers/daisy_ILI9341.hpp ****         return remaining_buff < buf_chunk_size ? remaining_buff
+ 173:Drivers/daisy_ILI9341.hpp ****                                                : buf_chunk_size;
+ 174:Drivers/daisy_ILI9341.hpp ****         // return remaining_buff < 2 * buf_chunk_size ? remaining_buff // uncommented these two lin
+ 175:Drivers/daisy_ILI9341.hpp ****           //                                         : 2 * buf_chunk_size;
+ 176:Drivers/daisy_ILI9341.hpp ****     }
+ 177:Drivers/daisy_ILI9341.hpp **** 
+ 178:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendCommand(uint8_t cmd)
+ 179:Drivers/daisy_ILI9341.hpp ****     {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 5
 
 
- 180:Drivers/daisy_ILI9341.hpp **** 
- 181:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendData(uint8_t* buff, size_t size)
- 182:Drivers/daisy_ILI9341.hpp ****     {
- 183:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 1);
- 184:Drivers/daisy_ILI9341.hpp ****         return spi_.BlockingTransmit(buff, size);
- 185:Drivers/daisy_ILI9341.hpp ****     };
- 186:Drivers/daisy_ILI9341.hpp **** 
- 187:Drivers/daisy_ILI9341.hpp ****     void SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
- 188:Drivers/daisy_ILI9341.hpp ****     {
- 189:Drivers/daisy_ILI9341.hpp ****         // column address set
- 190:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2A); // CASET
- 191:Drivers/daisy_ILI9341.hpp ****         {
- 192:Drivers/daisy_ILI9341.hpp ****             uint8_t data[4] = {static_cast<uint8_t>((x0 >> 8) & 0xFF),
- 193:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(x0 & 0xFF),
- 194:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>((x1 >> 8) & 0xFF),
- 195:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(x1 & 0xFF)};
- 196:Drivers/daisy_ILI9341.hpp ****             SendData(data, 4);
- 197:Drivers/daisy_ILI9341.hpp ****         }
- 198:Drivers/daisy_ILI9341.hpp **** 
- 199:Drivers/daisy_ILI9341.hpp ****         // row address set
- 200:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2B); // RASET
- 201:Drivers/daisy_ILI9341.hpp ****         {
- 202:Drivers/daisy_ILI9341.hpp ****             uint8_t data[4] = {static_cast<uint8_t>((y0 >> 8) & 0xFF),
- 203:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(y0 & 0xFF),
- 204:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>((y1 >> 8) & 0xFF),
- 205:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(y1 & 0xFF)};
- 206:Drivers/daisy_ILI9341.hpp ****             SendData(data, 4);
- 207:Drivers/daisy_ILI9341.hpp ****         }
- 208:Drivers/daisy_ILI9341.hpp **** 
- 209:Drivers/daisy_ILI9341.hpp ****         // write to RAM
- 210:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2C); // RAMWR
- 211:Drivers/daisy_ILI9341.hpp ****     }
- 212:Drivers/daisy_ILI9341.hpp **** 
- 213:Drivers/daisy_ILI9341.hpp ****     void PaintPixel(uint32_t id, uint8_t color_id, uint8_t alpha = 255) const
- 214:Drivers/daisy_ILI9341.hpp ****     {
- 215:Drivers/daisy_ILI9341.hpp ****           
- 216:Drivers/daisy_ILI9341.hpp **** 
- 217:Drivers/daisy_ILI9341.hpp ****         auto color = tftPalette[color_id];
- 218:Drivers/daisy_ILI9341.hpp **** 
- 219:Drivers/daisy_ILI9341.hpp ****         if(alpha != 255)
- 220:Drivers/daisy_ILI9341.hpp ****         {
- 221:Drivers/daisy_ILI9341.hpp ****             
- 222:Drivers/daisy_ILI9341.hpp **** 
- 223:Drivers/daisy_ILI9341.hpp ****             auto bg_color = tftPalette[color_mem[id]];
- 224:Drivers/daisy_ILI9341.hpp ****             color         = Blend565(color, bg_color, alpha);
- 225:Drivers/daisy_ILI9341.hpp ****         }
- 226:Drivers/daisy_ILI9341.hpp **** 
- 227:Drivers/daisy_ILI9341.hpp ****         color_mem[id] = color_id; 
- 228:Drivers/daisy_ILI9341.hpp **** 
- 229:Drivers/daisy_ILI9341.hpp ****         frame_buffer[id]     = color >> 8;
- 230:Drivers/daisy_ILI9341.hpp ****         frame_buffer[id + 1] = color & 0xFF;
- 231:Drivers/daisy_ILI9341.hpp ****     }
- 232:Drivers/daisy_ILI9341.hpp **** 
- 233:Drivers/daisy_ILI9341.hpp ****     uint16_t GetPixel(uint32_t id) { return color_mem[id]; }
- 234:Drivers/daisy_ILI9341.hpp **** 
- 235:Drivers/daisy_ILI9341.hpp ****     bool     dma_busy       = false;
- 236:Drivers/daisy_ILI9341.hpp ****     uint32_t remaining_buff = 0;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 6
+ 180:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 0);
+ 181:Drivers/daisy_ILI9341.hpp ****         return spi_.BlockingTransmit(&cmd, 1);
+ 182:Drivers/daisy_ILI9341.hpp ****     };
+ 183:Drivers/daisy_ILI9341.hpp **** 
+ 184:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendData(uint8_t* buff, size_t size)
+ 185:Drivers/daisy_ILI9341.hpp ****     {
+ 186:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 1);
+ 187:Drivers/daisy_ILI9341.hpp ****         return spi_.BlockingTransmit(buff, size);
+ 188:Drivers/daisy_ILI9341.hpp ****     };
+ 189:Drivers/daisy_ILI9341.hpp **** 
+ 190:Drivers/daisy_ILI9341.hpp ****     void SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
+ 191:Drivers/daisy_ILI9341.hpp ****     {
+ 192:Drivers/daisy_ILI9341.hpp ****         // column address set
+ 193:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2A); // CASET
+ 194:Drivers/daisy_ILI9341.hpp ****         {
+ 195:Drivers/daisy_ILI9341.hpp ****             uint8_t data[4] = {static_cast<uint8_t>((x0 >> 8) & 0xFF),
+ 196:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(x0 & 0xFF),
+ 197:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>((x1 >> 8) & 0xFF),
+ 198:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(x1 & 0xFF)};
+ 199:Drivers/daisy_ILI9341.hpp ****             SendData(data, 4);
+ 200:Drivers/daisy_ILI9341.hpp ****         }
+ 201:Drivers/daisy_ILI9341.hpp **** 
+ 202:Drivers/daisy_ILI9341.hpp ****         // row address set
+ 203:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2B); // RASET
+ 204:Drivers/daisy_ILI9341.hpp ****         {
+ 205:Drivers/daisy_ILI9341.hpp ****             uint8_t data[4] = {static_cast<uint8_t>((y0 >> 8) & 0xFF),
+ 206:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(y0 & 0xFF),
+ 207:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>((y1 >> 8) & 0xFF),
+ 208:Drivers/daisy_ILI9341.hpp ****                                static_cast<uint8_t>(y1 & 0xFF)};
+ 209:Drivers/daisy_ILI9341.hpp ****             SendData(data, 4);
+ 210:Drivers/daisy_ILI9341.hpp ****         }
+ 211:Drivers/daisy_ILI9341.hpp **** 
+ 212:Drivers/daisy_ILI9341.hpp ****         // write to RAM
+ 213:Drivers/daisy_ILI9341.hpp ****         SendCommand(0x2C); // RAMWR
+ 214:Drivers/daisy_ILI9341.hpp ****     }
+ 215:Drivers/daisy_ILI9341.hpp **** 
+ 216:Drivers/daisy_ILI9341.hpp ****     void PaintPixel(uint32_t id, uint8_t color_id, uint8_t alpha = 255) const
+ 217:Drivers/daisy_ILI9341.hpp ****     {
+ 218:Drivers/daisy_ILI9341.hpp ****           
+ 219:Drivers/daisy_ILI9341.hpp **** 
+ 220:Drivers/daisy_ILI9341.hpp ****         auto color = tftPalette[color_id];
+ 221:Drivers/daisy_ILI9341.hpp **** 
+ 222:Drivers/daisy_ILI9341.hpp ****         if(alpha != 255)
+ 223:Drivers/daisy_ILI9341.hpp ****         {
+ 224:Drivers/daisy_ILI9341.hpp ****             
+ 225:Drivers/daisy_ILI9341.hpp **** 
+ 226:Drivers/daisy_ILI9341.hpp ****             auto bg_color = tftPalette[color_mem[id]];
+ 227:Drivers/daisy_ILI9341.hpp ****             color         = Blend565(color, bg_color, alpha);
+ 228:Drivers/daisy_ILI9341.hpp ****         }
+ 229:Drivers/daisy_ILI9341.hpp **** 
+ 230:Drivers/daisy_ILI9341.hpp ****         color_mem[id] = color_id; 
+ 231:Drivers/daisy_ILI9341.hpp **** 
+ 232:Drivers/daisy_ILI9341.hpp ****         frame_buffer[id]     = color >> 8;
+ 233:Drivers/daisy_ILI9341.hpp ****         frame_buffer[id + 1] = color & 0xFF;
+ 234:Drivers/daisy_ILI9341.hpp ****     }
+ 235:Drivers/daisy_ILI9341.hpp **** 
+ 236:Drivers/daisy_ILI9341.hpp ****     uint16_t GetPixel(uint32_t id) { return color_mem[id]; }
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 6
 
 
- 237:Drivers/daisy_ILI9341.hpp ****     
- 238:Drivers/daisy_ILI9341.hpp **** 
- 239:Drivers/daisy_ILI9341.hpp ****     static uint32_t const buffer_size    = 153600;          // 320 * 240 * 2   = 153600
- 240:Drivers/daisy_ILI9341.hpp ****     const uint16_t        buf_chunk_size = buffer_size / 3; // 8bit data
- 241:Drivers/daisy_ILI9341.hpp ****     //const uint16_t buf_chunk_size = buffer_size / 4; // 16bit data
- 242:Drivers/daisy_ILI9341.hpp **** 
- 243:Drivers/daisy_ILI9341.hpp ****     static uint8_t DMA_BUFFER_MEM_SECTION frame_buffer[buffer_size];
- 244:Drivers/daisy_ILI9341.hpp ****     static uint8_t DSY_SDRAM_BSS          color_mem[buffer_size / 2];
- 245:Drivers/daisy_ILI9341.hpp ****     SpiHandle                             spi_;
- 246:Drivers/daisy_ILI9341.hpp **** 
- 247:Drivers/daisy_ILI9341.hpp ****     uint16_t tftPalette[NUMBER_OF_TFT_COLORS];
- 248:Drivers/daisy_ILI9341.hpp **** 
- 249:Drivers/daisy_ILI9341.hpp ****   private:
- 250:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_reset_;
- 251:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_dc_;
- 252:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_cs_;
- 253:Drivers/daisy_ILI9341.hpp **** 
+ 237:Drivers/daisy_ILI9341.hpp **** 
+ 238:Drivers/daisy_ILI9341.hpp ****     bool     dma_busy       = false;
+ 239:Drivers/daisy_ILI9341.hpp ****     uint32_t remaining_buff = 0;
+ 240:Drivers/daisy_ILI9341.hpp ****     
+ 241:Drivers/daisy_ILI9341.hpp **** 
+ 242:Drivers/daisy_ILI9341.hpp ****     static uint32_t const buffer_size    = 153600;          // 320 * 240 * 2   = 153600
+ 243:Drivers/daisy_ILI9341.hpp ****     const uint16_t        buf_chunk_size = buffer_size / 3; // 8bit data
+ 244:Drivers/daisy_ILI9341.hpp ****     //const uint16_t buf_chunk_size = buffer_size / 4; // 16bit data
+ 245:Drivers/daisy_ILI9341.hpp **** 
+ 246:Drivers/daisy_ILI9341.hpp ****     SpiHandle                             spi_;
+ 247:Drivers/daisy_ILI9341.hpp **** 
+ 248:Drivers/daisy_ILI9341.hpp ****     uint16_t tftPalette[NUMBER_OF_TFT_COLORS];
+ 249:Drivers/daisy_ILI9341.hpp **** 
+ 250:Drivers/daisy_ILI9341.hpp ****   private:
+ 251:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_reset_;
+ 252:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_dc_;
+ 253:Drivers/daisy_ILI9341.hpp ****     dsy_gpio pin_cs_;
  254:Drivers/daisy_ILI9341.hpp **** 
- 255:Drivers/daisy_ILI9341.hpp ****     //   rrrrrggggggbbbbb
- 256:Drivers/daisy_ILI9341.hpp **** #define MASK_RB 63519       // 0b1111100000011111
- 257:Drivers/daisy_ILI9341.hpp **** #define MASK_G 2016         // 0b0000011111100000
- 258:Drivers/daisy_ILI9341.hpp **** #define MASK_MUL_RB 4065216 // 0b1111100000011111000000
- 259:Drivers/daisy_ILI9341.hpp **** #define MASK_MUL_G 129024   // 0b0000011111100000000000
- 260:Drivers/daisy_ILI9341.hpp **** #define MAX_ALPHA 64        // 6bits+1 with rounding
- 261:Drivers/daisy_ILI9341.hpp **** 
- 262:Drivers/daisy_ILI9341.hpp ****     uint16_t Blend565(uint16_t fg, uint16_t bg, uint8_t alpha) const
- 263:Drivers/daisy_ILI9341.hpp ****     {
- 264:Drivers/daisy_ILI9341.hpp ****         // alpha for foreground multiplication
- 265:Drivers/daisy_ILI9341.hpp ****         // convert from 8bit to (6bit+1) with rounding
- 266:Drivers/daisy_ILI9341.hpp ****         // will be in [0..64] inclusive
- 267:Drivers/daisy_ILI9341.hpp ****         alpha = (alpha + 2) >> 2;
- 268:Drivers/daisy_ILI9341.hpp ****         // "beta" for background multiplication; (6bit+1);
- 269:Drivers/daisy_ILI9341.hpp ****         // will be in [0..64] inclusive
- 270:Drivers/daisy_ILI9341.hpp ****         uint8_t beta = MAX_ALPHA - alpha;
- 271:Drivers/daisy_ILI9341.hpp ****         // so (0..64)*alpha + (0..64)*beta always in 0..64
- 272:Drivers/daisy_ILI9341.hpp **** 
- 273:Drivers/daisy_ILI9341.hpp ****         return (uint16_t)((((alpha * (uint32_t)(fg & MASK_RB)
- 274:Drivers/daisy_ILI9341.hpp ****                              + beta * (uint32_t)(bg & MASK_RB))
- 275:Drivers/daisy_ILI9341.hpp ****                             & MASK_MUL_RB)
- 276:Drivers/daisy_ILI9341.hpp ****                            | ((alpha * (fg & MASK_G) + beta * (bg & MASK_G))
- 277:Drivers/daisy_ILI9341.hpp ****                               & MASK_MUL_G))
- 278:Drivers/daisy_ILI9341.hpp ****                           >> 6);
- 279:Drivers/daisy_ILI9341.hpp ****     }
- 280:Drivers/daisy_ILI9341.hpp **** 
- 281:Drivers/daisy_ILI9341.hpp ****     /*
- 282:Drivers/daisy_ILI9341.hpp ****   result masks of multiplications
- 283:Drivers/daisy_ILI9341.hpp ****   uppercase: usable bits of multiplications
- 284:Drivers/daisy_ILI9341.hpp ****   RRRRRrrrrrrBBBBBbbbbbb // 5-5 bits of red+blue
- 285:Drivers/daisy_ILI9341.hpp ****         1111100000011111 // from MASK_RB * 1
- 286:Drivers/daisy_ILI9341.hpp ****   1111100000011111000000 //   to MASK_RB * MAX_ALPHA // 22 bits!
- 287:Drivers/daisy_ILI9341.hpp **** 
+ 255:Drivers/daisy_ILI9341.hpp **** 
+ 256:Drivers/daisy_ILI9341.hpp ****     //   rrrrrggggggbbbbb
+ 257:Drivers/daisy_ILI9341.hpp **** #define MASK_RB 63519       // 0b1111100000011111
+ 258:Drivers/daisy_ILI9341.hpp **** #define MASK_G 2016         // 0b0000011111100000
+ 259:Drivers/daisy_ILI9341.hpp **** #define MASK_MUL_RB 4065216 // 0b1111100000011111000000
+ 260:Drivers/daisy_ILI9341.hpp **** #define MASK_MUL_G 129024   // 0b0000011111100000000000
+ 261:Drivers/daisy_ILI9341.hpp **** #define MAX_ALPHA 64        // 6bits+1 with rounding
+ 262:Drivers/daisy_ILI9341.hpp **** 
+ 263:Drivers/daisy_ILI9341.hpp ****     uint16_t Blend565(uint16_t fg, uint16_t bg, uint8_t alpha) const
+ 264:Drivers/daisy_ILI9341.hpp ****     {
+ 265:Drivers/daisy_ILI9341.hpp ****         // alpha for foreground multiplication
+ 266:Drivers/daisy_ILI9341.hpp ****         // convert from 8bit to (6bit+1) with rounding
+ 267:Drivers/daisy_ILI9341.hpp ****         // will be in [0..64] inclusive
+ 268:Drivers/daisy_ILI9341.hpp ****         alpha = (alpha + 2) >> 2;
+ 269:Drivers/daisy_ILI9341.hpp ****         // "beta" for background multiplication; (6bit+1);
+ 270:Drivers/daisy_ILI9341.hpp ****         // will be in [0..64] inclusive
+ 271:Drivers/daisy_ILI9341.hpp ****         uint8_t beta = MAX_ALPHA - alpha;
+ 272:Drivers/daisy_ILI9341.hpp ****         // so (0..64)*alpha + (0..64)*beta always in 0..64
+ 273:Drivers/daisy_ILI9341.hpp **** 
+ 274:Drivers/daisy_ILI9341.hpp ****         return (uint16_t)((((alpha * (uint32_t)(fg & MASK_RB)
+ 275:Drivers/daisy_ILI9341.hpp ****                              + beta * (uint32_t)(bg & MASK_RB))
+ 276:Drivers/daisy_ILI9341.hpp ****                             & MASK_MUL_RB)
+ 277:Drivers/daisy_ILI9341.hpp ****                            | ((alpha * (fg & MASK_G) + beta * (bg & MASK_G))
+ 278:Drivers/daisy_ILI9341.hpp ****                               & MASK_MUL_G))
+ 279:Drivers/daisy_ILI9341.hpp ****                           >> 6);
+ 280:Drivers/daisy_ILI9341.hpp ****     }
+ 281:Drivers/daisy_ILI9341.hpp **** 
+ 282:Drivers/daisy_ILI9341.hpp ****     /*
+ 283:Drivers/daisy_ILI9341.hpp ****   result masks of multiplications
+ 284:Drivers/daisy_ILI9341.hpp ****   uppercase: usable bits of multiplications
+ 285:Drivers/daisy_ILI9341.hpp ****   RRRRRrrrrrrBBBBBbbbbbb // 5-5 bits of red+blue
+ 286:Drivers/daisy_ILI9341.hpp ****         1111100000011111 // from MASK_RB * 1
+ 287:Drivers/daisy_ILI9341.hpp ****   1111100000011111000000 //   to MASK_RB * MAX_ALPHA // 22 bits!
  288:Drivers/daisy_ILI9341.hpp **** 
- 289:Drivers/daisy_ILI9341.hpp ****   -----GGGGGGgggggg----- // 6 bits of green
- 290:Drivers/daisy_ILI9341.hpp ****         0000011111100000 // from MASK_G * 1
- 291:Drivers/daisy_ILI9341.hpp ****   0000011111100000000000 //   to MASK_G * MAX_ALPHA
- 292:Drivers/daisy_ILI9341.hpp **** */
- 293:Drivers/daisy_ILI9341.hpp **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 7
+ 289:Drivers/daisy_ILI9341.hpp **** 
+ 290:Drivers/daisy_ILI9341.hpp ****   -----GGGGGGgggggg----- // 6 bits of green
+ 291:Drivers/daisy_ILI9341.hpp ****         0000011111100000 // from MASK_G * 1
+ 292:Drivers/daisy_ILI9341.hpp ****   0000011111100000000000 //   to MASK_G * MAX_ALPHA
+ 293:Drivers/daisy_ILI9341.hpp **** */
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 7
 
 
  294:Drivers/daisy_ILI9341.hpp **** 
- 295:Drivers/daisy_ILI9341.hpp ****     void InitPalette()
- 296:Drivers/daisy_ILI9341.hpp ****     {
- 297:Drivers/daisy_ILI9341.hpp ****         // HEX to RBG565 converter: https://trolsoft.ru/en/articles/rgb565-color-picker
- 298:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_BLACK]       = 0x0000;
- 299:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_WHITE]       = 0xffff;
- 300:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_BLUE]        = 0x5AFF;
- 301:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_BLUE]   = 0x18EB;
- 302:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_YELLOW]      = 0xFFE0;
- 303:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_YELLOW] = 0x49E1;
- 304:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_RED]         = 0xF9E1; // 0xff4010
- 305:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_RED]    = 0x4880; // 0x401000
- 306:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_GREEN]       = 0x3FE7; // 0x40ff40
- 307:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_GREEN]  = 0x01E0; // 0x004000
- 308:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_LIGHT_GRAY]  = 0xAD75; // 0xb0b0b0
- 309:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_MEDIUM_GRAY] = 0x8C71; // 0x909090
- 310:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_GRAY]        = 0x5AEB; // 0x606060
- 311:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_GRAY]   = 0x2965; // 0x303030
- 312:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_CYAN]        = 0x76FD; // 0x76dfef
- 313:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ORANGE]      = 0xFBE0; // 0xff7f00
- 314:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_LIGHT_GREEN] = 0x6FED; // 0x70ff70
- 315:Drivers/daisy_ILI9341.hpp ****         // tftPalette[COLOR_ABL_BG]      = (0x2104); // 0x212121
- 316:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_BG]     = 0x4A69; // #4D4D4D
- 317:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_LINE]   = 0x39E7; // 0x3d3d3d
- 318:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_D_LINE] = 0x31A6; // 0x363636
- 319:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_L_GRAY] = 0x52AA; // 0x555555
- 320:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_M_GRAY] = 0x4228; // 0x454545
- 321:Drivers/daisy_ILI9341.hpp ****         //System::Delay(1000);
- 322:Drivers/daisy_ILI9341.hpp ****     }
- 323:Drivers/daisy_ILI9341.hpp **** };
- 324:Drivers/daisy_ILI9341.hpp **** 
+ 295:Drivers/daisy_ILI9341.hpp **** 
+ 296:Drivers/daisy_ILI9341.hpp ****     void InitPalette()
+ 297:Drivers/daisy_ILI9341.hpp ****     {
+ 298:Drivers/daisy_ILI9341.hpp ****         // HEX to RBG565 converter: https://trolsoft.ru/en/articles/rgb565-color-picker
+ 299:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_BLACK]       = 0x0000;
+ 300:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_WHITE]       = 0xffff;
+ 301:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_BLUE]        = 0x5AFF;
+ 302:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_BLUE]   = 0x18EB;
+ 303:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_YELLOW]      = 0xFFE0;
+ 304:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_YELLOW] = 0x49E1;
+ 305:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_RED]         = 0xF9E1; // 0xff4010
+ 306:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_RED]    = 0x4880; // 0x401000
+ 307:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_GREEN]       = 0x3FE7; // 0x40ff40
+ 308:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_GREEN]  = 0x01E0; // 0x004000
+ 309:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_LIGHT_GRAY]  = 0xAD75; // 0xb0b0b0
+ 310:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_MEDIUM_GRAY] = 0x8C71; // 0x909090
+ 311:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_GRAY]        = 0x5AEB; // 0x606060
+ 312:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_DARK_GRAY]   = 0x2965; // 0x303030
+ 313:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_CYAN]        = 0x76FD; // 0x76dfef
+ 314:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ORANGE]      = 0xFBE0; // 0xff7f00
+ 315:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_LIGHT_GREEN] = 0x6FED; // 0x70ff70
+ 316:Drivers/daisy_ILI9341.hpp ****         // tftPalette[COLOR_ABL_BG]      = (0x2104); // 0x212121
+ 317:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_BG]     = 0x4A69; // #4D4D4D
+ 318:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_LINE]   = 0x39E7; // 0x3d3d3d
+ 319:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_D_LINE] = 0x31A6; // 0x363636
+ 320:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_L_GRAY] = 0x52AA; // 0x555555
+ 321:Drivers/daisy_ILI9341.hpp ****         tftPalette[COLOR_ABL_M_GRAY] = 0x4228; // 0x454545
+ 322:Drivers/daisy_ILI9341.hpp ****         //System::Delay(1000);
+ 323:Drivers/daisy_ILI9341.hpp ****     }
+ 324:Drivers/daisy_ILI9341.hpp **** };
  325:Drivers/daisy_ILI9341.hpp **** 
- 326:Drivers/daisy_ILI9341.hpp **** /**
- 327:Drivers/daisy_ILI9341.hpp ****  * A driver implementation for the ILI9341
- 328:Drivers/daisy_ILI9341.hpp ****  */
- 329:Drivers/daisy_ILI9341.hpp **** // class ILI9341Driver
- 330:Drivers/daisy_ILI9341.hpp **** class UiDriver
-  40              		.loc 2 330 7 view .LVU2
+ 326:Drivers/daisy_ILI9341.hpp **** 
+ 327:Drivers/daisy_ILI9341.hpp **** /**
+ 328:Drivers/daisy_ILI9341.hpp ****  * A driver implementation for the ILI9341
+ 329:Drivers/daisy_ILI9341.hpp ****  */
+ 330:Drivers/daisy_ILI9341.hpp **** // class ILI9341Driver
+ 331:Drivers/daisy_ILI9341.hpp **** class UiDriver
+  40              		.loc 2 331 7 view .LVU2
   41              	.LBB28:
   42              	.LBB29:
   43              	.LBI29:
-  52:Drivers/daisy_ILI9341.hpp **** {
-  44              		.loc 2 52 7 view .LVU3
+  55:Drivers/daisy_ILI9341.hpp **** {
+  44              		.loc 2 55 7 view .LVU3
   45              	.LBB30:
   46 0000 094B     		ldr	r3, .L2
   47 0002 4FF44841 		mov	r1, #51200
@@ -417,10 +418,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
    2:../../../libDaisy//src/per/spi.h **** #ifndef DSY_SPI_H
    3:../../../libDaisy//src/per/spi.h **** #define DSY_SPI_H
    4:../../../libDaisy//src/per/spi.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 8
+
+
    5:../../../libDaisy//src/per/spi.h **** #include "daisy_core.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 8
-
-
    6:../../../libDaisy//src/per/spi.h **** 
    7:../../../libDaisy//src/per/spi.h **** /* TODO:
    8:../../../libDaisy//src/per/spi.h **** - Add documentation
@@ -477,10 +478,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   59:../../../libDaisy//src/per/spi.h **** 
   60:../../../libDaisy//src/per/spi.h ****         enum class NSS
   61:../../../libDaisy//src/per/spi.h ****         {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 9
+
+
   62:../../../libDaisy//src/per/spi.h ****             SOFT,
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 9
-
-
   63:../../../libDaisy//src/per/spi.h ****             HARD_INPUT,
   64:../../../libDaisy//src/per/spi.h ****             HARD_OUTPUT,
   65:../../../libDaisy//src/per/spi.h ****         };
@@ -529,25 +530,25 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   55              	.LBE31:
   56              	.LBE30:
   57              	.LBE29:
-  58              		.loc 2 330 7 is_stmt 0 view .LVU5
+  58              		.loc 2 331 7 is_stmt 0 view .LVU5
   59 000a 1421     		movs	r1, #20
   60              	.LBB37:
   61              	.LBB35:
-  52:Drivers/daisy_ILI9341.hpp **** {
-  62              		.loc 2 52 7 view .LVU6
+  55:Drivers/daisy_ILI9341.hpp **** {
+  62              		.loc 2 55 7 view .LVU6
   63 000c 1A73     		strb	r2, [r3, #12]
   64              	.LBE35:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 10
+
+
   65              	.LBE37:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 10
-
-
-  66              		.loc 2 330 7 view .LVU7
+  66              		.loc 2 331 7 view .LVU7
   67 000e 83F85910 		strb	r1, [r3, #89]
   68 0012 0D21     		movs	r1, #13
   69              	.LBB38:
   70              	.LBB36:
-  52:Drivers/daisy_ILI9341.hpp **** {
-  71              		.loc 2 52 7 view .LVU8
+  55:Drivers/daisy_ILI9341.hpp **** {
+  71              		.loc 2 55 7 view .LVU8
   72 0014 1A61     		str	r2, [r3, #16]
   73              	.LBB34:
   74              	.LBB32:
@@ -561,12 +562,12 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   82              	.LBE34:
   83              	.LBE36:
   84              	.LBE38:
-  85              		.loc 2 330 7 view .LVU11
+  85              		.loc 2 331 7 view .LVU11
   86 0018 83F85A10 		strb	r1, [r3, #90]
   87 001c A3F86020 		strh	r2, [r3, #96]	@ movhi
   88 0020 A3F86620 		strh	r2, [r3, #102]	@ movhi
   89              	.LVL3:
-  90              		.loc 2 330 7 view .LVU12
+  90              		.loc 2 331 7 view .LVU12
   91              	.LBE28:
   92              	.LBE27:
   93              	.LBE26:
@@ -581,10 +582,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  102              	.LFE2635:
  104              		.section	.init_array,"aw",%init_array
  105              		.align	2
- 106 0000 00000000 		.word	_GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE(target1)
+ 106 0000 00000000 		.word	_GLOBAL__sub_I_frame_buffer(target1)
  107              		.global	lcd
- 108              		.global	_ZN19ILI9341SpiTransport9color_memE
- 109              		.global	_ZN19ILI9341SpiTransport12frame_bufferE
+ 108              		.global	color_mem
+ 109              		.global	frame_buffer
  110              		.section	.bss.lcd,"aw",%nobits
  111              		.align	2
  112              		.set	.LANCHOR0,. + 0
@@ -595,17 +596,17 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  116      00000000 
  116      00000000 
  117              		.section	.sdram_bss,"aw"
- 120              	_ZN19ILI9341SpiTransport9color_memE:
+ 120              	color_mem:
  121 0000 00000000 		.space	76800
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 11
+
+
  121      00000000 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 11
-
-
  121      00000000 
  121      00000000 
  121      00000000 
  122              		.section	.sram1_bss,"aw"
- 125              	_ZN19ILI9341SpiTransport12frame_bufferE:
+ 125              	frame_buffer:
  126 0000 00000000 		.space	153600
  126      00000000 
  126      00000000 
@@ -650,20 +651,20 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  163              		.file 38 "../../../libDaisy//src/util/oled_fonts.h"
  164              		.file 39 "<built-in>"
  165              		.file 40 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ILI9341_ui_driver.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:19     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:24     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 _GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:100    .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000028 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:105    .init_array:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:115    .bss.lcd:0000000000000000 lcd
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:120    .sdram_bss:0000000000000000 _ZN19ILI9341SpiTransport9color_memE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:125    .sram1_bss:0000000000000000 _ZN19ILI9341SpiTransport12frame_bufferE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:111    .bss.lcd:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:121    .sdram_bss:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:126    .sram1_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:19     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:24     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 _GLOBAL__sub_I_frame_buffer
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:100    .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000028 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:105    .init_array:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:115    .bss.lcd:0000000000000000 lcd
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:120    .sdram_bss:0000000000000000 color_mem
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:125    .sram1_bss:0000000000000000 frame_buffer
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:111    .bss.lcd:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:121    .sdram_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:126    .sram1_bss:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

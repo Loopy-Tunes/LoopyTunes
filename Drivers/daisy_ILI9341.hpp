@@ -46,6 +46,9 @@ enum TFT_COLOR
     NUMBER_OF_TFT_COLORS,
 };
 
+extern uint8_t DMA_BUFFER_MEM_SECTION frame_buffer[153600];
+extern uint8_t DSY_SDRAM_BSS          color_mem[153600 / 2];
+
 /**
  * SPI Transport for ILI9341 TFT display devices
  */
@@ -117,7 +120,7 @@ class ILI9341SpiTransport
             transport->remaining_buff -= transfer_size;
             if(transport->remaining_buff > 0)
             {
-                uint8_t* next_buffer_ptr = transport->frame_buffer + (transport->buffer_size - transport->remaining_buff);  // potential issue
+                uint8_t* next_buffer_ptr = frame_buffer + (transport->buffer_size - transport->remaining_buff);  // potential issue
                 transport->SendDataDMA(
                    &frame_buffer[buffer_size - transport->remaining_buff],
                     transfer_size);
@@ -240,8 +243,6 @@ class ILI9341SpiTransport
     const uint16_t        buf_chunk_size = buffer_size / 3; // 8bit data
     //const uint16_t buf_chunk_size = buffer_size / 4; // 16bit data
 
-    static uint8_t DMA_BUFFER_MEM_SECTION frame_buffer[buffer_size];
-    static uint8_t DSY_SDRAM_BSS          color_mem[buffer_size / 2];
     SpiHandle                             spi_;
 
     uint16_t tftPalette[NUMBER_OF_TFT_COLORS];
