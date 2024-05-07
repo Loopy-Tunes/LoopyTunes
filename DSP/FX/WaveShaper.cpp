@@ -40,12 +40,6 @@ void Waveshaper::init(EncoderDriver* driver, int trackID)
     driver->addParameter(&mode.param);
 
     setDefaultValues();
-
-    // for testing
-    isBypass = false;
-    setMode(LFO);
-    setAmount(1);
-    setFuncControl(0.5);
 }
 
  void Waveshaper::setDefaultValues()

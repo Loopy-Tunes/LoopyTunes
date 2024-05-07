@@ -52,7 +52,7 @@ void Track::setIsRecording()
         case RECORDING:
             state = STOPPED;
             ti.loopLength = ph.writePos;
-            //setLoopStart();
+            setLoopStart();
             break;
         case PLAYING:
             state = RECORDING;
@@ -129,18 +129,18 @@ void Track::processOutputBlock(float* output[2], size_t size)
 
     for(size_t i = 0 ; i < size ; i++)
     {
-        output[L][i] = buffer[L][ph.readPos];
-        output[R][i] = buffer[R][ph.readPos];
+        //output[L][i] = buffer[L][ph.readPos];
+        //output[R][i] = buffer[R][ph.readPos];
 
-        //output[L][i] = calculateLoop(buffer[L][ph.readPos], L);
-        //output[R][i] = calculateLoop(buffer[R][ph.readPos], R);
+        output[L][i] = calculateLoop(buffer[L][ph.readPos], L);
+        output[R][i] = calculateLoop(buffer[R][ph.readPos], R);
         
         incrementReadPos();
     }
    
-    //pitchShift.processBlock(output, size);
+    pitchShift.processBlock(output, size);
     shaper.processBlock(output, size); 
-    //filter.processBlock(output, size);
-    //delay.processBlock(output, size);
-    //reverb.processBlock(output, size);
+    filter.processBlock(output, size);
+    delay.processBlock(output, size);
+    reverb.processBlock(output, size);
 }
