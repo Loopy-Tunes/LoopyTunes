@@ -88,13 +88,11 @@ void init()
 
 	// initialise hardware controls
 	encoder.init(seed::D11, seed::D10, seed::D12, navCallback);
-	lcd.Init();
-	lcd.Fill(COLOR_BLACK);
-	lcd.Update();
 	// keypad driver
 
 	// initialise GUI
 	mixerView.init(&hw, &encoder, &keypad);
+	lcd.Init();
 
 	System::Delay(100);
 }
@@ -110,8 +108,8 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		mixerView.tick();
-		lcd.Update();
+		//mixerView.tick();
+		//lcd.Update();
 		sample = 0;
 	}
 	else

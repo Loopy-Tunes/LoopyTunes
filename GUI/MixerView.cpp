@@ -19,18 +19,19 @@ void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd)
 
 void MixerView::tick()
 {
-    amp1.tick();
-    amp2.tick();
-    amp3.tick();
-    amp4.tick();
-
     track1.tick();
     track2.tick();
     track3.tick();
     track4.tick();
 
     if(isOpen)
+    {
+        amp1.tick();
+        amp2.tick();
+        amp3.tick();
+        amp4.tick();
         repaint();
+    }
 }
 
 void MixerView::repaint()
