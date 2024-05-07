@@ -75,11 +75,11 @@ class ILI9341SpiTransport
 
         // DC pin
         pin_dc_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-        pin_dc_.pin  = seed::D12;
+        pin_dc_.pin  = seed::D2;
         dsy_gpio_init(&pin_dc_);
         // Reset pin
         pin_reset_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-        pin_reset_.pin  = seed::D11;
+        pin_reset_.pin  = seed::D1;
         dsy_gpio_init(&pin_reset_);
         // CS pin
         pin_cs_.mode = DSY_GPIO_MODE_OUTPUT_PP;

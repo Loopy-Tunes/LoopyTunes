@@ -48,9 +48,9 @@ public:
         uint16_t bypassButtonY = StyleSheet::Effects::headerHeight + 15; ///
         uint16_t buttonColor = isBypassed? COLOR_GREEN : COLOR_RED;
         Rectangle bypassButtonRect(10, bypassButtonY, StyleSheet::Effects::bypassButtonWidth, StyleSheet::Effects::bypassButtonHeight); ///
-        lcd->FillRect(bypassButtonRect, buttonColor);
-        lcd->DrawRect(bypassButtonRect, StyleSheet::Effects::borderColor);
-        lcd->WriteString(isBypassed ? "On" : "Off", 20, StyleSheet::Effects::headerHeight + 20, Font_11x18, StyleSheet::Effects::textColor);
+        lcd.FillRect(bypassButtonRect, buttonColor);
+        lcd.DrawRect(bypassButtonRect, StyleSheet::Effects::borderColor);
+        lcd.WriteString(isBypassed ? "On" : "Off", 20, StyleSheet::Effects::headerHeight + 20, Font_11x18, StyleSheet::Effects::textColor);
     }
 
     /***********************************************************************//**
@@ -62,7 +62,6 @@ public:
 private:
 
     EncoderDriver* encoder;
-    UiDriver* lcd;
 
     std::function<void()> callback;
     bool isSelected;

@@ -13,12 +13,6 @@ using namespace daisysp;
  * @param arg3
  *************************************************************/
 
-
-/*
-TO DO:
-- test seamless looping algorithm
-*/
-
 // Hardware
 DaisySeed hw;
 
@@ -93,10 +87,10 @@ void init()
 	mixer.initFX(&encoder, Buffers::t1delayPtr, Buffers::t2delayPtr, Buffers::t3delayPtr, Buffers::t4delayPtr);
 
 	// initialise hardware controls
-	encoder.init(seed::D4, seed::D13, seed::D14, navCallback);
+	encoder.init(seed::D11, seed::D10, seed::D12, navCallback);
 	lcd.Init();
-	//lcd.Fill(COLOR_BLACK);
-	//lcd.Update();
+	lcd.Fill(COLOR_BLACK);
+	lcd.Update();
 	// keypad driver
 
 	// initialise GUI
@@ -116,8 +110,8 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		//mixerView.tick();
-		//lcd.Update();
+		mixerView.tick();
+		lcd.Update();
 		sample = 0;
 	}
 	else
@@ -150,11 +144,11 @@ int main(void)
 
 	// handle ADC init
 	AdcChannelConfig configs[ADCINPUTS];
-	configs[ChannelIDs::AMP1].InitSingle(seed::A0);
-	configs[ChannelIDs::AMP2].InitSingle(seed::A1);
+	configs[ChannelIDs::AMP1].InitSingle(seed::A11);
+	configs[ChannelIDs::AMP2].InitSingle(seed::A3);
 	configs[ChannelIDs::AMP3].InitSingle(seed::A2);
-	configs[ChannelIDs::AMP4].InitSingle(seed::A3);
-	configs[ChannelIDs::MASTER].InitSingle(seed::A11);
+	configs[ChannelIDs::AMP4].InitSingle(seed::A1);
+	configs[ChannelIDs::MASTER].InitSingle(seed::A0);
 	hw.adc.Init(configs, ADCINPUTS);
 	hw.adc.Start();
 

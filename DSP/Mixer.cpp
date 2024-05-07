@@ -4,10 +4,10 @@ void Mixer::init(DaisySeed* seed, float* t1[2], float* t2[2], float* t3[2], floa
 {
     bufferSize = SAMPLERATE * DURATION;
     
-    track1.track.init(t1, ParameterIDs::Tracks::Track1, seed::D19, seed::D20);
-    track2.track.init(t2, ParameterIDs::Tracks::Track2, seed::D21, seed::D22);
-    track3.track.init(t3, ParameterIDs::Tracks::Track3, seed::D23, seed::D24);
-    track4.track.init(t4, ParameterIDs::Tracks::Track4, seed::D6, seed::D5);
+    track1.track.init(t1, ParameterIDs::Tracks::Track1, seed::D24, seed::D23);
+    track2.track.init(t2, ParameterIDs::Tracks::Track2, seed::D22, seed::D21);
+    track3.track.init(t3, ParameterIDs::Tracks::Track3, seed::D20, seed::D19);
+    track4.track.init(t4, ParameterIDs::Tracks::Track4, seed::D14, seed::D13);
 
     track1.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP1, [this] (float g) { setTrack1Gain(g); });
     track2.gain.param.init(seed, 0, 1, LINEAR, ChannelIDs::AMP2, [this] (float g) { setTrack2Gain(g); });

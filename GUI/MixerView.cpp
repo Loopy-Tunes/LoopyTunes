@@ -2,7 +2,7 @@
 
 void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd)
 {
-    keypad = kpd;
+    //keypad = kpd;
 
     amp1.init(0, seed);
     amp2.init(1, seed);

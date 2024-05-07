@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
    6:Drivers/daisy_ILI9341.hpp **** #include "daisy_seed.h"
    7:Drivers/daisy_ILI9341.hpp **** #include <util/oled_fonts.h>
    8:Drivers/daisy_ILI9341.hpp **** #include <hid/disp/graphics_common.h>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 2
 
 
    9:Drivers/daisy_ILI9341.hpp **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   63:Drivers/daisy_ILI9341.hpp ****         spi_config.baud_prescaler  = SpiHandle::Config::BaudPrescaler::PS_2;
   64:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_phase     = SpiHandle::Config::ClockPhase::ONE_EDGE;
   65:Drivers/daisy_ILI9341.hpp ****         spi_config.nss             = SpiHandle::Config::NSS::HARD_OUTPUT;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 3
 
 
   66:Drivers/daisy_ILI9341.hpp ****         spi_config.datasize        = 8;
@@ -133,11 +133,11 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   75:Drivers/daisy_ILI9341.hpp **** 
   76:Drivers/daisy_ILI9341.hpp ****         // DC pin
   77:Drivers/daisy_ILI9341.hpp ****         pin_dc_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-  78:Drivers/daisy_ILI9341.hpp ****         pin_dc_.pin  = seed::D12;
+  78:Drivers/daisy_ILI9341.hpp ****         pin_dc_.pin  = seed::D2;
   79:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_dc_);
   80:Drivers/daisy_ILI9341.hpp ****         // Reset pin
   81:Drivers/daisy_ILI9341.hpp ****         pin_reset_.mode = DSY_GPIO_MODE_OUTPUT_PP;
-  82:Drivers/daisy_ILI9341.hpp ****         pin_reset_.pin  = seed::D11;
+  82:Drivers/daisy_ILI9341.hpp ****         pin_reset_.pin  = seed::D1;
   83:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_init(&pin_reset_);
   84:Drivers/daisy_ILI9341.hpp ****         // CS pin
   85:Drivers/daisy_ILI9341.hpp ****         pin_cs_.mode = DSY_GPIO_MODE_OUTPUT_PP;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  120:Drivers/daisy_ILI9341.hpp ****                 uint8_t* next_buffer_ptr = transport->frame_buffer + (transport->buffer_size - tran
  121:Drivers/daisy_ILI9341.hpp ****                 transport->SendDataDMA(
  122:Drivers/daisy_ILI9341.hpp ****                    &frame_buffer[buffer_size - transport->remaining_buff],
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 4
 
 
  123:Drivers/daisy_ILI9341.hpp ****                     transfer_size);
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  177:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 0);
  178:Drivers/daisy_ILI9341.hpp ****         return spi_.BlockingTransmit(&cmd, 1);
  179:Drivers/daisy_ILI9341.hpp ****     };
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 5
 
 
  180:Drivers/daisy_ILI9341.hpp **** 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  234:Drivers/daisy_ILI9341.hpp **** 
  235:Drivers/daisy_ILI9341.hpp ****     bool     dma_busy       = false;
  236:Drivers/daisy_ILI9341.hpp ****     uint32_t remaining_buff = 0;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 6
 
 
  237:Drivers/daisy_ILI9341.hpp ****     
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  291:Drivers/daisy_ILI9341.hpp ****   0000011111100000000000 //   to MASK_G * MAX_ALPHA
  292:Drivers/daisy_ILI9341.hpp **** */
  293:Drivers/daisy_ILI9341.hpp **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 7
 
 
  294:Drivers/daisy_ILI9341.hpp **** 
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
    3:../../../libDaisy//src/per/spi.h **** #define DSY_SPI_H
    4:../../../libDaisy//src/per/spi.h **** 
    5:../../../libDaisy//src/per/spi.h **** #include "daisy_core.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 8
 
 
    6:../../../libDaisy//src/per/spi.h **** 
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   60:../../../libDaisy//src/per/spi.h ****         enum class NSS
   61:../../../libDaisy//src/per/spi.h ****         {
   62:../../../libDaisy//src/per/spi.h ****             SOFT,
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 9
 
 
   63:../../../libDaisy//src/per/spi.h ****             HARD_INPUT,
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
   63 000c 1A73     		strb	r2, [r3, #12]
   64              	.LBE35:
   65              	.LBE37:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 10
 
 
   66              		.loc 2 330 7 view .LVU7
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  120              	_ZN19ILI9341SpiTransport9color_memE:
  121 0000 00000000 		.space	76800
  121      00000000 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 11
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 11
 
 
  121      00000000 
@@ -650,20 +650,20 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 1
  163              		.file 38 "../../../libDaisy//src/util/oled_fonts.h"
  164              		.file 39 "<built-in>"
  165              		.file 40 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ILI9341_ui_driver.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:19     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:24     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 _GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:100    .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000028 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:105    .init_array:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:115    .bss.lcd:0000000000000000 lcd
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:120    .sdram_bss:0000000000000000 _ZN19ILI9341SpiTransport9color_memE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:125    .sram1_bss:0000000000000000 _ZN19ILI9341SpiTransport12frame_bufferE
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:111    .bss.lcd:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:121    .sdram_bss:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccAuWY7U.s:126    .sram1_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:19     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:24     .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000000 _GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:100    .text.startup._GLOBAL__sub_I__ZN19ILI9341SpiTransport12frame_bufferE:0000000000000028 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:105    .init_array:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:115    .bss.lcd:0000000000000000 lcd
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:120    .sdram_bss:0000000000000000 _ZN19ILI9341SpiTransport9color_memE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:125    .sram1_bss:0000000000000000 _ZN19ILI9341SpiTransport12frame_bufferE
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:111    .bss.lcd:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:121    .sdram_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccGp0Eyg.s:126    .sram1_bss:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS
