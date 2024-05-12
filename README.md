@@ -14,4 +14,4 @@ We would also like to thank our project assessor, Dr Ahmed Lawey for his feedbac
 Furthermore, we would like to thank the engineering support staff, Scott Simpson, Alex Bystrov and Josh Butters, for their instrumental technical assistance that enabled the completion of the project.
 
 ## Documentation
-For full documentation of the code, please view the 'Documentation' folder for doxygen generated documentation in a variety of formats :)
+For full documentation of the code, please view the 'Documentation' folder for doxygen generated documentation in a variety of formats.
