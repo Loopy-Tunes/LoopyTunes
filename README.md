@@ -1,10 +1,7 @@
 # LoopyTunes
 
 ## Authors
-
-Mara Vlad (maraioanavlad@outlook.com),
-Matt Twitchen (matthewtwitchen@me.com),
-Jackson Wood (jacksonwood13@icloud.com)
+Mara Vlad (maraioanavlad@outlook.com), Matt Twitchen (matthewtwitchen@me.com) and Jackson Wood (jacksonwood13@icloud.com)
 
 ## Description
 Music education in the UK has been facing significant challenges, with declining student engagement caused by the gap between traditional music curricula and contemporary musical interests. The excessively high cost and complexity of integrating technology in classrooms further obstructs the adoption of modern educational tools. This project addresses these issues by developing an affordable, user-friendly 4-track loop box designed to enrich music education. This educational tool aims to bridge the technological gap in schools, enabling the integration of music technology into the curriculum. The device promises to enhance motor and social skills among students, making advanced music education accessible and engaging.
