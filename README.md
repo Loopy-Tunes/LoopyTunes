@@ -1,9 +1,9 @@
 # LoopyTunes
 
-## Author
+## Authors
 
-Mara Vlad (maraioanavlad@outlook.com)
-Matt Twitchen (matthewtwitchen@me.com)
+Mara Vlad (maraioanavlad@outlook.com),
+Matt Twitchen (matthewtwitchen@me.com),
 Jackson Wood (jacksonwood13@icloud.com)
 
 ## Description
