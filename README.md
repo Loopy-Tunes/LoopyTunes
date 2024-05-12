@@ -6,7 +6,7 @@ Mara Vlad (maraioanavlad@outlook.com), Matt Twitchen (matthewtwitchen@me.com) an
 ## Description
 Music education in the UK has been facing significant challenges, with declining student engagement caused by the gap between traditional music curricula and contemporary musical interests. The excessively high cost and complexity of integrating technology in classrooms further obstructs the adoption of modern educational tools. This project addresses these issues by developing an affordable, user-friendly 4-track loop box designed to enrich music education. This educational tool aims to bridge the technological gap in schools, enabling the integration of music technology into the curriculum. The device promises to enhance motor and social skills among students, making advanced music education accessible and engaging.
 
-This repository contains the source code for the project, gerber files for the PCB as well as design files for the enclosure.
+This repository contains the source code for the project, gerber files for the PCB and design files for the enclosure.
 
 ## Acknowledgements
 Firstly, we would like to thank our project supervisor, Dr James Mclaughlan, for his crucial support and encouragement throughout the project.
