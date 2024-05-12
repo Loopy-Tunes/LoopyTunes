@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_delay_8h" kind="file" language="C++">
+    <compoundname>Delay.h</compoundname>
+    <includes refid="_default_values_8h" local="yes">../../Parameters/DefaultValues.h</includes>
+    <includes refid="_encoder_driver_8h" local="yes">../../Drivers/EncoderDriver.h</includes>
+    <includedby refid="_delay_8cpp" local="yes">DSP/FX/Delay.cpp</includedby>
+    <includedby refid="_track_8h" local="yes">DSP/Track.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>DSP/FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="5">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="7">
+        <label>daisysp.h</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>DSP/FX/Delay.cpp</label>
+        <link refid="_delay_8cpp"/>
+      </node>
+      <node id="1">
+        <label>DSP/FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="3">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_delay" prot="public">Delay</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" prot="public" static="no">
+        <name>MAXDELAY</name>
+        <initializer>240000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="7" column="9" bodyfile="DSP/FX/Delay.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DELAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DELAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_default_values_8h" kindref="compound">../../Parameters/DefaultValues.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_encoder_driver_8h" kindref="compound">../../Drivers/EncoderDriver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXDELAY<sp/>240000<sp/></highlight><highlight class="comment">//<sp/>5<sp/>second<sp/>max<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/************************************************************/</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">daisysp;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_delay" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_delay" kindref="compound">Delay</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/******************************************************************************/</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID,<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>dl[2]);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1a4aec2a60814203c1cca8fcc500e56c29" kindref="member">setDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="36" refid="class_delay_1a0dd8317647695e5e01083e26da82b47d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1a0dd8317647695e5e01083e26da82b47d" kindref="member">setBypass</ref>()<sp/>{<sp/>isBypass<sp/>=<sp/>!isBypass;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="41" refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" kindref="member">setAmount</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a)<sp/>{<sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref><sp/>=<sp/>a;<sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="47" refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" kindref="member">setDelay</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s)<sp/>{<sp/>delayLine[0]-&gt;SetDelay(s),<sp/>delayLine[1]-&gt;SetDelay(s);<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="53" refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" kindref="member">setFeedback</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f)<sp/>{<sp/>feedback.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref><sp/>=<sp/>f;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************************/</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_delay_1ab4234fe0620a5f4f40ae0383910d9513" kindref="member">processBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>input[2],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>type&gt;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>toSize(type<sp/>toConvert)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>round((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)toConvert);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isBypass;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref><sp/>amount;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref><sp/>size;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref><sp/>feedback;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>delayLine[2];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Delay.h"/>
+  </compounddef>
+</doxygen>

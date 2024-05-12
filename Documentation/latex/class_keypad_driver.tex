@@ -1,0 +1,92 @@
+\doxysection{Keypad\+Driver Class Reference}
+\hypertarget{class_keypad_driver}{}\label{class_keypad_driver}\index{KeypadDriver@{KeypadDriver}}
+
+
+{\ttfamily \#include $<$Keypad\+Driver.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_keypad_driver_1_1_index}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_keypad_driver_a6218d0644c0f4c138df8f1d4f9f3b07c}{Keypad\+Driver}} ()
+\item 
+void \mbox{\hyperlink{class_keypad_driver_ad7802446ec1b11a2bd655ff86b6472cd}{init}} (dsy\+\_\+gpio\+\_\+pin t, dsy\+\_\+gpio\+\_\+pin b, dsy\+\_\+gpio\+\_\+pin l, dsy\+\_\+gpio\+\_\+pin r)
+\item 
+void \mbox{\hyperlink{class_keypad_driver_aba201d914666f4962f6cf99a49b7f45a}{tick}} ()
+\item 
+\mbox{\hyperlink{struct_keypad_driver_1_1_index}{Index}} \mbox{\hyperlink{class_keypad_driver_a575b2b28e034839ebe170cbdf3502719}{get\+Index}} () const
+\item 
+bool \mbox{\hyperlink{class_keypad_driver_a2ef6125cc167f2996dc43a80583865a4}{is\+Top\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_keypad_driver_a1b46a63256a0b4e4ba8c05866b45ed0c}{is\+Bottom\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_keypad_driver_ab8e05a495fe6d96bff11bf75f5080d72}{is\+Right\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_keypad_driver_aea5b2ba9b04f1fc5cb304c1a05fa4076}{is\+Left\+Pressed}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_keypad_driver}{Keypad\+Driver} Function\+: Driver for the keypad input, controls the movement between views 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_keypad_driver_a6218d0644c0f4c138df8f1d4f9f3b07c}\label{class_keypad_driver_a6218d0644c0f4c138df8f1d4f9f3b07c} 
+\index{KeypadDriver@{KeypadDriver}!KeypadDriver@{KeypadDriver}}
+\index{KeypadDriver@{KeypadDriver}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{KeypadDriver()}{KeypadDriver()}}
+{\footnotesize\ttfamily Keypad\+Driver\+::\+Keypad\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_keypad_driver_a575b2b28e034839ebe170cbdf3502719}\label{class_keypad_driver_a575b2b28e034839ebe170cbdf3502719} 
+\index{KeypadDriver@{KeypadDriver}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_keypad_driver_1_1_index}{Index}} Keypad\+Driver\+::get\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_ad7802446ec1b11a2bd655ff86b6472cd}\label{class_keypad_driver_ad7802446ec1b11a2bd655ff86b6472cd} 
+\index{KeypadDriver@{KeypadDriver}!init@{init}}
+\index{init@{init}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Keypad\+Driver\+::init (\begin{DoxyParamCaption}\item[{dsy\+\_\+gpio\+\_\+pin}]{t,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{b,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{l,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_a1b46a63256a0b4e4ba8c05866b45ed0c}\label{class_keypad_driver_a1b46a63256a0b4e4ba8c05866b45ed0c} 
+\index{KeypadDriver@{KeypadDriver}!isBottomPressed@{isBottomPressed}}
+\index{isBottomPressed@{isBottomPressed}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{isBottomPressed()}{isBottomPressed()}}
+{\footnotesize\ttfamily bool Keypad\+Driver\+::is\+Bottom\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_aea5b2ba9b04f1fc5cb304c1a05fa4076}\label{class_keypad_driver_aea5b2ba9b04f1fc5cb304c1a05fa4076} 
+\index{KeypadDriver@{KeypadDriver}!isLeftPressed@{isLeftPressed}}
+\index{isLeftPressed@{isLeftPressed}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{isLeftPressed()}{isLeftPressed()}}
+{\footnotesize\ttfamily bool Keypad\+Driver\+::is\+Left\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_ab8e05a495fe6d96bff11bf75f5080d72}\label{class_keypad_driver_ab8e05a495fe6d96bff11bf75f5080d72} 
+\index{KeypadDriver@{KeypadDriver}!isRightPressed@{isRightPressed}}
+\index{isRightPressed@{isRightPressed}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{isRightPressed()}{isRightPressed()}}
+{\footnotesize\ttfamily bool Keypad\+Driver\+::is\+Right\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_a2ef6125cc167f2996dc43a80583865a4}\label{class_keypad_driver_a2ef6125cc167f2996dc43a80583865a4} 
+\index{KeypadDriver@{KeypadDriver}!isTopPressed@{isTopPressed}}
+\index{isTopPressed@{isTopPressed}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{isTopPressed()}{isTopPressed()}}
+{\footnotesize\ttfamily bool Keypad\+Driver\+::is\+Top\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_keypad_driver_aba201d914666f4962f6cf99a49b7f45a}\label{class_keypad_driver_aba201d914666f4962f6cf99a49b7f45a} 
+\index{KeypadDriver@{KeypadDriver}!tick@{tick}}
+\index{tick@{tick}!KeypadDriver@{KeypadDriver}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Keypad\+Driver\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\mbox{\hyperlink{_keypad_driver_8h}{Keypad\+Driver.\+h}}\end{DoxyCompactItemize}

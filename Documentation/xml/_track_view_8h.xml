@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_track_view_8h" kind="file" language="C++">
+    <compoundname>TrackView.h</compoundname>
+    <includes refid="_parameter_i_ds_8h" local="yes">../Parameters/ParameterIDs.h</includes>
+    <includes refid="_pitch_shift_view_8h" local="yes">FX/PitchShiftView.h</includes>
+    <includes refid="_waveshaper_view_8h" local="yes">FX/WaveshaperView.h</includes>
+    <includes refid="_filter_view_8h" local="yes">FX/FilterView.h</includes>
+    <includes refid="_reverb_view_8h" local="yes">FX/ReverbView.h</includes>
+    <includes refid="_delay_view_8h" local="yes">FX/DelayView.h</includes>
+    <includedby refid="_mixer_view_8h" local="yes">GUI/MixerView.h</includedby>
+    <includedby refid="_track_view_8cpp" local="yes">GUI/TrackView.cpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../Drivers/KeypadDriver.h</label>
+        <link refid="_keypad_driver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>FX/DelayView.h</label>
+        <link refid="_delay_view_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>FX/FilterView.h</label>
+        <link refid="_filter_view_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FX/PitchShiftView.h</label>
+        <link refid="_pitch_shift_view_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FX/ReverbView.h</label>
+        <link refid="_reverb_view_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>StyleSheet.h</label>
+        <link refid="_style_sheet_8h"/>
+      </node>
+      <node id="15">
+        <label>FX/WaveshaperView.h</label>
+        <link refid="_waveshaper_view_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GUI/TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../Parameters/ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="11">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="12">
+        <label>daisysp.h</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>GUI/MixerView.cpp</label>
+        <link refid="_mixer_view_8cpp"/>
+      </node>
+      <node id="2">
+        <label>GUI/MixerView.h</label>
+        <link refid="_mixer_view_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GUI/TrackView.cpp</label>
+        <link refid="_track_view_8cpp"/>
+      </node>
+      <node id="1">
+        <label>GUI/TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_track_view" prot="public">TrackView</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TRACKVIEW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACKVIEW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_parameter_i_ds_8h" kindref="compound">../Parameters/ParameterIDs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pitch_shift_view_8h" kindref="compound">FX/PitchShiftView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_waveshaper_view_8h" kindref="compound">FX/WaveshaperView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_filter_view_8h" kindref="compound">FX/FilterView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_reverb_view_8h" kindref="compound">FX/ReverbView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_delay_view_8h" kindref="compound">FX/DelayView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
+<codeline lineno="16" refid="class_track_view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_track_view" kindref="compound">TrackView</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/><sp/><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref>*<sp/>kpd);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" kindref="member">repaint</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="46" refid="class_track_view_1a18ac0bf795cadc0f56759bf2c46b3f4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a18ac0bf795cadc0f56759bf2c46b3f4f" kindref="member">setIsOpen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)<sp/>{<sp/>isOpen<sp/>=<sp/>state;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>UiDriver*<sp/>lcd;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref>*<sp/>keypad;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pitch_shift_view" kindref="compound">PitchShiftView</ref><sp/>pitchShiftView;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_waveshaper_view" kindref="compound">WaveshaperView</ref><sp/>waveshaperView;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_filter_view" kindref="compound">FilterView</ref><sp/>filterView;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_reverb_view" kindref="compound">ReverbView</ref><sp/>reverbView;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_delay_view" kindref="compound">DelayView</ref><sp/>delayView;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>selectedEffectIndex;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isOpen;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPainted;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="GUI/TrackView.h"/>
+  </compounddef>
+</doxygen>

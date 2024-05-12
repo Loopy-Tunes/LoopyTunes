@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_track_8h" kind="file" language="C++">
+    <compoundname>Track.h</compoundname>
+    <includes refid="_pitch_shift_8h" local="yes">FX/PitchShift.h</includes>
+    <includes refid="_waveshaper_8h" local="yes">FX/Waveshaper.h</includes>
+    <includes refid="_filter_8h" local="yes">FX/Filter.h</includes>
+    <includes refid="_delay_8h" local="yes">FX/Delay.h</includes>
+    <includes refid="_reverb_8h" local="yes">FX/Reverb/Reverb.h</includes>
+    <includes refid="_audio_parameter_8h" local="yes">../Parameters/AudioParameter.h</includes>
+    <includes refid="_binary_parameter_8h" local="yes">../Parameters/BinaryParameter.h</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="_mixer_8h" local="yes">DSP/Mixer.h</includedby>
+    <includedby refid="_track_8cpp" local="yes">DSP/Track.cpp</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="18">
+        <label>revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+      <node id="13">
+        <label>FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../Parameters/AudioParameter.h</label>
+        <link refid="_audio_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="6">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../Utils/Helpers.h</label>
+        <link refid="_helpers_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>cmath</label>
+      </node>
+      <node id="26">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="8">
+        <label>daisysp.h</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="27">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="28">
+        <label>type_traits</label>
+      </node>
+      <node id="30">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="1">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_track" prot="public">Track</innerclass>
+    <innerclass refid="struct_track_1_1_playhead" prot="private">Track::Playhead</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TRACK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pitch_shift_8h" kindref="compound">FX/PitchShift.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_waveshaper_8h" kindref="compound">FX/Waveshaper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_filter_8h" kindref="compound">FX/Filter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_delay_8h" kindref="compound">FX/Delay.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_reverb_8h" kindref="compound">FX/Reverb/Reverb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_audio_parameter_8h" kindref="compound">../Parameters/AudioParameter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_binary_parameter_8h" kindref="compound">../Parameters/BinaryParameter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************/</highlight></codeline>
+<codeline lineno="18" refid="class_track" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_track" kindref="compound">Track</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*************************************************************************************************/</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>mem[2],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/>dsy_gpio_pin<sp/>r,<sp/>dsy_gpio_pin<sp/>p);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a4e167244a48672681f2e0b187b9fd2a7" kindref="member">initFX</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>dl[2]);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1ac41690e46e3178d90acb87327955df1f" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" kindref="member">resetBuffer</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1af5bf39d8eed1fdd58ee86ebbfae8f3e3" kindref="member">setIsRecording</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a639cee2f6d225448b4a86166bb0a4ae8" kindref="member">setIsPlaying</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="62" refid="class_track_1a7faeb268f0b7825dc9f1ac31d2f96589" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69c" kindref="member">TrackState</ref><sp/><ref refid="class_track_1a7faeb268f0b7825dc9f1ac31d2f96589" kindref="member">getState</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a336774fc362866bf0df508aead2116d0" kindref="member">incrementWritePos</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a80383a6a58e05f2ca099ced9e7e0992c" kindref="member">incrementReadPos</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="77" refid="class_track_1a6f77ea1dd3f160fca62bf949f65c6b26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_track_1a6f77ea1dd3f160fca62bf949f65c6b26" kindref="member">getReadPos</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ph.readPos;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/**********************************************************************/</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1adb288fb70bc39ec6f1d50be4dc8d3174" kindref="member">processInputBlock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************************/</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a9a6cafdef172c8abfb21a6a78664c5d8" kindref="member">processOutputBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>output[2],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLoopStart()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>startPos<sp/>=<sp/>bufferSize<sp/>-<sp/>((startPos<sp/>*<sp/><ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref>)<sp/>/<sp/>1000);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calculateLoop(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channel)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>d1<sp/>=<sp/>bufferSize<sp/>-<sp/>ph.readPos;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>d2<sp/>=<sp/>startPos<sp/>+<sp/>ph.readPos;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref><sp/>=<sp/>((input<sp/>*<sp/>d1)<sp/>+<sp/>(buffer[channel][0]<sp/>*<sp/>d2))<sp/>/<sp/>(d1<sp/>+<sp/>d2);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69c" kindref="member">TrackState</ref><sp/>state;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Playhead</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>writePos;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>readPos;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset()<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writePos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readPos<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ph;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_track_information" kindref="compound">TrackInformation</ref><sp/>ti;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_binary_parameter" kindref="compound">BinaryParameter</ref><sp/>record;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_binary_parameter" kindref="compound">BinaryParameter</ref><sp/>play;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>buffer[2];</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bufferSize;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>loopStart;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>startPos;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pitch_shift" kindref="compound">PitchShift</ref><sp/>pitchShift;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_waveshaper" kindref="compound">Waveshaper</ref><sp/>shaper;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_filter" kindref="compound">Filter</ref><sp/>filter;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_delay" kindref="compound">Delay</ref><sp/>delay;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_reverb" kindref="compound">Reverb</ref><sp/>reverb;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="DSP/Track.h"/>
+  </compounddef>
+</doxygen>

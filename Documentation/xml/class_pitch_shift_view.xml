@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_pitch_shift_view" kind="class" language="C++" prot="public">
+    <compoundname>PitchShiftView</compoundname>
+    <includes refid="_pitch_shift_view_8h" local="no">PitchShiftView.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pitch_shift_view_1a88ca75f437c0d98ed35b267bb9e33095" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PitchShiftView::trackID</definition>
+        <argsstring></argsstring>
+        <name>trackID</name>
+        <qualifiedname>PitchShiftView::trackID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="56" column="9" bodyfile="GUI/FX/PitchShiftView.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1ad51b4c40e2722d03165d9b54cf5ae31a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+        <definition>KeypadDriver* PitchShiftView::keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <qualifiedname>PitchShiftView::keypad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="58" column="18" bodyfile="GUI/FX/PitchShiftView.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1aecdafa9bfa2d943430ec713ca695bf25" prot="private" static="no" mutable="no">
+        <type><ref refid="class_bypass_button" kindref="compound">BypassButton</ref></type>
+        <definition>BypassButton PitchShiftView::bypass</definition>
+        <argsstring></argsstring>
+        <name>bypass</name>
+        <qualifiedname>PitchShiftView::bypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="60" column="18" bodyfile="GUI/FX/PitchShiftView.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1a92da8c45977e368017ec9ec9881d979e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider PitchShiftView::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>PitchShiftView::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="61" column="19" bodyfile="GUI/FX/PitchShiftView.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1af13a5d25c3e55cd05c0f25da53312166" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider PitchShiftView::semitones</definition>
+        <argsstring></argsstring>
+        <name>semitones</name>
+        <qualifiedname>PitchShiftView::semitones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="62" column="19" bodyfile="GUI/FX/PitchShiftView.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1aa8d6db7072868eb992217a181a066a3d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PitchShiftView::numberOfParameters</definition>
+        <argsstring></argsstring>
+        <name>numberOfParameters</name>
+        <qualifiedname>PitchShiftView::numberOfParameters</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="64" column="9" bodyfile="GUI/FX/PitchShiftView.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1a20c7688ea23db7d506693e2d9dd5a689" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* PitchShiftView::parameterNames[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>parameterNames</name>
+        <qualifiedname>PitchShiftView::parameterNames</qualifiedname>
+        <initializer>= {&quot;Amount&quot;, &quot;Semitones&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="65" column="16" bodyfile="GUI/FX/PitchShiftView.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1a3bbf99e0a92e2e17dd6b11cca198fbd8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PitchShiftView::currentParam</definition>
+        <argsstring></argsstring>
+        <name>currentParam</name>
+        <qualifiedname>PitchShiftView::currentParam</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="66" column="9" bodyfile="GUI/FX/PitchShiftView.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1a8d884ac70db42978fef7f8a7647f394c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PitchShiftView::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>PitchShiftView::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="68" column="10" bodyfile="GUI/FX/PitchShiftView.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1afebdc27d2c40c11eeb0d98b438c48ce1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PitchShiftView::isPainted</definition>
+        <argsstring></argsstring>
+        <name>isPainted</name>
+        <qualifiedname>PitchShiftView::isPainted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="69" column="10" bodyfile="GUI/FX/PitchShiftView.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_view_1a44e239be5bc205ad0b30498fd544a5af" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PitchShiftView::bypassIndexes[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>bypassIndexes</name>
+        <qualifiedname>PitchShiftView::bypassIndexes</qualifiedname>
+        <initializer>= {0, 5, 10, 15}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="70" column="9" bodyfile="GUI/FX/PitchShiftView.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pitch_shift_view_1aaa2724fbd96ff3fafa73f74813a44dcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::init</definition>
+        <argsstring>(int ID, EncoderDriver *driver, KeypadDriver *kpd)</argsstring>
+        <name>init</name>
+        <qualifiedname>PitchShiftView::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+          <declname>kpd</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track view the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kpd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the keypad driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="22" column="10" bodyfile="GUI/FX/PitchShiftView.cpp" bodystart="4" bodyend="16"/>
+        <references refid="namespace_parameter_i_ds_1_1_pitch_shifter_1adbc85a3cbcf6222f5fbd2cd59e7da330" compoundref="_parameter_i_ds_8h" startline="18">ParameterIDs::PitchShifter::amount</references>
+        <references refid="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" compoundref="_encoder_driver_8h" startline="100" endline="100">EncoderDriver::getBypassCallback</references>
+        <references refid="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" compoundref="_bypass_button_8h" startline="21" endline="28">BypassButton::init</references>
+        <references refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" compoundref="_stepped_slider_8cpp" startline="4" endline="12">SteppedSlider::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_pitch_shifter_1aeeb85c1162bd9e541e8ce83b78d8bbf6" compoundref="_parameter_i_ds_8h" startline="19">ParameterIDs::PitchShifter::semitones</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1a713e23bfbc8eb132994ea84f523991fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>PitchShiftView::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="27" column="10" bodyfile="GUI/FX/PitchShiftView.cpp" bodystart="18" bodyend="25"/>
+        <references refid="class_pitch_shift_view_1a38c3bad52b514ea8603c99bd08917cd5" compoundref="_pitch_shift_view_8cpp" startline="27" endline="64">repaint</references>
+        <references refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" compoundref="_stepped_slider_8cpp" startline="14" endline="22">SteppedSlider::tick</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1a38c3bad52b514ea8603c99bd08917cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>PitchShiftView::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="32" column="10" bodyfile="GUI/FX/PitchShiftView.cpp" bodystart="27" bodyend="64"/>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1340428efccb140dcbdb71aa6176f696" compoundref="daisy___i_l_i9341_8hpp" startline="26">COLOR_BLUE</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743acfa9d8bbffc418447ed826f286abca02" compoundref="daisy___i_l_i9341_8hpp" startline="34">COLOR_GREEN</references>
+        <references refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" compoundref="daisy___i_l_i9341_8hpp" startline="653" endline="666">UiDriver::DrawRect</references>
+        <references refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" compoundref="daisy___i_l_i9341_8hpp" startline="678" endline="686">UiDriver::FillRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" compoundref="_bypass_button_8h" startline="45" endline="54">BypassButton::repaint</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1a888563b7ec8913b0716c0e41fda2de31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>PitchShiftView::clear</qualifiedname>
+        <briefdescription>
+<para>Handles the clearing of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="37" column="10" bodyfile="GUI/FX/PitchShiftView.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1a8ef693eec2a5f75b689d3f166cb97718" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::setIsOpen</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsOpen</name>
+        <qualifiedname>PitchShiftView::setIsOpen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view is currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="42" column="10" bodyfile="GUI/FX/PitchShiftView.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1a86467f35d4049f2fd3a1eadfeb9f403c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::setIsPainted</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsPainted</name>
+        <qualifiedname>PitchShiftView::setIsPainted</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view has been painted or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="47" column="10" bodyfile="GUI/FX/PitchShiftView.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_view_1ab003700abb9a0c1dc53110aac73ee850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShiftView::setCurrentParam</definition>
+        <argsstring>(int newParam)</argsstring>
+        <name>setCurrentParam</name>
+        <qualifiedname>PitchShiftView::setCurrentParam</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newParam</declname>
+        </param>
+        <briefdescription>
+<para>Sets the currently selected parameter on the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/PitchShiftView.h" line="52" column="10" bodyfile="GUI/FX/PitchShiftView.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_pitch_shift_view" kindref="compound">PitchShiftView</ref> Function: FX level GUI class for the pitch shift </para>
+    </detaileddescription>
+    <location file="GUI/FX/PitchShiftView.h" line="11" column="1" bodyfile="GUI/FX/PitchShiftView.h" bodystart="12" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_pitch_shift_view_1a92da8c45977e368017ec9ec9881d979e" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>amount</name></member>
+      <member refid="class_pitch_shift_view_1aecdafa9bfa2d943430ec713ca695bf25" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>bypass</name></member>
+      <member refid="class_pitch_shift_view_1a44e239be5bc205ad0b30498fd544a5af" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>bypassIndexes</name></member>
+      <member refid="class_pitch_shift_view_1a888563b7ec8913b0716c0e41fda2de31" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>clear</name></member>
+      <member refid="class_pitch_shift_view_1a3bbf99e0a92e2e17dd6b11cca198fbd8" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>currentParam</name></member>
+      <member refid="class_pitch_shift_view_1aaa2724fbd96ff3fafa73f74813a44dcf" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>init</name></member>
+      <member refid="class_pitch_shift_view_1a8d884ac70db42978fef7f8a7647f394c" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>isOpen</name></member>
+      <member refid="class_pitch_shift_view_1afebdc27d2c40c11eeb0d98b438c48ce1" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>isPainted</name></member>
+      <member refid="class_pitch_shift_view_1ad51b4c40e2722d03165d9b54cf5ae31a" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>keypad</name></member>
+      <member refid="class_pitch_shift_view_1aa8d6db7072868eb992217a181a066a3d" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>numberOfParameters</name></member>
+      <member refid="class_pitch_shift_view_1a20c7688ea23db7d506693e2d9dd5a689" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>parameterNames</name></member>
+      <member refid="class_pitch_shift_view_1a38c3bad52b514ea8603c99bd08917cd5" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>repaint</name></member>
+      <member refid="class_pitch_shift_view_1af13a5d25c3e55cd05c0f25da53312166" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>semitones</name></member>
+      <member refid="class_pitch_shift_view_1ab003700abb9a0c1dc53110aac73ee850" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>setCurrentParam</name></member>
+      <member refid="class_pitch_shift_view_1a8ef693eec2a5f75b689d3f166cb97718" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>setIsOpen</name></member>
+      <member refid="class_pitch_shift_view_1a86467f35d4049f2fd3a1eadfeb9f403c" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>setIsPainted</name></member>
+      <member refid="class_pitch_shift_view_1a713e23bfbc8eb132994ea84f523991fe" prot="public" virt="non-virtual"><scope>PitchShiftView</scope><name>tick</name></member>
+      <member refid="class_pitch_shift_view_1a88ca75f437c0d98ed35b267bb9e33095" prot="private" virt="non-virtual"><scope>PitchShiftView</scope><name>trackID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

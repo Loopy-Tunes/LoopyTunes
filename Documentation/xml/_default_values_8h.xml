@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_default_values_8h" kind="file" language="C++">
+    <compoundname>DefaultValues.h</compoundname>
+    <includes local="no">functional</includes>
+    <includedby refid="_delay_8h" local="yes">DSP/FX/Delay.h</includedby>
+    <includedby refid="_filter_8h" local="yes">DSP/FX/Filter.h</includedby>
+    <includedby refid="_pitch_shift_8h" local="yes">DSP/FX/PitchShift.h</includedby>
+    <includedby refid="_reverb_8h" local="yes">DSP/FX/Reverb/Reverb.h</includedby>
+    <includedby refid="_waveshaper_8h" local="yes">DSP/FX/Waveshaper.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>DSP/FX/Delay.cpp</label>
+        <link refid="_delay_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DSP/FX/Filter.cpp</label>
+        <link refid="_filter_8cpp"/>
+      </node>
+      <node id="9">
+        <label>DSP/FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DSP/FX/PitchShift.cpp</label>
+        <link refid="_pitch_shift_8cpp"/>
+      </node>
+      <node id="11">
+        <label>DSP/FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="13">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>DSP/FX/Waveshaper.cpp</label>
+        <link refid="_waveshaper_8cpp"/>
+      </node>
+      <node id="15">
+        <label>DSP/FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="4">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_pitch_shifter_defaults" prot="public">PitchShifterDefaults</innerclass>
+    <innerclass refid="struct_waveshaper_defaults" prot="public">WaveshaperDefaults</innerclass>
+    <innerclass refid="struct_filter_defaults" prot="public">FilterDefaults</innerclass>
+    <innerclass refid="struct_reverb_defaults" prot="public">ReverbDefaults</innerclass>
+    <innerclass refid="struct_delay_defaults" prot="public">DelayDefaults</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_default_values_8h_1a1de2d7b164dd7403fd68ecf95df9c1ac" prot="public" static="yes" mutable="no">
+        <type>const struct PitchShifterDefaults</type>
+        <definition>const struct PitchShifterDefaults pitchShifterDefs</definition>
+        <argsstring></argsstring>
+        <name>pitchShifterDefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/DefaultValues.h" line="12" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="_default_values_8h_1acf187a67b04d1dfc5dbb502b9b76bd8b" prot="public" static="yes" mutable="no">
+        <type>const struct WaveshaperDefaults</type>
+        <definition>const struct WaveshaperDefaults waveshaperDefs</definition>
+        <argsstring></argsstring>
+        <name>waveshaperDefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/DefaultValues.h" line="20" column="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="_default_values_8h_1adced266f0cefca41d05408f0df78cf92" prot="public" static="yes" mutable="no">
+        <type>const struct FilterDefaults</type>
+        <definition>const struct FilterDefaults filterDefs</definition>
+        <argsstring></argsstring>
+        <name>filterDefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/DefaultValues.h" line="27" column="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="_default_values_8h_1a68784baf1950d107a17f08f525d624ed" prot="public" static="yes" mutable="no">
+        <type>const struct ReverbDefaults</type>
+        <definition>const struct ReverbDefaults reverbDefs</definition>
+        <argsstring></argsstring>
+        <name>reverbDefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/DefaultValues.h" line="37" column="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="_default_values_8h_1aee60a55b040fabc4f94faa8f564b89e7" prot="public" static="yes" mutable="no">
+        <type>const struct DelayDefaults</type>
+        <definition>const struct DelayDefaults delayDefs</definition>
+        <argsstring></argsstring>
+        <name>delayDefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/DefaultValues.h" line="45" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DEFAULTVALUES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULTVALUES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">PitchShifterDefaults</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>semitones<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rand<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}<sp/>pitchShifterDefs;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">WaveshaperDefaults</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>funcControl<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/>waveshaperDefs;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">FilterDefaults</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frequency<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/>filterDefs;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ReverbDefaults</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damp<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/>reverbDefs;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">DelayDefaults</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>5000;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>feedback<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/>delayDefs;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Parameters/DefaultValues.h"/>
+  </compounddef>
+</doxygen>

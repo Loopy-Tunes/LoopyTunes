@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_audio_slider" kind="class" language="C++" prot="public">
+    <compoundname>AudioSlider</compoundname>
+    <includes refid="_audio_slider_8h" local="no">AudioSlider.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_slider_1a6ded84c272f24598444cc1e508d038d4" prot="private" static="no" mutable="no">
+        <type>DaisySeed *</type>
+        <definition>DaisySeed* AudioSlider::hw</definition>
+        <argsstring></argsstring>
+        <name>hw</name>
+        <qualifiedname>AudioSlider::hw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="40" column="15" bodyfile="GUI/AudioSlider.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_slider_1a64844a06c6a91b587230b014e45ff1da" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AudioSlider::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <qualifiedname>AudioSlider::input</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="42" column="11" bodyfile="GUI/AudioSlider.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_slider_1a80ba3efc7464aca6a1162b284ec1e46a" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float AudioSlider::jitter</definition>
+        <argsstring></argsstring>
+        <name>jitter</name>
+        <qualifiedname>AudioSlider::jitter</qualifiedname>
+        <initializer>= 0.01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="43" column="17" bodyfile="GUI/AudioSlider.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_slider_1a6478fd6495e6b93d2262578525ac296c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioSlider::channelID</definition>
+        <argsstring></argsstring>
+        <name>channelID</name>
+        <qualifiedname>AudioSlider::channelID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="45" column="9" bodyfile="GUI/AudioSlider.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_slider_1a4adb2a91fd8b646c267764eed2bdf19f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioSlider::isUpdated</definition>
+        <argsstring></argsstring>
+        <name>isUpdated</name>
+        <qualifiedname>AudioSlider::isUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="46" column="10" bodyfile="GUI/AudioSlider.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_audio_slider_1ac041901c3967237cd070a8bf017fc2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioSlider::init</definition>
+        <argsstring>(int ID, DaisySeed *seed)</argsstring>
+        <name>init</name>
+        <qualifiedname>AudioSlider::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>DaisySeed *</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel ID of the ADC channel the slider is assigned to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the hardware instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="24" column="10" bodyfile="GUI/AudioSlider.cpp" bodystart="4" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_slider_1a9cdeb4a1ef9f5a9b8998defd9d8e93a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioSlider::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>AudioSlider::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the slider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="29" column="10" bodyfile="GUI/AudioSlider.cpp" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_slider_1a0f0d7e4bc1389b174ff93cb6f58474a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioSlider::repaint</definition>
+        <argsstring>(int index, bool selected)</argsstring>
+        <name>repaint</name>
+        <qualifiedname>AudioSlider::repaint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>selected</declname>
+        </param>
+        <briefdescription>
+<para>Handles the repainting of the slider on the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel index of the slider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the channel is selected or not </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/AudioSlider.h" line="36" column="10" bodyfile="GUI/AudioSlider.cpp" bodystart="24" bodyend="45"/>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a2a9daf215a30f1c539ead18c66380fc1" compoundref="daisy___i_l_i9341_8hpp" startline="24">COLOR_BLACK</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1340428efccb140dcbdb71aa6176f696" compoundref="daisy___i_l_i9341_8hpp" startline="26">COLOR_BLUE</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743acfa9d8bbffc418447ed826f286abca02" compoundref="daisy___i_l_i9341_8hpp" startline="34">COLOR_GREEN</references>
+        <references refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" compoundref="daisy___i_l_i9341_8hpp" startline="678" endline="686">UiDriver::FillRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="GUI/AudioSlider.h" line="15" column="1" bodyfile="GUI/AudioSlider.h" bodystart="16" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_audio_slider_1a6478fd6495e6b93d2262578525ac296c" prot="private" virt="non-virtual"><scope>AudioSlider</scope><name>channelID</name></member>
+      <member refid="class_audio_slider_1a6ded84c272f24598444cc1e508d038d4" prot="private" virt="non-virtual"><scope>AudioSlider</scope><name>hw</name></member>
+      <member refid="class_audio_slider_1ac041901c3967237cd070a8bf017fc2cb" prot="public" virt="non-virtual"><scope>AudioSlider</scope><name>init</name></member>
+      <member refid="class_audio_slider_1a64844a06c6a91b587230b014e45ff1da" prot="private" virt="non-virtual"><scope>AudioSlider</scope><name>input</name></member>
+      <member refid="class_audio_slider_1a4adb2a91fd8b646c267764eed2bdf19f" prot="private" virt="non-virtual"><scope>AudioSlider</scope><name>isUpdated</name></member>
+      <member refid="class_audio_slider_1a80ba3efc7464aca6a1162b284ec1e46a" prot="private" virt="non-virtual"><scope>AudioSlider</scope><name>jitter</name></member>
+      <member refid="class_audio_slider_1a0f0d7e4bc1389b174ff93cb6f58474a8" prot="public" virt="non-virtual"><scope>AudioSlider</scope><name>repaint</name></member>
+      <member refid="class_audio_slider_1a9cdeb4a1ef9f5a9b8998defd9d8e93a9" prot="public" virt="non-virtual"><scope>AudioSlider</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,5 @@
 #include "SteppedSlider.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void SteppedSlider::init(int ID, EncoderDriver* ed)
 {

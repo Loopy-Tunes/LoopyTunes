@@ -1,0 +1,164 @@
+\doxysection{Encoder\+Driver Class Reference}
+\hypertarget{class_encoder_driver}{}\label{class_encoder_driver}\index{EncoderDriver@{EncoderDriver}}
+
+
+{\ttfamily \#include $<$Encoder\+Driver.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_encoder_driver_a6b703d93f5254ae6539dfc3759c3d87d}{init}} (dsy\+\_\+gpio\+\_\+pin button, dsy\+\_\+gpio\+\_\+pin a, dsy\+\_\+gpio\+\_\+pin b, std\+::function$<$ void()$>$ nav\+Cb)
+\begin{DoxyCompactList}\small\item\em Initialises the driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encoder_driver_a7108d646d1f00a7c42e89a5237809a62}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Polls the inputs to see if a change has occured. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encoder_driver_afa50272bfb183b00f469285864c975e3}{button\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em The callback function executed when the centre button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_encoder_driver_a9f6aea9b40ce44db249f04816423dd3b}{get\+Button\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the state of the encoder\textquotesingle{}s centre button. \end{DoxyCompactList}\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{class_encoder_driver_acd195cb2fe0f09ff7dd4b7d18414aa0e}{get\+Bypass\+Callback}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Gets the bypass callback for a given index from the bypass\+Callbacks vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encoder_driver_a8f772f7feff5cb2093d36189ffc6fe66}{set\+Current\+Param}} (int new\+ID)
+\begin{DoxyCompactList}\small\item\em Sets the current parameter the encoder is assigned to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encoder_driver_a4545930e99a6065f445a9efc696405f5}{add\+Parameter}} (\mbox{\hyperlink{class_stepped_parameter}{Stepped\+Parameter}} \texorpdfstring{$\ast$}{*}new\+Param)
+\begin{DoxyCompactList}\small\item\em Adds a parameter to the parameter vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encoder_driver_a45b2cea21038aee124bed0a0f39010af}{add\+Bypass\+Callback}} (std\+::function$<$ void()$>$ new\+Callback)
+\begin{DoxyCompactList}\small\item\em Adds a bypass callback to the bypass\+Callbacks vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stepped_parameter}{Stepped\+Parameter}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_encoder_driver_aaa92980b9bd67e2ea6a2396716d7c4e8}{get\+Parameter}} (int param\+ID)
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the parameter with the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_encoder_driver}{Encoder\+Driver} Function\+: Driver for the encoder input, controls the value of FX parameters
+
+Based off of Encoder class from lib\+Daisy (Stephen Hensley, 2019) \href{https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h}{\texttt{ https\+://github.\+com/electro-\/smith/lib\+Daisy/blob/master/src/hid/encoder.\+h}} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_encoder_driver_a45b2cea21038aee124bed0a0f39010af}\label{class_encoder_driver_a45b2cea21038aee124bed0a0f39010af} 
+\index{EncoderDriver@{EncoderDriver}!addBypassCallback@{addBypassCallback}}
+\index{addBypassCallback@{addBypassCallback}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{addBypassCallback()}{addBypassCallback()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::add\+Bypass\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{new\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a bypass callback to the bypass\+Callbacks vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Callback} & The callback function to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_encoder_driver_a4545930e99a6065f445a9efc696405f5}\label{class_encoder_driver_a4545930e99a6065f445a9efc696405f5} 
+\index{EncoderDriver@{EncoderDriver}!addParameter@{addParameter}}
+\index{addParameter@{addParameter}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{addParameter()}{addParameter()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::add\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stepped_parameter}{Stepped\+Parameter}} \texorpdfstring{$\ast$}{*}}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a parameter to the parameter vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Param} & A pointer to the parameter to be added to the vector \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_encoder_driver_afa50272bfb183b00f469285864c975e3}\label{class_encoder_driver_afa50272bfb183b00f469285864c975e3} 
+\index{EncoderDriver@{EncoderDriver}!buttonCallback@{buttonCallback}}
+\index{buttonCallback@{buttonCallback}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{buttonCallback()}{buttonCallback()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::button\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The callback function executed when the centre button. 
+
+\Hypertarget{class_encoder_driver_a9f6aea9b40ce44db249f04816423dd3b}\label{class_encoder_driver_a9f6aea9b40ce44db249f04816423dd3b} 
+\index{EncoderDriver@{EncoderDriver}!getButtonState@{getButtonState}}
+\index{getButtonState@{getButtonState}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{getButtonState()}{getButtonState()}}
+{\footnotesize\ttfamily bool Encoder\+Driver\+::get\+Button\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the state of the encoder\textquotesingle{}s centre button. 
+
+\begin{DoxyReturn}{Returns}
+If the button is pressed or not 
+\end{DoxyReturn}
+\Hypertarget{class_encoder_driver_acd195cb2fe0f09ff7dd4b7d18414aa0e}\label{class_encoder_driver_acd195cb2fe0f09ff7dd4b7d18414aa0e} 
+\index{EncoderDriver@{EncoderDriver}!getBypassCallback@{getBypassCallback}}
+\index{getBypassCallback@{getBypassCallback}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{getBypassCallback()}{getBypassCallback()}}
+{\footnotesize\ttfamily std\+::function$<$ void()$>$ Encoder\+Driver\+::get\+Bypass\+Callback (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the bypass callback for a given index from the bypass\+Callbacks vector. 
+
+\Hypertarget{class_encoder_driver_aaa92980b9bd67e2ea6a2396716d7c4e8}\label{class_encoder_driver_aaa92980b9bd67e2ea6a2396716d7c4e8} 
+\index{EncoderDriver@{EncoderDriver}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_stepped_parameter}{Stepped\+Parameter}} \texorpdfstring{$\ast$}{*} Encoder\+Driver\+::get\+Parameter (\begin{DoxyParamCaption}\item[{int}]{param\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a pointer to the parameter with the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param\+ID} & The ID of the parameter to be fetched \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_encoder_driver_a6b703d93f5254ae6539dfc3759c3d87d}\label{class_encoder_driver_a6b703d93f5254ae6539dfc3759c3d87d} 
+\index{EncoderDriver@{EncoderDriver}!init@{init}}
+\index{init@{init}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::init (\begin{DoxyParamCaption}\item[{dsy\+\_\+gpio\+\_\+pin}]{button,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{a,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{b,  }\item[{std\+::function$<$ void()$>$}]{nav\+Cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises the driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The pin used for the centre push button \\
+\hline
+{\em a} & The pin used for channel A of the encoder \\
+\hline
+{\em b} & The pin used for channel B of the encoder \\
+\hline
+{\em nav\+Cb} & The function used for navigation \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_encoder_driver_a8f772f7feff5cb2093d36189ffc6fe66}\label{class_encoder_driver_a8f772f7feff5cb2093d36189ffc6fe66} 
+\index{EncoderDriver@{EncoderDriver}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the current parameter the encoder is assigned to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+ID} & The ID of the parameter the encoder is to be assigned to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_encoder_driver_a7108d646d1f00a7c42e89a5237809a62}\label{class_encoder_driver_a7108d646d1f00a7c42e89a5237809a62} 
+\index{EncoderDriver@{EncoderDriver}!tick@{tick}}
+\index{tick@{tick}!EncoderDriver@{EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Encoder\+Driver\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Polls the inputs to see if a change has occured. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\mbox{\hyperlink{_encoder_driver_8h}{Encoder\+Driver.\+h}}\end{DoxyCompactItemize}

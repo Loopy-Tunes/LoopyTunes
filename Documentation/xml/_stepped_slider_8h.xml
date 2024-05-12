@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_stepped_slider_8h" kind="file" language="C++">
+    <compoundname>SteppedSlider.h</compoundname>
+    <includes refid="_keypad_driver_8h" local="yes">../../Drivers/KeypadDriver.h</includes>
+    <includes refid="_bypass_button_8h" local="yes">BypassButton.h</includes>
+    <includedby refid="_delay_view_8h" local="yes">GUI/FX/DelayView.h</includedby>
+    <includedby refid="_filter_view_8h" local="yes">GUI/FX/FilterView.h</includedby>
+    <includedby refid="_pitch_shift_view_8h" local="yes">GUI/FX/PitchShiftView.h</includedby>
+    <includedby refid="_reverb_view_8h" local="yes">GUI/FX/ReverbView.h</includedby>
+    <includedby refid="_stepped_slider_8cpp" local="yes">GUI/FX/SteppedSlider.cpp</includedby>
+    <includedby refid="_waveshaper_view_8h" local="yes">GUI/FX/WaveshaperView.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../../Drivers/KeypadDriver.h</label>
+        <link refid="_keypad_driver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GUI/FX/SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>StyleSheet.h</label>
+        <link refid="_style_sheet_8h"/>
+      </node>
+      <node id="3">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="8">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="9">
+        <label>daisysp.h</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>GUI/FX/DelayView.cpp</label>
+        <link refid="_delay_view_8cpp"/>
+      </node>
+      <node id="2">
+        <label>GUI/FX/DelayView.h</label>
+        <link refid="_delay_view_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GUI/FX/FilterView.cpp</label>
+        <link refid="_filter_view_8cpp"/>
+      </node>
+      <node id="9">
+        <label>GUI/FX/FilterView.h</label>
+        <link refid="_filter_view_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>GUI/FX/PitchShiftView.cpp</label>
+        <link refid="_pitch_shift_view_8cpp"/>
+      </node>
+      <node id="11">
+        <label>GUI/FX/PitchShiftView.h</label>
+        <link refid="_pitch_shift_view_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>GUI/FX/ReverbView.cpp</label>
+        <link refid="_reverb_view_8cpp"/>
+      </node>
+      <node id="13">
+        <label>GUI/FX/ReverbView.h</label>
+        <link refid="_reverb_view_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>GUI/FX/SteppedSlider.cpp</label>
+        <link refid="_stepped_slider_8cpp"/>
+      </node>
+      <node id="1">
+        <label>GUI/FX/SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>GUI/FX/WaveshaperView.cpp</label>
+        <link refid="_waveshaper_view_8cpp"/>
+      </node>
+      <node id="16">
+        <label>GUI/FX/WaveshaperView.h</label>
+        <link refid="_waveshaper_view_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GUI/MixerView.cpp</label>
+        <link refid="_mixer_view_8cpp"/>
+      </node>
+      <node id="5">
+        <label>GUI/MixerView.h</label>
+        <link refid="_mixer_view_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GUI/TrackView.cpp</label>
+        <link refid="_track_view_8cpp"/>
+      </node>
+      <node id="4">
+        <label>GUI/TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_stepped_slider" prot="public">SteppedSlider</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STEPPEDSLIDER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STEPPEDSLIDER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_keypad_driver_8h" kindref="compound">../../Drivers/KeypadDriver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bypass_button_8h" kindref="compound">BypassButton.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/********************************************************/</highlight></codeline>
+<codeline lineno="12" refid="class_stepped_slider" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>ed);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************************/</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" kindref="member">setSelected</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" kindref="member">repaint</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>encoder;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paramID;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref>*<sp/>param;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>curVal;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="GUI/FX/SteppedSlider.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,114 @@
+\doxysection{Waveshaper\+View Class Reference}
+\hypertarget{class_waveshaper_view}{}\label{class_waveshaper_view}\index{WaveshaperView@{WaveshaperView}}
+
+
+{\ttfamily \#include $<$Waveshaper\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_waveshaper_view_a7e22573e74046e17f4b3a5d4d8242d7c}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_a1167027572fa89082ee21d8b714f5afb}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_af4723822c047f4b34dc403e6398b65bd}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_a0327dad8bf41a302efac9092df710ae6}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_a74be31ca1a2f22e19fab788384b8f3a2}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_acad77b49e65cc7251ff8ad326b0b19d9}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_view_ac5e67d9d36f1c8af182735b1f7c74a94}{set\+Current\+Param}} (int new\+Param)
+\begin{DoxyCompactList}\small\item\em Sets the currently selected parameter on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_waveshaper_view}{Waveshaper\+View} Function\+: FX level GUI class for the \doxylink{class_waveshaper}{Waveshaper} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_waveshaper_view_a0327dad8bf41a302efac9092df710ae6}\label{class_waveshaper_view_a0327dad8bf41a302efac9092df710ae6} 
+\index{WaveshaperView@{WaveshaperView}!clear@{clear}}
+\index{clear@{clear}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_waveshaper_view_a7e22573e74046e17f4b3a5d4d8242d7c}\label{class_waveshaper_view_a7e22573e74046e17f4b3a5d4d8242d7c} 
+\index{WaveshaperView@{WaveshaperView}!init@{init}}
+\index{init@{init}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the track view the instance belongs to \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_view_af4723822c047f4b34dc403e6398b65bd}\label{class_waveshaper_view_af4723822c047f4b34dc403e6398b65bd} 
+\index{WaveshaperView@{WaveshaperView}!repaint@{repaint}}
+\index{repaint@{repaint}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_waveshaper_view_ac5e67d9d36f1c8af182735b1f7c74a94}\label{class_waveshaper_view_ac5e67d9d36f1c8af182735b1f7c74a94} 
+\index{WaveshaperView@{WaveshaperView}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the currently selected parameter on the LCD. 
+
+\Hypertarget{class_waveshaper_view_a74be31ca1a2f22e19fab788384b8f3a2}\label{class_waveshaper_view_a74be31ca1a2f22e19fab788384b8f3a2} 
+\index{WaveshaperView@{WaveshaperView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_waveshaper_view_acad77b49e65cc7251ff8ad326b0b19d9}\label{class_waveshaper_view_acad77b49e65cc7251ff8ad326b0b19d9} 
+\index{WaveshaperView@{WaveshaperView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_waveshaper_view_a1167027572fa89082ee21d8b714f5afb}\label{class_waveshaper_view_a1167027572fa89082ee21d8b714f5afb} 
+\index{WaveshaperView@{WaveshaperView}!tick@{tick}}
+\index{tick@{tick}!WaveshaperView@{WaveshaperView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Waveshaper\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_waveshaper_view_8h}{Waveshaper\+View.\+h}}\item 
+GUI/\+FX/\mbox{\hyperlink{_waveshaper_view_8cpp}{Waveshaper\+View.\+cpp}}\end{DoxyCompactItemize}

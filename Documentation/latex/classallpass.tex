@@ -1,0 +1,107 @@
+\doxysection{allpass Class Reference}
+\hypertarget{classallpass}{}\label{classallpass}\index{allpass@{allpass}}
+
+
+{\ttfamily \#include $<$allpass.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classallpass_ad0a4c84903b886efb77f37d6889998dd}{allpass}} ()
+\item 
+void \mbox{\hyperlink{classallpass_ae107adccefebabb0578dc5b9ad89c5d7}{setbuffer}} (float \texorpdfstring{$\ast$}{*}buf, int size)
+\item 
+float \mbox{\hyperlink{classallpass_a72ef1d44f5807011889020f2c316cc32}{process}} (float inp)
+\item 
+void \mbox{\hyperlink{classallpass_af93a4f1d4dcc544323978031cb234aa6}{mute}} ()
+\item 
+void \mbox{\hyperlink{classallpass_ad636d830e21de3dd61928875db95c899}{setfeedback}} (float val)
+\item 
+float \mbox{\hyperlink{classallpass_a19e2ab2745647005ce06366b7da64b45}{getfeedback}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classallpass_a4aff3bfeba72ac4b1ce0ced6618ee77c}{feedback}}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classallpass_aa6b769510364da1d9481948d4a154f8b}{buffer}}
+\item 
+int \mbox{\hyperlink{classallpass_a0156b24446b810952ae1df1accb8318f}{bufsize}}
+\item 
+int \mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classallpass_ad0a4c84903b886efb77f37d6889998dd}\label{classallpass_ad0a4c84903b886efb77f37d6889998dd} 
+\index{allpass@{allpass}!allpass@{allpass}}
+\index{allpass@{allpass}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{allpass()}{allpass()}}
+{\footnotesize\ttfamily allpass\+::allpass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classallpass_a19e2ab2745647005ce06366b7da64b45}\label{classallpass_a19e2ab2745647005ce06366b7da64b45} 
+\index{allpass@{allpass}!getfeedback@{getfeedback}}
+\index{getfeedback@{getfeedback}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{getfeedback()}{getfeedback()}}
+{\footnotesize\ttfamily float allpass\+::getfeedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classallpass_af93a4f1d4dcc544323978031cb234aa6}\label{classallpass_af93a4f1d4dcc544323978031cb234aa6} 
+\index{allpass@{allpass}!mute@{mute}}
+\index{mute@{mute}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{mute()}{mute()}}
+{\footnotesize\ttfamily void allpass\+::mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classallpass_a72ef1d44f5807011889020f2c316cc32}\label{classallpass_a72ef1d44f5807011889020f2c316cc32} 
+\index{allpass@{allpass}!process@{process}}
+\index{process@{process}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily float allpass\+::process (\begin{DoxyParamCaption}\item[{float}]{inp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classallpass_ae107adccefebabb0578dc5b9ad89c5d7}\label{classallpass_ae107adccefebabb0578dc5b9ad89c5d7} 
+\index{allpass@{allpass}!setbuffer@{setbuffer}}
+\index{setbuffer@{setbuffer}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{setbuffer()}{setbuffer()}}
+{\footnotesize\ttfamily void allpass\+::setbuffer (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{classallpass_ad636d830e21de3dd61928875db95c899}\label{classallpass_ad636d830e21de3dd61928875db95c899} 
+\index{allpass@{allpass}!setfeedback@{setfeedback}}
+\index{setfeedback@{setfeedback}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{setfeedback()}{setfeedback()}}
+{\footnotesize\ttfamily void allpass\+::setfeedback (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classallpass_aa6b769510364da1d9481948d4a154f8b}\label{classallpass_aa6b769510364da1d9481948d4a154f8b} 
+\index{allpass@{allpass}!buffer@{buffer}}
+\index{buffer@{buffer}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily float\texorpdfstring{$\ast$}{*} allpass\+::buffer}
+
+\Hypertarget{classallpass_a662a39221d0880b3f99e3ec40e302d4c}\label{classallpass_a662a39221d0880b3f99e3ec40e302d4c} 
+\index{allpass@{allpass}!bufidx@{bufidx}}
+\index{bufidx@{bufidx}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{bufidx}{bufidx}}
+{\footnotesize\ttfamily int allpass\+::bufidx}
+
+\Hypertarget{classallpass_a0156b24446b810952ae1df1accb8318f}\label{classallpass_a0156b24446b810952ae1df1accb8318f} 
+\index{allpass@{allpass}!bufsize@{bufsize}}
+\index{bufsize@{bufsize}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{bufsize}{bufsize}}
+{\footnotesize\ttfamily int allpass\+::bufsize}
+
+\Hypertarget{classallpass_a4aff3bfeba72ac4b1ce0ced6618ee77c}\label{classallpass_a4aff3bfeba72ac4b1ce0ced6618ee77c} 
+\index{allpass@{allpass}!feedback@{feedback}}
+\index{feedback@{feedback}!allpass@{allpass}}
+\doxysubsubsection{\texorpdfstring{feedback}{feedback}}
+{\footnotesize\ttfamily float allpass\+::feedback}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\+Reverb/\mbox{\hyperlink{allpass_8hpp}{allpass.\+hpp}}\item 
+DSP/\+FX/\+Reverb/\mbox{\hyperlink{allpass_8cpp}{allpass.\+cpp}}\end{DoxyCompactItemize}

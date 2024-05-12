@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_mixer_8h" kind="file" language="C++">
+    <compoundname>Mixer.h</compoundname>
+    <includes refid="_track_8h" local="yes">Track.h</includes>
+    <includedby refid="_mixer_8cpp" local="yes">DSP/Mixer.cpp</includedby>
+    <includedby refid="_loopy_tunes_8cpp" local="yes">LoopyTunes.cpp</includedby>
+    <incdepgraph>
+      <node id="17">
+        <label>FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="19">
+        <label>revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+      <node id="14">
+        <label>FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../Parameters/AudioParameter.h</label>
+        <link refid="_audio_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="7">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../Utils/Helpers.h</label>
+        <link refid="_helpers_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="27">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="9">
+        <label>daisysp.h</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="28">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>stddef.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>type_traits</label>
+      </node>
+      <node id="31">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mixer" prot="public">Mixer</innerclass>
+    <innerclass refid="struct_mixer_1_1_mixer_channel" prot="private">Mixer::MixerChannel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MIXER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIXER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_track_8h" kindref="compound">Track.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
+<codeline lineno="11" refid="class_mixer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mixer" kindref="compound">Mixer</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************************/</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>(DaisySeed*<sp/>seed,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t1[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t2[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t3[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t4[2]);<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" kindref="member">initMixChannels</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>m[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t1[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t2[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t3[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>t4[2]);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" kindref="member">initFX</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>t1[2],<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>t2[2],<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>t3[2],<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>t4[2]);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" kindref="member">processInputBlock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1af18fb7aa3350a57d2bb8d22272edeba1" kindref="member">panChannels</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a5ff27db3d3d929520e8db73f0438b5ec" kindref="member">mixOutput</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a84db56f64191585c461a2a05fd68b463" kindref="member">processOutputBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1ae146a7e1659dc74abda5fd36910e7bff" kindref="member">panMixBuffer</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>buffer[2],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pan,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a47456bbddd719f27c7cdc689f80008a1" kindref="member">setMixDiv</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="82" refid="class_mixer_1a644b7cf22643aec1af032fcc615adc9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a644b7cf22643aec1af032fcc615adc9f" kindref="member">setTrack1Pan</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p){<sp/>track1.pan.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>p;<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="86" refid="class_mixer_1aca235adccb2d2fe1cd7b3db430a66053" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1aca235adccb2d2fe1cd7b3db430a66053" kindref="member">setTrack2Pan</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p){<sp/>track2.pan.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>p;<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="90" refid="class_mixer_1a5a88c441bbbbff1128d20d929a7d0935" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a5a88c441bbbbff1128d20d929a7d0935" kindref="member">setTrack3Pan</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p){<sp/>track3.pan.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>p;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="94" refid="class_mixer_1a28e66584e7f5ecb35f538ae2768cb8ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a28e66584e7f5ecb35f538ae2768cb8ac" kindref="member">setTrack4Pan</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p){<sp/>track4.pan.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>p;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="98" refid="class_mixer_1ada57a607e8396bed817b7dcd81a80402" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1ada57a607e8396bed817b7dcd81a80402" kindref="member">setTrack1Gain</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g){<sp/>track1.gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>g;<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="102" refid="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" kindref="member">setTrack2Gain</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g){<sp/>track2.gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>g;<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="106" refid="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" kindref="member">setTrack3Gain</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g){<sp/>track3.gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>g;<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="110" refid="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" kindref="member">setTrack4Gain</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g){<sp/>track4.gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>g;<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***********************************************************************/</highlight></codeline>
+<codeline lineno="114" refid="class_mixer_1afeb56a1404c1e27c819955c93a754589" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mixer_1afeb56a1404c1e27c819955c93a754589" kindref="member">setMasterVolume</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m){<sp/>master.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>=<sp/>m;<sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MixerChannel</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track" kindref="compound">Track</ref><sp/>track;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>buffer[2];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper&lt;float&gt;</ref><sp/>pan;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper&lt;float&gt;</ref><sp/>gain;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getCurVal(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chan,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref><sp/>&lt;<sp/>0.005<sp/>||<sp/>track.<ref refid="class_track_1a7faeb268f0b7825dc9f1ac31d2f96589" kindref="member">getState</ref>()<sp/>==<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer[chan][index]<sp/>*<sp/>gain.<ref refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>MixerChannel<sp/>track1;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>MixerChannel<sp/>track2;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>MixerChannel<sp/>track3;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>MixerChannel<sp/>track4;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mixDiv;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper&lt;float&gt;</ref><sp/>master;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>mix[2];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bufferSize;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="DSP/Mixer.h"/>
+  </compounddef>
+</doxygen>

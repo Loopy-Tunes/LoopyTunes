@@ -1,4 +1,5 @@
 #include "AudioSlider.h"
+#include "../Drivers/daisy_ILI9341.hpp"
 
 void AudioSlider::init(int ID, DaisySeed* seed)
 {

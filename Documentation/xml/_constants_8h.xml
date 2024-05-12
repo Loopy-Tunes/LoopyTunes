@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_constants_8h" kind="file" language="C++">
+    <compoundname>Constants.h</compoundname>
+    <includes local="yes">stddef.h</includes>
+    <includedby refid="_filter_8h" local="yes">DSP/FX/Filter.h</includedby>
+    <includedby refid="_pitch_shift_8h" local="yes">DSP/FX/PitchShift.h</includedby>
+    <includedby refid="_reverb_8h" local="yes">DSP/FX/Reverb/Reverb.h</includedby>
+    <includedby refid="_waveshaper_8h" local="yes">DSP/FX/Waveshaper.h</includedby>
+    <includedby refid="_audio_parameter_8h" local="yes">Parameters/AudioParameter.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stddef.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>DSP/FX/Filter.cpp</label>
+        <link refid="_filter_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DSP/FX/PitchShift.cpp</label>
+        <link refid="_pitch_shift_8cpp"/>
+      </node>
+      <node id="9">
+        <label>DSP/FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="11">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DSP/FX/Waveshaper.cpp</label>
+        <link refid="_waveshaper_8cpp"/>
+      </node>
+      <node id="13">
+        <label>DSP/FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="4">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+      <node id="15">
+        <label>Parameters/AudioParameter.h</label>
+        <link refid="_audio_parameter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" prot="public" static="no">
+        <name>BLOCKLENGTH</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="3" column="9" bodyfile="Utils/Constants.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" prot="public" static="no">
+        <name>SAMPLERATE</name>
+        <initializer>48000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="4" column="9" bodyfile="Utils/Constants.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" prot="public" static="no">
+        <name>DURATION</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="5" column="9" bodyfile="Utils/Constants.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1aef5d4450d3230bcff2f3e255d83a3d08" prot="public" static="no">
+        <name>TRACKCOUNT</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="7" column="9" bodyfile="Utils/Constants.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" prot="public" static="no">
+        <name>L</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="9" column="9" bodyfile="Utils/Constants.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" prot="public" static="no">
+        <name>R</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="10" column="9" bodyfile="Utils/Constants.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" prot="public" static="no">
+        <name>ADCINPUTS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="12" column="9" bodyfile="Utils/Constants.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1ab58841ee2ac14b70b29289cd96ea1668" prot="public" static="no">
+        <name>MACROBLOCK</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="13" column="9" bodyfile="Utils/Constants.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a2c5e667f6efe57e3588b77dc319da541" prot="public" static="no">
+        <name>NO_OPT</name>
+        <initializer>__attribute__((optimize(0)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/Constants.h" line="15" column="9" bodyfile="Utils/Constants.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;stddef.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLOCKLENGTH<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLERATE<sp/>48000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DURATION<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_constants_8h_1aef5d4450d3230bcff2f3e255d83a3d08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACKCOUNT<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>L<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>R<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADCINPUTS<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_constants_8h_1ab58841ee2ac14b70b29289cd96ea1668" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MACROBLOCK<sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_constants_8h_1a2c5e667f6efe57e3588b77dc319da541" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_OPT<sp/>__attribute__((optimize(0)))</highlight></codeline>
+    </programlisting>
+    <location file="Utils/Constants.h"/>
+  </compounddef>
+</doxygen>

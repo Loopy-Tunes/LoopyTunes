@@ -1,0 +1,65 @@
+\doxysection{Binary\+Parameter Class Reference}
+\hypertarget{class_binary_parameter}{}\label{class_binary_parameter}\index{BinaryParameter@{BinaryParameter}}
+
+
+{\ttfamily \#include $<$Binary\+Parameter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_binary_parameter_a6765feacacb20ba94a391a059040ae1d}{init}} (dsy\+\_\+gpio\+\_\+pin pin, float update\+Rate, std\+::function$<$ void()$>$ cb)
+\begin{DoxyCompactList}\small\item\em Initialises an instance of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_binary_parameter_a062dee999020e270c30d8084e03b443d}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if the button has been pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_binary_parameter_ab20ac67f6e4bf146f9674f676c3f25f4}{is\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Checks the state of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_binary_parameter_a6765feacacb20ba94a391a059040ae1d}\label{class_binary_parameter_a6765feacacb20ba94a391a059040ae1d} 
+\index{BinaryParameter@{BinaryParameter}!init@{init}}
+\index{init@{init}!BinaryParameter@{BinaryParameter}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Binary\+Parameter\+::init (\begin{DoxyParamCaption}\item[{dsy\+\_\+gpio\+\_\+pin}]{pin,  }\item[{float}]{update\+Rate,  }\item[{std\+::function$<$ void()$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises an instance of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The Daisy Seed pin the instance is assigned to \\
+\hline
+{\em update\+Rate} & The rate at which the button is updated \\
+\hline
+{\em cb} & The callback function executed when the button is pressed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_binary_parameter_ab20ac67f6e4bf146f9674f676c3f25f4}\label{class_binary_parameter_ab20ac67f6e4bf146f9674f676c3f25f4} 
+\index{BinaryParameter@{BinaryParameter}!isPressed@{isPressed}}
+\index{isPressed@{isPressed}!BinaryParameter@{BinaryParameter}}
+\doxysubsubsection{\texorpdfstring{isPressed()}{isPressed()}}
+{\footnotesize\ttfamily bool Binary\+Parameter\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks the state of the button. 
+
+\begin{DoxyReturn}{Returns}
+If the button is pressed or not 
+\end{DoxyReturn}
+\Hypertarget{class_binary_parameter_a062dee999020e270c30d8084e03b443d}\label{class_binary_parameter_a062dee999020e270c30d8084e03b443d} 
+\index{BinaryParameter@{BinaryParameter}!tick@{tick}}
+\index{tick@{tick}!BinaryParameter@{BinaryParameter}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Binary\+Parameter\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks to see if the button has been pressed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Parameters/\mbox{\hyperlink{_binary_parameter_8h}{Binary\+Parameter.\+h}}\end{DoxyCompactItemize}

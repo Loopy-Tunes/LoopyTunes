@@ -1,0 +1,58 @@
+\doxysection{Delay\+View.\+h}
+\hypertarget{_delay_view_8h_source}{}\label{_delay_view_8h_source}\index{GUI/FX/DelayView.h@{GUI/FX/DelayView.h}}
+\mbox{\hyperlink{_delay_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DELAYVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DELAYVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_stepped_slider_8h}{SteppedSlider.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{/*************************************************/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delay_view}{DelayView}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\textcolor{keywordtype}{int}\ ID,\ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ kpd);}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_ab8b595dc234ef0601cf04d41c7efd800}{tick}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_ae373b5ed7a30feddc9d7fb4289ceb9c3}{repaint}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_a3e8e544bae4596f46075c3f8761b7841}{clear}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_a816081053c4419382a597ad391b2b0c5}{setIsOpen}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isOpen\ =\ state;\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_a6180de868b7c0f2480c0a14787cc8ecf}{setIsPainted}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isPainted\ =\ state;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_view_ae0c3f3a5bc77fad136153ff336ccdc34}{setCurrentParam}}(\textcolor{keywordtype}{int}\ newParam)\ \{\ currentParam\ =\ newParam;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ trackID;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ keypad;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_bypass_button}{BypassButton}}\ bypass;}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ amount;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ size;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ feedback;\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ numberOfParameters\ =\ 3;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ parameterNames[3]\ =\ \{\textcolor{stringliteral}{"{}Amount"{}},\ \textcolor{stringliteral}{"{}Size"{}},\ \textcolor{stringliteral}{"{}Feedback"{}}\};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ currentParam\ =\ 0;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPainted;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ bypassIndexes[4]\ =\ \{2,\ 7,\ 12,\ 17\};}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

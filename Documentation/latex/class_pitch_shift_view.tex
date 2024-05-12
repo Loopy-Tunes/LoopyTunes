@@ -1,0 +1,114 @@
+\doxysection{Pitch\+Shift\+View Class Reference}
+\hypertarget{class_pitch_shift_view}{}\label{class_pitch_shift_view}\index{PitchShiftView@{PitchShiftView}}
+
+
+{\ttfamily \#include $<$Pitch\+Shift\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pitch_shift_view_aaa2724fbd96ff3fafa73f74813a44dcf}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_a713e23bfbc8eb132994ea84f523991fe}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_a38c3bad52b514ea8603c99bd08917cd5}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_a888563b7ec8913b0716c0e41fda2de31}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_a8ef693eec2a5f75b689d3f166cb97718}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_a86467f35d4049f2fd3a1eadfeb9f403c}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_view_ab003700abb9a0c1dc53110aac73ee850}{set\+Current\+Param}} (int new\+Param)
+\begin{DoxyCompactList}\small\item\em Sets the currently selected parameter on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_pitch_shift_view}{Pitch\+Shift\+View} Function\+: FX level GUI class for the pitch shift 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pitch_shift_view_a888563b7ec8913b0716c0e41fda2de31}\label{class_pitch_shift_view_a888563b7ec8913b0716c0e41fda2de31} 
+\index{PitchShiftView@{PitchShiftView}!clear@{clear}}
+\index{clear@{clear}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_pitch_shift_view_aaa2724fbd96ff3fafa73f74813a44dcf}\label{class_pitch_shift_view_aaa2724fbd96ff3fafa73f74813a44dcf} 
+\index{PitchShiftView@{PitchShiftView}!init@{init}}
+\index{init@{init}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the track view the instance belongs to \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pitch_shift_view_a38c3bad52b514ea8603c99bd08917cd5}\label{class_pitch_shift_view_a38c3bad52b514ea8603c99bd08917cd5} 
+\index{PitchShiftView@{PitchShiftView}!repaint@{repaint}}
+\index{repaint@{repaint}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_pitch_shift_view_ab003700abb9a0c1dc53110aac73ee850}\label{class_pitch_shift_view_ab003700abb9a0c1dc53110aac73ee850} 
+\index{PitchShiftView@{PitchShiftView}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the currently selected parameter on the LCD. 
+
+\Hypertarget{class_pitch_shift_view_a8ef693eec2a5f75b689d3f166cb97718}\label{class_pitch_shift_view_a8ef693eec2a5f75b689d3f166cb97718} 
+\index{PitchShiftView@{PitchShiftView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_pitch_shift_view_a86467f35d4049f2fd3a1eadfeb9f403c}\label{class_pitch_shift_view_a86467f35d4049f2fd3a1eadfeb9f403c} 
+\index{PitchShiftView@{PitchShiftView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_pitch_shift_view_a713e23bfbc8eb132994ea84f523991fe}\label{class_pitch_shift_view_a713e23bfbc8eb132994ea84f523991fe} 
+\index{PitchShiftView@{PitchShiftView}!tick@{tick}}
+\index{tick@{tick}!PitchShiftView@{PitchShiftView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_pitch_shift_view_8h}{Pitch\+Shift\+View.\+h}}\item 
+GUI/\+FX/\mbox{\hyperlink{_pitch_shift_view_8cpp}{Pitch\+Shift\+View.\+cpp}}\end{DoxyCompactItemize}

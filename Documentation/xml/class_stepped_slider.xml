@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_stepped_slider" kind="class" language="C++" prot="public">
+    <compoundname>SteppedSlider</compoundname>
+    <includes refid="_stepped_slider_8h" local="no">SteppedSlider.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stepped_slider_1a1d04b17f289b82be00928187a6a8c4e2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+        <definition>EncoderDriver* SteppedSlider::encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <qualifiedname>SteppedSlider::encoder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="40" column="19" bodyfile="GUI/FX/SteppedSlider.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_slider_1a3c48143fbd5fa684d33a7c6ee9c2e219" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SteppedSlider::paramID</definition>
+        <argsstring></argsstring>
+        <name>paramID</name>
+        <qualifiedname>SteppedSlider::paramID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="42" column="9" bodyfile="GUI/FX/SteppedSlider.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_slider_1a5d7014dd479a24368aea161f6f1243e9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref> *</type>
+        <definition>SteppedParameter* SteppedSlider::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>SteppedSlider::param</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="43" column="22" bodyfile="GUI/FX/SteppedSlider.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_slider_1a226bcbc0bf6662e75f2454a5149ac6cf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteppedSlider::curVal</definition>
+        <argsstring></argsstring>
+        <name>curVal</name>
+        <qualifiedname>SteppedSlider::curVal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="44" column="11" bodyfile="GUI/FX/SteppedSlider.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedSlider::init</definition>
+        <argsstring>(int ID, EncoderDriver *ed)</argsstring>
+        <name>init</name>
+        <qualifiedname>SteppedSlider::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>ed</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the parameter the instance is assigned to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="21" column="10" bodyfile="GUI/FX/SteppedSlider.cpp" bodystart="4" bodyend="12"/>
+        <references refid="class_encoder_driver_1aaa92980b9bd67e2ea6a2396716d7c4e8" compoundref="_encoder_driver_8h" startline="140" endline="149">EncoderDriver::getParameter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedSlider::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>SteppedSlider::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the slider to reflect any backend changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="26" column="10" bodyfile="GUI/FX/SteppedSlider.cpp" bodystart="14" bodyend="22"/>
+        <references refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" compoundref="_stepped_parameter_8h" startline="89" endline="89">SteppedParameter::getCurVal</references>
+        <references refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" compoundref="_stepped_slider_8cpp" startline="29" endline="32">repaint</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedSlider::setSelected</definition>
+        <argsstring>()</argsstring>
+        <name>setSelected</name>
+        <qualifiedname>SteppedSlider::setSelected</qualifiedname>
+        <briefdescription>
+<para>Changes the selected state to of the slider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="31" column="10" bodyfile="GUI/FX/SteppedSlider.cpp" bodystart="24" bodyend="27"/>
+        <references refid="class_encoder_driver_1a8f772f7feff5cb2093d36189ffc6fe66" compoundref="_encoder_driver_8h" startline="106" endline="116">EncoderDriver::setCurrentParam</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedSlider::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>SteppedSlider::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the slider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/SteppedSlider.h" line="36" column="10" bodyfile="GUI/FX/SteppedSlider.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref> Function: Slider for representing stepped parameters </para>
+    </detaileddescription>
+    <location file="GUI/FX/SteppedSlider.h" line="12" column="1" bodyfile="GUI/FX/SteppedSlider.h" bodystart="13" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_stepped_slider_1a226bcbc0bf6662e75f2454a5149ac6cf" prot="private" virt="non-virtual"><scope>SteppedSlider</scope><name>curVal</name></member>
+      <member refid="class_stepped_slider_1a1d04b17f289b82be00928187a6a8c4e2" prot="private" virt="non-virtual"><scope>SteppedSlider</scope><name>encoder</name></member>
+      <member refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" prot="public" virt="non-virtual"><scope>SteppedSlider</scope><name>init</name></member>
+      <member refid="class_stepped_slider_1a5d7014dd479a24368aea161f6f1243e9" prot="private" virt="non-virtual"><scope>SteppedSlider</scope><name>param</name></member>
+      <member refid="class_stepped_slider_1a3c48143fbd5fa684d33a7c6ee9c2e219" prot="private" virt="non-virtual"><scope>SteppedSlider</scope><name>paramID</name></member>
+      <member refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" prot="public" virt="non-virtual"><scope>SteppedSlider</scope><name>repaint</name></member>
+      <member refid="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" prot="public" virt="non-virtual"><scope>SteppedSlider</scope><name>setSelected</name></member>
+      <member refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" prot="public" virt="non-virtual"><scope>SteppedSlider</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

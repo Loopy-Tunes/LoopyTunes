@@ -1,0 +1,997 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classrevmodel" kind="class" language="C++" prot="public">
+    <compoundname>revmodel</compoundname>
+    <includes refid="revmodel_8hpp" local="no">revmodel.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrevmodel_1a3335b672ba4162689f4ba62217220bba" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <qualifiedname>revmodel::gain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="36" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a5d1d03e47e1748cfafb75aa4c181e7e5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::roomsize</definition>
+        <argsstring></argsstring>
+        <name>roomsize</name>
+        <qualifiedname>revmodel::roomsize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="37" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a794cded0d3a3a7f118dd2efc7cc04b0d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::roomsize1</definition>
+        <argsstring></argsstring>
+        <name>roomsize1</name>
+        <qualifiedname>revmodel::roomsize1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="37" column="14" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a5a42d8ad864422f270a06a9e8f01c234" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::damp</definition>
+        <argsstring></argsstring>
+        <name>damp</name>
+        <qualifiedname>revmodel::damp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="38" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a85c5a8480451f7820b6b987ecfdd8d8f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::damp1</definition>
+        <argsstring></argsstring>
+        <name>damp1</name>
+        <qualifiedname>revmodel::damp1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="38" column="10" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1afbee71bc3c98be04a2443949c441c3ac" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::wet</definition>
+        <argsstring></argsstring>
+        <name>wet</name>
+        <qualifiedname>revmodel::wet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="39" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a83e5d6fffff9168ba531e5dd869ee70f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::wet1</definition>
+        <argsstring></argsstring>
+        <name>wet1</name>
+        <qualifiedname>revmodel::wet1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="39" column="9" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a6318a8b2ed824787f2e6c930dd1a35f6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::wet2</definition>
+        <argsstring></argsstring>
+        <name>wet2</name>
+        <qualifiedname>revmodel::wet2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="39" column="13" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a537bb96039dd23b809454017588b4577" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::dry</definition>
+        <argsstring></argsstring>
+        <name>dry</name>
+        <qualifiedname>revmodel::dry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="40" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a6cf07618bcf859ca2a3b44c1da03fb22" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>revmodel::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="41" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ab482b5579444c91d3976333c616a4717" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>revmodel::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="42" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1acc59d494ce3b0930507ca34dd4553019" prot="private" static="no" mutable="no">
+        <type><ref refid="classcomb" kindref="compound">comb</ref></type>
+        <definition>comb revmodel::combL[numcombs]</definition>
+        <argsstring>[numcombs]</argsstring>
+        <name>combL</name>
+        <qualifiedname>revmodel::combL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="49" column="5" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a233d367b83177ea44c7f79c49a2603d6" prot="private" static="no" mutable="no">
+        <type><ref refid="classcomb" kindref="compound">comb</ref></type>
+        <definition>comb revmodel::combR[numcombs]</definition>
+        <argsstring>[numcombs]</argsstring>
+        <name>combR</name>
+        <qualifiedname>revmodel::combR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="50" column="5" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ab3105ed093c98fec2639eeec5c7d99cd" prot="private" static="no" mutable="no">
+        <type><ref refid="classallpass" kindref="compound">allpass</ref></type>
+        <definition>allpass revmodel::allpassL[numallpasses]</definition>
+        <argsstring>[numallpasses]</argsstring>
+        <name>allpassL</name>
+        <qualifiedname>revmodel::allpassL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="53" column="8" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a43fce01dc6da300298dcd48cc52e2ee6" prot="private" static="no" mutable="no">
+        <type><ref refid="classallpass" kindref="compound">allpass</ref></type>
+        <definition>allpass revmodel::allpassR[numallpasses]</definition>
+        <argsstring>[numallpasses]</argsstring>
+        <name>allpassR</name>
+        <qualifiedname>revmodel::allpassR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="54" column="8" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ae7153e8cf36a83f1fb53cf8bd8273865" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL1[combtuningL1]</definition>
+        <argsstring>[combtuningL1]</argsstring>
+        <name>bufcombL1</name>
+        <qualifiedname>revmodel::bufcombL1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="57" column="7" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1aee15cec59de74aeb67312128f4552cb3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR1[combtuningR1]</definition>
+        <argsstring>[combtuningR1]</argsstring>
+        <name>bufcombR1</name>
+        <qualifiedname>revmodel::bufcombR1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="58" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a4b690aa2d90e7b74a39c4aa74b96e08a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL2[combtuningL2]</definition>
+        <argsstring>[combtuningL2]</argsstring>
+        <name>bufcombL2</name>
+        <qualifiedname>revmodel::bufcombL2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="59" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1aea140aea1309927370af349e4186adb1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR2[combtuningR2]</definition>
+        <argsstring>[combtuningR2]</argsstring>
+        <name>bufcombR2</name>
+        <qualifiedname>revmodel::bufcombR2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="60" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a6f159f484c6d0204d31660d860ba3b1e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL3[combtuningL3]</definition>
+        <argsstring>[combtuningL3]</argsstring>
+        <name>bufcombL3</name>
+        <qualifiedname>revmodel::bufcombL3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="61" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a06e5178914dd229ea2f1fd75f90f3486" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR3[combtuningR3]</definition>
+        <argsstring>[combtuningR3]</argsstring>
+        <name>bufcombR3</name>
+        <qualifiedname>revmodel::bufcombR3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="62" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a1ee473312621604170a3458a065d5394" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL4[combtuningL4]</definition>
+        <argsstring>[combtuningL4]</argsstring>
+        <name>bufcombL4</name>
+        <qualifiedname>revmodel::bufcombL4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="63" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a98f79f7b7a951d8338fa43fcf0b4e56e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR4[combtuningR4]</definition>
+        <argsstring>[combtuningR4]</argsstring>
+        <name>bufcombR4</name>
+        <qualifiedname>revmodel::bufcombR4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="64" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a64b941de1e126bca917178a447d66802" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL5[combtuningL5]</definition>
+        <argsstring>[combtuningL5]</argsstring>
+        <name>bufcombL5</name>
+        <qualifiedname>revmodel::bufcombL5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="65" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ac174805a058f0134fca39fb89b2c6a4d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR5[combtuningR5]</definition>
+        <argsstring>[combtuningR5]</argsstring>
+        <name>bufcombR5</name>
+        <qualifiedname>revmodel::bufcombR5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="66" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a4679a4df397640c3f3b9b69f0066886b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL6[combtuningL6]</definition>
+        <argsstring>[combtuningL6]</argsstring>
+        <name>bufcombL6</name>
+        <qualifiedname>revmodel::bufcombL6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="67" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a507685f49b2edee6be57a65cd420811e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR6[combtuningR6]</definition>
+        <argsstring>[combtuningR6]</argsstring>
+        <name>bufcombR6</name>
+        <qualifiedname>revmodel::bufcombR6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="68" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a119b431675eecb752b2be4d10ca2046a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL7[combtuningL7]</definition>
+        <argsstring>[combtuningL7]</argsstring>
+        <name>bufcombL7</name>
+        <qualifiedname>revmodel::bufcombL7</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="69" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a302aff63cadc9e2152e143c93bb08acb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR7[combtuningR7]</definition>
+        <argsstring>[combtuningR7]</argsstring>
+        <name>bufcombR7</name>
+        <qualifiedname>revmodel::bufcombR7</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="70" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ad93d1eea2b9ce8fbe04d47177212bb46" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombL8[combtuningL8]</definition>
+        <argsstring>[combtuningL8]</argsstring>
+        <name>bufcombL8</name>
+        <qualifiedname>revmodel::bufcombL8</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="71" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a6e34847041d803be08aedc857f1df57b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufcombR8[combtuningR8]</definition>
+        <argsstring>[combtuningR8]</argsstring>
+        <name>bufcombR8</name>
+        <qualifiedname>revmodel::bufcombR8</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="72" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1ae647155552efe2eea8e2f4db048e6949" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassL1[allpasstuningL1]</definition>
+        <argsstring>[allpasstuningL1]</argsstring>
+        <name>bufallpassL1</name>
+        <qualifiedname>revmodel::bufallpassL1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="75" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1af8b52e6e9ecd23a7344e3feeb3eff82d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassR1[allpasstuningR1]</definition>
+        <argsstring>[allpasstuningR1]</argsstring>
+        <name>bufallpassR1</name>
+        <qualifiedname>revmodel::bufallpassR1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="76" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a8f7e2fa5185529e007fefc35785d4f39" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassL2[allpasstuningL2]</definition>
+        <argsstring>[allpasstuningL2]</argsstring>
+        <name>bufallpassL2</name>
+        <qualifiedname>revmodel::bufallpassL2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="77" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a4a2a40356d9c9f5d6468cebc5ad3836d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassR2[allpasstuningR2]</definition>
+        <argsstring>[allpasstuningR2]</argsstring>
+        <name>bufallpassR2</name>
+        <qualifiedname>revmodel::bufallpassR2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="78" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1af91f3d3fdd70d649c08cde9f6bfab1a5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassL3[allpasstuningL3]</definition>
+        <argsstring>[allpasstuningL3]</argsstring>
+        <name>bufallpassL3</name>
+        <qualifiedname>revmodel::bufallpassL3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="79" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a24a7133a530f55dced752917f4dc139d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassR3[allpasstuningR3]</definition>
+        <argsstring>[allpasstuningR3]</argsstring>
+        <name>bufallpassR3</name>
+        <qualifiedname>revmodel::bufallpassR3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="80" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1a5fefae79996c51daac81173d964aadef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassL4[allpasstuningL4]</definition>
+        <argsstring>[allpasstuningL4]</argsstring>
+        <name>bufallpassL4</name>
+        <qualifiedname>revmodel::bufallpassL4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="81" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrevmodel_1aab6c3b167ec607ec597edfb601e414f0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float revmodel::bufallpassR4[allpasstuningR4]</definition>
+        <argsstring>[allpasstuningR4]</argsstring>
+        <name>bufallpassR4</name>
+        <qualifiedname>revmodel::bufallpassR4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="82" column="6" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrevmodel_1ad924b3d943f71aa720ea3d58cee00fe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>revmodel::revmodel</definition>
+        <argsstring>()</argsstring>
+        <name>revmodel</name>
+        <qualifiedname>revmodel::revmodel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="17" column="1" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="9" bodyend="55"/>
+        <references refid="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" compoundref="tuning_8h" startline="48">allpasstuningL1</references>
+        <references refid="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" compoundref="tuning_8h" startline="50">allpasstuningL2</references>
+        <references refid="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" compoundref="tuning_8h" startline="52">allpasstuningL3</references>
+        <references refid="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" compoundref="tuning_8h" startline="54">allpasstuningL4</references>
+        <references refid="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" compoundref="tuning_8h" startline="49">allpasstuningR1</references>
+        <references refid="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" compoundref="tuning_8h" startline="51">allpasstuningR2</references>
+        <references refid="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" compoundref="tuning_8h" startline="53">allpasstuningR3</references>
+        <references refid="tuning_8h_1a00d759e1af846b3980f749ea03964928" compoundref="tuning_8h" startline="55">allpasstuningR4</references>
+        <references refid="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" compoundref="tuning_8h" startline="32">combtuningL1</references>
+        <references refid="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" compoundref="tuning_8h" startline="34">combtuningL2</references>
+        <references refid="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" compoundref="tuning_8h" startline="36">combtuningL3</references>
+        <references refid="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" compoundref="tuning_8h" startline="38">combtuningL4</references>
+        <references refid="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" compoundref="tuning_8h" startline="40">combtuningL5</references>
+        <references refid="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" compoundref="tuning_8h" startline="42">combtuningL6</references>
+        <references refid="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" compoundref="tuning_8h" startline="44">combtuningL7</references>
+        <references refid="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" compoundref="tuning_8h" startline="46">combtuningL8</references>
+        <references refid="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" compoundref="tuning_8h" startline="33">combtuningR1</references>
+        <references refid="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" compoundref="tuning_8h" startline="35">combtuningR2</references>
+        <references refid="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" compoundref="tuning_8h" startline="37">combtuningR3</references>
+        <references refid="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" compoundref="tuning_8h" startline="39">combtuningR4</references>
+        <references refid="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" compoundref="tuning_8h" startline="41">combtuningR5</references>
+        <references refid="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" compoundref="tuning_8h" startline="43">combtuningR6</references>
+        <references refid="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" compoundref="tuning_8h" startline="45">combtuningR7</references>
+        <references refid="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" compoundref="tuning_8h" startline="47">combtuningR8</references>
+        <references refid="tuning_8h_1af22778db97e16041f5d2e2fca4c308b8" compoundref="tuning_8h" startline="20">initialdamp</references>
+        <references refid="tuning_8h_1af1c67ee2860505e7a3709fe5373b6e75" compoundref="tuning_8h" startline="22">initialdry</references>
+        <references refid="tuning_8h_1ada8dbb1ebee3ac40472d19b2bea9a8a1" compoundref="tuning_8h" startline="24">initialmode</references>
+        <references refid="tuning_8h_1ae7682d913183f17fdb9eeb2b7bc99809" compoundref="tuning_8h" startline="19">initialroom</references>
+        <references refid="tuning_8h_1aeb22d1099dcd9cf40d40775bedc8505d" compoundref="tuning_8h" startline="21">initialwet</references>
+        <references refid="tuning_8h_1ac59a94da5e00f728a58de07f0a115d77" compoundref="tuning_8h" startline="23">initialwidth</references>
+        <references refid="classrevmodel_1a57c4aad6531c32e11691dfbe013bdad9" compoundref="revmodel_8cpp" startline="57" endline="72">mute</references>
+        <references refid="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" compoundref="allpass_8cpp" startline="14" endline="18">allpass::setbuffer</references>
+        <references refid="classcomb_1a000d3f031781c27ceaf487a1ec957fec" compoundref="comb_8cpp" startline="15" endline="19">comb::setbuffer</references>
+        <references refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" compoundref="revmodel_8cpp" startline="195" endline="199">setdamp</references>
+        <references refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" compoundref="revmodel_8cpp" startline="217" endline="220">setdry</references>
+        <references refid="classallpass_1ad636d830e21de3dd61928875db95c899" compoundref="allpass_8cpp" startline="26" endline="29">allpass::setfeedback</references>
+        <references refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" compoundref="revmodel_8cpp" startline="238" endline="242">setmode</references>
+        <references refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" compoundref="revmodel_8cpp" startline="184" endline="188">setroomsize</references>
+        <references refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" compoundref="revmodel_8cpp" startline="206" endline="210">setwet</references>
+        <references refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" compoundref="revmodel_8cpp" startline="227" endline="231">setwidth</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a57c4aad6531c32e11691dfbe013bdad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::mute</definition>
+        <argsstring>()</argsstring>
+        <name>mute</name>
+        <qualifiedname>revmodel::mute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="18" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="57" bodyend="72"/>
+        <references refid="tuning_8h_1a07e585230464f52428c5ed003afd31a0" compoundref="tuning_8h" startline="25">freezemode</references>
+        <references refid="classrevmodel_1a680df826bb6a1aea3d0e8a4259a2cc83" compoundref="revmodel_8cpp" startline="244" endline="250">getmode</references>
+        <references refid="classallpass_1af93a4f1d4dcc544323978031cb234aa6" compoundref="allpass_8cpp" startline="20" endline="24">allpass::mute</references>
+        <references refid="classcomb_1ae18d1b1ea26d1c18087d3d8feeb7145d" compoundref="comb_8cpp" startline="21" endline="25">comb::mute</references>
+        <references refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" compoundref="tuning_8h" startline="11">numallpasses</references>
+        <references refid="tuning_8h_1a6113b534a2364513007632803a5a5606" compoundref="tuning_8h" startline="10">numcombs</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a6c00999a98dce5a8f8cc40abd52124b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::processmix</definition>
+        <argsstring>(float *inputL, float *inputR, float *outputL, float *outputR, long numsamples, int skip)</argsstring>
+        <name>processmix</name>
+        <qualifiedname>revmodel::processmix</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>inputL</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>inputR</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outputL</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outputR</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>numsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="19" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="109" bodyend="142"/>
+        <references refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" compoundref="tuning_8h" startline="11">numallpasses</references>
+        <references refid="tuning_8h_1a6113b534a2364513007632803a5a5606" compoundref="tuning_8h" startline="10">numcombs</references>
+        <references refid="classallpass_1a72ef1d44f5807011889020f2c316cc32" compoundref="allpass_8hpp" startline="30" endline="44">allpass::process</references>
+        <references refid="classcomb_1a0d4801f6d16411a2f63ff1a25d2fe5fb" compoundref="comb_8hpp" startline="36" endline="51">comb::process</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::processreplace</definition>
+        <argsstring>(float *inputL, float *inputR, float *outputL, float *outputR, long numsamples, int skip)</argsstring>
+        <name>processreplace</name>
+        <qualifiedname>revmodel::processreplace</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>inputL</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>inputR</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outputL</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outputR</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>numsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="20" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="74" bodyend="107"/>
+        <references refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" compoundref="tuning_8h" startline="11">numallpasses</references>
+        <references refid="tuning_8h_1a6113b534a2364513007632803a5a5606" compoundref="tuning_8h" startline="10">numcombs</references>
+        <references refid="classallpass_1a72ef1d44f5807011889020f2c316cc32" compoundref="allpass_8hpp" startline="30" endline="44">allpass::process</references>
+        <references refid="classcomb_1a0d4801f6d16411a2f63ff1a25d2fe5fb" compoundref="comb_8hpp" startline="36" endline="51">comb::process</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setroomsize</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setroomsize</name>
+        <qualifiedname>revmodel::setroomsize</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="21" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="184" bodyend="188"/>
+        <references refid="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" compoundref="tuning_8h" startline="18">offsetroom</references>
+        <references refid="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" compoundref="tuning_8h" startline="17">scaleroom</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a196043f0bd588a738a8065d186f48a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getroomsize</definition>
+        <argsstring>()</argsstring>
+        <name>getroomsize</name>
+        <qualifiedname>revmodel::getroomsize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="22" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="190" bodyend="193"/>
+        <references refid="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" compoundref="tuning_8h" startline="18">offsetroom</references>
+        <references refid="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" compoundref="tuning_8h" startline="17">scaleroom</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setdamp</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setdamp</name>
+        <qualifiedname>revmodel::setdamp</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="23" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="195" bodyend="199"/>
+        <references refid="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" compoundref="tuning_8h" startline="16">scaledamp</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1aac6ef7e868803b080337728be8180566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getdamp</definition>
+        <argsstring>()</argsstring>
+        <name>getdamp</name>
+        <qualifiedname>revmodel::getdamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="24" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="201" bodyend="204"/>
+        <references refid="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" compoundref="tuning_8h" startline="16">scaledamp</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setwet</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setwet</name>
+        <qualifiedname>revmodel::setwet</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="25" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="206" bodyend="210"/>
+        <references refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" compoundref="tuning_8h" startline="14">scalewet</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1ae9033d82fb3a58529b35110160b1f4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getwet</definition>
+        <argsstring>()</argsstring>
+        <name>getwet</name>
+        <qualifiedname>revmodel::getwet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="26" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="212" bodyend="215"/>
+        <references refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" compoundref="tuning_8h" startline="14">scalewet</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setdry</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setdry</name>
+        <qualifiedname>revmodel::setdry</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="27" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="217" bodyend="220"/>
+        <references refid="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" compoundref="tuning_8h" startline="15">scaledry</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a45e7883001a56414dfe9ec787e3f1529" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getdry</definition>
+        <argsstring>()</argsstring>
+        <name>getdry</name>
+        <qualifiedname>revmodel::getdry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="28" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="222" bodyend="225"/>
+        <references refid="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" compoundref="tuning_8h" startline="15">scaledry</references>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a87672a6d05d30977633562f909e3c259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setwidth</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setwidth</name>
+        <qualifiedname>revmodel::setwidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="29" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="227" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1ac98d26e165bde52c0bb962e4bca4f950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getwidth</definition>
+        <argsstring>()</argsstring>
+        <name>getwidth</name>
+        <qualifiedname>revmodel::getwidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="30" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::setmode</definition>
+        <argsstring>(float value)</argsstring>
+        <name>setmode</name>
+        <qualifiedname>revmodel::setmode</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="31" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="238" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classrevmodel_1a680df826bb6a1aea3d0e8a4259a2cc83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float revmodel::getmode</definition>
+        <argsstring>()</argsstring>
+        <name>getmode</name>
+        <qualifiedname>revmodel::getmode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="32" column="6" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="244" bodyend="250"/>
+        <references refid="tuning_8h_1a07e585230464f52428c5ed003afd31a0" compoundref="tuning_8h" startline="25">freezemode</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrevmodel_1a0ef1c9c20fa55bffb9e1b0abcb0d8f1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void revmodel::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>revmodel::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/revmodel.hpp" line="34" column="5" bodyfile="DSP/FX/Reverb/revmodel.cpp" bodystart="144" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Reverb/revmodel.hpp" line="14" column="1" bodyfile="DSP/FX/Reverb/revmodel.hpp" bodystart="15" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classrevmodel_1ab3105ed093c98fec2639eeec5c7d99cd" prot="private" virt="non-virtual"><scope>revmodel</scope><name>allpassL</name></member>
+      <member refid="classrevmodel_1a43fce01dc6da300298dcd48cc52e2ee6" prot="private" virt="non-virtual"><scope>revmodel</scope><name>allpassR</name></member>
+      <member refid="classrevmodel_1ae647155552efe2eea8e2f4db048e6949" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassL1</name></member>
+      <member refid="classrevmodel_1a8f7e2fa5185529e007fefc35785d4f39" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassL2</name></member>
+      <member refid="classrevmodel_1af91f3d3fdd70d649c08cde9f6bfab1a5" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassL3</name></member>
+      <member refid="classrevmodel_1a5fefae79996c51daac81173d964aadef" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassL4</name></member>
+      <member refid="classrevmodel_1af8b52e6e9ecd23a7344e3feeb3eff82d" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassR1</name></member>
+      <member refid="classrevmodel_1a4a2a40356d9c9f5d6468cebc5ad3836d" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassR2</name></member>
+      <member refid="classrevmodel_1a24a7133a530f55dced752917f4dc139d" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassR3</name></member>
+      <member refid="classrevmodel_1aab6c3b167ec607ec597edfb601e414f0" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufallpassR4</name></member>
+      <member refid="classrevmodel_1ae7153e8cf36a83f1fb53cf8bd8273865" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL1</name></member>
+      <member refid="classrevmodel_1a4b690aa2d90e7b74a39c4aa74b96e08a" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL2</name></member>
+      <member refid="classrevmodel_1a6f159f484c6d0204d31660d860ba3b1e" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL3</name></member>
+      <member refid="classrevmodel_1a1ee473312621604170a3458a065d5394" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL4</name></member>
+      <member refid="classrevmodel_1a64b941de1e126bca917178a447d66802" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL5</name></member>
+      <member refid="classrevmodel_1a4679a4df397640c3f3b9b69f0066886b" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL6</name></member>
+      <member refid="classrevmodel_1a119b431675eecb752b2be4d10ca2046a" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL7</name></member>
+      <member refid="classrevmodel_1ad93d1eea2b9ce8fbe04d47177212bb46" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombL8</name></member>
+      <member refid="classrevmodel_1aee15cec59de74aeb67312128f4552cb3" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR1</name></member>
+      <member refid="classrevmodel_1aea140aea1309927370af349e4186adb1" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR2</name></member>
+      <member refid="classrevmodel_1a06e5178914dd229ea2f1fd75f90f3486" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR3</name></member>
+      <member refid="classrevmodel_1a98f79f7b7a951d8338fa43fcf0b4e56e" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR4</name></member>
+      <member refid="classrevmodel_1ac174805a058f0134fca39fb89b2c6a4d" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR5</name></member>
+      <member refid="classrevmodel_1a507685f49b2edee6be57a65cd420811e" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR6</name></member>
+      <member refid="classrevmodel_1a302aff63cadc9e2152e143c93bb08acb" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR7</name></member>
+      <member refid="classrevmodel_1a6e34847041d803be08aedc857f1df57b" prot="private" virt="non-virtual"><scope>revmodel</scope><name>bufcombR8</name></member>
+      <member refid="classrevmodel_1acc59d494ce3b0930507ca34dd4553019" prot="private" virt="non-virtual"><scope>revmodel</scope><name>combL</name></member>
+      <member refid="classrevmodel_1a233d367b83177ea44c7f79c49a2603d6" prot="private" virt="non-virtual"><scope>revmodel</scope><name>combR</name></member>
+      <member refid="classrevmodel_1a5a42d8ad864422f270a06a9e8f01c234" prot="private" virt="non-virtual"><scope>revmodel</scope><name>damp</name></member>
+      <member refid="classrevmodel_1a85c5a8480451f7820b6b987ecfdd8d8f" prot="private" virt="non-virtual"><scope>revmodel</scope><name>damp1</name></member>
+      <member refid="classrevmodel_1a537bb96039dd23b809454017588b4577" prot="private" virt="non-virtual"><scope>revmodel</scope><name>dry</name></member>
+      <member refid="classrevmodel_1a3335b672ba4162689f4ba62217220bba" prot="private" virt="non-virtual"><scope>revmodel</scope><name>gain</name></member>
+      <member refid="classrevmodel_1aac6ef7e868803b080337728be8180566" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getdamp</name></member>
+      <member refid="classrevmodel_1a45e7883001a56414dfe9ec787e3f1529" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getdry</name></member>
+      <member refid="classrevmodel_1a680df826bb6a1aea3d0e8a4259a2cc83" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getmode</name></member>
+      <member refid="classrevmodel_1a196043f0bd588a738a8065d186f48a74" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getroomsize</name></member>
+      <member refid="classrevmodel_1ae9033d82fb3a58529b35110160b1f4e8" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getwet</name></member>
+      <member refid="classrevmodel_1ac98d26e165bde52c0bb962e4bca4f950" prot="public" virt="non-virtual"><scope>revmodel</scope><name>getwidth</name></member>
+      <member refid="classrevmodel_1ab482b5579444c91d3976333c616a4717" prot="private" virt="non-virtual"><scope>revmodel</scope><name>mode</name></member>
+      <member refid="classrevmodel_1a57c4aad6531c32e11691dfbe013bdad9" prot="public" virt="non-virtual"><scope>revmodel</scope><name>mute</name></member>
+      <member refid="classrevmodel_1a6c00999a98dce5a8f8cc40abd52124b3" prot="public" virt="non-virtual"><scope>revmodel</scope><name>processmix</name></member>
+      <member refid="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" prot="public" virt="non-virtual"><scope>revmodel</scope><name>processreplace</name></member>
+      <member refid="classrevmodel_1ad924b3d943f71aa720ea3d58cee00fe9" prot="public" virt="non-virtual"><scope>revmodel</scope><name>revmodel</name></member>
+      <member refid="classrevmodel_1a5d1d03e47e1748cfafb75aa4c181e7e5" prot="private" virt="non-virtual"><scope>revmodel</scope><name>roomsize</name></member>
+      <member refid="classrevmodel_1a794cded0d3a3a7f118dd2efc7cc04b0d" prot="private" virt="non-virtual"><scope>revmodel</scope><name>roomsize1</name></member>
+      <member refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setdamp</name></member>
+      <member refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setdry</name></member>
+      <member refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setmode</name></member>
+      <member refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setroomsize</name></member>
+      <member refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setwet</name></member>
+      <member refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" prot="public" virt="non-virtual"><scope>revmodel</scope><name>setwidth</name></member>
+      <member refid="classrevmodel_1a0ef1c9c20fa55bffb9e1b0abcb0d8f1a" prot="private" virt="non-virtual"><scope>revmodel</scope><name>update</name></member>
+      <member refid="classrevmodel_1afbee71bc3c98be04a2443949c441c3ac" prot="private" virt="non-virtual"><scope>revmodel</scope><name>wet</name></member>
+      <member refid="classrevmodel_1a83e5d6fffff9168ba531e5dd869ee70f" prot="private" virt="non-virtual"><scope>revmodel</scope><name>wet1</name></member>
+      <member refid="classrevmodel_1a6318a8b2ed824787f2e6c930dd1a35f6" prot="private" virt="non-virtual"><scope>revmodel</scope><name>wet2</name></member>
+      <member refid="classrevmodel_1a6cf07618bcf859ca2a3b44c1da03fb22" prot="private" virt="non-virtual"><scope>revmodel</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

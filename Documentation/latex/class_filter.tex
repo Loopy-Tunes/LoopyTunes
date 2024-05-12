@@ -1,0 +1,116 @@
+\doxysection{Filter Class Reference}
+\hypertarget{class_filter}{}\label{class_filter}\index{Filter@{Filter}}
+
+
+{\ttfamily \#include $<$Filter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_filter_a9cd2dd256c987729e1af80100fdc5dcc}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, int track\+ID)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_a77b74157db71df930d571c612033be66}{set\+Default\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Sets tthe default parameter values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_a08f8b2a0cef00c62593b5bc808ff79f9}{set\+Bypass}} ()
+\begin{DoxyCompactList}\small\item\em Sets the bypass state of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_a4228499d0305bd75a3ab323ffcdf6cfd}{set\+Freq}} (float f)
+\begin{DoxyCompactList}\small\item\em Sets the cutoff frequency of the filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_a1741a1887e68134431ddfb221a9180e7}{set\+Mode}} (float m)
+\begin{DoxyCompactList}\small\item\em Sets the mode of the filter, either high pass or low pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_a9f202d29f2be23e354c4964fc9841728}{process\+Block}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples through the filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_filter_a9cd2dd256c987729e1af80100fdc5dcc}\label{class_filter_a9cd2dd256c987729e1af80100fdc5dcc} 
+\index{Filter@{Filter}!init@{init}}
+\index{init@{init}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Filter\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{int}]{track\+ID }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the encoder driver used to initialise the parameters \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+{\em track\+ID} & The ID of the track the instance belongs to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_filter_a9f202d29f2be23e354c4964fc9841728}\label{class_filter_a9f202d29f2be23e354c4964fc9841728} 
+\index{Filter@{Filter}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Filter\+::process\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples through the filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & An array of pointers pointing to the input buffer \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_filter_a08f8b2a0cef00c62593b5bc808ff79f9}\label{class_filter_a08f8b2a0cef00c62593b5bc808ff79f9} 
+\index{Filter@{Filter}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void Filter\+::set\+Bypass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bypass state of the instance. 
+
+\Hypertarget{class_filter_a77b74157db71df930d571c612033be66}\label{class_filter_a77b74157db71df930d571c612033be66} 
+\index{Filter@{Filter}!setDefaultValues@{setDefaultValues}}
+\index{setDefaultValues@{setDefaultValues}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setDefaultValues()}{setDefaultValues()}}
+{\footnotesize\ttfamily void Filter\+::set\+Default\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets tthe default parameter values. 
+
+\Hypertarget{class_filter_a4228499d0305bd75a3ab323ffcdf6cfd}\label{class_filter_a4228499d0305bd75a3ab323ffcdf6cfd} 
+\index{Filter@{Filter}!setFreq@{setFreq}}
+\index{setFreq@{setFreq}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setFreq()}{setFreq()}}
+{\footnotesize\ttfamily void Filter\+::set\+Freq (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the cutoff frequency of the filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The new cutoff frequency \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_filter_a1741a1887e68134431ddfb221a9180e7}\label{class_filter_a1741a1887e68134431ddfb221a9180e7} 
+\index{Filter@{Filter}!setMode@{setMode}}
+\index{setMode@{setMode}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void Filter\+::set\+Mode (\begin{DoxyParamCaption}\item[{float}]{m }\end{DoxyParamCaption})}
+
+
+
+Sets the mode of the filter, either high pass or low pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the new mode \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\mbox{\hyperlink{_filter_8h}{Filter.\+h}}\item 
+DSP/\+FX/\mbox{\hyperlink{_filter_8cpp}{Filter.\+cpp}}\end{DoxyCompactItemize}

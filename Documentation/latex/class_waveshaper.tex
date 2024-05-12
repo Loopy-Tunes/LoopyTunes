@@ -1,0 +1,264 @@
+\doxysection{Waveshaper Class Reference}
+\hypertarget{class_waveshaper}{}\label{class_waveshaper}\index{Waveshaper@{Waveshaper}}
+
+
+{\ttfamily \#include $<$Waveshaper.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_waveshaper_ac04461769908282db7325214eba45087}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, int track\+ID)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a47e4bc80a0c83e31364c8366b080c134}{set\+Default\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Sets tthe default parameter values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a2313630b34e917c5b573ada3957c35b9}{set\+Bypass}} ()
+\begin{DoxyCompactList}\small\item\em Sets the bypass state of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a0f5e75a5913f3d65e34bae649ee83f45}{set\+Amount}} (float a)
+\begin{DoxyCompactList}\small\item\em Sets the amount of the effect in the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a3db430becb2df8a42cbcb0486414c039}{set\+Func\+Control}} (float fc)
+\begin{DoxyCompactList}\small\item\em Sets the function control value of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_abf1a2cbeb9cf285159fc7c2522dd2d8a}{set\+Mode}} (float m)
+\begin{DoxyCompactList}\small\item\em Sets the mode of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a67420571eeacdabc3629118ffb1f7590}{scale\+Control\+Param}} ()
+\begin{DoxyCompactList}\small\item\em Scales the value of the function control value for use with the different modes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a44318a7b6e2ab2ffd5ef074bc51c4958}{set\+Input\+AG}} (float \texorpdfstring{$\ast$}{*}buffer\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sets the input values to be used with the auto gain system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a79a46c6bf0e1b895692d8f0aa80ed94a}{set\+Output\+AG}} (float \texorpdfstring{$\ast$}{*}buffer\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sets the output values to be used with the auto gain system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a00ea2d1f63e96d9b7490d3cd406c174d}{calculate\+Auto\+Gain}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sets the auto gain value for each sample in the block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a9c93d163a6d94bd168518d05e9e957ca}{apply\+Auto\+Gain}} (float \texorpdfstring{$\ast$}{*}buffer\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Applies the calculated auto gain values to a block of samples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_aee769a45659eeef817fd492ab4fe4cf4}{process\+Block}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a5355a959d813d64f04fbe20d632ca4c9}{process\+Clipper}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples using the clipper algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_ad97bfdbd0967ef98837efbbdadc8f3ed}{process\+Folder}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples using the wavefolder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a86dd3c75d954e3b521d28b514a00b7cd}{process\+LFO}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Modulates each sample in the block using an LFO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waveshaper_a62d9eb0ea8b9ef59f9c68d04bc07df7d}{process\+Bit\+Reducer}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reduces the bit depth of each sample in a block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_waveshaper_a9c93d163a6d94bd168518d05e9e957ca}\label{class_waveshaper_a9c93d163a6d94bd168518d05e9e957ca} 
+\index{Waveshaper@{Waveshaper}!applyAutoGain@{applyAutoGain}}
+\index{applyAutoGain@{applyAutoGain}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{applyAutoGain()}{applyAutoGain()}}
+{\footnotesize\ttfamily void Waveshaper\+::apply\+Auto\+Gain (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buffer\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applies the calculated auto gain values to a block of samples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer the auto gain is to be applied to \\
+\hline
+{\em size} & The size of the buffer in samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_a00ea2d1f63e96d9b7490d3cd406c174d}\label{class_waveshaper_a00ea2d1f63e96d9b7490d3cd406c174d} 
+\index{Waveshaper@{Waveshaper}!calculateAutoGain@{calculateAutoGain}}
+\index{calculateAutoGain@{calculateAutoGain}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{calculateAutoGain()}{calculateAutoGain()}}
+{\footnotesize\ttfamily void Waveshaper\+::calculate\+Auto\+Gain (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the auto gain value for each sample in the block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_ac04461769908282db7325214eba45087}\label{class_waveshaper_ac04461769908282db7325214eba45087} 
+\index{Waveshaper@{Waveshaper}!init@{init}}
+\index{init@{init}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Waveshaper\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{int}]{track\+ID }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the encoder driver used to initialise the parameters \\
+\hline
+{\em track\+ID} & The ID of the track the instance belongs to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_a62d9eb0ea8b9ef59f9c68d04bc07df7d}\label{class_waveshaper_a62d9eb0ea8b9ef59f9c68d04bc07df7d} 
+\index{Waveshaper@{Waveshaper}!processBitReducer@{processBitReducer}}
+\index{processBitReducer@{processBitReducer}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{processBitReducer()}{processBitReducer()}}
+{\footnotesize\ttfamily void Waveshaper\+::process\+Bit\+Reducer (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Reduces the bit depth of each sample in a block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The block of samples \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_aee769a45659eeef817fd492ab4fe4cf4}\label{class_waveshaper_aee769a45659eeef817fd492ab4fe4cf4} 
+\index{Waveshaper@{Waveshaper}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Waveshaper\+::process\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The block of samples \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_a5355a959d813d64f04fbe20d632ca4c9}\label{class_waveshaper_a5355a959d813d64f04fbe20d632ca4c9} 
+\index{Waveshaper@{Waveshaper}!processClipper@{processClipper}}
+\index{processClipper@{processClipper}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{processClipper()}{processClipper()}}
+{\footnotesize\ttfamily void Waveshaper\+::process\+Clipper (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples using the clipper algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The block of samples \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_ad97bfdbd0967ef98837efbbdadc8f3ed}\label{class_waveshaper_ad97bfdbd0967ef98837efbbdadc8f3ed} 
+\index{Waveshaper@{Waveshaper}!processFolder@{processFolder}}
+\index{processFolder@{processFolder}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{processFolder()}{processFolder()}}
+{\footnotesize\ttfamily void Waveshaper\+::process\+Folder (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples using the wavefolder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The block of samples \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_a86dd3c75d954e3b521d28b514a00b7cd}\label{class_waveshaper_a86dd3c75d954e3b521d28b514a00b7cd} 
+\index{Waveshaper@{Waveshaper}!processLFO@{processLFO}}
+\index{processLFO@{processLFO}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{processLFO()}{processLFO()}}
+{\footnotesize\ttfamily void Waveshaper\+::process\+LFO (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Modulates each sample in the block using an LFO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The block of samples \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_waveshaper_a67420571eeacdabc3629118ffb1f7590}\label{class_waveshaper_a67420571eeacdabc3629118ffb1f7590} 
+\index{Waveshaper@{Waveshaper}!scaleControlParam@{scaleControlParam}}
+\index{scaleControlParam@{scaleControlParam}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{scaleControlParam()}{scaleControlParam()}}
+{\footnotesize\ttfamily void Waveshaper\+::scale\+Control\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the value of the function control value for use with the different modes. 
+
+\Hypertarget{class_waveshaper_a0f5e75a5913f3d65e34bae649ee83f45}\label{class_waveshaper_a0f5e75a5913f3d65e34bae649ee83f45} 
+\index{Waveshaper@{Waveshaper}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Amount (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the amount of the effect in the output. 
+
+\Hypertarget{class_waveshaper_a2313630b34e917c5b573ada3957c35b9}\label{class_waveshaper_a2313630b34e917c5b573ada3957c35b9} 
+\index{Waveshaper@{Waveshaper}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Bypass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bypass state of the instance. 
+
+\Hypertarget{class_waveshaper_a47e4bc80a0c83e31364c8366b080c134}\label{class_waveshaper_a47e4bc80a0c83e31364c8366b080c134} 
+\index{Waveshaper@{Waveshaper}!setDefaultValues@{setDefaultValues}}
+\index{setDefaultValues@{setDefaultValues}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setDefaultValues()}{setDefaultValues()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Default\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets tthe default parameter values. 
+
+\Hypertarget{class_waveshaper_a3db430becb2df8a42cbcb0486414c039}\label{class_waveshaper_a3db430becb2df8a42cbcb0486414c039} 
+\index{Waveshaper@{Waveshaper}!setFuncControl@{setFuncControl}}
+\index{setFuncControl@{setFuncControl}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setFuncControl()}{setFuncControl()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Func\+Control (\begin{DoxyParamCaption}\item[{float}]{fc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the function control value of the instance. 
+
+\Hypertarget{class_waveshaper_a44318a7b6e2ab2ffd5ef074bc51c4958}\label{class_waveshaper_a44318a7b6e2ab2ffd5ef074bc51c4958} 
+\index{Waveshaper@{Waveshaper}!setInputAG@{setInputAG}}
+\index{setInputAG@{setInputAG}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setInputAG()}{setInputAG()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Input\+AG (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buffer\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the input values to be used with the auto gain system. 
+
+\Hypertarget{class_waveshaper_abf1a2cbeb9cf285159fc7c2522dd2d8a}\label{class_waveshaper_abf1a2cbeb9cf285159fc7c2522dd2d8a} 
+\index{Waveshaper@{Waveshaper}!setMode@{setMode}}
+\index{setMode@{setMode}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Mode (\begin{DoxyParamCaption}\item[{float}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the mode of the instance. 
+
+\Hypertarget{class_waveshaper_a79a46c6bf0e1b895692d8f0aa80ed94a}\label{class_waveshaper_a79a46c6bf0e1b895692d8f0aa80ed94a} 
+\index{Waveshaper@{Waveshaper}!setOutputAG@{setOutputAG}}
+\index{setOutputAG@{setOutputAG}!Waveshaper@{Waveshaper}}
+\doxysubsubsection{\texorpdfstring{setOutputAG()}{setOutputAG()}}
+{\footnotesize\ttfamily void Waveshaper\+::set\+Output\+AG (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buffer\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the output values to be used with the auto gain system. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\mbox{\hyperlink{_waveshaper_8h}{Waveshaper.\+h}}\item 
+DSP/\+FX/\mbox{\hyperlink{_waveshaper_8cpp}{Waveshaper.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\doxysection{Stepped\+Parameter Class Reference}
+\hypertarget{class_stepped_parameter}{}\label{class_stepped_parameter}\index{SteppedParameter@{SteppedParameter}}
+
+
+{\ttfamily \#include $<$Stepped\+Parameter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stepped_parameter_a93414cc0e0057093833e21ac2f47043c}{init}} (float mi, float ma, float st, int param, int track, std\+::function$<$ void(float)$>$ cb)
+\begin{DoxyCompactList}\small\item\em Initialises an instance of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stepped_parameter_ae364f78a0faf8f9a8bd8501577f0b607}{increment}} ()
+\begin{DoxyCompactList}\small\item\em Increments the instance\textquotesingle{}s value and executes the callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stepped_parameter_a378641604d8570b8d8556891dca6f729}{decrement}} ()
+\begin{DoxyCompactList}\small\item\em Decrements the instance\textquotesingle{}s value and executes the callback. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stepped_parameter_ac1484edc659a13ced1c23454b100e054}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Fetches the instance\textquotesingle{}s full ID. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_stepped_parameter_aaf58fcb799ceea1bb0344183c0b7d61e}{get\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Fetches the lowest value the instance decrements to. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_stepped_parameter_a505bdecd305d69892ab0737fc2740a9e}{get\+Max}} ()
+\begin{DoxyCompactList}\small\item\em Fetches the highest value the instance increments to. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_stepped_parameter_ae7dcac0501984ece839bf6ad3bc7139d}{get\+Cur\+Val}} ()
+\begin{DoxyCompactList}\small\item\em Fetches the current value of the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stepped_parameter_a378641604d8570b8d8556891dca6f729}\label{class_stepped_parameter_a378641604d8570b8d8556891dca6f729} 
+\index{SteppedParameter@{SteppedParameter}!decrement@{decrement}}
+\index{decrement@{decrement}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{decrement()}{decrement()}}
+{\footnotesize\ttfamily void Stepped\+Parameter\+::decrement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Decrements the instance\textquotesingle{}s value and executes the callback. 
+
+\Hypertarget{class_stepped_parameter_ae7dcac0501984ece839bf6ad3bc7139d}\label{class_stepped_parameter_ae7dcac0501984ece839bf6ad3bc7139d} 
+\index{SteppedParameter@{SteppedParameter}!getCurVal@{getCurVal}}
+\index{getCurVal@{getCurVal}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{getCurVal()}{getCurVal()}}
+{\footnotesize\ttfamily float Stepped\+Parameter\+::get\+Cur\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the current value of the instance. 
+
+\begin{DoxyReturn}{Returns}
+The current value 
+\end{DoxyReturn}
+\Hypertarget{class_stepped_parameter_ac1484edc659a13ced1c23454b100e054}\label{class_stepped_parameter_ac1484edc659a13ced1c23454b100e054} 
+\index{SteppedParameter@{SteppedParameter}!getID@{getID}}
+\index{getID@{getID}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Stepped\+Parameter\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the instance\textquotesingle{}s full ID. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the instance 
+\end{DoxyReturn}
+\Hypertarget{class_stepped_parameter_a505bdecd305d69892ab0737fc2740a9e}\label{class_stepped_parameter_a505bdecd305d69892ab0737fc2740a9e} 
+\index{SteppedParameter@{SteppedParameter}!getMax@{getMax}}
+\index{getMax@{getMax}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{getMax()}{getMax()}}
+{\footnotesize\ttfamily float Stepped\+Parameter\+::get\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the highest value the instance increments to. 
+
+\begin{DoxyReturn}{Returns}
+The maximum value 
+\end{DoxyReturn}
+\Hypertarget{class_stepped_parameter_aaf58fcb799ceea1bb0344183c0b7d61e}\label{class_stepped_parameter_aaf58fcb799ceea1bb0344183c0b7d61e} 
+\index{SteppedParameter@{SteppedParameter}!getMin@{getMin}}
+\index{getMin@{getMin}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{getMin()}{getMin()}}
+{\footnotesize\ttfamily float Stepped\+Parameter\+::get\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the lowest value the instance decrements to. 
+
+\begin{DoxyReturn}{Returns}
+The miminum value 
+\end{DoxyReturn}
+\Hypertarget{class_stepped_parameter_ae364f78a0faf8f9a8bd8501577f0b607}\label{class_stepped_parameter_ae364f78a0faf8f9a8bd8501577f0b607} 
+\index{SteppedParameter@{SteppedParameter}!increment@{increment}}
+\index{increment@{increment}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void Stepped\+Parameter\+::increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Increments the instance\textquotesingle{}s value and executes the callback. 
+
+\Hypertarget{class_stepped_parameter_a93414cc0e0057093833e21ac2f47043c}\label{class_stepped_parameter_a93414cc0e0057093833e21ac2f47043c} 
+\index{SteppedParameter@{SteppedParameter}!init@{init}}
+\index{init@{init}!SteppedParameter@{SteppedParameter}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Stepped\+Parameter\+::init (\begin{DoxyParamCaption}\item[{float}]{mi,  }\item[{float}]{ma,  }\item[{float}]{st,  }\item[{int}]{param,  }\item[{int}]{track,  }\item[{std\+::function$<$ void(float)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises an instance of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mi} & The lowest value the instance should decrement to \\
+\hline
+{\em ma} & The highest value the instance should increment to \\
+\hline
+{\em st} & The value the instance should increment/decrement by \\
+\hline
+{\em param} & The ID of the parameters the instance is assigned to \\
+\hline
+{\em track} & The ID of the track the instance is assigned to \\
+\hline
+{\em cb} & The callback function executed when the value changes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Parameters/\mbox{\hyperlink{_stepped_parameter_8h}{Stepped\+Parameter.\+h}}\end{DoxyCompactItemize}

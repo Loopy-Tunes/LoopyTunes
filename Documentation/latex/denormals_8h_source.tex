@@ -1,0 +1,21 @@
+\doxysection{denormals.\+h}
+\hypertarget{denormals_8h_source}{}\label{denormals_8h_source}\index{DSP/FX/Reverb/denormals.h@{DSP/FX/Reverb/denormals.h}}
+\mbox{\hyperlink{denormals_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Macro\ for\ killing\ denormalled\ numbers}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Written\ by\ Jezar\ at\ Dreampoint,\ June\ 2000}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ http://www.dreampoint.co.uk}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Based\ on\ IS\_DENORMAL\ macro\ by\ Jon\ Watte}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ This\ code\ is\ public\ domain}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_denormals\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_denormals\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ undenormalise(sample)\ if(((*(unsigned\ int*)\&sample)\&0x7f800000)==0)\ sample=0.0f}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\_denormals\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//ends}}
+
+\end{DoxyCode}

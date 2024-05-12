@@ -1,0 +1,88 @@
+\doxysection{Mixer.\+h}
+\hypertarget{_mixer_8h_source}{}\label{_mixer_8h_source}\index{DSP/Mixer.h@{DSP/Mixer.h}}
+\mbox{\hyperlink{_mixer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MIXER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MIXER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_track_8h}{Track.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{/********************************************/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mixer}{Mixer}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ /*******************************************************************/}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(DaisySeed*\ seed,\ \textcolor{keywordtype}{float}*\ t1[2],\ \textcolor{keywordtype}{float}*\ t2[2],\ \textcolor{keywordtype}{float}*\ t3[2],\ \textcolor{keywordtype}{float}*\ t4[2]);\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a3f3e14300bd735fa3f4abdef4f2a8798}{initMixChannels}}(\textcolor{keywordtype}{float}*\ m[2],\ \textcolor{keywordtype}{float}*\ t1[2],\ \textcolor{keywordtype}{float}*\ t2[2],\ \textcolor{keywordtype}{float}*\ t3[2],\ \textcolor{keywordtype}{float}*\ t4[2]);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_ab6c6db2608bad894ddbd3f79af7da648}{initFX}}(\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ DelayLine<float,\ MAXDELAY>*\ t1[2],\ DelayLine<float,\ MAXDELAY>*\ t2[2],\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DelayLine<float,\ MAXDELAY>*\ t3[2],\ DelayLine<float,\ MAXDELAY>*\ t4[2]);}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a6ec1d4b3b446f487cbc11408a6c0ee23}{tick}}();}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_ac19ad0c9a2101b1a68a1df99b64e5b9a}{processInputBlock}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ left,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ right,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_af18fb7aa3350a57d2bb8d22272edeba1}{panChannels}}(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a5ff27db3d3d929520e8db73f0438b5ec}{mixOutput}}(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a84db56f64191585c461a2a05fd68b463}{processOutputBlock}}(\textcolor{keywordtype}{float}*\ left,\ \textcolor{keywordtype}{float}*\ right,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_ae146a7e1659dc74abda5fd36910e7bff}{panMixBuffer}}(\textcolor{keywordtype}{float}*\ buffer[2],\ \textcolor{keywordtype}{float}\ pan,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a47456bbddd719f27c7cdc689f80008a1}{setMixDiv}}();}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a644b7cf22643aec1af032fcc615adc9f}{setTrack1Pan}}(\textcolor{keywordtype}{float}\ p)\{\ track1.pan.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ p;\ \}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_aca235adccb2d2fe1cd7b3db430a66053}{setTrack2Pan}}(\textcolor{keywordtype}{float}\ p)\{\ track2.pan.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ p;\ \}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a5a88c441bbbbff1128d20d929a7d0935}{setTrack3Pan}}(\textcolor{keywordtype}{float}\ p)\{\ track3.pan.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ p;\ \}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a28e66584e7f5ecb35f538ae2768cb8ac}{setTrack4Pan}}(\textcolor{keywordtype}{float}\ p)\{\ track4.pan.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ p;\ \}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_ada57a607e8396bed817b7dcd81a80402}{setTrack1Gain}}(\textcolor{keywordtype}{float}\ g)\{\ track1.gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ g;\ \}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a48eb795de18f0207b5c665622ed0adf8}{setTrack2Gain}}(\textcolor{keywordtype}{float}\ g)\{\ track2.gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ g;\ \}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_ad464cfd56371e24d3b0e8021452e0b7b}{setTrack3Gain}}(\textcolor{keywordtype}{float}\ g)\{\ track3.gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ g;\ \}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_a03ab7d2deb0caf7b33cf883556203b52}{setTrack4Gain}}(\textcolor{keywordtype}{float}\ g)\{\ track4.gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ g;\ \}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_afeb56a1404c1e27c819955c93a754589}{setMasterVolume}}(\textcolor{keywordtype}{float}\ m)\{\ master.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ =\ m;\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{struct\ }MixerChannel}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_track}{Track}}\ track;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ buffer[2];}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_audio_parameter_wrapper}{AudioParameterWrapper<float>}}\ pan;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_audio_parameter_wrapper}{AudioParameterWrapper<float>}}\ gain;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ getCurVal(\textcolor{keywordtype}{int}\ chan,\ \textcolor{keywordtype}{size\_t}\ index)}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}}\ <\ 0.005\ ||\ track.\mbox{\hyperlink{class_track_a7faeb268f0b7825dc9f1ac31d2f96589}{getState}}()\ ==\ \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c}{STOPPED}})}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ buffer[chan][index]\ *\ gain.\mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ MixerChannel\ track1;}
+\DoxyCodeLine{00135\ \ \ \ \ MixerChannel\ track2;}
+\DoxyCodeLine{00136\ \ \ \ \ MixerChannel\ track3;}
+\DoxyCodeLine{00137\ \ \ \ \ MixerChannel\ track4;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ mixDiv;}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{struct_audio_parameter_wrapper}{AudioParameterWrapper<float>}}\ master;}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{float}*\ mix[2];}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ bufferSize;}
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

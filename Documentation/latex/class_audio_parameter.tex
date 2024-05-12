@@ -1,0 +1,87 @@
+\doxysection{Audio\+Parameter\texorpdfstring{$<$}{<} type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_audio_parameter}{}\label{class_audio_parameter}\index{AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}}
+
+
+{\ttfamily \#include $<$Audio\+Parameter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_parameter_afa4f9d66f0cf42cde896acaa5040c9e3}{init}} (Daisy\+Seed \texorpdfstring{$\ast$}{*}seed, type mi, type ma, \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{Curve\+Type}} c, int ID, std\+::function$<$ void(type)$>$ cb)
+\begin{DoxyCompactList}\small\item\em Initialises an instance of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_parameter_a67be018b61cb8e98420a54d6a6992ff7}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the polling of the assigned ADC channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_parameter_a0c02048d1e7431e27199f5098e4902a2}{process\+Curve}} ()
+\begin{DoxyCompactList}\small\item\em Scales the input value according to the assigned curve. \end{DoxyCompactList}\item 
+type \mbox{\hyperlink{class_audio_parameter_a654ab6b382d01b7046d9ed7c38e9b39c}{get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Fetches the current value of the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_parameter_a654ab6b382d01b7046d9ed7c38e9b39c}\label{class_audio_parameter_a654ab6b382d01b7046d9ed7c38e9b39c} 
+\index{AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}!getValue@{getValue}}
+\index{getValue@{getValue}!AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily template$<$class type $>$ \\
+type \mbox{\hyperlink{class_audio_parameter}{Audio\+Parameter}}$<$ type $>$\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the current value of the instance. 
+
+\begin{DoxyReturn}{Returns}
+the current value 
+\end{DoxyReturn}
+\Hypertarget{class_audio_parameter_afa4f9d66f0cf42cde896acaa5040c9e3}\label{class_audio_parameter_afa4f9d66f0cf42cde896acaa5040c9e3} 
+\index{AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}!init@{init}}
+\index{init@{init}!AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$class type $>$ \\
+void \mbox{\hyperlink{class_audio_parameter}{Audio\+Parameter}}$<$ type $>$\+::init (\begin{DoxyParamCaption}\item[{Daisy\+Seed \texorpdfstring{$\ast$}{*}}]{seed,  }\item[{type}]{mi,  }\item[{type}]{ma,  }\item[{\mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{Curve\+Type}}}]{c,  }\item[{int}]{ID,  }\item[{std\+::function$<$ void(type)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises an instance of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & A pointer to the program\textquotesingle{}s instance of the hardware \\
+\hline
+{\em mi} & The minimum value the parameter\textquotesingle{}s input should be scaled too \\
+\hline
+{\em ma} & The maximum value the parameter\textquotesingle{}s input should be scaled too \\
+\hline
+{\em c} & The type of curve that should be used to scale the input \\
+\hline
+{\em ID} & The channel ID for the ADC channel the instance is assigned too \\
+\hline
+{\em cb} & The callback function that should be executed when the input values changes \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_parameter_a0c02048d1e7431e27199f5098e4902a2}\label{class_audio_parameter_a0c02048d1e7431e27199f5098e4902a2} 
+\index{AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}!processCurve@{processCurve}}
+\index{processCurve@{processCurve}!AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{processCurve()}{processCurve()}}
+{\footnotesize\ttfamily template$<$class type $>$ \\
+void \mbox{\hyperlink{class_audio_parameter}{Audio\+Parameter}}$<$ type $>$\+::process\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the input value according to the assigned curve. 
+
+\Hypertarget{class_audio_parameter_a67be018b61cb8e98420a54d6a6992ff7}\label{class_audio_parameter_a67be018b61cb8e98420a54d6a6992ff7} 
+\index{AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}!tick@{tick}}
+\index{tick@{tick}!AudioParameter$<$ type $>$@{AudioParameter$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily template$<$class type $>$ \\
+void \mbox{\hyperlink{class_audio_parameter}{Audio\+Parameter}}$<$ type $>$\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the polling of the assigned ADC channel. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Parameters/\mbox{\hyperlink{_audio_parameter_8h}{Audio\+Parameter.\+h}}\end{DoxyCompactItemize}

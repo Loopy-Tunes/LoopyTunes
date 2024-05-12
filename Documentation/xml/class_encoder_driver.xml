@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_encoder_driver" kind="class" language="C++" prot="public">
+    <compoundname>EncoderDriver</compoundname>
+    <includes refid="_encoder_driver_8h" local="no">EncoderDriver.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_encoder_driver_1a69ea1c68542fff8f421e2dc051153c6f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EncoderDriver::isUpdated</definition>
+        <argsstring></argsstring>
+        <name>isUpdated</name>
+        <qualifiedname>EncoderDriver::isUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="153" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a10fb68b97fa01a4e94ac356f1950d4f8" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t EncoderDriver::prevUpdate</definition>
+        <argsstring></argsstring>
+        <name>prevUpdate</name>
+        <qualifiedname>EncoderDriver::prevUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="154" column="14" bodyfile="Drivers/EncoderDriver.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1adfc9f6634fe5b719fa6b874624f571cc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EncoderDriver::isNavigation</definition>
+        <argsstring></argsstring>
+        <name>isNavigation</name>
+        <qualifiedname>EncoderDriver::isNavigation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="156" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a69c13e7900ae959d9795d8e214996d9b" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; EncoderDriver::navCallback</definition>
+        <argsstring></argsstring>
+        <name>navCallback</name>
+        <qualifiedname>EncoderDriver::navCallback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="157" column="19" bodyfile="Drivers/EncoderDriver.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1ae9b386dd310deb41a560d1d09b242ebf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EncoderDriver::currentParam</definition>
+        <argsstring></argsstring>
+        <name>currentParam</name>
+        <qualifiedname>EncoderDriver::currentParam</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="159" column="9" bodyfile="Drivers/EncoderDriver.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a7b972b93c0d6929ad405fba8f25b827b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref> * &gt;</type>
+        <definition>std::vector&lt;SteppedParameter*&gt; EncoderDriver::parameters</definition>
+        <argsstring></argsstring>
+        <name>parameters</name>
+        <qualifiedname>EncoderDriver::parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="160" column="17" bodyfile="Drivers/EncoderDriver.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a82d8c9bb6a6703e317082a535d8c4bfc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void()&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void()&gt; &gt; EncoderDriver::bypassCallbacks</definition>
+        <argsstring></argsstring>
+        <name>bypassCallbacks</name>
+        <qualifiedname>EncoderDriver::bypassCallbacks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="161" column="17" bodyfile="Drivers/EncoderDriver.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a7008e85982f03a917b95c8e57576b460" prot="private" static="no" mutable="no">
+        <type>Switch</type>
+        <definition>Switch EncoderDriver::btn</definition>
+        <argsstring></argsstring>
+        <name>btn</name>
+        <qualifiedname>EncoderDriver::btn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="163" column="12" bodyfile="Drivers/EncoderDriver.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a3bee17909df2d78cadcc81fb3e544b2a" prot="private" static="no" mutable="no">
+        <type>dsy_gpio</type>
+        <definition>dsy_gpio EncoderDriver::channelA</definition>
+        <argsstring></argsstring>
+        <name>channelA</name>
+        <qualifiedname>EncoderDriver::channelA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="164" column="14" bodyfile="Drivers/EncoderDriver.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1a706ef11ffb6c7533dd4a65547843a365" prot="private" static="no" mutable="no">
+        <type>dsy_gpio</type>
+        <definition>dsy_gpio EncoderDriver::channelB</definition>
+        <argsstring></argsstring>
+        <name>channelB</name>
+        <qualifiedname>EncoderDriver::channelB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="165" column="14" bodyfile="Drivers/EncoderDriver.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1ab0df3363eecd48c37610091fdc2405d7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t EncoderDriver::valueA</definition>
+        <argsstring></argsstring>
+        <name>valueA</name>
+        <qualifiedname>EncoderDriver::valueA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="167" column="13" bodyfile="Drivers/EncoderDriver.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_driver_1ad5443297a0ff378e274759591cf05fb2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t EncoderDriver::valueB</definition>
+        <argsstring></argsstring>
+        <name>valueB</name>
+        <qualifiedname>EncoderDriver::valueB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="168" column="13" bodyfile="Drivers/EncoderDriver.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_encoder_driver_1a6b703d93f5254ae6539dfc3759c3d87d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::init</definition>
+        <argsstring>(dsy_gpio_pin button, dsy_gpio_pin a, dsy_gpio_pin b, std::function&lt; void()&gt; navCb)</argsstring>
+        <name>init</name>
+        <qualifiedname>EncoderDriver::init</qualifiedname>
+        <param>
+          <type>dsy_gpio_pin</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>dsy_gpio_pin</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>dsy_gpio_pin</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>navCb</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin used for the centre push button </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin used for channel A of the encoder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin used for channel B of the encoder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>navCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function used for navigation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="25" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="25" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1a7108d646d1f00a7c42e89a5237809a62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>EncoderDriver::tick</qualifiedname>
+        <briefdescription>
+<para>Polls the inputs to see if a change has occured. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="57" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="57" bodyend="80"/>
+        <references refid="class_encoder_driver_1afa50272bfb183b00f469285864c975e3" compoundref="_encoder_driver_8h" startline="85" endline="89">buttonCallback</references>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1afa50272bfb183b00f469285864c975e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::buttonCallback</definition>
+        <argsstring>()</argsstring>
+        <name>buttonCallback</name>
+        <qualifiedname>EncoderDriver::buttonCallback</qualifiedname>
+        <briefdescription>
+<para>The callback function executed when the centre button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="85" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1a9f6aea9b40ce44db249f04816423dd3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EncoderDriver::getButtonState</definition>
+        <argsstring>()</argsstring>
+        <name>getButtonState</name>
+        <qualifiedname>EncoderDriver::getButtonState</qualifiedname>
+        <briefdescription>
+<para>Gets the state of the encoder&apos;s centre button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>If the button is pressed or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="95" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt; void()&gt; EncoderDriver::getBypassCallback</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>getBypassCallback</name>
+        <qualifiedname>EncoderDriver::getBypassCallback</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Gets the bypass callback for a given index from the bypassCallbacks vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="100" column="19" bodyfile="Drivers/EncoderDriver.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1a8f772f7feff5cb2093d36189ffc6fe66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::setCurrentParam</definition>
+        <argsstring>(int newID)</argsstring>
+        <name>setCurrentParam</name>
+        <qualifiedname>EncoderDriver::setCurrentParam</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newID</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current parameter the encoder is assigned to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the parameter the encoder is to be assigned to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="106" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="106" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::addParameter</definition>
+        <argsstring>(SteppedParameter *newParam)</argsstring>
+        <name>addParameter</name>
+        <qualifiedname>EncoderDriver::addParameter</qualifiedname>
+        <param>
+          <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref> *</type>
+          <declname>newParam</declname>
+        </param>
+        <briefdescription>
+<para>Adds a parameter to the parameter vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parameter to be added to the vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="122" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EncoderDriver::addBypassCallback</definition>
+        <argsstring>(std::function&lt; void()&gt; newCallback)</argsstring>
+        <name>addBypassCallback</name>
+        <qualifiedname>EncoderDriver::addBypassCallback</qualifiedname>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>newCallback</declname>
+        </param>
+        <briefdescription>
+<para>Adds a bypass callback to the bypassCallbacks vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="131" column="10" bodyfile="Drivers/EncoderDriver.h" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_driver_1aaa92980b9bd67e2ea6a2396716d7c4e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref> *</type>
+        <definition>SteppedParameter * EncoderDriver::getParameter</definition>
+        <argsstring>(int paramID)</argsstring>
+        <name>getParameter</name>
+        <qualifiedname>EncoderDriver::getParameter</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>paramID</declname>
+        </param>
+        <briefdescription>
+<para>Gets a pointer to the parameter with the given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>paramID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the parameter to be fetched </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/EncoderDriver.h" line="140" column="22" bodyfile="Drivers/EncoderDriver.h" bodystart="140" bodyend="149"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> Function: Driver for the encoder input, controls the value of FX parameters</para>
+<para>Based off of Encoder class from libDaisy (Stephen Hensley, 2019) <ulink url="https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h">https://github.com/electro-smith/libDaisy/blob/master/src/hid/encoder.h</ulink> </para>
+    </detaileddescription>
+    <location file="Drivers/EncoderDriver.h" line="14" column="1" bodyfile="Drivers/EncoderDriver.h" bodystart="15" bodyend="169"/>
+    <listofallmembers>
+      <member refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>addBypassCallback</name></member>
+      <member refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>addParameter</name></member>
+      <member refid="class_encoder_driver_1a7008e85982f03a917b95c8e57576b460" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>btn</name></member>
+      <member refid="class_encoder_driver_1afa50272bfb183b00f469285864c975e3" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>buttonCallback</name></member>
+      <member refid="class_encoder_driver_1a82d8c9bb6a6703e317082a535d8c4bfc" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>bypassCallbacks</name></member>
+      <member refid="class_encoder_driver_1a3bee17909df2d78cadcc81fb3e544b2a" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>channelA</name></member>
+      <member refid="class_encoder_driver_1a706ef11ffb6c7533dd4a65547843a365" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>channelB</name></member>
+      <member refid="class_encoder_driver_1ae9b386dd310deb41a560d1d09b242ebf" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>currentParam</name></member>
+      <member refid="class_encoder_driver_1a9f6aea9b40ce44db249f04816423dd3b" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>getButtonState</name></member>
+      <member refid="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>getBypassCallback</name></member>
+      <member refid="class_encoder_driver_1aaa92980b9bd67e2ea6a2396716d7c4e8" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>getParameter</name></member>
+      <member refid="class_encoder_driver_1a6b703d93f5254ae6539dfc3759c3d87d" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>init</name></member>
+      <member refid="class_encoder_driver_1adfc9f6634fe5b719fa6b874624f571cc" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>isNavigation</name></member>
+      <member refid="class_encoder_driver_1a69ea1c68542fff8f421e2dc051153c6f" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>isUpdated</name></member>
+      <member refid="class_encoder_driver_1a69c13e7900ae959d9795d8e214996d9b" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>navCallback</name></member>
+      <member refid="class_encoder_driver_1a7b972b93c0d6929ad405fba8f25b827b" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>parameters</name></member>
+      <member refid="class_encoder_driver_1a10fb68b97fa01a4e94ac356f1950d4f8" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>prevUpdate</name></member>
+      <member refid="class_encoder_driver_1a8f772f7feff5cb2093d36189ffc6fe66" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>setCurrentParam</name></member>
+      <member refid="class_encoder_driver_1a7108d646d1f00a7c42e89a5237809a62" prot="public" virt="non-virtual"><scope>EncoderDriver</scope><name>tick</name></member>
+      <member refid="class_encoder_driver_1ab0df3363eecd48c37610091fdc2405d7" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>valueA</name></member>
+      <member refid="class_encoder_driver_1ad5443297a0ff378e274759591cf05fb2" prot="private" virt="non-virtual"><scope>EncoderDriver</scope><name>valueB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

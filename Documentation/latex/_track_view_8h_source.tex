@@ -1,0 +1,56 @@
+\doxysection{Track\+View.\+h}
+\hypertarget{_track_view_8h_source}{}\label{_track_view_8h_source}\index{GUI/TrackView.h@{GUI/TrackView.h}}
+\mbox{\hyperlink{_track_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRACKVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRACKVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_i_ds_8h}{../Parameters/ParameterIDs.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pitch_shift_view_8h}{FX/PitchShiftView.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_waveshaper_view_8h}{FX/WaveshaperView.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_filter_view_8h}{FX/FilterView.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_reverb_view_8h}{FX/ReverbView.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_delay_view_8h}{FX/DelayView.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{/********************************************/}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_track_view}{TrackView}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\textcolor{keywordtype}{int}\ ID,\ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ kpd);}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_track_view_a1fe8105b25150caa32ce8f77a1f56f00}{tick}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_track_view_a675ad934846a3a704b2d31df122f06a6}{repaint}}();}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_track_view_ad3ee20c39189f9201f6320b1186a05a9}{clear}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_track_view_a18ac0bf795cadc0f56759bf2c46b3f4f}{setIsOpen}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isOpen\ =\ state;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ trackID;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//static\ UiDriver*\ lcd;}}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ keypad;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_pitch_shift_view}{PitchShiftView}}\ pitchShiftView;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_waveshaper_view}{WaveshaperView}}\ waveshaperView;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_filter_view}{FilterView}}\ filterView;}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_reverb_view}{ReverbView}}\ reverbView;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_delay_view}{DelayView}}\ delayView;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ selectedEffectIndex;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPainted;}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

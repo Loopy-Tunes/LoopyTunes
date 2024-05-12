@@ -1,0 +1,209 @@
+\doxysection{Loopy\+Tunes.\+cpp File Reference}
+\hypertarget{_loopy_tunes_8cpp}{}\label{_loopy_tunes_8cpp}\index{LoopyTunes.cpp@{LoopyTunes.cpp}}
+{\ttfamily \#include "{}DSP/\+Mixer.\+h"{}}\newline
+{\ttfamily \#include "{}GUI/\+Mixer\+View.\+h"{}}\newline
+{\ttfamily \#include "{}Drivers/daisy\+\_\+\+ILI9341.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_buffers}{Buffers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_loopy_tunes_8cpp_ae8078580eca276bbc14590a0f28feda5}{nav\+Callback}} ()
+\item 
+void \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialises the program and hardware. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_loopy_tunes_8cpp_a0fd07bbb9c328de2c2a01f0f89c2abe2}{tick}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles the processing of the inputs and updating of the audio processing and GUI branches. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_loopy_tunes_8cpp_abca4c722906826f3a2870397489a1b10}{Audio\+Callback}} (Audio\+Handle\+::\+Input\+Buffer in, Audio\+Handle\+::\+Output\+Buffer out, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em This is where audio data is inputted to and outputted from the software. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_loopy_tunes_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Daisy\+Seed \mbox{\hyperlink{_loopy_tunes_8cpp_a157eddcae6d3e68743a70977dcc726a5}{hw}}
+\begin{DoxyCompactList}\small\item\em Function description. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}}
+\item 
+\mbox{\hyperlink{class_mixer}{Mixer}} \mbox{\hyperlink{_loopy_tunes_8cpp_a6b7d334c64b02346d16bb1a908f9f9b7}{mixer}}
+\item 
+\mbox{\hyperlink{class_mixer_view}{Mixer\+View}} \mbox{\hyperlink{_loopy_tunes_8cpp_a96b2aba4dd8a368512522dd760cd7afb}{mixer\+View}}
+\item 
+\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \mbox{\hyperlink{_loopy_tunes_8cpp_a3c8fc73879ad8b7e0578aad333e68905}{encoder}}
+\item 
+\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \mbox{\hyperlink{_loopy_tunes_8cpp_a95f311edb7a6fc4bdab4abc30b77f610}{keypad}}
+\item 
+\mbox{\hyperlink{class_ui_driver}{Ui\+Driver}} \mbox{\hyperlink{_loopy_tunes_8cpp_a7adf4c2c8a0d7191321495dc19b1df31}{lcd}}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a87d96280f80f5f7a4b2584784786a244}{Buffers\+::track1}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a538e0cad3acb787a49e16b1e53787610}{SAMPLERATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_constants_8h_aa312b7c3e9d9981fb0d98cc4428f17bf}{DURATION}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_ae193b35b7973e179b49fbdf57c4249e3}{Buffers\+::track2}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a538e0cad3acb787a49e16b1e53787610}{SAMPLERATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_constants_8h_aa312b7c3e9d9981fb0d98cc4428f17bf}{DURATION}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a8ed6807590a0b05861e62fb2fe2c5018}{Buffers\+::track3}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a538e0cad3acb787a49e16b1e53787610}{SAMPLERATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_constants_8h_aa312b7c3e9d9981fb0d98cc4428f17bf}{DURATION}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a5e8368c8f4e989ff3fb006de4206cafe}{Buffers\+::track4}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a538e0cad3acb787a49e16b1e53787610}{SAMPLERATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_constants_8h_aa312b7c3e9d9981fb0d98cc4428f17bf}{DURATION}}\mbox{]}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a400ffc4f1822843647c0bff5e4ed1a28}{Buffers\+::track1\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a87d96280f80f5f7a4b2584784786a244}{track1}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a87d96280f80f5f7a4b2584784786a244}{track1}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_ac69eab0d4644edc3518f13ebc52ca0c5}{Buffers\+::track2\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_ae193b35b7973e179b49fbdf57c4249e3}{track2}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_ae193b35b7973e179b49fbdf57c4249e3}{track2}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_ae6a11631f5b3a7182dcce7e33e228849}{Buffers\+::track3\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a8ed6807590a0b05861e62fb2fe2c5018}{track3}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a8ed6807590a0b05861e62fb2fe2c5018}{track3}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a4119551fdbe4eb44a3cae91e08c5eccc}{Buffers\+::track4\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a5e8368c8f4e989ff3fb006de4206cafe}{track4}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a5e8368c8f4e989ff3fb006de4206cafe}{track4}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_aea4f10f2dce1e114505948e16730e6e4}{Buffers\+::mix}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a745535f0dd037dec7de4e6c5b7c83525}{Buffers\+::t1m}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a3202e03d01bd37b2c43e6f0bf1d82f2a}{Buffers\+::t2m}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a18631b5feae0f8dc52d2192c4ff4a6c4}{Buffers\+::t3m}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}\mbox{]}
+\item 
+float DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_ae3a7ea421e900fdc1ec6a7d8525ddfc9}{Buffers\+::t4m}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}\mbox{]}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a6f513a019053949667da22fd66ad4d03}{Buffers\+::mix\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_aea4f10f2dce1e114505948e16730e6e4}{mix}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_aea4f10f2dce1e114505948e16730e6e4}{mix}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a364c8fa79ed6e9f5c76576e81b47e080}{Buffers\+::t1m\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a745535f0dd037dec7de4e6c5b7c83525}{t1m}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a745535f0dd037dec7de4e6c5b7c83525}{t1m}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_ae512b86615f57d29be83b76d7f183e60}{Buffers\+::t2m\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a3202e03d01bd37b2c43e6f0bf1d82f2a}{t2m}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a3202e03d01bd37b2c43e6f0bf1d82f2a}{t2m}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a7569f49c34ca89bde70fd10ada24e48f}{Buffers\+::t3m\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_a18631b5feae0f8dc52d2192c4ff4a6c4}{t3m}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_a18631b5feae0f8dc52d2192c4ff4a6c4}{t3m}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a9e22e58ed5d95f65300f981d370a6e8b}{Buffers\+::t4m\+Ptr}} \mbox{[}2\mbox{]} = \{\mbox{\hyperlink{namespace_buffers_ae3a7ea421e900fdc1ec6a7d8525ddfc9}{t4m}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \mbox{\hyperlink{namespace_buffers_ae3a7ea421e900fdc1ec6a7d8525ddfc9}{t4m}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a8d59e295ced64e71cafd9cd4624bb0dd}{Buffers\+::t1delay}} \mbox{[}2\mbox{]}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_ae541617b801e70c9eb96906b1ab63ddf}{Buffers\+::t2delay}} \mbox{[}2\mbox{]}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_ab674e4ce94e53cb33494373c2e6ed8b5}{Buffers\+::t3delay}} \mbox{[}2\mbox{]}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ DSY\+\_\+\+SDRAM\+\_\+\+BSS \mbox{\hyperlink{namespace_buffers_a09afea63e2e84ad8ff878bb487c9f2a2}{Buffers\+::t4delay}} \mbox{[}2\mbox{]}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_aa8aa90eaaca6fa7f5b4834bef80b971c}{Buffers\+::t1delay\+Ptr}} \mbox{[}2\mbox{]} = \{\&\mbox{\hyperlink{namespace_buffers_a8d59e295ced64e71cafd9cd4624bb0dd}{t1delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \&\mbox{\hyperlink{namespace_buffers_a8d59e295ced64e71cafd9cd4624bb0dd}{t1delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a394119ae840043641b6f7c4229384292}{Buffers\+::t2delay\+Ptr}} \mbox{[}2\mbox{]} = \{\&\mbox{\hyperlink{namespace_buffers_ae541617b801e70c9eb96906b1ab63ddf}{t2delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \&\mbox{\hyperlink{namespace_buffers_ae541617b801e70c9eb96906b1ab63ddf}{t2delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_aedfabbb8408c77f51548b1a11ffc23f6}{Buffers\+::t3delay\+Ptr}} \mbox{[}2\mbox{]} = \{\&\mbox{\hyperlink{namespace_buffers_ab674e4ce94e53cb33494373c2e6ed8b5}{t3delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \&\mbox{\hyperlink{namespace_buffers_ab674e4ce94e53cb33494373c2e6ed8b5}{t3delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\item 
+Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_buffers_a3b0edbde4b29986f7102f5d3b54f4962}{Buffers\+::t4delay\+Ptr}} \mbox{[}2\mbox{]} = \{\&\mbox{\hyperlink{namespace_buffers_a09afea63e2e84ad8ff878bb487c9f2a2}{t4delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}\mbox{]}, \&\mbox{\hyperlink{namespace_buffers_a09afea63e2e84ad8ff878bb487c9f2a2}{t4delay}}\mbox{[}\mbox{\hyperlink{_constants_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}\mbox{]}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_loopy_tunes_8cpp_abca4c722906826f3a2870397489a1b10}\label{_loopy_tunes_8cpp_abca4c722906826f3a2870397489a1b10} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!AudioCallback@{AudioCallback}}
+\index{AudioCallback@{AudioCallback}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{AudioCallback()}{AudioCallback()}}
+{\footnotesize\ttfamily void Audio\+Callback (\begin{DoxyParamCaption}\item[{Audio\+Handle\+::\+Input\+Buffer}]{in,  }\item[{Audio\+Handle\+::\+Output\+Buffer}]{out,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+This is where audio data is inputted to and outputted from the software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & The input to the Daisy Seed \\
+\hline
+{\em out} & The output to the Daisy Seed \\
+\hline
+{\em size} & The number of samples in the block \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}\label{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!init@{init}}
+\index{init@{init}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialises the program and hardware. 
+
+\Hypertarget{_loopy_tunes_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{_loopy_tunes_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!main@{main}}
+\index{main@{main}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_loopy_tunes_8cpp_ae8078580eca276bbc14590a0f28feda5}\label{_loopy_tunes_8cpp_ae8078580eca276bbc14590a0f28feda5} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!navCallback@{navCallback}}
+\index{navCallback@{navCallback}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{navCallback()}{navCallback()}}
+{\footnotesize\ttfamily void nav\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_loopy_tunes_8cpp_a0fd07bbb9c328de2c2a01f0f89c2abe2}\label{_loopy_tunes_8cpp_a0fd07bbb9c328de2c2a01f0f89c2abe2} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!tick@{tick}}
+\index{tick@{tick}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void tick (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the processing of the inputs and updating of the audio processing and GUI branches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_loopy_tunes_8cpp_a3c8fc73879ad8b7e0578aad333e68905}\label{_loopy_tunes_8cpp_a3c8fc73879ad8b7e0578aad333e68905} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!encoder@{encoder}}
+\index{encoder@{encoder}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{encoder}{encoder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} encoder}
+
+\Hypertarget{_loopy_tunes_8cpp_a157eddcae6d3e68743a70977dcc726a5}\label{_loopy_tunes_8cpp_a157eddcae6d3e68743a70977dcc726a5} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!hw@{hw}}
+\index{hw@{hw}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{hw}{hw}}
+{\footnotesize\ttfamily Daisy\+Seed hw}
+
+
+
+Function description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg1} & \\
+\hline
+{\em arg2} & \\
+\hline
+{\em arg3} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_loopy_tunes_8cpp_a95f311edb7a6fc4bdab4abc30b77f610}\label{_loopy_tunes_8cpp_a95f311edb7a6fc4bdab4abc30b77f610} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!keypad@{keypad}}
+\index{keypad@{keypad}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{keypad}{keypad}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} keypad}
+
+\Hypertarget{_loopy_tunes_8cpp_a7adf4c2c8a0d7191321495dc19b1df31}\label{_loopy_tunes_8cpp_a7adf4c2c8a0d7191321495dc19b1df31} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!lcd@{lcd}}
+\index{lcd@{lcd}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{lcd}{lcd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_driver}{Ui\+Driver}} lcd}
+
+\Hypertarget{_loopy_tunes_8cpp_a6b7d334c64b02346d16bb1a908f9f9b7}\label{_loopy_tunes_8cpp_a6b7d334c64b02346d16bb1a908f9f9b7} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!mixer@{mixer}}
+\index{mixer@{mixer}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{mixer}{mixer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mixer}{Mixer}} mixer}
+
+\Hypertarget{_loopy_tunes_8cpp_a96b2aba4dd8a368512522dd760cd7afb}\label{_loopy_tunes_8cpp_a96b2aba4dd8a368512522dd760cd7afb} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!mixerView@{mixerView}}
+\index{mixerView@{mixerView}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{mixerView}{mixerView}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mixer_view}{Mixer\+View}} mixer\+View}
+
+\Hypertarget{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}\label{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd} 
+\index{LoopyTunes.cpp@{LoopyTunes.cpp}!sample@{sample}}
+\index{sample@{sample}!LoopyTunes.cpp@{LoopyTunes.cpp}}
+\doxysubsubsection{\texorpdfstring{sample}{sample}}
+{\footnotesize\ttfamily size\+\_\+t sample}
+

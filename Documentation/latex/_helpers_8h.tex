@@ -1,0 +1,109 @@
+\doxysection{Utils/\+Helpers.h File Reference}
+\hypertarget{_helpers_8h}{}\label{_helpers_8h}\index{Utils/Helpers.h@{Utils/Helpers.h}}
+{\ttfamily \#include "{}stddef.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_track_information}{Track\+Information}}
+\begin{DoxyCompactList}\small\item\em Struct definition for storing track information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9}{Channel\+IDs}} \{ \newline
+\mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8}{AMP1}} = 0
+, \mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256}{AMP2}}
+, \mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e}{AMP3}}
+, \mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9}{AMP4}}
+, \newline
+\mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a}{MASTER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the channel IDs for easy assignment and access. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c}{Track\+State}} \{ \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc}{RECORDING}} = 0
+, \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8}{PLAYING}}
+, \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c}{STOPPED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Struct definition for monitoring track state. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{Curve\+Type}} \{ \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}} = 0
+, \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757}{EXP}}
+ \}
+\begin{DoxyCompactList}\small\item\em Struct definition for types of curve used to process values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9} 
+\index{Helpers.h@{Helpers.h}!ChannelIDs@{ChannelIDs}}
+\index{ChannelIDs@{ChannelIDs}!Helpers.h@{Helpers.h}}
+\doxysubsubsection{\texorpdfstring{ChannelIDs}{ChannelIDs}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9}{Channel\+IDs}}}
+
+
+
+Represents the channel IDs for easy assignment and access. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMP1@{AMP1}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!AMP1@{AMP1}}}\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8} 
+AMP1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMP2@{AMP2}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!AMP2@{AMP2}}}\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256} 
+AMP2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMP3@{AMP3}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!AMP3@{AMP3}}}\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e} 
+AMP3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMP4@{AMP4}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!AMP4@{AMP4}}}\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9} 
+AMP4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASTER@{MASTER}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!MASTER@{MASTER}}}\Hypertarget{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a}\label{_helpers_8h_a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a} 
+MASTER&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_helpers_8h_a007dea27057008224e9da69eaeca8606}\label{_helpers_8h_a007dea27057008224e9da69eaeca8606} 
+\index{Helpers.h@{Helpers.h}!CurveType@{CurveType}}
+\index{CurveType@{CurveType}!Helpers.h@{Helpers.h}}
+\doxysubsubsection{\texorpdfstring{CurveType}{CurveType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{Curve\+Type}}}
+
+
+
+Struct definition for types of curve used to process values. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINEAR@{LINEAR}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!LINEAR@{LINEAR}}}\Hypertarget{_helpers_8h_a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb}\label{_helpers_8h_a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb} 
+LINEAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXP@{EXP}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!EXP@{EXP}}}\Hypertarget{_helpers_8h_a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757}\label{_helpers_8h_a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757} 
+EXP&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c}\label{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c} 
+\index{Helpers.h@{Helpers.h}!TrackState@{TrackState}}
+\index{TrackState@{TrackState}!Helpers.h@{Helpers.h}}
+\doxysubsubsection{\texorpdfstring{TrackState}{TrackState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c}{Track\+State}}}
+
+
+
+Struct definition for monitoring track state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RECORDING@{RECORDING}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!RECORDING@{RECORDING}}}\Hypertarget{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc}\label{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc} 
+RECORDING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYING@{PLAYING}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!PLAYING@{PLAYING}}}\Hypertarget{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8}\label{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8} 
+PLAYING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOPPED@{STOPPED}!Helpers.h@{Helpers.h}}\index{Helpers.h@{Helpers.h}!STOPPED@{STOPPED}}}\Hypertarget{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c}\label{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c} 
+STOPPED&\\
+\hline
+
+\end{DoxyEnumFields}

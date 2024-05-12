@@ -1,4 +1,5 @@
 #include "PitchShiftView.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void PitchShiftView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {

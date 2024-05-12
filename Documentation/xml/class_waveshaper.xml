@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_waveshaper" kind="class" language="C++" prot="public">
+    <compoundname>Waveshaper</compoundname>
+    <includes refid="_waveshaper_8h" local="no">Waveshaper.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_waveshaper_1adc03b39c61450805cf3996844890bb52" prot="private" static="no" strong="no">
+        <type></type>
+        <name>Funcs</name>
+        <qualifiedname>Waveshaper::Funcs</qualifiedname>
+        <enumvalue id="class_waveshaper_1adc03b39c61450805cf3996844890bb52a3e39405f6e785ac1be7e7f1905887e99" prot="private">
+          <name>CLIPPER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_waveshaper_1adc03b39c61450805cf3996844890bb52a5bc44734ce4547cd1172e052d522a873" prot="private">
+          <name>FOLDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_waveshaper_1adc03b39c61450805cf3996844890bb52aac22d5f57c78e0226cdc09264df3fae2" prot="private">
+          <name>LFO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_waveshaper_1adc03b39c61450805cf3996844890bb52a245d87f2eba21f3d6d6ce82483fd2d41" prot="private">
+          <name>BITREDUCER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="122" column="5" bodyfile="DSP/FX/Waveshaper.h" bodystart="123" bodyend="128"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_waveshaper_1af0955f3966e553deb33a1d2d2d7dce82" prot="private" static="no" mutable="no">
+        <type>Wavefolder</type>
+        <definition>Wavefolder Waveshaper::folder</definition>
+        <argsstring></argsstring>
+        <name>folder</name>
+        <qualifiedname>Waveshaper::folder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="130" column="16" bodyfile="DSP/FX/Waveshaper.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a22030590980321a82d27f0e76871166c" prot="private" static="no" mutable="no">
+        <type>Oscillator</type>
+        <definition>Oscillator Waveshaper::lfo</definition>
+        <argsstring></argsstring>
+        <name>lfo</name>
+        <qualifiedname>Waveshaper::lfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="131" column="16" bodyfile="DSP/FX/Waveshaper.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a6d65eb84af4e957607ebeb7ceb966dce" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::lfoMin</definition>
+        <argsstring></argsstring>
+        <name>lfoMin</name>
+        <qualifiedname>Waveshaper::lfoMin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="133" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1acb37d23a0fa0d0d0a20197cc23d4b476" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::lfoMax</definition>
+        <argsstring></argsstring>
+        <name>lfoMax</name>
+        <qualifiedname>Waveshaper::lfoMax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="133" column="18" bodyfile="DSP/FX/Waveshaper.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a722d506e7192c3b5503d2d58bfce96a8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::lfoFreq</definition>
+        <argsstring></argsstring>
+        <name>lfoFreq</name>
+        <qualifiedname>Waveshaper::lfoFreq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="134" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1ab4dae1c93a6903f7cab0a1a2f4faf141" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Waveshaper::bitsMin</definition>
+        <argsstring></argsstring>
+        <name>bitsMin</name>
+        <qualifiedname>Waveshaper::bitsMin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="135" column="9" bodyfile="DSP/FX/Waveshaper.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1adc4af49e5eb2f402af3ca471161dfcca" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Waveshaper::bitsMax</definition>
+        <argsstring></argsstring>
+        <name>bitsMax</name>
+        <qualifiedname>Waveshaper::bitsMax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="135" column="17" bodyfile="DSP/FX/Waveshaper.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a80264fc65d247c3c2ee6a69ca8994e51" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::bitRate</definition>
+        <argsstring></argsstring>
+        <name>bitRate</name>
+        <qualifiedname>Waveshaper::bitRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="136" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1ab1dd54f922ca356649300a53497c1a80" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::bitCount</definition>
+        <argsstring></argsstring>
+        <name>bitCount</name>
+        <qualifiedname>Waveshaper::bitCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="136" column="19" bodyfile="DSP/FX/Waveshaper.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a1e9cf4d6b15a1db344558fdd866608b5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Waveshaper::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <qualifiedname>Waveshaper::bits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="137" column="9" bodyfile="DSP/FX/Waveshaper.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1ac710ef958347431da8083a2a4f65b96a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::buffer[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>Waveshaper::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="139" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a59dc33c29533aa55fa7d969822f5180f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::inputAG[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>inputAG</name>
+        <qualifiedname>Waveshaper::inputAG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="140" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a464b247230d177661812e74e71aa40ef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::outputAG[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>outputAG</name>
+        <qualifiedname>Waveshaper::outputAG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="141" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1ab09bba1df7c47073c7bff542939ec689" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Waveshaper::diffAG[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>diffAG</name>
+        <qualifiedname>Waveshaper::diffAG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="142" column="11" bodyfile="DSP/FX/Waveshaper.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a9369c40f806283265af1c590f87311f3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Waveshaper::isBypass</definition>
+        <argsstring></argsstring>
+        <name>isBypass</name>
+        <qualifiedname>Waveshaper::isBypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="144" column="10" bodyfile="DSP/FX/Waveshaper.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a8716b8c2c593b592ed850fa24f150567" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Waveshaper::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>Waveshaper::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="145" column="29" bodyfile="DSP/FX/Waveshaper.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a2df3262e4e2ff0dcfb68d9e1dfb9b4c3" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Waveshaper::funcControl</definition>
+        <argsstring></argsstring>
+        <name>funcControl</name>
+        <qualifiedname>Waveshaper::funcControl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="146" column="29" bodyfile="DSP/FX/Waveshaper.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_1a0a5005d8087c3cb06e191ab19757dc1e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Waveshaper::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>Waveshaper::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="147" column="29" bodyfile="DSP/FX/Waveshaper.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_waveshaper_1ac04461769908282db7325214eba45087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::init</definition>
+        <argsstring>(EncoderDriver *driver, int trackID)</argsstring>
+        <name>init</name>
+        <qualifiedname>Waveshaper::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trackID</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver used to initialise the parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="30" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="5" bodyend="43"/>
+        <references refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" compoundref="_encoder_driver_8h" startline="131" endline="134">EncoderDriver::addBypassCallback</references>
+        <references refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" compoundref="_encoder_driver_8h" startline="122" endline="125">EncoderDriver::addParameter</references>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a48da39a272f9138aa859ae2720b7a461" compoundref="_parameter_i_ds_8h" startline="27">ParameterIDs::Waveshaper::amount</references>
+        <references refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" compoundref="_constants_8h" startline="3">BLOCKLENGTH</references>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a9c648f329d6bc1a81525e0ea9dcc2c65" compoundref="_parameter_i_ds_8h" startline="28">ParameterIDs::Waveshaper::funcControl</references>
+        <references refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" compoundref="_stepped_parameter_8h" startline="30" endline="39">SteppedParameter::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a73172537740cea5fed2dc6751935ab4d" compoundref="_parameter_i_ds_8h" startline="29">ParameterIDs::Waveshaper::mode</references>
+        <references refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" compoundref="_stepped_parameter_8h" startline="104">SteppedParameterWrapper::param</references>
+        <references refid="class_waveshaper_1a0f5e75a5913f3d65e34bae649ee83f45" compoundref="_waveshaper_8h" startline="45" endline="45">setAmount</references>
+        <references refid="class_waveshaper_1a2313630b34e917c5b573ada3957c35b9" compoundref="_waveshaper_8h" startline="40" endline="40">setBypass</references>
+        <references refid="class_waveshaper_1a47e4bc80a0c83e31364c8366b080c134" compoundref="_waveshaper_8cpp" startline="45" endline="51">setDefaultValues</references>
+        <references refid="class_waveshaper_1a3db430becb2df8a42cbcb0486414c039" compoundref="_waveshaper_8cpp" startline="53" endline="57">setFuncControl</references>
+        <references refid="class_waveshaper_1abf1a2cbeb9cf285159fc7c2522dd2d8a" compoundref="_waveshaper_8h" startline="55" endline="55">setMode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a47e4bc80a0c83e31364c8366b080c134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <qualifiedname>Waveshaper::setDefaultValues</qualifiedname>
+        <briefdescription>
+<para>Sets tthe default parameter values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="35" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="45" bodyend="51"/>
+        <references refid="class_waveshaper_1a0f5e75a5913f3d65e34bae649ee83f45" compoundref="_waveshaper_8h" startline="45" endline="45">setAmount</references>
+        <references refid="class_waveshaper_1a3db430becb2df8a42cbcb0486414c039" compoundref="_waveshaper_8cpp" startline="53" endline="57">setFuncControl</references>
+        <references refid="class_waveshaper_1abf1a2cbeb9cf285159fc7c2522dd2d8a" compoundref="_waveshaper_8h" startline="55" endline="55">setMode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a2313630b34e917c5b573ada3957c35b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setBypass</definition>
+        <argsstring>()</argsstring>
+        <name>setBypass</name>
+        <qualifiedname>Waveshaper::setBypass</qualifiedname>
+        <briefdescription>
+<para>Sets the bypass state of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="40" column="10" bodyfile="DSP/FX/Waveshaper.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a0f5e75a5913f3d65e34bae649ee83f45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setAmount</definition>
+        <argsstring>(float a)</argsstring>
+        <name>setAmount</name>
+        <qualifiedname>Waveshaper::setAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Sets the amount of the effect in the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="45" column="17" bodyfile="DSP/FX/Waveshaper.h" bodystart="45" bodyend="45"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a3db430becb2df8a42cbcb0486414c039" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setFuncControl</definition>
+        <argsstring>(float fc)</argsstring>
+        <name>setFuncControl</name>
+        <qualifiedname>Waveshaper::setFuncControl</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+<para>Sets the function control value of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="50" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="53" bodyend="57"/>
+        <references refid="class_waveshaper_1a67420571eeacdabc3629118ffb1f7590" compoundref="_waveshaper_8cpp" startline="59" endline="73">scaleControlParam</references>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1abf1a2cbeb9cf285159fc7c2522dd2d8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setMode</definition>
+        <argsstring>(float m)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>Waveshaper::setMode</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mode of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="55" column="17" bodyfile="DSP/FX/Waveshaper.h" bodystart="55" bodyend="55"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a67420571eeacdabc3629118ffb1f7590" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::scaleControlParam</definition>
+        <argsstring>()</argsstring>
+        <name>scaleControlParam</name>
+        <qualifiedname>Waveshaper::scaleControlParam</qualifiedname>
+        <briefdescription>
+<para>Scales the value of the function control value for use with the different modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="60" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="59" bodyend="73"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a44318a7b6e2ab2ffd5ef074bc51c4958" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setInputAG</definition>
+        <argsstring>(float *buffer[2], size_t size)</argsstring>
+        <name>setInputAG</name>
+        <qualifiedname>Waveshaper::setInputAG</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buffer</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the input values to be used with the auto gain system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="65" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="75" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a79a46c6bf0e1b895692d8f0aa80ed94a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::setOutputAG</definition>
+        <argsstring>(float *buffer[2], size_t size)</argsstring>
+        <name>setOutputAG</name>
+        <qualifiedname>Waveshaper::setOutputAG</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buffer</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the output values to be used with the auto gain system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="70" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a00ea2d1f63e96d9b7490d3cd406c174d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::calculateAutoGain</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>calculateAutoGain</name>
+        <qualifiedname>Waveshaper::calculateAutoGain</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the auto gain value for each sample in the block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="76" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="97" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a9c93d163a6d94bd168518d05e9e957ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::applyAutoGain</definition>
+        <argsstring>(float *buffer[2], size_t size)</argsstring>
+        <name>applyAutoGain</name>
+        <qualifiedname>Waveshaper::applyAutoGain</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buffer</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Applies the calculated auto gain values to a block of samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer the auto gain is to be applied to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="83" column="17" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="108" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1aee769a45659eeef817fd492ab4fe4cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::processBlock</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processBlock</name>
+        <qualifiedname>Waveshaper::processBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="90" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="119" bodyend="178"/>
+        <references refid="class_waveshaper_1a9c93d163a6d94bd168518d05e9e957ca" compoundref="_waveshaper_8cpp" startline="108" endline="117">applyAutoGain</references>
+        <references refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" compoundref="_constants_8h" startline="3">BLOCKLENGTH</references>
+        <references refid="class_waveshaper_1a00ea2d1f63e96d9b7490d3cd406c174d" compoundref="_waveshaper_8cpp" startline="97" endline="106">calculateAutoGain</references>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="class_waveshaper_1a62d9eb0ea8b9ef59f9c68d04bc07df7d" compoundref="_waveshaper_8cpp" startline="230" endline="247">processBitReducer</references>
+        <references refid="class_waveshaper_1a5355a959d813d64f04fbe20d632ca4c9" compoundref="_waveshaper_8cpp" startline="180" endline="204">processClipper</references>
+        <references refid="class_waveshaper_1ad97bfdbd0967ef98837efbbdadc8f3ed" compoundref="_waveshaper_8cpp" startline="206" endline="215">processFolder</references>
+        <references refid="class_waveshaper_1a86dd3c75d954e3b521d28b514a00b7cd" compoundref="_waveshaper_8cpp" startline="217" endline="228">processLFO</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="class_waveshaper_1a44318a7b6e2ab2ffd5ef074bc51c4958" compoundref="_waveshaper_8cpp" startline="75" endline="84">setInputAG</references>
+        <references refid="class_waveshaper_1a79a46c6bf0e1b895692d8f0aa80ed94a" compoundref="_waveshaper_8cpp" startline="86" endline="95">setOutputAG</references>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a5355a959d813d64f04fbe20d632ca4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::processClipper</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processClipper</name>
+        <qualifiedname>Waveshaper::processClipper</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples using the clipper algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="97" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="180" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1ad97bfdbd0967ef98837efbbdadc8f3ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::processFolder</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processFolder</name>
+        <qualifiedname>Waveshaper::processFolder</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples using the wavefolder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="104" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="206" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a86dd3c75d954e3b521d28b514a00b7cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::processLFO</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processLFO</name>
+        <qualifiedname>Waveshaper::processLFO</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Modulates each sample in the block using an LFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="111" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="217" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_1a62d9eb0ea8b9ef59f9c68d04bc07df7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Waveshaper::processBitReducer</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processBitReducer</name>
+        <qualifiedname>Waveshaper::processBitReducer</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Reduces the bit depth of each sample in a block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Waveshaper.h" line="118" column="10" bodyfile="DSP/FX/Waveshaper.cpp" bodystart="230" bodyend="247"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Waveshaper.h" line="21" column="1" bodyfile="DSP/FX/Waveshaper.h" bodystart="22" bodyend="148"/>
+    <listofallmembers>
+      <member refid="class_waveshaper_1a8716b8c2c593b592ed850fa24f150567" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>amount</name></member>
+      <member refid="class_waveshaper_1a9c93d163a6d94bd168518d05e9e957ca" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>applyAutoGain</name></member>
+      <member refid="class_waveshaper_1ab1dd54f922ca356649300a53497c1a80" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>bitCount</name></member>
+      <member refid="class_waveshaper_1a80264fc65d247c3c2ee6a69ca8994e51" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>bitRate</name></member>
+      <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a245d87f2eba21f3d6d6ce82483fd2d41" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>BITREDUCER</name></member>
+      <member refid="class_waveshaper_1a1e9cf4d6b15a1db344558fdd866608b5" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>bits</name></member>
+      <member refid="class_waveshaper_1adc4af49e5eb2f402af3ca471161dfcca" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>bitsMax</name></member>
+      <member refid="class_waveshaper_1ab4dae1c93a6903f7cab0a1a2f4faf141" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>bitsMin</name></member>
+      <member refid="class_waveshaper_1ac710ef958347431da8083a2a4f65b96a" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>buffer</name></member>
+      <member refid="class_waveshaper_1a00ea2d1f63e96d9b7490d3cd406c174d" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>calculateAutoGain</name></member>
+      <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a3e39405f6e785ac1be7e7f1905887e99" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>CLIPPER</name></member>
+      <member refid="class_waveshaper_1ab09bba1df7c47073c7bff542939ec689" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>diffAG</name></member>
+      <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a5bc44734ce4547cd1172e052d522a873" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>FOLDER</name></member>
+      <member refid="class_waveshaper_1af0955f3966e553deb33a1d2d2d7dce82" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>folder</name></member>
+      <member refid="class_waveshaper_1a2df3262e4e2ff0dcfb68d9e1dfb9b4c3" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>funcControl</name></member>
+      <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>Funcs</name></member>
+      <member refid="class_waveshaper_1ac04461769908282db7325214eba45087" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>init</name></member>
+      <member refid="class_waveshaper_1a59dc33c29533aa55fa7d969822f5180f" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>inputAG</name></member>
+      <member refid="class_waveshaper_1a9369c40f806283265af1c590f87311f3" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>isBypass</name></member>
+      <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52aac22d5f57c78e0226cdc09264df3fae2" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>LFO</name></member>
+      <member refid="class_waveshaper_1a22030590980321a82d27f0e76871166c" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>lfo</name></member>
+      <member refid="class_waveshaper_1a722d506e7192c3b5503d2d58bfce96a8" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>lfoFreq</name></member>
+      <member refid="class_waveshaper_1acb37d23a0fa0d0d0a20197cc23d4b476" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>lfoMax</name></member>
+      <member refid="class_waveshaper_1a6d65eb84af4e957607ebeb7ceb966dce" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>lfoMin</name></member>
+      <member refid="class_waveshaper_1a0a5005d8087c3cb06e191ab19757dc1e" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>mode</name></member>
+      <member refid="class_waveshaper_1a464b247230d177661812e74e71aa40ef" prot="private" virt="non-virtual"><scope>Waveshaper</scope><name>outputAG</name></member>
+      <member refid="class_waveshaper_1a62d9eb0ea8b9ef59f9c68d04bc07df7d" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>processBitReducer</name></member>
+      <member refid="class_waveshaper_1aee769a45659eeef817fd492ab4fe4cf4" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>processBlock</name></member>
+      <member refid="class_waveshaper_1a5355a959d813d64f04fbe20d632ca4c9" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>processClipper</name></member>
+      <member refid="class_waveshaper_1ad97bfdbd0967ef98837efbbdadc8f3ed" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>processFolder</name></member>
+      <member refid="class_waveshaper_1a86dd3c75d954e3b521d28b514a00b7cd" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>processLFO</name></member>
+      <member refid="class_waveshaper_1a67420571eeacdabc3629118ffb1f7590" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>scaleControlParam</name></member>
+      <member refid="class_waveshaper_1a0f5e75a5913f3d65e34bae649ee83f45" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setAmount</name></member>
+      <member refid="class_waveshaper_1a2313630b34e917c5b573ada3957c35b9" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setBypass</name></member>
+      <member refid="class_waveshaper_1a47e4bc80a0c83e31364c8366b080c134" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setDefaultValues</name></member>
+      <member refid="class_waveshaper_1a3db430becb2df8a42cbcb0486414c039" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setFuncControl</name></member>
+      <member refid="class_waveshaper_1a44318a7b6e2ab2ffd5ef074bc51c4958" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setInputAG</name></member>
+      <member refid="class_waveshaper_1abf1a2cbeb9cf285159fc7c2522dd2d8a" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setMode</name></member>
+      <member refid="class_waveshaper_1a79a46c6bf0e1b895692d8f0aa80ed94a" prot="public" virt="non-virtual"><scope>Waveshaper</scope><name>setOutputAG</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

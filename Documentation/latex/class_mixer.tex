@@ -1,0 +1,309 @@
+\doxysection{Mixer Class Reference}
+\hypertarget{class_mixer}{}\label{class_mixer}\index{Mixer@{Mixer}}
+
+
+{\ttfamily \#include $<$Mixer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mixer_ad9ef6107ff80ed78ceb46e425bb25b05}{init}} (Daisy\+Seed \texorpdfstring{$\ast$}{*}seed, float \texorpdfstring{$\ast$}{*}t1\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t2\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t3\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t4\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialises the mixer class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a3f3e14300bd735fa3f4abdef4f2a8798}{init\+Mix\+Channels}} (float \texorpdfstring{$\ast$}{*}m\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t1\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t2\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t3\mbox{[}2\mbox{]}, float \texorpdfstring{$\ast$}{*}t4\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialises the mixer channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_ab6c6db2608bad894ddbd3f79af7da648}{init\+FX}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}t1\mbox{[}2\mbox{]}, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}t2\mbox{[}2\mbox{]}, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}t3\mbox{[}2\mbox{]}, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}t4\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialises all the effects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a6ec1d4b3b446f487cbc11408a6c0ee23}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the backend parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_ac19ad0c9a2101b1a68a1df99b64e5b9a}{process\+Input\+Block}} (const float \texorpdfstring{$\ast$}{*}left, const float \texorpdfstring{$\ast$}{*}right, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples from the Seed\textquotesingle{}s input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_af18fb7aa3350a57d2bb8d22272edeba1}{pan\+Channels}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles the panning of the mixer channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a5ff27db3d3d929520e8db73f0438b5ec}{mix\+Output}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles the mixing of the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a84db56f64191585c461a2a05fd68b463}{process\+Output\+Block}} (float \texorpdfstring{$\ast$}{*}left, float \texorpdfstring{$\ast$}{*}right, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples and sends them to the Seed\textquotesingle{}s output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_ae146a7e1659dc74abda5fd36910e7bff}{pan\+Mix\+Buffer}} (float \texorpdfstring{$\ast$}{*}buffer\mbox{[}2\mbox{]}, float pan, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Applies a -\/6dB linear taper pan to a mix buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a47456bbddd719f27c7cdc689f80008a1}{set\+Mix\+Div}} ()
+\begin{DoxyCompactList}\small\item\em Sets the mix divisor used to mix the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a644b7cf22643aec1af032fcc615adc9f}{set\+Track1\+Pan}} (float p)
+\begin{DoxyCompactList}\small\item\em Sets the pan value for track 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_aca235adccb2d2fe1cd7b3db430a66053}{set\+Track2\+Pan}} (float p)
+\begin{DoxyCompactList}\small\item\em Sets the pan value for track 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a5a88c441bbbbff1128d20d929a7d0935}{set\+Track3\+Pan}} (float p)
+\begin{DoxyCompactList}\small\item\em Sets the pan value for track 3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a28e66584e7f5ecb35f538ae2768cb8ac}{set\+Track4\+Pan}} (float p)
+\begin{DoxyCompactList}\small\item\em Sets the pan value for track 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_ada57a607e8396bed817b7dcd81a80402}{set\+Track1\+Gain}} (float g)
+\begin{DoxyCompactList}\small\item\em Sets the gain value for track 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a48eb795de18f0207b5c665622ed0adf8}{set\+Track2\+Gain}} (float g)
+\begin{DoxyCompactList}\small\item\em Sets the gain value for track 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_ad464cfd56371e24d3b0e8021452e0b7b}{set\+Track3\+Gain}} (float g)
+\begin{DoxyCompactList}\small\item\em Sets the gain value for track 3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_a03ab7d2deb0caf7b33cf883556203b52}{set\+Track4\+Gain}} (float g)
+\begin{DoxyCompactList}\small\item\em Sets the gain value for track 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_afeb56a1404c1e27c819955c93a754589}{set\+Master\+Volume}} (float m)
+\begin{DoxyCompactList}\small\item\em Sets the master gain value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_mixer}{Mixer} Function\+: Mixes outputs of track classes 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mixer_ad9ef6107ff80ed78ceb46e425bb25b05}\label{class_mixer_ad9ef6107ff80ed78ceb46e425bb25b05} 
+\index{Mixer@{Mixer}!init@{init}}
+\index{init@{init}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Mixer\+::init (\begin{DoxyParamCaption}\item[{Daisy\+Seed \texorpdfstring{$\ast$}{*}}]{seed,  }\item[{float \texorpdfstring{$\ast$}{*}}]{t1\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t2\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t3\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t4\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialises the mixer class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & An array of pointers pointing to the buffer for track 1 \\
+\hline
+{\em t2} & An array of pointers pointing to the buffer for track 2 \\
+\hline
+{\em t3} & An array of pointers pointing to the buffer for track 3 \\
+\hline
+{\em t4} & An array of pointers pointing to the buffer for track 4 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_ab6c6db2608bad894ddbd3f79af7da648}\label{class_mixer_ab6c6db2608bad894ddbd3f79af7da648} 
+\index{Mixer@{Mixer}!initFX@{initFX}}
+\index{initFX@{initFX}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{initFX()}{initFX()}}
+{\footnotesize\ttfamily void Mixer\+::init\+FX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{t1\mbox{[}2\mbox{]},  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{t2\mbox{[}2\mbox{]},  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{t3\mbox{[}2\mbox{]},  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{t4\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialises all the effects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the LCD driver \\
+\hline
+{\em t1} & An array of pointers pointing to the delay line for track 1 \\
+\hline
+{\em t2} & An array of pointers pointing to the delay line for track 2 \\
+\hline
+{\em t3} & An array of pointers pointing to the delay line for track 3 \\
+\hline
+{\em t4} & An array of pointers pointing to the delay line for track 4 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_a3f3e14300bd735fa3f4abdef4f2a8798}\label{class_mixer_a3f3e14300bd735fa3f4abdef4f2a8798} 
+\index{Mixer@{Mixer}!initMixChannels@{initMixChannels}}
+\index{initMixChannels@{initMixChannels}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{initMixChannels()}{initMixChannels()}}
+{\footnotesize\ttfamily void Mixer\+::init\+Mix\+Channels (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{m\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t1\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t2\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t3\mbox{[}2\mbox{]},  }\item[{float \texorpdfstring{$\ast$}{*}}]{t4\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialises the mixer channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & An array of pointers pointing to the mix buffer for track 1 \\
+\hline
+{\em t2} & An array of pointers pointing to the mix buffer for track 2 \\
+\hline
+{\em t3} & An array of pointers pointing to the mix buffer for track 3 \\
+\hline
+{\em t4} & An array of pointers pointing to the mix buffer for track 4 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_a5ff27db3d3d929520e8db73f0438b5ec}\label{class_mixer_a5ff27db3d3d929520e8db73f0438b5ec} 
+\index{Mixer@{Mixer}!mixOutput@{mixOutput}}
+\index{mixOutput@{mixOutput}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{mixOutput()}{mixOutput()}}
+{\footnotesize\ttfamily void Mixer\+::mix\+Output (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Handles the mixing of the output. 
+
+\Hypertarget{class_mixer_af18fb7aa3350a57d2bb8d22272edeba1}\label{class_mixer_af18fb7aa3350a57d2bb8d22272edeba1} 
+\index{Mixer@{Mixer}!panChannels@{panChannels}}
+\index{panChannels@{panChannels}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{panChannels()}{panChannels()}}
+{\footnotesize\ttfamily void Mixer\+::pan\+Channels (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Handles the panning of the mixer channels. 
+
+\Hypertarget{class_mixer_ae146a7e1659dc74abda5fd36910e7bff}\label{class_mixer_ae146a7e1659dc74abda5fd36910e7bff} 
+\index{Mixer@{Mixer}!panMixBuffer@{panMixBuffer}}
+\index{panMixBuffer@{panMixBuffer}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{panMixBuffer()}{panMixBuffer()}}
+{\footnotesize\ttfamily void Mixer\+::pan\+Mix\+Buffer (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{buffer\mbox{[}2\mbox{]},  }\item[{float}]{pan,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Applies a -\/6dB linear taper pan to a mix buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The mix buffer the panning should be applied to \\
+\hline
+{\em pan} & The pan value for that mix buffer \\
+\hline
+{\em size} & The size of the mix buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_ac19ad0c9a2101b1a68a1df99b64e5b9a}\label{class_mixer_ac19ad0c9a2101b1a68a1df99b64e5b9a} 
+\index{Mixer@{Mixer}!processInputBlock@{processInputBlock}}
+\index{processInputBlock@{processInputBlock}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{processInputBlock()}{processInputBlock()}}
+{\footnotesize\ttfamily void Mixer\+::process\+Input\+Block (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{left,  }\item[{const float \texorpdfstring{$\ast$}{*}}]{right,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples from the Seed\textquotesingle{}s input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & A pointer to the Seed\textquotesingle{}s left input buffer \\
+\hline
+{\em right} & A pointer to the Seed\textquotesingle{}s right input buffer \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_a84db56f64191585c461a2a05fd68b463}\label{class_mixer_a84db56f64191585c461a2a05fd68b463} 
+\index{Mixer@{Mixer}!processOutputBlock@{processOutputBlock}}
+\index{processOutputBlock@{processOutputBlock}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{processOutputBlock()}{processOutputBlock()}}
+{\footnotesize\ttfamily void Mixer\+::process\+Output\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{left,  }\item[{float \texorpdfstring{$\ast$}{*}}]{right,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples and sends them to the Seed\textquotesingle{}s output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & A pointer to the Seed\textquotesingle{}s left output buffer \\
+\hline
+{\em right} & A pointer to the Seed\textquotesingle{}s right output buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_afeb56a1404c1e27c819955c93a754589}\label{class_mixer_afeb56a1404c1e27c819955c93a754589} 
+\index{Mixer@{Mixer}!setMasterVolume@{setMasterVolume}}
+\index{setMasterVolume@{setMasterVolume}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setMasterVolume()}{setMasterVolume()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the master gain value. 
+
+\Hypertarget{class_mixer_a47456bbddd719f27c7cdc689f80008a1}\label{class_mixer_a47456bbddd719f27c7cdc689f80008a1} 
+\index{Mixer@{Mixer}!setMixDiv@{setMixDiv}}
+\index{setMixDiv@{setMixDiv}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setMixDiv()}{setMixDiv()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Mix\+Div (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the mix divisor used to mix the output. 
+
+\Hypertarget{class_mixer_ada57a607e8396bed817b7dcd81a80402}\label{class_mixer_ada57a607e8396bed817b7dcd81a80402} 
+\index{Mixer@{Mixer}!setTrack1Gain@{setTrack1Gain}}
+\index{setTrack1Gain@{setTrack1Gain}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack1Gain()}{setTrack1Gain()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track1\+Gain (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the gain value for track 1. 
+
+\Hypertarget{class_mixer_a644b7cf22643aec1af032fcc615adc9f}\label{class_mixer_a644b7cf22643aec1af032fcc615adc9f} 
+\index{Mixer@{Mixer}!setTrack1Pan@{setTrack1Pan}}
+\index{setTrack1Pan@{setTrack1Pan}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack1Pan()}{setTrack1Pan()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track1\+Pan (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pan value for track 1. 
+
+\Hypertarget{class_mixer_a48eb795de18f0207b5c665622ed0adf8}\label{class_mixer_a48eb795de18f0207b5c665622ed0adf8} 
+\index{Mixer@{Mixer}!setTrack2Gain@{setTrack2Gain}}
+\index{setTrack2Gain@{setTrack2Gain}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack2Gain()}{setTrack2Gain()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track2\+Gain (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the gain value for track 2. 
+
+\Hypertarget{class_mixer_aca235adccb2d2fe1cd7b3db430a66053}\label{class_mixer_aca235adccb2d2fe1cd7b3db430a66053} 
+\index{Mixer@{Mixer}!setTrack2Pan@{setTrack2Pan}}
+\index{setTrack2Pan@{setTrack2Pan}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack2Pan()}{setTrack2Pan()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track2\+Pan (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pan value for track 2. 
+
+\Hypertarget{class_mixer_ad464cfd56371e24d3b0e8021452e0b7b}\label{class_mixer_ad464cfd56371e24d3b0e8021452e0b7b} 
+\index{Mixer@{Mixer}!setTrack3Gain@{setTrack3Gain}}
+\index{setTrack3Gain@{setTrack3Gain}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack3Gain()}{setTrack3Gain()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track3\+Gain (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the gain value for track 3. 
+
+\Hypertarget{class_mixer_a5a88c441bbbbff1128d20d929a7d0935}\label{class_mixer_a5a88c441bbbbff1128d20d929a7d0935} 
+\index{Mixer@{Mixer}!setTrack3Pan@{setTrack3Pan}}
+\index{setTrack3Pan@{setTrack3Pan}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack3Pan()}{setTrack3Pan()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track3\+Pan (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pan value for track 3. 
+
+\Hypertarget{class_mixer_a03ab7d2deb0caf7b33cf883556203b52}\label{class_mixer_a03ab7d2deb0caf7b33cf883556203b52} 
+\index{Mixer@{Mixer}!setTrack4Gain@{setTrack4Gain}}
+\index{setTrack4Gain@{setTrack4Gain}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack4Gain()}{setTrack4Gain()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track4\+Gain (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the gain value for track 4. 
+
+\Hypertarget{class_mixer_a28e66584e7f5ecb35f538ae2768cb8ac}\label{class_mixer_a28e66584e7f5ecb35f538ae2768cb8ac} 
+\index{Mixer@{Mixer}!setTrack4Pan@{setTrack4Pan}}
+\index{setTrack4Pan@{setTrack4Pan}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{setTrack4Pan()}{setTrack4Pan()}}
+{\footnotesize\ttfamily void Mixer\+::set\+Track4\+Pan (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pan value for track 4. 
+
+\Hypertarget{class_mixer_a6ec1d4b3b446f487cbc11408a6c0ee23}\label{class_mixer_a6ec1d4b3b446f487cbc11408a6c0ee23} 
+\index{Mixer@{Mixer}!tick@{tick}}
+\index{tick@{tick}!Mixer@{Mixer}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Mixer\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the backend parameters. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\mbox{\hyperlink{_mixer_8h}{Mixer.\+h}}\item 
+DSP/\mbox{\hyperlink{_mixer_8cpp}{Mixer.\+cpp}}\end{DoxyCompactItemize}

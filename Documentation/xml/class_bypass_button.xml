@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_bypass_button" kind="class" language="C++" prot="public">
+    <compoundname>BypassButton</compoundname>
+    <includes refid="_bypass_button_8h" local="no">BypassButton.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bypass_button_1a6095806466f08d8b872dd9e5f1f6ca94" prot="private" static="no" mutable="no">
+        <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+        <definition>EncoderDriver* BypassButton::encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <qualifiedname>BypassButton::encoder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="64" column="19" bodyfile="GUI/FX/BypassButton.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bypass_button_1a1304e450f90d2b16eaf605eaa359dc03" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; BypassButton::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>BypassButton::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="67" column="19" bodyfile="GUI/FX/BypassButton.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bypass_button_1a5bbf8bf4af0c0150d8fef39c6af12203" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BypassButton::isSelected</definition>
+        <argsstring></argsstring>
+        <name>isSelected</name>
+        <qualifiedname>BypassButton::isSelected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="68" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bypass_button_1a84acaf0082fa74d92c76edcb9d41f5df" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BypassButton::isBypassed</definition>
+        <argsstring></argsstring>
+        <name>isBypassed</name>
+        <qualifiedname>BypassButton::isBypassed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="69" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BypassButton::init</definition>
+        <argsstring>(EncoderDriver *ed, std::function&lt; void()&gt; bypassCallback)</argsstring>
+        <name>init</name>
+        <qualifiedname>BypassButton::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>ed</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>bypassCallback</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bypassCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be called when the bypass is set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="21" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bypass_button_1a7d8a5dab6a354f502f8d45372fcd827d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BypassButton::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>BypassButton::tick</qualifiedname>
+        <briefdescription>
+<para>Checks if the bypass state needs to be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="33" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="33" bodyend="40"/>
+        <references refid="class_encoder_driver_1a9f6aea9b40ce44db249f04816423dd3b" compoundref="_encoder_driver_8h" startline="95" endline="95">EncoderDriver::getButtonState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BypassButton::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>BypassButton::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="45" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bypass_button_1ab50d9353c702d0b68732317cf0c33c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BypassButton::setIsSelected</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsSelected</name>
+        <qualifiedname>BypassButton::setIsSelected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the button is selected on the interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the bypass state of the instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/BypassButton.h" line="60" column="10" bodyfile="GUI/FX/BypassButton.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_bypass_button" kindref="compound">BypassButton</ref> Function: Button used for bypassing an effect </para>
+    </detaileddescription>
+    <location file="GUI/FX/BypassButton.h" line="12" column="1" bodyfile="GUI/FX/BypassButton.h" bodystart="13" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_bypass_button_1a1304e450f90d2b16eaf605eaa359dc03" prot="private" virt="non-virtual"><scope>BypassButton</scope><name>callback</name></member>
+      <member refid="class_bypass_button_1a6095806466f08d8b872dd9e5f1f6ca94" prot="private" virt="non-virtual"><scope>BypassButton</scope><name>encoder</name></member>
+      <member refid="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" prot="public" virt="non-virtual"><scope>BypassButton</scope><name>init</name></member>
+      <member refid="class_bypass_button_1a84acaf0082fa74d92c76edcb9d41f5df" prot="private" virt="non-virtual"><scope>BypassButton</scope><name>isBypassed</name></member>
+      <member refid="class_bypass_button_1a5bbf8bf4af0c0150d8fef39c6af12203" prot="private" virt="non-virtual"><scope>BypassButton</scope><name>isSelected</name></member>
+      <member refid="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" prot="public" virt="non-virtual"><scope>BypassButton</scope><name>repaint</name></member>
+      <member refid="class_bypass_button_1ab50d9353c702d0b68732317cf0c33c4d" prot="public" virt="non-virtual"><scope>BypassButton</scope><name>setIsSelected</name></member>
+      <member refid="class_bypass_button_1a7d8a5dab6a354f502f8d45372fcd827d" prot="public" virt="non-virtual"><scope>BypassButton</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

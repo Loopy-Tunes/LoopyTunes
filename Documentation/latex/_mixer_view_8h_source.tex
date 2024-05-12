@@ -1,0 +1,60 @@
+\doxysection{Mixer\+View.\+h}
+\hypertarget{_mixer_view_8h_source}{}\label{_mixer_view_8h_source}\index{GUI/MixerView.h@{GUI/MixerView.h}}
+\mbox{\hyperlink{_mixer_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MIXERVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MIXERVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_slider_8h}{AudioSlider.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_track_view_8h}{TrackView.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/********************************************/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mixer_view}{MixerView}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(DaisySeed*\ seed,\ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ \mbox{\hyperlink{_loopy_tunes_8cpp_a3c8fc73879ad8b7e0578aad333e68905}{encoder}},\ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ kpd);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_abf1e540eef4ebca1bd5c5e95102f408d}{tick}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_acb35a7d78b6e17b5a6d9cf24a87516dd}{repaint}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_abc2e3fcc6b00885c7ff1cb59e7ba7c89}{clear}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_a8b517b4206bb25ec294951aab335ea89}{setIsOpen}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isOpen\ =\ state;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_a002acf6e5c349fa3d38747fd310a5ed1}{setIsPainted}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isPainted\ =\ state;\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mixer_view_a311d8514bec16cdc797790c62a46380c}{setSelectedChannel}}(\textcolor{keywordtype}{int}\ channel)\ \{\ selectedChannel\ =\ channel;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ keypad;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_audio_slider}{AudioSlider}}\ amp1;}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_audio_slider}{AudioSlider}}\ amp2;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_audio_slider}{AudioSlider}}\ amp3;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_audio_slider}{AudioSlider}}\ amp4;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ selectedChannel;}
+\DoxyCodeLine{00065\ \ \ \ \ std::array<AudioSlider,\ 4>\ ampSliders\ =\ \{amp1,\ amp2,\ amp3,\ amp4\};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_track_view}{TrackView}}\ track1;}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_track_view}{TrackView}}\ track2;}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_track_view}{TrackView}}\ track3;}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_track_view}{TrackView}}\ track4;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPainted;}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

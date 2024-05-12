@@ -1,0 +1,119 @@
+\doxysection{Mixer\+View Class Reference}
+\hypertarget{class_mixer_view}{}\label{class_mixer_view}\index{MixerView@{MixerView}}
+
+
+{\ttfamily \#include $<$Mixer\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mixer_view_af147890d75f589e81b9264405a781d87}{init}} (Daisy\+Seed \texorpdfstring{$\ast$}{*}seed, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_loopy_tunes_8cpp_a3c8fc73879ad8b7e0578aad333e68905}{encoder}}, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the mixer view and all other GUI classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_abf1e540eef4ebca1bd5c5e95102f408d}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_acb35a7d78b6e17b5a6d9cf24a87516dd}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_abc2e3fcc6b00885c7ff1cb59e7ba7c89}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_a8b517b4206bb25ec294951aab335ea89}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_a002acf6e5c349fa3d38747fd310a5ed1}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mixer_view_a311d8514bec16cdc797790c62a46380c}{set\+Selected\+Channel}} (int channel)
+\begin{DoxyCompactList}\small\item\em Sets which channel is currently selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_mixer_view}{Mixer\+View} Function\+: Top level GUI class 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mixer_view_abc2e3fcc6b00885c7ff1cb59e7ba7c89}\label{class_mixer_view_abc2e3fcc6b00885c7ff1cb59e7ba7c89} 
+\index{MixerView@{MixerView}!clear@{clear}}
+\index{clear@{clear}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Mixer\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_mixer_view_af147890d75f589e81b9264405a781d87}\label{class_mixer_view_af147890d75f589e81b9264405a781d87} 
+\index{MixerView@{MixerView}!init@{init}}
+\index{init@{init}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Mixer\+View\+::init (\begin{DoxyParamCaption}\item[{Daisy\+Seed \texorpdfstring{$\ast$}{*}}]{seed,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{encoder,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the mixer view and all other GUI classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & A pointer to the hardware instance \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_view_acb35a7d78b6e17b5a6d9cf24a87516dd}\label{class_mixer_view_acb35a7d78b6e17b5a6d9cf24a87516dd} 
+\index{MixerView@{MixerView}!repaint@{repaint}}
+\index{repaint@{repaint}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Mixer\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_mixer_view_a8b517b4206bb25ec294951aab335ea89}\label{class_mixer_view_a8b517b4206bb25ec294951aab335ea89} 
+\index{MixerView@{MixerView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Mixer\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_mixer_view_a002acf6e5c349fa3d38747fd310a5ed1}\label{class_mixer_view_a002acf6e5c349fa3d38747fd310a5ed1} 
+\index{MixerView@{MixerView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Mixer\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_mixer_view_a311d8514bec16cdc797790c62a46380c}\label{class_mixer_view_a311d8514bec16cdc797790c62a46380c} 
+\index{MixerView@{MixerView}!setSelectedChannel@{setSelectedChannel}}
+\index{setSelectedChannel@{setSelectedChannel}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{setSelectedChannel()}{setSelectedChannel()}}
+{\footnotesize\ttfamily void Mixer\+View\+::set\+Selected\+Channel (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets which channel is currently selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to be selected \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mixer_view_abf1e540eef4ebca1bd5c5e95102f408d}\label{class_mixer_view_abf1e540eef4ebca1bd5c5e95102f408d} 
+\index{MixerView@{MixerView}!tick@{tick}}
+\index{tick@{tick}!MixerView@{MixerView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Mixer\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\mbox{\hyperlink{_mixer_view_8h}{Mixer\+View.\+h}}\item 
+GUI/\mbox{\hyperlink{_mixer_view_8cpp}{Mixer\+View.\+cpp}}\end{DoxyCompactItemize}

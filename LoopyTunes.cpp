@@ -1,5 +1,6 @@
 #include "DSP/Mixer.h"
 #include "GUI/MixerView.h"
+#include "Drivers/daisy_ILI9341.hpp"
 
 using namespace daisy;
 using namespace daisysp;
@@ -26,6 +27,7 @@ Mixer mixer;
 MixerView mixerView;
 EncoderDriver encoder;
 KeypadDriver keypad;
+UiDriver lcd;
 
 // buffers
 namespace Buffers
@@ -108,7 +110,7 @@ inline void tick(size_t size)
 		keypad.tick();
 		encoder.tick();
 		mixer.tick();
-		//mixerView.tick();
+		mixerView.tick();
 		lcd.Update();
 		sample = 0;
 	}

@@ -1,4 +1,5 @@
 #include "ReverbView.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void ReverbView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {

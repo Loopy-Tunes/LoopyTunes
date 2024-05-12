@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classallpass" kind="class" language="C++" prot="public">
+    <compoundname>allpass</compoundname>
+    <includes refid="allpass_8hpp" local="no">allpass.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float allpass::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <qualifiedname>allpass::feedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="21" column="6" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classallpass_1aa6b769510364da1d9481948d4a154f8b" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* allpass::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>allpass::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="22" column="6" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classallpass_1a0156b24446b810952ae1df1accb8318f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int allpass::bufsize</definition>
+        <argsstring></argsstring>
+        <name>bufsize</name>
+        <qualifiedname>allpass::bufsize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="23" column="4" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int allpass::bufidx</definition>
+        <argsstring></argsstring>
+        <name>bufidx</name>
+        <qualifiedname>allpass::bufidx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="24" column="4" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classallpass_1ad0a4c84903b886efb77f37d6889998dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>allpass::allpass</definition>
+        <argsstring>()</argsstring>
+        <name>allpass</name>
+        <qualifiedname>allpass::allpass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="14" column="1" bodyfile="DSP/FX/Reverb/allpass.cpp" bodystart="9" bodyend="12"/>
+        <references refid="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" compoundref="allpass_8hpp" startline="24">bufidx</references>
+      </memberdef>
+      <memberdef kind="function" id="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void allpass::setbuffer</definition>
+        <argsstring>(float *buf, int size)</argsstring>
+        <name>setbuffer</name>
+        <qualifiedname>allpass::setbuffer</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="15" column="5" bodyfile="DSP/FX/Reverb/allpass.cpp" bodystart="14" bodyend="18"/>
+        <references refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" compoundref="allpass_8hpp" startline="22">buffer</references>
+        <references refid="classallpass_1a0156b24446b810952ae1df1accb8318f" compoundref="allpass_8hpp" startline="23">bufsize</references>
+      </memberdef>
+      <memberdef kind="function" id="classallpass_1a72ef1d44f5807011889020f2c316cc32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float allpass::process</definition>
+        <argsstring>(float inp)</argsstring>
+        <name>process</name>
+        <qualifiedname>allpass::process</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>inp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="16" column="14" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="30" bodyend="44"/>
+        <references refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" compoundref="allpass_8hpp" startline="22">buffer</references>
+        <references refid="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" compoundref="allpass_8hpp" startline="24">bufidx</references>
+        <references refid="classallpass_1a0156b24446b810952ae1df1accb8318f" compoundref="allpass_8hpp" startline="23">bufsize</references>
+        <references refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" compoundref="allpass_8hpp" startline="21">feedback</references>
+        <references refid="denormals_8h_1a6ba19a68ce81e0a4b889428607c47acd" compoundref="denormals_8h" startline="11">undenormalise</references>
+      </memberdef>
+      <memberdef kind="function" id="classallpass_1af93a4f1d4dcc544323978031cb234aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void allpass::mute</definition>
+        <argsstring>()</argsstring>
+        <name>mute</name>
+        <qualifiedname>allpass::mute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="17" column="5" bodyfile="DSP/FX/Reverb/allpass.cpp" bodystart="20" bodyend="24"/>
+        <references refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" compoundref="allpass_8hpp" startline="22">buffer</references>
+        <references refid="classallpass_1a0156b24446b810952ae1df1accb8318f" compoundref="allpass_8hpp" startline="23">bufsize</references>
+      </memberdef>
+      <memberdef kind="function" id="classallpass_1ad636d830e21de3dd61928875db95c899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void allpass::setfeedback</definition>
+        <argsstring>(float val)</argsstring>
+        <name>setfeedback</name>
+        <qualifiedname>allpass::setfeedback</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="18" column="5" bodyfile="DSP/FX/Reverb/allpass.cpp" bodystart="26" bodyend="29"/>
+        <references refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" compoundref="allpass_8hpp" startline="21">feedback</references>
+      </memberdef>
+      <memberdef kind="function" id="classallpass_1a19e2ab2745647005ce06366b7da64b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float allpass::getfeedback</definition>
+        <argsstring>()</argsstring>
+        <name>getfeedback</name>
+        <qualifiedname>allpass::getfeedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/allpass.hpp" line="19" column="6" bodyfile="DSP/FX/Reverb/allpass.cpp" bodystart="31" bodyend="34"/>
+        <references refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" compoundref="allpass_8hpp" startline="21">feedback</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Reverb/allpass.hpp" line="11" column="1" bodyfile="DSP/FX/Reverb/allpass.hpp" bodystart="12" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classallpass_1ad0a4c84903b886efb77f37d6889998dd" prot="public" virt="non-virtual"><scope>allpass</scope><name>allpass</name></member>
+      <member refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" prot="public" virt="non-virtual"><scope>allpass</scope><name>buffer</name></member>
+      <member refid="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" prot="public" virt="non-virtual"><scope>allpass</scope><name>bufidx</name></member>
+      <member refid="classallpass_1a0156b24446b810952ae1df1accb8318f" prot="public" virt="non-virtual"><scope>allpass</scope><name>bufsize</name></member>
+      <member refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" prot="public" virt="non-virtual"><scope>allpass</scope><name>feedback</name></member>
+      <member refid="classallpass_1a19e2ab2745647005ce06366b7da64b45" prot="public" virt="non-virtual"><scope>allpass</scope><name>getfeedback</name></member>
+      <member refid="classallpass_1af93a4f1d4dcc544323978031cb234aa6" prot="public" virt="non-virtual"><scope>allpass</scope><name>mute</name></member>
+      <member refid="classallpass_1a72ef1d44f5807011889020f2c316cc32" prot="public" virt="non-virtual"><scope>allpass</scope><name>process</name></member>
+      <member refid="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" prot="public" virt="non-virtual"><scope>allpass</scope><name>setbuffer</name></member>
+      <member refid="classallpass_1ad636d830e21de3dd61928875db95c899" prot="public" virt="non-virtual"><scope>allpass</scope><name>setfeedback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

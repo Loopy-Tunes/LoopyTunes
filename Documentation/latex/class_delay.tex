@@ -1,0 +1,130 @@
+\doxysection{Delay Class Reference}
+\hypertarget{class_delay}{}\label{class_delay}\index{Delay@{Delay}}
+
+
+{\ttfamily \#include $<$Delay.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_delay_ab6fbc08d35bd3528d84993c4f9e3f5d5}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, int track\+ID, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}dl\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_a4aec2a60814203c1cca8fcc500e56c29}{set\+Default\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Sets tthe default parameter values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_a0dd8317647695e5e01083e26da82b47d}{set\+Bypass}} ()
+\begin{DoxyCompactList}\small\item\em Sets the bypass state of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_a81a48de61685cddd4be9f93678322a0d}{set\+Amount}} (float a)
+\begin{DoxyCompactList}\small\item\em Sets the amount of the effect in the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_a11d964425f9473ede1b9fea0c9c060bf}{set\+Delay}} (size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Sets the delay time of the delay line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_ac091ce8e3301c908ea14f538f628df20}{set\+Feedback}} (float f)
+\begin{DoxyCompactList}\small\item\em Sets the feedback value used in the delay algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_ab4234fe0620a5f4f40ae0383910d9513}{process\+Block}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples through the delay and mixes the output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delay_ab6fbc08d35bd3528d84993c4f9e3f5d5}\label{class_delay_ab6fbc08d35bd3528d84993c4f9e3f5d5} 
+\index{Delay@{Delay}!init@{init}}
+\index{init@{init}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Delay\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{int}]{track\+ID,  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{dl\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the encoder driver used to initialise the parameters \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+{\em track\+ID} & The ID of the track the instance belongs to \\
+\hline
+{\em dl} & A pointer to an array of delay lines to be used by the instance \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_delay_ab4234fe0620a5f4f40ae0383910d9513}\label{class_delay_ab4234fe0620a5f4f40ae0383910d9513} 
+\index{Delay@{Delay}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Delay\+::process\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples through the delay and mixes the output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & An array of pointers pointing to the input buffer \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_delay_a81a48de61685cddd4be9f93678322a0d}\label{class_delay_a81a48de61685cddd4be9f93678322a0d} 
+\index{Delay@{Delay}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Delay\+::set\+Amount (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the amount of the effect in the output. 
+
+\Hypertarget{class_delay_a0dd8317647695e5e01083e26da82b47d}\label{class_delay_a0dd8317647695e5e01083e26da82b47d} 
+\index{Delay@{Delay}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void Delay\+::set\+Bypass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bypass state of the instance. 
+
+\Hypertarget{class_delay_a4aec2a60814203c1cca8fcc500e56c29}\label{class_delay_a4aec2a60814203c1cca8fcc500e56c29} 
+\index{Delay@{Delay}!setDefaultValues@{setDefaultValues}}
+\index{setDefaultValues@{setDefaultValues}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{setDefaultValues()}{setDefaultValues()}}
+{\footnotesize\ttfamily void Delay\+::set\+Default\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets tthe default parameter values. 
+
+\Hypertarget{class_delay_a11d964425f9473ede1b9fea0c9c060bf}\label{class_delay_a11d964425f9473ede1b9fea0c9c060bf} 
+\index{Delay@{Delay}!setDelay@{setDelay}}
+\index{setDelay@{setDelay}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{setDelay()}{setDelay()}}
+{\footnotesize\ttfamily void Delay\+::set\+Delay (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the delay time of the delay line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The new delay time \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_delay_ac091ce8e3301c908ea14f538f628df20}\label{class_delay_ac091ce8e3301c908ea14f538f628df20} 
+\index{Delay@{Delay}!setFeedback@{setFeedback}}
+\index{setFeedback@{setFeedback}!Delay@{Delay}}
+\doxysubsubsection{\texorpdfstring{setFeedback()}{setFeedback()}}
+{\footnotesize\ttfamily void Delay\+::set\+Feedback (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the feedback value used in the delay algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The new feedback value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\mbox{\hyperlink{_delay_8h}{Delay.\+h}}\item 
+DSP/\+FX/\mbox{\hyperlink{_delay_8cpp}{Delay.\+cpp}}\end{DoxyCompactItemize}

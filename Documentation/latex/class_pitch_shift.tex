@@ -1,0 +1,94 @@
+\doxysection{Pitch\+Shift Class Reference}
+\hypertarget{class_pitch_shift}{}\label{class_pitch_shift}\index{PitchShift@{PitchShift}}
+
+
+{\ttfamily \#include $<$Pitch\+Shift.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pitch_shift_a81d43872b6ddb277f689beaebd9a2c0e}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, int track\+ID)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_a280be785a2b88ac3cf1b1e1dc53d1453}{set\+Default\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Sets tthe default parameter values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_ad942f1dcd95926fb670941272c1b4894}{set\+Bypass}} ()
+\begin{DoxyCompactList}\small\item\em Sets the bypass state of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_ab68cac9ffa4983ad8b6357d4797f176e}{set\+Amount}} (float a)
+\begin{DoxyCompactList}\small\item\em Sets the amount of the effect in the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pitch_shift_a61893b7143a5e382fc23cb5f81737ae2}{process\+Block}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Pitch shifts a block of samples and mixes it with the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pitch_shift_a81d43872b6ddb277f689beaebd9a2c0e}\label{class_pitch_shift_a81d43872b6ddb277f689beaebd9a2c0e} 
+\index{PitchShift@{PitchShift}!init@{init}}
+\index{init@{init}!PitchShift@{PitchShift}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{int}]{track\+ID }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the encoder driver used to initialise the parameters \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+{\em track\+ID} & The ID of the track the instance belongs to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pitch_shift_a61893b7143a5e382fc23cb5f81737ae2}\label{class_pitch_shift_a61893b7143a5e382fc23cb5f81737ae2} 
+\index{PitchShift@{PitchShift}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!PitchShift@{PitchShift}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+::process\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Pitch shifts a block of samples and mixes it with the input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & An array of pointers pointing to the input buffer \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pitch_shift_ab68cac9ffa4983ad8b6357d4797f176e}\label{class_pitch_shift_ab68cac9ffa4983ad8b6357d4797f176e} 
+\index{PitchShift@{PitchShift}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!PitchShift@{PitchShift}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+::set\+Amount (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the amount of the effect in the output. 
+
+\Hypertarget{class_pitch_shift_ad942f1dcd95926fb670941272c1b4894}\label{class_pitch_shift_ad942f1dcd95926fb670941272c1b4894} 
+\index{PitchShift@{PitchShift}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!PitchShift@{PitchShift}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+::set\+Bypass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bypass state of the instance. 
+
+\Hypertarget{class_pitch_shift_a280be785a2b88ac3cf1b1e1dc53d1453}\label{class_pitch_shift_a280be785a2b88ac3cf1b1e1dc53d1453} 
+\index{PitchShift@{PitchShift}!setDefaultValues@{setDefaultValues}}
+\index{setDefaultValues@{setDefaultValues}!PitchShift@{PitchShift}}
+\doxysubsubsection{\texorpdfstring{setDefaultValues()}{setDefaultValues()}}
+{\footnotesize\ttfamily void Pitch\+Shift\+::set\+Default\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets tthe default parameter values. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\mbox{\hyperlink{_pitch_shift_8h}{Pitch\+Shift.\+h}}\item 
+DSP/\+FX/\mbox{\hyperlink{_pitch_shift_8cpp}{Pitch\+Shift.\+cpp}}\end{DoxyCompactItemize}

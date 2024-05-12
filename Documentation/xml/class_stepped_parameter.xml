@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_stepped_parameter" kind="class" language="C++" prot="public">
+    <compoundname>SteppedParameter</compoundname>
+    <includes refid="_stepped_parameter_8h" local="no">SteppedParameter.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stepped_parameter_1a5aee1fa821c320b864c279d60a467eda" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SteppedParameter::paramID</definition>
+        <argsstring></argsstring>
+        <name>paramID</name>
+        <qualifiedname>SteppedParameter::paramID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="93" column="9" bodyfile="Parameters/SteppedParameter.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_parameter_1a4d489566be6b1051b60c8a46d4b177ab" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteppedParameter::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>SteppedParameter::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="94" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_parameter_1aa494765e8b6557458dc6dc5aedcf4017" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteppedParameter::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>SteppedParameter::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="95" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_parameter_1a23df43285ae1e932ecb225cc587dca73" prot="private" static="no" mutable="no">
+        <type>volatile float</type>
+        <definition>volatile float SteppedParameter::curVal</definition>
+        <argsstring></argsstring>
+        <name>curVal</name>
+        <qualifiedname>SteppedParameter::curVal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="96" column="20" bodyfile="Parameters/SteppedParameter.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_parameter_1a62a9732d33d2adfdd1f1f20904205d44" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteppedParameter::step</definition>
+        <argsstring></argsstring>
+        <name>step</name>
+        <qualifiedname>SteppedParameter::step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="97" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stepped_parameter_1a2918852c9ad52da10c33eb7fad187c81" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(float)&gt;</type>
+        <definition>std::function&lt;void(float)&gt; SteppedParameter::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>SteppedParameter::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="99" column="19" bodyfile="Parameters/SteppedParameter.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedParameter::init</definition>
+        <argsstring>(float mi, float ma, float st, int param, int track, std::function&lt; void(float)&gt; cb)</argsstring>
+        <name>init</name>
+        <qualifiedname>SteppedParameter::init</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>mi</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>st</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>track</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(float)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lowest value the instance should decrement to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The highest value the instance should increment to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>st</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value the instance should increment/decrement by </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the parameters the instance is assigned to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>track</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance is assigned to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function executed when the value changes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="30" column="10" bodyfile="Parameters/SteppedParameter.h" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1ae364f78a0faf8f9a8bd8501577f0b607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedParameter::increment</definition>
+        <argsstring>()</argsstring>
+        <name>increment</name>
+        <qualifiedname>SteppedParameter::increment</qualifiedname>
+        <briefdescription>
+<para>Increments the instance&apos;s value and executes the callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="44" column="10" bodyfile="Parameters/SteppedParameter.h" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1a378641604d8570b8d8556891dca6f729" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SteppedParameter::decrement</definition>
+        <argsstring>()</argsstring>
+        <name>decrement</name>
+        <qualifiedname>SteppedParameter::decrement</qualifiedname>
+        <briefdescription>
+<para>Decrements the instance&apos;s value and executes the callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="57" column="10" bodyfile="Parameters/SteppedParameter.h" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1ac1484edc659a13ced1c23454b100e054" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SteppedParameter::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <qualifiedname>SteppedParameter::getID</qualifiedname>
+        <briefdescription>
+<para>Fetches the instance&apos;s full ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The ID of the instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="71" column="9" bodyfile="Parameters/SteppedParameter.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1aaf58fcb799ceea1bb0344183c0b7d61e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteppedParameter::getMin</definition>
+        <argsstring>()</argsstring>
+        <name>getMin</name>
+        <qualifiedname>SteppedParameter::getMin</qualifiedname>
+        <briefdescription>
+<para>Fetches the lowest value the instance decrements to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The miminum value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="77" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1a505bdecd305d69892ab0737fc2740a9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteppedParameter::getMax</definition>
+        <argsstring>()</argsstring>
+        <name>getMax</name>
+        <qualifiedname>SteppedParameter::getMax</qualifiedname>
+        <briefdescription>
+<para>Fetches the highest value the instance increments to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The maximum value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="83" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteppedParameter::getCurVal</definition>
+        <argsstring>()</argsstring>
+        <name>getCurVal</name>
+        <qualifiedname>SteppedParameter::getCurVal</qualifiedname>
+        <briefdescription>
+<para>Fetches the current value of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="89" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Parameters/SteppedParameter.h" line="17" column="1" bodyfile="Parameters/SteppedParameter.h" bodystart="18" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_stepped_parameter_1a2918852c9ad52da10c33eb7fad187c81" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>callback</name></member>
+      <member refid="class_stepped_parameter_1a23df43285ae1e932ecb225cc587dca73" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>curVal</name></member>
+      <member refid="class_stepped_parameter_1a378641604d8570b8d8556891dca6f729" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>decrement</name></member>
+      <member refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>getCurVal</name></member>
+      <member refid="class_stepped_parameter_1ac1484edc659a13ced1c23454b100e054" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>getID</name></member>
+      <member refid="class_stepped_parameter_1a505bdecd305d69892ab0737fc2740a9e" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>getMax</name></member>
+      <member refid="class_stepped_parameter_1aaf58fcb799ceea1bb0344183c0b7d61e" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>getMin</name></member>
+      <member refid="class_stepped_parameter_1ae364f78a0faf8f9a8bd8501577f0b607" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>increment</name></member>
+      <member refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" prot="public" virt="non-virtual"><scope>SteppedParameter</scope><name>init</name></member>
+      <member refid="class_stepped_parameter_1aa494765e8b6557458dc6dc5aedcf4017" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>max</name></member>
+      <member refid="class_stepped_parameter_1a4d489566be6b1051b60c8a46d4b177ab" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>min</name></member>
+      <member refid="class_stepped_parameter_1a5aee1fa821c320b864c279d60a467eda" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>paramID</name></member>
+      <member refid="class_stepped_parameter_1a62a9732d33d2adfdd1f1f20904205d44" prot="private" virt="non-virtual"><scope>SteppedParameter</scope><name>step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

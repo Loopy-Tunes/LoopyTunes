@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_delay" kind="class" language="C++" prot="public">
+    <compoundname>Delay</compoundname>
+    <includes refid="_delay_8h" local="no">Delay.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_delay_1aa59914115de99fbf055e150496e0b4d4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Delay::isBypass</definition>
+        <argsstring></argsstring>
+        <name>isBypass</name>
+        <qualifiedname>Delay::isBypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="70" column="10" bodyfile="DSP/FX/Delay.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_1afbd69b1e32b1e51887f41ad787116361" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Delay::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>Delay::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="71" column="29" bodyfile="DSP/FX/Delay.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_1a7f8623d80aafe55478c012a1a473f9b4" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Delay::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Delay::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="72" column="29" bodyfile="DSP/FX/Delay.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_1a88f50eafc35c60c7c4dcb33f10f33d98" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Delay::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <qualifiedname>Delay::feedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="73" column="29" bodyfile="DSP/FX/Delay.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_1a81be4175089c23c4b6dcac8a84c4caf9" prot="private" static="no" mutable="no">
+        <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+        <definition>DelayLine&lt;float, MAXDELAY&gt;* Delay::delayLine[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>delayLine</name>
+        <qualifiedname>Delay::delayLine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="75" column="15" bodyfile="DSP/FX/Delay.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_delay_1ab6fbc08d35bd3528d84993c4f9e3f5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::init</definition>
+        <argsstring>(EncoderDriver *driver, int trackID, DelayLine&lt; float, MAXDELAY &gt; *dl[2])</argsstring>
+        <name>init</name>
+        <qualifiedname>Delay::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trackID</declname>
+        </param>
+        <param>
+          <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+          <declname>dl</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver used to initialise the parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an array of delay lines to be used by the instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="26" column="10" bodyfile="DSP/FX/Delay.cpp" bodystart="5" bodyend="24"/>
+        <references refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" compoundref="_encoder_driver_8h" startline="131" endline="134">EncoderDriver::addBypassCallback</references>
+        <references refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" compoundref="_encoder_driver_8h" startline="122" endline="125">EncoderDriver::addParameter</references>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a4f3ce63dc29317bffd70f5bb1e5a5424" compoundref="_parameter_i_ds_8h" startline="45">ParameterIDs::Delay::amount</references>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a7748252753c008a2fb971b7fc662a91a" compoundref="_parameter_i_ds_8h" startline="47">ParameterIDs::Delay::feedback</references>
+        <references refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" compoundref="_stepped_parameter_8h" startline="30" endline="39">SteppedParameter::init</references>
+        <references refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" compoundref="_stepped_parameter_8h" startline="104">SteppedParameterWrapper::param</references>
+        <references refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" compoundref="_delay_8h" startline="41" endline="41">setAmount</references>
+        <references refid="class_delay_1a0dd8317647695e5e01083e26da82b47d" compoundref="_delay_8h" startline="36" endline="36">setBypass</references>
+        <references refid="class_delay_1a4aec2a60814203c1cca8fcc500e56c29" compoundref="_delay_8cpp" startline="26" endline="32">setDefaultValues</references>
+        <references refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" compoundref="_delay_8h" startline="47" endline="47">setDelay</references>
+        <references refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" compoundref="_delay_8h" startline="53" endline="53">setFeedback</references>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a380264f3d33d129c06763dc9b022ac2a" compoundref="_parameter_i_ds_8h" startline="46">ParameterIDs::Delay::size</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1a4aec2a60814203c1cca8fcc500e56c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <qualifiedname>Delay::setDefaultValues</qualifiedname>
+        <briefdescription>
+<para>Sets tthe default parameter values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="31" column="10" bodyfile="DSP/FX/Delay.cpp" bodystart="26" bodyend="32"/>
+        <references refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" compoundref="_delay_8h" startline="41" endline="41">setAmount</references>
+        <references refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" compoundref="_delay_8h" startline="47" endline="47">setDelay</references>
+        <references refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" compoundref="_delay_8h" startline="53" endline="53">setFeedback</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1a0dd8317647695e5e01083e26da82b47d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::setBypass</definition>
+        <argsstring>()</argsstring>
+        <name>setBypass</name>
+        <qualifiedname>Delay::setBypass</qualifiedname>
+        <briefdescription>
+<para>Sets the bypass state of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="36" column="17" bodyfile="DSP/FX/Delay.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1a81a48de61685cddd4be9f93678322a0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::setAmount</definition>
+        <argsstring>(float a)</argsstring>
+        <name>setAmount</name>
+        <qualifiedname>Delay::setAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Sets the amount of the effect in the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="41" column="17" bodyfile="DSP/FX/Delay.h" bodystart="41" bodyend="41"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::setDelay</definition>
+        <argsstring>(size_t s)</argsstring>
+        <name>setDelay</name>
+        <qualifiedname>Delay::setDelay</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Sets the delay time of the delay line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new delay time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="47" column="17" bodyfile="DSP/FX/Delay.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1ac091ce8e3301c908ea14f538f628df20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::setFeedback</definition>
+        <argsstring>(float f)</argsstring>
+        <name>setFeedback</name>
+        <qualifiedname>Delay::setFeedback</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Sets the feedback value used in the delay algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new feedback value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="53" column="17" bodyfile="DSP/FX/Delay.h" bodystart="53" bodyend="53"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_1ab4234fe0620a5f4f40ae0383910d9513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Delay::processBlock</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processBlock</name>
+        <qualifiedname>Delay::processBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples through the delay and mixes the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="60" column="10" bodyfile="DSP/FX/Delay.cpp" bodystart="34" bodyend="50"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_delay_1ac3efc506692e9e743e4b6f0c5d7a6c4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename type</type>
+          </param>
+        </templateparamlist>
+        <type>type</type>
+        <definition>type Delay::toSize</definition>
+        <argsstring>(type toConvert)</argsstring>
+        <name>toSize</name>
+        <qualifiedname>Delay::toSize</qualifiedname>
+        <param>
+          <type>type</type>
+          <declname>toConvert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Delay.h" line="65" column="10" bodyfile="DSP/FX/Delay.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Delay.h" line="15" column="1" bodyfile="DSP/FX/Delay.h" bodystart="16" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_delay_1afbd69b1e32b1e51887f41ad787116361" prot="private" virt="non-virtual"><scope>Delay</scope><name>amount</name></member>
+      <member refid="class_delay_1a81be4175089c23c4b6dcac8a84c4caf9" prot="private" virt="non-virtual"><scope>Delay</scope><name>delayLine</name></member>
+      <member refid="class_delay_1a88f50eafc35c60c7c4dcb33f10f33d98" prot="private" virt="non-virtual"><scope>Delay</scope><name>feedback</name></member>
+      <member refid="class_delay_1ab6fbc08d35bd3528d84993c4f9e3f5d5" prot="public" virt="non-virtual"><scope>Delay</scope><name>init</name></member>
+      <member refid="class_delay_1aa59914115de99fbf055e150496e0b4d4" prot="private" virt="non-virtual"><scope>Delay</scope><name>isBypass</name></member>
+      <member refid="class_delay_1ab4234fe0620a5f4f40ae0383910d9513" prot="public" virt="non-virtual"><scope>Delay</scope><name>processBlock</name></member>
+      <member refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" prot="public" virt="non-virtual"><scope>Delay</scope><name>setAmount</name></member>
+      <member refid="class_delay_1a0dd8317647695e5e01083e26da82b47d" prot="public" virt="non-virtual"><scope>Delay</scope><name>setBypass</name></member>
+      <member refid="class_delay_1a4aec2a60814203c1cca8fcc500e56c29" prot="public" virt="non-virtual"><scope>Delay</scope><name>setDefaultValues</name></member>
+      <member refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" prot="public" virt="non-virtual"><scope>Delay</scope><name>setDelay</name></member>
+      <member refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" prot="public" virt="non-virtual"><scope>Delay</scope><name>setFeedback</name></member>
+      <member refid="class_delay_1a7f8623d80aafe55478c012a1a473f9b4" prot="private" virt="non-virtual"><scope>Delay</scope><name>size</name></member>
+      <member refid="class_delay_1ac3efc506692e9e743e4b6f0c5d7a6c4c" prot="private" virt="non-virtual"><scope>Delay</scope><name>toSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

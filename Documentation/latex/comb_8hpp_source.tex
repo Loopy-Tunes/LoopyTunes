@@ -1,0 +1,61 @@
+\doxysection{comb.\+hpp}
+\hypertarget{comb_8hpp_source}{}\label{comb_8hpp_source}\index{DSP/FX/Reverb/comb.hpp@{DSP/FX/Reverb/comb.hpp}}
+\mbox{\hyperlink{comb_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Comb\ filter\ class\ declaration}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Written\ by\ Jezar\ at\ Dreampoint,\ June\ 2000}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ http://www.dreampoint.co.uk}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ This\ code\ is\ public\ domain}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_comb\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_comb\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{denormals_8h}{denormals.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcomb}{comb}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcomb_a42d4f3d4ff5ae9bc9cb4137e2ab495ca}{comb}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classcomb_a000d3f031781c27ceaf487a1ec957fec}{setbuffer}}(\textcolor{keywordtype}{float}\ *buf,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classcomb_a0d4801f6d16411a2f63ff1a25d2fe5fb}{process}}(\textcolor{keywordtype}{float}\ inp);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classcomb_ae18d1b1ea26d1c18087d3d8feeb7145d}{mute}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classcomb_abd0aa594882431e7f7eb4901fcc0ea5e}{setdamp}}(\textcolor{keywordtype}{float}\ val);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classcomb_a99e2c5952a08d006902f5e20a05d37a7}{getdamp}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classcomb_ad8fac09822db8d944c13791112b5b6a2}{setfeedback}}(\textcolor{keywordtype}{float}\ val);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classcomb_a1df81e7e8f9310831e4e7929078f1d11}{getfeedback}}();}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ feedback;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ filterstore;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ damp1;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ damp2;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ *buffer;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ bufsize;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ bufidx;}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Big\ to\ inline\ -\/\ but\ crucial\ for\ speed}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classcomb_a0d4801f6d16411a2f63ff1a25d2fe5fb}{comb::process}}(\textcolor{keywordtype}{float}\ input)}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ output;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ output\ =\ buffer[bufidx];}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd}{undenormalise}}(output);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ filterstore\ =\ (output*damp2)\ +\ (filterstore*damp1);}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd}{undenormalise}}(filterstore);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ buffer[bufidx]\ =\ input\ +\ (filterstore*feedback);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}(++bufidx>=bufsize)\ bufidx\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\_comb\_}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//ends}}
+
+\end{DoxyCode}

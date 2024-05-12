@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_i_l_i9341_spi_transport" kind="class" language="C++" prot="public">
+    <compoundname>ILI9341SpiTransport</compoundname>
+    <includes refid="daisy___i_l_i9341_8hpp" local="no">daisy_ILI9341.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1ab03955bfae99260abf3d20d11dcfd325" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ILI9341SpiTransport::dma_busy</definition>
+        <argsstring></argsstring>
+        <name>dma_busy</name>
+        <qualifiedname>ILI9341SpiTransport::dma_busy</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="238" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1aa35b557b6c7405f9896efa5c7fb3fe2a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ILI9341SpiTransport::remaining_buff</definition>
+        <argsstring></argsstring>
+        <name>remaining_buff</name>
+        <qualifiedname>ILI9341SpiTransport::remaining_buff</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="239" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1a7dd48fa6f0737bd05ec536fc2a75642b" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t ILI9341SpiTransport::buf_chunk_size</definition>
+        <argsstring></argsstring>
+        <name>buf_chunk_size</name>
+        <qualifiedname>ILI9341SpiTransport::buf_chunk_size</qualifiedname>
+        <initializer>= <ref refid="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" kindref="member">buffer_size</ref> / 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="243" column="27" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" prot="public" static="no" mutable="no">
+        <type>SpiHandle</type>
+        <definition>SpiHandle ILI9341SpiTransport::spi_</definition>
+        <argsstring></argsstring>
+        <name>spi_</name>
+        <qualifiedname>ILI9341SpiTransport::spi_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="246" column="43" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1a81b61ce53699de4fa426436abebaa355" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ILI9341SpiTransport::tftPalette[NUMBER_OF_TFT_COLORS]</definition>
+        <argsstring>[NUMBER_OF_TFT_COLORS]</argsstring>
+        <name>tftPalette</name>
+        <qualifiedname>ILI9341SpiTransport::tftPalette</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="248" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" prot="public" static="yes" mutable="no">
+        <type>uint32_t const</type>
+        <definition>uint32_t const ILI9341SpiTransport::buffer_size</definition>
+        <argsstring></argsstring>
+        <name>buffer_size</name>
+        <qualifiedname>ILI9341SpiTransport::buffer_size</qualifiedname>
+        <initializer>= 153600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="242" column="27" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="242" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1a157aa22df6f81baef5182bf3dd181d33" prot="private" static="no" mutable="no">
+        <type>dsy_gpio</type>
+        <definition>dsy_gpio ILI9341SpiTransport::pin_reset_</definition>
+        <argsstring></argsstring>
+        <name>pin_reset_</name>
+        <qualifiedname>ILI9341SpiTransport::pin_reset_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="251" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1acc98ed7e9ea0c474e6b8a24a85d2cf5e" prot="private" static="no" mutable="no">
+        <type>dsy_gpio</type>
+        <definition>dsy_gpio ILI9341SpiTransport::pin_dc_</definition>
+        <argsstring></argsstring>
+        <name>pin_dc_</name>
+        <qualifiedname>ILI9341SpiTransport::pin_dc_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="252" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_l_i9341_spi_transport_1a4c73f3fbeb3bb7d2e538f72da706e8db" prot="private" static="no" mutable="no">
+        <type>dsy_gpio</type>
+        <definition>dsy_gpio ILI9341SpiTransport::pin_cs_</definition>
+        <argsstring></argsstring>
+        <name>pin_cs_</name>
+        <qualifiedname>ILI9341SpiTransport::pin_cs_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="253" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1ad5270a7a454d7cdade23c09b0ccf6d9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ILI9341SpiTransport::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ILI9341SpiTransport::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="58" column="10" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="58" bodyend="95"/>
+        <references refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" compoundref="daisy___i_l_i9341_8hpp" startline="246">spi_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a71c6c3f032960df869dd6d26544c59df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ILI9341SpiTransport::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <qualifiedname>ILI9341SpiTransport::Reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="97" column="10" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a1df1fd72bb5c62b3292e33e489880aff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SpiHandle::Result</type>
+        <definition>SpiHandle::Result ILI9341SpiTransport::SendDataDMA</definition>
+        <argsstring>()</argsstring>
+        <name>SendDataDMA</name>
+        <qualifiedname>ILI9341SpiTransport::SendDataDMA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="149" column="23" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="149" bodyend="162"/>
+        <references refid="class_i_l_i9341_spi_transport_1a7dd48fa6f0737bd05ec536fc2a75642b" compoundref="daisy___i_l_i9341_8hpp" startline="243">buf_chunk_size</references>
+        <references refid="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" compoundref="daisy___i_l_i9341_8hpp" startline="242">buffer_size</references>
+        <references refid="class_i_l_i9341_spi_transport_1ab03955bfae99260abf3d20d11dcfd325" compoundref="daisy___i_l_i9341_8hpp" startline="238">dma_busy</references>
+        <references refid="daisy___i_l_i9341_8hpp_1ae3cb850164a0ce9a3fce53da9afe681b" compoundref="_i_l_i9341__ui__driver_8cpp" startline="5" endline="5">frame_buffer</references>
+        <references refid="class_i_l_i9341_spi_transport_1aa35b557b6c7405f9896efa5c7fb3fe2a" compoundref="daisy___i_l_i9341_8hpp" startline="239">remaining_buff</references>
+        <references refid="class_i_l_i9341_spi_transport_1a1df1fd72bb5c62b3292e33e489880aff" compoundref="daisy___i_l_i9341_8hpp" startline="149" endline="162">SendDataDMA</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a502cbadb8819357dfe9525b62b501e6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SpiHandle::Result</type>
+        <definition>SpiHandle::Result ILI9341SpiTransport::SendDataDMA</definition>
+        <argsstring>(uint8_t *buff, size_t size)</argsstring>
+        <name>SendDataDMA</name>
+        <qualifiedname>ILI9341SpiTransport::SendDataDMA</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="164" column="23" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="164" bodyend="168"/>
+        <references refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" compoundref="daisy___i_l_i9341_8hpp" startline="246">spi_</references>
+        <references refid="class_i_l_i9341_spi_transport_1aa62ba43ec164038bd58b30b0f534266a" compoundref="daisy___i_l_i9341_8hpp" startline="114" endline="147">TxCompleteCallback</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a3fa89acdf736f5cd37c10763395a7e25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ILI9341SpiTransport::GetTransferSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTransferSize</name>
+        <qualifiedname>ILI9341SpiTransport::GetTransferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="170" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="170" bodyend="176"/>
+        <references refid="class_i_l_i9341_spi_transport_1a7dd48fa6f0737bd05ec536fc2a75642b" compoundref="daisy___i_l_i9341_8hpp" startline="243">buf_chunk_size</references>
+        <references refid="class_i_l_i9341_spi_transport_1aa35b557b6c7405f9896efa5c7fb3fe2a" compoundref="daisy___i_l_i9341_8hpp" startline="239">remaining_buff</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a8f57e2c8e862176ada1a051b0709e78f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SpiHandle::Result</type>
+        <definition>SpiHandle::Result ILI9341SpiTransport::SendCommand</definition>
+        <argsstring>(uint8_t cmd)</argsstring>
+        <name>SendCommand</name>
+        <qualifiedname>ILI9341SpiTransport::SendCommand</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="178" column="23" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="178" bodyend="182"/>
+        <references refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" compoundref="daisy___i_l_i9341_8hpp" startline="246">spi_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1ad6b1480f20b3344d9d29c3fb29ea737d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SpiHandle::Result</type>
+        <definition>SpiHandle::Result ILI9341SpiTransport::SendData</definition>
+        <argsstring>(uint8_t *buff, size_t size)</argsstring>
+        <name>SendData</name>
+        <qualifiedname>ILI9341SpiTransport::SendData</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="184" column="23" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="184" bodyend="188"/>
+        <references refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" compoundref="daisy___i_l_i9341_8hpp" startline="246">spi_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a6c101f4e3e1f44bf76acf5704ca0deed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ILI9341SpiTransport::SetAddressWindow</definition>
+        <argsstring>(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)</argsstring>
+        <name>SetAddressWindow</name>
+        <qualifiedname>ILI9341SpiTransport::SetAddressWindow</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>y1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="190" column="10" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="190" bodyend="214"/>
+        <references refid="class_i_l_i9341_spi_transport_1a8f57e2c8e862176ada1a051b0709e78f" compoundref="daisy___i_l_i9341_8hpp" startline="178" endline="182">SendCommand</references>
+        <references refid="class_i_l_i9341_spi_transport_1ad6b1480f20b3344d9d29c3fb29ea737d" compoundref="daisy___i_l_i9341_8hpp" startline="184" endline="188">SendData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a213a7c7d5ac073b2cefe4710c3e5eaf2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ILI9341SpiTransport::PaintPixel</definition>
+        <argsstring>(uint32_t id, uint8_t color_id, uint8_t alpha=255) const</argsstring>
+        <name>PaintPixel</name>
+        <qualifiedname>ILI9341SpiTransport::PaintPixel</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>color_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>alpha</declname>
+          <defval>255</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="216" column="10" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="216" bodyend="234"/>
+        <references refid="daisy___i_l_i9341_8hpp_1ab57b1e6c175a8eab8a6c8782ed46af36" compoundref="_i_l_i9341__ui__driver_8cpp" startline="9" endline="9">color_mem</references>
+        <references refid="daisy___i_l_i9341_8hpp_1ae3cb850164a0ce9a3fce53da9afe681b" compoundref="_i_l_i9341__ui__driver_8cpp" startline="5" endline="5">frame_buffer</references>
+        <references refid="class_i_l_i9341_spi_transport_1a81b61ce53699de4fa426436abebaa355" compoundref="daisy___i_l_i9341_8hpp" startline="248">tftPalette</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1ab219741bd41b9d37bdcee097484b390a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ILI9341SpiTransport::GetPixel</definition>
+        <argsstring>(uint32_t id)</argsstring>
+        <name>GetPixel</name>
+        <qualifiedname>ILI9341SpiTransport::GetPixel</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="236" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="236" bodyend="236"/>
+        <references refid="daisy___i_l_i9341_8hpp_1ab57b1e6c175a8eab8a6c8782ed46af36" compoundref="_i_l_i9341__ui__driver_8cpp" startline="9" endline="9">color_mem</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1aa62ba43ec164038bd58b30b0f534266a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ILI9341SpiTransport::TxCompleteCallback</definition>
+        <argsstring>(void *context, SpiHandle::Result result)</argsstring>
+        <name>TxCompleteCallback</name>
+        <qualifiedname>ILI9341SpiTransport::TxCompleteCallback</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>SpiHandle::Result</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="114" column="17" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="114" bodyend="147"/>
+        <references refid="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" compoundref="daisy___i_l_i9341_8hpp" startline="242">buffer_size</references>
+        <references refid="daisy___i_l_i9341_8hpp_1ae3cb850164a0ce9a3fce53da9afe681b" compoundref="_i_l_i9341__ui__driver_8cpp" startline="5" endline="5">frame_buffer</references>
+        <references refid="class_i_l_i9341_spi_transport_1a3fa89acdf736f5cd37c10763395a7e25" compoundref="daisy___i_l_i9341_8hpp" startline="170" endline="176">GetTransferSize</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a0f92a2d6377574a80efcc8620be39f0e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ILI9341SpiTransport::Blend565</definition>
+        <argsstring>(uint16_t fg, uint16_t bg, uint8_t alpha) const</argsstring>
+        <name>Blend565</name>
+        <qualifiedname>ILI9341SpiTransport::Blend565</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>fg</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>bg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="263" column="14" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="263" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_l_i9341_spi_transport_1a1c6f1716457a6d1a51e1bab444d5a64e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ILI9341SpiTransport::InitPalette</definition>
+        <argsstring>()</argsstring>
+        <name>InitPalette</name>
+        <qualifiedname>ILI9341SpiTransport::InitPalette</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/daisy_ILI9341.hpp" line="296" column="10" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="296" bodyend="323"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>SPI Transport for ILI9341 TFT display devices </para>
+    </detaileddescription>
+    <location file="Drivers/daisy_ILI9341.hpp" line="55" column="1" bodyfile="Drivers/daisy_ILI9341.hpp" bodystart="56" bodyend="324"/>
+    <listofallmembers>
+      <member refid="class_i_l_i9341_spi_transport_1a0f92a2d6377574a80efcc8620be39f0e" prot="private" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>Blend565</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a7dd48fa6f0737bd05ec536fc2a75642b" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>buf_chunk_size</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>buffer_size</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1ab03955bfae99260abf3d20d11dcfd325" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>dma_busy</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1ab219741bd41b9d37bdcee097484b390a" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>GetPixel</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a3fa89acdf736f5cd37c10763395a7e25" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>GetTransferSize</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1ad5270a7a454d7cdade23c09b0ccf6d9a" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>Init</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a1c6f1716457a6d1a51e1bab444d5a64e" prot="private" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>InitPalette</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a213a7c7d5ac073b2cefe4710c3e5eaf2" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>PaintPixel</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a4c73f3fbeb3bb7d2e538f72da706e8db" prot="private" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>pin_cs_</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1acc98ed7e9ea0c474e6b8a24a85d2cf5e" prot="private" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>pin_dc_</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a157aa22df6f81baef5182bf3dd181d33" prot="private" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>pin_reset_</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1aa35b557b6c7405f9896efa5c7fb3fe2a" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>remaining_buff</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a71c6c3f032960df869dd6d26544c59df" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>Reset</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a8f57e2c8e862176ada1a051b0709e78f" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>SendCommand</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1ad6b1480f20b3344d9d29c3fb29ea737d" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>SendData</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a1df1fd72bb5c62b3292e33e489880aff" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>SendDataDMA</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a502cbadb8819357dfe9525b62b501e6c" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>SendDataDMA</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a6c101f4e3e1f44bf76acf5704ca0deed" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>SetAddressWindow</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>spi_</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1a81b61ce53699de4fa426436abebaa355" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>tftPalette</name></member>
+      <member refid="class_i_l_i9341_spi_transport_1aa62ba43ec164038bd58b30b0f534266a" prot="public" virt="non-virtual"><scope>ILI9341SpiTransport</scope><name>TxCompleteCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

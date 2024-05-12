@@ -1,0 +1,53 @@
+\doxysection{Default\+Values.\+h}
+\hypertarget{_default_values_8h_source}{}\label{_default_values_8h_source}\index{Parameters/DefaultValues.h@{Parameters/DefaultValues.h}}
+\mbox{\hyperlink{_default_values_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEFAULTVALUES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEFAULTVALUES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }PitchShifterDefaults}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{bool}\ bypass\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ amount\ =\ 0.5;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ semitones\ =\ 12;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ rand\ =\ 0;}
+\DoxyCodeLine{00012\ \}\ pitchShifterDefs;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }WaveshaperDefaults}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ bypass\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ amount\ =\ 0.5;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ funcControl\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ mode\ =\ 0;}
+\DoxyCodeLine{00020\ \}\ waveshaperDefs;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }FilterDefaults}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ bypass\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ mode\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ frequency\ =\ 0.5;}
+\DoxyCodeLine{00027\ \}\ filterDefs;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }ReverbDefaults}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ bypass\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ amount\ =\ 0.5;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ mode\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ size\ =\ 0.5;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ damp\ =\ 0.5;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ 0.5;}
+\DoxyCodeLine{00037\ \}\ reverbDefs;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }DelayDefaults}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ bypass\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ amount\ =\ 0.5;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size\ =\ 5000;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ feedback\ =\ 0.5;}
+\DoxyCodeLine{00045\ \}\ delayDefs;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

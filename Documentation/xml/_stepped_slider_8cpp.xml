@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_stepped_slider_8cpp" kind="file" language="C++">
+    <compoundname>SteppedSlider.cpp</compoundname>
+    <includes refid="_stepped_slider_8h" local="yes">SteppedSlider.h</includes>
+    <includes refid="daisy___i_l_i9341_8hpp" local="yes">../../Drivers/daisy_ILI9341.hpp</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../Drivers/KeypadDriver.h</label>
+        <link refid="_keypad_driver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../../Drivers/daisy_ILI9341.hpp</label>
+        <link refid="daisy___i_l_i9341_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GUI/FX/SteppedSlider.cpp</label>
+        <link refid="_stepped_slider_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>StyleSheet.h</label>
+        <link refid="_style_sheet_8h"/>
+      </node>
+      <node id="4">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="9">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cstring</label>
+      </node>
+      <node id="5">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="10">
+        <label>daisysp.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="17">
+        <label>hid/disp/graphics_common.h</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>util/oled_fonts.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_stepped_slider_8h" kindref="compound">SteppedSlider.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="daisy___i_l_i9341_8hpp" kindref="compound">../../Drivers/daisy_ILI9341.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" kindref="member">SteppedSlider::init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>ed)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>encoder<sp/>=<sp/>ed;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>paramID<sp/>=<sp/>ID;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>param<sp/>=<sp/>encoder-&gt;<ref refid="class_encoder_driver_1aaa92980b9bd67e2ea6a2396716d7c4e8" kindref="member">getParameter</ref>(paramID);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>curVal<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" kindref="member">SteppedSlider::tick</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newVal<sp/>=<sp/>param-&gt;<ref refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" kindref="member">getCurVal</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newVal<sp/>!=<sp/>curVal)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curVal<sp/>=<sp/>newVal;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" kindref="member">repaint</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" kindref="member">SteppedSlider::setSelected</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>encoder-&gt;<ref refid="class_encoder_driver_1a8f772f7feff5cb2093d36189ffc6fe66" kindref="member">setCurrentParam</ref>(paramID);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" kindref="member">SteppedSlider::repaint</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>paint<sp/>slider<sp/>using<sp/>curVal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="GUI/FX/SteppedSlider.cpp"/>
+  </compounddef>
+</doxygen>

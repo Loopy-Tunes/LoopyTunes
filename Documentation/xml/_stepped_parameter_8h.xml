@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_stepped_parameter_8h" kind="file" language="C++">
+    <compoundname>SteppedParameter.h</compoundname>
+    <includes local="yes">daisy_seed.h</includes>
+    <includes local="yes">daisysp.h</includes>
+    <includes refid="_parameter_i_ds_8h" local="yes">ParameterIDs.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">functional</includes>
+    <includedby refid="_encoder_driver_8h" local="yes">Drivers/EncoderDriver.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="1">
+        <label>Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="3">
+        <label>daisysp.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>DSP/FX/Delay.cpp</label>
+        <link refid="_delay_8cpp"/>
+      </node>
+      <node id="3">
+        <label>DSP/FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>DSP/FX/Filter.cpp</label>
+        <link refid="_filter_8cpp"/>
+      </node>
+      <node id="10">
+        <label>DSP/FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>DSP/FX/PitchShift.cpp</label>
+        <link refid="_pitch_shift_8cpp"/>
+      </node>
+      <node id="12">
+        <label>DSP/FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="14">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>DSP/FX/Waveshaper.cpp</label>
+        <link refid="_waveshaper_8cpp"/>
+      </node>
+      <node id="16">
+        <label>DSP/FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>GUI/FX/BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>GUI/FX/DelayView.cpp</label>
+        <link refid="_delay_view_8cpp"/>
+      </node>
+      <node id="20">
+        <label>GUI/FX/DelayView.h</label>
+        <link refid="_delay_view_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>GUI/FX/FilterView.cpp</label>
+        <link refid="_filter_view_8cpp"/>
+      </node>
+      <node id="26">
+        <label>GUI/FX/FilterView.h</label>
+        <link refid="_filter_view_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>GUI/FX/PitchShiftView.cpp</label>
+        <link refid="_pitch_shift_view_8cpp"/>
+      </node>
+      <node id="28">
+        <label>GUI/FX/PitchShiftView.h</label>
+        <link refid="_pitch_shift_view_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>GUI/FX/ReverbView.cpp</label>
+        <link refid="_reverb_view_8cpp"/>
+      </node>
+      <node id="30">
+        <label>GUI/FX/ReverbView.h</label>
+        <link refid="_reverb_view_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>GUI/FX/SteppedSlider.cpp</label>
+        <link refid="_stepped_slider_8cpp"/>
+      </node>
+      <node id="19">
+        <label>GUI/FX/SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>GUI/FX/WaveshaperView.cpp</label>
+        <link refid="_waveshaper_view_8cpp"/>
+      </node>
+      <node id="33">
+        <label>GUI/FX/WaveshaperView.h</label>
+        <link refid="_waveshaper_view_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>GUI/MixerView.cpp</label>
+        <link refid="_mixer_view_8cpp"/>
+      </node>
+      <node id="23">
+        <label>GUI/MixerView.h</label>
+        <link refid="_mixer_view_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>GUI/TrackView.cpp</label>
+        <link refid="_track_view_8cpp"/>
+      </node>
+      <node id="22">
+        <label>GUI/TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_stepped_parameter" prot="public">SteppedParameter</innerclass>
+    <innerclass refid="struct_stepped_parameter_wrapper" prot="public">SteppedParameterWrapper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STEPPEDPARAMETER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STEPPEDPARAMETER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;daisy_seed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;daisysp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_parameter_i_ds_8h" kindref="compound">ParameterIDs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************************/</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">daisy;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_stepped_parameter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*****************************************************************/</highlight></codeline>
+<codeline lineno="30" refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mi,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ma,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>st,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>param,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>track,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;<sp/>cb)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paramID<sp/>=<sp/>param<sp/>+<sp/>track;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min<sp/>=<sp/>mi;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max<sp/>=<sp/>ma;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>step<sp/>=<sp/>st;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback<sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="44" refid="class_stepped_parameter_1ae364f78a0faf8f9a8bd8501577f0b607" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1ae364f78a0faf8f9a8bd8501577f0b607" kindref="member">increment</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(curVal<sp/>&gt;=<sp/>max)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curVal<sp/>=<sp/>max;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curVal<sp/>+=<sp/>step;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback(curVal);<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="57" refid="class_stepped_parameter_1a378641604d8570b8d8556891dca6f729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1a378641604d8570b8d8556891dca6f729" kindref="member">decrement</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(curVal<sp/>&lt;=<sp/>min)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curVal<sp/>=<sp/>min;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curVal<sp/>-=<sp/>step;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback(curVal);<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="71" refid="class_stepped_parameter_1ac1484edc659a13ced1c23454b100e054" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1ac1484edc659a13ced1c23454b100e054" kindref="member">getID</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>paramID;<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="77" refid="class_stepped_parameter_1aaf58fcb799ceea1bb0344183c0b7d61e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1aaf58fcb799ceea1bb0344183c0b7d61e" kindref="member">getMin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>min;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="83" refid="class_stepped_parameter_1a505bdecd305d69892ab0737fc2740a9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1a505bdecd305d69892ab0737fc2740a9e" kindref="member">getMax</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max;<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***************************************************************/</highlight></codeline>
+<codeline lineno="89" refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" kindref="member">getCurVal</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>curVal;<sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paramID;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>curVal;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>step;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;<sp/>callback;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="struct_stepped_parameter_wrapper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104" refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref><sp/><ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>;</highlight></codeline>
+<codeline lineno="105" refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Parameters/SteppedParameter.h"/>
+  </compounddef>
+</doxygen>

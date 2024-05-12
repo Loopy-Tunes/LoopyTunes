@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="tuning_8h" kind="file" language="C++">
+    <compoundname>tuning.h</compoundname>
+    <includedby refid="revmodel_8hpp" local="yes">DSP/FX/Reverb/revmodel.hpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="3">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DSP/FX/Reverb/revmodel.cpp</label>
+        <link refid="revmodel_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/FX/Reverb/revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DSP/FX/Reverb/tuning.h</label>
+        <link refid="tuning_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="tuning_8h_1a6113b534a2364513007632803a5a5606" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int numcombs</definition>
+        <argsstring></argsstring>
+        <name>numcombs</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="10" column="10" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1acfd9a2918469c01995845b296691fb9d" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int numallpasses</definition>
+        <argsstring></argsstring>
+        <name>numallpasses</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="11" column="10" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a37b090b4ac47aa54faef525513dafe60" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float muted</definition>
+        <argsstring></argsstring>
+        <name>muted</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="12" column="12" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a4b2d07fa74a459ca1939e020b9363513" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float fixedgain</definition>
+        <argsstring></argsstring>
+        <name>fixedgain</name>
+        <initializer>= 0.015f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="13" column="12" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float scalewet</definition>
+        <argsstring></argsstring>
+        <name>scalewet</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="14" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float scaledry</definition>
+        <argsstring></argsstring>
+        <name>scaledry</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="15" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float scaledamp</definition>
+        <argsstring></argsstring>
+        <name>scaledamp</name>
+        <initializer>= 0.4f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="16" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float scaleroom</definition>
+        <argsstring></argsstring>
+        <name>scaleroom</name>
+        <initializer>= 0.28f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="17" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float offsetroom</definition>
+        <argsstring></argsstring>
+        <name>offsetroom</name>
+        <initializer>= 0.7f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="18" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ae7682d913183f17fdb9eeb2b7bc99809" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialroom</definition>
+        <argsstring></argsstring>
+        <name>initialroom</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="19" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1af22778db97e16041f5d2e2fca4c308b8" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialdamp</definition>
+        <argsstring></argsstring>
+        <name>initialdamp</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="20" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1aeb22d1099dcd9cf40d40775bedc8505d" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialwet</definition>
+        <argsstring></argsstring>
+        <name>initialwet</name>
+        <initializer>= 1/<ref refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" kindref="member">scalewet</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="21" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1af1c67ee2860505e7a3709fe5373b6e75" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialdry</definition>
+        <argsstring></argsstring>
+        <name>initialdry</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="22" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ac59a94da5e00f728a58de07f0a115d77" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialwidth</definition>
+        <argsstring></argsstring>
+        <name>initialwidth</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="23" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ada8dbb1ebee3ac40472d19b2bea9a8a1" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float initialmode</definition>
+        <argsstring></argsstring>
+        <name>initialmode</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="24" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a07e585230464f52428c5ed003afd31a0" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float freezemode</definition>
+        <argsstring></argsstring>
+        <name>freezemode</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="25" column="13" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int stereospread</definition>
+        <argsstring></argsstring>
+        <name>stereospread</name>
+        <initializer>= 23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="26" column="10" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL1</definition>
+        <argsstring></argsstring>
+        <name>combtuningL1</name>
+        <initializer>= 1116</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="32" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR1</definition>
+        <argsstring></argsstring>
+        <name>combtuningR1</name>
+        <initializer>= 1116+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="33" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL2</definition>
+        <argsstring></argsstring>
+        <name>combtuningL2</name>
+        <initializer>= 1188</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="34" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR2</definition>
+        <argsstring></argsstring>
+        <name>combtuningR2</name>
+        <initializer>= 1188+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="35" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL3</definition>
+        <argsstring></argsstring>
+        <name>combtuningL3</name>
+        <initializer>= 1277</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="36" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR3</definition>
+        <argsstring></argsstring>
+        <name>combtuningR3</name>
+        <initializer>= 1277+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="37" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL4</definition>
+        <argsstring></argsstring>
+        <name>combtuningL4</name>
+        <initializer>= 1356</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="38" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR4</definition>
+        <argsstring></argsstring>
+        <name>combtuningR4</name>
+        <initializer>= 1356+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="39" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL5</definition>
+        <argsstring></argsstring>
+        <name>combtuningL5</name>
+        <initializer>= 1422</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="40" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR5</definition>
+        <argsstring></argsstring>
+        <name>combtuningR5</name>
+        <initializer>= 1422+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="41" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL6</definition>
+        <argsstring></argsstring>
+        <name>combtuningL6</name>
+        <initializer>= 1491</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="42" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR6</definition>
+        <argsstring></argsstring>
+        <name>combtuningR6</name>
+        <initializer>= 1491+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="43" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL7</definition>
+        <argsstring></argsstring>
+        <name>combtuningL7</name>
+        <initializer>= 1557</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="44" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR7</definition>
+        <argsstring></argsstring>
+        <name>combtuningR7</name>
+        <initializer>= 1557+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="45" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningL8</definition>
+        <argsstring></argsstring>
+        <name>combtuningL8</name>
+        <initializer>= 1617</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="46" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int combtuningR8</definition>
+        <argsstring></argsstring>
+        <name>combtuningR8</name>
+        <initializer>= 1617+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="47" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningL1</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningL1</name>
+        <initializer>= 556</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="48" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningR1</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningR1</name>
+        <initializer>= 556+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="49" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningL2</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningL2</name>
+        <initializer>= 441</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="50" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningR2</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningR2</name>
+        <initializer>= 441+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="51" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningL3</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningL3</name>
+        <initializer>= 341</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="52" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningR3</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningR3</name>
+        <initializer>= 341+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="53" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningL4</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningL4</name>
+        <initializer>= 225</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="54" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tuning_8h_1a00d759e1af846b3980f749ea03964928" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int allpasstuningR4</definition>
+        <argsstring></argsstring>
+        <name>allpasstuningR4</name>
+        <initializer>= 225+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/tuning.h" line="55" column="11" bodyfile="DSP/FX/Reverb/tuning.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Reverb<sp/>model<sp/>tuning<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Written<sp/>by<sp/>Jezar<sp/>at<sp/>Dreampoint,<sp/>June<sp/>2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.dreampoint.co.uk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>public<sp/>domain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_tuning_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_tuning_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="tuning_8h_1a6113b534a2364513007632803a5a5606" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="tuning_8h_1a6113b534a2364513007632803a5a5606" kindref="member">numcombs</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="11" refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" kindref="member">numallpasses</ref><sp/><sp/><sp/><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="12" refid="tuning_8h_1a37b090b4ac47aa54faef525513dafe60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a37b090b4ac47aa54faef525513dafe60" kindref="member">muted</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13" refid="tuning_8h_1a4b2d07fa74a459ca1939e020b9363513" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a4b2d07fa74a459ca1939e020b9363513" kindref="member">fixedgain</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.015f;</highlight></codeline>
+<codeline lineno="14" refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" kindref="member">scalewet</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="15" refid="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" kindref="member">scaledry</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="16" refid="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" kindref="member">scaledamp</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.4f;</highlight></codeline>
+<codeline lineno="17" refid="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" kindref="member">scaleroom</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.28f;</highlight></codeline>
+<codeline lineno="18" refid="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" kindref="member">offsetroom</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.7f;</highlight></codeline>
+<codeline lineno="19" refid="tuning_8h_1ae7682d913183f17fdb9eeb2b7bc99809" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ae7682d913183f17fdb9eeb2b7bc99809" kindref="member">initialroom</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="20" refid="tuning_8h_1af22778db97e16041f5d2e2fca4c308b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1af22778db97e16041f5d2e2fca4c308b8" kindref="member">initialdamp</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="21" refid="tuning_8h_1aeb22d1099dcd9cf40d40775bedc8505d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1aeb22d1099dcd9cf40d40775bedc8505d" kindref="member">initialwet</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1/<ref refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" kindref="member">scalewet</ref>;</highlight></codeline>
+<codeline lineno="22" refid="tuning_8h_1af1c67ee2860505e7a3709fe5373b6e75" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1af1c67ee2860505e7a3709fe5373b6e75" kindref="member">initialdry</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23" refid="tuning_8h_1ac59a94da5e00f728a58de07f0a115d77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ac59a94da5e00f728a58de07f0a115d77" kindref="member">initialwidth</ref><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="24" refid="tuning_8h_1ada8dbb1ebee3ac40472d19b2bea9a8a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ada8dbb1ebee3ac40472d19b2bea9a8a1" kindref="member">initialmode</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25" refid="tuning_8h_1a07e585230464f52428c5ed003afd31a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a07e585230464f52428c5ed003afd31a0" kindref="member">freezemode</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="26" refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref><sp/><sp/><sp/><sp/>=<sp/>23;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>values<sp/>assume<sp/>44.1KHz<sp/>sample<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>they<sp/>will<sp/>probably<sp/>be<sp/>OK<sp/>for<sp/>48KHz<sp/>sample<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>would<sp/>need<sp/>scaling<sp/>for<sp/>96KHz<sp/>(or<sp/>other)<sp/>sample<sp/>rates.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>values<sp/>were<sp/>obtained<sp/>by<sp/>listening<sp/>tests.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" kindref="member">combtuningL1</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1116;</highlight></codeline>
+<codeline lineno="33" refid="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" kindref="member">combtuningR1</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1116+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="34" refid="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" kindref="member">combtuningL2</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1188;</highlight></codeline>
+<codeline lineno="35" refid="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" kindref="member">combtuningR2</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1188+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="36" refid="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" kindref="member">combtuningL3</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1277;</highlight></codeline>
+<codeline lineno="37" refid="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" kindref="member">combtuningR3</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1277+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="38" refid="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" kindref="member">combtuningL4</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1356;</highlight></codeline>
+<codeline lineno="39" refid="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" kindref="member">combtuningR4</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1356+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="40" refid="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" kindref="member">combtuningL5</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1422;</highlight></codeline>
+<codeline lineno="41" refid="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" kindref="member">combtuningR5</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1422+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="42" refid="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" kindref="member">combtuningL6</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1491;</highlight></codeline>
+<codeline lineno="43" refid="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" kindref="member">combtuningR6</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1491+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="44" refid="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" kindref="member">combtuningL7</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1557;</highlight></codeline>
+<codeline lineno="45" refid="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" kindref="member">combtuningR7</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1557+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="46" refid="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" kindref="member">combtuningL8</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1617;</highlight></codeline>
+<codeline lineno="47" refid="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" kindref="member">combtuningR8</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1617+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="48" refid="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" kindref="member">allpasstuningL1</ref><sp/><sp/><sp/>=<sp/>556;</highlight></codeline>
+<codeline lineno="49" refid="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" kindref="member">allpasstuningR1</ref><sp/><sp/><sp/>=<sp/>556+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="50" refid="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" kindref="member">allpasstuningL2</ref><sp/><sp/><sp/>=<sp/>441;</highlight></codeline>
+<codeline lineno="51" refid="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" kindref="member">allpasstuningR2</ref><sp/><sp/><sp/>=<sp/>441+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="52" refid="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" kindref="member">allpasstuningL3</ref><sp/><sp/><sp/>=<sp/>341;</highlight></codeline>
+<codeline lineno="53" refid="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" kindref="member">allpasstuningR3</ref><sp/><sp/><sp/>=<sp/>341+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="54" refid="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" kindref="member">allpasstuningL4</ref><sp/><sp/><sp/>=<sp/>225;</highlight></codeline>
+<codeline lineno="55" refid="tuning_8h_1a00d759e1af846b3980f749ea03964928" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tuning_8h_1a00d759e1af846b3980f749ea03964928" kindref="member">allpasstuningR4</ref><sp/><sp/><sp/>=<sp/>225+<ref refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kindref="member">stereospread</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">//_tuning_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//ends</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Reverb/tuning.h"/>
+  </compounddef>
+</doxygen>

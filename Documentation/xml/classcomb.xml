@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcomb" kind="class" language="C++" prot="public">
+    <compoundname>comb</compoundname>
+    <includes refid="comb_8hpp" local="no">comb.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcomb_1a810d2d4f001990933536f8dfa9a31a72" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float comb::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <qualifiedname>comb::feedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="24" column="6" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1a01f2973eee7bd19e25cf7d2f09109d99" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float comb::filterstore</definition>
+        <argsstring></argsstring>
+        <name>filterstore</name>
+        <qualifiedname>comb::filterstore</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="25" column="6" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1ab83988608828521c121c6f5fc8457051" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float comb::damp1</definition>
+        <argsstring></argsstring>
+        <name>damp1</name>
+        <qualifiedname>comb::damp1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="26" column="6" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1ac688f7140b8067bfc1bad5b0786d8443" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float comb::damp2</definition>
+        <argsstring></argsstring>
+        <name>damp2</name>
+        <qualifiedname>comb::damp2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="27" column="6" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1a16bfa4e412161d0d45b6d58c0f34808b" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* comb::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>comb::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="28" column="6" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1a1e0c9322808ee8b613b031019328d51d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int comb::bufsize</definition>
+        <argsstring></argsstring>
+        <name>bufsize</name>
+        <qualifiedname>comb::bufsize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="29" column="4" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcomb_1aeb77398a8500cc6f4844a8f5b4dab591" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int comb::bufidx</definition>
+        <argsstring></argsstring>
+        <name>bufidx</name>
+        <qualifiedname>comb::bufidx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="30" column="4" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcomb_1a42d4f3d4ff5ae9bc9cb4137e2ab495ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>comb::comb</definition>
+        <argsstring>()</argsstring>
+        <name>comb</name>
+        <qualifiedname>comb::comb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="15" column="1" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1a000d3f031781c27ceaf487a1ec957fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void comb::setbuffer</definition>
+        <argsstring>(float *buf, int size)</argsstring>
+        <name>setbuffer</name>
+        <qualifiedname>comb::setbuffer</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="16" column="5" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1a0d4801f6d16411a2f63ff1a25d2fe5fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float comb::process</definition>
+        <argsstring>(float inp)</argsstring>
+        <name>process</name>
+        <qualifiedname>comb::process</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>inp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="17" column="14" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="36" bodyend="51"/>
+        <references refid="denormals_8h_1a6ba19a68ce81e0a4b889428607c47acd" compoundref="denormals_8h" startline="11">undenormalise</references>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1ae18d1b1ea26d1c18087d3d8feeb7145d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void comb::mute</definition>
+        <argsstring>()</argsstring>
+        <name>mute</name>
+        <qualifiedname>comb::mute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="18" column="5" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1abd0aa594882431e7f7eb4901fcc0ea5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void comb::setdamp</definition>
+        <argsstring>(float val)</argsstring>
+        <name>setdamp</name>
+        <qualifiedname>comb::setdamp</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="19" column="5" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1a99e2c5952a08d006902f5e20a05d37a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float comb::getdamp</definition>
+        <argsstring>()</argsstring>
+        <name>getdamp</name>
+        <qualifiedname>comb::getdamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="20" column="6" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1ad8fac09822db8d944c13791112b5b6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void comb::setfeedback</definition>
+        <argsstring>(float val)</argsstring>
+        <name>setfeedback</name>
+        <qualifiedname>comb::setfeedback</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="21" column="5" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classcomb_1a1df81e7e8f9310831e4e7929078f1d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float comb::getfeedback</definition>
+        <argsstring>()</argsstring>
+        <name>getfeedback</name>
+        <qualifiedname>comb::getfeedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/comb.hpp" line="22" column="6" bodyfile="DSP/FX/Reverb/comb.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Reverb/comb.hpp" line="12" column="1" bodyfile="DSP/FX/Reverb/comb.hpp" bodystart="13" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classcomb_1a16bfa4e412161d0d45b6d58c0f34808b" prot="private" virt="non-virtual"><scope>comb</scope><name>buffer</name></member>
+      <member refid="classcomb_1aeb77398a8500cc6f4844a8f5b4dab591" prot="private" virt="non-virtual"><scope>comb</scope><name>bufidx</name></member>
+      <member refid="classcomb_1a1e0c9322808ee8b613b031019328d51d" prot="private" virt="non-virtual"><scope>comb</scope><name>bufsize</name></member>
+      <member refid="classcomb_1a42d4f3d4ff5ae9bc9cb4137e2ab495ca" prot="public" virt="non-virtual"><scope>comb</scope><name>comb</name></member>
+      <member refid="classcomb_1ab83988608828521c121c6f5fc8457051" prot="private" virt="non-virtual"><scope>comb</scope><name>damp1</name></member>
+      <member refid="classcomb_1ac688f7140b8067bfc1bad5b0786d8443" prot="private" virt="non-virtual"><scope>comb</scope><name>damp2</name></member>
+      <member refid="classcomb_1a810d2d4f001990933536f8dfa9a31a72" prot="private" virt="non-virtual"><scope>comb</scope><name>feedback</name></member>
+      <member refid="classcomb_1a01f2973eee7bd19e25cf7d2f09109d99" prot="private" virt="non-virtual"><scope>comb</scope><name>filterstore</name></member>
+      <member refid="classcomb_1a99e2c5952a08d006902f5e20a05d37a7" prot="public" virt="non-virtual"><scope>comb</scope><name>getdamp</name></member>
+      <member refid="classcomb_1a1df81e7e8f9310831e4e7929078f1d11" prot="public" virt="non-virtual"><scope>comb</scope><name>getfeedback</name></member>
+      <member refid="classcomb_1ae18d1b1ea26d1c18087d3d8feeb7145d" prot="public" virt="non-virtual"><scope>comb</scope><name>mute</name></member>
+      <member refid="classcomb_1a0d4801f6d16411a2f63ff1a25d2fe5fb" prot="public" virt="non-virtual"><scope>comb</scope><name>process</name></member>
+      <member refid="classcomb_1a000d3f031781c27ceaf487a1ec957fec" prot="public" virt="non-virtual"><scope>comb</scope><name>setbuffer</name></member>
+      <member refid="classcomb_1abd0aa594882431e7f7eb4901fcc0ea5e" prot="public" virt="non-virtual"><scope>comb</scope><name>setdamp</name></member>
+      <member refid="classcomb_1ad8fac09822db8d944c13791112b5b6a2" prot="public" virt="non-virtual"><scope>comb</scope><name>setfeedback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

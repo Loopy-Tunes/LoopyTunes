@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="allpass_8cpp" kind="file" language="C++">
+    <compoundname>allpass.cpp</compoundname>
+    <includes refid="allpass_8hpp" local="yes">allpass.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>DSP/FX/Reverb/allpass.cpp</label>
+        <link refid="allpass_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Allpass<sp/>filter<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Written<sp/>by<sp/>Jezar<sp/>at<sp/>Dreampoint,<sp/>June<sp/>2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.dreampoint.co.uk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>public<sp/>domain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="allpass_8hpp" kindref="compound">allpass.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classallpass_1ad0a4c84903b886efb77f37d6889998dd" refkind="member"><highlight class="normal"><ref refid="classallpass_1ad0a4c84903b886efb77f37d6889998dd" kindref="member">allpass::allpass</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" kindref="member">bufidx</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" kindref="member">allpass::setbuffer</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" kindref="member">buffer</ref><sp/>=<sp/>buf;<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass_1a0156b24446b810952ae1df1accb8318f" kindref="member">bufsize</ref><sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classallpass_1af93a4f1d4dcc544323978031cb234aa6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classallpass_1af93a4f1d4dcc544323978031cb234aa6" kindref="member">allpass::mute</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classallpass_1a0156b24446b810952ae1df1accb8318f" kindref="member">bufsize</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" kindref="member">buffer</ref>[i]=0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classallpass_1ad636d830e21de3dd61928875db95c899" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classallpass_1ad636d830e21de3dd61928875db95c899" kindref="member">allpass::setfeedback</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val)<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" kindref="member">feedback</ref><sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classallpass_1a19e2ab2745647005ce06366b7da64b45" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classallpass_1a19e2ab2745647005ce06366b7da64b45" kindref="member">allpass::getfeedback</ref>()<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" kindref="member">feedback</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//ends</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Reverb/allpass.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,80 @@
+\doxysection{Bypass\+Button Class Reference}
+\hypertarget{class_bypass_button}{}\label{class_bypass_button}\index{BypassButton@{BypassButton}}
+
+
+{\ttfamily \#include $<$Bypass\+Button.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bypass_button_a80f0430537f1194752acb452ed0669ce}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}ed, std\+::function$<$ void()$>$ bypass\+Callback)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bypass_button_a7d8a5dab6a354f502f8d45372fcd827d}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the bypass state needs to be changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bypass_button_a92ca3fa41d4a05f5eee9eaa796f9c044}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bypass_button_ab50d9353c702d0b68732317cf0c33c4d}{set\+Is\+Selected}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the button is selected on the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_bypass_button}{Bypass\+Button} Function\+: Button used for bypassing an effect 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bypass_button_a80f0430537f1194752acb452ed0669ce}\label{class_bypass_button_a80f0430537f1194752acb452ed0669ce} 
+\index{BypassButton@{BypassButton}!init@{init}}
+\index{init@{init}!BypassButton@{BypassButton}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Bypass\+Button\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{ed,  }\item[{std\+::function$<$ void()$>$}]{bypass\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ed} & A pointer to the encoder driver \\
+\hline
+{\em bypass\+Callback} & The function to be called when the bypass is set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bypass_button_a92ca3fa41d4a05f5eee9eaa796f9c044}\label{class_bypass_button_a92ca3fa41d4a05f5eee9eaa796f9c044} 
+\index{BypassButton@{BypassButton}!repaint@{repaint}}
+\index{repaint@{repaint}!BypassButton@{BypassButton}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Bypass\+Button\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the repainting of the button. 
+
+\Hypertarget{class_bypass_button_ab50d9353c702d0b68732317cf0c33c4d}\label{class_bypass_button_ab50d9353c702d0b68732317cf0c33c4d} 
+\index{BypassButton@{BypassButton}!setIsSelected@{setIsSelected}}
+\index{setIsSelected@{setIsSelected}!BypassButton@{BypassButton}}
+\doxysubsubsection{\texorpdfstring{setIsSelected()}{setIsSelected()}}
+{\footnotesize\ttfamily void Bypass\+Button\+::set\+Is\+Selected (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the button is selected on the interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Sets the bypass state of the instance \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bypass_button_a7d8a5dab6a354f502f8d45372fcd827d}\label{class_bypass_button_a7d8a5dab6a354f502f8d45372fcd827d} 
+\index{BypassButton@{BypassButton}!tick@{tick}}
+\index{tick@{tick}!BypassButton@{BypassButton}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Bypass\+Button\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the bypass state needs to be changed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_bypass_button_8h}{Bypass\+Button.\+h}}\end{DoxyCompactItemize}

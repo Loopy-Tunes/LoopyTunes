@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_track_view_8cpp" kind="file" language="C++">
+    <compoundname>TrackView.cpp</compoundname>
+    <includes refid="_track_view_8h" local="yes">TrackView.h</includes>
+    <includes refid="daisy___i_l_i9341_8hpp" local="yes">../Drivers/daisy_ILI9341.hpp</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../../Drivers/KeypadDriver.h</label>
+        <link refid="_keypad_driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../Drivers/daisy_ILI9341.hpp</label>
+        <link refid="daisy___i_l_i9341_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>FX/DelayView.h</label>
+        <link refid="_delay_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FX/FilterView.h</label>
+        <link refid="_filter_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FX/PitchShiftView.h</label>
+        <link refid="_pitch_shift_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>FX/ReverbView.h</label>
+        <link refid="_reverb_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>StyleSheet.h</label>
+        <link refid="_style_sheet_8h"/>
+      </node>
+      <node id="16">
+        <label>FX/WaveshaperView.h</label>
+        <link refid="_waveshaper_view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GUI/TrackView.cpp</label>
+        <link refid="_track_view_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../Parameters/ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="12">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>cstring</label>
+      </node>
+      <node id="8">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="13">
+        <label>daisysp.h</label>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="23">
+        <label>hid/disp/graphics_common.h</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>util/oled_fonts.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_track_view_8h" kindref="compound">TrackView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="daisy___i_l_i9341_8hpp" kindref="compound">../Drivers/daisy_ILI9341.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_track_view_1a103d86a77dac67a863199a54f5c09c94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a103d86a77dac67a863199a54f5c09c94" kindref="member">TrackView::init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref>*<sp/>kpd)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>trackID<sp/>=<sp/>ID;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>keypad<sp/>=<sp/>kpd;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>pitchShiftView.<ref refid="class_pitch_shift_view_1aaa2724fbd96ff3fafa73f74813a44dcf" kindref="member">init</ref>(ID,<sp/>driver,<sp/>keypad);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>waveshaperView.<ref refid="class_waveshaper_view_1a7e22573e74046e17f4b3a5d4d8242d7c" kindref="member">init</ref>(ID,<sp/>driver,<sp/>keypad);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>filterView.<ref refid="class_filter_view_1a21352a06744edb5ca53f04dda2fdc03c" kindref="member">init</ref>(ID,<sp/>driver,<sp/>keypad);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>delayView.<ref refid="class_delay_view_1a00c207b265061ecb95bcea58fee64863" kindref="member">init</ref>(ID,<sp/>driver,<sp/>keypad);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>reverbView.<ref refid="class_reverb_view_1a4f5e138fe1b629d7427c29e652c44690" kindref="member">init</ref>(ID,<sp/>driver,<sp/>keypad);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>selectedEffectIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>isOpen<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>isPainted<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" kindref="member">TrackView::tick</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>pitchShiftView.<ref refid="class_pitch_shift_view_1a713e23bfbc8eb132994ea84f523991fe" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>waveshaperView.<ref refid="class_waveshaper_view_1a1167027572fa89082ee21d8b714f5afb" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>filterView.<ref refid="class_filter_view_1a0efc93be178cc43c3a720ba79279ff93" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>delayView.<ref refid="class_delay_view_1ab8b595dc234ef0601cf04d41c7efd800" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>reverbView.<ref refid="class_reverb_view_1a47522b1723f193fb31fcc37223a92f8c" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isOpen)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" kindref="member">repaint</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" kindref="member">TrackView::repaint</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!isPainted)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Track<sp/>label<sp/>box<sp/>and<sp/>text<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rectangle<sp/>trackLabelRect(10,<sp/>10,<sp/>StyleSheet::Tracks::displayWidth<sp/>-<sp/>20,<sp/>50);<sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kindref="member">DrawRect</ref>(trackLabelRect,<sp/>StyleSheet::Tracks::borderColor);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kindref="member">WriteString</ref>((</highlight><highlight class="stringliteral">&quot;Track<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(trackID)).c_str(),<sp/>20,<sp/>15,<sp/>StyleSheet::Tracks::largerFont,<sp/><ref refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a7896ff2cc707b5873da0b97d38bf852e" kindref="member">COLOR_CYAN</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>the<sp/>effects<sp/>label<sp/>box<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rectangle<sp/>effectsLabelRect(10,<sp/>65,<sp/>150,<sp/>30);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kindref="member">DrawRect</ref>(effectsLabelRect,<sp/>StyleSheet::Tracks::borderColor);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kindref="member">WriteString</ref>(</highlight><highlight class="stringliteral">&quot;Effects&quot;</highlight><highlight class="normal">,<sp/>50,<sp/>70,<sp/>Font_11x18,<sp/><ref refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a7896ff2cc707b5873da0b97d38bf852e" kindref="member">COLOR_CYAN</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Top<sp/>position<sp/>for<sp/>effect<sp/>boxes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>effectsYStart<sp/>=<sp/>96;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Effects<sp/>and<sp/>their<sp/>description<sp/>lines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>effects[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;Delay&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Reverb&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Waveshaper&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Pitch<sp/>Shift&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Filter&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>descriptions[][8]=<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Delay<sp/>is<sp/>like<sp/>an&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;echo.<sp/>When<sp/>you&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;shout<sp/>into<sp/>a<sp/>big&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;room<sp/>or<sp/>a<sp/>mountain,&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;your<sp/>voice<sp/>bounces&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;back<sp/>to<sp/>you<sp/>after<sp/>a&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;little<sp/>while.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Reverb<sp/>sounds<sp/>like&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>noise<sp/>is<sp/>all&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;around<sp/>you,<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bouncing<sp/>off<sp/>walls&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;quickly.<sp/>It&apos;s<sp/>like&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>sound<sp/>you<sp/>hear&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;when<sp/>you<sp/>clap<sp/>in<sp/>a&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;large<sp/>hall.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Waveshaper<sp/>changes&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>sound<sp/>by<sp/>making&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;it<sp/>more<sp/>fuzzy<sp/>or&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>buzzy,<sp/>adding&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;sharp<sp/>zigzags<sp/>to<sp/>a&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;smooth,<sp/>curvy<sp/>line.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Pitch<sp/>Shift<sp/>is<sp/>like&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;changing<sp/>the<sp/>notes&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;on<sp/>a<sp/>piano<sp/>while&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;you&apos;re<sp/>still&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;pressing<sp/>the<sp/>same&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;key,<sp/>making<sp/>sounds&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;higher<sp/>or<sp/>lower.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Filter<sp/>lets<sp/>through&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;only<sp/>the<sp/>parts<sp/>of&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;sound<sp/>you<sp/>want<sp/>to&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hear,<sp/>like<sp/>using<sp/>a&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;sieve<sp/>to<sp/>separate&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;larger<sp/>things<sp/>from&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;smaller<sp/>things.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>effectsCount<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(effects)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(effects[0]);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calc<sp/>height<sp/>for<sp/>effect<sp/>boxes<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>effectBoxHeight<sp/>=<sp/>(StyleSheet::Tracks::displayHeight<sp/>-<sp/>effectsYStart<sp/>-<sp/>10<sp/>-<sp/>(effectsCount<sp/>*<sp/>1))<sp/>/<sp/>effectsCount;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Description<sp/>box<sp/>same<sp/>height<sp/>as<sp/>all<sp/>effects<sp/>boxes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>descriptionBoxHeight<sp/>=<sp/>effectsCount<sp/>*<sp/>effectBoxHeight<sp/>+<sp/>(effectsCount<sp/>-<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>each<sp/>effect<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>effectsCount;<sp/>++i)<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>effectTop<sp/>=<sp/>effectsYStart<sp/>+<sp/>i<sp/>*<sp/>(effectBoxHeight<sp/>+<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>fillColor<sp/>=<sp/>(i<sp/>==<sp/>selectedEffectIndex)<sp/>?<sp/>StyleSheet::Tracks::selectedEffectColor<sp/>:<sp/>StyleSheet::Tracks::effectBoxColor;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" kindref="member">FillRect</ref>(Rectangle(11,<sp/>effectTop<sp/>+<sp/>1,<sp/>148,<sp/>effectBoxHeight<sp/>-<sp/>2),<sp/>fillColor);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kindref="member">DrawRect</ref>(Rectangle(10,<sp/>effectTop,<sp/>150,<sp/>effectBoxHeight),<sp/>StyleSheet::Tracks::borderColor);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kindref="member">WriteString</ref>(effects[i],<sp/>20,<sp/>effectTop<sp/>+<sp/>(effectBoxHeight<sp/>-<sp/>StyleSheet::Tracks::smallerFontHeight)<sp/>/<sp/>2,<sp/>StyleSheet::Tracks::smallerFont,<sp/>StyleSheet::Tracks::text_color);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>the<sp/>description<sp/>label<sp/>box<sp/>and<sp/>the<sp/>larger<sp/>description<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rectangle<sp/>descLabelRect(170,<sp/>65,<sp/>StyleSheet::Tracks::displayWidth<sp/>-<sp/>180,<sp/>30);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kindref="member">DrawRect</ref>(descLabelRect,<sp/>StyleSheet::Tracks::borderColor);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kindref="member">WriteString</ref>(</highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/>180,<sp/>70,<sp/>Font_11x18,<sp/><ref refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a7896ff2cc707b5873da0b97d38bf852e" kindref="member">COLOR_CYAN</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rectangle<sp/>descRect(170,<sp/>effectsYStart,<sp/>StyleSheet::Tracks::displayWidth<sp/>-<sp/>180,<sp/>descriptionBoxHeight);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kindref="member">DrawRect</ref>(descRect,<sp/>StyleSheet::Tracks::borderColor);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>number<sp/>of<sp/>lines<sp/>for<sp/>the<sp/>selected<sp/>effect&apos;s<sp/>description</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numDescriptionLines<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(descriptions[selectedEffectIndex])<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(descriptions[selectedEffectIndex][0]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>each<sp/>line<sp/>within<sp/>the<sp/>description<sp/>box<sp/>for<sp/>the<sp/>selected<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentY<sp/>=<sp/>effectsYStart<sp/>+<sp/>10;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numDescriptionLines;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kindref="member">WriteString</ref>(descriptions[selectedEffectIndex][i],<sp/>175,<sp/>currentY,<sp/>StyleSheet::Tracks::smallerFont,<sp/>StyleSheet::Tracks::text_color);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentY<sp/>+=<sp/>StyleSheet::Tracks::smallerFontHeight<sp/>+<sp/>2;<sp/></highlight><highlight class="comment">//<sp/>Adding<sp/>a<sp/>little<sp/>space<sp/>between<sp/>lines<sp/>for<sp/>readability</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isPainted<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" kindref="member">TrackView::clear</ref>()</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="GUI/TrackView.cpp"/>
+  </compounddef>
+</doxygen>

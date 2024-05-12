@@ -1,4 +1,5 @@
 #include "WaveshaperView.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void WaveshaperView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {

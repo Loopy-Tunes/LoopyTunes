@@ -1,4 +1,5 @@
 #include "FilterView.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void FilterView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {

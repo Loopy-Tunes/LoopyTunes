@@ -1,0 +1,829 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_mixer" kind="class" language="C++" prot="public">
+    <compoundname>Mixer</compoundname>
+    <includes refid="_mixer_8h" local="no">Mixer.h</includes>
+    <innerclass refid="struct_mixer_1_1_mixer_channel" prot="private">Mixer::MixerChannel</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mixer_1ac15245bd5d2696d8551bbd7dc68e8c99" prot="private" static="no" mutable="no">
+        <type>MixerChannel</type>
+        <definition>MixerChannel Mixer::track1</definition>
+        <argsstring></argsstring>
+        <name>track1</name>
+        <qualifiedname>Mixer::track1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="134" column="18" bodyfile="DSP/Mixer.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a8e8820cc42bd096bbd78785820cb4d20" prot="private" static="no" mutable="no">
+        <type>MixerChannel</type>
+        <definition>MixerChannel Mixer::track2</definition>
+        <argsstring></argsstring>
+        <name>track2</name>
+        <qualifiedname>Mixer::track2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="135" column="18" bodyfile="DSP/Mixer.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a6e707d6eb90164605c5fe032d23616c4" prot="private" static="no" mutable="no">
+        <type>MixerChannel</type>
+        <definition>MixerChannel Mixer::track3</definition>
+        <argsstring></argsstring>
+        <name>track3</name>
+        <qualifiedname>Mixer::track3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="136" column="18" bodyfile="DSP/Mixer.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a3a0908eeeebf2aa300699054a148ddbb" prot="private" static="no" mutable="no">
+        <type>MixerChannel</type>
+        <definition>MixerChannel Mixer::track4</definition>
+        <argsstring></argsstring>
+        <name>track4</name>
+        <qualifiedname>Mixer::track4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="137" column="18" bodyfile="DSP/Mixer.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1ade49bd924e31b3437e98ea5acd57dd46" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Mixer::mixDiv</definition>
+        <argsstring></argsstring>
+        <name>mixDiv</name>
+        <qualifiedname>Mixer::mixDiv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="139" column="9" bodyfile="DSP/Mixer.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a3489355a57efbe733ca7c4dbf159ec58" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper</ref>&lt; float &gt;</type>
+        <definition>AudioParameterWrapper&lt;float&gt; Mixer::master</definition>
+        <argsstring></argsstring>
+        <name>master</name>
+        <qualifiedname>Mixer::master</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="140" column="27" bodyfile="DSP/Mixer.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a53c9cc8d78a2a27fb788be795c103b62" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* Mixer::mix[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>mix</name>
+        <qualifiedname>Mixer::mix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="141" column="11" bodyfile="DSP/Mixer.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a74c4ad03806510dce84e1de22b1b4aa7" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Mixer::bufferSize</definition>
+        <argsstring></argsstring>
+        <name>bufferSize</name>
+        <qualifiedname>Mixer::bufferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="142" column="12" bodyfile="DSP/Mixer.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mixer_1ad9ef6107ff80ed78ceb46e425bb25b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::init</definition>
+        <argsstring>(DaisySeed *seed, float *t1[2], float *t2[2], float *t3[2], float *t4[2])</argsstring>
+        <name>init</name>
+        <qualifiedname>Mixer::init</qualifiedname>
+        <param>
+          <type>DaisySeed *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t1</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t2</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t3</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t4</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+<para>Initialises the mixer class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the buffer for track 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the buffer for track 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the buffer for track 3 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the buffer for track 4 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="22" column="10" bodyfile="DSP/Mixer.cpp" bodystart="3" bodyend="19"/>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8" compoundref="_helpers_8h" startline="10">AMP1</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256" compoundref="_helpers_8h" startline="11">AMP2</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e" compoundref="_helpers_8h" startline="12">AMP3</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9" compoundref="_helpers_8h" startline="13">AMP4</references>
+        <references refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" compoundref="_constants_8h" startline="5">DURATION</references>
+        <references refid="class_audio_parameter_1afa4f9d66f0cf42cde896acaa5040c9e3" compoundref="_audio_parameter_8h" startline="34" endline="46">AudioParameter&lt; type &gt;::init</references>
+        <references refid="class_track_1a76b434303c0728f7357c8bcc2813e6b9" compoundref="_track_8cpp" startline="3" endline="22">Track::init</references>
+        <references refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb" compoundref="_helpers_8h" startline="44">LINEAR</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a" compoundref="_helpers_8h" startline="14">MASTER</references>
+        <references refid="struct_audio_parameter_wrapper_1a5278e8fed92f6f1cd44a4fb4e403d075" compoundref="_audio_parameter_8h" startline="100">AudioParameterWrapper&lt; type &gt;::param</references>
+        <references refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" compoundref="_constants_8h" startline="4">SAMPLERATE</references>
+        <references refid="class_mixer_1afeb56a1404c1e27c819955c93a754589" compoundref="_mixer_8h" startline="114" endline="114">setMasterVolume</references>
+        <references refid="class_mixer_1ada57a607e8396bed817b7dcd81a80402" compoundref="_mixer_8h" startline="98" endline="98">setTrack1Gain</references>
+        <references refid="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" compoundref="_mixer_8h" startline="102" endline="102">setTrack2Gain</references>
+        <references refid="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" compoundref="_mixer_8h" startline="106" endline="106">setTrack3Gain</references>
+        <references refid="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" compoundref="_mixer_8h" startline="110" endline="110">setTrack4Gain</references>
+        <references refid="namespace_parameter_i_ds_1_1_tracks_1a3e85a68890388908bebe4f8d7b5a4797" compoundref="_parameter_i_ds_8h" startline="8">ParameterIDs::Tracks::Track1</references>
+        <references refid="namespace_parameter_i_ds_1_1_tracks_1af4b941cc1ac4f82109e15e8147fa2d0d" compoundref="_parameter_i_ds_8h" startline="9">ParameterIDs::Tracks::Track2</references>
+        <references refid="namespace_parameter_i_ds_1_1_tracks_1a096285e73e284783970cb12fcae59901" compoundref="_parameter_i_ds_8h" startline="10">ParameterIDs::Tracks::Track3</references>
+        <references refid="namespace_parameter_i_ds_1_1_tracks_1a599f68c4f578da8180cf395da410a079" compoundref="_parameter_i_ds_8h" startline="11">ParameterIDs::Tracks::Track4</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::initMixChannels</definition>
+        <argsstring>(float *m[2], float *t1[2], float *t2[2], float *t3[2], float *t4[2])</argsstring>
+        <name>initMixChannels</name>
+        <qualifiedname>Mixer::initMixChannels</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>m</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t1</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t2</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t3</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>t4</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+<para>Initialises the mixer channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the mix buffer for track 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the mix buffer for track 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the mix buffer for track 3 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the mix buffer for track 4 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="31" column="10" bodyfile="DSP/Mixer.cpp" bodystart="21" bodyend="46"/>
+        <references refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" compoundref="_constants_8h" startline="3">BLOCKLENGTH</references>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::initFX</definition>
+        <argsstring>(EncoderDriver *driver, DelayLine&lt; float, MAXDELAY &gt; *t1[2], DelayLine&lt; float, MAXDELAY &gt; *t2[2], DelayLine&lt; float, MAXDELAY &gt; *t3[2], DelayLine&lt; float, MAXDELAY &gt; *t4[2])</argsstring>
+        <name>initFX</name>
+        <qualifiedname>Mixer::initFX</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+          <declname>t1</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+          <declname>t2</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+          <declname>t3</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>DelayLine&lt; float, <ref refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kindref="member">MAXDELAY</ref> &gt; *</type>
+          <declname>t4</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+<para>Initialises all the effects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the LCD driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the delay line for track 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the delay line for track 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the delay line for track 3 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the delay line for track 4 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="41" column="10" bodyfile="DSP/Mixer.cpp" bodystart="48" bodyend="55"/>
+        <references refid="class_track_1a4e167244a48672681f2e0b187b9fd2a7" compoundref="_track_8cpp" startline="24" endline="31">Track::initFX</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>Mixer::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the backend parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="46" column="10" bodyfile="DSP/Mixer.cpp" bodystart="57" bodyend="72"/>
+        <references refid="struct_audio_parameter_wrapper_1a5278e8fed92f6f1cd44a4fb4e403d075" compoundref="_audio_parameter_8h" startline="100">AudioParameterWrapper&lt; type &gt;::param</references>
+        <references refid="class_track_1ac41690e46e3178d90acb87327955df1f" compoundref="_track_8cpp" startline="33" endline="37">Track::tick</references>
+        <references refid="class_audio_parameter_1a67be018b61cb8e98420a54d6a6992ff7" compoundref="_audio_parameter_8h" startline="51" endline="60">AudioParameter&lt; type &gt;::tick</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::processInputBlock</definition>
+        <argsstring>(const float *left, const float *right, size_t size)</argsstring>
+        <name>processInputBlock</name>
+        <qualifiedname>Mixer::processInputBlock</qualifiedname>
+        <param>
+          <type>const float *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples from the Seed&apos;s input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the Seed&apos;s left input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the Seed&apos;s right input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="53" column="10" bodyfile="DSP/Mixer.cpp" bodystart="74" bodyend="80"/>
+        <references refid="class_track_1adb288fb70bc39ec6f1d50be4dc8d3174" compoundref="_track_8cpp" startline="114" endline="126">Track::processInputBlock</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1af18fb7aa3350a57d2bb8d22272edeba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::panChannels</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>panChannels</name>
+        <qualifiedname>Mixer::panChannels</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Handles the panning of the mixer channels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="57" column="10" bodyfile="DSP/Mixer.cpp" bodystart="82" bodyend="88"/>
+        <references refid="class_mixer_1ae146a7e1659dc74abda5fd36910e7bff" compoundref="_mixer_8cpp" startline="126" endline="134">panMixBuffer</references>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a5ff27db3d3d929520e8db73f0438b5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::mixOutput</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>mixOutput</name>
+        <qualifiedname>Mixer::mixOutput</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Handles the mixing of the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="61" column="10" bodyfile="DSP/Mixer.cpp" bodystart="90" bodyend="107"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="class_mixer_1a47456bbddd719f27c7cdc689f80008a1" compoundref="_mixer_8cpp" startline="136" endline="151">setMixDiv</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a84db56f64191585c461a2a05fd68b463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::processOutputBlock</definition>
+        <argsstring>(float *left, float *right, size_t size)</argsstring>
+        <name>processOutputBlock</name>
+        <qualifiedname>Mixer::processOutputBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples and sends them to the Seed&apos;s output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the Seed&apos;s left output buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the Seed&apos;s right output buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="67" column="10" bodyfile="DSP/Mixer.cpp" bodystart="109" bodyend="124"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="class_mixer_1a5ff27db3d3d929520e8db73f0438b5ec" compoundref="_mixer_8cpp" startline="90" endline="107">mixOutput</references>
+        <references refid="class_track_1a9a6cafdef172c8abfb21a6a78664c5d8" compoundref="_track_8cpp" startline="128" endline="149">Track::processOutputBlock</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ae146a7e1659dc74abda5fd36910e7bff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::panMixBuffer</definition>
+        <argsstring>(float *buffer[2], float pan, size_t size)</argsstring>
+        <name>panMixBuffer</name>
+        <qualifiedname>Mixer::panMixBuffer</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>buffer</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pan</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Applies a -6dB linear taper pan to a mix buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mix buffer the panning should be applied to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pan value for that mix buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the mix buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="74" column="10" bodyfile="DSP/Mixer.cpp" bodystart="126" bodyend="134"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a47456bbddd719f27c7cdc689f80008a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setMixDiv</definition>
+        <argsstring>()</argsstring>
+        <name>setMixDiv</name>
+        <qualifiedname>Mixer::setMixDiv</qualifiedname>
+        <briefdescription>
+<para>Sets the mix divisor used to mix the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="78" column="10" bodyfile="DSP/Mixer.cpp" bodystart="136" bodyend="151"/>
+        <references refid="class_track_1a7faeb268f0b7825dc9f1ac31d2f96589" compoundref="_track_8h" startline="62" endline="62">Track::getState</references>
+        <references refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" compoundref="_helpers_8h" startline="35">STOPPED</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a644b7cf22643aec1af032fcc615adc9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack1Pan</definition>
+        <argsstring>(float p)</argsstring>
+        <name>setTrack1Pan</name>
+        <qualifiedname>Mixer::setTrack1Pan</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pan value for track 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="82" column="10" bodyfile="DSP/Mixer.h" bodystart="82" bodyend="82"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1aca235adccb2d2fe1cd7b3db430a66053" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack2Pan</definition>
+        <argsstring>(float p)</argsstring>
+        <name>setTrack2Pan</name>
+        <qualifiedname>Mixer::setTrack2Pan</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pan value for track 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="86" column="10" bodyfile="DSP/Mixer.h" bodystart="86" bodyend="86"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a5a88c441bbbbff1128d20d929a7d0935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack3Pan</definition>
+        <argsstring>(float p)</argsstring>
+        <name>setTrack3Pan</name>
+        <qualifiedname>Mixer::setTrack3Pan</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pan value for track 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="90" column="10" bodyfile="DSP/Mixer.h" bodystart="90" bodyend="90"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a28e66584e7f5ecb35f538ae2768cb8ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack4Pan</definition>
+        <argsstring>(float p)</argsstring>
+        <name>setTrack4Pan</name>
+        <qualifiedname>Mixer::setTrack4Pan</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pan value for track 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="94" column="10" bodyfile="DSP/Mixer.h" bodystart="94" bodyend="94"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ada57a607e8396bed817b7dcd81a80402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack1Gain</definition>
+        <argsstring>(float g)</argsstring>
+        <name>setTrack1Gain</name>
+        <qualifiedname>Mixer::setTrack1Gain</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain value for track 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="98" column="10" bodyfile="DSP/Mixer.h" bodystart="98" bodyend="98"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack2Gain</definition>
+        <argsstring>(float g)</argsstring>
+        <name>setTrack2Gain</name>
+        <qualifiedname>Mixer::setTrack2Gain</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain value for track 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="102" column="10" bodyfile="DSP/Mixer.h" bodystart="102" bodyend="102"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack3Gain</definition>
+        <argsstring>(float g)</argsstring>
+        <name>setTrack3Gain</name>
+        <qualifiedname>Mixer::setTrack3Gain</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain value for track 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="106" column="10" bodyfile="DSP/Mixer.h" bodystart="106" bodyend="106"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setTrack4Gain</definition>
+        <argsstring>(float g)</argsstring>
+        <name>setTrack4Gain</name>
+        <qualifiedname>Mixer::setTrack4Gain</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gain value for track 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="110" column="10" bodyfile="DSP/Mixer.h" bodystart="110" bodyend="110"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1afeb56a1404c1e27c819955c93a754589" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mixer::setMasterVolume</definition>
+        <argsstring>(float m)</argsstring>
+        <name>setMasterVolume</name>
+        <qualifiedname>Mixer::setMasterVolume</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Sets the master gain value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="114" column="10" bodyfile="DSP/Mixer.h" bodystart="114" bodyend="114"/>
+        <references refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" compoundref="_audio_parameter_8h" startline="101">AudioParameterWrapper&lt; type &gt;::value</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_mixer" kindref="compound">Mixer</ref> Function: Mixes outputs of track classes </para>
+    </detaileddescription>
+    <location file="DSP/Mixer.h" line="11" column="1" bodyfile="DSP/Mixer.h" bodystart="12" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_mixer_1a74c4ad03806510dce84e1de22b1b4aa7" prot="private" virt="non-virtual"><scope>Mixer</scope><name>bufferSize</name></member>
+      <member refid="class_mixer_1ad9ef6107ff80ed78ceb46e425bb25b05" prot="public" virt="non-virtual"><scope>Mixer</scope><name>init</name></member>
+      <member refid="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" prot="public" virt="non-virtual"><scope>Mixer</scope><name>initFX</name></member>
+      <member refid="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" prot="public" virt="non-virtual"><scope>Mixer</scope><name>initMixChannels</name></member>
+      <member refid="class_mixer_1a3489355a57efbe733ca7c4dbf159ec58" prot="private" virt="non-virtual"><scope>Mixer</scope><name>master</name></member>
+      <member refid="class_mixer_1a53c9cc8d78a2a27fb788be795c103b62" prot="private" virt="non-virtual"><scope>Mixer</scope><name>mix</name></member>
+      <member refid="class_mixer_1ade49bd924e31b3437e98ea5acd57dd46" prot="private" virt="non-virtual"><scope>Mixer</scope><name>mixDiv</name></member>
+      <member refid="class_mixer_1a5ff27db3d3d929520e8db73f0438b5ec" prot="public" virt="non-virtual"><scope>Mixer</scope><name>mixOutput</name></member>
+      <member refid="class_mixer_1af18fb7aa3350a57d2bb8d22272edeba1" prot="public" virt="non-virtual"><scope>Mixer</scope><name>panChannels</name></member>
+      <member refid="class_mixer_1ae146a7e1659dc74abda5fd36910e7bff" prot="public" virt="non-virtual"><scope>Mixer</scope><name>panMixBuffer</name></member>
+      <member refid="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" prot="public" virt="non-virtual"><scope>Mixer</scope><name>processInputBlock</name></member>
+      <member refid="class_mixer_1a84db56f64191585c461a2a05fd68b463" prot="public" virt="non-virtual"><scope>Mixer</scope><name>processOutputBlock</name></member>
+      <member refid="class_mixer_1afeb56a1404c1e27c819955c93a754589" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setMasterVolume</name></member>
+      <member refid="class_mixer_1a47456bbddd719f27c7cdc689f80008a1" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setMixDiv</name></member>
+      <member refid="class_mixer_1ada57a607e8396bed817b7dcd81a80402" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack1Gain</name></member>
+      <member refid="class_mixer_1a644b7cf22643aec1af032fcc615adc9f" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack1Pan</name></member>
+      <member refid="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack2Gain</name></member>
+      <member refid="class_mixer_1aca235adccb2d2fe1cd7b3db430a66053" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack2Pan</name></member>
+      <member refid="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack3Gain</name></member>
+      <member refid="class_mixer_1a5a88c441bbbbff1128d20d929a7d0935" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack3Pan</name></member>
+      <member refid="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack4Gain</name></member>
+      <member refid="class_mixer_1a28e66584e7f5ecb35f538ae2768cb8ac" prot="public" virt="non-virtual"><scope>Mixer</scope><name>setTrack4Pan</name></member>
+      <member refid="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" prot="public" virt="non-virtual"><scope>Mixer</scope><name>tick</name></member>
+      <member refid="class_mixer_1ac15245bd5d2696d8551bbd7dc68e8c99" prot="private" virt="non-virtual"><scope>Mixer</scope><name>track1</name></member>
+      <member refid="class_mixer_1a8e8820cc42bd096bbd78785820cb4d20" prot="private" virt="non-virtual"><scope>Mixer</scope><name>track2</name></member>
+      <member refid="class_mixer_1a6e707d6eb90164605c5fe032d23616c4" prot="private" virt="non-virtual"><scope>Mixer</scope><name>track3</name></member>
+      <member refid="class_mixer_1a3a0908eeeebf2aa300699054a148ddbb" prot="private" virt="non-virtual"><scope>Mixer</scope><name>track4</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

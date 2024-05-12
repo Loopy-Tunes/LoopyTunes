@@ -1,0 +1,94 @@
+\doxysection{Reverb Class Reference}
+\hypertarget{class_reverb}{}\label{class_reverb}\index{Reverb@{Reverb}}
+
+
+{\ttfamily \#include $<$Reverb.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reverb_aeddbf149b51adada870cfe78e8ffb833}{init}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, int track\+ID)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_a5a8451daa1efb94b27e32bc1a6a5adeb}{set\+Default\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Sets tthe default parameter values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_a23b1f08d104a5c23db173d41683ebd8b}{set\+Bypass}} ()
+\begin{DoxyCompactList}\small\item\em Sets the bypass state of the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_a915968b9f9b2538f14d1d013b7312c31}{set\+Amount}} (float mix)
+\begin{DoxyCompactList}\small\item\em Sets the amount of the effect in the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_a3adde3ca44e4e94e30c00d534c1db8bc}{process\+Block}} (float \texorpdfstring{$\ast$}{*}input\mbox{[}2\mbox{]}, long size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples through the reverb and mixes the output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reverb_aeddbf149b51adada870cfe78e8ffb833}\label{class_reverb_aeddbf149b51adada870cfe78e8ffb833} 
+\index{Reverb@{Reverb}!init@{init}}
+\index{init@{init}!Reverb@{Reverb}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Reverb\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{int}]{track\+ID }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the encoder driver used to initialise the parameters \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+{\em track\+ID} & The ID of the track the instance belongs to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reverb_a3adde3ca44e4e94e30c00d534c1db8bc}\label{class_reverb_a3adde3ca44e4e94e30c00d534c1db8bc} 
+\index{Reverb@{Reverb}!processBlock@{processBlock}}
+\index{processBlock@{processBlock}!Reverb@{Reverb}}
+\doxysubsubsection{\texorpdfstring{processBlock()}{processBlock()}}
+{\footnotesize\ttfamily void Reverb\+::process\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{input\mbox{[}2\mbox{]},  }\item[{long}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples through the reverb and mixes the output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & An array of pointers pointing to the input buffer \\
+\hline
+{\em size} & The size of the block of samples \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reverb_a915968b9f9b2538f14d1d013b7312c31}\label{class_reverb_a915968b9f9b2538f14d1d013b7312c31} 
+\index{Reverb@{Reverb}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Reverb@{Reverb}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Reverb\+::set\+Amount (\begin{DoxyParamCaption}\item[{float}]{mix }\end{DoxyParamCaption})}
+
+
+
+Sets the amount of the effect in the output. 
+
+\Hypertarget{class_reverb_a23b1f08d104a5c23db173d41683ebd8b}\label{class_reverb_a23b1f08d104a5c23db173d41683ebd8b} 
+\index{Reverb@{Reverb}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!Reverb@{Reverb}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void Reverb\+::set\+Bypass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bypass state of the instance. 
+
+\Hypertarget{class_reverb_a5a8451daa1efb94b27e32bc1a6a5adeb}\label{class_reverb_a5a8451daa1efb94b27e32bc1a6a5adeb} 
+\index{Reverb@{Reverb}!setDefaultValues@{setDefaultValues}}
+\index{setDefaultValues@{setDefaultValues}!Reverb@{Reverb}}
+\doxysubsubsection{\texorpdfstring{setDefaultValues()}{setDefaultValues()}}
+{\footnotesize\ttfamily void Reverb\+::set\+Default\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets tthe default parameter values. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\+FX/\+Reverb/\mbox{\hyperlink{_reverb_8h}{Reverb.\+h}}\item 
+DSP/\+FX/\+Reverb/\mbox{\hyperlink{_reverb_8cpp}{Reverb.\+cpp}}\end{DoxyCompactItemize}

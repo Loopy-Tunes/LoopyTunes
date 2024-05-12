@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_audio_parameter" kind="class" language="C++" prot="public">
+    <compoundname>AudioParameter</compoundname>
+    <includes refid="_audio_parameter_8h" local="no">AudioParameter.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class type</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_parameter_1a4a15c28f1c80131f0c3993e21bacb0d5" prot="private" static="no" mutable="no">
+        <type>DaisySeed *</type>
+        <definition>DaisySeed* AudioParameter&lt; type &gt;::hw</definition>
+        <argsstring></argsstring>
+        <name>hw</name>
+        <qualifiedname>AudioParameter::hw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="86" column="15" bodyfile="Parameters/AudioParameter.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1a16cbdeea03b5177126942241a86bc83b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AudioParameter&lt; type &gt;::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <qualifiedname>AudioParameter::input</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="87" column="11" bodyfile="Parameters/AudioParameter.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1adb4e0ee89d1fc3ad58f030546f8871a0" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float AudioParameter&lt; type &gt;::jitter</definition>
+        <argsstring></argsstring>
+        <name>jitter</name>
+        <qualifiedname>AudioParameter::jitter</qualifiedname>
+        <initializer>= 0.01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="88" column="17" bodyfile="Parameters/AudioParameter.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1a3ebf092933e1184635afa4f7b06dc01b" prot="private" static="no" mutable="no">
+        <type>type</type>
+        <definition>type AudioParameter&lt; type &gt;::curVal</definition>
+        <argsstring></argsstring>
+        <name>curVal</name>
+        <qualifiedname>AudioParameter::curVal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="90" column="10" bodyfile="Parameters/AudioParameter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1a4436c2eec67d3de5f7bf0a3eaf573e2d" prot="private" static="no" mutable="no">
+        <type>type</type>
+        <definition>type AudioParameter&lt; type &gt;::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>AudioParameter::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="90" column="17" bodyfile="Parameters/AudioParameter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1acab13a377a64038be4d656f47b124df4" prot="private" static="no" mutable="no">
+        <type>type</type>
+        <definition>type AudioParameter&lt; type &gt;::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>AudioParameter::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="90" column="21" bodyfile="Parameters/AudioParameter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1a57188748995c53e820dbf96a17a4299a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioParameter&lt; type &gt;::channelID</definition>
+        <argsstring></argsstring>
+        <name>channelID</name>
+        <qualifiedname>AudioParameter::channelID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="91" column="9" bodyfile="Parameters/AudioParameter.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1aa19a87849db30611e3914139ff2391c9" prot="private" static="no" mutable="no">
+        <type><ref refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606" kindref="member">CurveType</ref></type>
+        <definition>CurveType AudioParameter&lt; type &gt;::curve</definition>
+        <argsstring></argsstring>
+        <name>curve</name>
+        <qualifiedname>AudioParameter::curve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="92" column="15" bodyfile="Parameters/AudioParameter.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_parameter_1ad9114646bff30936f6805883eaf58a2e" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(type)&gt;</type>
+        <definition>std::function&lt;void(type)&gt; AudioParameter&lt; type &gt;::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>AudioParameter::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="94" column="19" bodyfile="Parameters/AudioParameter.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_audio_parameter_1afa4f9d66f0cf42cde896acaa5040c9e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioParameter&lt; type &gt;::init</definition>
+        <argsstring>(DaisySeed *seed, type mi, type ma, CurveType c, int ID, std::function&lt; void(type)&gt; cb)</argsstring>
+        <name>init</name>
+        <qualifiedname>AudioParameter::init</qualifiedname>
+        <param>
+          <type>DaisySeed *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>type</type>
+          <declname>mi</declname>
+        </param>
+        <param>
+          <type>type</type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type><ref refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606" kindref="member">CurveType</ref></type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(type)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the program&apos;s instance of the hardware </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum value the parameter&apos;s input should be scaled too </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum value the parameter&apos;s input should be scaled too </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of curve that should be used to scale the input </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel ID for the ADC channel the instance is assigned too </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function that should be executed when the input values changes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="34" column="10" bodyfile="Parameters/AudioParameter.h" bodystart="34" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_parameter_1a67be018b61cb8e98420a54d6a6992ff7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioParameter&lt; type &gt;::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>AudioParameter::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the polling of the assigned ADC channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="51" column="17" bodyfile="Parameters/AudioParameter.h" bodystart="51" bodyend="60"/>
+        <references refid="class_audio_parameter_1a0c02048d1e7431e27199f5098e4902a2" compoundref="_audio_parameter_8h" startline="65" endline="76">AudioParameter&lt; type &gt;::processCurve</references>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_parameter_1a0c02048d1e7431e27199f5098e4902a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioParameter&lt; type &gt;::processCurve</definition>
+        <argsstring>()</argsstring>
+        <name>processCurve</name>
+        <qualifiedname>AudioParameter::processCurve</qualifiedname>
+        <briefdescription>
+<para>Scales the input value according to the assigned curve. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="65" column="10" bodyfile="Parameters/AudioParameter.h" bodystart="65" bodyend="76"/>
+        <references refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757" compoundref="_helpers_8h" startline="45">EXP</references>
+        <references refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb" compoundref="_helpers_8h" startline="44">LINEAR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_parameter_1a654ab6b382d01b7046d9ed7c38e9b39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>type</type>
+        <definition>type AudioParameter&lt; type &gt;::getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <qualifiedname>AudioParameter::getValue</qualifiedname>
+        <briefdescription>
+<para>Fetches the current value of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/AudioParameter.h" line="82" column="17" bodyfile="Parameters/AudioParameter.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Parameters/AudioParameter.h" line="21" column="1" bodyfile="Parameters/AudioParameter.h" bodystart="22" bodyend="95"/>
+    <listofallmembers>
+      <member refid="class_audio_parameter_1ad9114646bff30936f6805883eaf58a2e" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>callback</name></member>
+      <member refid="class_audio_parameter_1a57188748995c53e820dbf96a17a4299a" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>channelID</name></member>
+      <member refid="class_audio_parameter_1a3ebf092933e1184635afa4f7b06dc01b" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>curVal</name></member>
+      <member refid="class_audio_parameter_1aa19a87849db30611e3914139ff2391c9" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>curve</name></member>
+      <member refid="class_audio_parameter_1a654ab6b382d01b7046d9ed7c38e9b39c" prot="public" virt="non-virtual"><scope>AudioParameter</scope><name>getValue</name></member>
+      <member refid="class_audio_parameter_1a4a15c28f1c80131f0c3993e21bacb0d5" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>hw</name></member>
+      <member refid="class_audio_parameter_1afa4f9d66f0cf42cde896acaa5040c9e3" prot="public" virt="non-virtual"><scope>AudioParameter</scope><name>init</name></member>
+      <member refid="class_audio_parameter_1a16cbdeea03b5177126942241a86bc83b" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>input</name></member>
+      <member refid="class_audio_parameter_1adb4e0ee89d1fc3ad58f030546f8871a0" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>jitter</name></member>
+      <member refid="class_audio_parameter_1acab13a377a64038be4d656f47b124df4" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>max</name></member>
+      <member refid="class_audio_parameter_1a4436c2eec67d3de5f7bf0a3eaf573e2d" prot="private" virt="non-virtual"><scope>AudioParameter</scope><name>min</name></member>
+      <member refid="class_audio_parameter_1a0c02048d1e7431e27199f5098e4902a2" prot="public" virt="non-virtual"><scope>AudioParameter</scope><name>processCurve</name></member>
+      <member refid="class_audio_parameter_1a67be018b61cb8e98420a54d6a6992ff7" prot="public" virt="non-virtual"><scope>AudioParameter</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

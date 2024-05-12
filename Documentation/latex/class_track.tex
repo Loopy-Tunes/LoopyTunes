@@ -1,0 +1,202 @@
+\doxysection{Track Class Reference}
+\hypertarget{class_track}{}\label{class_track}\index{Track@{Track}}
+
+
+{\ttfamily \#include $<$Track.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_track_a76b434303c0728f7357c8bcc2813e6b9}{init}} (float \texorpdfstring{$\ast$}{*}mem\mbox{[}2\mbox{]}, int ID, dsy\+\_\+gpio\+\_\+pin r, dsy\+\_\+gpio\+\_\+pin p)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_a4e167244a48672681f2e0b187b9fd2a7}{init\+FX}} (\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}dl\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialise the track\textquotesingle{}s effects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_ac41690e46e3178d90acb87327955df1f}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the instance\textquotesingle{}s branch in the hierarchy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_ae2c5e0f996e01be7c34e695fa9714905}{reset\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Sets all values in the track\textquotesingle{}s assigned buffer to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_af5bf39d8eed1fdd58ee86ebbfae8f3e3}{set\+Is\+Recording}} ()
+\begin{DoxyCompactList}\small\item\em Sets the track\textquotesingle{}s recording state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_a639cee2f6d225448b4a86166bb0a4ae8}{set\+Is\+Playing}} ()
+\begin{DoxyCompactList}\small\item\em Sets the track\textquotesingle{}s playing state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c}{Track\+State}} \mbox{\hyperlink{class_track_a7faeb268f0b7825dc9f1ac31d2f96589}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current state of the track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_a336774fc362866bf0df508aead2116d0}{increment\+Write\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Increments the track\textquotesingle{}s playhead write position for recording. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_a80383a6a58e05f2ca099ced9e7e0992c}{increment\+Read\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Increments the track\textquotesingle{}s playhead\textquotesingle{}s read position for playback. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_track_a6f77ea1dd3f160fca62bf949f65c6b26}{get\+Read\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current value of the track\textquotesingle{}s playhead\textquotesingle{}s read position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_adb288fb70bc39ec6f1d50be4dc8d3174}{process\+Input\+Block}} (const float \texorpdfstring{$\ast$}{*}left, const float \texorpdfstring{$\ast$}{*}right, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Processes a block of samples from the Seed\textquotesingle{}s input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_a9a6cafdef172c8abfb21a6a78664c5d8}{process\+Output\+Block}} (float \texorpdfstring{$\ast$}{*}output\mbox{[}2\mbox{]}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Fills the track\textquotesingle{}s mix buffer with samples and processes it through the effects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_track}{Track} Function\+: Processes audio buffer and FX for each track 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_track_a6f77ea1dd3f160fca62bf949f65c6b26}\label{class_track_a6f77ea1dd3f160fca62bf949f65c6b26} 
+\index{Track@{Track}!getReadPos@{getReadPos}}
+\index{getReadPos@{getReadPos}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{getReadPos()}{getReadPos()}}
+{\footnotesize\ttfamily size\+\_\+t Track\+::get\+Read\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current value of the track\textquotesingle{}s playhead\textquotesingle{}s read position. 
+
+\Hypertarget{class_track_a7faeb268f0b7825dc9f1ac31d2f96589}\label{class_track_a7faeb268f0b7825dc9f1ac31d2f96589} 
+\index{Track@{Track}!getState@{getState}}
+\index{getState@{getState}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_helpers_8h_a5e9684d2e87fbf099474d8ece4c3a69c}{Track\+State}} Track\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current state of the track. 
+
+\begin{DoxyReturn}{Returns}
+The state of the track 
+\end{DoxyReturn}
+\Hypertarget{class_track_a80383a6a58e05f2ca099ced9e7e0992c}\label{class_track_a80383a6a58e05f2ca099ced9e7e0992c} 
+\index{Track@{Track}!incrementReadPos@{incrementReadPos}}
+\index{incrementReadPos@{incrementReadPos}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{incrementReadPos()}{incrementReadPos()}}
+{\footnotesize\ttfamily void Track\+::increment\+Read\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments the track\textquotesingle{}s playhead\textquotesingle{}s read position for playback. 
+
+\Hypertarget{class_track_a336774fc362866bf0df508aead2116d0}\label{class_track_a336774fc362866bf0df508aead2116d0} 
+\index{Track@{Track}!incrementWritePos@{incrementWritePos}}
+\index{incrementWritePos@{incrementWritePos}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{incrementWritePos()}{incrementWritePos()}}
+{\footnotesize\ttfamily void Track\+::increment\+Write\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments the track\textquotesingle{}s playhead write position for recording. 
+
+\Hypertarget{class_track_a76b434303c0728f7357c8bcc2813e6b9}\label{class_track_a76b434303c0728f7357c8bcc2813e6b9} 
+\index{Track@{Track}!init@{init}}
+\index{init@{init}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Track\+::init (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{mem\mbox{[}2\mbox{]},  }\item[{int}]{ID,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{r,  }\item[{dsy\+\_\+gpio\+\_\+pin}]{p }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem} & An array of pointers pointing to the track\textquotesingle{}s buffers in the \doxylink{namespace_buffers}{Buffers} namespace \\
+\hline
+{\em ID} & The track ID used to initialise its parameters \\
+\hline
+{\em r} & The pin number of the track\textquotesingle{}s record button used to initialise the record \doxylink{class_binary_parameter}{Binary\+Parameter} \\
+\hline
+{\em p} & The pin number of the track\textquotesingle{}s play button used to initialise the play \doxylink{class_binary_parameter}{Binary\+Parameter} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_track_a4e167244a48672681f2e0b187b9fd2a7}\label{class_track_a4e167244a48672681f2e0b187b9fd2a7} 
+\index{Track@{Track}!initFX@{initFX}}
+\index{initFX@{initFX}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{initFX()}{initFX()}}
+{\footnotesize\ttfamily void Track\+::init\+FX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{Delay\+Line$<$ float, \mbox{\hyperlink{_delay_8h_a5abb2c4c24d1c5dbf685eed1fb5ee7f0}{MAXDELAY}} $>$ \texorpdfstring{$\ast$}{*}}]{dl\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialise the track\textquotesingle{}s effects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & A pointer to the LCD driver that lives in Loopy\+Tunes \\
+\hline
+{\em dl} & An array of points pointing to the track\textquotesingle{}s delay lines in the \doxylink{namespace_buffers}{Buffers} namespace \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_track_adb288fb70bc39ec6f1d50be4dc8d3174}\label{class_track_adb288fb70bc39ec6f1d50be4dc8d3174} 
+\index{Track@{Track}!processInputBlock@{processInputBlock}}
+\index{processInputBlock@{processInputBlock}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{processInputBlock()}{processInputBlock()}}
+{\footnotesize\ttfamily void Track\+::process\+Input\+Block (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{left,  }\item[{const float \texorpdfstring{$\ast$}{*}}]{right,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes a block of samples from the Seed\textquotesingle{}s input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & A pointer to the Seed\textquotesingle{}s left input buffer \\
+\hline
+{\em right} & A pointer to the Seed\textquotesingle{}s right input buffer \\
+\hline
+{\em size} & the Size of the block of samples that need to be processed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_track_a9a6cafdef172c8abfb21a6a78664c5d8}\label{class_track_a9a6cafdef172c8abfb21a6a78664c5d8} 
+\index{Track@{Track}!processOutputBlock@{processOutputBlock}}
+\index{processOutputBlock@{processOutputBlock}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{processOutputBlock()}{processOutputBlock()}}
+{\footnotesize\ttfamily void Track\+::process\+Output\+Block (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{output\mbox{[}2\mbox{]},  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Fills the track\textquotesingle{}s mix buffer with samples and processes it through the effects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & An array of pointers to the track\textquotesingle{}s mix buffer \\
+\hline
+{\em size} & The number of samples to process \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_track_ae2c5e0f996e01be7c34e695fa9714905}\label{class_track_ae2c5e0f996e01be7c34e695fa9714905} 
+\index{Track@{Track}!resetBuffer@{resetBuffer}}
+\index{resetBuffer@{resetBuffer}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{resetBuffer()}{resetBuffer()}}
+{\footnotesize\ttfamily void Track\+::reset\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets all values in the track\textquotesingle{}s assigned buffer to 0. 
+
+\Hypertarget{class_track_a639cee2f6d225448b4a86166bb0a4ae8}\label{class_track_a639cee2f6d225448b4a86166bb0a4ae8} 
+\index{Track@{Track}!setIsPlaying@{setIsPlaying}}
+\index{setIsPlaying@{setIsPlaying}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{setIsPlaying()}{setIsPlaying()}}
+{\footnotesize\ttfamily void Track\+::set\+Is\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the track\textquotesingle{}s playing state. 
+
+\Hypertarget{class_track_af5bf39d8eed1fdd58ee86ebbfae8f3e3}\label{class_track_af5bf39d8eed1fdd58ee86ebbfae8f3e3} 
+\index{Track@{Track}!setIsRecording@{setIsRecording}}
+\index{setIsRecording@{setIsRecording}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{setIsRecording()}{setIsRecording()}}
+{\footnotesize\ttfamily void Track\+::set\+Is\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the track\textquotesingle{}s recording state. 
+
+\Hypertarget{class_track_ac41690e46e3178d90acb87327955df1f}\label{class_track_ac41690e46e3178d90acb87327955df1f} 
+\index{Track@{Track}!tick@{tick}}
+\index{tick@{tick}!Track@{Track}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Track\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the instance\textquotesingle{}s branch in the hierarchy. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSP/\mbox{\hyperlink{_track_8h}{Track.\+h}}\item 
+DSP/\mbox{\hyperlink{_track_8cpp}{Track.\+cpp}}\end{DoxyCompactItemize}

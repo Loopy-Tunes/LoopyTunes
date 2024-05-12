@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_pitch_shift_8cpp" kind="file" language="C++">
+    <compoundname>PitchShift.cpp</compoundname>
+    <includes refid="_pitch_shift_8h" local="yes">PitchShift.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>DSP/FX/PitchShift.cpp</label>
+        <link refid="_pitch_shift_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="6">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="8">
+        <label>daisysp.h</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pitch_shift_8h" kindref="compound">PitchShift.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" kindref="member">PitchShift::init</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/><ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref><sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>shifter.Init(48000);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>shifter.SetFun(0.f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.05,<sp/><ref refid="namespace_parameter_i_ds_1_1_pitch_shifter_1adbc85a3cbcf6222f5fbd2cd59e7da330" kindref="member">ParameterIDs::PitchShifter::amount</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a)<sp/>{<sp/><ref refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" kindref="member">setAmount</ref>(a);<sp/>});</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>semitones.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(-12,<sp/>12,<sp/>1,<sp/><ref refid="namespace_parameter_i_ds_1_1_pitch_shifter_1aeeb85c1162bd9e541e8ce83b78d8bbf6" kindref="member">ParameterIDs::PitchShifter::semitones</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>s)<sp/>{<sp/>shifter.SetTransposition(s);<sp/>});</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" kindref="member">addBypassCallback</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>{<sp/><ref refid="class_pitch_shift_1ad942f1dcd95926fb670941272c1b4894" kindref="member">setBypass</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;amount.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;semitones.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" kindref="member">setDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" kindref="member">PitchShift::setDefaultValues</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>isBypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" kindref="member">setAmount</ref>(pitchShifterDefs.amount);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>shifter.SetTransposition(pitchShifterDefs.semitones);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>shifter.SetFun(pitchShifterDefs.rand);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>shifter.SetDelSize(2400);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" kindref="member">PitchShift::processBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>input[2],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isBypass)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>size<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>shifter.Process(input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>shifter.Process(input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>(input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>*<sp/>(1.f<sp/>-<sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref>))<sp/>+<sp/>(buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>*<sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>(input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>*<sp/>(1.f<sp/>-<sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref>))<sp/>+<sp/>(buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>*<sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/PitchShift.cpp"/>
+  </compounddef>
+</doxygen>

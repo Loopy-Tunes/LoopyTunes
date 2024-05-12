@@ -1,0 +1,16 @@
+\doxysection{DSP/\+FX/\+Reverb/denormals.h File Reference}
+\hypertarget{denormals_8h}{}\label{denormals_8h}\index{DSP/FX/Reverb/denormals.h@{DSP/FX/Reverb/denormals.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd}{undenormalise}}(\mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}})~if(((\texorpdfstring{$\ast$}{*}(unsigned int\texorpdfstring{$\ast$}{*})\&\mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}})\&0x7f800000)==0) \mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}}=0.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd}\label{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd} 
+\index{denormals.h@{denormals.h}!undenormalise@{undenormalise}}
+\index{undenormalise@{undenormalise}!denormals.h@{denormals.h}}
+\doxysubsubsection{\texorpdfstring{undenormalise}{undenormalise}}
+{\footnotesize\ttfamily \#define undenormalise(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}} }\end{DoxyParamCaption})~if(((\texorpdfstring{$\ast$}{*}(unsigned int\texorpdfstring{$\ast$}{*})\&\mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}})\&0x7f800000)==0) \mbox{\hyperlink{_loopy_tunes_8cpp_aba0b97df8abaa038fb9f0f71f034a4cd}{sample}}=0.\+0f}
+

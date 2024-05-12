@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_pitch_shift" kind="class" language="C++" prot="public">
+    <compoundname>PitchShift</compoundname>
+    <includes refid="_pitch_shift_8h" local="no">PitchShift.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pitch_shift_1a7f4479ba17295861c1dd5ceafac0a0d7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PitchShift::buffer[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>PitchShift::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="50" column="11" bodyfile="DSP/FX/PitchShift.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_1ab4282c80b5e97f60548a180ba6e64de0" prot="private" static="no" mutable="no">
+        <type>daisysp::PitchShifter</type>
+        <definition>daisysp::PitchShifter PitchShift::shifter</definition>
+        <argsstring></argsstring>
+        <name>shifter</name>
+        <qualifiedname>PitchShift::shifter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="51" column="27" bodyfile="DSP/FX/PitchShift.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_1af64c84ecbcfad19b9df7136a8187058d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PitchShift::isBypass</definition>
+        <argsstring></argsstring>
+        <name>isBypass</name>
+        <qualifiedname>PitchShift::isBypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="53" column="10" bodyfile="DSP/FX/PitchShift.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_1a43242b2d5621eeeaed391bd715106824" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper PitchShift::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>PitchShift::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="54" column="29" bodyfile="DSP/FX/PitchShift.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pitch_shift_1ac3c13581ade9232fb69efddefe27dfc9" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper PitchShift::semitones</definition>
+        <argsstring></argsstring>
+        <name>semitones</name>
+        <qualifiedname>PitchShift::semitones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="55" column="29" bodyfile="DSP/FX/PitchShift.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShift::init</definition>
+        <argsstring>(EncoderDriver *driver, int trackID)</argsstring>
+        <name>init</name>
+        <qualifiedname>PitchShift::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trackID</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver used to initialise the parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="24" column="10" bodyfile="DSP/FX/PitchShift.cpp" bodystart="3" bodyend="22"/>
+        <references refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" compoundref="_encoder_driver_8h" startline="131" endline="134">EncoderDriver::addBypassCallback</references>
+        <references refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" compoundref="_encoder_driver_8h" startline="122" endline="125">EncoderDriver::addParameter</references>
+        <references refid="namespace_parameter_i_ds_1_1_pitch_shifter_1adbc85a3cbcf6222f5fbd2cd59e7da330" compoundref="_parameter_i_ds_8h" startline="18">ParameterIDs::PitchShifter::amount</references>
+        <references refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" compoundref="_constants_8h" startline="3">BLOCKLENGTH</references>
+        <references refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" compoundref="_stepped_parameter_8h" startline="30" endline="39">SteppedParameter::init</references>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" compoundref="_stepped_parameter_8h" startline="104">SteppedParameterWrapper::param</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="namespace_parameter_i_ds_1_1_pitch_shifter_1aeeb85c1162bd9e541e8ce83b78d8bbf6" compoundref="_parameter_i_ds_8h" startline="19">ParameterIDs::PitchShifter::semitones</references>
+        <references refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" compoundref="_pitch_shift_8h" startline="39" endline="39">setAmount</references>
+        <references refid="class_pitch_shift_1ad942f1dcd95926fb670941272c1b4894" compoundref="_pitch_shift_8h" startline="34" endline="34">setBypass</references>
+        <references refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" compoundref="_pitch_shift_8cpp" startline="24" endline="32">setDefaultValues</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShift::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <qualifiedname>PitchShift::setDefaultValues</qualifiedname>
+        <briefdescription>
+<para>Sets tthe default parameter values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="29" column="10" bodyfile="DSP/FX/PitchShift.cpp" bodystart="24" bodyend="32"/>
+        <references refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" compoundref="_pitch_shift_8h" startline="39" endline="39">setAmount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_1ad942f1dcd95926fb670941272c1b4894" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShift::setBypass</definition>
+        <argsstring>()</argsstring>
+        <name>setBypass</name>
+        <qualifiedname>PitchShift::setBypass</qualifiedname>
+        <briefdescription>
+<para>Sets the bypass state of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="34" column="10" bodyfile="DSP/FX/PitchShift.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShift::setAmount</definition>
+        <argsstring>(float a)</argsstring>
+        <name>setAmount</name>
+        <qualifiedname>PitchShift::setAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Sets the amount of the effect in the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="39" column="10" bodyfile="DSP/FX/PitchShift.h" bodystart="39" bodyend="39"/>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PitchShift::processBlock</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processBlock</name>
+        <qualifiedname>PitchShift::processBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Pitch shifts a block of samples and mixes it with the input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/PitchShift.h" line="46" column="10" bodyfile="DSP/FX/PitchShift.cpp" bodystart="34" bodyend="47"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" compoundref="_stepped_parameter_8h" startline="105">SteppedParameterWrapper::value</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/PitchShift.h" line="14" column="1" bodyfile="DSP/FX/PitchShift.h" bodystart="15" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_pitch_shift_1a43242b2d5621eeeaed391bd715106824" prot="private" virt="non-virtual"><scope>PitchShift</scope><name>amount</name></member>
+      <member refid="class_pitch_shift_1a7f4479ba17295861c1dd5ceafac0a0d7" prot="private" virt="non-virtual"><scope>PitchShift</scope><name>buffer</name></member>
+      <member refid="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" prot="public" virt="non-virtual"><scope>PitchShift</scope><name>init</name></member>
+      <member refid="class_pitch_shift_1af64c84ecbcfad19b9df7136a8187058d" prot="private" virt="non-virtual"><scope>PitchShift</scope><name>isBypass</name></member>
+      <member refid="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" prot="public" virt="non-virtual"><scope>PitchShift</scope><name>processBlock</name></member>
+      <member refid="class_pitch_shift_1ac3c13581ade9232fb69efddefe27dfc9" prot="private" virt="non-virtual"><scope>PitchShift</scope><name>semitones</name></member>
+      <member refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" prot="public" virt="non-virtual"><scope>PitchShift</scope><name>setAmount</name></member>
+      <member refid="class_pitch_shift_1ad942f1dcd95926fb670941272c1b4894" prot="public" virt="non-virtual"><scope>PitchShift</scope><name>setBypass</name></member>
+      <member refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" prot="public" virt="non-virtual"><scope>PitchShift</scope><name>setDefaultValues</name></member>
+      <member refid="class_pitch_shift_1ab4282c80b5e97f60548a180ba6e64de0" prot="private" virt="non-virtual"><scope>PitchShift</scope><name>shifter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

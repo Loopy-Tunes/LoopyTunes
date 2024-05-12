@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_binary_parameter_wrapper" kind="struct" language="C++" prot="public">
+    <compoundname>BinaryParameterWrapper</compoundname>
+    <includes refid="_binary_parameter_8h" local="no">BinaryParameter.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_binary_parameter_wrapper_1a1dca287a7010dd78c58f4ce1bc16c324" prot="public" static="no" mutable="no">
+        <type><ref refid="class_binary_parameter" kindref="compound">BinaryParameter</ref></type>
+        <definition>BinaryParameter BinaryParameterWrapper::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>BinaryParameterWrapper::param</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="54" column="21" bodyfile="Parameters/BinaryParameter.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_binary_parameter_wrapper_1a76caa23d9b8ea7925851a81448c73ea0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BinaryParameterWrapper::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>BinaryParameterWrapper::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="55" column="10" bodyfile="Parameters/BinaryParameter.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>BinaryParameter</label>
+        <link refid="class_binary_parameter"/>
+      </node>
+      <node id="1">
+        <label>BinaryParameterWrapper</label>
+        <link refid="struct_binary_parameter_wrapper"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Parameters/BinaryParameter.h" line="52" column="1" bodyfile="Parameters/BinaryParameter.h" bodystart="53" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_binary_parameter_wrapper_1a1dca287a7010dd78c58f4ce1bc16c324" prot="public" virt="non-virtual"><scope>BinaryParameterWrapper</scope><name>param</name></member>
+      <member refid="struct_binary_parameter_wrapper_1a76caa23d9b8ea7925851a81448c73ea0" prot="public" virt="non-virtual"><scope>BinaryParameterWrapper</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,49 @@
+\doxysection{Binary\+Parameter.\+h}
+\hypertarget{_binary_parameter_8h_source}{}\label{_binary_parameter_8h_source}\index{Parameters/BinaryParameter.h@{Parameters/BinaryParameter.h}}
+\mbox{\hyperlink{_binary_parameter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BINARYPARAMETER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BINARYPARAMETER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}daisy\_seed.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/*****************************************************************************/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }daisy;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_binary_parameter}{BinaryParameter}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ /*****************************************************************/}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_binary_parameter_a6765feacacb20ba94a391a059040ae1d}{init}}(dsy\_gpio\_pin\ pin,\ \textcolor{keywordtype}{float}\ updateRate,\ std::function<\textcolor{keywordtype}{void}()>\ cb)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ btn.Init(pin,\ updateRate);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ callback\ =\ cb;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ /**********************************************************/}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_binary_parameter_a062dee999020e270c30d8084e03b443d}{tick}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ btn.Debounce();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(btn.FallingEdge())}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ callback();}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ /**********************************************************/}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_binary_parameter_ab20ac67f6e4bf146f9674f676c3f25f4}{isPressed}}()\ \{\ \textcolor{keywordflow}{return}\ btn.Pressed();\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ Switch\ btn;}
+\DoxyCodeLine{00049\ \ \ \ \ std::function<void()>\ callback;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_binary_parameter_wrapper}{BinaryParameterWrapper}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_binary_parameter}{BinaryParameter}}\ \mbox{\hyperlink{struct_binary_parameter_wrapper_a1dca287a7010dd78c58f4ce1bc16c324}{param}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_binary_parameter_wrapper_a76caa23d9b8ea7925851a81448c73ea0}{value}};}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

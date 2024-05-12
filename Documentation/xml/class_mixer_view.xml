@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_mixer_view" kind="class" language="C++" prot="public">
+    <compoundname>MixerView</compoundname>
+    <includes refid="_mixer_view_8h" local="no">MixerView.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mixer_view_1ae2453ceed37650c596d0e95916dd33e0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+        <definition>KeypadDriver* MixerView::keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <qualifiedname>MixerView::keypad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="57" column="18" bodyfile="GUI/MixerView.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a4736667cfd386cbdd9f555b843017c3b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_audio_slider" kindref="compound">AudioSlider</ref></type>
+        <definition>AudioSlider MixerView::amp1</definition>
+        <argsstring></argsstring>
+        <name>amp1</name>
+        <qualifiedname>MixerView::amp1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="59" column="17" bodyfile="GUI/MixerView.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1aa228ad14a464a8cc151beec261f52afa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_audio_slider" kindref="compound">AudioSlider</ref></type>
+        <definition>AudioSlider MixerView::amp2</definition>
+        <argsstring></argsstring>
+        <name>amp2</name>
+        <qualifiedname>MixerView::amp2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="60" column="17" bodyfile="GUI/MixerView.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1af52ed9624c84cdb847cc070c1b00c980" prot="private" static="no" mutable="no">
+        <type><ref refid="class_audio_slider" kindref="compound">AudioSlider</ref></type>
+        <definition>AudioSlider MixerView::amp3</definition>
+        <argsstring></argsstring>
+        <name>amp3</name>
+        <qualifiedname>MixerView::amp3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="61" column="17" bodyfile="GUI/MixerView.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a971ee38c97fc10a1938cbac84ba8268e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_audio_slider" kindref="compound">AudioSlider</ref></type>
+        <definition>AudioSlider MixerView::amp4</definition>
+        <argsstring></argsstring>
+        <name>amp4</name>
+        <qualifiedname>MixerView::amp4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="62" column="17" bodyfile="GUI/MixerView.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a3421c2b46d73b5c08774d258915b400e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MixerView::selectedChannel</definition>
+        <argsstring></argsstring>
+        <name>selectedChannel</name>
+        <qualifiedname>MixerView::selectedChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="64" column="9" bodyfile="GUI/MixerView.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1add406c8f7d0d1d0e6c84120c26eb0905" prot="private" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="class_audio_slider" kindref="compound">AudioSlider</ref>, 4 &gt;</type>
+        <definition>std::array&lt;AudioSlider, 4&gt; MixerView::ampSliders</definition>
+        <argsstring></argsstring>
+        <name>ampSliders</name>
+        <qualifiedname>MixerView::ampSliders</qualifiedname>
+        <initializer>= {amp1, amp2, amp3, amp4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="65" column="16" bodyfile="GUI/MixerView.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a1a8bd27e1895f96842da4ef708831dbe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_track_view" kindref="compound">TrackView</ref></type>
+        <definition>TrackView MixerView::track1</definition>
+        <argsstring></argsstring>
+        <name>track1</name>
+        <qualifiedname>MixerView::track1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="67" column="15" bodyfile="GUI/MixerView.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1ac85498f0326c6bf9d94714656e386e5c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_track_view" kindref="compound">TrackView</ref></type>
+        <definition>TrackView MixerView::track2</definition>
+        <argsstring></argsstring>
+        <name>track2</name>
+        <qualifiedname>MixerView::track2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="68" column="15" bodyfile="GUI/MixerView.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a38f9d585cc0164f1ff0d3d46c5edb1eb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_track_view" kindref="compound">TrackView</ref></type>
+        <definition>TrackView MixerView::track3</definition>
+        <argsstring></argsstring>
+        <name>track3</name>
+        <qualifiedname>MixerView::track3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="69" column="15" bodyfile="GUI/MixerView.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1ac27eac4cd6a10a1ec8a3006f813db767" prot="private" static="no" mutable="no">
+        <type><ref refid="class_track_view" kindref="compound">TrackView</ref></type>
+        <definition>TrackView MixerView::track4</definition>
+        <argsstring></argsstring>
+        <name>track4</name>
+        <qualifiedname>MixerView::track4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="70" column="15" bodyfile="GUI/MixerView.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1a0baf73fc1a2847a151ad1f1fd085e9c4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MixerView::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>MixerView::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="72" column="10" bodyfile="GUI/MixerView.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_view_1adebf2ca97f4a515e24a83997032fad87" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MixerView::isPainted</definition>
+        <argsstring></argsstring>
+        <name>isPainted</name>
+        <qualifiedname>MixerView::isPainted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="73" column="10" bodyfile="GUI/MixerView.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mixer_view_1af147890d75f589e81b9264405a781d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::init</definition>
+        <argsstring>(DaisySeed *seed, EncoderDriver *encoder, KeypadDriver *kpd)</argsstring>
+        <name>init</name>
+        <qualifiedname>MixerView::init</qualifiedname>
+        <param>
+          <type>DaisySeed *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>encoder</declname>
+        </param>
+        <param>
+          <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+          <declname>kpd</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the mixer view and all other GUI classes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the hardware instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kpd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the keypad driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="22" column="10" bodyfile="GUI/MixerView.cpp" bodystart="4" bodyend="22"/>
+        <references refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" compoundref="_loopy_tunes_8cpp" startline="28">encoder</references>
+        <references refid="class_audio_slider_1ac041901c3967237cd070a8bf017fc2cb" compoundref="_audio_slider_8cpp" startline="4" endline="12">AudioSlider::init</references>
+        <references refid="class_track_view_1a103d86a77dac67a863199a54f5c09c94" compoundref="_track_view_8cpp" startline="4" endline="19">TrackView::init</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1abf1e540eef4ebca1bd5c5e95102f408d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>MixerView::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="27" column="10" bodyfile="GUI/MixerView.cpp" bodystart="24" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1acb35a7d78b6e17b5a6d9cf24a87516dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>MixerView::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="32" column="10" bodyfile="GUI/MixerView.cpp" bodystart="40" bodyend="74"/>
+        <references refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" compoundref="daisy___i_l_i9341_8hpp" startline="653" endline="666">UiDriver::DrawRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1abc2e3fcc6b00885c7ff1cb59e7ba7c89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>MixerView::clear</qualifiedname>
+        <briefdescription>
+<para>Handles the clearing of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="37" column="10" bodyfile="GUI/MixerView.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1a8b517b4206bb25ec294951aab335ea89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::setIsOpen</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsOpen</name>
+        <qualifiedname>MixerView::setIsOpen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view is currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="42" column="10" bodyfile="GUI/MixerView.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1a002acf6e5c349fa3d38747fd310a5ed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::setIsPainted</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsPainted</name>
+        <qualifiedname>MixerView::setIsPainted</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view has been painted or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="47" column="10" bodyfile="GUI/MixerView.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_view_1a311d8514bec16cdc797790c62a46380c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MixerView::setSelectedChannel</definition>
+        <argsstring>(int channel)</argsstring>
+        <name>setSelectedChannel</name>
+        <qualifiedname>MixerView::setSelectedChannel</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>Sets which channel is currently selected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to be selected </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/MixerView.h" line="53" column="10" bodyfile="GUI/MixerView.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_mixer_view" kindref="compound">MixerView</ref> Function: Top level GUI class </para>
+    </detaileddescription>
+    <location file="GUI/MixerView.h" line="12" column="1" bodyfile="GUI/MixerView.h" bodystart="13" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_mixer_view_1a4736667cfd386cbdd9f555b843017c3b" prot="private" virt="non-virtual"><scope>MixerView</scope><name>amp1</name></member>
+      <member refid="class_mixer_view_1aa228ad14a464a8cc151beec261f52afa" prot="private" virt="non-virtual"><scope>MixerView</scope><name>amp2</name></member>
+      <member refid="class_mixer_view_1af52ed9624c84cdb847cc070c1b00c980" prot="private" virt="non-virtual"><scope>MixerView</scope><name>amp3</name></member>
+      <member refid="class_mixer_view_1a971ee38c97fc10a1938cbac84ba8268e" prot="private" virt="non-virtual"><scope>MixerView</scope><name>amp4</name></member>
+      <member refid="class_mixer_view_1add406c8f7d0d1d0e6c84120c26eb0905" prot="private" virt="non-virtual"><scope>MixerView</scope><name>ampSliders</name></member>
+      <member refid="class_mixer_view_1abc2e3fcc6b00885c7ff1cb59e7ba7c89" prot="public" virt="non-virtual"><scope>MixerView</scope><name>clear</name></member>
+      <member refid="class_mixer_view_1af147890d75f589e81b9264405a781d87" prot="public" virt="non-virtual"><scope>MixerView</scope><name>init</name></member>
+      <member refid="class_mixer_view_1a0baf73fc1a2847a151ad1f1fd085e9c4" prot="private" virt="non-virtual"><scope>MixerView</scope><name>isOpen</name></member>
+      <member refid="class_mixer_view_1adebf2ca97f4a515e24a83997032fad87" prot="private" virt="non-virtual"><scope>MixerView</scope><name>isPainted</name></member>
+      <member refid="class_mixer_view_1ae2453ceed37650c596d0e95916dd33e0" prot="private" virt="non-virtual"><scope>MixerView</scope><name>keypad</name></member>
+      <member refid="class_mixer_view_1acb35a7d78b6e17b5a6d9cf24a87516dd" prot="public" virt="non-virtual"><scope>MixerView</scope><name>repaint</name></member>
+      <member refid="class_mixer_view_1a3421c2b46d73b5c08774d258915b400e" prot="private" virt="non-virtual"><scope>MixerView</scope><name>selectedChannel</name></member>
+      <member refid="class_mixer_view_1a8b517b4206bb25ec294951aab335ea89" prot="public" virt="non-virtual"><scope>MixerView</scope><name>setIsOpen</name></member>
+      <member refid="class_mixer_view_1a002acf6e5c349fa3d38747fd310a5ed1" prot="public" virt="non-virtual"><scope>MixerView</scope><name>setIsPainted</name></member>
+      <member refid="class_mixer_view_1a311d8514bec16cdc797790c62a46380c" prot="public" virt="non-virtual"><scope>MixerView</scope><name>setSelectedChannel</name></member>
+      <member refid="class_mixer_view_1abf1e540eef4ebca1bd5c5e95102f408d" prot="public" virt="non-virtual"><scope>MixerView</scope><name>tick</name></member>
+      <member refid="class_mixer_view_1a1a8bd27e1895f96842da4ef708831dbe" prot="private" virt="non-virtual"><scope>MixerView</scope><name>track1</name></member>
+      <member refid="class_mixer_view_1ac85498f0326c6bf9d94714656e386e5c" prot="private" virt="non-virtual"><scope>MixerView</scope><name>track2</name></member>
+      <member refid="class_mixer_view_1a38f9d585cc0164f1ff0d3d46c5edb1eb" prot="private" virt="non-virtual"><scope>MixerView</scope><name>track3</name></member>
+      <member refid="class_mixer_view_1ac27eac4cd6a10a1ec8a3006f813db767" prot="private" virt="non-virtual"><scope>MixerView</scope><name>track4</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

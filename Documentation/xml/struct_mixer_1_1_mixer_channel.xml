@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_mixer_1_1_mixer_channel" kind="struct" language="C++" prot="private">
+    <compoundname>Mixer::MixerChannel</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_mixer_1_1_mixer_channel_1ae322ee26fc2ee8dd218447a790af2eaa" prot="public" static="no" mutable="no">
+        <type><ref refid="class_track" kindref="compound">Track</ref></type>
+        <definition>Track Mixer::MixerChannel::track</definition>
+        <argsstring></argsstring>
+        <name>track</name>
+        <qualifiedname>Mixer::MixerChannel::track</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="120" column="15" bodyfile="DSP/Mixer.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mixer_1_1_mixer_channel_1a09df10f8f55f5498b132d31df41ba8f9" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* Mixer::MixerChannel::buffer[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>Mixer::MixerChannel::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="121" column="15" bodyfile="DSP/Mixer.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mixer_1_1_mixer_channel_1a7e6876f5f61f789d0dc706d75c2fb5bf" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper</ref>&lt; float &gt;</type>
+        <definition>AudioParameterWrapper&lt;float&gt; Mixer::MixerChannel::pan</definition>
+        <argsstring></argsstring>
+        <name>pan</name>
+        <qualifiedname>Mixer::MixerChannel::pan</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="122" column="31" bodyfile="DSP/Mixer.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mixer_1_1_mixer_channel_1a0137d82e6827a6a1a4fb405864eabf26" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_audio_parameter_wrapper" kindref="compound">AudioParameterWrapper</ref>&lt; float &gt;</type>
+        <definition>AudioParameterWrapper&lt;float&gt; Mixer::MixerChannel::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <qualifiedname>Mixer::MixerChannel::gain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="123" column="31" bodyfile="DSP/Mixer.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_mixer_1_1_mixer_channel_1af233b7894e4e6075d1fe9314fe6eacef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Mixer::MixerChannel::getCurVal</definition>
+        <argsstring>(int chan, size_t index)</argsstring>
+        <name>getCurVal</name>
+        <qualifiedname>Mixer::MixerChannel::getCurVal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>chan</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/Mixer.h" line="125" column="22" bodyfile="DSP/Mixer.h" bodystart="125" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>AudioParameter&lt; float &gt;</label>
+        <link refid="class_audio_parameter"/>
+      </node>
+      <node id="3">
+        <label>AudioParameterWrapper&lt; float &gt;</label>
+        <link refid="struct_audio_parameter_wrapper"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>param</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Mixer::MixerChannel</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>track</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>gain</edgelabel>
+          <edgelabel>pan</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Track</label>
+        <link refid="class_track"/>
+      </node>
+    </collaborationgraph>
+    <location file="DSP/Mixer.h" line="118" column="5" bodyfile="DSP/Mixer.h" bodystart="119" bodyend="132"/>
+    <listofallmembers>
+      <member refid="struct_mixer_1_1_mixer_channel_1a09df10f8f55f5498b132d31df41ba8f9" prot="public" virt="non-virtual"><scope>Mixer::MixerChannel</scope><name>buffer</name></member>
+      <member refid="struct_mixer_1_1_mixer_channel_1a0137d82e6827a6a1a4fb405864eabf26" prot="public" virt="non-virtual"><scope>Mixer::MixerChannel</scope><name>gain</name></member>
+      <member refid="struct_mixer_1_1_mixer_channel_1af233b7894e4e6075d1fe9314fe6eacef" prot="public" virt="non-virtual"><scope>Mixer::MixerChannel</scope><name>getCurVal</name></member>
+      <member refid="struct_mixer_1_1_mixer_channel_1a7e6876f5f61f789d0dc706d75c2fb5bf" prot="public" virt="non-virtual"><scope>Mixer::MixerChannel</scope><name>pan</name></member>
+      <member refid="struct_mixer_1_1_mixer_channel_1ae322ee26fc2ee8dd218447a790af2eaa" prot="public" virt="non-virtual"><scope>Mixer::MixerChannel</scope><name>track</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

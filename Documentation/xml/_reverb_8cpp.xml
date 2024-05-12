@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_reverb_8cpp" kind="file" language="C++">
+    <compoundname>Reverb.cpp</compoundname>
+    <includes refid="_reverb_8h" local="yes">Reverb.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="13">
+        <label>revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+      <node id="5">
+        <label>../../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="6">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="8">
+        <label>daisysp.h</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_reverb_8h" kindref="compound">Reverb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" kindref="member">Reverb::init</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>amount.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.05,<sp/><ref refid="namespace_parameter_i_ds_1_1_reverb_1a7e1a38542d0f4e7fec300d774dcb3c0a" kindref="member">ParameterIDs::Reverb::amount</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a)<sp/>{<sp/><ref refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" kindref="member">setAmount</ref>(a);<sp/>});</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>mode.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.25,<sp/><ref refid="namespace_parameter_i_ds_1_1_reverb_1a3b44aeacb5d293b8a44bd71936fbe044" kindref="member">ParameterIDs::Reverb::mode</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m)<sp/>{<sp/>model.<ref refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" kindref="member">setmode</ref>(m);<sp/>});</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>size.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.05,<sp/><ref refid="namespace_parameter_i_ds_1_1_reverb_1a84686a6caa71fdb48d902119b46d7975" kindref="member">ParameterIDs::Reverb::size</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>s)<sp/>{<sp/>model.<ref refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" kindref="member">setroomsize</ref>(s);<sp/>});</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>damp.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.05,<sp/><ref refid="namespace_parameter_i_ds_1_1_reverb_1a4b561a0ea445689ecbdbee7d658b0a16" kindref="member">ParameterIDs::Reverb::damp</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>d)<sp/>{<sp/>model.<ref refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" kindref="member">setdamp</ref>(d);<sp/>});</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>width.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>0.05,<sp/><ref refid="namespace_parameter_i_ds_1_1_reverb_1a19f6063d487101b7a67e24b03ac5ffb7" kindref="member">ParameterIDs::Reverb::width</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w)<sp/>{<sp/>model.<ref refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" kindref="member">setwidth</ref>(w);<sp/>});</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" kindref="member">addBypassCallback</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>{<sp/><ref refid="class_reverb_1a23b1f08d104a5c23db173d41683ebd8b" kindref="member">setBypass</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;amount.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;mode.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;size.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;damp.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;width.<ref refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kindref="member">param</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" kindref="member">setdry</ref>(1);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" kindref="member">setDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" kindref="member">Reverb::setDefaultValues</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>isBypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" kindref="member">setAmount</ref>(reverbDefs.amount);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" kindref="member">setmode</ref>(reverbDefs.mode);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" kindref="member">setroomsize</ref>(reverbDefs.size);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" kindref="member">setdamp</ref>(reverbDefs.damp);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" kindref="member">setwidth</ref>(reverbDefs.width);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" kindref="member">Reverb::setAmount</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mix)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wet<sp/>=<sp/>mix;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dry<sp/>=<sp/>1.f<sp/>-<sp/>mix;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" kindref="member">setwet</ref>(wet);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" kindref="member">setdry</ref>(dry);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" kindref="member">Reverb::processBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>input[2],<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isBypass)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>model.<ref refid="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" kindref="member">processreplace</ref>(input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>],<sp/>output[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>output[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>],<sp/>size,<sp/>0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>size<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>output[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>output[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Reverb/Reverb.cpp"/>
+  </compounddef>
+</doxygen>

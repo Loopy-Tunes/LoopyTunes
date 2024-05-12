@@ -1,0 +1,100 @@
+\doxysection{Waveshaper.\+h}
+\hypertarget{_waveshaper_8h_source}{}\label{_waveshaper_8h_source}\index{DSP/FX/Waveshaper.h@{DSP/FX/Waveshaper.h}}
+\mbox{\hyperlink{_waveshaper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WAVESHAPER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WAVESHAPER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_values_8h}{../../Parameters/DefaultValues.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_encoder_driver_8h}{../../Drivers/EncoderDriver.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_constants_8h}{../../Utils/Constants.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/*******************************************************************/}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }daisysp;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_waveshaper}{Waveshaper}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ /*******************************************************************************/}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \textcolor{keywordtype}{int}\ trackID);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a47e4bc80a0c83e31364c8366b080c134}{setDefaultValues}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a2313630b34e917c5b573ada3957c35b9}{setBypass}}()\ \{\ isBypass\ =\ !isBypass;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a0f5e75a5913f3d65e34bae649ee83f45}{setAmount}}(\textcolor{keywordtype}{float}\ a)\ \{\ amount.\mbox{\hyperlink{struct_stepped_parameter_wrapper_a8e0d05dc4b24df4a336a88f2dd057d4a}{value}}\ =\ a;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a3db430becb2df8a42cbcb0486414c039}{setFuncControl}}(\textcolor{keywordtype}{float}\ fc);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_abf1a2cbeb9cf285159fc7c2522dd2d8a}{setMode}}(\textcolor{keywordtype}{float}\ m)\ \{\ mode.\mbox{\hyperlink{struct_stepped_parameter_wrapper_a8e0d05dc4b24df4a336a88f2dd057d4a}{value}}\ =\ m;\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ /*************************************************************************************/}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a67420571eeacdabc3629118ffb1f7590}{scaleControlParam}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a44318a7b6e2ab2ffd5ef074bc51c4958}{setInputAG}}(\textcolor{keywordtype}{float}*\ buffer[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a79a46c6bf0e1b895692d8f0aa80ed94a}{setOutputAG}}(\textcolor{keywordtype}{float}*\ buffer[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a00ea2d1f63e96d9b7490d3cd406c174d}{calculateAutoGain}}(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a9c93d163a6d94bd168518d05e9e957ca}{applyAutoGain}}(\textcolor{keywordtype}{float}*\ buffer[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_aee769a45659eeef817fd492ab4fe4cf4}{processBlock}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a5355a959d813d64f04fbe20d632ca4c9}{processClipper}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_ad97bfdbd0967ef98837efbbdadc8f3ed}{processFolder}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a86dd3c75d954e3b521d28b514a00b7cd}{processLFO}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_waveshaper_a62d9eb0ea8b9ef59f9c68d04bc07df7d}{processBitReducer}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{enum}\ Funcs}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ CLIPPER\ =\ 0,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ FOLDER,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ LFO,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ BITREDUCER}
+\DoxyCodeLine{00128\ \ \ \ \ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ Wavefolder\ folder;}
+\DoxyCodeLine{00131\ \ \ \ \ Oscillator\ lfo;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{float}\ lfoMin,\ lfoMax;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{float}\ lfoFreq;}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ bitsMin,\ bitsMax;}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{float}\ bitRate,\ bitCount;}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ bits;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ buffer[2][\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}];}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{float}\ inputAG[2][\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}];}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{float}\ outputAG[2][\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}];}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{float}\ diffAG[2][\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}];}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBypass;}
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ amount;}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ funcControl;}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ mode;}
+\DoxyCodeLine{00148\ \};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

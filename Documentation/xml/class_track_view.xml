@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_track_view" kind="class" language="C++" prot="public">
+    <compoundname>TrackView</compoundname>
+    <includes refid="_track_view_8h" local="no">TrackView.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_track_view_1a13a49e0857caad9b995383959037f579" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TrackView::trackID</definition>
+        <argsstring></argsstring>
+        <name>trackID</name>
+        <qualifiedname>TrackView::trackID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="50" column="9" bodyfile="GUI/TrackView.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1acd7471ae792d75f4baaba26ae5e3cb47" prot="private" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+        <definition>KeypadDriver* TrackView::keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <qualifiedname>TrackView::keypad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="53" column="18" bodyfile="GUI/TrackView.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1a89954b3625fc5205d22dc5842da382ee" prot="private" static="no" mutable="no">
+        <type><ref refid="class_pitch_shift_view" kindref="compound">PitchShiftView</ref></type>
+        <definition>PitchShiftView TrackView::pitchShiftView</definition>
+        <argsstring></argsstring>
+        <name>pitchShiftView</name>
+        <qualifiedname>TrackView::pitchShiftView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="55" column="20" bodyfile="GUI/TrackView.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1a886ff11480cd6259cb350e2162cb5d98" prot="private" static="no" mutable="no">
+        <type><ref refid="class_waveshaper_view" kindref="compound">WaveshaperView</ref></type>
+        <definition>WaveshaperView TrackView::waveshaperView</definition>
+        <argsstring></argsstring>
+        <name>waveshaperView</name>
+        <qualifiedname>TrackView::waveshaperView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="56" column="20" bodyfile="GUI/TrackView.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1a1ab921519eee73837f5cb3ae085512b8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_filter_view" kindref="compound">FilterView</ref></type>
+        <definition>FilterView TrackView::filterView</definition>
+        <argsstring></argsstring>
+        <name>filterView</name>
+        <qualifiedname>TrackView::filterView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="57" column="16" bodyfile="GUI/TrackView.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1aac3be86298d004198eca366cbf498678" prot="private" static="no" mutable="no">
+        <type><ref refid="class_reverb_view" kindref="compound">ReverbView</ref></type>
+        <definition>ReverbView TrackView::reverbView</definition>
+        <argsstring></argsstring>
+        <name>reverbView</name>
+        <qualifiedname>TrackView::reverbView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="58" column="16" bodyfile="GUI/TrackView.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1a91ad3a0831d199d57f6975a69947e960" prot="private" static="no" mutable="no">
+        <type><ref refid="class_delay_view" kindref="compound">DelayView</ref></type>
+        <definition>DelayView TrackView::delayView</definition>
+        <argsstring></argsstring>
+        <name>delayView</name>
+        <qualifiedname>TrackView::delayView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="59" column="15" bodyfile="GUI/TrackView.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1a7208a725710b418e0436ab5ad1b7e1b5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TrackView::selectedEffectIndex</definition>
+        <argsstring></argsstring>
+        <name>selectedEffectIndex</name>
+        <qualifiedname>TrackView::selectedEffectIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="61" column="9" bodyfile="GUI/TrackView.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1aa5131ad8745103c32c183927a66b6e25" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TrackView::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>TrackView::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="63" column="10" bodyfile="GUI/TrackView.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_track_view_1af0336b6c90b652b26a3134b8e09e731a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TrackView::isPainted</definition>
+        <argsstring></argsstring>
+        <name>isPainted</name>
+        <qualifiedname>TrackView::isPainted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="64" column="10" bodyfile="GUI/TrackView.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_track_view_1a103d86a77dac67a863199a54f5c09c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrackView::init</definition>
+        <argsstring>(int ID, EncoderDriver *driver, KeypadDriver *kpd)</argsstring>
+        <name>init</name>
+        <qualifiedname>TrackView::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+          <declname>kpd</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the hardware instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kpd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the keypad driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="26" column="10" bodyfile="GUI/TrackView.cpp" bodystart="4" bodyend="19"/>
+        <references refid="class_delay_view_1a00c207b265061ecb95bcea58fee64863" compoundref="_delay_view_8cpp" startline="4" endline="17">DelayView::init</references>
+        <references refid="class_filter_view_1a21352a06744edb5ca53f04dda2fdc03c" compoundref="_filter_view_8cpp" startline="4" endline="17">FilterView::init</references>
+        <references refid="class_pitch_shift_view_1aaa2724fbd96ff3fafa73f74813a44dcf" compoundref="_pitch_shift_view_8cpp" startline="4" endline="16">PitchShiftView::init</references>
+        <references refid="class_reverb_view_1a4f5e138fe1b629d7427c29e652c44690" compoundref="_reverb_view_8cpp" startline="4" endline="16">ReverbView::init</references>
+        <references refid="class_waveshaper_view_1a7e22573e74046e17f4b3a5d4d8242d7c" compoundref="_waveshaper_view_8cpp" startline="4" endline="17">WaveshaperView::init</references>
+      </memberdef>
+      <memberdef kind="function" id="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrackView::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>TrackView::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="31" column="10" bodyfile="GUI/TrackView.cpp" bodystart="21" bodyend="31"/>
+        <references refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" compoundref="_track_view_8cpp" startline="33" endline="139">repaint</references>
+        <references refid="class_delay_view_1ab8b595dc234ef0601cf04d41c7efd800" compoundref="_delay_view_8cpp" startline="19" endline="28">DelayView::tick</references>
+        <references refid="class_filter_view_1a0efc93be178cc43c3a720ba79279ff93" compoundref="_filter_view_8cpp" startline="19" endline="27">FilterView::tick</references>
+        <references refid="class_pitch_shift_view_1a713e23bfbc8eb132994ea84f523991fe" compoundref="_pitch_shift_view_8cpp" startline="18" endline="25">PitchShiftView::tick</references>
+        <references refid="class_reverb_view_1a47522b1723f193fb31fcc37223a92f8c" compoundref="_reverb_view_8cpp" startline="18" endline="25">ReverbView::tick</references>
+        <references refid="class_waveshaper_view_1a1167027572fa89082ee21d8b714f5afb" compoundref="_waveshaper_view_8cpp" startline="19" endline="27">WaveshaperView::tick</references>
+      </memberdef>
+      <memberdef kind="function" id="class_track_view_1a675ad934846a3a704b2d31df122f06a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrackView::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>TrackView::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="36" column="10" bodyfile="GUI/TrackView.cpp" bodystart="33" bodyend="139"/>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a7896ff2cc707b5873da0b97d38bf852e" compoundref="daisy___i_l_i9341_8hpp" startline="28">COLOR_CYAN</references>
+        <references refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" compoundref="daisy___i_l_i9341_8hpp" startline="653" endline="666">UiDriver::DrawRect</references>
+        <references refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" compoundref="daisy___i_l_i9341_8hpp" startline="678" endline="686">UiDriver::FillRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+      <memberdef kind="function" id="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrackView::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>TrackView::clear</qualifiedname>
+        <briefdescription>
+<para>Handles the clearing of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="41" column="10" bodyfile="GUI/TrackView.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_track_view_1a18ac0bf795cadc0f56759bf2c46b3f4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrackView::setIsOpen</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsOpen</name>
+        <qualifiedname>TrackView::setIsOpen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view is currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/TrackView.h" line="46" column="10" bodyfile="GUI/TrackView.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_track_view" kindref="compound">TrackView</ref> Function: <ref refid="class_track" kindref="compound">Track</ref> level GUI class </para>
+    </detaileddescription>
+    <location file="GUI/TrackView.h" line="16" column="1" bodyfile="GUI/TrackView.h" bodystart="17" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" prot="public" virt="non-virtual"><scope>TrackView</scope><name>clear</name></member>
+      <member refid="class_track_view_1a91ad3a0831d199d57f6975a69947e960" prot="private" virt="non-virtual"><scope>TrackView</scope><name>delayView</name></member>
+      <member refid="class_track_view_1a1ab921519eee73837f5cb3ae085512b8" prot="private" virt="non-virtual"><scope>TrackView</scope><name>filterView</name></member>
+      <member refid="class_track_view_1a103d86a77dac67a863199a54f5c09c94" prot="public" virt="non-virtual"><scope>TrackView</scope><name>init</name></member>
+      <member refid="class_track_view_1aa5131ad8745103c32c183927a66b6e25" prot="private" virt="non-virtual"><scope>TrackView</scope><name>isOpen</name></member>
+      <member refid="class_track_view_1af0336b6c90b652b26a3134b8e09e731a" prot="private" virt="non-virtual"><scope>TrackView</scope><name>isPainted</name></member>
+      <member refid="class_track_view_1acd7471ae792d75f4baaba26ae5e3cb47" prot="private" virt="non-virtual"><scope>TrackView</scope><name>keypad</name></member>
+      <member refid="class_track_view_1a89954b3625fc5205d22dc5842da382ee" prot="private" virt="non-virtual"><scope>TrackView</scope><name>pitchShiftView</name></member>
+      <member refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" prot="public" virt="non-virtual"><scope>TrackView</scope><name>repaint</name></member>
+      <member refid="class_track_view_1aac3be86298d004198eca366cbf498678" prot="private" virt="non-virtual"><scope>TrackView</scope><name>reverbView</name></member>
+      <member refid="class_track_view_1a7208a725710b418e0436ab5ad1b7e1b5" prot="private" virt="non-virtual"><scope>TrackView</scope><name>selectedEffectIndex</name></member>
+      <member refid="class_track_view_1a18ac0bf795cadc0f56759bf2c46b3f4f" prot="public" virt="non-virtual"><scope>TrackView</scope><name>setIsOpen</name></member>
+      <member refid="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" prot="public" virt="non-virtual"><scope>TrackView</scope><name>tick</name></member>
+      <member refid="class_track_view_1a13a49e0857caad9b995383959037f579" prot="private" virt="non-virtual"><scope>TrackView</scope><name>trackID</name></member>
+      <member refid="class_track_view_1a886ff11480cd6259cb350e2162cb5d98" prot="private" virt="non-virtual"><scope>TrackView</scope><name>waveshaperView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

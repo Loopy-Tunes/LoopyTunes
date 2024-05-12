@@ -1,0 +1,796 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_loopy_tunes_8cpp" kind="file" language="C++">
+    <compoundname>LoopyTunes.cpp</compoundname>
+    <includes refid="_mixer_8h" local="yes">DSP/Mixer.h</includes>
+    <includes refid="_mixer_view_8h" local="yes">GUI/MixerView.h</includes>
+    <includes refid="daisy___i_l_i9341_8hpp" local="yes">Drivers/daisy_ILI9341.hpp</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="20">
+        <label>revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+      <node id="15">
+        <label>FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>../../Drivers/KeypadDriver.h</label>
+        <link refid="_keypad_driver_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Drivers/daisy_ILI9341.hpp</label>
+        <link refid="daisy___i_l_i9341_8hpp"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>AudioSlider.h</label>
+        <link refid="_audio_slider_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>BypassButton.h</label>
+        <link refid="_bypass_button_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>FX/DelayView.h</label>
+        <link refid="_delay_view_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>FX/FilterView.h</label>
+        <link refid="_filter_view_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>FX/PitchShiftView.h</label>
+        <link refid="_pitch_shift_view_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>FX/ReverbView.h</label>
+        <link refid="_reverb_view_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>SteppedSlider.h</label>
+        <link refid="_stepped_slider_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>FX/StyleSheet.h</label>
+        <link refid="_style_sheet_8h"/>
+      </node>
+      <node id="41">
+        <label>FX/WaveshaperView.h</label>
+        <link refid="_waveshaper_view_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>GUI/MixerView.h</label>
+        <link refid="_mixer_view_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>TrackView.h</label>
+        <link refid="_track_view_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../Parameters/AudioParameter.h</label>
+        <link refid="_audio_parameter_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="8">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../Utils/Helpers.h</label>
+        <link refid="_helpers_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>algorithm</label>
+      </node>
+      <node id="16">
+        <label>cmath</label>
+      </node>
+      <node id="28">
+        <label>cstdint</label>
+      </node>
+      <node id="46">
+        <label>cstring</label>
+      </node>
+      <node id="9">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="10">
+        <label>daisysp.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="48">
+        <label>hid/disp/graphics_common.h</label>
+      </node>
+      <node id="29">
+        <label>memory</label>
+      </node>
+      <node id="14">
+        <label>stddef.h</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>type_traits</label>
+      </node>
+      <node id="47">
+        <label>util/oled_fonts.h</label>
+      </node>
+      <node id="32">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_buffers">Buffers</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" prot="public" static="no" mutable="no">
+        <type>DaisySeed</type>
+        <definition>DaisySeed hw</definition>
+        <argsstring></argsstring>
+        <name>hw</name>
+        <briefdescription>
+<para>Function description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="18" column="11" bodyfile="LoopyTunes.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="21" column="8" bodyfile="LoopyTunes.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mixer" kindref="compound">Mixer</ref></type>
+        <definition>Mixer mixer</definition>
+        <argsstring></argsstring>
+        <name>mixer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="24" column="7" bodyfile="LoopyTunes.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mixer_view" kindref="compound">MixerView</ref></type>
+        <definition>MixerView mixerView</definition>
+        <argsstring></argsstring>
+        <name>mixerView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="27" column="11" bodyfile="LoopyTunes.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" prot="public" static="no" mutable="no">
+        <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref></type>
+        <definition>EncoderDriver encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="28" column="15" bodyfile="LoopyTunes.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" prot="public" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref></type>
+        <definition>KeypadDriver keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="29" column="14" bodyfile="LoopyTunes.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" prot="public" static="no" mutable="no">
+        <type><ref refid="class_ui_driver" kindref="compound">UiDriver</ref></type>
+        <definition>UiDriver lcd</definition>
+        <argsstring></argsstring>
+        <name>lcd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="30" column="10" bodyfile="LoopyTunes.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void navCallback</definition>
+        <argsstring>()</argsstring>
+        <name>navCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="71" column="6" bodyfile="LoopyTunes.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialises the program and hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="79" column="6" bodyfile="LoopyTunes.cpp" bodystart="79" bodyend="100"/>
+        <references refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" compoundref="_constants_8h" startline="3">BLOCKLENGTH</references>
+        <references refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" compoundref="_loopy_tunes_8cpp" startline="28">encoder</references>
+        <references refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" compoundref="_loopy_tunes_8cpp" startline="18">hw</references>
+        <references refid="class_ui_driver_1a2e847d43b54fef8756e6745a3e3f879e" compoundref="daisy___i_l_i9341_8hpp" startline="343" endline="349">UiDriver::Init</references>
+        <references refid="class_mixer_view_1af147890d75f589e81b9264405a781d87" compoundref="_mixer_view_8cpp" startline="4" endline="22">MixerView::init</references>
+        <references refid="class_mixer_1ad9ef6107ff80ed78ceb46e425bb25b05" compoundref="_mixer_8cpp" startline="3" endline="19">Mixer::init</references>
+        <references refid="class_encoder_driver_1a6b703d93f5254ae6539dfc3759c3d87d" compoundref="_encoder_driver_8h" startline="25" endline="52">EncoderDriver::init</references>
+        <references refid="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" compoundref="_mixer_8cpp" startline="48" endline="55">Mixer::initFX</references>
+        <references refid="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" compoundref="_mixer_8cpp" startline="21" endline="46">Mixer::initMixChannels</references>
+        <references refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" compoundref="_loopy_tunes_8cpp" startline="29">keypad</references>
+        <references refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_loopy_tunes_8cpp" startline="30">lcd</references>
+        <references refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" compoundref="_loopy_tunes_8cpp" startline="24">mixer</references>
+        <references refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" compoundref="_loopy_tunes_8cpp" startline="27">mixerView</references>
+        <references refid="namespace_buffers_1a6f513a019053949667da22fd66ad4d03" compoundref="_loopy_tunes_8cpp" startline="53" endline="53">Buffers::mixPtr</references>
+        <references refid="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" compoundref="_loopy_tunes_8cpp" startline="71" endline="74">navCallback</references>
+        <references refid="namespace_buffers_1aa8aa90eaaca6fa7f5b4834bef80b971c" compoundref="_loopy_tunes_8cpp" startline="65" endline="65">Buffers::t1delayPtr</references>
+        <references refid="namespace_buffers_1a364c8fa79ed6e9f5c76576e81b47e080" compoundref="_loopy_tunes_8cpp" startline="54" endline="54">Buffers::t1mPtr</references>
+        <references refid="namespace_buffers_1a394119ae840043641b6f7c4229384292" compoundref="_loopy_tunes_8cpp" startline="66" endline="66">Buffers::t2delayPtr</references>
+        <references refid="namespace_buffers_1ae512b86615f57d29be83b76d7f183e60" compoundref="_loopy_tunes_8cpp" startline="55" endline="55">Buffers::t2mPtr</references>
+        <references refid="namespace_buffers_1aedfabbb8408c77f51548b1a11ffc23f6" compoundref="_loopy_tunes_8cpp" startline="67" endline="67">Buffers::t3delayPtr</references>
+        <references refid="namespace_buffers_1a7569f49c34ca89bde70fd10ada24e48f" compoundref="_loopy_tunes_8cpp" startline="56" endline="56">Buffers::t3mPtr</references>
+        <references refid="namespace_buffers_1a3b0edbde4b29986f7102f5d3b54f4962" compoundref="_loopy_tunes_8cpp" startline="68" endline="68">Buffers::t4delayPtr</references>
+        <references refid="namespace_buffers_1a9e22e58ed5d95f65300f981d370a6e8b" compoundref="_loopy_tunes_8cpp" startline="57" endline="57">Buffers::t4mPtr</references>
+        <references refid="namespace_buffers_1a400ffc4f1822843647c0bff5e4ed1a28" compoundref="_loopy_tunes_8cpp" startline="41" endline="41">Buffers::track1Ptr</references>
+        <references refid="namespace_buffers_1ac69eab0d4644edc3518f13ebc52ca0c5" compoundref="_loopy_tunes_8cpp" startline="42" endline="42">Buffers::track2Ptr</references>
+        <references refid="namespace_buffers_1ae6a11631f5b3a7182dcce7e33e228849" compoundref="_loopy_tunes_8cpp" startline="43" endline="43">Buffers::track3Ptr</references>
+        <references refid="namespace_buffers_1a4119551fdbe4eb44a3cae91e08c5eccc" compoundref="_loopy_tunes_8cpp" startline="44" endline="44">Buffers::track4Ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tick</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>tick</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Handles the processing of the inputs and updating of the audio processing and GUI branches. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="106" column="13" bodyfile="LoopyTunes.cpp" bodystart="106" bodyend="121"/>
+        <references refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" compoundref="_loopy_tunes_8cpp" startline="28">encoder</references>
+        <references refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" compoundref="_loopy_tunes_8cpp" startline="29">keypad</references>
+        <references refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_loopy_tunes_8cpp" startline="30">lcd</references>
+        <references refid="_constants_8h_1ab58841ee2ac14b70b29289cd96ea1668" compoundref="_constants_8h" startline="13">MACROBLOCK</references>
+        <references refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" compoundref="_loopy_tunes_8cpp" startline="24">mixer</references>
+        <references refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" compoundref="_loopy_tunes_8cpp" startline="27">mixerView</references>
+        <references refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" compoundref="_loopy_tunes_8cpp" startline="21">sample</references>
+        <references refid="class_encoder_driver_1a7108d646d1f00a7c42e89a5237809a62" compoundref="_encoder_driver_8h" startline="57" endline="80">EncoderDriver::tick</references>
+        <references refid="class_keypad_driver_1aba201d914666f4962f6cf99a49b7f45a" compoundref="_keypad_driver_8h" startline="24" endline="30">KeypadDriver::tick</references>
+        <references refid="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" compoundref="_mixer_8cpp" startline="57" endline="72">Mixer::tick</references>
+        <references refid="class_mixer_view_1abf1e540eef4ebca1bd5c5e95102f408d" compoundref="_mixer_view_8cpp" startline="24" endline="38">MixerView::tick</references>
+        <references refid="class_ui_driver_1a704567056037ea49e0558efa67f09f49" compoundref="daisy___i_l_i9341_8hpp" startline="987" endline="991">UiDriver::Update</references>
+      </memberdef>
+      <memberdef kind="function" id="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioCallback</definition>
+        <argsstring>(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)</argsstring>
+        <name>AudioCallback</name>
+        <param>
+          <type>AudioHandle::InputBuffer</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>AudioHandle::OutputBuffer</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>This is where audio data is inputted to and outputted from the software. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input to the Daisy Seed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to the Daisy Seed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of samples in the block </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="129" column="6" bodyfile="LoopyTunes.cpp" bodystart="129" bodyend="135"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" compoundref="_loopy_tunes_8cpp" startline="24">mixer</references>
+        <references refid="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" compoundref="_mixer_8cpp" startline="74" endline="80">Mixer::processInputBlock</references>
+        <references refid="class_mixer_1a84db56f64191585c461a2a05fd68b463" compoundref="_mixer_8cpp" startline="109" endline="124">Mixer::processOutputBlock</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+        <references refid="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" compoundref="_loopy_tunes_8cpp" startline="106" endline="121">tick</references>
+      </memberdef>
+      <memberdef kind="function" id="_loopy_tunes_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LoopyTunes.cpp" line="137" column="5" bodyfile="LoopyTunes.cpp" bodystart="137" bodyend="159"/>
+        <references refid="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" compoundref="_constants_8h" startline="12">ADCINPUTS</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8" compoundref="_helpers_8h" startline="10">AMP1</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256" compoundref="_helpers_8h" startline="11">AMP2</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e" compoundref="_helpers_8h" startline="12">AMP3</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9" compoundref="_helpers_8h" startline="13">AMP4</references>
+        <references refid="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" compoundref="_loopy_tunes_8cpp" startline="129" endline="135">AudioCallback</references>
+        <references refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" compoundref="_loopy_tunes_8cpp" startline="18">hw</references>
+        <references refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="_loopy_tunes_8cpp" startline="79" endline="100">init</references>
+        <references refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a" compoundref="_helpers_8h" startline="14">MASTER</references>
+        <references refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" compoundref="_loopy_tunes_8cpp" startline="21">sample</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mixer_8h" kindref="compound">DSP/Mixer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mixer_view_8h" kindref="compound">GUI/MixerView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="daisy___i_l_i9341_8hpp" kindref="compound">Drivers/daisy_ILI9341.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">daisy;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">daisysp;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DOXYGEN<sp/>TEMPLATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************/</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Hardware</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" refkind="member"><highlight class="normal">DaisySeed<sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Global</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DSP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" refkind="member"><highlight class="normal"><ref refid="class_mixer" kindref="compound">Mixer</ref><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>UI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" refkind="member"><highlight class="normal"><ref refid="class_mixer_view" kindref="compound">MixerView</ref><sp/><ref refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" kindref="member">mixerView</ref>;</highlight></codeline>
+<codeline lineno="28" refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" refkind="member"><highlight class="normal"><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref><sp/><ref refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kindref="member">encoder</ref>;</highlight></codeline>
+<codeline lineno="29" refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" refkind="member"><highlight class="normal"><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref><sp/><ref refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" kindref="member">keypad</ref>;</highlight></codeline>
+<codeline lineno="30" refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" refkind="member"><highlight class="normal"><ref refid="class_ui_driver" kindref="compound">UiDriver</ref><sp/><ref refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespace_buffers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_buffers" kindref="compound">Buffers</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sample<sp/>Buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespace_buffers_1a87d96280f80f5f7a4b2584784786a244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a87d96280f80f5f7a4b2584784786a244" kindref="member">track1</ref>[2][<ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref><sp/>*<sp/><ref refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kindref="member">DURATION</ref>];</highlight></codeline>
+<codeline lineno="37" refid="namespace_buffers_1ae193b35b7973e179b49fbdf57c4249e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1ae193b35b7973e179b49fbdf57c4249e3" kindref="member">track2</ref>[2][<ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref><sp/>*<sp/><ref refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kindref="member">DURATION</ref>];</highlight></codeline>
+<codeline lineno="38" refid="namespace_buffers_1a8ed6807590a0b05861e62fb2fe2c5018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a8ed6807590a0b05861e62fb2fe2c5018" kindref="member">track3</ref>[2][<ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref><sp/>*<sp/><ref refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kindref="member">DURATION</ref>];</highlight></codeline>
+<codeline lineno="39" refid="namespace_buffers_1a5e8368c8f4e989ff3fb006de4206cafe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a5e8368c8f4e989ff3fb006de4206cafe" kindref="member">track4</ref>[2][<ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref><sp/>*<sp/><ref refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kindref="member">DURATION</ref>];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="namespace_buffers_1a400ffc4f1822843647c0bff5e4ed1a28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a400ffc4f1822843647c0bff5e4ed1a28" kindref="member">track1Ptr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a87d96280f80f5f7a4b2584784786a244" kindref="member">track1</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a87d96280f80f5f7a4b2584784786a244" kindref="member">track1</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="42" refid="namespace_buffers_1ac69eab0d4644edc3518f13ebc52ca0c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1ac69eab0d4644edc3518f13ebc52ca0c5" kindref="member">track2Ptr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1ae193b35b7973e179b49fbdf57c4249e3" kindref="member">track2</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1ae193b35b7973e179b49fbdf57c4249e3" kindref="member">track2</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="43" refid="namespace_buffers_1ae6a11631f5b3a7182dcce7e33e228849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1ae6a11631f5b3a7182dcce7e33e228849" kindref="member">track3Ptr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a8ed6807590a0b05861e62fb2fe2c5018" kindref="member">track3</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a8ed6807590a0b05861e62fb2fe2c5018" kindref="member">track3</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="44" refid="namespace_buffers_1a4119551fdbe4eb44a3cae91e08c5eccc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a4119551fdbe4eb44a3cae91e08c5eccc" kindref="member">track4Ptr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a5e8368c8f4e989ff3fb006de4206cafe" kindref="member">track4</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a5e8368c8f4e989ff3fb006de4206cafe" kindref="member">track4</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mix<sp/>Buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="namespace_buffers_1aea4f10f2dce1e114505948e16730e6e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1aea4f10f2dce1e114505948e16730e6e4" kindref="member">mix</ref>[2][<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>];</highlight></codeline>
+<codeline lineno="48" refid="namespace_buffers_1a745535f0dd037dec7de4e6c5b7c83525" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a745535f0dd037dec7de4e6c5b7c83525" kindref="member">t1m</ref>[2][<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>];</highlight></codeline>
+<codeline lineno="49" refid="namespace_buffers_1a3202e03d01bd37b2c43e6f0bf1d82f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a3202e03d01bd37b2c43e6f0bf1d82f2a" kindref="member">t2m</ref>[2][<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>];</highlight></codeline>
+<codeline lineno="50" refid="namespace_buffers_1a18631b5feae0f8dc52d2192c4ff4a6c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a18631b5feae0f8dc52d2192c4ff4a6c4" kindref="member">t3m</ref>[2][<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>];</highlight></codeline>
+<codeline lineno="51" refid="namespace_buffers_1ae3a7ea421e900fdc1ec6a7d8525ddfc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1ae3a7ea421e900fdc1ec6a7d8525ddfc9" kindref="member">t4m</ref>[2][<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespace_buffers_1a6f513a019053949667da22fd66ad4d03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a6f513a019053949667da22fd66ad4d03" kindref="member">mixPtr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1aea4f10f2dce1e114505948e16730e6e4" kindref="member">mix</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1aea4f10f2dce1e114505948e16730e6e4" kindref="member">mix</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="54" refid="namespace_buffers_1a364c8fa79ed6e9f5c76576e81b47e080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a364c8fa79ed6e9f5c76576e81b47e080" kindref="member">t1mPtr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a745535f0dd037dec7de4e6c5b7c83525" kindref="member">t1m</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a745535f0dd037dec7de4e6c5b7c83525" kindref="member">t1m</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="55" refid="namespace_buffers_1ae512b86615f57d29be83b76d7f183e60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1ae512b86615f57d29be83b76d7f183e60" kindref="member">t2mPtr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a3202e03d01bd37b2c43e6f0bf1d82f2a" kindref="member">t2m</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a3202e03d01bd37b2c43e6f0bf1d82f2a" kindref="member">t2m</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="56" refid="namespace_buffers_1a7569f49c34ca89bde70fd10ada24e48f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a7569f49c34ca89bde70fd10ada24e48f" kindref="member">t3mPtr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1a18631b5feae0f8dc52d2192c4ff4a6c4" kindref="member">t3m</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1a18631b5feae0f8dc52d2192c4ff4a6c4" kindref="member">t3m</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="57" refid="namespace_buffers_1a9e22e58ed5d95f65300f981d370a6e8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="namespace_buffers_1a9e22e58ed5d95f65300f981d370a6e8b" kindref="member">t4mPtr</ref>[2]<sp/>=<sp/>{<ref refid="namespace_buffers_1ae3a7ea421e900fdc1ec6a7d8525ddfc9" kindref="member">t4m</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/><ref refid="namespace_buffers_1ae3a7ea421e900fdc1ec6a7d8525ddfc9" kindref="member">t4m</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>Lines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="namespace_buffers_1a8d59e295ced64e71cafd9cd4624bb0dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;<sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a8d59e295ced64e71cafd9cd4624bb0dd" kindref="member">t1delay</ref>[2];</highlight></codeline>
+<codeline lineno="61" refid="namespace_buffers_1ae541617b801e70c9eb96906b1ab63ddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;<sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1ae541617b801e70c9eb96906b1ab63ddf" kindref="member">t2delay</ref>[2];</highlight></codeline>
+<codeline lineno="62" refid="namespace_buffers_1ab674e4ce94e53cb33494373c2e6ed8b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;<sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1ab674e4ce94e53cb33494373c2e6ed8b5" kindref="member">t3delay</ref>[2];</highlight></codeline>
+<codeline lineno="63" refid="namespace_buffers_1a09afea63e2e84ad8ff878bb487c9f2a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;<sp/>DSY_SDRAM_BSS<sp/><ref refid="namespace_buffers_1a09afea63e2e84ad8ff878bb487c9f2a2" kindref="member">t4delay</ref>[2];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="namespace_buffers_1aa8aa90eaaca6fa7f5b4834bef80b971c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/><ref refid="namespace_buffers_1aa8aa90eaaca6fa7f5b4834bef80b971c" kindref="member">t1delayPtr</ref>[2]<sp/>=<sp/>{&amp;<ref refid="namespace_buffers_1a8d59e295ced64e71cafd9cd4624bb0dd" kindref="member">t1delay</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>&amp;<ref refid="namespace_buffers_1a8d59e295ced64e71cafd9cd4624bb0dd" kindref="member">t1delay</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="66" refid="namespace_buffers_1a394119ae840043641b6f7c4229384292" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/><ref refid="namespace_buffers_1a394119ae840043641b6f7c4229384292" kindref="member">t2delayPtr</ref>[2]<sp/>=<sp/>{&amp;<ref refid="namespace_buffers_1ae541617b801e70c9eb96906b1ab63ddf" kindref="member">t2delay</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>&amp;<ref refid="namespace_buffers_1ae541617b801e70c9eb96906b1ab63ddf" kindref="member">t2delay</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="67" refid="namespace_buffers_1aedfabbb8408c77f51548b1a11ffc23f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/><ref refid="namespace_buffers_1aedfabbb8408c77f51548b1a11ffc23f6" kindref="member">t3delayPtr</ref>[2]<sp/>=<sp/>{&amp;<ref refid="namespace_buffers_1ab674e4ce94e53cb33494373c2e6ed8b5" kindref="member">t3delay</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>&amp;<ref refid="namespace_buffers_1ab674e4ce94e53cb33494373c2e6ed8b5" kindref="member">t3delay</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="68" refid="namespace_buffers_1a3b0edbde4b29986f7102f5d3b54f4962" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/><ref refid="namespace_buffers_1a3b0edbde4b29986f7102f5d3b54f4962" kindref="member">t4delayPtr</ref>[2]<sp/>=<sp/>{&amp;<ref refid="namespace_buffers_1a09afea63e2e84ad8ff878bb487c9f2a2" kindref="member">t4delay</ref>[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>&amp;<ref refid="namespace_buffers_1a09afea63e2e84ad8ff878bb487c9f2a2" kindref="member">t4delay</ref>[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" kindref="member">navCallback</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************/</highlight></codeline>
+<codeline lineno="79" refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>()</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialise<sp/>Daisy<sp/>Seed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.Init(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>true<sp/>=<sp/>boost<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.SetAudioBlockSize(<ref refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kindref="member">BLOCKLENGTH</ref>);<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialise<sp/>DSP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1ad9ef6107ff80ed78ceb46e425bb25b05" kindref="member">init</ref>(&amp;<ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>,<sp/><ref refid="namespace_buffers_1a400ffc4f1822843647c0bff5e4ed1a28" kindref="member">Buffers::track1Ptr</ref>,<sp/><ref refid="namespace_buffers_1ac69eab0d4644edc3518f13ebc52ca0c5" kindref="member">Buffers::track2Ptr</ref>,<sp/><ref refid="namespace_buffers_1ae6a11631f5b3a7182dcce7e33e228849" kindref="member">Buffers::track3Ptr</ref>,<sp/><ref refid="namespace_buffers_1a4119551fdbe4eb44a3cae91e08c5eccc" kindref="member">Buffers::track4Ptr</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" kindref="member">initMixChannels</ref>(<ref refid="namespace_buffers_1a6f513a019053949667da22fd66ad4d03" kindref="member">Buffers::mixPtr</ref>,<sp/><ref refid="namespace_buffers_1a364c8fa79ed6e9f5c76576e81b47e080" kindref="member">Buffers::t1mPtr</ref>,<sp/><ref refid="namespace_buffers_1ae512b86615f57d29be83b76d7f183e60" kindref="member">Buffers::t2mPtr</ref>,<sp/><ref refid="namespace_buffers_1a7569f49c34ca89bde70fd10ada24e48f" kindref="member">Buffers::t3mPtr</ref>,<sp/><ref refid="namespace_buffers_1a9e22e58ed5d95f65300f981d370a6e8b" kindref="member">Buffers::t4mPtr</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" kindref="member">initFX</ref>(&amp;<ref refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kindref="member">encoder</ref>,<sp/><ref refid="namespace_buffers_1aa8aa90eaaca6fa7f5b4834bef80b971c" kindref="member">Buffers::t1delayPtr</ref>,<sp/><ref refid="namespace_buffers_1a394119ae840043641b6f7c4229384292" kindref="member">Buffers::t2delayPtr</ref>,<sp/><ref refid="namespace_buffers_1aedfabbb8408c77f51548b1a11ffc23f6" kindref="member">Buffers::t3delayPtr</ref>,<sp/><ref refid="namespace_buffers_1a3b0edbde4b29986f7102f5d3b54f4962" kindref="member">Buffers::t4delayPtr</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialise<sp/>hardware<sp/>controls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kindref="member">encoder</ref>.<ref refid="class_encoder_driver_1a6b703d93f5254ae6539dfc3759c3d87d" kindref="member">init</ref>(seed::D4,<sp/>seed::D13,<sp/>seed::D14,<sp/><ref refid="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" kindref="member">navCallback</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>keypad<sp/>driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialise<sp/>GUI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" kindref="member">mixerView</ref>.<ref refid="class_mixer_view_1af147890d75f589e81b9264405a781d87" kindref="member">init</ref>(&amp;<ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>,<sp/>&amp;<ref refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kindref="member">encoder</ref>,<sp/>&amp;<ref refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" kindref="member">keypad</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1a2e847d43b54fef8756e6745a3e3f879e" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>System::Delay(100);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************************/</highlight></codeline>
+<codeline lineno="106" refid="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref><sp/>&gt;=<sp/><ref refid="_constants_8h_1ab58841ee2ac14b70b29289cd96ea1668" kindref="member">MACROBLOCK</ref>)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" kindref="member">keypad</ref>.<ref refid="class_keypad_driver_1aba201d914666f4962f6cf99a49b7f45a" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kindref="member">encoder</ref>.<ref refid="class_encoder_driver_1a7108d646d1f00a7c42e89a5237809a62" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" kindref="member">mixerView</ref>.<ref refid="class_mixer_view_1abf1e540eef4ebca1bd5c5e95102f408d" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" kindref="member">lcd</ref>.<ref refid="class_ui_driver_1a704567056037ea49e0558efa67f09f49" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref><sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************/</highlight></codeline>
+<codeline lineno="129" refid="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" kindref="member">AudioCallback</ref>(AudioHandle::InputBuffer<sp/>in,<sp/>AudioHandle::OutputBuffer<sp/>out,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" kindref="member">tick</ref>(size);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" kindref="member">processInputBlock</ref>(in[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>in[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>],<sp/>size);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kindref="member">mixer</ref>.<ref refid="class_mixer_1a84db56f64191585c461a2a05fd68b463" kindref="member">processOutputBlock</ref>(out[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>out[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>],<sp/>size);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="_loopy_tunes_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_loopy_tunes_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.StartAudio(<ref refid="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" kindref="member">AudioCallback</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>init<sp/>global<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle<sp/>ADC<sp/>init</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>AdcChannelConfig<sp/>configs[<ref refid="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" kindref="member">ADCINPUTS</ref>];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>configs[<ref refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8" kindref="member">ChannelIDs::AMP1</ref>].InitSingle(seed::A0);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>configs[<ref refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256" kindref="member">ChannelIDs::AMP2</ref>].InitSingle(seed::A1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>configs[<ref refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e" kindref="member">ChannelIDs::AMP3</ref>].InitSingle(seed::A2);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>configs[<ref refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9" kindref="member">ChannelIDs::AMP4</ref>].InitSingle(seed::A3);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>configs[<ref refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a" kindref="member">ChannelIDs::MASTER</ref>].InitSingle(seed::A11);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.adc.Init(configs,<sp/><ref refid="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" kindref="member">ADCINPUTS</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kindref="member">hw</ref>.adc.Start();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="LoopyTunes.cpp"/>
+  </compounddef>
+</doxygen>

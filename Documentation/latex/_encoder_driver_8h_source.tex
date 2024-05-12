@@ -1,0 +1,143 @@
+\doxysection{Encoder\+Driver.\+h}
+\hypertarget{_encoder_driver_8h_source}{}\label{_encoder_driver_8h_source}\index{Drivers/EncoderDriver.h@{Drivers/EncoderDriver.h}}
+\mbox{\hyperlink{_encoder_driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENCODERDRIVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENCODERDRIVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_stepped_parameter_8h}{../Parameters/SteppedParameter.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{/*****************************************************************************/}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_a6b703d93f5254ae6539dfc3759c3d87d}{init}}(dsy\_gpio\_pin\ button,\ dsy\_gpio\_pin\ a,\ dsy\_gpio\_pin\ b,\ std::function<\textcolor{keywordtype}{void}()>\ navCb)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ parameters.reserve(70);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ prevUpdate\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ isUpdated\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ isNavigation\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ navCallback\ =\ navCb;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ currentParam\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ valueA\ =\ 0xFF;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ valueB\ =\ 0xFF;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ btn.Init(button);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ channelA.pin\ =\ a;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ channelB.pin\ =\ b;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ channelA.mode\ =\ DSY\_GPIO\_MODE\_INPUT;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ channelB.mode\ =\ DSY\_GPIO\_MODE\_INPUT;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ channelA.pull\ =\ DSY\_GPIO\_PULLUP;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ channelB.pull\ =\ DSY\_GPIO\_PULLUP;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ dsy\_gpio\_init(\&channelA);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ dsy\_gpio\_init(\&channelB);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FOR\ TESTING}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ currentParam\ =\ 3;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_a7108d646d1f00a7c42e89a5237809a62}{tick}}()}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ u\_int32\_t\ now\ =\ System::GetNow();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(now\ -\/\ prevUpdate\ >=\ 1)\ \textcolor{comment}{//\ adjust\ to\ change\ update\ rate,\ 1\ =\ 1000Hz,\ 2\ =\ 2000Hz\ etc.}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ prevUpdate\ =\ now;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shift\ Button\ states\ to\ debounce}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ valueA\ =\ (valueA\ <<\ 1)\ |\ dsy\_gpio\_read(\&channelA);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ valueB\ =\ (valueB\ <<\ 1)\ |\ dsy\_gpio\_read(\&channelB);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!isNavigation)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((valueA\ \&\ 0x03)\ ==\ 0x02\ \&\&\ (valueB\ \&\ 0x03)\ ==\ 0x00)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parameters[currentParam]-\/>decrement();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}((valueB\ \&\ 0x03)\ ==\ 0x02\ \&\&\ (valueA\ \&\ 0x03)\ ==\ 0x00)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parameters[currentParam]-\/>increment();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ btn.Debounce();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(btn.Pressed())}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_encoder_driver_afa50272bfb183b00f469285864c975e3}{buttonCallback}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_afa50272bfb183b00f469285864c975e3}{buttonCallback}}()}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isNavigation)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ navCallback();}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_encoder_driver_a9f6aea9b40ce44db249f04816423dd3b}{getButtonState}}()\ \{\ \textcolor{keywordflow}{return}\ btn.Pressed();\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ /********************************************************************************/}}
+\DoxyCodeLine{00100\ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{class_encoder_driver_acd195cb2fe0f09ff7dd4b7d18414aa0e}{getBypassCallback}}(\textcolor{keywordtype}{size\_t}\ index)\ \{\ \textcolor{keywordflow}{return}\ bypassCallbacks.at(index);\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_a8f772f7feff5cb2093d36189ffc6fe66}{setCurrentParam}}(\textcolor{keywordtype}{int}\ newID)}
+\DoxyCodeLine{00107\ \ \ \ \ \{\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ parameters.size()\ ;\ i++)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(parameters[i]-\/>getID()\ ==\ newID)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentParam\ =\ i;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_a4545930e99a6065f445a9efc696405f5}{addParameter}}(\mbox{\hyperlink{class_stepped_parameter}{SteppedParameter}}*\ newParam)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ parameters.push\_back(newParam);}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_encoder_driver_a45b2cea21038aee124bed0a0f39010af}{addBypassCallback}}(std::function<\textcolor{keywordtype}{void}()>\ newCallback)}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ bypassCallbacks.push\_back(newCallback);}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_stepped_parameter}{SteppedParameter}}*\ \mbox{\hyperlink{class_encoder_driver_aaa92980b9bd67e2ea6a2396716d7c4e8}{getParameter}}(\textcolor{keywordtype}{int}\ paramID)}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ parameters.size()\ ;\ i++)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(parameters[i]-\/>getID()\ ==\ paramID)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ parameters[i];}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ isUpdated;}
+\DoxyCodeLine{00154\ \ \ \ \ uint32\_t\ prevUpdate;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{bool}\ isNavigation;}
+\DoxyCodeLine{00157\ \ \ \ \ std::function<void()>\ navCallback;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ currentParam;}
+\DoxyCodeLine{00160\ \ \ \ \ std::vector<SteppedParameter*>\ parameters;}
+\DoxyCodeLine{00161\ \ \ \ \ std::vector<std::function<void()>>\ bypassCallbacks;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ Switch\ btn;}
+\DoxyCodeLine{00164\ \ \ \ \ dsy\_gpio\ channelA;}
+\DoxyCodeLine{00165\ \ \ \ \ dsy\_gpio\ channelB;}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ uint8\_t\ valueA;}
+\DoxyCodeLine{00168\ \ \ \ \ uint8\_t\ valueB;}
+\DoxyCodeLine{00169\ \};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

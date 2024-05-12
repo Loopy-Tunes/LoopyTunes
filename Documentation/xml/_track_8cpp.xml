@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_track_8cpp" kind="file" language="C++">
+    <compoundname>Track.cpp</compoundname>
+    <includes refid="_track_8h" local="yes">Track.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>FX/Delay.h</label>
+        <link refid="_delay_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>FX/Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FX/PitchShift.h</label>
+        <link refid="_pitch_shift_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="19">
+        <label>revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+      <node id="14">
+        <label>FX/Waveshaper.h</label>
+        <link refid="_waveshaper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../Parameters/AudioParameter.h</label>
+        <link refid="_audio_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../Parameters/BinaryParameter.h</label>
+        <link refid="_binary_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="7">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../Utils/Helpers.h</label>
+        <link refid="_helpers_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="27">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="9">
+        <label>daisysp.h</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="28">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>stddef.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>type_traits</label>
+      </node>
+      <node id="31">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_track_8h" kindref="compound">Track.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_track_1a76b434303c0728f7357c8bcc2813e6b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a76b434303c0728f7357c8bcc2813e6b9" kindref="member">Track::init</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>mem[2],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/>dsy_gpio_pin<sp/>r,<sp/>dsy_gpio_pin<sp/>p)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>trackID<sp/>=<sp/>ID;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>record.<ref refid="class_binary_parameter_1a6765feacacb20ba94a391a059040ae1d" kindref="member">init</ref>(r,<sp/>1000,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]{<sp/><ref refid="class_track_1af5bf39d8eed1fdd58ee86ebbfae8f3e3" kindref="member">setIsRecording</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>play.<ref refid="class_binary_parameter_1a6765feacacb20ba94a391a059040ae1d" kindref="member">init</ref>(p,<sp/>1000,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]{<sp/><ref refid="class_track_1a639cee2f6d225448b4a86166bb0a4ae8" kindref="member">setIsPlaying</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>ph.reset();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.<ref refid="struct_track_information_1a0723aa2f593ad0221147f49a98f12369" kindref="member">isEmpty</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.<ref refid="struct_track_information_1a61c449b7f0f5feb7b29c2a64b3e319bd" kindref="member">loopLength</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferSize<sp/>=<sp/><ref refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kindref="member">SAMPLERATE</ref><sp/>*<sp/><ref refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kindref="member">DURATION</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>]<sp/>=<sp/>mem[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>]<sp/>=<sp/>mem[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" kindref="member">resetBuffer</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>loopStart<sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>startPos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_track_1a4e167244a48672681f2e0b187b9fd2a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a4e167244a48672681f2e0b187b9fd2a7" kindref="member">Track::initFX</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/>DelayLine&lt;float,<sp/>MAXDELAY&gt;*<sp/>dl[2])</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>pitchShift.<ref refid="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" kindref="member">init</ref>(driver,<sp/>trackID);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>shaper.<ref refid="class_waveshaper_1ac04461769908282db7325214eba45087" kindref="member">init</ref>(driver,<sp/>trackID);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>filter.<ref refid="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" kindref="member">init</ref>(driver,<sp/>trackID);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>delay.<ref refid="class_delay_1ab6fbc08d35bd3528d84993c4f9e3f5d5" kindref="member">init</ref>(driver,<sp/>trackID,<sp/>dl);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>reverb.<ref refid="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" kindref="member">init</ref>(driver,<sp/>trackID);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_track_1ac41690e46e3178d90acb87327955df1f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1ac41690e46e3178d90acb87327955df1f" kindref="member">Track::tick</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>record.<ref refid="class_binary_parameter_1a062dee999020e270c30d8084e03b443d" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>play.<ref refid="class_binary_parameter_1a062dee999020e270c30d8084e03b443d" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" kindref="member">Track::resetBuffer</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>bufferSize<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_track_1af5bf39d8eed1fdd58ee86ebbfae8f3e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1af5bf39d8eed1fdd58ee86ebbfae8f3e3" kindref="member">Track::setIsRecording</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(state)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ti.<ref refid="struct_track_information_1a61c449b7f0f5feb7b29c2a64b3e319bd" kindref="member">loopLength</ref><sp/>=<sp/>ph.writePos;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setLoopStart();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kindref="member">PLAYING</ref>:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(state<sp/>==<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" kindref="member">resetBuffer</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ph.reset();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_track_1a639cee2f6d225448b4a86166bb0a4ae8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a639cee2f6d225448b4a86166bb0a4ae8" kindref="member">Track::setIsPlaying</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(state)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kindref="member">PLAYING</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kindref="member">PLAYING</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kindref="member">PLAYING</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>ph.reset();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_track_1a336774fc362866bf0df508aead2116d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a336774fc362866bf0df508aead2116d0" kindref="member">Track::incrementWritePos</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ph.writePos<sp/>&gt;=<sp/>bufferSize)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.writePos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.writePos++;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_track_1a80383a6a58e05f2ca099ced9e7e0992c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a80383a6a58e05f2ca099ced9e7e0992c" kindref="member">Track::incrementReadPos</ref>()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(state<sp/>==<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ph.writePos<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.readPos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.readPos<sp/>=<sp/>ph.writePos<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(state<sp/>==<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kindref="member">PLAYING</ref>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ph.readPos<sp/>&gt;=<sp/>ti.<ref refid="struct_track_information_1a61c449b7f0f5feb7b29c2a64b3e319bd" kindref="member">loopLength</ref>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.readPos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ph.readPos++;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_track_1adb288fb70bc39ec6f1d50be4dc8d3174" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1adb288fb70bc39ec6f1d50be4dc8d3174" kindref="member">Track::processInputBlock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(state<sp/>!=<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kindref="member">RECORDING</ref>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>size<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][ph.writePos]<sp/>=<sp/>left[i];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][ph.writePos]<sp/>=<sp/>right[i];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track_1a336774fc362866bf0df508aead2116d0" kindref="member">incrementWritePos</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_track_1a9a6cafdef172c8abfb21a6a78664c5d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_track_1a9a6cafdef172c8abfb21a6a78664c5d8" kindref="member">Track::processOutputBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>output[2],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(state<sp/>==<sp/><ref refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kindref="member">STOPPED</ref>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>size<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//output[L][i]<sp/>=<sp/>buffer[L][ph.readPos];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//output[R][i]<sp/>=<sp/>buffer[R][ph.readPos];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][i]<sp/>=<sp/>calculateLoop(buffer[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>][ph.readPos],<sp/><ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][i]<sp/>=<sp/>calculateLoop(buffer[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>][ph.readPos],<sp/><ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track_1a80383a6a58e05f2ca099ced9e7e0992c" kindref="member">incrementReadPos</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>pitchShift.<ref refid="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" kindref="member">processBlock</ref>(output,<sp/>size);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>shaper.<ref refid="class_waveshaper_1aee769a45659eeef817fd492ab4fe4cf4" kindref="member">processBlock</ref>(output,<sp/>size);<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>filter.<ref refid="class_filter_1a9f202d29f2be23e354c4964fc9841728" kindref="member">processBlock</ref>(output,<sp/>size);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>delay.<ref refid="class_delay_1ab4234fe0620a5f4f40ae0383910d9513" kindref="member">processBlock</ref>(output,<sp/>size);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>reverb.<ref refid="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" kindref="member">processBlock</ref>(output,<sp/>size);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="DSP/Track.cpp"/>
+  </compounddef>
+</doxygen>

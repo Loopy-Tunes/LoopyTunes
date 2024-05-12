@@ -1,0 +1,465 @@
+\doxysection{Ui\+Driver Class Reference}
+\hypertarget{class_ui_driver}{}\label{class_ui_driver}\index{UiDriver@{UiDriver}}
+
+
+{\ttfamily \#include $<$daisy\+\_\+\+ILI9341.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d}{Orientation}} \{ \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da7a1920d61156abc05a60135aefe8bc67}{Default}} = 0
+, \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daa645f53b199ce12c628cbc39dd0278b2}{RRight}}
+, \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da30526f42dd072f3e58809a975a4b1d75}{RLeft}}
+, \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daf08af04d07c38567fc6b24634c51f903}{Upside\+Down}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ui_driver_a2e847d43b54fef8756e6745a3e3f879e}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_ui_driver_a8e3b71fd346ee3302f1446f3b6fc35e2}{Init\+Driver}} ()
+\item 
+void \mbox{\hyperlink{class_ui_driver_af1bf3bc414fcc2b9b563fcc40f98f2e0}{Set\+Orientation}} (\mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d}{Orientation}} ori)
+\item 
+Rectangle \mbox{\hyperlink{class_ui_driver_a6068c9af06a470e7368f90b2624a6e98}{Get\+Drawable\+Frame}} () const
+\item 
+Rectangle \mbox{\hyperlink{class_ui_driver_add07829c83bd47a50fd59d0fdb45c4f6}{Get\+Bounds}} () const
+\item 
+void \mbox{\hyperlink{class_ui_driver_ab216b7d3381e736fa72dc3a88b63f50c}{Fill}} (uint8\+\_\+t color)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a4a826ac3d48dc88aa6e24169e075a8ff}{Draw\+Line}} (uint\+\_\+fast16\+\_\+t x1, uint\+\_\+fast16\+\_\+t y1, uint\+\_\+fast16\+\_\+t x2, uint\+\_\+fast16\+\_\+t y2, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a9614bc15dc15b1ff7f9748885f27b445}{Fill\+Area}} (uint\+\_\+fast16\+\_\+t x, uint\+\_\+fast16\+\_\+t y, uint\+\_\+fast16\+\_\+t w, uint\+\_\+fast16\+\_\+t h, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_aae60e48b285f16bdecc46557a84e6fa0}{Draw\+Rect}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a6c94a92ae503206b5bc73c712da2af50}{Draw\+Rect}} (const Rectangle \&rect, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_af358f8137ff5f6dec8402e5b28b5be73}{Fill\+Rect}} (const Rectangle \&rect, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_ad1fb02154c03383d479da393b349be4e}{Draw\+Triangle}} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, int16\+\_\+t x2, int16\+\_\+t y2, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_ad08a1c1aeaf37bc3caa605ee477ce276}{Fill\+Triangle}} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, int16\+\_\+t x2, int16\+\_\+t y2, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+Rectangle \mbox{\hyperlink{class_ui_driver_a9a054d7fafc4f2c6ac852604e3e3619b}{Write\+String\+Aligned}} (const char \texorpdfstring{$\ast$}{*}str, const Font\+Def \&font, Rectangle bounding\+Box, Alignment alignment, uint8\+\_\+t color)
+\item 
+Rectangle \mbox{\hyperlink{class_ui_driver_aa891568b999163d3a431b33698f8b123}{Get\+Text\+Rect}} (const char \texorpdfstring{$\ast$}{*}text, const Font\+Def \&font) const
+\item 
+char \mbox{\hyperlink{class_ui_driver_a8ddcee555e0c326316459ba5d3c5f2e9}{Write\+Char}} (char ch, Font\+Def font, uint8\+\_\+t color)
+\item 
+void \mbox{\hyperlink{class_ui_driver_aed409db35305081ad515645298ff98b6}{Write\+String}} (const char \texorpdfstring{$\ast$}{*}str, uint16\+\_\+t x, uint16\+\_\+t y, Font\+Def font)
+\item 
+void \mbox{\hyperlink{class_ui_driver_aa51b802b0043c819e60c85893a6deb9c}{Write\+String}} (const char \texorpdfstring{$\ast$}{*}str, uint16\+\_\+t x, uint16\+\_\+t y, Font\+Def font, uint8\+\_\+t color)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_aa101506e3db6802c2e570bffa8a58462}{Get\+String\+Width}} (const char \texorpdfstring{$\ast$}{*}str, Font\+Def font) const
+\item 
+void \mbox{\hyperlink{class_ui_driver_a97666f18b83aa7616f85a8c003314c03}{Draw\+Circle}} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint8\+\_\+t color)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a67d6c3dfc28be448c65fd300ed1b26c8}{Fill\+Circle}} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint8\+\_\+t color)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a7932889e7c277f8b2740bd0564ef14e9}{Fill\+Circle\+Helper}} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint8\+\_\+t cornername, int16\+\_\+t delta, uint8\+\_\+t color)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a1e81a6354d0cce67e64bc5441131c102}{Set\+Cursor}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Moves the \textquotesingle{}Cursor\textquotesingle{} position used for Write\+Char, and Write\+Str to the specified coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ui_driver_a704567056037ea49e0558efa67f09f49}{Update}} ()
+\item 
+bool \mbox{\hyperlink{class_ui_driver_ac61917930b0d16d8ca40afe5442cd1b3}{Is\+Render}} ()
+\item 
+void \mbox{\hyperlink{class_ui_driver_ab5511381b9b907b3af64c95059125419}{Update\+Frame\+Rate}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_a3767b2812bad5fbd3fee141eac0bf86b}{Fps}} () const
+\item 
+void \mbox{\hyperlink{class_ui_driver_aba556ca919b6171cdce0dab54e0c9161}{Trim\+String}} (char \texorpdfstring{$\ast$}{*}str, char \texorpdfstring{$\ast$}{*}str\+\_\+trimmed, uint16\+\_\+t str\+\_\+len, uint16\+\_\+t str\+\_\+width, Font\+Def font) const
+\item 
+void \mbox{\hyperlink{class_ui_driver_a69afe11ab3895f85dec07dd36c9b8e23}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_ui_driver_a27e070b8af0dee6fc607d02ec994955f}{Draw\+Pixel}} (uint\+\_\+fast16\+\_\+t x, uint\+\_\+fast16\+\_\+t y, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_ad110891ce79848090b12150fa94555ee}{Draw\+VLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t h, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+void \mbox{\hyperlink{class_ui_driver_a49de33d5e80a7301cae0db2fa18119d6}{Draw\+HLine}} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, uint8\+\_\+t color, uint8\+\_\+t alpha=255)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_a3e63bba2292c99156e0583994907affe}{Color565}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue) const
+\begin{DoxyCompactList}\small\item\em Given 8-\/bit red, green and blue values, return a \textquotesingle{}packed\textquotesingle{} 16-\/bit color value in \textquotesingle{}565\textquotesingle{} RGB format (5 bits red, 6 bits green, 5 bits blue). This is just a mathematical operation, no hardware is touched. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_ui_driver_a2f2f30fd7e3f9eb6dfe579306b1a1c79}{screen\+\_\+update\+\_\+last\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_ui_driver_a6473ee0e2d62a2ec300e0b15fb5b282f}{screen\+\_\+update\+\_\+period\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_ui_driver_a8649ae4edeceb70efb97d0cb132df760}{fps\+\_\+update\+\_\+last\+\_\+}}
+\item 
+\mbox{\hyperlink{class_i_l_i9341_spi_transport}{ILI9341\+Spi\+Transport}} \mbox{\hyperlink{class_ui_driver_a2a498ecce35a35e1aeed0964d8af3d83}{transport\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_a29176de413dd99a0205d03e213a3b85a}{width}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_ac3201a983fde7ab337b7ea739950faf4}{height}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_ui_driver_afa20cb47ea14ccaa22d1249ed3473a37}{rotation}}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_ui_driver_af4e41302b175e565df28f8e34eeb35bf}{header}} = 20
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_ui_driver_a0241ea917de65eb397d8fec9b3ebe832}{footer}} = 13
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_ui_driver_a408162a22f6b305368316a316123d271}{diff}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_afb9a9e168cebb221ce593f8c7af66586}{frames}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_ae9093a9726844edc8eaef2cfb7310db0}{current\+X\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_ae46e05f7ce3e3a25855e73d214107ae3}{current\+Y\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_ui_driver_af148d3ad3e26bfe753e61aa9d4331ebb}{fps}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A driver implementation for the ILI9341 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d}\label{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d} 
+\index{UiDriver@{UiDriver}!Orientation@{Orientation}}
+\index{Orientation@{Orientation}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Orientation}{Orientation}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d}{Ui\+Driver\+::\+Orientation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!UiDriver@{UiDriver}}\index{UiDriver@{UiDriver}!Default@{Default}}}\Hypertarget{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da7a1920d61156abc05a60135aefe8bc67}\label{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da7a1920d61156abc05a60135aefe8bc67} 
+Default&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RRight@{RRight}!UiDriver@{UiDriver}}\index{UiDriver@{UiDriver}!RRight@{RRight}}}\Hypertarget{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daa645f53b199ce12c628cbc39dd0278b2}\label{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daa645f53b199ce12c628cbc39dd0278b2} 
+RRight&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RLeft@{RLeft}!UiDriver@{UiDriver}}\index{UiDriver@{UiDriver}!RLeft@{RLeft}}}\Hypertarget{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da30526f42dd072f3e58809a975a4b1d75}\label{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8da30526f42dd072f3e58809a975a4b1d75} 
+RLeft&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpsideDown@{UpsideDown}!UiDriver@{UiDriver}}\index{UiDriver@{UiDriver}!UpsideDown@{UpsideDown}}}\Hypertarget{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daf08af04d07c38567fc6b24634c51f903}\label{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8daf08af04d07c38567fc6b24634c51f903} 
+Upside\+Down&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ui_driver_a3e63bba2292c99156e0583994907affe}\label{class_ui_driver_a3e63bba2292c99156e0583994907affe} 
+\index{UiDriver@{UiDriver}!Color565@{Color565}}
+\index{Color565@{Color565}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Color565()}{Color565()}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::\+Color565 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red,  }\item[{uint8\+\_\+t}]{green,  }\item[{uint8\+\_\+t}]{blue }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given 8-\/bit red, green and blue values, return a \textquotesingle{}packed\textquotesingle{} 16-\/bit color value in \textquotesingle{}565\textquotesingle{} RGB format (5 bits red, 6 bits green, 5 bits blue). This is just a mathematical operation, no hardware is touched. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & 8-\/bit red brightnesss (0 = off, 255 = max). \\
+\hline
+{\em green} & 8-\/bit green brightnesss (0 = off, 255 = max). \\
+\hline
+{\em blue} & 8-\/bit blue brightnesss (0 = off, 255 = max). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}Packed\textquotesingle{} 16-\/bit color value (565 format). 
+\end{DoxyReturn}
+\Hypertarget{class_ui_driver_a97666f18b83aa7616f85a8c003314c03}\label{class_ui_driver_a97666f18b83aa7616f85a8c003314c03} 
+\index{UiDriver@{UiDriver}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x0,  }\item[{int16\+\_\+t}]{y0,  }\item[{int16\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a49de33d5e80a7301cae0db2fa18119d6}\label{class_ui_driver_a49de33d5e80a7301cae0db2fa18119d6} 
+\index{UiDriver@{UiDriver}!DrawHLine@{DrawHLine}}
+\index{DrawHLine@{DrawHLine}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawHLine()}{DrawHLine()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+HLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{w,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a4a826ac3d48dc88aa6e24169e075a8ff}\label{class_ui_driver_a4a826ac3d48dc88aa6e24169e075a8ff} 
+\index{UiDriver@{UiDriver}!DrawLine@{DrawLine}}
+\index{DrawLine@{DrawLine}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawLine()}{DrawLine()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Line (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x1,  }\item[{uint\+\_\+fast16\+\_\+t}]{y1,  }\item[{uint\+\_\+fast16\+\_\+t}]{x2,  }\item[{uint\+\_\+fast16\+\_\+t}]{y2,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a27e070b8af0dee6fc607d02ec994955f}\label{class_ui_driver_a27e070b8af0dee6fc607d02ec994955f} 
+\index{UiDriver@{UiDriver}!DrawPixel@{DrawPixel}}
+\index{DrawPixel@{DrawPixel}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawPixel()}{DrawPixel()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x,  }\item[{uint\+\_\+fast16\+\_\+t}]{y,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a6c94a92ae503206b5bc73c712da2af50}\label{class_ui_driver_a6c94a92ae503206b5bc73c712da2af50} 
+\index{UiDriver@{UiDriver}!DrawRect@{DrawRect}}
+\index{DrawRect@{DrawRect}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawRect()}{DrawRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Rect (\begin{DoxyParamCaption}\item[{const Rectangle \&}]{rect,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aae60e48b285f16bdecc46557a84e6fa0}\label{class_ui_driver_aae60e48b285f16bdecc46557a84e6fa0} 
+\index{UiDriver@{UiDriver}!DrawRect@{DrawRect}}
+\index{DrawRect@{DrawRect}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawRect()}{DrawRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{w,  }\item[{uint16\+\_\+t}]{h,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ad1fb02154c03383d479da393b349be4e}\label{class_ui_driver_ad1fb02154c03383d479da393b349be4e} 
+\index{UiDriver@{UiDriver}!DrawTriangle@{DrawTriangle}}
+\index{DrawTriangle@{DrawTriangle}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawTriangle()}{DrawTriangle()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+Triangle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x0,  }\item[{int16\+\_\+t}]{y0,  }\item[{int16\+\_\+t}]{x1,  }\item[{int16\+\_\+t}]{y1,  }\item[{int16\+\_\+t}]{x2,  }\item[{int16\+\_\+t}]{y2,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ad110891ce79848090b12150fa94555ee}\label{class_ui_driver_ad110891ce79848090b12150fa94555ee} 
+\index{UiDriver@{UiDriver}!DrawVLine@{DrawVLine}}
+\index{DrawVLine@{DrawVLine}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{DrawVLine()}{DrawVLine()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Draw\+VLine (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y,  }\item[{int16\+\_\+t}]{h,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ab216b7d3381e736fa72dc3a88b63f50c}\label{class_ui_driver_ab216b7d3381e736fa72dc3a88b63f50c} 
+\index{UiDriver@{UiDriver}!Fill@{Fill}}
+\index{Fill@{Fill}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Fill()}{Fill()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a9614bc15dc15b1ff7f9748885f27b445}\label{class_ui_driver_a9614bc15dc15b1ff7f9748885f27b445} 
+\index{UiDriver@{UiDriver}!FillArea@{FillArea}}
+\index{FillArea@{FillArea}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{FillArea()}{FillArea()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill\+Area (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x,  }\item[{uint\+\_\+fast16\+\_\+t}]{y,  }\item[{uint\+\_\+fast16\+\_\+t}]{w,  }\item[{uint\+\_\+fast16\+\_\+t}]{h,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a67d6c3dfc28be448c65fd300ed1b26c8}\label{class_ui_driver_a67d6c3dfc28be448c65fd300ed1b26c8} 
+\index{UiDriver@{UiDriver}!FillCircle@{FillCircle}}
+\index{FillCircle@{FillCircle}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{FillCircle()}{FillCircle()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill\+Circle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x0,  }\item[{int16\+\_\+t}]{y0,  }\item[{int16\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a7932889e7c277f8b2740bd0564ef14e9}\label{class_ui_driver_a7932889e7c277f8b2740bd0564ef14e9} 
+\index{UiDriver@{UiDriver}!FillCircleHelper@{FillCircleHelper}}
+\index{FillCircleHelper@{FillCircleHelper}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{FillCircleHelper()}{FillCircleHelper()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill\+Circle\+Helper (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x0,  }\item[{int16\+\_\+t}]{y0,  }\item[{int16\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{cornername,  }\item[{int16\+\_\+t}]{delta,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_af358f8137ff5f6dec8402e5b28b5be73}\label{class_ui_driver_af358f8137ff5f6dec8402e5b28b5be73} 
+\index{UiDriver@{UiDriver}!FillRect@{FillRect}}
+\index{FillRect@{FillRect}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{FillRect()}{FillRect()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill\+Rect (\begin{DoxyParamCaption}\item[{const Rectangle \&}]{rect,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ad08a1c1aeaf37bc3caa605ee477ce276}\label{class_ui_driver_ad08a1c1aeaf37bc3caa605ee477ce276} 
+\index{UiDriver@{UiDriver}!FillTriangle@{FillTriangle}}
+\index{FillTriangle@{FillTriangle}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{FillTriangle()}{FillTriangle()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Fill\+Triangle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x0,  }\item[{int16\+\_\+t}]{y0,  }\item[{int16\+\_\+t}]{x1,  }\item[{int16\+\_\+t}]{y1,  }\item[{int16\+\_\+t}]{x2,  }\item[{int16\+\_\+t}]{y2,  }\item[{uint8\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a3767b2812bad5fbd3fee141eac0bf86b}\label{class_ui_driver_a3767b2812bad5fbd3fee141eac0bf86b} 
+\index{UiDriver@{UiDriver}!Fps@{Fps}}
+\index{Fps@{Fps}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Fps()}{Fps()}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::\+Fps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_add07829c83bd47a50fd59d0fdb45c4f6}\label{class_ui_driver_add07829c83bd47a50fd59d0fdb45c4f6} 
+\index{UiDriver@{UiDriver}!GetBounds@{GetBounds}}
+\index{GetBounds@{GetBounds}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{GetBounds()}{GetBounds()}}
+{\footnotesize\ttfamily Rectangle Ui\+Driver\+::\+Get\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a6068c9af06a470e7368f90b2624a6e98}\label{class_ui_driver_a6068c9af06a470e7368f90b2624a6e98} 
+\index{UiDriver@{UiDriver}!GetDrawableFrame@{GetDrawableFrame}}
+\index{GetDrawableFrame@{GetDrawableFrame}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{GetDrawableFrame()}{GetDrawableFrame()}}
+{\footnotesize\ttfamily Rectangle Ui\+Driver\+::\+Get\+Drawable\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aa101506e3db6802c2e570bffa8a58462}\label{class_ui_driver_aa101506e3db6802c2e570bffa8a58462} 
+\index{UiDriver@{UiDriver}!GetStringWidth@{GetStringWidth}}
+\index{GetStringWidth@{GetStringWidth}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{GetStringWidth()}{GetStringWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::\+Get\+String\+Width (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{Font\+Def}]{font }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aa891568b999163d3a431b33698f8b123}\label{class_ui_driver_aa891568b999163d3a431b33698f8b123} 
+\index{UiDriver@{UiDriver}!GetTextRect@{GetTextRect}}
+\index{GetTextRect@{GetTextRect}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{GetTextRect()}{GetTextRect()}}
+{\footnotesize\ttfamily Rectangle Ui\+Driver\+::\+Get\+Text\+Rect (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text,  }\item[{const Font\+Def \&}]{font }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a2e847d43b54fef8756e6745a3e3f879e}\label{class_ui_driver_a2e847d43b54fef8756e6745a3e3f879e} 
+\index{UiDriver@{UiDriver}!Init@{Init}}
+\index{Init@{Init}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a8e3b71fd346ee3302f1446f3b6fc35e2}\label{class_ui_driver_a8e3b71fd346ee3302f1446f3b6fc35e2} 
+\index{UiDriver@{UiDriver}!InitDriver@{InitDriver}}
+\index{InitDriver@{InitDriver}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{InitDriver()}{InitDriver()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Init\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ac61917930b0d16d8ca40afe5442cd1b3}\label{class_ui_driver_ac61917930b0d16d8ca40afe5442cd1b3} 
+\index{UiDriver@{UiDriver}!IsRender@{IsRender}}
+\index{IsRender@{IsRender}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{IsRender()}{IsRender()}}
+{\footnotesize\ttfamily bool Ui\+Driver\+::\+Is\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a1e81a6354d0cce67e64bc5441131c102}\label{class_ui_driver_a1e81a6354d0cce67e64bc5441131c102} 
+\index{UiDriver@{UiDriver}!SetCursor@{SetCursor}}
+\index{SetCursor@{SetCursor}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{SetCursor()}{SetCursor()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the \textquotesingle{}Cursor\textquotesingle{} position used for Write\+Char, and Write\+Str to the specified coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x pos \\
+\hline
+{\em y} & y pos \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ui_driver_af1bf3bc414fcc2b9b563fcc40f98f2e0}\label{class_ui_driver_af1bf3bc414fcc2b9b563fcc40f98f2e0} 
+\index{UiDriver@{UiDriver}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ui_driver_af3032aa88eb80c0ff0c975876a3bbb8d}{Orientation}}}]{ori }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a69afe11ab3895f85dec07dd36c9b8e23}\label{class_ui_driver_a69afe11ab3895f85dec07dd36c9b8e23} 
+\index{UiDriver@{UiDriver}!Start@{Start}}
+\index{Start@{Start}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aba556ca919b6171cdce0dab54e0c9161}\label{class_ui_driver_aba556ca919b6171cdce0dab54e0c9161} 
+\index{UiDriver@{UiDriver}!TrimString@{TrimString}}
+\index{TrimString@{TrimString}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{TrimString()}{TrimString()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Trim\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{char \texorpdfstring{$\ast$}{*}}]{str\+\_\+trimmed,  }\item[{uint16\+\_\+t}]{str\+\_\+len,  }\item[{uint16\+\_\+t}]{str\+\_\+width,  }\item[{Font\+Def}]{font }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a704567056037ea49e0558efa67f09f49}\label{class_ui_driver_a704567056037ea49e0558efa67f09f49} 
+\index{UiDriver@{UiDriver}!Update@{Update}}
+\index{Update@{Update}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_ab5511381b9b907b3af64c95059125419}\label{class_ui_driver_ab5511381b9b907b3af64c95059125419} 
+\index{UiDriver@{UiDriver}!UpdateFrameRate@{UpdateFrameRate}}
+\index{UpdateFrameRate@{UpdateFrameRate}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{UpdateFrameRate()}{UpdateFrameRate()}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Update\+Frame\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a8ddcee555e0c326316459ba5d3c5f2e9}\label{class_ui_driver_a8ddcee555e0c326316459ba5d3c5f2e9} 
+\index{UiDriver@{UiDriver}!WriteChar@{WriteChar}}
+\index{WriteChar@{WriteChar}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{WriteChar()}{WriteChar()}}
+{\footnotesize\ttfamily char Ui\+Driver\+::\+Write\+Char (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{Font\+Def}]{font,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aed409db35305081ad515645298ff98b6}\label{class_ui_driver_aed409db35305081ad515645298ff98b6} 
+\index{UiDriver@{UiDriver}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{WriteString()}{WriteString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Write\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{Font\+Def}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_aa51b802b0043c819e60c85893a6deb9c}\label{class_ui_driver_aa51b802b0043c819e60c85893a6deb9c} 
+\index{UiDriver@{UiDriver}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{WriteString()}{WriteString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ui\+Driver\+::\+Write\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{Font\+Def}]{font,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ui_driver_a9a054d7fafc4f2c6ac852604e3e3619b}\label{class_ui_driver_a9a054d7fafc4f2c6ac852604e3e3619b} 
+\index{UiDriver@{UiDriver}!WriteStringAligned@{WriteStringAligned}}
+\index{WriteStringAligned@{WriteStringAligned}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{WriteStringAligned()}{WriteStringAligned()}}
+{\footnotesize\ttfamily Rectangle Ui\+Driver\+::\+Write\+String\+Aligned (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{const Font\+Def \&}]{font,  }\item[{Rectangle}]{bounding\+Box,  }\item[{Alignment}]{alignment,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ui_driver_ae9093a9726844edc8eaef2cfb7310db0}\label{class_ui_driver_ae9093a9726844edc8eaef2cfb7310db0} 
+\index{UiDriver@{UiDriver}!currentX\_@{currentX\_}}
+\index{currentX\_@{currentX\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{currentX\_}{currentX\_}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::current\+X\+\_\+}
+
+\Hypertarget{class_ui_driver_ae46e05f7ce3e3a25855e73d214107ae3}\label{class_ui_driver_ae46e05f7ce3e3a25855e73d214107ae3} 
+\index{UiDriver@{UiDriver}!currentY\_@{currentY\_}}
+\index{currentY\_@{currentY\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{currentY\_}{currentY\_}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::current\+Y\+\_\+}
+
+\Hypertarget{class_ui_driver_a408162a22f6b305368316a316123d271}\label{class_ui_driver_a408162a22f6b305368316a316123d271} 
+\index{UiDriver@{UiDriver}!diff@{diff}}
+\index{diff@{diff}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{diff}{diff}}
+{\footnotesize\ttfamily uint32\+\_\+t Ui\+Driver\+::diff}
+
+\Hypertarget{class_ui_driver_a0241ea917de65eb397d8fec9b3ebe832}\label{class_ui_driver_a0241ea917de65eb397d8fec9b3ebe832} 
+\index{UiDriver@{UiDriver}!footer@{footer}}
+\index{footer@{footer}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{footer}{footer}}
+{\footnotesize\ttfamily const uint8\+\_\+t Ui\+Driver\+::footer = 13}
+
+\Hypertarget{class_ui_driver_af148d3ad3e26bfe753e61aa9d4331ebb}\label{class_ui_driver_af148d3ad3e26bfe753e61aa9d4331ebb} 
+\index{UiDriver@{UiDriver}!fps@{fps}}
+\index{fps@{fps}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::fps = 0}
+
+\Hypertarget{class_ui_driver_a8649ae4edeceb70efb97d0cb132df760}\label{class_ui_driver_a8649ae4edeceb70efb97d0cb132df760} 
+\index{UiDriver@{UiDriver}!fps\_update\_last\_@{fps\_update\_last\_}}
+\index{fps\_update\_last\_@{fps\_update\_last\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{fps\_update\_last\_}{fps\_update\_last\_}}
+{\footnotesize\ttfamily uint32\+\_\+t Ui\+Driver\+::fps\+\_\+update\+\_\+last\+\_\+}
+
+\Hypertarget{class_ui_driver_afb9a9e168cebb221ce593f8c7af66586}\label{class_ui_driver_afb9a9e168cebb221ce593f8c7af66586} 
+\index{UiDriver@{UiDriver}!frames@{frames}}
+\index{frames@{frames}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{frames}{frames}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::frames = 0}
+
+\Hypertarget{class_ui_driver_af4e41302b175e565df28f8e34eeb35bf}\label{class_ui_driver_af4e41302b175e565df28f8e34eeb35bf} 
+\index{UiDriver@{UiDriver}!header@{header}}
+\index{header@{header}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily const uint8\+\_\+t Ui\+Driver\+::header = 20}
+
+\Hypertarget{class_ui_driver_ac3201a983fde7ab337b7ea739950faf4}\label{class_ui_driver_ac3201a983fde7ab337b7ea739950faf4} 
+\index{UiDriver@{UiDriver}!height@{height}}
+\index{height@{height}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::height}
+
+\Hypertarget{class_ui_driver_afa20cb47ea14ccaa22d1249ed3473a37}\label{class_ui_driver_afa20cb47ea14ccaa22d1249ed3473a37} 
+\index{UiDriver@{UiDriver}!rotation@{rotation}}
+\index{rotation@{rotation}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily uint8\+\_\+t Ui\+Driver\+::rotation}
+
+\Hypertarget{class_ui_driver_a2f2f30fd7e3f9eb6dfe579306b1a1c79}\label{class_ui_driver_a2f2f30fd7e3f9eb6dfe579306b1a1c79} 
+\index{UiDriver@{UiDriver}!screen\_update\_last\_@{screen\_update\_last\_}}
+\index{screen\_update\_last\_@{screen\_update\_last\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{screen\_update\_last\_}{screen\_update\_last\_}}
+{\footnotesize\ttfamily uint32\+\_\+t Ui\+Driver\+::screen\+\_\+update\+\_\+last\+\_\+}
+
+\Hypertarget{class_ui_driver_a6473ee0e2d62a2ec300e0b15fb5b282f}\label{class_ui_driver_a6473ee0e2d62a2ec300e0b15fb5b282f} 
+\index{UiDriver@{UiDriver}!screen\_update\_period\_@{screen\_update\_period\_}}
+\index{screen\_update\_period\_@{screen\_update\_period\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{screen\_update\_period\_}{screen\_update\_period\_}}
+{\footnotesize\ttfamily uint32\+\_\+t Ui\+Driver\+::screen\+\_\+update\+\_\+period\+\_\+}
+
+\Hypertarget{class_ui_driver_a2a498ecce35a35e1aeed0964d8af3d83}\label{class_ui_driver_a2a498ecce35a35e1aeed0964d8af3d83} 
+\index{UiDriver@{UiDriver}!transport\_@{transport\_}}
+\index{transport\_@{transport\_}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{transport\_}{transport\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_l_i9341_spi_transport}{ILI9341\+Spi\+Transport}} Ui\+Driver\+::transport\+\_\+}
+
+\Hypertarget{class_ui_driver_a29176de413dd99a0205d03e213a3b85a}\label{class_ui_driver_a29176de413dd99a0205d03e213a3b85a} 
+\index{UiDriver@{UiDriver}!width@{width}}
+\index{width@{width}!UiDriver@{UiDriver}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Driver\+::width}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\mbox{\hyperlink{daisy___i_l_i9341_8hpp}{daisy\+\_\+\+ILI9341.\+hpp}}\end{DoxyCompactItemize}

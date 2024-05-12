@@ -1,0 +1,59 @@
+\doxysection{Filter\+View.\+h}
+\hypertarget{_filter_view_8h_source}{}\label{_filter_view_8h_source}\index{GUI/FX/FilterView.h@{GUI/FX/FilterView.h}}
+\mbox{\hyperlink{_filter_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILTERVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILTERVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_stepped_slider_8h}{SteppedSlider.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{/*************************************************/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_filter_view}{FilterView}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\textcolor{keywordtype}{int}\ ID,\ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ kpd);}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a0efc93be178cc43c3a720ba79279ff93}{tick}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a1cd655d7b5230cf0eba6d0ba1bdeab2a}{repaint}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a129b3aa4ef3da5b2ec99c9edf470ace9}{clear}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a158c1bddc94ac62288a3755ed0bc7708}{setIsOpen}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isOpen\ =\ state;\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a8f7b86415d35791dbc227df40e7d9cbe}{setIsPainted}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isPainted\ =\ state;\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_view_a8a14ff3bcb573146d7abc22cd97baa85}{setCurrentParam}}(\textcolor{keywordtype}{int}\ newParam)\ \{\ currentParam\ =\ newParam;\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ trackID;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_keypad_driver}{KeypadDriver}}*\ keypad;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_bypass_button}{BypassButton}}\ bypass;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ mode;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ frequency;}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}\ resonance;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ numberOfParameters\ =\ 3;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ parameterNames[3]\ =\ \{\textcolor{stringliteral}{"{}Mode"{}},\ \textcolor{stringliteral}{"{}Frequency"{}},\ \textcolor{stringliteral}{"{}Resonance"{}}\};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ currentParam\ =\ 0;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPainted;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ bypassIndexes[4]\ =\ \{2,\ 7,\ 12,\ 17\};}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

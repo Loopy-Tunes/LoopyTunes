@@ -1,0 +1,54 @@
+\doxysection{allpass.\+hpp}
+\hypertarget{allpass_8hpp_source}{}\label{allpass_8hpp_source}\index{DSP/FX/Reverb/allpass.hpp@{DSP/FX/Reverb/allpass.hpp}}
+\mbox{\hyperlink{allpass_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Allpass\ filter\ declaration}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Written\ by\ Jezar\ at\ Dreampoint,\ June\ 2000}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ http://www.dreampoint.co.uk}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ This\ code\ is\ public\ domain}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_allpass\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_allpass\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{denormals_8h}{denormals.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classallpass}{allpass}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classallpass_ad0a4c84903b886efb77f37d6889998dd}{allpass}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classallpass_ae107adccefebabb0578dc5b9ad89c5d7}{setbuffer}}(\textcolor{keywordtype}{float}\ *buf,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{inline}\ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classallpass_a72ef1d44f5807011889020f2c316cc32}{process}}(\textcolor{keywordtype}{float}\ inp);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classallpass_af93a4f1d4dcc544323978031cb234aa6}{mute}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{classallpass_ad636d830e21de3dd61928875db95c899}{setfeedback}}(\textcolor{keywordtype}{float}\ val);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classallpass_a19e2ab2745647005ce06366b7da64b45}{getfeedback}}();}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ private:}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{classallpass_a4aff3bfeba72ac4b1ce0ced6618ee77c}{feedback}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ *\mbox{\hyperlink{classallpass_aa6b769510364da1d9481948d4a154f8b}{buffer}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{classallpass_a0156b24446b810952ae1df1accb8318f}{bufsize}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Big\ to\ inline\ -\/\ but\ crucial\ for\ speed}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classallpass_a72ef1d44f5807011889020f2c316cc32}{allpass::process}}(\textcolor{keywordtype}{float}\ input)}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ output;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ bufout;}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ bufout\ =\ \mbox{\hyperlink{classallpass_aa6b769510364da1d9481948d4a154f8b}{buffer}}[\mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}}];}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{denormals_8h_a6ba19a68ce81e0a4b889428607c47acd}{undenormalise}}(bufout);}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ output\ =\ -\/input\ +\ bufout;}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classallpass_aa6b769510364da1d9481948d4a154f8b}{buffer}}[\mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}}]\ =\ input\ +\ (bufout*\mbox{\hyperlink{classallpass_a4aff3bfeba72ac4b1ce0ced6618ee77c}{feedback}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}(++\mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}}>=\mbox{\hyperlink{classallpass_a0156b24446b810952ae1df1accb8318f}{bufsize}})\ \mbox{\hyperlink{classallpass_a662a39221d0880b3f99e3ec40e302d4c}{bufidx}}\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\_allpass}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{//ends}}
+
+\end{DoxyCode}

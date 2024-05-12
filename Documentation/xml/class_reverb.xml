@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_reverb" kind="class" language="C++" prot="public">
+    <compoundname>Reverb</compoundname>
+    <includes refid="_reverb_8h" local="no">Reverb.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_reverb_1ac80fb464e5494146a56b06a139b9cba0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Reverb::output[2][BLOCKLENGTH]</definition>
+        <argsstring>[2][BLOCKLENGTH]</argsstring>
+        <name>output</name>
+        <qualifiedname>Reverb::output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="54" column="11" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1ae63f55bb59f573afc406134c88c7c654" prot="private" static="no" mutable="no">
+        <type><ref refid="classrevmodel" kindref="compound">revmodel</ref></type>
+        <definition>revmodel Reverb::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>Reverb::model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="55" column="14" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1ac76044aac36ba2ee4a133a91bf0dc1cb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Reverb::isBypass</definition>
+        <argsstring></argsstring>
+        <name>isBypass</name>
+        <qualifiedname>Reverb::isBypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="57" column="10" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1aac45f7889c73bfb9ebb2d4f1067443c3" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Reverb::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>Reverb::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="58" column="29" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1a339771075ce4e33992bd105508840bf6" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Reverb::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>Reverb::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="59" column="29" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1ab6ef682ceafc7a54e97059d6f999d464" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Reverb::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Reverb::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="60" column="29" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1a6f8110cabbc381139c04c0d96f982c1e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Reverb::damp</definition>
+        <argsstring></argsstring>
+        <name>damp</name>
+        <qualifiedname>Reverb::damp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="61" column="29" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reverb_1a19c18c85bec19a960543ef3bc2a225f4" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_stepped_parameter_wrapper" kindref="compound">SteppedParameterWrapper</ref></type>
+        <definition>SteppedParameterWrapper Reverb::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>Reverb::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="62" column="29" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reverb::init</definition>
+        <argsstring>(EncoderDriver *driver, int trackID)</argsstring>
+        <name>init</name>
+        <qualifiedname>Reverb::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trackID</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver used to initialise the parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="28" column="10" bodyfile="DSP/FX/Reverb/Reverb.cpp" bodystart="3" bodyend="20"/>
+        <references refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" compoundref="_encoder_driver_8h" startline="131" endline="134">EncoderDriver::addBypassCallback</references>
+        <references refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" compoundref="_encoder_driver_8h" startline="122" endline="125">EncoderDriver::addParameter</references>
+        <references refid="namespace_parameter_i_ds_1_1_reverb_1a7e1a38542d0f4e7fec300d774dcb3c0a" compoundref="_parameter_i_ds_8h" startline="54">ParameterIDs::Reverb::amount</references>
+        <references refid="namespace_parameter_i_ds_1_1_reverb_1a4b561a0ea445689ecbdbee7d658b0a16" compoundref="_parameter_i_ds_8h" startline="57">ParameterIDs::Reverb::damp</references>
+        <references refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" compoundref="_stepped_parameter_8h" startline="30" endline="39">SteppedParameter::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_reverb_1a3b44aeacb5d293b8a44bd71936fbe044" compoundref="_parameter_i_ds_8h" startline="55">ParameterIDs::Reverb::mode</references>
+        <references refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" compoundref="_stepped_parameter_8h" startline="104">SteppedParameterWrapper::param</references>
+        <references refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" compoundref="_reverb_8cpp" startline="32" endline="39">setAmount</references>
+        <references refid="class_reverb_1a23b1f08d104a5c23db173d41683ebd8b" compoundref="_reverb_8h" startline="38" endline="38">setBypass</references>
+        <references refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" compoundref="revmodel_8cpp" startline="195" endline="199">revmodel::setdamp</references>
+        <references refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" compoundref="_reverb_8cpp" startline="22" endline="30">setDefaultValues</references>
+        <references refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" compoundref="revmodel_8cpp" startline="217" endline="220">revmodel::setdry</references>
+        <references refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" compoundref="revmodel_8cpp" startline="238" endline="242">revmodel::setmode</references>
+        <references refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" compoundref="revmodel_8cpp" startline="184" endline="188">revmodel::setroomsize</references>
+        <references refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" compoundref="revmodel_8cpp" startline="227" endline="231">revmodel::setwidth</references>
+        <references refid="namespace_parameter_i_ds_1_1_reverb_1a84686a6caa71fdb48d902119b46d7975" compoundref="_parameter_i_ds_8h" startline="56">ParameterIDs::Reverb::size</references>
+        <references refid="namespace_parameter_i_ds_1_1_reverb_1a19f6063d487101b7a67e24b03ac5ffb7" compoundref="_parameter_i_ds_8h" startline="58">ParameterIDs::Reverb::width</references>
+      </memberdef>
+      <memberdef kind="function" id="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reverb::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <qualifiedname>Reverb::setDefaultValues</qualifiedname>
+        <briefdescription>
+<para>Sets tthe default parameter values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="33" column="10" bodyfile="DSP/FX/Reverb/Reverb.cpp" bodystart="22" bodyend="30"/>
+        <references refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" compoundref="_reverb_8cpp" startline="32" endline="39">setAmount</references>
+        <references refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" compoundref="revmodel_8cpp" startline="195" endline="199">revmodel::setdamp</references>
+        <references refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" compoundref="revmodel_8cpp" startline="238" endline="242">revmodel::setmode</references>
+        <references refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" compoundref="revmodel_8cpp" startline="184" endline="188">revmodel::setroomsize</references>
+        <references refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" compoundref="revmodel_8cpp" startline="227" endline="231">revmodel::setwidth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_reverb_1a23b1f08d104a5c23db173d41683ebd8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reverb::setBypass</definition>
+        <argsstring>()</argsstring>
+        <name>setBypass</name>
+        <qualifiedname>Reverb::setBypass</qualifiedname>
+        <briefdescription>
+<para>Sets the bypass state of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="38" column="10" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reverb::setAmount</definition>
+        <argsstring>(float mix)</argsstring>
+        <name>setAmount</name>
+        <qualifiedname>Reverb::setAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>mix</declname>
+        </param>
+        <briefdescription>
+<para>Sets the amount of the effect in the output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="43" column="10" bodyfile="DSP/FX/Reverb/Reverb.cpp" bodystart="32" bodyend="39"/>
+        <references refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" compoundref="revmodel_8cpp" startline="217" endline="220">revmodel::setdry</references>
+        <references refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" compoundref="revmodel_8cpp" startline="206" endline="210">revmodel::setwet</references>
+      </memberdef>
+      <memberdef kind="function" id="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reverb::processBlock</definition>
+        <argsstring>(float *input[2], long size)</argsstring>
+        <name>processBlock</name>
+        <qualifiedname>Reverb::processBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples through the reverb and mixes the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/Reverb.h" line="50" column="10" bodyfile="DSP/FX/Reverb/Reverb.cpp" bodystart="41" bodyend="53"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" compoundref="revmodel_8cpp" startline="74" endline="107">revmodel::processreplace</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Reverb/Reverb.h" line="18" column="1" bodyfile="DSP/FX/Reverb/Reverb.h" bodystart="19" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_reverb_1aac45f7889c73bfb9ebb2d4f1067443c3" prot="private" virt="non-virtual"><scope>Reverb</scope><name>amount</name></member>
+      <member refid="class_reverb_1a6f8110cabbc381139c04c0d96f982c1e" prot="private" virt="non-virtual"><scope>Reverb</scope><name>damp</name></member>
+      <member refid="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" prot="public" virt="non-virtual"><scope>Reverb</scope><name>init</name></member>
+      <member refid="class_reverb_1ac76044aac36ba2ee4a133a91bf0dc1cb" prot="private" virt="non-virtual"><scope>Reverb</scope><name>isBypass</name></member>
+      <member refid="class_reverb_1a339771075ce4e33992bd105508840bf6" prot="private" virt="non-virtual"><scope>Reverb</scope><name>mode</name></member>
+      <member refid="class_reverb_1ae63f55bb59f573afc406134c88c7c654" prot="private" virt="non-virtual"><scope>Reverb</scope><name>model</name></member>
+      <member refid="class_reverb_1ac80fb464e5494146a56b06a139b9cba0" prot="private" virt="non-virtual"><scope>Reverb</scope><name>output</name></member>
+      <member refid="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" prot="public" virt="non-virtual"><scope>Reverb</scope><name>processBlock</name></member>
+      <member refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" prot="public" virt="non-virtual"><scope>Reverb</scope><name>setAmount</name></member>
+      <member refid="class_reverb_1a23b1f08d104a5c23db173d41683ebd8b" prot="public" virt="non-virtual"><scope>Reverb</scope><name>setBypass</name></member>
+      <member refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" prot="public" virt="non-virtual"><scope>Reverb</scope><name>setDefaultValues</name></member>
+      <member refid="class_reverb_1ab6ef682ceafc7a54e97059d6f999d464" prot="private" virt="non-virtual"><scope>Reverb</scope><name>size</name></member>
+      <member refid="class_reverb_1a19c18c85bec19a960543ef3bc2a225f4" prot="private" virt="non-virtual"><scope>Reverb</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,39 @@
+\doxysection{Stepped\+Slider.\+h}
+\hypertarget{_stepped_slider_8h_source}{}\label{_stepped_slider_8h_source}\index{GUI/FX/SteppedSlider.h@{GUI/FX/SteppedSlider.h}}
+\mbox{\hyperlink{_stepped_slider_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STEPPEDSLIDER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STEPPEDSLIDER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_keypad_driver_8h}{../../Drivers/KeypadDriver.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bypass_button_8h}{BypassButton.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/********************************************************/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_stepped_slider}{SteppedSlider}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\textcolor{keywordtype}{int}\ ID,\ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ ed);}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ /***************************************************************************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stepped_slider_a680e304b4430e073e9ec701599b1c484}{tick}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stepped_slider_a848340a29833aba52aac904e7237bcc1}{setSelected}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stepped_slider_a69f8b069bcade4ce38fcb245004fd77d}{repaint}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ encoder;}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ paramID;}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_stepped_parameter}{SteppedParameter}}*\ param;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ curVal;}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

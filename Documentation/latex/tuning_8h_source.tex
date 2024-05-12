@@ -1,0 +1,66 @@
+\doxysection{tuning.\+h}
+\hypertarget{tuning_8h_source}{}\label{tuning_8h_source}\index{DSP/FX/Reverb/tuning.h@{DSP/FX/Reverb/tuning.h}}
+\mbox{\hyperlink{tuning_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Reverb\ model\ tuning\ values}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Written\ by\ Jezar\ at\ Dreampoint,\ June\ 2000}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ http://www.dreampoint.co.uk}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ This\ code\ is\ public\ domain}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_tuning\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_tuning\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{tuning_8h_a6113b534a2364513007632803a5a5606}{numcombs}}\ \ \ \ \ \ \ \ =\ 8;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{tuning_8h_acfd9a2918469c01995845b296691fb9d}{numallpasses}}\ \ \ \ =\ 4;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_a37b090b4ac47aa54faef525513dafe60}{muted}}\ \ \ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_a4b2d07fa74a459ca1939e020b9363513}{fixedgain}}\ \ \ \ \ \ =\ 0.015f;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ac252ba88b1d8c6eede7bd789606583e7}{scalewet}}\ \ \ \ \ \ \ \ =\ 3;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ae052a2e8049ae49e69b95a5bb355c360}{scaledry}}\ \ \ \ \ \ \ \ =\ 2;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_a3c324c89141349a2f6cabd81ef6ea6b8}{scaledamp}}\ \ \ \ \ \ =\ 0.4f;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_af72a69ee05deca46c9a0b368f2c675c5}{scaleroom}}\ \ \ \ \ \ =\ 0.28f;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ab23f3ca7f31752dfa409b01ed218ba9e}{offsetroom}}\ \ \ \ \ \ \ \ =\ 0.7f;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ae7682d913183f17fdb9eeb2b7bc99809}{initialroom}}\ \ \ \ \ \ =\ 0.5f;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_af22778db97e16041f5d2e2fca4c308b8}{initialdamp}}\ \ \ \ \ \ =\ 0.5f;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_aeb22d1099dcd9cf40d40775bedc8505d}{initialwet}}\ \ \ \ \ \ \ \ =\ 1/\mbox{\hyperlink{tuning_8h_ac252ba88b1d8c6eede7bd789606583e7}{scalewet}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_af1c67ee2860505e7a3709fe5373b6e75}{initialdry}}\ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ac59a94da5e00f728a58de07f0a115d77}{initialwidth}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_ada8dbb1ebee3ac40472d19b2bea9a8a1}{initialmode}}\ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{tuning_8h_a07e585230464f52428c5ed003afd31a0}{freezemode}}\ \ \ \ \ \ \ \ =\ 0.5f;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}}\ \ \ \ =\ 23;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ These\ values\ assume\ 44.1KHz\ sample\ rate}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ they\ will\ probably\ be\ OK\ for\ 48KHz\ sample\ rate}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ but\ would\ need\ scaling\ for\ 96KHz\ (or\ other)\ sample\ rates.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ The\ values\ were\ obtained\ by\ listening\ tests.}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a1d937b4082b5bdd6702062c38a4851a3}{combtuningL1}}\ \ \ \ \ \ =\ 1116;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_aea2a95a4d382fd25aeda75bfcf81f6fc}{combtuningR1}}\ \ \ \ \ \ =\ 1116+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a7de10fb112a95e5428bdadf594fac941}{combtuningL2}}\ \ \ \ \ \ =\ 1188;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a11a40fb7e27ba55fde416148b62d39f0}{combtuningR2}}\ \ \ \ \ \ =\ 1188+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a44a04b8e8e3142d42ace61e96c53fa5c}{combtuningL3}}\ \ \ \ \ \ =\ 1277;}
+\DoxyCodeLine{00037\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_aea4af41ea6b80a9d63fd211be90596a0}{combtuningR3}}\ \ \ \ \ \ =\ 1277+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00038\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_ae00bf5e5706dda9918c0aec238582980}{combtuningL4}}\ \ \ \ \ \ =\ 1356;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a81faef67ad6b907de023e050ef0591e7}{combtuningR4}}\ \ \ \ \ \ =\ 1356+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00040\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_ad5c91c518fea642d42cd196225b54f3c}{combtuningL5}}\ \ \ \ \ \ =\ 1422;}
+\DoxyCodeLine{00041\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a92dccd0a79e8c4d128f926dddb4fa677}{combtuningR5}}\ \ \ \ \ \ =\ 1422+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a7ae4ebcb2256586d8444c45a2c3eeb61}{combtuningL6}}\ \ \ \ \ \ =\ 1491;}
+\DoxyCodeLine{00043\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a88880376caa9233aeb05a1272a3ed2b3}{combtuningR6}}\ \ \ \ \ \ =\ 1491+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a326b3dbc543c718d8bb7d4b64b2930e7}{combtuningL7}}\ \ \ \ \ \ =\ 1557;}
+\DoxyCodeLine{00045\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a9a676a67ceab64b63a394e5ead6e1206}{combtuningR7}}\ \ \ \ \ \ =\ 1557+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00046\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_ab3bf1144bd9de280598f297ea6410cd5}{combtuningL8}}\ \ \ \ \ \ =\ 1617;}
+\DoxyCodeLine{00047\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a2e5feed8bfa0f6d6dc7401a20e48c233}{combtuningR8}}\ \ \ \ \ \ =\ 1617+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00048\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_aa3a4d3bffe35e488a824b38592aa9541}{allpasstuningL1}}\ \ \ \ =\ 556;}
+\DoxyCodeLine{00049\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_af3f26c17e483921bf25ad7439471fb1f}{allpasstuningR1}}\ \ \ \ =\ 556+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00050\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a85708f9e43a006b9fb7029a240c7f20a}{allpasstuningL2}}\ \ \ \ =\ 441;}
+\DoxyCodeLine{00051\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a70823eff8728e25e6091c6f0356e4404}{allpasstuningR2}}\ \ \ \ =\ 441+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00052\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a5cf01f35152de3120d4b9b1629220e5c}{allpasstuningL3}}\ \ \ \ =\ 341;}
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a83062072709f51a301b50ce4de6b8bb7}{allpasstuningR3}}\ \ \ \ =\ 341+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_ad3378fd7a09cde9697fb239e8849525c}{allpasstuningL4}}\ \ \ \ =\ 225;}
+\DoxyCodeLine{00055\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{tuning_8h_a00d759e1af846b3980f749ea03964928}{allpasstuningR4}}\ \ \ \ =\ 225+\mbox{\hyperlink{tuning_8h_a8afb5fed07d2553434e8b1ac6eb8ed28}{stereospread}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\_tuning\_}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//ends}}
+\DoxyCodeLine{00060\ }
+
+\end{DoxyCode}

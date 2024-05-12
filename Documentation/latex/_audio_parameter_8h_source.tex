@@ -1,0 +1,91 @@
+\doxysection{Audio\+Parameter.\+h}
+\hypertarget{_audio_parameter_8h_source}{}\label{_audio_parameter_8h_source}\index{Parameters/AudioParameter.h@{Parameters/AudioParameter.h}}
+\mbox{\hyperlink{_audio_parameter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AUDIOPARAMETER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AUDIOPARAMETER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}daisy\_seed.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}daisysp.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_helpers_8h}{../Utils/Helpers.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_constants_8h}{../Utils/Constants.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*****************************************************************************/}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }daisy;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ type>}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_audio_parameter}{AudioParameter}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ /**************************************************************************************/}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_parameter_afa4f9d66f0cf42cde896acaa5040c9e3}{init}}(DaisySeed*\ seed,\ type\ mi,\ type\ ma,\ \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{CurveType}}\ c,\ \textcolor{keywordtype}{int}\ ID,\ std::function<\textcolor{keywordtype}{void}(type)>\ cb)}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ hw\ =\ seed;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ input\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ curVal\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ min\ =\ mi;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ max\ =\ ma;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ curve\ =\ c;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ channelID\ =\ ID;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ callback\ =\ cb;}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ /*******************************************************************/}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_parameter_a67be018b61cb8e98420a54d6a6992ff7}{tick}}()\ }
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ newInput\ =\ hw-\/>adc.GetFloat(channelID);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(newInput\ >\ (input\ +\ jitter)\ ||\ newInput\ <\ (input\ -\/\ jitter))}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ input\ =\ newInput;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audio_parameter_a0c02048d1e7431e27199f5098e4902a2}{processCurve}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ callback(curVal);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ /***************************************************************************/}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_parameter_a0c02048d1e7431e27199f5098e4902a2}{processCurve}}()}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(curve)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ curVal\ =\ ((input\ /\ 1.0f)\ *\ (max\ -\/\ min))\ +\ min;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757}{EXP}}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ curVal\ =\ ((input\ *\ input)\ *\ (max\ -\/\ min))\ +\ min;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ /**********************************************************/}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{inline}\ type\ \mbox{\hyperlink{class_audio_parameter_a654ab6b382d01b7046d9ed7c38e9b39c}{getValue}}()\ \{\ \textcolor{keywordflow}{return}\ curVal;\ \}}
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ DaisySeed*\ hw;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ input;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ jitter\ =\ 0.01f;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ type\ curVal,\ min,\ max;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ channelID;}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{_helpers_8h_a007dea27057008224e9da69eaeca8606}{CurveType}}\ curve;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::function<void(type)>\ callback;}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ type>}
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_audio_parameter_wrapper}{AudioParameterWrapper}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_audio_parameter}{AudioParameter<type>}}\ \mbox{\hyperlink{struct_audio_parameter_wrapper_a5278e8fed92f6f1cd44a4fb4e403d075}{param}};}
+\DoxyCodeLine{00101\ \ \ \ \ type\ \mbox{\hyperlink{struct_audio_parameter_wrapper_a7a8a5d2dab55b531f27aa21d5a769151}{value}};}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

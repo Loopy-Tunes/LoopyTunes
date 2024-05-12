@@ -1,8 +1,6 @@
 #ifndef STYLESHEET_H
 #define STYLESHEET_H
 
-#include "../../Drivers/daisy_ILI9341.hpp"
-
 namespace StyleSheet
 {
     namespace Mixer
@@ -14,17 +12,17 @@ namespace StyleSheet
         const static int faderSpacing = 35; 
         const static int firstFaderX = (screenWidth - (faderWidth * 4 + faderSpacing * 3)) / 2; 
         const static int mixerBottom = 180; 
-        const static uint16_t frameColor = COLOR_CYAN;
-        const static uint16_t textColor = COLOR_WHITE;
+        const static uint16_t frameColor = 5; // CYAN
+        const static uint16_t textColor = 2; // WHITE
         const static int frameThickness = 2; 
     }
 
     namespace Tracks
     {
-        static uint16_t borderColor = COLOR_CYAN;
-        static uint16_t text_color = COLOR_WHITE;
-        static uint16_t effectBoxColor = COLOR_BLACK;
-        static uint16_t selectedEffectColor = COLOR_GREEN;
+        static uint16_t borderColor = 5; // CYAN
+        static uint16_t text_color = 2; // WHITE
+        static uint16_t effectBoxColor = 1; // BLACK
+        static uint16_t selectedEffectColor = 11;
         
         // Define fonts
         static const FontDef& smallerFont = Font_7x10; 
@@ -43,9 +41,9 @@ namespace StyleSheet
     {
         const static uint16_t screenWidth = 320;
         const static uint16_t screenHeight = 240;
-        const static uint16_t borderColor = COLOR_CYAN;
-        const static uint16_t textColor = COLOR_CYAN;
-        const static uint16_t sliderBackColor = COLOR_BLACK;
+        const static uint16_t borderColor = 5;
+        const static uint16_t textColor = 5;
+        const static uint16_t sliderBackColor = 1;
         const static uint16_t headerHeight = 50;
         const static uint16_t paramSpacing = 35; // Adjust spacing as needed
         const static uint16_t sliderHeight = 20; // Adjust height as needed

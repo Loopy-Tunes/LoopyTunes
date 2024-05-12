@@ -1,0 +1,168 @@
+\doxysection{ILI9341\+Spi\+Transport Class Reference}
+\hypertarget{class_i_l_i9341_spi_transport}{}\label{class_i_l_i9341_spi_transport}\index{ILI9341SpiTransport@{ILI9341SpiTransport}}
+
+
+{\ttfamily \#include $<$daisy\+\_\+\+ILI9341.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_l_i9341_spi_transport_ad5270a7a454d7cdade23c09b0ccf6d9a}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_i_l_i9341_spi_transport_a71c6c3f032960df869dd6d26544c59df}{Reset}} ()
+\item 
+Spi\+Handle\+::\+Result \mbox{\hyperlink{class_i_l_i9341_spi_transport_a1df1fd72bb5c62b3292e33e489880aff}{Send\+Data\+DMA}} ()
+\item 
+Spi\+Handle\+::\+Result \mbox{\hyperlink{class_i_l_i9341_spi_transport_a502cbadb8819357dfe9525b62b501e6c}{Send\+Data\+DMA}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff, size\+\_\+t size)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_i_l_i9341_spi_transport_a3fa89acdf736f5cd37c10763395a7e25}{Get\+Transfer\+Size}} () const
+\item 
+Spi\+Handle\+::\+Result \mbox{\hyperlink{class_i_l_i9341_spi_transport_a8f57e2c8e862176ada1a051b0709e78f}{Send\+Command}} (uint8\+\_\+t cmd)
+\item 
+Spi\+Handle\+::\+Result \mbox{\hyperlink{class_i_l_i9341_spi_transport_ad6b1480f20b3344d9d29c3fb29ea737d}{Send\+Data}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_i_l_i9341_spi_transport_a6c101f4e3e1f44bf76acf5704ca0deed}{Set\+Address\+Window}} (uint16\+\_\+t x0, uint16\+\_\+t y0, uint16\+\_\+t x1, uint16\+\_\+t y1)
+\item 
+void \mbox{\hyperlink{class_i_l_i9341_spi_transport_a213a7c7d5ac073b2cefe4710c3e5eaf2}{Paint\+Pixel}} (uint32\+\_\+t id, uint8\+\_\+t color\+\_\+id, uint8\+\_\+t alpha=255) const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_i_l_i9341_spi_transport_ab219741bd41b9d37bdcee097484b390a}{Get\+Pixel}} (uint32\+\_\+t id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_i_l_i9341_spi_transport_aa62ba43ec164038bd58b30b0f534266a}{Tx\+Complete\+Callback}} (void \texorpdfstring{$\ast$}{*}context, Spi\+Handle\+::\+Result result)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_i_l_i9341_spi_transport_ab03955bfae99260abf3d20d11dcfd325}{dma\+\_\+busy}} = false
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_i_l_i9341_spi_transport_aa35b557b6c7405f9896efa5c7fb3fe2a}{remaining\+\_\+buff}} = 0
+\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_i_l_i9341_spi_transport_a7dd48fa6f0737bd05ec536fc2a75642b}{buf\+\_\+chunk\+\_\+size}} = \mbox{\hyperlink{class_i_l_i9341_spi_transport_ad862ffbafe4dfcb39307570c9ce4c7cd}{buffer\+\_\+size}} / 3
+\item 
+Spi\+Handle \mbox{\hyperlink{class_i_l_i9341_spi_transport_a277dbdcd3748bba3818e9c5fa05d1711}{spi\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_i_l_i9341_spi_transport_a81b61ce53699de4fa426436abebaa355}{tft\+Palette}} \mbox{[}\mbox{\hyperlink{daisy___i_l_i9341_8hpp_a611399bdfbc1a749719f04815bcda743a8308b3d4f97be361358331f685654347}{NUMBER\+\_\+\+OF\+\_\+\+TFT\+\_\+\+COLORS}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t const \mbox{\hyperlink{class_i_l_i9341_spi_transport_ad862ffbafe4dfcb39307570c9ce4c7cd}{buffer\+\_\+size}} = 153600
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+SPI Transport for ILI9341 TFT display devices 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_l_i9341_spi_transport_ab219741bd41b9d37bdcee097484b390a}\label{class_i_l_i9341_spi_transport_ab219741bd41b9d37bdcee097484b390a} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily uint16\+\_\+t ILI9341\+Spi\+Transport\+::\+Get\+Pixel (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a3fa89acdf736f5cd37c10763395a7e25}\label{class_i_l_i9341_spi_transport_a3fa89acdf736f5cd37c10763395a7e25} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!GetTransferSize@{GetTransferSize}}
+\index{GetTransferSize@{GetTransferSize}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{GetTransferSize()}{GetTransferSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t ILI9341\+Spi\+Transport\+::\+Get\+Transfer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_ad5270a7a454d7cdade23c09b0ccf6d9a}\label{class_i_l_i9341_spi_transport_ad5270a7a454d7cdade23c09b0ccf6d9a} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!Init@{Init}}
+\index{Init@{Init}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void ILI9341\+Spi\+Transport\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a213a7c7d5ac073b2cefe4710c3e5eaf2}\label{class_i_l_i9341_spi_transport_a213a7c7d5ac073b2cefe4710c3e5eaf2} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!PaintPixel@{PaintPixel}}
+\index{PaintPixel@{PaintPixel}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{PaintPixel()}{PaintPixel()}}
+{\footnotesize\ttfamily void ILI9341\+Spi\+Transport\+::\+Paint\+Pixel (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{uint8\+\_\+t}]{color\+\_\+id,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a71c6c3f032960df869dd6d26544c59df}\label{class_i_l_i9341_spi_transport_a71c6c3f032960df869dd6d26544c59df} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!Reset@{Reset}}
+\index{Reset@{Reset}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void ILI9341\+Spi\+Transport\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a8f57e2c8e862176ada1a051b0709e78f}\label{class_i_l_i9341_spi_transport_a8f57e2c8e862176ada1a051b0709e78f} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!SendCommand@{SendCommand}}
+\index{SendCommand@{SendCommand}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{SendCommand()}{SendCommand()}}
+{\footnotesize\ttfamily Spi\+Handle\+::\+Result ILI9341\+Spi\+Transport\+::\+Send\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_ad6b1480f20b3344d9d29c3fb29ea737d}\label{class_i_l_i9341_spi_transport_ad6b1480f20b3344d9d29c3fb29ea737d} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!SendData@{SendData}}
+\index{SendData@{SendData}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{SendData()}{SendData()}}
+{\footnotesize\ttfamily Spi\+Handle\+::\+Result ILI9341\+Spi\+Transport\+::\+Send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a1df1fd72bb5c62b3292e33e489880aff}\label{class_i_l_i9341_spi_transport_a1df1fd72bb5c62b3292e33e489880aff} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!SendDataDMA@{SendDataDMA}}
+\index{SendDataDMA@{SendDataDMA}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{SendDataDMA()}{SendDataDMA()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Spi\+Handle\+::\+Result ILI9341\+Spi\+Transport\+::\+Send\+Data\+DMA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a502cbadb8819357dfe9525b62b501e6c}\label{class_i_l_i9341_spi_transport_a502cbadb8819357dfe9525b62b501e6c} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!SendDataDMA@{SendDataDMA}}
+\index{SendDataDMA@{SendDataDMA}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{SendDataDMA()}{SendDataDMA()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Spi\+Handle\+::\+Result ILI9341\+Spi\+Transport\+::\+Send\+Data\+DMA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a6c101f4e3e1f44bf76acf5704ca0deed}\label{class_i_l_i9341_spi_transport_a6c101f4e3e1f44bf76acf5704ca0deed} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!SetAddressWindow@{SetAddressWindow}}
+\index{SetAddressWindow@{SetAddressWindow}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{SetAddressWindow()}{SetAddressWindow()}}
+{\footnotesize\ttfamily void ILI9341\+Spi\+Transport\+::\+Set\+Address\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x0,  }\item[{uint16\+\_\+t}]{y0,  }\item[{uint16\+\_\+t}]{x1,  }\item[{uint16\+\_\+t}]{y1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_aa62ba43ec164038bd58b30b0f534266a}\label{class_i_l_i9341_spi_transport_aa62ba43ec164038bd58b30b0f534266a} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!TxCompleteCallback@{TxCompleteCallback}}
+\index{TxCompleteCallback@{TxCompleteCallback}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{TxCompleteCallback()}{TxCompleteCallback()}}
+{\footnotesize\ttfamily static void ILI9341\+Spi\+Transport\+::\+Tx\+Complete\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{Spi\+Handle\+::\+Result}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_i_l_i9341_spi_transport_a7dd48fa6f0737bd05ec536fc2a75642b}\label{class_i_l_i9341_spi_transport_a7dd48fa6f0737bd05ec536fc2a75642b} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!buf\_chunk\_size@{buf\_chunk\_size}}
+\index{buf\_chunk\_size@{buf\_chunk\_size}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{buf\_chunk\_size}{buf\_chunk\_size}}
+{\footnotesize\ttfamily const uint16\+\_\+t ILI9341\+Spi\+Transport\+::buf\+\_\+chunk\+\_\+size = \mbox{\hyperlink{class_i_l_i9341_spi_transport_ad862ffbafe4dfcb39307570c9ce4c7cd}{buffer\+\_\+size}} / 3}
+
+\Hypertarget{class_i_l_i9341_spi_transport_ad862ffbafe4dfcb39307570c9ce4c7cd}\label{class_i_l_i9341_spi_transport_ad862ffbafe4dfcb39307570c9ce4c7cd} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!buffer\_size@{buffer\_size}}
+\index{buffer\_size@{buffer\_size}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{buffer\_size}{buffer\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t const ILI9341\+Spi\+Transport\+::buffer\+\_\+size = 153600\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_i_l_i9341_spi_transport_ab03955bfae99260abf3d20d11dcfd325}\label{class_i_l_i9341_spi_transport_ab03955bfae99260abf3d20d11dcfd325} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!dma\_busy@{dma\_busy}}
+\index{dma\_busy@{dma\_busy}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{dma\_busy}{dma\_busy}}
+{\footnotesize\ttfamily bool ILI9341\+Spi\+Transport\+::dma\+\_\+busy = false}
+
+\Hypertarget{class_i_l_i9341_spi_transport_aa35b557b6c7405f9896efa5c7fb3fe2a}\label{class_i_l_i9341_spi_transport_aa35b557b6c7405f9896efa5c7fb3fe2a} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!remaining\_buff@{remaining\_buff}}
+\index{remaining\_buff@{remaining\_buff}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{remaining\_buff}{remaining\_buff}}
+{\footnotesize\ttfamily uint32\+\_\+t ILI9341\+Spi\+Transport\+::remaining\+\_\+buff = 0}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a277dbdcd3748bba3818e9c5fa05d1711}\label{class_i_l_i9341_spi_transport_a277dbdcd3748bba3818e9c5fa05d1711} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!spi\_@{spi\_}}
+\index{spi\_@{spi\_}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{spi\_}{spi\_}}
+{\footnotesize\ttfamily Spi\+Handle ILI9341\+Spi\+Transport\+::spi\+\_\+}
+
+\Hypertarget{class_i_l_i9341_spi_transport_a81b61ce53699de4fa426436abebaa355}\label{class_i_l_i9341_spi_transport_a81b61ce53699de4fa426436abebaa355} 
+\index{ILI9341SpiTransport@{ILI9341SpiTransport}!tftPalette@{tftPalette}}
+\index{tftPalette@{tftPalette}!ILI9341SpiTransport@{ILI9341SpiTransport}}
+\doxysubsubsection{\texorpdfstring{tftPalette}{tftPalette}}
+{\footnotesize\ttfamily uint16\+\_\+t ILI9341\+Spi\+Transport\+::tft\+Palette\mbox{[}\mbox{\hyperlink{daisy___i_l_i9341_8hpp_a611399bdfbc1a749719f04815bcda743a8308b3d4f97be361358331f685654347}{NUMBER\+\_\+\+OF\+\_\+\+TFT\+\_\+\+COLORS}}\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\mbox{\hyperlink{daisy___i_l_i9341_8hpp}{daisy\+\_\+\+ILI9341.\+hpp}}\end{DoxyCompactItemize}

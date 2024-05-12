@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
    6:Drivers/daisy_ILI9341.hpp **** #include "daisy_seed.h"
    7:Drivers/daisy_ILI9341.hpp **** #include <util/oled_fonts.h>
    8:Drivers/daisy_ILI9341.hpp **** #include <hid/disp/graphics_common.h>
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 2
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 2
 
 
    9:Drivers/daisy_ILI9341.hpp **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
   63:Drivers/daisy_ILI9341.hpp ****         spi_config.mode      = SpiHandle::Config::Mode::MASTER;
   64:Drivers/daisy_ILI9341.hpp ****         spi_config.direction = SpiHandle::Config::Direction::TWO_LINES_TX_ONLY;
   65:Drivers/daisy_ILI9341.hpp ****         spi_config.clock_polarity  = SpiHandle::Config::ClockPolarity::LOW;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 3
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 3
 
 
   66:Drivers/daisy_ILI9341.hpp ****         spi_config.baud_prescaler  = SpiHandle::Config::BaudPrescaler::PS_2;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  120:Drivers/daisy_ILI9341.hpp ****             transport->remaining_buff -= transfer_size;
  121:Drivers/daisy_ILI9341.hpp ****             if(transport->remaining_buff > 0)
  122:Drivers/daisy_ILI9341.hpp ****             {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 4
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 4
 
 
  123:Drivers/daisy_ILI9341.hpp ****                 uint8_t* next_buffer_ptr = frame_buffer + (transport->buffer_size - transport->rema
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  177:Drivers/daisy_ILI9341.hpp **** 
  178:Drivers/daisy_ILI9341.hpp ****     SpiHandle::Result SendCommand(uint8_t cmd)
  179:Drivers/daisy_ILI9341.hpp ****     {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 5
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 5
 
 
  180:Drivers/daisy_ILI9341.hpp ****         dsy_gpio_write(&pin_dc_, 0);
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  234:Drivers/daisy_ILI9341.hpp ****     }
  235:Drivers/daisy_ILI9341.hpp **** 
  236:Drivers/daisy_ILI9341.hpp ****     uint16_t GetPixel(uint32_t id) { return color_mem[id]; }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 6
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 6
 
 
  237:Drivers/daisy_ILI9341.hpp **** 
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  291:Drivers/daisy_ILI9341.hpp ****         0000011111100000 // from MASK_G * 1
  292:Drivers/daisy_ILI9341.hpp ****   0000011111100000000000 //   to MASK_G * MAX_ALPHA
  293:Drivers/daisy_ILI9341.hpp **** */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 7
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 7
 
 
  294:Drivers/daisy_ILI9341.hpp **** 
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
    2:../../../libDaisy//src/per/spi.h **** #ifndef DSY_SPI_H
    3:../../../libDaisy//src/per/spi.h **** #define DSY_SPI_H
    4:../../../libDaisy//src/per/spi.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 8
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 8
 
 
    5:../../../libDaisy//src/per/spi.h **** #include "daisy_core.h"
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
   59:../../../libDaisy//src/per/spi.h **** 
   60:../../../libDaisy//src/per/spi.h ****         enum class NSS
   61:../../../libDaisy//src/per/spi.h ****         {
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 9
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 9
 
 
   62:../../../libDaisy//src/per/spi.h ****             SOFT,
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
   62              		.loc 2 55 7 view .LVU6
   63 000c 1A73     		strb	r2, [r3, #12]
   64              	.LBE35:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 10
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 10
 
 
   65              	.LBE37:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  117              		.section	.sdram_bss,"aw"
  120              	color_mem:
  121 0000 00000000 		.space	76800
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 11
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 11
 
 
  121      00000000 
@@ -651,20 +651,20 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 1
  163              		.file 38 "../../../libDaisy//src/util/oled_fonts.h"
  164              		.file 39 "<built-in>"
  165              		.file 40 "../../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s 			page 12
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ILI9341_ui_driver.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:19     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:24     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 _GLOBAL__sub_I_frame_buffer
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:100    .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000028 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:105    .init_array:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:115    .bss.lcd:0000000000000000 lcd
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:120    .sdram_bss:0000000000000000 color_mem
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:125    .sram1_bss:0000000000000000 frame_buffer
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:111    .bss.lcd:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:121    .sdram_bss:0000000000000000 $d
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccz3bQom.s:126    .sram1_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:19     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:24     .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000000 _GLOBAL__sub_I_frame_buffer
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:100    .text.startup._GLOBAL__sub_I_frame_buffer:0000000000000028 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:105    .init_array:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:115    .bss.lcd:0000000000000000 lcd
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:120    .sdram_bss:0000000000000000 color_mem
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:125    .sram1_bss:0000000000000000 frame_buffer
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:111    .bss.lcd:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:121    .sdram_bss:0000000000000000 $d
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccJ9LAKH.s:126    .sram1_bss:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

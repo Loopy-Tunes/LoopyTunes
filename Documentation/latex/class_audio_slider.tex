@@ -1,0 +1,68 @@
+\doxysection{Audio\+Slider Class Reference}
+\hypertarget{class_audio_slider}{}\label{class_audio_slider}\index{AudioSlider@{AudioSlider}}
+
+
+{\ttfamily \#include $<$Audio\+Slider.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_slider_ac041901c3967237cd070a8bf017fc2cb}{init}} (int ID, Daisy\+Seed \texorpdfstring{$\ast$}{*}seed)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_slider_a9cdeb4a1ef9f5a9b8998defd9d8e93a9}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the slider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_slider_a0f0d7e4bc1389b174ff93cb6f58474a8}{repaint}} (int index, bool selected)
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the slider on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_slider_ac041901c3967237cd070a8bf017fc2cb}\label{class_audio_slider_ac041901c3967237cd070a8bf017fc2cb} 
+\index{AudioSlider@{AudioSlider}!init@{init}}
+\index{init@{init}!AudioSlider@{AudioSlider}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Audio\+Slider\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Daisy\+Seed \texorpdfstring{$\ast$}{*}}]{seed }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The channel ID of the ADC channel the slider is assigned to \\
+\hline
+{\em seed} & A pointer to the hardware instance \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_slider_a0f0d7e4bc1389b174ff93cb6f58474a8}\label{class_audio_slider_a0f0d7e4bc1389b174ff93cb6f58474a8} 
+\index{AudioSlider@{AudioSlider}!repaint@{repaint}}
+\index{repaint@{repaint}!AudioSlider@{AudioSlider}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Audio\+Slider\+::repaint (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{selected }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the slider on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & The channel index of the slider \\
+\hline
+{\em selected} & If the channel is selected or not \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_slider_a9cdeb4a1ef9f5a9b8998defd9d8e93a9}\label{class_audio_slider_a9cdeb4a1ef9f5a9b8998defd9d8e93a9} 
+\index{AudioSlider@{AudioSlider}!tick@{tick}}
+\index{tick@{tick}!AudioSlider@{AudioSlider}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Audio\+Slider\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the slider. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\mbox{\hyperlink{_audio_slider_8h}{Audio\+Slider.\+h}}\item 
+GUI/\mbox{\hyperlink{_audio_slider_8cpp}{Audio\+Slider.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\doxysection{Delay.\+h}
+\hypertarget{_delay_8h_source}{}\label{_delay_8h_source}\index{DSP/FX/Delay.h@{DSP/FX/Delay.h}}
+\mbox{\hyperlink{_delay_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DELAY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DELAY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_values_8h}{../../Parameters/DefaultValues.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_encoder_driver_8h}{../../Drivers/EncoderDriver.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAXDELAY\ 240000\ }\textcolor{comment}{//\ 5\ second\ max\ delay}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/************************************************************/}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }daisysp;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delay}{Delay}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ /******************************************************************************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \textcolor{keywordtype}{int}\ trackID,\ DelayLine<float,\ MAXDELAY>*\ dl[2]);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_a4aec2a60814203c1cca8fcc500e56c29}{setDefaultValues}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_a0dd8317647695e5e01083e26da82b47d}{setBypass}}()\ \{\ isBypass\ =\ !isBypass;\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_a81a48de61685cddd4be9f93678322a0d}{setAmount}}(\textcolor{keywordtype}{float}\ a)\ \{\ amount.\mbox{\hyperlink{struct_stepped_parameter_wrapper_a8e0d05dc4b24df4a336a88f2dd057d4a}{value}}\ =\ a;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_a11d964425f9473ede1b9fea0c9c060bf}{setDelay}}(\textcolor{keywordtype}{size\_t}\ s)\ \{\ delayLine[0]-\/>SetDelay(s),\ delayLine[1]-\/>SetDelay(s);\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_ac091ce8e3301c908ea14f538f628df20}{setFeedback}}(\textcolor{keywordtype}{float}\ f)\ \{\ feedback.\mbox{\hyperlink{struct_stepped_parameter_wrapper_a8e0d05dc4b24df4a336a88f2dd057d4a}{value}}\ =\ f;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ /***************************************************************************/}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delay_ab4234fe0620a5f4f40ae0383910d9513}{processBlock}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{size\_t}\ size);\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ type>}
+\DoxyCodeLine{00065\ \ \ \ \ type\ toSize(type\ toConvert)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ round((\textcolor{keywordtype}{size\_t})toConvert);}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBypass;}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ amount;}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ size;}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ feedback;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ DelayLine<float,\ MAXDELAY>*\ delayLine[2];}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

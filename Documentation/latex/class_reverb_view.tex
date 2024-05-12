@@ -1,0 +1,114 @@
+\doxysection{Reverb\+View Class Reference}
+\hypertarget{class_reverb_view}{}\label{class_reverb_view}\index{ReverbView@{ReverbView}}
+
+
+{\ttfamily \#include $<$Reverb\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reverb_view_a4f5e138fe1b629d7427c29e652c44690}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_a47522b1723f193fb31fcc37223a92f8c}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_aec6647e01ef1be174dbc00512c7b500d}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_a371f3e584ce056939cb0f0243c2c019e}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_ab547bd971093cb4d553156f857373a55}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_a1103ea5fefcabbb7ab16d70c43e2f33a}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reverb_view_af4731a99c5e3ee1fffe5a3082f966f2f}{set\+Current\+Param}} (int new\+Param)
+\begin{DoxyCompactList}\small\item\em Sets the currently selected parameter on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_reverb_view}{Reverb\+View} Function\+: FX level GUI class for the reverb 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reverb_view_a371f3e584ce056939cb0f0243c2c019e}\label{class_reverb_view_a371f3e584ce056939cb0f0243c2c019e} 
+\index{ReverbView@{ReverbView}!clear@{clear}}
+\index{clear@{clear}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Reverb\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_reverb_view_a4f5e138fe1b629d7427c29e652c44690}\label{class_reverb_view_a4f5e138fe1b629d7427c29e652c44690} 
+\index{ReverbView@{ReverbView}!init@{init}}
+\index{init@{init}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Reverb\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the track view the instance belongs to \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reverb_view_aec6647e01ef1be174dbc00512c7b500d}\label{class_reverb_view_aec6647e01ef1be174dbc00512c7b500d} 
+\index{ReverbView@{ReverbView}!repaint@{repaint}}
+\index{repaint@{repaint}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Reverb\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_reverb_view_af4731a99c5e3ee1fffe5a3082f966f2f}\label{class_reverb_view_af4731a99c5e3ee1fffe5a3082f966f2f} 
+\index{ReverbView@{ReverbView}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Reverb\+View\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the currently selected parameter on the LCD. 
+
+\Hypertarget{class_reverb_view_ab547bd971093cb4d553156f857373a55}\label{class_reverb_view_ab547bd971093cb4d553156f857373a55} 
+\index{ReverbView@{ReverbView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Reverb\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_reverb_view_a1103ea5fefcabbb7ab16d70c43e2f33a}\label{class_reverb_view_a1103ea5fefcabbb7ab16d70c43e2f33a} 
+\index{ReverbView@{ReverbView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Reverb\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_reverb_view_a47522b1723f193fb31fcc37223a92f8c}\label{class_reverb_view_a47522b1723f193fb31fcc37223a92f8c} 
+\index{ReverbView@{ReverbView}!tick@{tick}}
+\index{tick@{tick}!ReverbView@{ReverbView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Reverb\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_reverb_view_8h}{Reverb\+View.\+h}}\item 
+GUI/\+FX/\mbox{\hyperlink{_reverb_view_8cpp}{Reverb\+View.\+cpp}}\end{DoxyCompactItemize}

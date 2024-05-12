@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="denormals_8h" kind="file" language="C++">
+    <compoundname>denormals.h</compoundname>
+    <includedby refid="allpass_8hpp" local="yes">DSP/FX/Reverb/allpass.hpp</includedby>
+    <includedby refid="comb_8hpp" local="yes">DSP/FX/Reverb/comb.hpp</includedby>
+    <invincdepgraph>
+      <node id="6">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DSP/FX/Reverb/allpass.cpp</label>
+        <link refid="allpass_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/FX/Reverb/allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DSP/FX/Reverb/comb.cpp</label>
+        <link refid="comb_8cpp"/>
+      </node>
+      <node id="13">
+        <label>DSP/FX/Reverb/comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DSP/FX/Reverb/denormals.h</label>
+        <link refid="denormals_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DSP/FX/Reverb/revmodel.cpp</label>
+        <link refid="revmodel_8cpp"/>
+      </node>
+      <node id="4">
+        <label>DSP/FX/Reverb/revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="8">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="7">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="denormals_8h_1a6ba19a68ce81e0a4b889428607c47acd" prot="public" static="no">
+        <name>undenormalise</name>
+        <param><defname>sample</defname></param>
+        <initializer>if(((*(unsigned int*)&amp;<ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref>)&amp;0x7f800000)==0) <ref refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kindref="member">sample</ref>=0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Reverb/denormals.h" line="11" column="9" bodyfile="DSP/FX/Reverb/denormals.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Macro<sp/>for<sp/>killing<sp/>denormalled<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Written<sp/>by<sp/>Jezar<sp/>at<sp/>Dreampoint,<sp/>June<sp/>2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.dreampoint.co.uk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Based<sp/>on<sp/>IS_DENORMAL<sp/>macro<sp/>by<sp/>Jon<sp/>Watte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>public<sp/>domain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_denormals_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_denormals_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="denormals_8h_1a6ba19a68ce81e0a4b889428607c47acd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>undenormalise(sample)<sp/>if(((*(unsigned<sp/>int*)&amp;sample)&amp;0x7f800000)==0)<sp/>sample=0.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">//_denormals_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//ends</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Reverb/denormals.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_delay_view" kind="class" language="C++" prot="public">
+    <compoundname>DelayView</compoundname>
+    <includes refid="_delay_view_8h" local="no">DelayView.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_delay_view_1acece0a8d6cff496e3baa28249ea2eb7f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DelayView::trackID</definition>
+        <argsstring></argsstring>
+        <name>trackID</name>
+        <qualifiedname>DelayView::trackID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="55" column="9" bodyfile="GUI/FX/DelayView.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1afae30c5b85e5763f28a8aa25d85903b1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+        <definition>KeypadDriver* DelayView::keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <qualifiedname>DelayView::keypad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="57" column="18" bodyfile="GUI/FX/DelayView.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a6cd0ae2dae48a619e763627f76626a85" prot="private" static="no" mutable="no">
+        <type><ref refid="class_bypass_button" kindref="compound">BypassButton</ref></type>
+        <definition>BypassButton DelayView::bypass</definition>
+        <argsstring></argsstring>
+        <name>bypass</name>
+        <qualifiedname>DelayView::bypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="59" column="18" bodyfile="GUI/FX/DelayView.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a82677e23c32a5fc8d697ae63c640b007" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider DelayView::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>DelayView::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="60" column="19" bodyfile="GUI/FX/DelayView.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a76a3064229d06c353f4e5267f543a979" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider DelayView::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>DelayView::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="61" column="19" bodyfile="GUI/FX/DelayView.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a95df563d2cf15ab3b1f0d4f496d43a37" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider DelayView::feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <qualifiedname>DelayView::feedback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="62" column="19" bodyfile="GUI/FX/DelayView.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a5558b577b9959873d71cf46420ccfadd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DelayView::numberOfParameters</definition>
+        <argsstring></argsstring>
+        <name>numberOfParameters</name>
+        <qualifiedname>DelayView::numberOfParameters</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="64" column="9" bodyfile="GUI/FX/DelayView.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a34cf460dbc6b5517e2ffe1f69654af33" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* DelayView::parameterNames[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>parameterNames</name>
+        <qualifiedname>DelayView::parameterNames</qualifiedname>
+        <initializer>= {&quot;Amount&quot;, &quot;Size&quot;, &quot;Feedback&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="65" column="16" bodyfile="GUI/FX/DelayView.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a52bd1149104c9d1a1f7509a50fef8f30" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DelayView::currentParam</definition>
+        <argsstring></argsstring>
+        <name>currentParam</name>
+        <qualifiedname>DelayView::currentParam</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="66" column="9" bodyfile="GUI/FX/DelayView.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a9926695c8b26fc5c132970895df9add5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DelayView::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>DelayView::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="68" column="10" bodyfile="GUI/FX/DelayView.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1addb19687bd96f37795ffdb4f85a7a39e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DelayView::isPainted</definition>
+        <argsstring></argsstring>
+        <name>isPainted</name>
+        <qualifiedname>DelayView::isPainted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="69" column="10" bodyfile="GUI/FX/DelayView.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_delay_view_1a072a9f5b5689ae8ccb11109f27fe34f7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DelayView::bypassIndexes[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>bypassIndexes</name>
+        <qualifiedname>DelayView::bypassIndexes</qualifiedname>
+        <initializer>= {2, 7, 12, 17}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="70" column="9" bodyfile="GUI/FX/DelayView.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_delay_view_1a00c207b265061ecb95bcea58fee64863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::init</definition>
+        <argsstring>(int ID, EncoderDriver *driver, KeypadDriver *kpd)</argsstring>
+        <name>init</name>
+        <qualifiedname>DelayView::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+          <declname>kpd</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track view the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kpd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the keypad driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="21" column="10" bodyfile="GUI/FX/DelayView.cpp" bodystart="4" bodyend="17"/>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a4f3ce63dc29317bffd70f5bb1e5a5424" compoundref="_parameter_i_ds_8h" startline="45">ParameterIDs::Delay::amount</references>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a7748252753c008a2fb971b7fc662a91a" compoundref="_parameter_i_ds_8h" startline="47">ParameterIDs::Delay::feedback</references>
+        <references refid="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" compoundref="_encoder_driver_8h" startline="100" endline="100">EncoderDriver::getBypassCallback</references>
+        <references refid="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" compoundref="_bypass_button_8h" startline="21" endline="28">BypassButton::init</references>
+        <references refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" compoundref="_stepped_slider_8cpp" startline="4" endline="12">SteppedSlider::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_delay_1a380264f3d33d129c06763dc9b022ac2a" compoundref="_parameter_i_ds_8h" startline="46">ParameterIDs::Delay::size</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1ab8b595dc234ef0601cf04d41c7efd800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>DelayView::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="26" column="10" bodyfile="GUI/FX/DelayView.cpp" bodystart="19" bodyend="28"/>
+        <references refid="class_delay_view_1ae373b5ed7a30feddc9d7fb4289ceb9c3" compoundref="_delay_view_8cpp" startline="30" endline="67">repaint</references>
+        <references refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" compoundref="_stepped_slider_8cpp" startline="14" endline="22">SteppedSlider::tick</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1ae373b5ed7a30feddc9d7fb4289ceb9c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>DelayView::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="31" column="10" bodyfile="GUI/FX/DelayView.cpp" bodystart="30" bodyend="67"/>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1340428efccb140dcbdb71aa6176f696" compoundref="daisy___i_l_i9341_8hpp" startline="26">COLOR_BLUE</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743acfa9d8bbffc418447ed826f286abca02" compoundref="daisy___i_l_i9341_8hpp" startline="34">COLOR_GREEN</references>
+        <references refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" compoundref="daisy___i_l_i9341_8hpp" startline="653" endline="666">UiDriver::DrawRect</references>
+        <references refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" compoundref="daisy___i_l_i9341_8hpp" startline="678" endline="686">UiDriver::FillRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" compoundref="_bypass_button_8h" startline="45" endline="54">BypassButton::repaint</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1a3e8e544bae4596f46075c3f8761b7841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>DelayView::clear</qualifiedname>
+        <briefdescription>
+<para>Handles the clearing of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="36" column="10" bodyfile="GUI/FX/DelayView.cpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1a816081053c4419382a597ad391b2b0c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::setIsOpen</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsOpen</name>
+        <qualifiedname>DelayView::setIsOpen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view is currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="41" column="10" bodyfile="GUI/FX/DelayView.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1a6180de868b7c0f2480c0a14787cc8ecf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::setIsPainted</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsPainted</name>
+        <qualifiedname>DelayView::setIsPainted</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view has been painted or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="46" column="10" bodyfile="GUI/FX/DelayView.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delay_view_1ae0c3f3a5bc77fad136153ff336ccdc34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayView::setCurrentParam</definition>
+        <argsstring>(int newParam)</argsstring>
+        <name>setCurrentParam</name>
+        <qualifiedname>DelayView::setCurrentParam</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newParam</declname>
+        </param>
+        <briefdescription>
+<para>Sets the currently selected parameter on the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/DelayView.h" line="51" column="10" bodyfile="GUI/FX/DelayView.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_delay_view" kindref="compound">DelayView</ref> Function: FX level GUI class for the delay </para>
+    </detaileddescription>
+    <location file="GUI/FX/DelayView.h" line="11" column="1" bodyfile="GUI/FX/DelayView.h" bodystart="12" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_delay_view_1a82677e23c32a5fc8d697ae63c640b007" prot="private" virt="non-virtual"><scope>DelayView</scope><name>amount</name></member>
+      <member refid="class_delay_view_1a6cd0ae2dae48a619e763627f76626a85" prot="private" virt="non-virtual"><scope>DelayView</scope><name>bypass</name></member>
+      <member refid="class_delay_view_1a072a9f5b5689ae8ccb11109f27fe34f7" prot="private" virt="non-virtual"><scope>DelayView</scope><name>bypassIndexes</name></member>
+      <member refid="class_delay_view_1a3e8e544bae4596f46075c3f8761b7841" prot="public" virt="non-virtual"><scope>DelayView</scope><name>clear</name></member>
+      <member refid="class_delay_view_1a52bd1149104c9d1a1f7509a50fef8f30" prot="private" virt="non-virtual"><scope>DelayView</scope><name>currentParam</name></member>
+      <member refid="class_delay_view_1a95df563d2cf15ab3b1f0d4f496d43a37" prot="private" virt="non-virtual"><scope>DelayView</scope><name>feedback</name></member>
+      <member refid="class_delay_view_1a00c207b265061ecb95bcea58fee64863" prot="public" virt="non-virtual"><scope>DelayView</scope><name>init</name></member>
+      <member refid="class_delay_view_1a9926695c8b26fc5c132970895df9add5" prot="private" virt="non-virtual"><scope>DelayView</scope><name>isOpen</name></member>
+      <member refid="class_delay_view_1addb19687bd96f37795ffdb4f85a7a39e" prot="private" virt="non-virtual"><scope>DelayView</scope><name>isPainted</name></member>
+      <member refid="class_delay_view_1afae30c5b85e5763f28a8aa25d85903b1" prot="private" virt="non-virtual"><scope>DelayView</scope><name>keypad</name></member>
+      <member refid="class_delay_view_1a5558b577b9959873d71cf46420ccfadd" prot="private" virt="non-virtual"><scope>DelayView</scope><name>numberOfParameters</name></member>
+      <member refid="class_delay_view_1a34cf460dbc6b5517e2ffe1f69654af33" prot="private" virt="non-virtual"><scope>DelayView</scope><name>parameterNames</name></member>
+      <member refid="class_delay_view_1ae373b5ed7a30feddc9d7fb4289ceb9c3" prot="public" virt="non-virtual"><scope>DelayView</scope><name>repaint</name></member>
+      <member refid="class_delay_view_1ae0c3f3a5bc77fad136153ff336ccdc34" prot="public" virt="non-virtual"><scope>DelayView</scope><name>setCurrentParam</name></member>
+      <member refid="class_delay_view_1a816081053c4419382a597ad391b2b0c5" prot="public" virt="non-virtual"><scope>DelayView</scope><name>setIsOpen</name></member>
+      <member refid="class_delay_view_1a6180de868b7c0f2480c0a14787cc8ecf" prot="public" virt="non-virtual"><scope>DelayView</scope><name>setIsPainted</name></member>
+      <member refid="class_delay_view_1a76a3064229d06c353f4e5267f543a979" prot="private" virt="non-virtual"><scope>DelayView</scope><name>size</name></member>
+      <member refid="class_delay_view_1ab8b595dc234ef0601cf04d41c7efd800" prot="public" virt="non-virtual"><scope>DelayView</scope><name>tick</name></member>
+      <member refid="class_delay_view_1acece0a8d6cff496e3baa28249ea2eb7f" prot="private" virt="non-virtual"><scope>DelayView</scope><name>trackID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

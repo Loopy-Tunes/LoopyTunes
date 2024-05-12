@@ -1,0 +1,90 @@
+\doxysection{Track\+View Class Reference}
+\hypertarget{class_track_view}{}\label{class_track_view}\index{TrackView@{TrackView}}
+
+
+{\ttfamily \#include $<$Track\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_track_view_a103d86a77dac67a863199a54f5c09c94}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_view_a1fe8105b25150caa32ce8f77a1f56f00}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_view_a675ad934846a3a704b2d31df122f06a6}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_view_ad3ee20c39189f9201f6320b1186a05a9}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_track_view_a18ac0bf795cadc0f56759bf2c46b3f4f}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_track_view}{Track\+View} Function\+: \doxylink{class_track}{Track} level GUI class 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_track_view_ad3ee20c39189f9201f6320b1186a05a9}\label{class_track_view_ad3ee20c39189f9201f6320b1186a05a9} 
+\index{TrackView@{TrackView}!clear@{clear}}
+\index{clear@{clear}!TrackView@{TrackView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Track\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_track_view_a103d86a77dac67a863199a54f5c09c94}\label{class_track_view_a103d86a77dac67a863199a54f5c09c94} 
+\index{TrackView@{TrackView}!init@{init}}
+\index{init@{init}!TrackView@{TrackView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Track\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & A pointer to the hardware instance \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_track_view_a675ad934846a3a704b2d31df122f06a6}\label{class_track_view_a675ad934846a3a704b2d31df122f06a6} 
+\index{TrackView@{TrackView}!repaint@{repaint}}
+\index{repaint@{repaint}!TrackView@{TrackView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Track\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_track_view_a18ac0bf795cadc0f56759bf2c46b3f4f}\label{class_track_view_a18ac0bf795cadc0f56759bf2c46b3f4f} 
+\index{TrackView@{TrackView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!TrackView@{TrackView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Track\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_track_view_a1fe8105b25150caa32ce8f77a1f56f00}\label{class_track_view_a1fe8105b25150caa32ce8f77a1f56f00} 
+\index{TrackView@{TrackView}!tick@{tick}}
+\index{tick@{tick}!TrackView@{TrackView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Track\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\mbox{\hyperlink{_track_view_8h}{Track\+View.\+h}}\item 
+GUI/\mbox{\hyperlink{_track_view_8cpp}{Track\+View.\+cpp}}\end{DoxyCompactItemize}

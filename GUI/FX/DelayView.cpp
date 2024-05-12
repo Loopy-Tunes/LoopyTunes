@@ -1,4 +1,5 @@
 #include "DelayView.h"
+#include "../../Drivers/daisy_ILI9341.hpp"
 
 void DelayView::init(int ID, EncoderDriver* driver, KeypadDriver* kpd)
 {

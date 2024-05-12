@@ -1,0 +1,114 @@
+\doxysection{Delay\+View Class Reference}
+\hypertarget{class_delay_view}{}\label{class_delay_view}\index{DelayView@{DelayView}}
+
+
+{\ttfamily \#include $<$Delay\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_delay_view_a00c207b265061ecb95bcea58fee64863}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_ab8b595dc234ef0601cf04d41c7efd800}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_ae373b5ed7a30feddc9d7fb4289ceb9c3}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_a3e8e544bae4596f46075c3f8761b7841}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_a816081053c4419382a597ad391b2b0c5}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_a6180de868b7c0f2480c0a14787cc8ecf}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delay_view_ae0c3f3a5bc77fad136153ff336ccdc34}{set\+Current\+Param}} (int new\+Param)
+\begin{DoxyCompactList}\small\item\em Sets the currently selected parameter on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_delay_view}{Delay\+View} Function\+: FX level GUI class for the delay 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delay_view_a3e8e544bae4596f46075c3f8761b7841}\label{class_delay_view_a3e8e544bae4596f46075c3f8761b7841} 
+\index{DelayView@{DelayView}!clear@{clear}}
+\index{clear@{clear}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Delay\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_delay_view_a00c207b265061ecb95bcea58fee64863}\label{class_delay_view_a00c207b265061ecb95bcea58fee64863} 
+\index{DelayView@{DelayView}!init@{init}}
+\index{init@{init}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Delay\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the track view the instance belongs to \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_delay_view_ae373b5ed7a30feddc9d7fb4289ceb9c3}\label{class_delay_view_ae373b5ed7a30feddc9d7fb4289ceb9c3} 
+\index{DelayView@{DelayView}!repaint@{repaint}}
+\index{repaint@{repaint}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Delay\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_delay_view_ae0c3f3a5bc77fad136153ff336ccdc34}\label{class_delay_view_ae0c3f3a5bc77fad136153ff336ccdc34} 
+\index{DelayView@{DelayView}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Delay\+View\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the currently selected parameter on the LCD. 
+
+\Hypertarget{class_delay_view_a816081053c4419382a597ad391b2b0c5}\label{class_delay_view_a816081053c4419382a597ad391b2b0c5} 
+\index{DelayView@{DelayView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Delay\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_delay_view_a6180de868b7c0f2480c0a14787cc8ecf}\label{class_delay_view_a6180de868b7c0f2480c0a14787cc8ecf} 
+\index{DelayView@{DelayView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Delay\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_delay_view_ab8b595dc234ef0601cf04d41c7efd800}\label{class_delay_view_ab8b595dc234ef0601cf04d41c7efd800} 
+\index{DelayView@{DelayView}!tick@{tick}}
+\index{tick@{tick}!DelayView@{DelayView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Delay\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_delay_view_8h}{Delay\+View.\+h}}\item 
+GUI/\+FX/\mbox{\hyperlink{_delay_view_8cpp}{Delay\+View.\+cpp}}\end{DoxyCompactItemize}

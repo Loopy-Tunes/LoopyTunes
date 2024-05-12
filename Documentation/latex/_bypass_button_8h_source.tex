@@ -1,0 +1,63 @@
+\doxysection{Bypass\+Button.\+h}
+\hypertarget{_bypass_button_8h_source}{}\label{_bypass_button_8h_source}\index{GUI/FX/BypassButton.h@{GUI/FX/BypassButton.h}}
+\mbox{\hyperlink{_bypass_button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BYPASSBUTTON\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BYPASSBUTTON\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_encoder_driver_8h}{../../Drivers/EncoderDriver.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_style_sheet_8h}{StyleSheet.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/********************************************************/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bypass_button}{BypassButton}}\ }
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bypass_button_a80f0430537f1194752acb452ed0669ce}{init}}(\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ ed,\ std::function<\textcolor{keywordtype}{void}()>\ bypassCallback)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ encoder\ =\ ed;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ callback\ =\ bypassCallback;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ isSelected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ isBypassed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bypass_button_a7d8a5dab6a354f502f8d45372fcd827d}{tick}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isSelected\ \&\&\ encoder-\/>\mbox{\hyperlink{class_encoder_driver_a9f6aea9b40ce44db249f04816423dd3b}{getButtonState}}())}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ callback();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ isBypassed\ =\ !isBypassed;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bypass_button_a92ca3fa41d4a05f5eee9eaa796f9c044}{repaint}}()}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ on/off\ button\ for\ Bypass}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ uint16\_t\ bypassButtonY\ =\ StyleSheet::Effects::headerHeight\ +\ 15;\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint16\_t\ buttonColor\ =\ isBypassed?\ COLOR\_GREEN\ :\ COLOR\_RED;}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ Rectangle\ bypassButtonRect(10,\ bypassButtonY,\ StyleSheet::Effects::bypassButtonWidth,\ StyleSheet::Effects::bypassButtonHeight);\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//lcd-\/>FillRect(bypassButtonRect,\ buttonColor);}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//lcd-\/>DrawRect(bypassButtonRect,\ StyleSheet::Effects::borderColor);}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//lcd-\/>WriteString(isBypassed\ ?\ "{}On"{}\ :\ "{}Off"{},\ 20,\ StyleSheet::Effects::headerHeight\ +\ 20,\ Font\_11x18,\ StyleSheet::Effects::textColor);}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bypass_button_ab50d9353c702d0b68732317cf0c33c4d}{setIsSelected}}(\textcolor{keywordtype}{bool}\ state)\ \{\ isSelected\ =\ state;\ \}\ \textcolor{comment}{//\ called\ when\ the\ bypass\ button\ is\ selected}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ encoder;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//UiDriver*\ lcd;}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ std::function<void()>\ callback;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBypassed;}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_filter" kind="class" language="C++" prot="public">
+    <compoundname>Filter</compoundname>
+    <includes refid="_filter_8h" local="no">Filter.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_filter_1af0dd87cfcc473f41a1a2966c612e018c" prot="private" static="no" mutable="no">
+        <type>OnePole</type>
+        <definition>OnePole Filter::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <qualifiedname>Filter::filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="57" column="13" bodyfile="DSP/FX/Filter.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_filter_1afc30720a543c2c6d81298d748d96f5b3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Filter::isBypass</definition>
+        <argsstring></argsstring>
+        <name>isBypass</name>
+        <qualifiedname>Filter::isBypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="59" column="10" bodyfile="DSP/FX/Filter.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_filter_1a5ceef98da3f06a02016ef37ee5562259" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref></type>
+        <definition>SteppedParameter Filter::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>Filter::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="60" column="22" bodyfile="DSP/FX/Filter.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_filter_1abe2debd4ce8fd4e2735a090cd700e994" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref></type>
+        <definition>SteppedParameter Filter::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <qualifiedname>Filter::freq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="61" column="22" bodyfile="DSP/FX/Filter.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::init</definition>
+        <argsstring>(EncoderDriver *driver, int trackID)</argsstring>
+        <name>init</name>
+        <qualifiedname>Filter::init</qualifiedname>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trackID</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver used to initialise the parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="24" column="10" bodyfile="DSP/FX/Filter.cpp" bodystart="3" bodyend="15"/>
+        <references refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" compoundref="_encoder_driver_8h" startline="131" endline="134">EncoderDriver::addBypassCallback</references>
+        <references refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" compoundref="_encoder_driver_8h" startline="122" endline="125">EncoderDriver::addParameter</references>
+        <references refid="namespace_parameter_i_ds_1_1_filter_1a080f88c7943d98f26f4e0dd22a66661f" compoundref="_parameter_i_ds_8h" startline="37">ParameterIDs::Filter::frequency</references>
+        <references refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" compoundref="_stepped_parameter_8h" startline="30" endline="39">SteppedParameter::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_filter_1a16651985532bc71c245a6fb00c99d4d6" compoundref="_parameter_i_ds_8h" startline="36">ParameterIDs::Filter::mode</references>
+        <references refid="class_filter_1a08f8b2a0cef00c62593b5bc808ff79f9" compoundref="_filter_8h" startline="34" endline="34">setBypass</references>
+        <references refid="class_filter_1a77b74157db71df930d571c612033be66" compoundref="_filter_8cpp" startline="17" endline="22">setDefaultValues</references>
+        <references refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" compoundref="_filter_8h" startline="40" endline="40">setFreq</references>
+        <references refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" compoundref="_filter_8cpp" startline="24" endline="30">setMode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_filter_1a77b74157db71df930d571c612033be66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <qualifiedname>Filter::setDefaultValues</qualifiedname>
+        <briefdescription>
+<para>Sets tthe default parameter values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="29" column="10" bodyfile="DSP/FX/Filter.cpp" bodystart="17" bodyend="22"/>
+        <references refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" compoundref="_filter_8h" startline="40" endline="40">setFreq</references>
+        <references refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" compoundref="_filter_8cpp" startline="24" endline="30">setMode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_filter_1a08f8b2a0cef00c62593b5bc808ff79f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::setBypass</definition>
+        <argsstring>()</argsstring>
+        <name>setBypass</name>
+        <qualifiedname>Filter::setBypass</qualifiedname>
+        <briefdescription>
+<para>Sets the bypass state of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="34" column="10" bodyfile="DSP/FX/Filter.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::setFreq</definition>
+        <argsstring>(float f)</argsstring>
+        <name>setFreq</name>
+        <qualifiedname>Filter::setFreq</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Sets the cutoff frequency of the filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new cutoff frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="40" column="10" bodyfile="DSP/FX/Filter.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_filter_1a1741a1887e68134431ddfb221a9180e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::setMode</definition>
+        <argsstring>(float m)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>Filter::setMode</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mode of the filter, either high pass or low pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="46" column="10" bodyfile="DSP/FX/Filter.cpp" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_filter_1a9f202d29f2be23e354c4964fc9841728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Filter::processBlock</definition>
+        <argsstring>(float *input[2], size_t size)</argsstring>
+        <name>processBlock</name>
+        <qualifiedname>Filter::processBlock</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Processes a block of samples through the filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of pointers pointing to the input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the block of samples </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DSP/FX/Filter.h" line="53" column="10" bodyfile="DSP/FX/Filter.cpp" bodystart="32" bodyend="42"/>
+        <references refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" compoundref="_constants_8h" startline="9">L</references>
+        <references refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" compoundref="_constants_8h" startline="10">R</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DSP/FX/Filter.h" line="14" column="1" bodyfile="DSP/FX/Filter.h" bodystart="15" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_filter_1af0dd87cfcc473f41a1a2966c612e018c" prot="private" virt="non-virtual"><scope>Filter</scope><name>filter</name></member>
+      <member refid="class_filter_1abe2debd4ce8fd4e2735a090cd700e994" prot="private" virt="non-virtual"><scope>Filter</scope><name>freq</name></member>
+      <member refid="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" prot="public" virt="non-virtual"><scope>Filter</scope><name>init</name></member>
+      <member refid="class_filter_1afc30720a543c2c6d81298d748d96f5b3" prot="private" virt="non-virtual"><scope>Filter</scope><name>isBypass</name></member>
+      <member refid="class_filter_1a5ceef98da3f06a02016ef37ee5562259" prot="private" virt="non-virtual"><scope>Filter</scope><name>mode</name></member>
+      <member refid="class_filter_1a9f202d29f2be23e354c4964fc9841728" prot="public" virt="non-virtual"><scope>Filter</scope><name>processBlock</name></member>
+      <member refid="class_filter_1a08f8b2a0cef00c62593b5bc808ff79f9" prot="public" virt="non-virtual"><scope>Filter</scope><name>setBypass</name></member>
+      <member refid="class_filter_1a77b74157db71df930d571c612033be66" prot="public" virt="non-virtual"><scope>Filter</scope><name>setDefaultValues</name></member>
+      <member refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" prot="public" virt="non-virtual"><scope>Filter</scope><name>setFreq</name></member>
+      <member refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" prot="public" virt="non-virtual"><scope>Filter</scope><name>setMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

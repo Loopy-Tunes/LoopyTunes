@@ -1,0 +1,1043 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="classallpass" kind="class"><name>allpass</name>
+    <member refid="classallpass_1a4aff3bfeba72ac4b1ce0ced6618ee77c" kind="variable"><name>feedback</name></member>
+    <member refid="classallpass_1aa6b769510364da1d9481948d4a154f8b" kind="variable"><name>buffer</name></member>
+    <member refid="classallpass_1a0156b24446b810952ae1df1accb8318f" kind="variable"><name>bufsize</name></member>
+    <member refid="classallpass_1a662a39221d0880b3f99e3ec40e302d4c" kind="variable"><name>bufidx</name></member>
+    <member refid="classallpass_1ad0a4c84903b886efb77f37d6889998dd" kind="function"><name>allpass</name></member>
+    <member refid="classallpass_1ae107adccefebabb0578dc5b9ad89c5d7" kind="function"><name>setbuffer</name></member>
+    <member refid="classallpass_1a72ef1d44f5807011889020f2c316cc32" kind="function"><name>process</name></member>
+    <member refid="classallpass_1af93a4f1d4dcc544323978031cb234aa6" kind="function"><name>mute</name></member>
+    <member refid="classallpass_1ad636d830e21de3dd61928875db95c899" kind="function"><name>setfeedback</name></member>
+    <member refid="classallpass_1a19e2ab2745647005ce06366b7da64b45" kind="function"><name>getfeedback</name></member>
+  </compound>
+  <compound refid="class_audio_parameter" kind="class"><name>AudioParameter</name>
+    <member refid="class_audio_parameter_1a4a15c28f1c80131f0c3993e21bacb0d5" kind="variable"><name>hw</name></member>
+    <member refid="class_audio_parameter_1a16cbdeea03b5177126942241a86bc83b" kind="variable"><name>input</name></member>
+    <member refid="class_audio_parameter_1adb4e0ee89d1fc3ad58f030546f8871a0" kind="variable"><name>jitter</name></member>
+    <member refid="class_audio_parameter_1a3ebf092933e1184635afa4f7b06dc01b" kind="variable"><name>curVal</name></member>
+    <member refid="class_audio_parameter_1a4436c2eec67d3de5f7bf0a3eaf573e2d" kind="variable"><name>min</name></member>
+    <member refid="class_audio_parameter_1acab13a377a64038be4d656f47b124df4" kind="variable"><name>max</name></member>
+    <member refid="class_audio_parameter_1a57188748995c53e820dbf96a17a4299a" kind="variable"><name>channelID</name></member>
+    <member refid="class_audio_parameter_1aa19a87849db30611e3914139ff2391c9" kind="variable"><name>curve</name></member>
+    <member refid="class_audio_parameter_1ad9114646bff30936f6805883eaf58a2e" kind="variable"><name>callback</name></member>
+    <member refid="class_audio_parameter_1afa4f9d66f0cf42cde896acaa5040c9e3" kind="function"><name>init</name></member>
+    <member refid="class_audio_parameter_1a67be018b61cb8e98420a54d6a6992ff7" kind="function"><name>tick</name></member>
+    <member refid="class_audio_parameter_1a0c02048d1e7431e27199f5098e4902a2" kind="function"><name>processCurve</name></member>
+    <member refid="class_audio_parameter_1a654ab6b382d01b7046d9ed7c38e9b39c" kind="function"><name>getValue</name></member>
+  </compound>
+  <compound refid="struct_audio_parameter_wrapper" kind="struct"><name>AudioParameterWrapper</name>
+    <member refid="struct_audio_parameter_wrapper_1a5278e8fed92f6f1cd44a4fb4e403d075" kind="variable"><name>param</name></member>
+    <member refid="struct_audio_parameter_wrapper_1a7a8a5d2dab55b531f27aa21d5a769151" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="class_audio_slider" kind="class"><name>AudioSlider</name>
+    <member refid="class_audio_slider_1a6ded84c272f24598444cc1e508d038d4" kind="variable"><name>hw</name></member>
+    <member refid="class_audio_slider_1a64844a06c6a91b587230b014e45ff1da" kind="variable"><name>input</name></member>
+    <member refid="class_audio_slider_1a80ba3efc7464aca6a1162b284ec1e46a" kind="variable"><name>jitter</name></member>
+    <member refid="class_audio_slider_1a6478fd6495e6b93d2262578525ac296c" kind="variable"><name>channelID</name></member>
+    <member refid="class_audio_slider_1a4adb2a91fd8b646c267764eed2bdf19f" kind="variable"><name>isUpdated</name></member>
+    <member refid="class_audio_slider_1ac041901c3967237cd070a8bf017fc2cb" kind="function"><name>init</name></member>
+    <member refid="class_audio_slider_1a9cdeb4a1ef9f5a9b8998defd9d8e93a9" kind="function"><name>tick</name></member>
+    <member refid="class_audio_slider_1a0f0d7e4bc1389b174ff93cb6f58474a8" kind="function"><name>repaint</name></member>
+  </compound>
+  <compound refid="class_binary_parameter" kind="class"><name>BinaryParameter</name>
+    <member refid="class_binary_parameter_1a8a8639cae48b46d61f1e45c1b0b425eb" kind="variable"><name>btn</name></member>
+    <member refid="class_binary_parameter_1a10bb5575c8bbd847b787a501dab32486" kind="variable"><name>callback</name></member>
+    <member refid="class_binary_parameter_1a6765feacacb20ba94a391a059040ae1d" kind="function"><name>init</name></member>
+    <member refid="class_binary_parameter_1a062dee999020e270c30d8084e03b443d" kind="function"><name>tick</name></member>
+    <member refid="class_binary_parameter_1ab20ac67f6e4bf146f9674f676c3f25f4" kind="function"><name>isPressed</name></member>
+  </compound>
+  <compound refid="struct_binary_parameter_wrapper" kind="struct"><name>BinaryParameterWrapper</name>
+    <member refid="struct_binary_parameter_wrapper_1a1dca287a7010dd78c58f4ce1bc16c324" kind="variable"><name>param</name></member>
+    <member refid="struct_binary_parameter_wrapper_1a76caa23d9b8ea7925851a81448c73ea0" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="class_bypass_button" kind="class"><name>BypassButton</name>
+    <member refid="class_bypass_button_1a6095806466f08d8b872dd9e5f1f6ca94" kind="variable"><name>encoder</name></member>
+    <member refid="class_bypass_button_1a1304e450f90d2b16eaf605eaa359dc03" kind="variable"><name>callback</name></member>
+    <member refid="class_bypass_button_1a5bbf8bf4af0c0150d8fef39c6af12203" kind="variable"><name>isSelected</name></member>
+    <member refid="class_bypass_button_1a84acaf0082fa74d92c76edcb9d41f5df" kind="variable"><name>isBypassed</name></member>
+    <member refid="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" kind="function"><name>init</name></member>
+    <member refid="class_bypass_button_1a7d8a5dab6a354f502f8d45372fcd827d" kind="function"><name>tick</name></member>
+    <member refid="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" kind="function"><name>repaint</name></member>
+    <member refid="class_bypass_button_1ab50d9353c702d0b68732317cf0c33c4d" kind="function"><name>setIsSelected</name></member>
+  </compound>
+  <compound refid="classcomb" kind="class"><name>comb</name>
+    <member refid="classcomb_1a810d2d4f001990933536f8dfa9a31a72" kind="variable"><name>feedback</name></member>
+    <member refid="classcomb_1a01f2973eee7bd19e25cf7d2f09109d99" kind="variable"><name>filterstore</name></member>
+    <member refid="classcomb_1ab83988608828521c121c6f5fc8457051" kind="variable"><name>damp1</name></member>
+    <member refid="classcomb_1ac688f7140b8067bfc1bad5b0786d8443" kind="variable"><name>damp2</name></member>
+    <member refid="classcomb_1a16bfa4e412161d0d45b6d58c0f34808b" kind="variable"><name>buffer</name></member>
+    <member refid="classcomb_1a1e0c9322808ee8b613b031019328d51d" kind="variable"><name>bufsize</name></member>
+    <member refid="classcomb_1aeb77398a8500cc6f4844a8f5b4dab591" kind="variable"><name>bufidx</name></member>
+    <member refid="classcomb_1a42d4f3d4ff5ae9bc9cb4137e2ab495ca" kind="function"><name>comb</name></member>
+    <member refid="classcomb_1a000d3f031781c27ceaf487a1ec957fec" kind="function"><name>setbuffer</name></member>
+    <member refid="classcomb_1a0d4801f6d16411a2f63ff1a25d2fe5fb" kind="function"><name>process</name></member>
+    <member refid="classcomb_1ae18d1b1ea26d1c18087d3d8feeb7145d" kind="function"><name>mute</name></member>
+    <member refid="classcomb_1abd0aa594882431e7f7eb4901fcc0ea5e" kind="function"><name>setdamp</name></member>
+    <member refid="classcomb_1a99e2c5952a08d006902f5e20a05d37a7" kind="function"><name>getdamp</name></member>
+    <member refid="classcomb_1ad8fac09822db8d944c13791112b5b6a2" kind="function"><name>setfeedback</name></member>
+    <member refid="classcomb_1a1df81e7e8f9310831e4e7929078f1d11" kind="function"><name>getfeedback</name></member>
+  </compound>
+  <compound refid="class_delay" kind="class"><name>Delay</name>
+    <member refid="class_delay_1aa59914115de99fbf055e150496e0b4d4" kind="variable"><name>isBypass</name></member>
+    <member refid="class_delay_1afbd69b1e32b1e51887f41ad787116361" kind="variable"><name>amount</name></member>
+    <member refid="class_delay_1a7f8623d80aafe55478c012a1a473f9b4" kind="variable"><name>size</name></member>
+    <member refid="class_delay_1a88f50eafc35c60c7c4dcb33f10f33d98" kind="variable"><name>feedback</name></member>
+    <member refid="class_delay_1a81be4175089c23c4b6dcac8a84c4caf9" kind="variable"><name>delayLine</name></member>
+    <member refid="class_delay_1ab6fbc08d35bd3528d84993c4f9e3f5d5" kind="function"><name>init</name></member>
+    <member refid="class_delay_1a4aec2a60814203c1cca8fcc500e56c29" kind="function"><name>setDefaultValues</name></member>
+    <member refid="class_delay_1a0dd8317647695e5e01083e26da82b47d" kind="function"><name>setBypass</name></member>
+    <member refid="class_delay_1a81a48de61685cddd4be9f93678322a0d" kind="function"><name>setAmount</name></member>
+    <member refid="class_delay_1a11d964425f9473ede1b9fea0c9c060bf" kind="function"><name>setDelay</name></member>
+    <member refid="class_delay_1ac091ce8e3301c908ea14f538f628df20" kind="function"><name>setFeedback</name></member>
+    <member refid="class_delay_1ab4234fe0620a5f4f40ae0383910d9513" kind="function"><name>processBlock</name></member>
+    <member refid="class_delay_1ac3efc506692e9e743e4b6f0c5d7a6c4c" kind="function"><name>toSize</name></member>
+  </compound>
+  <compound refid="struct_delay_defaults" kind="struct"><name>DelayDefaults</name>
+    <member refid="struct_delay_defaults_1aa0de0518b55f952672ecf72dfe110db1" kind="variable"><name>bypass</name></member>
+    <member refid="struct_delay_defaults_1aa1bdcf86d4c5fafbfaf91ab6d5b83a6a" kind="variable"><name>amount</name></member>
+    <member refid="struct_delay_defaults_1a102280353c813c351e177c3907bf48e5" kind="variable"><name>size</name></member>
+    <member refid="struct_delay_defaults_1a408f71fdd838bc7a815e8975ba6e1b22" kind="variable"><name>feedback</name></member>
+  </compound>
+  <compound refid="class_delay_view" kind="class"><name>DelayView</name>
+    <member refid="class_delay_view_1acece0a8d6cff496e3baa28249ea2eb7f" kind="variable"><name>trackID</name></member>
+    <member refid="class_delay_view_1afae30c5b85e5763f28a8aa25d85903b1" kind="variable"><name>keypad</name></member>
+    <member refid="class_delay_view_1a6cd0ae2dae48a619e763627f76626a85" kind="variable"><name>bypass</name></member>
+    <member refid="class_delay_view_1a82677e23c32a5fc8d697ae63c640b007" kind="variable"><name>amount</name></member>
+    <member refid="class_delay_view_1a76a3064229d06c353f4e5267f543a979" kind="variable"><name>size</name></member>
+    <member refid="class_delay_view_1a95df563d2cf15ab3b1f0d4f496d43a37" kind="variable"><name>feedback</name></member>
+    <member refid="class_delay_view_1a5558b577b9959873d71cf46420ccfadd" kind="variable"><name>numberOfParameters</name></member>
+    <member refid="class_delay_view_1a34cf460dbc6b5517e2ffe1f69654af33" kind="variable"><name>parameterNames</name></member>
+    <member refid="class_delay_view_1a52bd1149104c9d1a1f7509a50fef8f30" kind="variable"><name>currentParam</name></member>
+    <member refid="class_delay_view_1a9926695c8b26fc5c132970895df9add5" kind="variable"><name>isOpen</name></member>
+    <member refid="class_delay_view_1addb19687bd96f37795ffdb4f85a7a39e" kind="variable"><name>isPainted</name></member>
+    <member refid="class_delay_view_1a072a9f5b5689ae8ccb11109f27fe34f7" kind="variable"><name>bypassIndexes</name></member>
+    <member refid="class_delay_view_1a00c207b265061ecb95bcea58fee64863" kind="function"><name>init</name></member>
+    <member refid="class_delay_view_1ab8b595dc234ef0601cf04d41c7efd800" kind="function"><name>tick</name></member>
+    <member refid="class_delay_view_1ae373b5ed7a30feddc9d7fb4289ceb9c3" kind="function"><name>repaint</name></member>
+    <member refid="class_delay_view_1a3e8e544bae4596f46075c3f8761b7841" kind="function"><name>clear</name></member>
+    <member refid="class_delay_view_1a816081053c4419382a597ad391b2b0c5" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_delay_view_1a6180de868b7c0f2480c0a14787cc8ecf" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_delay_view_1ae0c3f3a5bc77fad136153ff336ccdc34" kind="function"><name>setCurrentParam</name></member>
+  </compound>
+  <compound refid="class_encoder_driver" kind="class"><name>EncoderDriver</name>
+    <member refid="class_encoder_driver_1a69ea1c68542fff8f421e2dc051153c6f" kind="variable"><name>isUpdated</name></member>
+    <member refid="class_encoder_driver_1a10fb68b97fa01a4e94ac356f1950d4f8" kind="variable"><name>prevUpdate</name></member>
+    <member refid="class_encoder_driver_1adfc9f6634fe5b719fa6b874624f571cc" kind="variable"><name>isNavigation</name></member>
+    <member refid="class_encoder_driver_1a69c13e7900ae959d9795d8e214996d9b" kind="variable"><name>navCallback</name></member>
+    <member refid="class_encoder_driver_1ae9b386dd310deb41a560d1d09b242ebf" kind="variable"><name>currentParam</name></member>
+    <member refid="class_encoder_driver_1a7b972b93c0d6929ad405fba8f25b827b" kind="variable"><name>parameters</name></member>
+    <member refid="class_encoder_driver_1a82d8c9bb6a6703e317082a535d8c4bfc" kind="variable"><name>bypassCallbacks</name></member>
+    <member refid="class_encoder_driver_1a7008e85982f03a917b95c8e57576b460" kind="variable"><name>btn</name></member>
+    <member refid="class_encoder_driver_1a3bee17909df2d78cadcc81fb3e544b2a" kind="variable"><name>channelA</name></member>
+    <member refid="class_encoder_driver_1a706ef11ffb6c7533dd4a65547843a365" kind="variable"><name>channelB</name></member>
+    <member refid="class_encoder_driver_1ab0df3363eecd48c37610091fdc2405d7" kind="variable"><name>valueA</name></member>
+    <member refid="class_encoder_driver_1ad5443297a0ff378e274759591cf05fb2" kind="variable"><name>valueB</name></member>
+    <member refid="class_encoder_driver_1a6b703d93f5254ae6539dfc3759c3d87d" kind="function"><name>init</name></member>
+    <member refid="class_encoder_driver_1a7108d646d1f00a7c42e89a5237809a62" kind="function"><name>tick</name></member>
+    <member refid="class_encoder_driver_1afa50272bfb183b00f469285864c975e3" kind="function"><name>buttonCallback</name></member>
+    <member refid="class_encoder_driver_1a9f6aea9b40ce44db249f04816423dd3b" kind="function"><name>getButtonState</name></member>
+    <member refid="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" kind="function"><name>getBypassCallback</name></member>
+    <member refid="class_encoder_driver_1a8f772f7feff5cb2093d36189ffc6fe66" kind="function"><name>setCurrentParam</name></member>
+    <member refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kind="function"><name>addParameter</name></member>
+    <member refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" kind="function"><name>addBypassCallback</name></member>
+    <member refid="class_encoder_driver_1aaa92980b9bd67e2ea6a2396716d7c4e8" kind="function"><name>getParameter</name></member>
+  </compound>
+  <compound refid="class_filter" kind="class"><name>Filter</name>
+    <member refid="class_filter_1af0dd87cfcc473f41a1a2966c612e018c" kind="variable"><name>filter</name></member>
+    <member refid="class_filter_1afc30720a543c2c6d81298d748d96f5b3" kind="variable"><name>isBypass</name></member>
+    <member refid="class_filter_1a5ceef98da3f06a02016ef37ee5562259" kind="variable"><name>mode</name></member>
+    <member refid="class_filter_1abe2debd4ce8fd4e2735a090cd700e994" kind="variable"><name>freq</name></member>
+    <member refid="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" kind="function"><name>init</name></member>
+    <member refid="class_filter_1a77b74157db71df930d571c612033be66" kind="function"><name>setDefaultValues</name></member>
+    <member refid="class_filter_1a08f8b2a0cef00c62593b5bc808ff79f9" kind="function"><name>setBypass</name></member>
+    <member refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" kind="function"><name>setFreq</name></member>
+    <member refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" kind="function"><name>setMode</name></member>
+    <member refid="class_filter_1a9f202d29f2be23e354c4964fc9841728" kind="function"><name>processBlock</name></member>
+  </compound>
+  <compound refid="struct_filter_defaults" kind="struct"><name>FilterDefaults</name>
+    <member refid="struct_filter_defaults_1a353b79e59cf6ce8d8ef29121d8ad1e78" kind="variable"><name>bypass</name></member>
+    <member refid="struct_filter_defaults_1a4795ac8c1989a8aac0132a3ca6ab59d0" kind="variable"><name>mode</name></member>
+    <member refid="struct_filter_defaults_1a7a9c8329a7cd2f431d2a5c5ebc1ec39a" kind="variable"><name>frequency</name></member>
+  </compound>
+  <compound refid="class_filter_view" kind="class"><name>FilterView</name>
+    <member refid="class_filter_view_1a5aad8f56a6ffa3be74cf21191d2dd0b4" kind="variable"><name>trackID</name></member>
+    <member refid="class_filter_view_1af8e0da0fb691511faf194f59bba7c577" kind="variable"><name>keypad</name></member>
+    <member refid="class_filter_view_1a1a592266d5ba63bd4821bfd6e3f08d72" kind="variable"><name>bypass</name></member>
+    <member refid="class_filter_view_1a6b88b7f49eb4da776635bc5cdcd6c314" kind="variable"><name>mode</name></member>
+    <member refid="class_filter_view_1a8a6d70cb06f2f5cc6e1fd285b6df5190" kind="variable"><name>frequency</name></member>
+    <member refid="class_filter_view_1a3cee45b075505765486e07667419b429" kind="variable"><name>resonance</name></member>
+    <member refid="class_filter_view_1acb82fcb332f168e9511a4e40da4ad65a" kind="variable"><name>numberOfParameters</name></member>
+    <member refid="class_filter_view_1af146c1ce430bad0a28d23886349f11b0" kind="variable"><name>parameterNames</name></member>
+    <member refid="class_filter_view_1a23077d1837f746fc159c632f5e22b4ba" kind="variable"><name>currentParam</name></member>
+    <member refid="class_filter_view_1a90c2062135e6e01e5c3f16ef345ed442" kind="variable"><name>isOpen</name></member>
+    <member refid="class_filter_view_1a0077686736205e2b3a7f9a1a3e705989" kind="variable"><name>isPainted</name></member>
+    <member refid="class_filter_view_1a853db4c03412082e5a5d1e8503003320" kind="variable"><name>bypassIndexes</name></member>
+    <member refid="class_filter_view_1a21352a06744edb5ca53f04dda2fdc03c" kind="function"><name>init</name></member>
+    <member refid="class_filter_view_1a0efc93be178cc43c3a720ba79279ff93" kind="function"><name>tick</name></member>
+    <member refid="class_filter_view_1a1cd655d7b5230cf0eba6d0ba1bdeab2a" kind="function"><name>repaint</name></member>
+    <member refid="class_filter_view_1a129b3aa4ef3da5b2ec99c9edf470ace9" kind="function"><name>clear</name></member>
+    <member refid="class_filter_view_1a158c1bddc94ac62288a3755ed0bc7708" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_filter_view_1a8f7b86415d35791dbc227df40e7d9cbe" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_filter_view_1a8a14ff3bcb573146d7abc22cd97baa85" kind="function"><name>setCurrentParam</name></member>
+  </compound>
+  <compound refid="class_i_l_i9341_spi_transport" kind="class"><name>ILI9341SpiTransport</name>
+    <member refid="class_i_l_i9341_spi_transport_1ab03955bfae99260abf3d20d11dcfd325" kind="variable"><name>dma_busy</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1aa35b557b6c7405f9896efa5c7fb3fe2a" kind="variable"><name>remaining_buff</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a7dd48fa6f0737bd05ec536fc2a75642b" kind="variable"><name>buf_chunk_size</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a277dbdcd3748bba3818e9c5fa05d1711" kind="variable"><name>spi_</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a81b61ce53699de4fa426436abebaa355" kind="variable"><name>tftPalette</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1ad862ffbafe4dfcb39307570c9ce4c7cd" kind="variable"><name>buffer_size</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a157aa22df6f81baef5182bf3dd181d33" kind="variable"><name>pin_reset_</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1acc98ed7e9ea0c474e6b8a24a85d2cf5e" kind="variable"><name>pin_dc_</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a4c73f3fbeb3bb7d2e538f72da706e8db" kind="variable"><name>pin_cs_</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1ad5270a7a454d7cdade23c09b0ccf6d9a" kind="function"><name>Init</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a71c6c3f032960df869dd6d26544c59df" kind="function"><name>Reset</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a1df1fd72bb5c62b3292e33e489880aff" kind="function"><name>SendDataDMA</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a502cbadb8819357dfe9525b62b501e6c" kind="function"><name>SendDataDMA</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a3fa89acdf736f5cd37c10763395a7e25" kind="function"><name>GetTransferSize</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a8f57e2c8e862176ada1a051b0709e78f" kind="function"><name>SendCommand</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1ad6b1480f20b3344d9d29c3fb29ea737d" kind="function"><name>SendData</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a6c101f4e3e1f44bf76acf5704ca0deed" kind="function"><name>SetAddressWindow</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a213a7c7d5ac073b2cefe4710c3e5eaf2" kind="function"><name>PaintPixel</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1ab219741bd41b9d37bdcee097484b390a" kind="function"><name>GetPixel</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1aa62ba43ec164038bd58b30b0f534266a" kind="function"><name>TxCompleteCallback</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a0f92a2d6377574a80efcc8620be39f0e" kind="function"><name>Blend565</name></member>
+    <member refid="class_i_l_i9341_spi_transport_1a1c6f1716457a6d1a51e1bab444d5a64e" kind="function"><name>InitPalette</name></member>
+  </compound>
+  <compound refid="struct_keypad_driver_1_1_index" kind="struct"><name>KeypadDriver::Index</name>
+    <member refid="struct_keypad_driver_1_1_index_1a72604689a80a503a6fa02b2845f36844" kind="variable"><name>row</name></member>
+    <member refid="struct_keypad_driver_1_1_index_1a3a010e28b8a486ad52cedee8d1dc91e8" kind="variable"><name>col</name></member>
+  </compound>
+  <compound refid="class_keypad_driver" kind="class"><name>KeypadDriver</name>
+    <member refid="class_keypad_driver_1ac5b1a243fc0d40fbb6a8c7a3baf1c4b6" kind="variable"><name>index</name></member>
+    <member refid="class_keypad_driver_1a3b66bc3f3bdf9774277b90af1d38404b" kind="variable"><name>top</name></member>
+    <member refid="class_keypad_driver_1ac0c67ee80ab3595e41203f7a89f8dad2" kind="variable"><name>bottom</name></member>
+    <member refid="class_keypad_driver_1acd2041f071077daa907db27f02f97ff7" kind="variable"><name>left</name></member>
+    <member refid="class_keypad_driver_1a8f77ece1292fc72afebe95cc0ac90956" kind="variable"><name>right</name></member>
+    <member refid="class_keypad_driver_1a6218d0644c0f4c138df8f1d4f9f3b07c" kind="function"><name>KeypadDriver</name></member>
+    <member refid="class_keypad_driver_1ad7802446ec1b11a2bd655ff86b6472cd" kind="function"><name>init</name></member>
+    <member refid="class_keypad_driver_1aba201d914666f4962f6cf99a49b7f45a" kind="function"><name>tick</name></member>
+    <member refid="class_keypad_driver_1a575b2b28e034839ebe170cbdf3502719" kind="function"><name>getIndex</name></member>
+    <member refid="class_keypad_driver_1a2ef6125cc167f2996dc43a80583865a4" kind="function"><name>isTopPressed</name></member>
+    <member refid="class_keypad_driver_1a1b46a63256a0b4e4ba8c05866b45ed0c" kind="function"><name>isBottomPressed</name></member>
+    <member refid="class_keypad_driver_1ab8e05a495fe6d96bff11bf75f5080d72" kind="function"><name>isRightPressed</name></member>
+    <member refid="class_keypad_driver_1aea5b2ba9b04f1fc5cb304c1a05fa4076" kind="function"><name>isLeftPressed</name></member>
+    <member refid="class_keypad_driver_1a603df5ba34278ebf40c4eb417973ed0e" kind="function"><name>topPressed</name></member>
+    <member refid="class_keypad_driver_1a83349d42cec5bff4a62f42c5088dbaa9" kind="function"><name>bottomPressed</name></member>
+    <member refid="class_keypad_driver_1a9b2207507e11040720656aa37197f6c2" kind="function"><name>leftPressed</name></member>
+    <member refid="class_keypad_driver_1afd456a46b1cbef71c6378ccf1afc5afa" kind="function"><name>rightPressed</name></member>
+    <member refid="class_keypad_driver_1aac39fca6cb1a6fd613738f491e52dc69" kind="function"><name>wrapIndex</name></member>
+  </compound>
+  <compound refid="class_mixer" kind="class"><name>Mixer</name>
+    <member refid="class_mixer_1ac15245bd5d2696d8551bbd7dc68e8c99" kind="variable"><name>track1</name></member>
+    <member refid="class_mixer_1a8e8820cc42bd096bbd78785820cb4d20" kind="variable"><name>track2</name></member>
+    <member refid="class_mixer_1a6e707d6eb90164605c5fe032d23616c4" kind="variable"><name>track3</name></member>
+    <member refid="class_mixer_1a3a0908eeeebf2aa300699054a148ddbb" kind="variable"><name>track4</name></member>
+    <member refid="class_mixer_1ade49bd924e31b3437e98ea5acd57dd46" kind="variable"><name>mixDiv</name></member>
+    <member refid="class_mixer_1a3489355a57efbe733ca7c4dbf159ec58" kind="variable"><name>master</name></member>
+    <member refid="class_mixer_1a53c9cc8d78a2a27fb788be795c103b62" kind="variable"><name>mix</name></member>
+    <member refid="class_mixer_1a74c4ad03806510dce84e1de22b1b4aa7" kind="variable"><name>bufferSize</name></member>
+    <member refid="class_mixer_1ad9ef6107ff80ed78ceb46e425bb25b05" kind="function"><name>init</name></member>
+    <member refid="class_mixer_1a3f3e14300bd735fa3f4abdef4f2a8798" kind="function"><name>initMixChannels</name></member>
+    <member refid="class_mixer_1ab6c6db2608bad894ddbd3f79af7da648" kind="function"><name>initFX</name></member>
+    <member refid="class_mixer_1a6ec1d4b3b446f487cbc11408a6c0ee23" kind="function"><name>tick</name></member>
+    <member refid="class_mixer_1ac19ad0c9a2101b1a68a1df99b64e5b9a" kind="function"><name>processInputBlock</name></member>
+    <member refid="class_mixer_1af18fb7aa3350a57d2bb8d22272edeba1" kind="function"><name>panChannels</name></member>
+    <member refid="class_mixer_1a5ff27db3d3d929520e8db73f0438b5ec" kind="function"><name>mixOutput</name></member>
+    <member refid="class_mixer_1a84db56f64191585c461a2a05fd68b463" kind="function"><name>processOutputBlock</name></member>
+    <member refid="class_mixer_1ae146a7e1659dc74abda5fd36910e7bff" kind="function"><name>panMixBuffer</name></member>
+    <member refid="class_mixer_1a47456bbddd719f27c7cdc689f80008a1" kind="function"><name>setMixDiv</name></member>
+    <member refid="class_mixer_1a644b7cf22643aec1af032fcc615adc9f" kind="function"><name>setTrack1Pan</name></member>
+    <member refid="class_mixer_1aca235adccb2d2fe1cd7b3db430a66053" kind="function"><name>setTrack2Pan</name></member>
+    <member refid="class_mixer_1a5a88c441bbbbff1128d20d929a7d0935" kind="function"><name>setTrack3Pan</name></member>
+    <member refid="class_mixer_1a28e66584e7f5ecb35f538ae2768cb8ac" kind="function"><name>setTrack4Pan</name></member>
+    <member refid="class_mixer_1ada57a607e8396bed817b7dcd81a80402" kind="function"><name>setTrack1Gain</name></member>
+    <member refid="class_mixer_1a48eb795de18f0207b5c665622ed0adf8" kind="function"><name>setTrack2Gain</name></member>
+    <member refid="class_mixer_1ad464cfd56371e24d3b0e8021452e0b7b" kind="function"><name>setTrack3Gain</name></member>
+    <member refid="class_mixer_1a03ab7d2deb0caf7b33cf883556203b52" kind="function"><name>setTrack4Gain</name></member>
+    <member refid="class_mixer_1afeb56a1404c1e27c819955c93a754589" kind="function"><name>setMasterVolume</name></member>
+  </compound>
+  <compound refid="struct_mixer_1_1_mixer_channel" kind="struct"><name>Mixer::MixerChannel</name>
+    <member refid="struct_mixer_1_1_mixer_channel_1ae322ee26fc2ee8dd218447a790af2eaa" kind="variable"><name>track</name></member>
+    <member refid="struct_mixer_1_1_mixer_channel_1a09df10f8f55f5498b132d31df41ba8f9" kind="variable"><name>buffer</name></member>
+    <member refid="struct_mixer_1_1_mixer_channel_1a7e6876f5f61f789d0dc706d75c2fb5bf" kind="variable"><name>pan</name></member>
+    <member refid="struct_mixer_1_1_mixer_channel_1a0137d82e6827a6a1a4fb405864eabf26" kind="variable"><name>gain</name></member>
+    <member refid="struct_mixer_1_1_mixer_channel_1af233b7894e4e6075d1fe9314fe6eacef" kind="function"><name>getCurVal</name></member>
+  </compound>
+  <compound refid="class_mixer_view" kind="class"><name>MixerView</name>
+    <member refid="class_mixer_view_1ae2453ceed37650c596d0e95916dd33e0" kind="variable"><name>keypad</name></member>
+    <member refid="class_mixer_view_1a4736667cfd386cbdd9f555b843017c3b" kind="variable"><name>amp1</name></member>
+    <member refid="class_mixer_view_1aa228ad14a464a8cc151beec261f52afa" kind="variable"><name>amp2</name></member>
+    <member refid="class_mixer_view_1af52ed9624c84cdb847cc070c1b00c980" kind="variable"><name>amp3</name></member>
+    <member refid="class_mixer_view_1a971ee38c97fc10a1938cbac84ba8268e" kind="variable"><name>amp4</name></member>
+    <member refid="class_mixer_view_1a3421c2b46d73b5c08774d258915b400e" kind="variable"><name>selectedChannel</name></member>
+    <member refid="class_mixer_view_1add406c8f7d0d1d0e6c84120c26eb0905" kind="variable"><name>ampSliders</name></member>
+    <member refid="class_mixer_view_1a1a8bd27e1895f96842da4ef708831dbe" kind="variable"><name>track1</name></member>
+    <member refid="class_mixer_view_1ac85498f0326c6bf9d94714656e386e5c" kind="variable"><name>track2</name></member>
+    <member refid="class_mixer_view_1a38f9d585cc0164f1ff0d3d46c5edb1eb" kind="variable"><name>track3</name></member>
+    <member refid="class_mixer_view_1ac27eac4cd6a10a1ec8a3006f813db767" kind="variable"><name>track4</name></member>
+    <member refid="class_mixer_view_1a0baf73fc1a2847a151ad1f1fd085e9c4" kind="variable"><name>isOpen</name></member>
+    <member refid="class_mixer_view_1adebf2ca97f4a515e24a83997032fad87" kind="variable"><name>isPainted</name></member>
+    <member refid="class_mixer_view_1af147890d75f589e81b9264405a781d87" kind="function"><name>init</name></member>
+    <member refid="class_mixer_view_1abf1e540eef4ebca1bd5c5e95102f408d" kind="function"><name>tick</name></member>
+    <member refid="class_mixer_view_1acb35a7d78b6e17b5a6d9cf24a87516dd" kind="function"><name>repaint</name></member>
+    <member refid="class_mixer_view_1abc2e3fcc6b00885c7ff1cb59e7ba7c89" kind="function"><name>clear</name></member>
+    <member refid="class_mixer_view_1a8b517b4206bb25ec294951aab335ea89" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_mixer_view_1a002acf6e5c349fa3d38747fd310a5ed1" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_mixer_view_1a311d8514bec16cdc797790c62a46380c" kind="function"><name>setSelectedChannel</name></member>
+  </compound>
+  <compound refid="class_pitch_shift" kind="class"><name>PitchShift</name>
+    <member refid="class_pitch_shift_1a7f4479ba17295861c1dd5ceafac0a0d7" kind="variable"><name>buffer</name></member>
+    <member refid="class_pitch_shift_1ab4282c80b5e97f60548a180ba6e64de0" kind="variable"><name>shifter</name></member>
+    <member refid="class_pitch_shift_1af64c84ecbcfad19b9df7136a8187058d" kind="variable"><name>isBypass</name></member>
+    <member refid="class_pitch_shift_1a43242b2d5621eeeaed391bd715106824" kind="variable"><name>amount</name></member>
+    <member refid="class_pitch_shift_1ac3c13581ade9232fb69efddefe27dfc9" kind="variable"><name>semitones</name></member>
+    <member refid="class_pitch_shift_1a81d43872b6ddb277f689beaebd9a2c0e" kind="function"><name>init</name></member>
+    <member refid="class_pitch_shift_1a280be785a2b88ac3cf1b1e1dc53d1453" kind="function"><name>setDefaultValues</name></member>
+    <member refid="class_pitch_shift_1ad942f1dcd95926fb670941272c1b4894" kind="function"><name>setBypass</name></member>
+    <member refid="class_pitch_shift_1ab68cac9ffa4983ad8b6357d4797f176e" kind="function"><name>setAmount</name></member>
+    <member refid="class_pitch_shift_1a61893b7143a5e382fc23cb5f81737ae2" kind="function"><name>processBlock</name></member>
+  </compound>
+  <compound refid="struct_pitch_shifter_defaults" kind="struct"><name>PitchShifterDefaults</name>
+    <member refid="struct_pitch_shifter_defaults_1ad43d545ca8013884e3bb8c86a6bc45cb" kind="variable"><name>bypass</name></member>
+    <member refid="struct_pitch_shifter_defaults_1a2b1f2cb288e4567e0d74211fab4c68d2" kind="variable"><name>amount</name></member>
+    <member refid="struct_pitch_shifter_defaults_1af428ba99e75c82bb15afa3d80dcfb172" kind="variable"><name>semitones</name></member>
+    <member refid="struct_pitch_shifter_defaults_1a54f6ab804781831742d9c86783d2360b" kind="variable"><name>rand</name></member>
+  </compound>
+  <compound refid="class_pitch_shift_view" kind="class"><name>PitchShiftView</name>
+    <member refid="class_pitch_shift_view_1a88ca75f437c0d98ed35b267bb9e33095" kind="variable"><name>trackID</name></member>
+    <member refid="class_pitch_shift_view_1ad51b4c40e2722d03165d9b54cf5ae31a" kind="variable"><name>keypad</name></member>
+    <member refid="class_pitch_shift_view_1aecdafa9bfa2d943430ec713ca695bf25" kind="variable"><name>bypass</name></member>
+    <member refid="class_pitch_shift_view_1a92da8c45977e368017ec9ec9881d979e" kind="variable"><name>amount</name></member>
+    <member refid="class_pitch_shift_view_1af13a5d25c3e55cd05c0f25da53312166" kind="variable"><name>semitones</name></member>
+    <member refid="class_pitch_shift_view_1aa8d6db7072868eb992217a181a066a3d" kind="variable"><name>numberOfParameters</name></member>
+    <member refid="class_pitch_shift_view_1a20c7688ea23db7d506693e2d9dd5a689" kind="variable"><name>parameterNames</name></member>
+    <member refid="class_pitch_shift_view_1a3bbf99e0a92e2e17dd6b11cca198fbd8" kind="variable"><name>currentParam</name></member>
+    <member refid="class_pitch_shift_view_1a8d884ac70db42978fef7f8a7647f394c" kind="variable"><name>isOpen</name></member>
+    <member refid="class_pitch_shift_view_1afebdc27d2c40c11eeb0d98b438c48ce1" kind="variable"><name>isPainted</name></member>
+    <member refid="class_pitch_shift_view_1a44e239be5bc205ad0b30498fd544a5af" kind="variable"><name>bypassIndexes</name></member>
+    <member refid="class_pitch_shift_view_1aaa2724fbd96ff3fafa73f74813a44dcf" kind="function"><name>init</name></member>
+    <member refid="class_pitch_shift_view_1a713e23bfbc8eb132994ea84f523991fe" kind="function"><name>tick</name></member>
+    <member refid="class_pitch_shift_view_1a38c3bad52b514ea8603c99bd08917cd5" kind="function"><name>repaint</name></member>
+    <member refid="class_pitch_shift_view_1a888563b7ec8913b0716c0e41fda2de31" kind="function"><name>clear</name></member>
+    <member refid="class_pitch_shift_view_1a8ef693eec2a5f75b689d3f166cb97718" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_pitch_shift_view_1a86467f35d4049f2fd3a1eadfeb9f403c" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_pitch_shift_view_1ab003700abb9a0c1dc53110aac73ee850" kind="function"><name>setCurrentParam</name></member>
+  </compound>
+  <compound refid="struct_track_1_1_playhead" kind="struct"><name>Track::Playhead</name>
+    <member refid="struct_track_1_1_playhead_1a5787f1f3efc6a98292ee2b9634b1d2e9" kind="variable"><name>writePos</name></member>
+    <member refid="struct_track_1_1_playhead_1a748efb5d1a46cdfa90d463f3393ea149" kind="variable"><name>readPos</name></member>
+    <member refid="struct_track_1_1_playhead_1a9a38f6aadf266efc55f1381114f8b721" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="class_reverb" kind="class"><name>Reverb</name>
+    <member refid="class_reverb_1ac80fb464e5494146a56b06a139b9cba0" kind="variable"><name>output</name></member>
+    <member refid="class_reverb_1ae63f55bb59f573afc406134c88c7c654" kind="variable"><name>model</name></member>
+    <member refid="class_reverb_1ac76044aac36ba2ee4a133a91bf0dc1cb" kind="variable"><name>isBypass</name></member>
+    <member refid="class_reverb_1aac45f7889c73bfb9ebb2d4f1067443c3" kind="variable"><name>amount</name></member>
+    <member refid="class_reverb_1a339771075ce4e33992bd105508840bf6" kind="variable"><name>mode</name></member>
+    <member refid="class_reverb_1ab6ef682ceafc7a54e97059d6f999d464" kind="variable"><name>size</name></member>
+    <member refid="class_reverb_1a6f8110cabbc381139c04c0d96f982c1e" kind="variable"><name>damp</name></member>
+    <member refid="class_reverb_1a19c18c85bec19a960543ef3bc2a225f4" kind="variable"><name>width</name></member>
+    <member refid="class_reverb_1aeddbf149b51adada870cfe78e8ffb833" kind="function"><name>init</name></member>
+    <member refid="class_reverb_1a5a8451daa1efb94b27e32bc1a6a5adeb" kind="function"><name>setDefaultValues</name></member>
+    <member refid="class_reverb_1a23b1f08d104a5c23db173d41683ebd8b" kind="function"><name>setBypass</name></member>
+    <member refid="class_reverb_1a915968b9f9b2538f14d1d013b7312c31" kind="function"><name>setAmount</name></member>
+    <member refid="class_reverb_1a3adde3ca44e4e94e30c00d534c1db8bc" kind="function"><name>processBlock</name></member>
+  </compound>
+  <compound refid="struct_reverb_defaults" kind="struct"><name>ReverbDefaults</name>
+    <member refid="struct_reverb_defaults_1a7945249233d07fb356c8e831bc4b9496" kind="variable"><name>bypass</name></member>
+    <member refid="struct_reverb_defaults_1a32b209d8567e5ea83e519856bc66bb19" kind="variable"><name>amount</name></member>
+    <member refid="struct_reverb_defaults_1aed0f8fb03bb55770dadaf39b098e6e68" kind="variable"><name>mode</name></member>
+    <member refid="struct_reverb_defaults_1a4e2183aa8a8c4973fc34cde579fc77a6" kind="variable"><name>size</name></member>
+    <member refid="struct_reverb_defaults_1a82afc1cd2b4495d78e907ff1ad4b1c33" kind="variable"><name>damp</name></member>
+    <member refid="struct_reverb_defaults_1ade4990543746184dafcf35e5e3979c73" kind="variable"><name>width</name></member>
+  </compound>
+  <compound refid="class_reverb_view" kind="class"><name>ReverbView</name>
+    <member refid="class_reverb_view_1ad267cf908087c2cbabcc9ed4aefda08b" kind="variable"><name>trackID</name></member>
+    <member refid="class_reverb_view_1a5c651e8b9b29e29ead42a2bfc488e745" kind="variable"><name>keypad</name></member>
+    <member refid="class_reverb_view_1a2e9a3c37a39f4e5c8046558d6c2f3d7a" kind="variable"><name>bypass</name></member>
+    <member refid="class_reverb_view_1adeecc54657152f819d1278a62fe89f59" kind="variable"><name>amount</name></member>
+    <member refid="class_reverb_view_1a47b003bb3e6f6b8fbb88089cc3fb4449" kind="variable"><name>size</name></member>
+    <member refid="class_reverb_view_1a759666017d55e9dfa0a43a62d8884d96" kind="variable"><name>numberOfParameters</name></member>
+    <member refid="class_reverb_view_1a38b6ce7e4696cbc4d2e677c70ad41170" kind="variable"><name>parameterNames</name></member>
+    <member refid="class_reverb_view_1a0e5c5a3dc36f57aa63423ae2013f7f41" kind="variable"><name>currentParam</name></member>
+    <member refid="class_reverb_view_1a3a8e9c493172135e1c417e917834fc92" kind="variable"><name>isOpen</name></member>
+    <member refid="class_reverb_view_1a30babeff86f2b2b580a2e1b5e74dff60" kind="variable"><name>isPainted</name></member>
+    <member refid="class_reverb_view_1a06409134444d2ba21ac693bbf657bafd" kind="variable"><name>bypassIndexes</name></member>
+    <member refid="class_reverb_view_1a4f5e138fe1b629d7427c29e652c44690" kind="function"><name>init</name></member>
+    <member refid="class_reverb_view_1a47522b1723f193fb31fcc37223a92f8c" kind="function"><name>tick</name></member>
+    <member refid="class_reverb_view_1aec6647e01ef1be174dbc00512c7b500d" kind="function"><name>repaint</name></member>
+    <member refid="class_reverb_view_1a371f3e584ce056939cb0f0243c2c019e" kind="function"><name>clear</name></member>
+    <member refid="class_reverb_view_1ab547bd971093cb4d553156f857373a55" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_reverb_view_1a1103ea5fefcabbb7ab16d70c43e2f33a" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_reverb_view_1af4731a99c5e3ee1fffe5a3082f966f2f" kind="function"><name>setCurrentParam</name></member>
+  </compound>
+  <compound refid="classrevmodel" kind="class"><name>revmodel</name>
+    <member refid="classrevmodel_1a3335b672ba4162689f4ba62217220bba" kind="variable"><name>gain</name></member>
+    <member refid="classrevmodel_1a5d1d03e47e1748cfafb75aa4c181e7e5" kind="variable"><name>roomsize</name></member>
+    <member refid="classrevmodel_1a794cded0d3a3a7f118dd2efc7cc04b0d" kind="variable"><name>roomsize1</name></member>
+    <member refid="classrevmodel_1a5a42d8ad864422f270a06a9e8f01c234" kind="variable"><name>damp</name></member>
+    <member refid="classrevmodel_1a85c5a8480451f7820b6b987ecfdd8d8f" kind="variable"><name>damp1</name></member>
+    <member refid="classrevmodel_1afbee71bc3c98be04a2443949c441c3ac" kind="variable"><name>wet</name></member>
+    <member refid="classrevmodel_1a83e5d6fffff9168ba531e5dd869ee70f" kind="variable"><name>wet1</name></member>
+    <member refid="classrevmodel_1a6318a8b2ed824787f2e6c930dd1a35f6" kind="variable"><name>wet2</name></member>
+    <member refid="classrevmodel_1a537bb96039dd23b809454017588b4577" kind="variable"><name>dry</name></member>
+    <member refid="classrevmodel_1a6cf07618bcf859ca2a3b44c1da03fb22" kind="variable"><name>width</name></member>
+    <member refid="classrevmodel_1ab482b5579444c91d3976333c616a4717" kind="variable"><name>mode</name></member>
+    <member refid="classrevmodel_1acc59d494ce3b0930507ca34dd4553019" kind="variable"><name>combL</name></member>
+    <member refid="classrevmodel_1a233d367b83177ea44c7f79c49a2603d6" kind="variable"><name>combR</name></member>
+    <member refid="classrevmodel_1ab3105ed093c98fec2639eeec5c7d99cd" kind="variable"><name>allpassL</name></member>
+    <member refid="classrevmodel_1a43fce01dc6da300298dcd48cc52e2ee6" kind="variable"><name>allpassR</name></member>
+    <member refid="classrevmodel_1ae7153e8cf36a83f1fb53cf8bd8273865" kind="variable"><name>bufcombL1</name></member>
+    <member refid="classrevmodel_1aee15cec59de74aeb67312128f4552cb3" kind="variable"><name>bufcombR1</name></member>
+    <member refid="classrevmodel_1a4b690aa2d90e7b74a39c4aa74b96e08a" kind="variable"><name>bufcombL2</name></member>
+    <member refid="classrevmodel_1aea140aea1309927370af349e4186adb1" kind="variable"><name>bufcombR2</name></member>
+    <member refid="classrevmodel_1a6f159f484c6d0204d31660d860ba3b1e" kind="variable"><name>bufcombL3</name></member>
+    <member refid="classrevmodel_1a06e5178914dd229ea2f1fd75f90f3486" kind="variable"><name>bufcombR3</name></member>
+    <member refid="classrevmodel_1a1ee473312621604170a3458a065d5394" kind="variable"><name>bufcombL4</name></member>
+    <member refid="classrevmodel_1a98f79f7b7a951d8338fa43fcf0b4e56e" kind="variable"><name>bufcombR4</name></member>
+    <member refid="classrevmodel_1a64b941de1e126bca917178a447d66802" kind="variable"><name>bufcombL5</name></member>
+    <member refid="classrevmodel_1ac174805a058f0134fca39fb89b2c6a4d" kind="variable"><name>bufcombR5</name></member>
+    <member refid="classrevmodel_1a4679a4df397640c3f3b9b69f0066886b" kind="variable"><name>bufcombL6</name></member>
+    <member refid="classrevmodel_1a507685f49b2edee6be57a65cd420811e" kind="variable"><name>bufcombR6</name></member>
+    <member refid="classrevmodel_1a119b431675eecb752b2be4d10ca2046a" kind="variable"><name>bufcombL7</name></member>
+    <member refid="classrevmodel_1a302aff63cadc9e2152e143c93bb08acb" kind="variable"><name>bufcombR7</name></member>
+    <member refid="classrevmodel_1ad93d1eea2b9ce8fbe04d47177212bb46" kind="variable"><name>bufcombL8</name></member>
+    <member refid="classrevmodel_1a6e34847041d803be08aedc857f1df57b" kind="variable"><name>bufcombR8</name></member>
+    <member refid="classrevmodel_1ae647155552efe2eea8e2f4db048e6949" kind="variable"><name>bufallpassL1</name></member>
+    <member refid="classrevmodel_1af8b52e6e9ecd23a7344e3feeb3eff82d" kind="variable"><name>bufallpassR1</name></member>
+    <member refid="classrevmodel_1a8f7e2fa5185529e007fefc35785d4f39" kind="variable"><name>bufallpassL2</name></member>
+    <member refid="classrevmodel_1a4a2a40356d9c9f5d6468cebc5ad3836d" kind="variable"><name>bufallpassR2</name></member>
+    <member refid="classrevmodel_1af91f3d3fdd70d649c08cde9f6bfab1a5" kind="variable"><name>bufallpassL3</name></member>
+    <member refid="classrevmodel_1a24a7133a530f55dced752917f4dc139d" kind="variable"><name>bufallpassR3</name></member>
+    <member refid="classrevmodel_1a5fefae79996c51daac81173d964aadef" kind="variable"><name>bufallpassL4</name></member>
+    <member refid="classrevmodel_1aab6c3b167ec607ec597edfb601e414f0" kind="variable"><name>bufallpassR4</name></member>
+    <member refid="classrevmodel_1ad924b3d943f71aa720ea3d58cee00fe9" kind="function"><name>revmodel</name></member>
+    <member refid="classrevmodel_1a57c4aad6531c32e11691dfbe013bdad9" kind="function"><name>mute</name></member>
+    <member refid="classrevmodel_1a6c00999a98dce5a8f8cc40abd52124b3" kind="function"><name>processmix</name></member>
+    <member refid="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" kind="function"><name>processreplace</name></member>
+    <member refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" kind="function"><name>setroomsize</name></member>
+    <member refid="classrevmodel_1a196043f0bd588a738a8065d186f48a74" kind="function"><name>getroomsize</name></member>
+    <member refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" kind="function"><name>setdamp</name></member>
+    <member refid="classrevmodel_1aac6ef7e868803b080337728be8180566" kind="function"><name>getdamp</name></member>
+    <member refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" kind="function"><name>setwet</name></member>
+    <member refid="classrevmodel_1ae9033d82fb3a58529b35110160b1f4e8" kind="function"><name>getwet</name></member>
+    <member refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" kind="function"><name>setdry</name></member>
+    <member refid="classrevmodel_1a45e7883001a56414dfe9ec787e3f1529" kind="function"><name>getdry</name></member>
+    <member refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" kind="function"><name>setwidth</name></member>
+    <member refid="classrevmodel_1ac98d26e165bde52c0bb962e4bca4f950" kind="function"><name>getwidth</name></member>
+    <member refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" kind="function"><name>setmode</name></member>
+    <member refid="classrevmodel_1a680df826bb6a1aea3d0e8a4259a2cc83" kind="function"><name>getmode</name></member>
+    <member refid="classrevmodel_1a0ef1c9c20fa55bffb9e1b0abcb0d8f1a" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="class_stepped_parameter" kind="class"><name>SteppedParameter</name>
+    <member refid="class_stepped_parameter_1a5aee1fa821c320b864c279d60a467eda" kind="variable"><name>paramID</name></member>
+    <member refid="class_stepped_parameter_1a4d489566be6b1051b60c8a46d4b177ab" kind="variable"><name>min</name></member>
+    <member refid="class_stepped_parameter_1aa494765e8b6557458dc6dc5aedcf4017" kind="variable"><name>max</name></member>
+    <member refid="class_stepped_parameter_1a23df43285ae1e932ecb225cc587dca73" kind="variable"><name>curVal</name></member>
+    <member refid="class_stepped_parameter_1a62a9732d33d2adfdd1f1f20904205d44" kind="variable"><name>step</name></member>
+    <member refid="class_stepped_parameter_1a2918852c9ad52da10c33eb7fad187c81" kind="variable"><name>callback</name></member>
+    <member refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kind="function"><name>init</name></member>
+    <member refid="class_stepped_parameter_1ae364f78a0faf8f9a8bd8501577f0b607" kind="function"><name>increment</name></member>
+    <member refid="class_stepped_parameter_1a378641604d8570b8d8556891dca6f729" kind="function"><name>decrement</name></member>
+    <member refid="class_stepped_parameter_1ac1484edc659a13ced1c23454b100e054" kind="function"><name>getID</name></member>
+    <member refid="class_stepped_parameter_1aaf58fcb799ceea1bb0344183c0b7d61e" kind="function"><name>getMin</name></member>
+    <member refid="class_stepped_parameter_1a505bdecd305d69892ab0737fc2740a9e" kind="function"><name>getMax</name></member>
+    <member refid="class_stepped_parameter_1ae7dcac0501984ece839bf6ad3bc7139d" kind="function"><name>getCurVal</name></member>
+  </compound>
+  <compound refid="struct_stepped_parameter_wrapper" kind="struct"><name>SteppedParameterWrapper</name>
+    <member refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" kind="variable"><name>param</name></member>
+    <member refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="class_stepped_slider" kind="class"><name>SteppedSlider</name>
+    <member refid="class_stepped_slider_1a1d04b17f289b82be00928187a6a8c4e2" kind="variable"><name>encoder</name></member>
+    <member refid="class_stepped_slider_1a3c48143fbd5fa684d33a7c6ee9c2e219" kind="variable"><name>paramID</name></member>
+    <member refid="class_stepped_slider_1a5d7014dd479a24368aea161f6f1243e9" kind="variable"><name>param</name></member>
+    <member refid="class_stepped_slider_1a226bcbc0bf6662e75f2454a5149ac6cf" kind="variable"><name>curVal</name></member>
+    <member refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" kind="function"><name>init</name></member>
+    <member refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" kind="function"><name>tick</name></member>
+    <member refid="class_stepped_slider_1a848340a29833aba52aac904e7237bcc1" kind="function"><name>setSelected</name></member>
+    <member refid="class_stepped_slider_1a69f8b069bcade4ce38fcb245004fd77d" kind="function"><name>repaint</name></member>
+  </compound>
+  <compound refid="class_track" kind="class"><name>Track</name>
+    <member refid="class_track_1a626318387c24794a1c2a28bdeb88f338" kind="variable"><name>trackID</name></member>
+    <member refid="class_track_1a6647452035082c9a2a44e824dbddf92d" kind="variable"><name>state</name></member>
+    <member refid="class_track_1a42a327bde393fa8beedc94c55d7ba890" kind="variable"><name>ph</name></member>
+    <member refid="class_track_1a7a698f38667f7e2cf3f53373289f5090" kind="variable"><name>ti</name></member>
+    <member refid="class_track_1a719681bb72966b4af228e1946b7714dd" kind="variable"><name>record</name></member>
+    <member refid="class_track_1a23d2a2a6772bf3e5d2ef42725e49f08d" kind="variable"><name>play</name></member>
+    <member refid="class_track_1aaca69b7e54de3116a49c5ce4d008d8f2" kind="variable"><name>buffer</name></member>
+    <member refid="class_track_1a669330f1c7fbc06374a2234355a09088" kind="variable"><name>bufferSize</name></member>
+    <member refid="class_track_1a11926980c96c12a1dce177301ce4338d" kind="variable"><name>loopStart</name></member>
+    <member refid="class_track_1a03390a385cb96d6ec702ef42c984cdf5" kind="variable"><name>startPos</name></member>
+    <member refid="class_track_1a27d395e05057d76d98317cbd34ed3e9c" kind="variable"><name>pitchShift</name></member>
+    <member refid="class_track_1a613c677f807988eda7087af6c4297dbb" kind="variable"><name>shaper</name></member>
+    <member refid="class_track_1af1caf57ce60ea8d5d87bb03918f22cd4" kind="variable"><name>filter</name></member>
+    <member refid="class_track_1a89fd61f41fe225786196a13bb854622b" kind="variable"><name>delay</name></member>
+    <member refid="class_track_1aeded78bd0ca9e38225fad05739553c5e" kind="variable"><name>reverb</name></member>
+    <member refid="class_track_1a76b434303c0728f7357c8bcc2813e6b9" kind="function"><name>init</name></member>
+    <member refid="class_track_1a4e167244a48672681f2e0b187b9fd2a7" kind="function"><name>initFX</name></member>
+    <member refid="class_track_1ac41690e46e3178d90acb87327955df1f" kind="function"><name>tick</name></member>
+    <member refid="class_track_1ae2c5e0f996e01be7c34e695fa9714905" kind="function"><name>resetBuffer</name></member>
+    <member refid="class_track_1af5bf39d8eed1fdd58ee86ebbfae8f3e3" kind="function"><name>setIsRecording</name></member>
+    <member refid="class_track_1a639cee2f6d225448b4a86166bb0a4ae8" kind="function"><name>setIsPlaying</name></member>
+    <member refid="class_track_1a7faeb268f0b7825dc9f1ac31d2f96589" kind="function"><name>getState</name></member>
+    <member refid="class_track_1a336774fc362866bf0df508aead2116d0" kind="function"><name>incrementWritePos</name></member>
+    <member refid="class_track_1a80383a6a58e05f2ca099ced9e7e0992c" kind="function"><name>incrementReadPos</name></member>
+    <member refid="class_track_1a6f77ea1dd3f160fca62bf949f65c6b26" kind="function"><name>getReadPos</name></member>
+    <member refid="class_track_1adb288fb70bc39ec6f1d50be4dc8d3174" kind="function"><name>processInputBlock</name></member>
+    <member refid="class_track_1a9a6cafdef172c8abfb21a6a78664c5d8" kind="function"><name>processOutputBlock</name></member>
+    <member refid="class_track_1ae7297dd95dac3f0f2370ea7f02b33f97" kind="function"><name>setLoopStart</name></member>
+    <member refid="class_track_1ace37793ca56ea05db659efa528b3104f" kind="function"><name>calculateLoop</name></member>
+  </compound>
+  <compound refid="struct_track_information" kind="struct"><name>TrackInformation</name>
+    <member refid="struct_track_information_1a0723aa2f593ad0221147f49a98f12369" kind="variable"><name>isEmpty</name></member>
+    <member refid="struct_track_information_1a61c449b7f0f5feb7b29c2a64b3e319bd" kind="variable"><name>loopLength</name></member>
+  </compound>
+  <compound refid="class_track_view" kind="class"><name>TrackView</name>
+    <member refid="class_track_view_1a13a49e0857caad9b995383959037f579" kind="variable"><name>trackID</name></member>
+    <member refid="class_track_view_1acd7471ae792d75f4baaba26ae5e3cb47" kind="variable"><name>keypad</name></member>
+    <member refid="class_track_view_1a89954b3625fc5205d22dc5842da382ee" kind="variable"><name>pitchShiftView</name></member>
+    <member refid="class_track_view_1a886ff11480cd6259cb350e2162cb5d98" kind="variable"><name>waveshaperView</name></member>
+    <member refid="class_track_view_1a1ab921519eee73837f5cb3ae085512b8" kind="variable"><name>filterView</name></member>
+    <member refid="class_track_view_1aac3be86298d004198eca366cbf498678" kind="variable"><name>reverbView</name></member>
+    <member refid="class_track_view_1a91ad3a0831d199d57f6975a69947e960" kind="variable"><name>delayView</name></member>
+    <member refid="class_track_view_1a7208a725710b418e0436ab5ad1b7e1b5" kind="variable"><name>selectedEffectIndex</name></member>
+    <member refid="class_track_view_1aa5131ad8745103c32c183927a66b6e25" kind="variable"><name>isOpen</name></member>
+    <member refid="class_track_view_1af0336b6c90b652b26a3134b8e09e731a" kind="variable"><name>isPainted</name></member>
+    <member refid="class_track_view_1a103d86a77dac67a863199a54f5c09c94" kind="function"><name>init</name></member>
+    <member refid="class_track_view_1a1fe8105b25150caa32ce8f77a1f56f00" kind="function"><name>tick</name></member>
+    <member refid="class_track_view_1a675ad934846a3a704b2d31df122f06a6" kind="function"><name>repaint</name></member>
+    <member refid="class_track_view_1ad3ee20c39189f9201f6320b1186a05a9" kind="function"><name>clear</name></member>
+    <member refid="class_track_view_1a18ac0bf795cadc0f56759bf2c46b3f4f" kind="function"><name>setIsOpen</name></member>
+  </compound>
+  <compound refid="class_ui_driver" kind="class"><name>UiDriver</name>
+    <member refid="class_ui_driver_1af3032aa88eb80c0ff0c975876a3bbb8d" kind="enum"><name>Orientation</name></member>
+    <member refid="class_ui_driver_1af3032aa88eb80c0ff0c975876a3bbb8da7a1920d61156abc05a60135aefe8bc67" kind="enumvalue"><name>Default</name></member>
+    <member refid="class_ui_driver_1af3032aa88eb80c0ff0c975876a3bbb8daa645f53b199ce12c628cbc39dd0278b2" kind="enumvalue"><name>RRight</name></member>
+    <member refid="class_ui_driver_1af3032aa88eb80c0ff0c975876a3bbb8da30526f42dd072f3e58809a975a4b1d75" kind="enumvalue"><name>RLeft</name></member>
+    <member refid="class_ui_driver_1af3032aa88eb80c0ff0c975876a3bbb8daf08af04d07c38567fc6b24634c51f903" kind="enumvalue"><name>UpsideDown</name></member>
+    <member refid="class_ui_driver_1a2f2f30fd7e3f9eb6dfe579306b1a1c79" kind="variable"><name>screen_update_last_</name></member>
+    <member refid="class_ui_driver_1a6473ee0e2d62a2ec300e0b15fb5b282f" kind="variable"><name>screen_update_period_</name></member>
+    <member refid="class_ui_driver_1a8649ae4edeceb70efb97d0cb132df760" kind="variable"><name>fps_update_last_</name></member>
+    <member refid="class_ui_driver_1a2a498ecce35a35e1aeed0964d8af3d83" kind="variable"><name>transport_</name></member>
+    <member refid="class_ui_driver_1a29176de413dd99a0205d03e213a3b85a" kind="variable"><name>width</name></member>
+    <member refid="class_ui_driver_1ac3201a983fde7ab337b7ea739950faf4" kind="variable"><name>height</name></member>
+    <member refid="class_ui_driver_1afa20cb47ea14ccaa22d1249ed3473a37" kind="variable"><name>rotation</name></member>
+    <member refid="class_ui_driver_1af4e41302b175e565df28f8e34eeb35bf" kind="variable"><name>header</name></member>
+    <member refid="class_ui_driver_1a0241ea917de65eb397d8fec9b3ebe832" kind="variable"><name>footer</name></member>
+    <member refid="class_ui_driver_1a408162a22f6b305368316a316123d271" kind="variable"><name>diff</name></member>
+    <member refid="class_ui_driver_1afb9a9e168cebb221ce593f8c7af66586" kind="variable"><name>frames</name></member>
+    <member refid="class_ui_driver_1ae9093a9726844edc8eaef2cfb7310db0" kind="variable"><name>currentX_</name></member>
+    <member refid="class_ui_driver_1ae46e05f7ce3e3a25855e73d214107ae3" kind="variable"><name>currentY_</name></member>
+    <member refid="class_ui_driver_1af148d3ad3e26bfe753e61aa9d4331ebb" kind="variable"><name>fps</name></member>
+    <member refid="class_ui_driver_1a2e847d43b54fef8756e6745a3e3f879e" kind="function"><name>Init</name></member>
+    <member refid="class_ui_driver_1a8e3b71fd346ee3302f1446f3b6fc35e2" kind="function"><name>InitDriver</name></member>
+    <member refid="class_ui_driver_1af1bf3bc414fcc2b9b563fcc40f98f2e0" kind="function"><name>SetOrientation</name></member>
+    <member refid="class_ui_driver_1a6068c9af06a470e7368f90b2624a6e98" kind="function"><name>GetDrawableFrame</name></member>
+    <member refid="class_ui_driver_1add07829c83bd47a50fd59d0fdb45c4f6" kind="function"><name>GetBounds</name></member>
+    <member refid="class_ui_driver_1ab216b7d3381e736fa72dc3a88b63f50c" kind="function"><name>Fill</name></member>
+    <member refid="class_ui_driver_1a4a826ac3d48dc88aa6e24169e075a8ff" kind="function"><name>DrawLine</name></member>
+    <member refid="class_ui_driver_1a9614bc15dc15b1ff7f9748885f27b445" kind="function"><name>FillArea</name></member>
+    <member refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" kind="function"><name>DrawRect</name></member>
+    <member refid="class_ui_driver_1a6c94a92ae503206b5bc73c712da2af50" kind="function"><name>DrawRect</name></member>
+    <member refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" kind="function"><name>FillRect</name></member>
+    <member refid="class_ui_driver_1ad1fb02154c03383d479da393b349be4e" kind="function"><name>DrawTriangle</name></member>
+    <member refid="class_ui_driver_1ad08a1c1aeaf37bc3caa605ee477ce276" kind="function"><name>FillTriangle</name></member>
+    <member refid="class_ui_driver_1a9a054d7fafc4f2c6ac852604e3e3619b" kind="function"><name>WriteStringAligned</name></member>
+    <member refid="class_ui_driver_1aa891568b999163d3a431b33698f8b123" kind="function"><name>GetTextRect</name></member>
+    <member refid="class_ui_driver_1a8ddcee555e0c326316459ba5d3c5f2e9" kind="function"><name>WriteChar</name></member>
+    <member refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" kind="function"><name>WriteString</name></member>
+    <member refid="class_ui_driver_1aa51b802b0043c819e60c85893a6deb9c" kind="function"><name>WriteString</name></member>
+    <member refid="class_ui_driver_1aa101506e3db6802c2e570bffa8a58462" kind="function"><name>GetStringWidth</name></member>
+    <member refid="class_ui_driver_1a97666f18b83aa7616f85a8c003314c03" kind="function"><name>DrawCircle</name></member>
+    <member refid="class_ui_driver_1a67d6c3dfc28be448c65fd300ed1b26c8" kind="function"><name>FillCircle</name></member>
+    <member refid="class_ui_driver_1a7932889e7c277f8b2740bd0564ef14e9" kind="function"><name>FillCircleHelper</name></member>
+    <member refid="class_ui_driver_1a1e81a6354d0cce67e64bc5441131c102" kind="function"><name>SetCursor</name></member>
+    <member refid="class_ui_driver_1a704567056037ea49e0558efa67f09f49" kind="function"><name>Update</name></member>
+    <member refid="class_ui_driver_1ac61917930b0d16d8ca40afe5442cd1b3" kind="function"><name>IsRender</name></member>
+    <member refid="class_ui_driver_1ab5511381b9b907b3af64c95059125419" kind="function"><name>UpdateFrameRate</name></member>
+    <member refid="class_ui_driver_1a3767b2812bad5fbd3fee141eac0bf86b" kind="function"><name>Fps</name></member>
+    <member refid="class_ui_driver_1aba556ca919b6171cdce0dab54e0c9161" kind="function"><name>TrimString</name></member>
+    <member refid="class_ui_driver_1a69afe11ab3895f85dec07dd36c9b8e23" kind="function"><name>Start</name></member>
+    <member refid="class_ui_driver_1a27e070b8af0dee6fc607d02ec994955f" kind="function"><name>DrawPixel</name></member>
+    <member refid="class_ui_driver_1ad110891ce79848090b12150fa94555ee" kind="function"><name>DrawVLine</name></member>
+    <member refid="class_ui_driver_1a49de33d5e80a7301cae0db2fa18119d6" kind="function"><name>DrawHLine</name></member>
+    <member refid="class_ui_driver_1a3e63bba2292c99156e0583994907affe" kind="function"><name>Color565</name></member>
+  </compound>
+  <compound refid="class_waveshaper" kind="class"><name>Waveshaper</name>
+    <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52" kind="enum"><name>Funcs</name></member>
+    <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a3e39405f6e785ac1be7e7f1905887e99" kind="enumvalue"><name>CLIPPER</name></member>
+    <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a5bc44734ce4547cd1172e052d522a873" kind="enumvalue"><name>FOLDER</name></member>
+    <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52aac22d5f57c78e0226cdc09264df3fae2" kind="enumvalue"><name>LFO</name></member>
+    <member refid="class_waveshaper_1adc03b39c61450805cf3996844890bb52a245d87f2eba21f3d6d6ce82483fd2d41" kind="enumvalue"><name>BITREDUCER</name></member>
+    <member refid="class_waveshaper_1af0955f3966e553deb33a1d2d2d7dce82" kind="variable"><name>folder</name></member>
+    <member refid="class_waveshaper_1a22030590980321a82d27f0e76871166c" kind="variable"><name>lfo</name></member>
+    <member refid="class_waveshaper_1a6d65eb84af4e957607ebeb7ceb966dce" kind="variable"><name>lfoMin</name></member>
+    <member refid="class_waveshaper_1acb37d23a0fa0d0d0a20197cc23d4b476" kind="variable"><name>lfoMax</name></member>
+    <member refid="class_waveshaper_1a722d506e7192c3b5503d2d58bfce96a8" kind="variable"><name>lfoFreq</name></member>
+    <member refid="class_waveshaper_1ab4dae1c93a6903f7cab0a1a2f4faf141" kind="variable"><name>bitsMin</name></member>
+    <member refid="class_waveshaper_1adc4af49e5eb2f402af3ca471161dfcca" kind="variable"><name>bitsMax</name></member>
+    <member refid="class_waveshaper_1a80264fc65d247c3c2ee6a69ca8994e51" kind="variable"><name>bitRate</name></member>
+    <member refid="class_waveshaper_1ab1dd54f922ca356649300a53497c1a80" kind="variable"><name>bitCount</name></member>
+    <member refid="class_waveshaper_1a1e9cf4d6b15a1db344558fdd866608b5" kind="variable"><name>bits</name></member>
+    <member refid="class_waveshaper_1ac710ef958347431da8083a2a4f65b96a" kind="variable"><name>buffer</name></member>
+    <member refid="class_waveshaper_1a59dc33c29533aa55fa7d969822f5180f" kind="variable"><name>inputAG</name></member>
+    <member refid="class_waveshaper_1a464b247230d177661812e74e71aa40ef" kind="variable"><name>outputAG</name></member>
+    <member refid="class_waveshaper_1ab09bba1df7c47073c7bff542939ec689" kind="variable"><name>diffAG</name></member>
+    <member refid="class_waveshaper_1a9369c40f806283265af1c590f87311f3" kind="variable"><name>isBypass</name></member>
+    <member refid="class_waveshaper_1a8716b8c2c593b592ed850fa24f150567" kind="variable"><name>amount</name></member>
+    <member refid="class_waveshaper_1a2df3262e4e2ff0dcfb68d9e1dfb9b4c3" kind="variable"><name>funcControl</name></member>
+    <member refid="class_waveshaper_1a0a5005d8087c3cb06e191ab19757dc1e" kind="variable"><name>mode</name></member>
+    <member refid="class_waveshaper_1ac04461769908282db7325214eba45087" kind="function"><name>init</name></member>
+    <member refid="class_waveshaper_1a47e4bc80a0c83e31364c8366b080c134" kind="function"><name>setDefaultValues</name></member>
+    <member refid="class_waveshaper_1a2313630b34e917c5b573ada3957c35b9" kind="function"><name>setBypass</name></member>
+    <member refid="class_waveshaper_1a0f5e75a5913f3d65e34bae649ee83f45" kind="function"><name>setAmount</name></member>
+    <member refid="class_waveshaper_1a3db430becb2df8a42cbcb0486414c039" kind="function"><name>setFuncControl</name></member>
+    <member refid="class_waveshaper_1abf1a2cbeb9cf285159fc7c2522dd2d8a" kind="function"><name>setMode</name></member>
+    <member refid="class_waveshaper_1a67420571eeacdabc3629118ffb1f7590" kind="function"><name>scaleControlParam</name></member>
+    <member refid="class_waveshaper_1a44318a7b6e2ab2ffd5ef074bc51c4958" kind="function"><name>setInputAG</name></member>
+    <member refid="class_waveshaper_1a79a46c6bf0e1b895692d8f0aa80ed94a" kind="function"><name>setOutputAG</name></member>
+    <member refid="class_waveshaper_1a00ea2d1f63e96d9b7490d3cd406c174d" kind="function"><name>calculateAutoGain</name></member>
+    <member refid="class_waveshaper_1a9c93d163a6d94bd168518d05e9e957ca" kind="function"><name>applyAutoGain</name></member>
+    <member refid="class_waveshaper_1aee769a45659eeef817fd492ab4fe4cf4" kind="function"><name>processBlock</name></member>
+    <member refid="class_waveshaper_1a5355a959d813d64f04fbe20d632ca4c9" kind="function"><name>processClipper</name></member>
+    <member refid="class_waveshaper_1ad97bfdbd0967ef98837efbbdadc8f3ed" kind="function"><name>processFolder</name></member>
+    <member refid="class_waveshaper_1a86dd3c75d954e3b521d28b514a00b7cd" kind="function"><name>processLFO</name></member>
+    <member refid="class_waveshaper_1a62d9eb0ea8b9ef59f9c68d04bc07df7d" kind="function"><name>processBitReducer</name></member>
+  </compound>
+  <compound refid="struct_waveshaper_defaults" kind="struct"><name>WaveshaperDefaults</name>
+    <member refid="struct_waveshaper_defaults_1af2555f88ad3a85d10233a83e423e0d12" kind="variable"><name>bypass</name></member>
+    <member refid="struct_waveshaper_defaults_1a7b4e8fe95bde1caa5556a43586ce0fb0" kind="variable"><name>amount</name></member>
+    <member refid="struct_waveshaper_defaults_1aae766432efd0d584614aa5565050c4ab" kind="variable"><name>funcControl</name></member>
+    <member refid="struct_waveshaper_defaults_1a444842e4e510fcfff08f9496a9df8055" kind="variable"><name>mode</name></member>
+  </compound>
+  <compound refid="class_waveshaper_view" kind="class"><name>WaveshaperView</name>
+    <member refid="class_waveshaper_view_1ad3a118245527052013fe1337d05a2dd3" kind="variable"><name>trackID</name></member>
+    <member refid="class_waveshaper_view_1a8c05ab596f73f31e98cc6b56efbbe23a" kind="variable"><name>keypad</name></member>
+    <member refid="class_waveshaper_view_1aa5f97e25aa777c3d1e9b6a03ac674f90" kind="variable"><name>bypass</name></member>
+    <member refid="class_waveshaper_view_1a77bff13f66ade6ef98f551601b5e8b12" kind="variable"><name>amount</name></member>
+    <member refid="class_waveshaper_view_1af95695a627ecda16e637160754786cb4" kind="variable"><name>funcControl</name></member>
+    <member refid="class_waveshaper_view_1a1920dc682383115c73bcc9818ea3c567" kind="variable"><name>mode</name></member>
+    <member refid="class_waveshaper_view_1a3c0f7c8be02428e775764fb60356216a" kind="variable"><name>numberOfParameters</name></member>
+    <member refid="class_waveshaper_view_1a4fd15ef21d3404ed5feabb00fe962815" kind="variable"><name>parameterNames</name></member>
+    <member refid="class_waveshaper_view_1a05b28d4d1c0dac078fa9a91b421641b2" kind="variable"><name>currentParam</name></member>
+    <member refid="class_waveshaper_view_1afc061c0c3c3dc72cccbd2617c40d1cee" kind="variable"><name>isOpen</name></member>
+    <member refid="class_waveshaper_view_1a530f0bab19736b267fd33b91ab554d62" kind="variable"><name>isPainted</name></member>
+    <member refid="class_waveshaper_view_1ac7f7b19e63a8c816b9204f9b9afc2665" kind="variable"><name>bypassIndexes</name></member>
+    <member refid="class_waveshaper_view_1a7e22573e74046e17f4b3a5d4d8242d7c" kind="function"><name>init</name></member>
+    <member refid="class_waveshaper_view_1a1167027572fa89082ee21d8b714f5afb" kind="function"><name>tick</name></member>
+    <member refid="class_waveshaper_view_1af4723822c047f4b34dc403e6398b65bd" kind="function"><name>repaint</name></member>
+    <member refid="class_waveshaper_view_1a0327dad8bf41a302efac9092df710ae6" kind="function"><name>clear</name></member>
+    <member refid="class_waveshaper_view_1a74be31ca1a2f22e19fab788384b8f3a2" kind="function"><name>setIsOpen</name></member>
+    <member refid="class_waveshaper_view_1acad77b49e65cc7251ff8ad326b0b19d9" kind="function"><name>setIsPainted</name></member>
+    <member refid="class_waveshaper_view_1ac5e67d9d36f1c8af182735b1f7c74a94" kind="function"><name>setCurrentParam</name></member>
+  </compound>
+  <compound refid="namespace_buffers" kind="namespace"><name>Buffers</name>
+    <member refid="namespace_buffers_1a87d96280f80f5f7a4b2584784786a244" kind="variable"><name>track1</name></member>
+    <member refid="namespace_buffers_1ae193b35b7973e179b49fbdf57c4249e3" kind="variable"><name>track2</name></member>
+    <member refid="namespace_buffers_1a8ed6807590a0b05861e62fb2fe2c5018" kind="variable"><name>track3</name></member>
+    <member refid="namespace_buffers_1a5e8368c8f4e989ff3fb006de4206cafe" kind="variable"><name>track4</name></member>
+    <member refid="namespace_buffers_1a400ffc4f1822843647c0bff5e4ed1a28" kind="variable"><name>track1Ptr</name></member>
+    <member refid="namespace_buffers_1ac69eab0d4644edc3518f13ebc52ca0c5" kind="variable"><name>track2Ptr</name></member>
+    <member refid="namespace_buffers_1ae6a11631f5b3a7182dcce7e33e228849" kind="variable"><name>track3Ptr</name></member>
+    <member refid="namespace_buffers_1a4119551fdbe4eb44a3cae91e08c5eccc" kind="variable"><name>track4Ptr</name></member>
+    <member refid="namespace_buffers_1aea4f10f2dce1e114505948e16730e6e4" kind="variable"><name>mix</name></member>
+    <member refid="namespace_buffers_1a745535f0dd037dec7de4e6c5b7c83525" kind="variable"><name>t1m</name></member>
+    <member refid="namespace_buffers_1a3202e03d01bd37b2c43e6f0bf1d82f2a" kind="variable"><name>t2m</name></member>
+    <member refid="namespace_buffers_1a18631b5feae0f8dc52d2192c4ff4a6c4" kind="variable"><name>t3m</name></member>
+    <member refid="namespace_buffers_1ae3a7ea421e900fdc1ec6a7d8525ddfc9" kind="variable"><name>t4m</name></member>
+    <member refid="namespace_buffers_1a6f513a019053949667da22fd66ad4d03" kind="variable"><name>mixPtr</name></member>
+    <member refid="namespace_buffers_1a364c8fa79ed6e9f5c76576e81b47e080" kind="variable"><name>t1mPtr</name></member>
+    <member refid="namespace_buffers_1ae512b86615f57d29be83b76d7f183e60" kind="variable"><name>t2mPtr</name></member>
+    <member refid="namespace_buffers_1a7569f49c34ca89bde70fd10ada24e48f" kind="variable"><name>t3mPtr</name></member>
+    <member refid="namespace_buffers_1a9e22e58ed5d95f65300f981d370a6e8b" kind="variable"><name>t4mPtr</name></member>
+    <member refid="namespace_buffers_1a8d59e295ced64e71cafd9cd4624bb0dd" kind="variable"><name>t1delay</name></member>
+    <member refid="namespace_buffers_1ae541617b801e70c9eb96906b1ab63ddf" kind="variable"><name>t2delay</name></member>
+    <member refid="namespace_buffers_1ab674e4ce94e53cb33494373c2e6ed8b5" kind="variable"><name>t3delay</name></member>
+    <member refid="namespace_buffers_1a09afea63e2e84ad8ff878bb487c9f2a2" kind="variable"><name>t4delay</name></member>
+    <member refid="namespace_buffers_1aa8aa90eaaca6fa7f5b4834bef80b971c" kind="variable"><name>t1delayPtr</name></member>
+    <member refid="namespace_buffers_1a394119ae840043641b6f7c4229384292" kind="variable"><name>t2delayPtr</name></member>
+    <member refid="namespace_buffers_1aedfabbb8408c77f51548b1a11ffc23f6" kind="variable"><name>t3delayPtr</name></member>
+    <member refid="namespace_buffers_1a3b0edbde4b29986f7102f5d3b54f4962" kind="variable"><name>t4delayPtr</name></member>
+  </compound>
+  <compound refid="namespacedaisy" kind="namespace"><name>daisy</name>
+  </compound>
+  <compound refid="namespacedaisysp" kind="namespace"><name>daisysp</name>
+  </compound>
+  <compound refid="namespace_parameter_i_ds" kind="namespace"><name>ParameterIDs</name>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_delay" kind="namespace"><name>ParameterIDs::Delay</name>
+    <member refid="namespace_parameter_i_ds_1_1_delay_1a3f1c541a92093c5ed26b78022199b0f3" kind="variable"><name>effect</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_delay_1a4f3ce63dc29317bffd70f5bb1e5a5424" kind="variable"><name>amount</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_delay_1a380264f3d33d129c06763dc9b022ac2a" kind="variable"><name>size</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_delay_1a7748252753c008a2fb971b7fc662a91a" kind="variable"><name>feedback</name></member>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_filter" kind="namespace"><name>ParameterIDs::Filter</name>
+    <member refid="namespace_parameter_i_ds_1_1_filter_1a26271da8db4be4e332111950b27b2054" kind="variable"><name>effect</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_filter_1a16651985532bc71c245a6fb00c99d4d6" kind="variable"><name>mode</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_filter_1a080f88c7943d98f26f4e0dd22a66661f" kind="variable"><name>frequency</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_filter_1acee9e576409854fda4e48c5d538d807f" kind="variable"><name>resonance</name></member>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_pitch_shifter" kind="namespace"><name>ParameterIDs::PitchShifter</name>
+    <member refid="namespace_parameter_i_ds_1_1_pitch_shifter_1a91cc2902764e937c0a9bbdfe0b931cad" kind="variable"><name>effect</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_pitch_shifter_1adbc85a3cbcf6222f5fbd2cd59e7da330" kind="variable"><name>amount</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_pitch_shifter_1aeeb85c1162bd9e541e8ce83b78d8bbf6" kind="variable"><name>semitones</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_pitch_shifter_1a4f3e581922e0ec420beef437cda32c05" kind="variable"><name>random</name></member>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_reverb" kind="namespace"><name>ParameterIDs::Reverb</name>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a5135f964e407772f37ead0bfce96a723" kind="variable"><name>effect</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a7e1a38542d0f4e7fec300d774dcb3c0a" kind="variable"><name>amount</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a3b44aeacb5d293b8a44bd71936fbe044" kind="variable"><name>mode</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a84686a6caa71fdb48d902119b46d7975" kind="variable"><name>size</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a4b561a0ea445689ecbdbee7d658b0a16" kind="variable"><name>damp</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_reverb_1a19f6063d487101b7a67e24b03ac5ffb7" kind="variable"><name>width</name></member>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_tracks" kind="namespace"><name>ParameterIDs::Tracks</name>
+    <member refid="namespace_parameter_i_ds_1_1_tracks_1a3e85a68890388908bebe4f8d7b5a4797" kind="variable"><name>Track1</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_tracks_1af4b941cc1ac4f82109e15e8147fa2d0d" kind="variable"><name>Track2</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_tracks_1a096285e73e284783970cb12fcae59901" kind="variable"><name>Track3</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_tracks_1a599f68c4f578da8180cf395da410a079" kind="variable"><name>Track4</name></member>
+  </compound>
+  <compound refid="namespace_parameter_i_ds_1_1_waveshaper" kind="namespace"><name>ParameterIDs::Waveshaper</name>
+    <member refid="namespace_parameter_i_ds_1_1_waveshaper_1afdfc83ea30f6fc50a1edbc6e9c7da74e" kind="variable"><name>effect</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_waveshaper_1a48da39a272f9138aa859ae2720b7a461" kind="variable"><name>amount</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_waveshaper_1a9c648f329d6bc1a81525e0ea9dcc2c65" kind="variable"><name>funcControl</name></member>
+    <member refid="namespace_parameter_i_ds_1_1_waveshaper_1a73172537740cea5fed2dc6751935ab4d" kind="variable"><name>mode</name></member>
+  </compound>
+  <compound refid="namespace_style_sheet" kind="namespace"><name>StyleSheet</name>
+  </compound>
+  <compound refid="namespace_style_sheet_1_1_effects" kind="namespace"><name>StyleSheet::Effects</name>
+    <member refid="namespace_style_sheet_1_1_effects_1aa2cb50b4de37a95ee330d343edb3df79" kind="variable"><name>screenWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a4a3ea85794d282edd2c8386ea4a96823" kind="variable"><name>screenHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1aaa0aaad72d742fd746684b1407a84253" kind="variable"><name>borderColor</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a9015d452c5efeda407d3d507dbc7c597" kind="variable"><name>textColor</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a38538dbc59ca30f04856f7f6d4938d20" kind="variable"><name>sliderBackColor</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1ae94486d482433453bdb264a3ba5a18c0" kind="variable"><name>headerHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a6fc918e5bdbc87736fabec6ee8531286" kind="variable"><name>paramSpacing</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a1ae19274d08a922a898b97110c87e32c" kind="variable"><name>sliderHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a6f8af68aaacab1f17cdcbd9e98c3f058" kind="variable"><name>sliderWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a6f0710ed00022dfecc93fc635c5dea77" kind="variable"><name>frameThickness</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1aa88745355b188d8ab1ae2596d97f2c2e" kind="variable"><name>sliderOffsetX</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a97852b63064abe23c6ea9a7e42e5bab5" kind="variable"><name>bypassButtonWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_effects_1a321865a0f7c27f2d355a7a4de6bec98f" kind="variable"><name>bypassButtonHeight</name></member>
+  </compound>
+  <compound refid="namespace_style_sheet_1_1_mixer" kind="namespace"><name>StyleSheet::Mixer</name>
+    <member refid="namespace_style_sheet_1_1_mixer_1a59b797fa98a516869a4b7310f3bb86ff" kind="variable"><name>screenWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a9ee7f2311edd1d3283d21323ac0a41c4" kind="variable"><name>screenHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a3319d1ccdf2ffb4ad53a9312c4f48d0d" kind="variable"><name>faderWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1acd2f039dadb606caa3f468d519262190" kind="variable"><name>faderHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a257d169c3373d0136310015259ebf0bb" kind="variable"><name>faderSpacing</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1abdbc09839c51ff2a09f50dfac6f5954a" kind="variable"><name>firstFaderX</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a5febc5e2cc21e25c8d0255a5f422576f" kind="variable"><name>mixerBottom</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a86b4ef19bec74bb9bc6dd027083319f4" kind="variable"><name>frameColor</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a0826c5e16e91f374e665d6750df048fb" kind="variable"><name>textColor</name></member>
+    <member refid="namespace_style_sheet_1_1_mixer_1a89fcc70730cc0c85c83b9081a6c539d4" kind="variable"><name>frameThickness</name></member>
+  </compound>
+  <compound refid="namespace_style_sheet_1_1_tracks" kind="namespace"><name>StyleSheet::Tracks</name>
+    <member refid="namespace_style_sheet_1_1_tracks_1aa6f40609f703cf12a1d2cfaa87602727" kind="variable"><name>borderColor</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1a8ee55189cd416e108302d892479ce80e" kind="variable"><name>text_color</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1ad6873635d0f9099767cc534e5f6df011" kind="variable"><name>effectBoxColor</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1a74dfdf47fc5ff3df49688d93d18e69fe" kind="variable"><name>selectedEffectColor</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1a797ae46074db87d51b748834d77ca029" kind="variable"><name>smallerFont</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1a7afdc78c83b6b0d7cfc5a221c26faea1" kind="variable"><name>largerFont</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1aea25eb2cb44541efee6c723656377f71" kind="variable"><name>smallerFontHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1a1359d7c2c5dfac0ffe6732a04f107c46" kind="variable"><name>displayWidth</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1ae5b09753e1d74d14b2f04adf61372400" kind="variable"><name>displayHeight</name></member>
+    <member refid="namespace_style_sheet_1_1_tracks_1ac5c985b78530fb3d472d7bb0fbf72ca3" kind="variable"><name>effectsYStart</name></member>
+  </compound>
+  <compound refid="allpass_8d" kind="file"><name>allpass.d</name>
+  </compound>
+  <compound refid="_audio_slider_8d" kind="file"><name>AudioSlider.d</name>
+  </compound>
+  <compound refid="comb_8d" kind="file"><name>comb.d</name>
+  </compound>
+  <compound refid="_delay_8d" kind="file"><name>Delay.d</name>
+  </compound>
+  <compound refid="_delay_view_8d" kind="file"><name>DelayView.d</name>
+  </compound>
+  <compound refid="_filter_8d" kind="file"><name>Filter.d</name>
+  </compound>
+  <compound refid="_filter_view_8d" kind="file"><name>FilterView.d</name>
+  </compound>
+  <compound refid="_i_l_i9341__ui__driver_8d" kind="file"><name>ILI9341_ui_driver.d</name>
+  </compound>
+  <compound refid="_loopy_tunes_8d" kind="file"><name>LoopyTunes.d</name>
+  </compound>
+  <compound refid="_mixer_8d" kind="file"><name>Mixer.d</name>
+  </compound>
+  <compound refid="_mixer_view_8d" kind="file"><name>MixerView.d</name>
+  </compound>
+  <compound refid="_pitch_shift_8d" kind="file"><name>PitchShift.d</name>
+  </compound>
+  <compound refid="_pitch_shift_view_8d" kind="file"><name>PitchShiftView.d</name>
+  </compound>
+  <compound refid="_reverb_8d" kind="file"><name>Reverb.d</name>
+  </compound>
+  <compound refid="_reverb_view_8d" kind="file"><name>ReverbView.d</name>
+  </compound>
+  <compound refid="revmodel_8d" kind="file"><name>revmodel.d</name>
+  </compound>
+  <compound refid="startup__stm32h750xx_8d" kind="file"><name>startup_stm32h750xx.d</name>
+  </compound>
+  <compound refid="_stepped_slider_8d" kind="file"><name>SteppedSlider.d</name>
+  </compound>
+  <compound refid="_track_8d" kind="file"><name>Track.d</name>
+  </compound>
+  <compound refid="_track_view_8d" kind="file"><name>TrackView.d</name>
+  </compound>
+  <compound refid="_waveshaper_8d" kind="file"><name>Waveshaper.d</name>
+  </compound>
+  <compound refid="_waveshaper_view_8d" kind="file"><name>WaveshaperView.d</name>
+  </compound>
+  <compound refid="daisy___i_l_i9341_8hpp" kind="file"><name>daisy_ILI9341.hpp</name>
+    <member refid="daisy___i_l_i9341_8hpp_1ab4e5da7b48feef75da7fcc76dd811666" kind="define"><name>MASK_RB</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a7922dd1cb115242b8ed3e472a2ced602" kind="define"><name>MASK_G</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1afee6c66a12e2a879ecb88448f3d1a7d4" kind="define"><name>MASK_MUL_RB</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1ac2bbdab4b16e9ac185b142106166bbbd" kind="define"><name>MASK_MUL_G</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1afa2a9b1e7fdb6de3cd30769d4eb3510f" kind="define"><name>MAX_ALPHA</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743" kind="enum"><name>TFT_COLOR</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a2a9daf215a30f1c539ead18c66380fc1" kind="enumvalue"><name>COLOR_BLACK</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743ad47b4c240a0109970bb2a7fe3a07d3ec" kind="enumvalue"><name>COLOR_WHITE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1340428efccb140dcbdb71aa6176f696" kind="enumvalue"><name>COLOR_BLUE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743aa19f00270ec842f049afdd86aaaa7263" kind="enumvalue"><name>COLOR_DARK_BLUE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a7896ff2cc707b5873da0b97d38bf852e" kind="enumvalue"><name>COLOR_CYAN</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743ab03862907066c68204ee9df1ee04aa29" kind="enumvalue"><name>COLOR_YELLOW</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a07d2d3937ed0a42267c6160b0f2c3d0d" kind="enumvalue"><name>COLOR_DARK_YELLOW</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a0d36904c1e8ef3978abfe51c57b70423" kind="enumvalue"><name>COLOR_ORANGE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a592503b9434c1e751a92f3fc536d7950" kind="enumvalue"><name>COLOR_RED</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a414edf96389aa436f960923360467010" kind="enumvalue"><name>COLOR_DARK_RED</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743acfa9d8bbffc418447ed826f286abca02" kind="enumvalue"><name>COLOR_GREEN</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743ac666d99764e8658d0c60166e6cc3a93e" kind="enumvalue"><name>COLOR_DARK_GREEN</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a35ff3a3ccb655f1e72e7c0c74588e41b" kind="enumvalue"><name>COLOR_LIGHT_GREEN</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a3c73f98a53e06d912b8a70e3be2c3917" kind="enumvalue"><name>COLOR_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a6169b55206330296e2c0ca1282b51cda" kind="enumvalue"><name>COLOR_DARK_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743abae5e681ac33700b80427c741e83d11f" kind="enumvalue"><name>COLOR_LIGHT_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a3e050a38f642e18fa126313c293d6b48" kind="enumvalue"><name>COLOR_MEDIUM_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1e9fc700daaf921bc4d10c857e506661" kind="enumvalue"><name>COLOR_ABL_BG</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a9e168029cda6868236f08e7334fc65f1" kind="enumvalue"><name>COLOR_ABL_LINE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743ad8de038ca5160e7a6af2dcaef4321254" kind="enumvalue"><name>COLOR_ABL_D_LINE</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743ad07743f02043180fe866da265411011e" kind="enumvalue"><name>COLOR_ABL_L_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743aeed029fb03178d956eebe4eb155ea159" kind="enumvalue"><name>COLOR_ABL_M_GRAY</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a8308b3d4f97be361358331f685654347" kind="enumvalue"><name>NUMBER_OF_TFT_COLORS</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1ae3cb850164a0ce9a3fce53da9afe681b" kind="variable"><name>frame_buffer</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1ab57b1e6c175a8eab8a6c8782ed46af36" kind="variable"><name>color_mem</name></member>
+    <member refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" kind="variable"><name>lcd</name></member>
+  </compound>
+  <compound refid="_encoder_driver_8h" kind="file"><name>EncoderDriver.h</name>
+  </compound>
+  <compound refid="_i_l_i9341__ui__driver_8cpp" kind="file"><name>ILI9341_ui_driver.cpp</name>
+    <member refid="_i_l_i9341__ui__driver_8cpp_1a71d639a1c4c8077339449f2d7bc1e52c" kind="variable"><name>frame_buffer</name></member>
+    <member refid="_i_l_i9341__ui__driver_8cpp_1afa70dc494eb716307306dbf7018ba2c9" kind="variable"><name>color_mem</name></member>
+    <member refid="_i_l_i9341__ui__driver_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" kind="variable"><name>lcd</name></member>
+  </compound>
+  <compound refid="_keypad_driver_8h" kind="file"><name>KeypadDriver.h</name>
+  </compound>
+  <compound refid="_delay_8cpp" kind="file"><name>Delay.cpp</name>
+  </compound>
+  <compound refid="_delay_8h" kind="file"><name>Delay.h</name>
+    <member refid="_delay_8h_1a5abb2c4c24d1c5dbf685eed1fb5ee7f0" kind="define"><name>MAXDELAY</name></member>
+  </compound>
+  <compound refid="_filter_8cpp" kind="file"><name>Filter.cpp</name>
+  </compound>
+  <compound refid="_filter_8h" kind="file"><name>Filter.h</name>
+  </compound>
+  <compound refid="_pitch_shift_8cpp" kind="file"><name>PitchShift.cpp</name>
+  </compound>
+  <compound refid="_pitch_shift_8h" kind="file"><name>PitchShift.h</name>
+  </compound>
+  <compound refid="allpass_8cpp" kind="file"><name>allpass.cpp</name>
+  </compound>
+  <compound refid="allpass_8hpp" kind="file"><name>allpass.hpp</name>
+  </compound>
+  <compound refid="comb_8cpp" kind="file"><name>comb.cpp</name>
+  </compound>
+  <compound refid="comb_8hpp" kind="file"><name>comb.hpp</name>
+  </compound>
+  <compound refid="denormals_8h" kind="file"><name>denormals.h</name>
+    <member refid="denormals_8h_1a6ba19a68ce81e0a4b889428607c47acd" kind="define"><name>undenormalise</name></member>
+  </compound>
+  <compound refid="_reverb_8cpp" kind="file"><name>Reverb.cpp</name>
+  </compound>
+  <compound refid="_reverb_8h" kind="file"><name>Reverb.h</name>
+  </compound>
+  <compound refid="revmodel_8cpp" kind="file"><name>revmodel.cpp</name>
+  </compound>
+  <compound refid="revmodel_8hpp" kind="file"><name>revmodel.hpp</name>
+  </compound>
+  <compound refid="tuning_8h" kind="file"><name>tuning.h</name>
+    <member refid="tuning_8h_1a6113b534a2364513007632803a5a5606" kind="variable"><name>numcombs</name></member>
+    <member refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" kind="variable"><name>numallpasses</name></member>
+    <member refid="tuning_8h_1a37b090b4ac47aa54faef525513dafe60" kind="variable"><name>muted</name></member>
+    <member refid="tuning_8h_1a4b2d07fa74a459ca1939e020b9363513" kind="variable"><name>fixedgain</name></member>
+    <member refid="tuning_8h_1ac252ba88b1d8c6eede7bd789606583e7" kind="variable"><name>scalewet</name></member>
+    <member refid="tuning_8h_1ae052a2e8049ae49e69b95a5bb355c360" kind="variable"><name>scaledry</name></member>
+    <member refid="tuning_8h_1a3c324c89141349a2f6cabd81ef6ea6b8" kind="variable"><name>scaledamp</name></member>
+    <member refid="tuning_8h_1af72a69ee05deca46c9a0b368f2c675c5" kind="variable"><name>scaleroom</name></member>
+    <member refid="tuning_8h_1ab23f3ca7f31752dfa409b01ed218ba9e" kind="variable"><name>offsetroom</name></member>
+    <member refid="tuning_8h_1ae7682d913183f17fdb9eeb2b7bc99809" kind="variable"><name>initialroom</name></member>
+    <member refid="tuning_8h_1af22778db97e16041f5d2e2fca4c308b8" kind="variable"><name>initialdamp</name></member>
+    <member refid="tuning_8h_1aeb22d1099dcd9cf40d40775bedc8505d" kind="variable"><name>initialwet</name></member>
+    <member refid="tuning_8h_1af1c67ee2860505e7a3709fe5373b6e75" kind="variable"><name>initialdry</name></member>
+    <member refid="tuning_8h_1ac59a94da5e00f728a58de07f0a115d77" kind="variable"><name>initialwidth</name></member>
+    <member refid="tuning_8h_1ada8dbb1ebee3ac40472d19b2bea9a8a1" kind="variable"><name>initialmode</name></member>
+    <member refid="tuning_8h_1a07e585230464f52428c5ed003afd31a0" kind="variable"><name>freezemode</name></member>
+    <member refid="tuning_8h_1a8afb5fed07d2553434e8b1ac6eb8ed28" kind="variable"><name>stereospread</name></member>
+    <member refid="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" kind="variable"><name>combtuningL1</name></member>
+    <member refid="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" kind="variable"><name>combtuningR1</name></member>
+    <member refid="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" kind="variable"><name>combtuningL2</name></member>
+    <member refid="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" kind="variable"><name>combtuningR2</name></member>
+    <member refid="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" kind="variable"><name>combtuningL3</name></member>
+    <member refid="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" kind="variable"><name>combtuningR3</name></member>
+    <member refid="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" kind="variable"><name>combtuningL4</name></member>
+    <member refid="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" kind="variable"><name>combtuningR4</name></member>
+    <member refid="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" kind="variable"><name>combtuningL5</name></member>
+    <member refid="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" kind="variable"><name>combtuningR5</name></member>
+    <member refid="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" kind="variable"><name>combtuningL6</name></member>
+    <member refid="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" kind="variable"><name>combtuningR6</name></member>
+    <member refid="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" kind="variable"><name>combtuningL7</name></member>
+    <member refid="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" kind="variable"><name>combtuningR7</name></member>
+    <member refid="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" kind="variable"><name>combtuningL8</name></member>
+    <member refid="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" kind="variable"><name>combtuningR8</name></member>
+    <member refid="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" kind="variable"><name>allpasstuningL1</name></member>
+    <member refid="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" kind="variable"><name>allpasstuningR1</name></member>
+    <member refid="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" kind="variable"><name>allpasstuningL2</name></member>
+    <member refid="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" kind="variable"><name>allpasstuningR2</name></member>
+    <member refid="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" kind="variable"><name>allpasstuningL3</name></member>
+    <member refid="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" kind="variable"><name>allpasstuningR3</name></member>
+    <member refid="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" kind="variable"><name>allpasstuningL4</name></member>
+    <member refid="tuning_8h_1a00d759e1af846b3980f749ea03964928" kind="variable"><name>allpasstuningR4</name></member>
+  </compound>
+  <compound refid="_waveshaper_8cpp" kind="file"><name>Waveshaper.cpp</name>
+  </compound>
+  <compound refid="_waveshaper_8h" kind="file"><name>Waveshaper.h</name>
+  </compound>
+  <compound refid="_mixer_8cpp" kind="file"><name>Mixer.cpp</name>
+  </compound>
+  <compound refid="_mixer_8h" kind="file"><name>Mixer.h</name>
+  </compound>
+  <compound refid="_track_8cpp" kind="file"><name>Track.cpp</name>
+  </compound>
+  <compound refid="_track_8h" kind="file"><name>Track.h</name>
+  </compound>
+  <compound refid="_audio_slider_8cpp" kind="file"><name>AudioSlider.cpp</name>
+  </compound>
+  <compound refid="_audio_slider_8h" kind="file"><name>AudioSlider.h</name>
+  </compound>
+  <compound refid="_bypass_button_8h" kind="file"><name>BypassButton.h</name>
+  </compound>
+  <compound refid="_delay_view_8cpp" kind="file"><name>DelayView.cpp</name>
+  </compound>
+  <compound refid="_delay_view_8h" kind="file"><name>DelayView.h</name>
+  </compound>
+  <compound refid="_filter_view_8cpp" kind="file"><name>FilterView.cpp</name>
+  </compound>
+  <compound refid="_filter_view_8h" kind="file"><name>FilterView.h</name>
+  </compound>
+  <compound refid="_pitch_shift_view_8cpp" kind="file"><name>PitchShiftView.cpp</name>
+  </compound>
+  <compound refid="_pitch_shift_view_8h" kind="file"><name>PitchShiftView.h</name>
+    <member refid="_pitch_shift_view_8h_1aab9825bc328be460a2d47fbfc747f873" kind="define"><name>PITCHSHIFTVIEW_H</name></member>
+  </compound>
+  <compound refid="_reverb_view_8cpp" kind="file"><name>ReverbView.cpp</name>
+  </compound>
+  <compound refid="_reverb_view_8h" kind="file"><name>ReverbView.h</name>
+  </compound>
+  <compound refid="_stepped_slider_8cpp" kind="file"><name>SteppedSlider.cpp</name>
+  </compound>
+  <compound refid="_stepped_slider_8h" kind="file"><name>SteppedSlider.h</name>
+  </compound>
+  <compound refid="_style_sheet_8h" kind="file"><name>StyleSheet.h</name>
+  </compound>
+  <compound refid="_waveshaper_view_8cpp" kind="file"><name>WaveshaperView.cpp</name>
+  </compound>
+  <compound refid="_waveshaper_view_8h" kind="file"><name>WaveshaperView.h</name>
+  </compound>
+  <compound refid="_mixer_view_8cpp" kind="file"><name>MixerView.cpp</name>
+  </compound>
+  <compound refid="_mixer_view_8h" kind="file"><name>MixerView.h</name>
+  </compound>
+  <compound refid="_track_view_8cpp" kind="file"><name>TrackView.cpp</name>
+  </compound>
+  <compound refid="_track_view_8h" kind="file"><name>TrackView.h</name>
+  </compound>
+  <compound refid="_loopy_tunes_8cpp" kind="file"><name>LoopyTunes.cpp</name>
+    <member refid="_loopy_tunes_8cpp_1a157eddcae6d3e68743a70977dcc726a5" kind="variable"><name>hw</name></member>
+    <member refid="_loopy_tunes_8cpp_1aba0b97df8abaa038fb9f0f71f034a4cd" kind="variable"><name>sample</name></member>
+    <member refid="_loopy_tunes_8cpp_1a6b7d334c64b02346d16bb1a908f9f9b7" kind="variable"><name>mixer</name></member>
+    <member refid="_loopy_tunes_8cpp_1a96b2aba4dd8a368512522dd760cd7afb" kind="variable"><name>mixerView</name></member>
+    <member refid="_loopy_tunes_8cpp_1a3c8fc73879ad8b7e0578aad333e68905" kind="variable"><name>encoder</name></member>
+    <member refid="_loopy_tunes_8cpp_1a95f311edb7a6fc4bdab4abc30b77f610" kind="variable"><name>keypad</name></member>
+    <member refid="_loopy_tunes_8cpp_1a7adf4c2c8a0d7191321495dc19b1df31" kind="variable"><name>lcd</name></member>
+    <member refid="_loopy_tunes_8cpp_1ae8078580eca276bbc14590a0f28feda5" kind="function"><name>navCallback</name></member>
+    <member refid="_loopy_tunes_8cpp_1a02fd73d861ef2e4aabb38c0c9ff82947" kind="function"><name>init</name></member>
+    <member refid="_loopy_tunes_8cpp_1a0fd07bbb9c328de2c2a01f0f89c2abe2" kind="function"><name>tick</name></member>
+    <member refid="_loopy_tunes_8cpp_1abca4c722906826f3a2870397489a1b10" kind="function"><name>AudioCallback</name></member>
+    <member refid="_loopy_tunes_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_audio_parameter_8h" kind="file"><name>AudioParameter.h</name>
+  </compound>
+  <compound refid="_binary_parameter_8h" kind="file"><name>BinaryParameter.h</name>
+  </compound>
+  <compound refid="_default_values_8h" kind="file"><name>DefaultValues.h</name>
+    <member refid="_default_values_8h_1a1de2d7b164dd7403fd68ecf95df9c1ac" kind="variable"><name>pitchShifterDefs</name></member>
+    <member refid="_default_values_8h_1acf187a67b04d1dfc5dbb502b9b76bd8b" kind="variable"><name>waveshaperDefs</name></member>
+    <member refid="_default_values_8h_1adced266f0cefca41d05408f0df78cf92" kind="variable"><name>filterDefs</name></member>
+    <member refid="_default_values_8h_1a68784baf1950d107a17f08f525d624ed" kind="variable"><name>reverbDefs</name></member>
+    <member refid="_default_values_8h_1aee60a55b040fabc4f94faa8f564b89e7" kind="variable"><name>delayDefs</name></member>
+  </compound>
+  <compound refid="_parameter_i_ds_8h" kind="file"><name>ParameterIDs.h</name>
+  </compound>
+  <compound refid="_stepped_parameter_8h" kind="file"><name>SteppedParameter.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_constants_8h" kind="file"><name>Constants.h</name>
+    <member refid="_constants_8h_1a405d4223102be04dd2f4818cd288b75f" kind="define"><name>BLOCKLENGTH</name></member>
+    <member refid="_constants_8h_1a538e0cad3acb787a49e16b1e53787610" kind="define"><name>SAMPLERATE</name></member>
+    <member refid="_constants_8h_1aa312b7c3e9d9981fb0d98cc4428f17bf" kind="define"><name>DURATION</name></member>
+    <member refid="_constants_8h_1aef5d4450d3230bcff2f3e255d83a3d08" kind="define"><name>TRACKCOUNT</name></member>
+    <member refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kind="define"><name>L</name></member>
+    <member refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kind="define"><name>R</name></member>
+    <member refid="_constants_8h_1a3aa8a49f91554eb0c2b1a41b591c21ce" kind="define"><name>ADCINPUTS</name></member>
+    <member refid="_constants_8h_1ab58841ee2ac14b70b29289cd96ea1668" kind="define"><name>MACROBLOCK</name></member>
+    <member refid="_constants_8h_1a2c5e667f6efe57e3588b77dc319da541" kind="define"><name>NO_OPT</name></member>
+  </compound>
+  <compound refid="_helpers_8h" kind="file"><name>Helpers.h</name>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9" kind="enum"><name>ChannelIDs</name></member>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a0f157e5ce0693846b9c7ae0f7673ebc8" kind="enumvalue"><name>AMP1</name></member>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a9121582cd1f9b61266ae47451e133256" kind="enumvalue"><name>AMP2</name></member>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9a3a93b7cdda703a3a3e3f984168cc622e" kind="enumvalue"><name>AMP3</name></member>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9aa08eff35963329bd86b92d9ecd9b4fe9" kind="enumvalue"><name>AMP4</name></member>
+    <member refid="_helpers_8h_1a8aa75ac233d6cee266d9a7dc1c654ec9ae5807df697b52e8b944bf598cabadb3a" kind="enumvalue"><name>MASTER</name></member>
+    <member refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69c" kind="enum"><name>TrackState</name></member>
+    <member refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca875fadf1437508cebb97bb5c3445cbdc" kind="enumvalue"><name>RECORDING</name></member>
+    <member refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69caf095245f5cebc27a97a124345269fed8" kind="enumvalue"><name>PLAYING</name></member>
+    <member refid="_helpers_8h_1a5e9684d2e87fbf099474d8ece4c3a69ca948b2aee15f52b421fa4770c47bcfe8c" kind="enumvalue"><name>STOPPED</name></member>
+    <member refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606" kind="enum"><name>CurveType</name></member>
+    <member refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606adc101ebf31c49c2d4b80b7c6f59f22cb" kind="enumvalue"><name>LINEAR</name></member>
+    <member refid="_helpers_8h_1a007dea27057008224e9da69eaeca8606a25f966031f3630b7ea2a347fa376b757" kind="enumvalue"><name>EXP</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>build</name>
+  </compound>
+  <compound refid="dir_60925fc218da8ca7908795bf5f624060" kind="dir"><name>Drivers</name>
+  </compound>
+  <compound refid="dir_650d82db24a6311fa7658fced19ae149" kind="dir"><name>DSP</name>
+  </compound>
+  <compound refid="dir_2bf8e770417c73d9a5a1c0f4c0f62223" kind="dir"><name>DSP/FX</name>
+  </compound>
+  <compound refid="dir_2db21e3e6596b90d177c4a9da4abfe36" kind="dir"><name>GUI/FX</name>
+  </compound>
+  <compound refid="dir_171b764decf33d63a7df2fab4f4bc6d8" kind="dir"><name>GUI</name>
+  </compound>
+  <compound refid="dir_e05d56c3c81e8a80e8e7fed7226c4d57" kind="dir"><name>Parameters</name>
+  </compound>
+  <compound refid="dir_bcf45473ef402d059dc5bc3673d7a759" kind="dir"><name>DSP/FX/Reverb</name>
+  </compound>
+  <compound refid="dir_0a824aa1f70ce3b829ef378253b085da" kind="dir"><name>Utils</name>
+  </compound>
+</doxygenindex>

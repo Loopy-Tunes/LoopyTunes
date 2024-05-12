@@ -1,4 +1,5 @@
 #include "MixerView.h"
+#include "../Drivers/daisy_ILI9341.hpp"
 
 void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd)
 {
@@ -15,22 +16,25 @@ void MixerView::init(DaisySeed* seed, EncoderDriver* encoder, KeypadDriver* kpd)
     track2.init(2, encoder, keypad);
     track3.init(3, encoder, keypad);
     track4.init(4, encoder, keypad);
+
+    isPainted = false;
+    isOpen = true;
 }
 
 void MixerView::tick()
 {
-    amp1.tick();
-    amp2.tick();
-    amp3.tick();
-    amp4.tick();
+    //amp1.tick();
+    //amp2.tick();
+    //amp3.tick();
+    //amp4.tick();
 
-    track1.tick();
-    track2.tick();
-    track3.tick();
-    track4.tick();
+    //track1.tick();
+    //track2.tick();
+    //track3.tick();
+    //track4.tick();
 
-    if(isOpen)
-        repaint();
+    //if(isOpen)
+        //repaint();
 }
 
 void MixerView::repaint()

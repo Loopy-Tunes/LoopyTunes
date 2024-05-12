@@ -1,0 +1,114 @@
+\doxysection{Filter\+View Class Reference}
+\hypertarget{class_filter_view}{}\label{class_filter_view}\index{FilterView@{FilterView}}
+
+
+{\ttfamily \#include $<$Filter\+View.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_filter_view_a21352a06744edb5ca53f04dda2fdc03c}{init}} (int ID, \mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}driver, \mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}kpd)
+\begin{DoxyCompactList}\small\item\em Initialises the instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a0efc93be178cc43c3a720ba79279ff93}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a1cd655d7b5230cf0eba6d0ba1bdeab2a}{repaint}} ()
+\begin{DoxyCompactList}\small\item\em Handles the repainting of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a129b3aa4ef3da5b2ec99c9edf470ace9}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Handles the clearing of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a158c1bddc94ac62288a3755ed0bc7708}{set\+Is\+Open}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view is currently open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a8f7b86415d35791dbc227df40e7d9cbe}{set\+Is\+Painted}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets if the view has been painted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_filter_view_a8a14ff3bcb573146d7abc22cd97baa85}{set\+Current\+Param}} (int new\+Param)
+\begin{DoxyCompactList}\small\item\em Sets the currently selected parameter on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class name\+: \doxylink{class_filter_view}{Filter\+View} Function\+: FX level GUI class for the filter 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_filter_view_a129b3aa4ef3da5b2ec99c9edf470ace9}\label{class_filter_view_a129b3aa4ef3da5b2ec99c9edf470ace9} 
+\index{FilterView@{FilterView}!clear@{clear}}
+\index{clear@{clear}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Filter\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the clearing of the view. 
+
+\Hypertarget{class_filter_view_a21352a06744edb5ca53f04dda2fdc03c}\label{class_filter_view_a21352a06744edb5ca53f04dda2fdc03c} 
+\index{FilterView@{FilterView}!init@{init}}
+\index{init@{init}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Filter\+View\+::init (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{class_encoder_driver}{Encoder\+Driver}} \texorpdfstring{$\ast$}{*}}]{driver,  }\item[{\mbox{\hyperlink{class_keypad_driver}{Keypad\+Driver}} \texorpdfstring{$\ast$}{*}}]{kpd }\end{DoxyParamCaption})}
+
+
+
+Initialises the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the track view the instance belongs to \\
+\hline
+{\em encoder} & A pointer to the encoder driver \\
+\hline
+{\em kpd} & A pointer to the keypad driver \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_filter_view_a1cd655d7b5230cf0eba6d0ba1bdeab2a}\label{class_filter_view_a1cd655d7b5230cf0eba6d0ba1bdeab2a} 
+\index{FilterView@{FilterView}!repaint@{repaint}}
+\index{repaint@{repaint}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{repaint()}{repaint()}}
+{\footnotesize\ttfamily void Filter\+View\+::repaint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the repainting of the view. 
+
+\Hypertarget{class_filter_view_a8a14ff3bcb573146d7abc22cd97baa85}\label{class_filter_view_a8a14ff3bcb573146d7abc22cd97baa85} 
+\index{FilterView@{FilterView}!setCurrentParam@{setCurrentParam}}
+\index{setCurrentParam@{setCurrentParam}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{setCurrentParam()}{setCurrentParam()}}
+{\footnotesize\ttfamily void Filter\+View\+::set\+Current\+Param (\begin{DoxyParamCaption}\item[{int}]{new\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the currently selected parameter on the LCD. 
+
+\Hypertarget{class_filter_view_a158c1bddc94ac62288a3755ed0bc7708}\label{class_filter_view_a158c1bddc94ac62288a3755ed0bc7708} 
+\index{FilterView@{FilterView}!setIsOpen@{setIsOpen}}
+\index{setIsOpen@{setIsOpen}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{setIsOpen()}{setIsOpen()}}
+{\footnotesize\ttfamily void Filter\+View\+::set\+Is\+Open (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view is currently open. 
+
+\Hypertarget{class_filter_view_a8f7b86415d35791dbc227df40e7d9cbe}\label{class_filter_view_a8f7b86415d35791dbc227df40e7d9cbe} 
+\index{FilterView@{FilterView}!setIsPainted@{setIsPainted}}
+\index{setIsPainted@{setIsPainted}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{setIsPainted()}{setIsPainted()}}
+{\footnotesize\ttfamily void Filter\+View\+::set\+Is\+Painted (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets if the view has been painted or not. 
+
+\Hypertarget{class_filter_view_a0efc93be178cc43c3a720ba79279ff93}\label{class_filter_view_a0efc93be178cc43c3a720ba79279ff93} 
+\index{FilterView@{FilterView}!tick@{tick}}
+\index{tick@{tick}!FilterView@{FilterView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Filter\+View\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the view. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+FX/\mbox{\hyperlink{_filter_view_8h}{Filter\+View.\+h}}\item 
+GUI/\+FX/\mbox{\hyperlink{_filter_view_8cpp}{Filter\+View.\+cpp}}\end{DoxyCompactItemize}

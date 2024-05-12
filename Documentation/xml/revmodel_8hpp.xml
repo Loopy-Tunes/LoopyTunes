@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="revmodel_8hpp" kind="file" language="C++">
+    <compoundname>revmodel.hpp</compoundname>
+    <includes refid="comb_8hpp" local="yes">comb.hpp</includes>
+    <includes refid="allpass_8hpp" local="yes">allpass.hpp</includes>
+    <includes refid="tuning_8h" local="yes">tuning.h</includes>
+    <includedby refid="_reverb_8h" local="yes">DSP/FX/Reverb/Reverb.h</includedby>
+    <includedby refid="revmodel_8cpp" local="yes">DSP/FX/Reverb/revmodel.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>allpass.hpp</label>
+        <link refid="allpass_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>comb.hpp</label>
+        <link refid="comb_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>denormals.h</label>
+        <link refid="denormals_8h"/>
+      </node>
+      <node id="1">
+        <label>DSP/FX/Reverb/revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tuning.h</label>
+        <link refid="tuning_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>DSP/FX/Reverb/Reverb.cpp</label>
+        <link refid="_reverb_8cpp"/>
+      </node>
+      <node id="2">
+        <label>DSP/FX/Reverb/Reverb.h</label>
+        <link refid="_reverb_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DSP/FX/Reverb/revmodel.cpp</label>
+        <link refid="revmodel_8cpp"/>
+      </node>
+      <node id="1">
+        <label>DSP/FX/Reverb/revmodel.hpp</label>
+        <link refid="revmodel_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DSP/Mixer.cpp</label>
+        <link refid="_mixer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DSP/Mixer.h</label>
+        <link refid="_mixer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DSP/Track.cpp</label>
+        <link refid="_track_8cpp"/>
+      </node>
+      <node id="4">
+        <label>DSP/Track.h</label>
+        <link refid="_track_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>LoopyTunes.cpp</label>
+        <link refid="_loopy_tunes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrevmodel" prot="public">revmodel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Reverb<sp/>model<sp/>declaration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Written<sp/>by<sp/>Jezar<sp/>at<sp/>Dreampoint,<sp/>June<sp/>2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.dreampoint.co.uk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>code<sp/>is<sp/>public<sp/>domain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_revmodel_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_revmodel_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="comb_8hpp" kindref="compound">comb.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="allpass_8hpp" kindref="compound">allpass.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tuning_8h" kindref="compound">tuning.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classrevmodel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrevmodel" kindref="compound">revmodel</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1ad924b3d943f71aa720ea3d58cee00fe9" kindref="member">revmodel</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a57c4aad6531c32e11691dfbe013bdad9" kindref="member">mute</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a6c00999a98dce5a8f8cc40abd52124b3" kindref="member">processmix</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inputL,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inputR,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outputL,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outputR,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>numsamples,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>skip);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1afddf1c943ef01e3d5de04276ede4875f" kindref="member">processreplace</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inputL,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inputR,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outputL,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outputR,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>numsamples,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>skip);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1ad71a81765b983ac99a30dbdfa4778659" kindref="member">setroomsize</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1a196043f0bd588a738a8065d186f48a74" kindref="member">getroomsize</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1ada99d1c19685dfe7178281c8c65d4598" kindref="member">setdamp</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1aac6ef7e868803b080337728be8180566" kindref="member">getdamp</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a544c0619d72af6d21f6f244cc89cfc6e" kindref="member">setwet</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1ae9033d82fb3a58529b35110160b1f4e8" kindref="member">getwet</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a260e661feb337cbb034c7888bb70dfd0" kindref="member">setdry</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1a45e7883001a56414dfe9ec787e3f1529" kindref="member">getdry</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a87672a6d05d30977633562f909e3c259" kindref="member">setwidth</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1ac98d26e165bde52c0bb962e4bca4f950" kindref="member">getwidth</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrevmodel_1a294243594f4802f4f98edfd3cd106e0b" kindref="member">setmode</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classrevmodel_1a680df826bb6a1aea3d0e8a4259a2cc83" kindref="member">getmode</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>update();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>gain;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>roomsize,roomsize1;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>damp,damp1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>wet,wet1,wet2;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>dry;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>width;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>mode;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>are<sp/>all<sp/>declared<sp/>inline<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>remove<sp/>the<sp/>need<sp/>for<sp/>dynamic<sp/>allocation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>its<sp/>subsequent<sp/>error-checking<sp/>messiness</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Comb<sp/>filters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcomb" kindref="compound">comb</ref><sp/><sp/><sp/><sp/>combL[<ref refid="tuning_8h_1a6113b534a2364513007632803a5a5606" kindref="member">numcombs</ref>];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcomb" kindref="compound">comb</ref><sp/><sp/><sp/><sp/>combR[<ref refid="tuning_8h_1a6113b534a2364513007632803a5a5606" kindref="member">numcombs</ref>];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allpass<sp/>filters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass" kindref="compound">allpass</ref><sp/>allpassL[<ref refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" kindref="member">numallpasses</ref>];</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classallpass" kindref="compound">allpass</ref><sp/>allpassR[<ref refid="tuning_8h_1acfd9a2918469c01995845b296691fb9d" kindref="member">numallpasses</ref>];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Buffers<sp/>for<sp/>the<sp/>combs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL1[<ref refid="tuning_8h_1a1d937b4082b5bdd6702062c38a4851a3" kindref="member">combtuningL1</ref>];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR1[<ref refid="tuning_8h_1aea2a95a4d382fd25aeda75bfcf81f6fc" kindref="member">combtuningR1</ref>];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL2[<ref refid="tuning_8h_1a7de10fb112a95e5428bdadf594fac941" kindref="member">combtuningL2</ref>];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR2[<ref refid="tuning_8h_1a11a40fb7e27ba55fde416148b62d39f0" kindref="member">combtuningR2</ref>];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL3[<ref refid="tuning_8h_1a44a04b8e8e3142d42ace61e96c53fa5c" kindref="member">combtuningL3</ref>];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR3[<ref refid="tuning_8h_1aea4af41ea6b80a9d63fd211be90596a0" kindref="member">combtuningR3</ref>];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL4[<ref refid="tuning_8h_1ae00bf5e5706dda9918c0aec238582980" kindref="member">combtuningL4</ref>];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR4[<ref refid="tuning_8h_1a81faef67ad6b907de023e050ef0591e7" kindref="member">combtuningR4</ref>];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL5[<ref refid="tuning_8h_1ad5c91c518fea642d42cd196225b54f3c" kindref="member">combtuningL5</ref>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR5[<ref refid="tuning_8h_1a92dccd0a79e8c4d128f926dddb4fa677" kindref="member">combtuningR5</ref>];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL6[<ref refid="tuning_8h_1a7ae4ebcb2256586d8444c45a2c3eeb61" kindref="member">combtuningL6</ref>];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR6[<ref refid="tuning_8h_1a88880376caa9233aeb05a1272a3ed2b3" kindref="member">combtuningR6</ref>];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL7[<ref refid="tuning_8h_1a326b3dbc543c718d8bb7d4b64b2930e7" kindref="member">combtuningL7</ref>];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR7[<ref refid="tuning_8h_1a9a676a67ceab64b63a394e5ead6e1206" kindref="member">combtuningR7</ref>];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombL8[<ref refid="tuning_8h_1ab3bf1144bd9de280598f297ea6410cd5" kindref="member">combtuningL8</ref>];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufcombR8[<ref refid="tuning_8h_1a2e5feed8bfa0f6d6dc7401a20e48c233" kindref="member">combtuningR8</ref>];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Buffers<sp/>for<sp/>the<sp/>allpasses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassL1[<ref refid="tuning_8h_1aa3a4d3bffe35e488a824b38592aa9541" kindref="member">allpasstuningL1</ref>];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassR1[<ref refid="tuning_8h_1af3f26c17e483921bf25ad7439471fb1f" kindref="member">allpasstuningR1</ref>];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassL2[<ref refid="tuning_8h_1a85708f9e43a006b9fb7029a240c7f20a" kindref="member">allpasstuningL2</ref>];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassR2[<ref refid="tuning_8h_1a70823eff8728e25e6091c6f0356e4404" kindref="member">allpasstuningR2</ref>];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassL3[<ref refid="tuning_8h_1a5cf01f35152de3120d4b9b1629220e5c" kindref="member">allpasstuningL3</ref>];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassR3[<ref refid="tuning_8h_1a83062072709f51a301b50ce4de6b8bb7" kindref="member">allpasstuningR3</ref>];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassL4[<ref refid="tuning_8h_1ad3378fd7a09cde9697fb239e8849525c" kindref="member">allpasstuningL4</ref>];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>bufallpassR4[<ref refid="tuning_8h_1a00d759e1af846b3980f749ea03964928" kindref="member">allpasstuningR4</ref>];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">//_revmodel_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//ends</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Reverb/revmodel.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+\doxysection{Style\+Sheet.\+h}
+\hypertarget{_style_sheet_8h_source}{}\label{_style_sheet_8h_source}\index{GUI/FX/StyleSheet.h@{GUI/FX/StyleSheet.h}}
+\mbox{\hyperlink{_style_sheet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STYLESHEET\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STYLESHEET\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_style_sheet}{StyleSheet}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{class_mixer}{Mixer}}}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ screenWidth\ =\ 320;\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ screenHeight\ =\ 240;\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ faderWidth\ =\ 30;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ faderHeight\ =\ 100;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ faderSpacing\ =\ 35;\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ firstFaderX\ =\ (screenWidth\ -\/\ (faderWidth\ *\ 4\ +\ faderSpacing\ *\ 3))\ /\ 2;\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mixerBottom\ =\ 180;\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ frameColor\ =\ 5;\ \textcolor{comment}{//\ CYAN}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ textColor\ =\ 2;\ \textcolor{comment}{//\ WHITE}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ frameThickness\ =\ 2;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{namespace\ }Tracks}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ borderColor\ =\ 5;\ \textcolor{comment}{//\ CYAN}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ text\_color\ =\ 2;\ \textcolor{comment}{//\ WHITE}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ effectBoxColor\ =\ 1;\ \textcolor{comment}{//\ BLACK}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ selectedEffectColor\ =\ 11;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ fonts}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FontDef\&\ smallerFont\ =\ Font\_7x10;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FontDef\&\ largerFont\ =\ Font\_16x26;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ smallerFontHeight\ =\ 10;\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ the\ display\ dimensions}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ displayWidth\ =\ 320;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ displayHeight\ =\ 240;\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Top\ position\ for\ effect\ boxes}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ effectsYStart\ =\ 96;\ }
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{namespace\ }Effects}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ screenWidth\ =\ 320;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ screenHeight\ =\ 240;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ borderColor\ =\ 5;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ textColor\ =\ 5;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ sliderBackColor\ =\ 1;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ headerHeight\ =\ 50;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ paramSpacing\ =\ 35;\ \textcolor{comment}{//\ Adjust\ spacing\ as\ needed}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ sliderHeight\ =\ 20;\ \textcolor{comment}{//\ Adjust\ height\ as\ needed}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ sliderWidth\ =\ 180;\ \textcolor{comment}{//\ Slider\ width}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ frameThickness\ =\ 2;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ sliderOffsetX\ =\ 130;\ \textcolor{comment}{//\ X\ position\ for\ sliders}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ bypassButtonWidth\ =\ 60;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint16\_t\ bypassButtonHeight\ =\ 30;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

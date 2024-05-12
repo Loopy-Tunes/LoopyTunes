@@ -1,0 +1,50 @@
+\doxysection{Reverb.\+h}
+\hypertarget{_reverb_8h_source}{}\label{_reverb_8h_source}\index{DSP/FX/Reverb/Reverb.h@{DSP/FX/Reverb/Reverb.h}}
+\mbox{\hyperlink{_reverb_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVERB\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVERB\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_values_8h}{../../../Parameters/DefaultValues.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_encoder_driver_8h}{../../../Drivers/EncoderDriver.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_constants_8h}{../../../Utils/Constants.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{revmodel_8hpp}{revmodel.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/*********************************************************************/}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }daisysp;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reverb}{Reverb}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ /******************************************************************************/}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_loopy_tunes_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}}(\mbox{\hyperlink{class_encoder_driver}{EncoderDriver}}*\ driver,\ \textcolor{keywordtype}{int}\ trackID);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reverb_a5a8451daa1efb94b27e32bc1a6a5adeb}{setDefaultValues}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reverb_a23b1f08d104a5c23db173d41683ebd8b}{setBypass}}()\ \{\ isBypass\ =\ !isBypass;\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ /***********************************************************************/}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reverb_a915968b9f9b2538f14d1d013b7312c31}{setAmount}}(\textcolor{keywordtype}{float}\ mix);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ /***************************************************************************/}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reverb_a3adde3ca44e4e94e30c00d534c1db8bc}{processBlock}}(\textcolor{keywordtype}{float}*\ input[2],\ \textcolor{keywordtype}{long}\ size);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ output[2][\mbox{\hyperlink{_constants_8h_a405d4223102be04dd2f4818cd288b75f}{BLOCKLENGTH}}];}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classrevmodel}{revmodel}}\ model;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBypass;}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ amount;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ mode;}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ size;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ damp;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{struct_stepped_parameter_wrapper}{SteppedParameterWrapper}}\ width;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_binary_parameter" kind="class" language="C++" prot="public">
+    <compoundname>BinaryParameter</compoundname>
+    <includes refid="_binary_parameter_8h" local="no">BinaryParameter.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_binary_parameter_1a8a8639cae48b46d61f1e45c1b0b425eb" prot="private" static="no" mutable="no">
+        <type>Switch</type>
+        <definition>Switch BinaryParameter::btn</definition>
+        <argsstring></argsstring>
+        <name>btn</name>
+        <qualifiedname>BinaryParameter::btn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="48" column="12" bodyfile="Parameters/BinaryParameter.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_binary_parameter_1a10bb5575c8bbd847b787a501dab32486" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; BinaryParameter::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>BinaryParameter::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="49" column="19" bodyfile="Parameters/BinaryParameter.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_binary_parameter_1a6765feacacb20ba94a391a059040ae1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BinaryParameter::init</definition>
+        <argsstring>(dsy_gpio_pin pin, float updateRate, std::function&lt; void()&gt; cb)</argsstring>
+        <name>init</name>
+        <qualifiedname>BinaryParameter::init</qualifiedname>
+        <param>
+          <type>dsy_gpio_pin</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>updateRate</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Daisy Seed pin the instance is assigned to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate at which the button is updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function executed when the button is pressed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="24" column="17" bodyfile="Parameters/BinaryParameter.h" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_binary_parameter_1a062dee999020e270c30d8084e03b443d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BinaryParameter::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>BinaryParameter::tick</qualifiedname>
+        <briefdescription>
+<para>Checks to see if the button has been pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="33" column="17" bodyfile="Parameters/BinaryParameter.h" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_binary_parameter_1ab20ac67f6e4bf146f9674f676c3f25f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BinaryParameter::isPressed</definition>
+        <argsstring>()</argsstring>
+        <name>isPressed</name>
+        <qualifiedname>BinaryParameter::isPressed</qualifiedname>
+        <briefdescription>
+<para>Checks the state of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>If the button is pressed or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/BinaryParameter.h" line="44" column="10" bodyfile="Parameters/BinaryParameter.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Parameters/BinaryParameter.h" line="14" column="1" bodyfile="Parameters/BinaryParameter.h" bodystart="15" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_binary_parameter_1a8a8639cae48b46d61f1e45c1b0b425eb" prot="private" virt="non-virtual"><scope>BinaryParameter</scope><name>btn</name></member>
+      <member refid="class_binary_parameter_1a10bb5575c8bbd847b787a501dab32486" prot="private" virt="non-virtual"><scope>BinaryParameter</scope><name>callback</name></member>
+      <member refid="class_binary_parameter_1a6765feacacb20ba94a391a059040ae1d" prot="public" virt="non-virtual"><scope>BinaryParameter</scope><name>init</name></member>
+      <member refid="class_binary_parameter_1ab20ac67f6e4bf146f9674f676c3f25f4" prot="public" virt="non-virtual"><scope>BinaryParameter</scope><name>isPressed</name></member>
+      <member refid="class_binary_parameter_1a062dee999020e270c30d8084e03b443d" prot="public" virt="non-virtual"><scope>BinaryParameter</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

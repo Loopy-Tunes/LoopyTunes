@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_filter_8cpp" kind="file" language="C++">
+    <compoundname>Filter.cpp</compoundname>
+    <includes refid="_filter_8h" local="yes">Filter.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>DSP/FX/Filter.cpp</label>
+        <link refid="_filter_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Filter.h</label>
+        <link refid="_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../Drivers/EncoderDriver.h</label>
+        <link refid="_encoder_driver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../Parameters/DefaultValues.h</label>
+        <link refid="_default_values_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParameterIDs.h</label>
+        <link refid="_parameter_i_ds_8h"/>
+      </node>
+      <node id="6">
+        <label>../Parameters/SteppedParameter.h</label>
+        <link refid="_stepped_parameter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../../Utils/Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>daisy_seed.h</label>
+      </node>
+      <node id="8">
+        <label>daisysp.h</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_filter_8h" kindref="compound">Filter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_filter_1a9cd2dd256c987729e1af80100fdc5dcc" kindref="member">Filter::init</ref>(<ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref>*<sp/>driver,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackID)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>filter.Init();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>mode.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>1,<sp/>1,<sp/><ref refid="namespace_parameter_i_ds_1_1_filter_1a16651985532bc71c245a6fb00c99d4d6" kindref="member">ParameterIDs::Filter::mode</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m)<sp/>{<sp/><ref refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" kindref="member">setMode</ref>(m);<sp/>});</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>freq.<ref refid="class_stepped_parameter_1a93414cc0e0057093833e21ac2f47043c" kindref="member">init</ref>(0,<sp/>0.490,<sp/>0.01,<sp/><ref refid="namespace_parameter_i_ds_1_1_filter_1a080f88c7943d98f26f4e0dd22a66661f" kindref="member">ParameterIDs::Filter::frequency</ref>,<sp/>trackID,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f)<sp/>{<sp/><ref refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" kindref="member">setFreq</ref>(f);<sp/>});</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a45b2cea21038aee124bed0a0f39010af" kindref="member">addBypassCallback</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>{<sp/><ref refid="class_filter_1a08f8b2a0cef00c62593b5bc808ff79f9" kindref="member">setBypass</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;mode);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>driver-&gt;<ref refid="class_encoder_driver_1a4545930e99a6065f445a9efc696405f5" kindref="member">addParameter</ref>(&amp;freq);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_filter_1a77b74157db71df930d571c612033be66" kindref="member">setDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_filter_1a77b74157db71df930d571c612033be66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_filter_1a77b74157db71df930d571c612033be66" kindref="member">Filter::setDefaultValues</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>isBypass<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" kindref="member">setMode</ref>(filterDefs.mode);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_filter_1a4228499d0305bd75a3ab323ffcdf6cfd" kindref="member">setFreq</ref>(filterDefs.frequency);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_filter_1a1741a1887e68134431ddfb221a9180e7" kindref="member">Filter::setMode</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter.SetFilterMode(daisysp::OnePole::FilterMode::FILTER_MODE_LOW_PASS);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter.SetFilterMode(daisysp::OnePole::FilterMode::FILTER_MODE_HIGH_PASS);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_filter_1a9f202d29f2be23e354c4964fc9841728" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_filter_1a9f202d29f2be23e354c4964fc9841728" kindref="member">Filter::processBlock</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>input[2],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isBypass)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0<sp/>;<sp/>i<sp/>&lt;<sp/>size<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter.ProcessBlock(input[<ref refid="_constants_8h_1aa73214aa5f2f94f63d90bb4e3d99fe53" kindref="member">L</ref>],<sp/>size);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter.ProcessBlock(input[<ref refid="_constants_8h_1a5c71a5e59a53413cd6c270266d63b031" kindref="member">R</ref>],<sp/>size);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="DSP/FX/Filter.cpp"/>
+  </compounddef>
+</doxygen>

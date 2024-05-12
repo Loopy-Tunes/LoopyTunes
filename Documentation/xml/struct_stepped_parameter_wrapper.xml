@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_stepped_parameter_wrapper" kind="struct" language="C++" prot="public">
+    <compoundname>SteppedParameterWrapper</compoundname>
+    <includes refid="_stepped_parameter_8h" local="no">SteppedParameter.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" prot="public" static="no" mutable="no">
+        <type><ref refid="class_stepped_parameter" kindref="compound">SteppedParameter</ref></type>
+        <definition>SteppedParameter SteppedParameterWrapper::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>SteppedParameterWrapper::param</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="104" column="22" bodyfile="Parameters/SteppedParameter.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteppedParameterWrapper::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>SteppedParameterWrapper::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Parameters/SteppedParameter.h" line="105" column="11" bodyfile="Parameters/SteppedParameter.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>SteppedParameter</label>
+        <link refid="class_stepped_parameter"/>
+      </node>
+      <node id="1">
+        <label>SteppedParameterWrapper</label>
+        <link refid="struct_stepped_parameter_wrapper"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>param</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Parameters/SteppedParameter.h" line="102" column="1" bodyfile="Parameters/SteppedParameter.h" bodystart="103" bodyend="106"/>
+    <listofallmembers>
+      <member refid="struct_stepped_parameter_wrapper_1a410ce7017f5128574b3d78e4f81b8d83" prot="public" virt="non-virtual"><scope>SteppedParameterWrapper</scope><name>param</name></member>
+      <member refid="struct_stepped_parameter_wrapper_1a8e0d05dc4b24df4a336a88f2dd057d4a" prot="public" virt="non-virtual"><scope>SteppedParameterWrapper</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

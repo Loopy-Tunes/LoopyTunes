@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -29,16 +29,17 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   27              	.LFB5105:
   28              		.file 1 "GUI/FX/SteppedSlider.cpp"
    1:GUI/FX/SteppedSlider.cpp **** #include "SteppedSlider.h"
-   2:GUI/FX/SteppedSlider.cpp **** 
-   3:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::init(int ID, EncoderDriver* ed)
-   4:GUI/FX/SteppedSlider.cpp **** {
-  29              		.loc 1 4 1 view -0
+   2:GUI/FX/SteppedSlider.cpp **** #include "../../Drivers/daisy_ILI9341.hpp"
+   3:GUI/FX/SteppedSlider.cpp **** 
+   4:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::init(int ID, EncoderDriver* ed)
+   5:GUI/FX/SteppedSlider.cpp **** {
+  29              		.loc 1 5 1 view -0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
-   5:GUI/FX/SteppedSlider.cpp ****     encoder = ed;
-  34              		.loc 1 5 5 view .LVU1
+   6:GUI/FX/SteppedSlider.cpp ****     encoder = ed;
+  34              		.loc 1 6 5 view .LVU1
   35              	.LBB29:
   36              	.LBB30:
   37              		.file 2 "GUI/FX/../../Drivers/EncoderDriver.h"
@@ -57,10 +58,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   13:GUI/FX/../../Drivers/EncoderDriver.h **** 
   14:GUI/FX/../../Drivers/EncoderDriver.h **** class EncoderDriver
   15:GUI/FX/../../Drivers/EncoderDriver.h **** {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 2
+
+
   16:GUI/FX/../../Drivers/EncoderDriver.h **** public:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 2
-
-
   17:GUI/FX/../../Drivers/EncoderDriver.h **** 
   18:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
   19:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Initialises the driver
@@ -117,10 +118,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   70:GUI/FX/../../Drivers/EncoderDriver.h ****                 if((valueA & 0x03) == 0x02 && (valueB & 0x03) == 0x00)
   71:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->decrement();
   72:GUI/FX/../../Drivers/EncoderDriver.h ****                 else if((valueB & 0x03) == 0x02 && (valueA & 0x03) == 0x00)
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 3
+
+
   73:GUI/FX/../../Drivers/EncoderDriver.h ****                     parameters[currentParam]->increment();
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 3
-
-
   74:GUI/FX/../../Drivers/EncoderDriver.h ****             }
   75:GUI/FX/../../Drivers/EncoderDriver.h ****         }
   76:GUI/FX/../../Drivers/EncoderDriver.h **** 
@@ -177,10 +178,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  127:GUI/FX/../../Drivers/EncoderDriver.h ****     /***********************************************************************//**
  128:GUI/FX/../../Drivers/EncoderDriver.h ****     * @brief Adds a bypass callback to the bypassCallbacks vector
  129:GUI/FX/../../Drivers/EncoderDriver.h ****     * @param newCallback The callback function to be added
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 4
+
+
  130:GUI/FX/../../Drivers/EncoderDriver.h ****     ***************************************************************************/
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 4
-
-
  131:GUI/FX/../../Drivers/EncoderDriver.h ****     void addBypassCallback(std::function<void()> newCallback)
  132:GUI/FX/../../Drivers/EncoderDriver.h ****     {
  133:GUI/FX/../../Drivers/EncoderDriver.h ****         bypassCallbacks.push_back(newCallback);
@@ -200,12 +201,12 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   40 0002 1B68     		ldr	r3, [r3]
   41              	.LBE30:
   42              	.LBE29:
-   6:GUI/FX/SteppedSlider.cpp ****     
-   7:GUI/FX/SteppedSlider.cpp ****     paramID = ID;
-  43              		.loc 1 7 13 view .LVU3
+   7:GUI/FX/SteppedSlider.cpp ****     
+   8:GUI/FX/SteppedSlider.cpp ****     paramID = ID;
+  43              		.loc 1 8 13 view .LVU3
   44 0004 C0E90021 		strd	r2, r1, [r0]
-   8:GUI/FX/SteppedSlider.cpp ****     param = encoder->getParameter(paramID);
-  45              		.loc 1 8 5 is_stmt 1 view .LVU4
+   9:GUI/FX/SteppedSlider.cpp ****     param = encoder->getParameter(paramID);
+  45              		.loc 1 9 5 is_stmt 1 view .LVU4
   46              	.LVL1:
   47              	.LBB35:
   48              	.LBI29:
@@ -237,10 +238,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   14:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // GNU General Public License for more details.
   15:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   16:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // Under Section 7 of GPL version 3, you are granted additional
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 5
+
+
   17:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // permissions described in the GCC Runtime Library Exception, version
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 5
-
-
   18:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // 3.1, as published by the Free Software Foundation.
   19:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   20:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** // You should have received a copy of the GNU General Public License and
@@ -297,10 +298,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   71:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if _GLIBCXX_SANITIZE_STD_ALLOCATOR && _GLIBCXX_SANITIZE_VECTOR
   72:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** extern "C" void
   73:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** __sanitizer_annotate_contiguous_container(const void*, const void*,
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 6
+
+
   74:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 					  const void*, const void*);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 6
-
-
   75:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
   76:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
   77:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** namespace std _GLIBCXX_VISIBILITY(default)
@@ -357,10 +358,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  128:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       struct _Vector_impl
  129:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	: public _Tp_alloc_type, public _Vector_impl_data
  130:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 7
+
+
  131:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 7
-
-
  132:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
  133:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	: _Tp_alloc_type()
  134:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	{ }
@@ -417,10 +418,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  185:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    _S_adjust(_Vector_impl& __impl, pointer __prev, pointer __curr)
  186:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    {
  187:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      __sanitizer_annotate_contiguous_container(__impl._M_start,
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 8
+
+
  188:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 		  __impl._M_end_of_storage, __prev, __curr);
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 8
-
-
  189:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    }
  190:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  191:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    static void
@@ -477,10 +478,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  242:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #if __cplusplus >= 201103L
  243:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      _Grow(const _Grow&) = delete;
  244:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      _Grow& operator=(const _Grow&) = delete;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 9
+
+
  245:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 9
-
-
  246:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	    private:
  247:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      _Vector_impl& _M_impl;
  248:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	      size_type _M_n;
@@ -537,10 +538,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  299:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _M_impl()
  300:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { _M_create_storage(__n); }
  301:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 10
+
+
  302:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 10
-
-
  303:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _Vector_base(size_t __n, const allocator_type& __a)
  304:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _M_impl(__a)
  305:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { _M_create_storage(__n); }
@@ -597,10 +598,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  356:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  357:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     protected:
  358:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       void
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 11
+
+
  359:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       _M_create_storage(size_t __n)
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 11
-
-
  360:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       {
  361:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	this->_M_impl._M_start = this->_M_allocate(__n);
  362:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 	this->_M_impl._M_finish = this->_M_impl._M_start;
@@ -657,10 +658,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  413:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     public:
  414:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef _Tp					value_type;
  415:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef typename _Base::pointer			pointer;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 12
+
+
  416:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef typename _Alloc_traits::const_pointer	const_pointer;
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 12
-
-
  417:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef typename _Alloc_traits::reference		reference;
  418:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef typename _Alloc_traits::const_reference	const_reference;
  419:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       typedef __gnu_cxx::__normal_iterator<pointer, vector> iterator;
@@ -717,10 +718,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  470:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       }
  471:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** #endif // C++11
  472:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 13
+
+
  473:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     protected:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 13
-
-
  474:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       using _Base::_M_allocate;
  475:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       using _Base::_M_deallocate;
  476:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       using _Base::_M_impl;
@@ -777,10 +778,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  527:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  528:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  Creates a %vector with copies of an exemplar element.
  529:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __n  The number of elements to initially create.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 14
+
+
  530:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __value  An element to copy.
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 14
-
-
  531:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __a  An allocator.
  532:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
  533:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  This constructor fills the %vector with @a __n copies of @a __value.
@@ -837,10 +838,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  584:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****     private:
  585:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       vector(vector&& __rv, const allocator_type& __m, true_type) noexcept
  586:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _Base(__m, std::move(__rv))
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 15
+
+
  587:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 15
-
-
  588:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  589:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       vector(vector&& __rv, const allocator_type& __m, false_type)
  590:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       : _Base(__m)
@@ -897,10 +898,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  641:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  [first,last).
  642:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
  643:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  If the iterators are forward, bidirectional, or
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 16
+
+
  644:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  random-access, then this will call the elements' copy
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 16
-
-
  645:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  constructor N times (where N is distance(first,last)) and do
  646:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  no memory reallocation.  But if only input iterators are
  647:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  used, then this will do at most 2N calls to the copy
@@ -957,10 +958,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  698:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
  699:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @brief  %Vector move assignment operator.
  700:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __x  A %vector of identical element and allocator types.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 17
+
+
  701:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 17
-
-
  702:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  The contents of @a __x are moved into this %vector (without copying,
  703:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  if the allocators permit it).
  704:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Afterwards @a __x is a valid, but unspecified %vector.
@@ -1017,10 +1018,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  755:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  @param  __last   An input iterator.
  756:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
  757:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  This function fills a %vector with copies of the elements in the
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 18
+
+
  758:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  range [__first,__last).
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 18
-
-
  759:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *
  760:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Note that the assignment completely changes the %vector and
  761:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  that the resulting %vector's size is the same as the number
@@ -1077,10 +1078,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  812:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return iterator(this->_M_impl._M_start); }
  813:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h **** 
  814:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       /**
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 19
+
+
  815:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read-only (constant) iterator that points to the
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 19
-
-
  816:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  first element in the %vector.  Iteration is done in ordinary
  817:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  element order.
  818:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
@@ -1137,10 +1138,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  869:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  Returns a read-only (constant) reverse iterator that points
  870:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  to one before the first element in the %vector.  Iteration
  871:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        *  is done in reverse element order.
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 20
+
+
  872:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****        */
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 20
-
-
  873:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       const_reverse_iterator
  874:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       rend() const _GLIBCXX_NOEXCEPT
  875:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return const_reverse_iterator(begin()); }
@@ -1197,10 +1198,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
    1:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #ifndef STEPPEDPARAMETER_H
    2:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #define STEPPEDPARAMETER_H
    3:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 21
+
+
    4:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #include "daisy_seed.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 21
-
-
    5:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #include "daisysp.h"
    6:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #include "ParameterIDs.h"
    7:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** #include <string>
@@ -1257,10 +1258,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   58:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****     { 
   59:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         if(curVal <= min)
   60:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal = min;
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 22
+
+
   61:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         else
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 22
-
-
   62:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****             curVal -= step;
   63:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h **** 
   64:GUI/FX/../../Drivers/../Parameters/SteppedParameter.h ****         callback(curVal); 
@@ -1291,16 +1292,16 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
   79              		.loc 2 147 24 view .LVU16
   80              	.LBE34:
   81              	.LBE36:
-  82              		.loc 1 8 11 view .LVU17
+  82              		.loc 1 9 11 view .LVU17
   83 0010 8360     		str	r3, [r0, #8]
-   9:GUI/FX/SteppedSlider.cpp **** 
-  10:GUI/FX/SteppedSlider.cpp ****     curVal = 0;
-  84              		.loc 1 10 5 is_stmt 1 view .LVU18
-  85              		.loc 1 10 12 is_stmt 0 view .LVU19
+  10:GUI/FX/SteppedSlider.cpp **** 
+  11:GUI/FX/SteppedSlider.cpp ****     curVal = 0;
+  84              		.loc 1 11 5 is_stmt 1 view .LVU18
+  85              		.loc 1 11 12 is_stmt 0 view .LVU19
   86 0012 0023     		movs	r3, #0
   87 0014 C360     		str	r3, [r0, #12]	@ float
-  11:GUI/FX/SteppedSlider.cpp **** }
-  88              		.loc 1 11 1 view .LVU20
+  12:GUI/FX/SteppedSlider.cpp **** }
+  88              		.loc 1 12 1 view .LVU20
   89 0016 7047     		bx	lr
   90              		.cfi_endproc
   91              	.LFE5105:
@@ -1313,20 +1314,20 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  100              	_ZN13SteppedSlider4tickEv:
  101              	.LVL4:
  102              	.LFB5106:
-  12:GUI/FX/SteppedSlider.cpp **** 
-  13:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::tick()
-  14:GUI/FX/SteppedSlider.cpp **** {
- 103              		.loc 1 14 1 is_stmt 1 view -0
+  13:GUI/FX/SteppedSlider.cpp **** 
+  14:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::tick()
+  15:GUI/FX/SteppedSlider.cpp **** {
+ 103              		.loc 1 15 1 is_stmt 1 view -0
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 23
+
+
  104              		.cfi_startproc
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 23
-
-
  105              		@ args = 0, pretend = 0, frame = 0
  106              		@ frame_needed = 0, uses_anonymous_args = 0
  107              		@ link register save eliminated.
-  15:GUI/FX/SteppedSlider.cpp ****     float newVal = param->getCurVal();
- 108              		.loc 1 15 5 view .LVU22
- 109              		.loc 1 15 20 is_stmt 0 view .LVU23
+  16:GUI/FX/SteppedSlider.cpp ****     float newVal = param->getCurVal();
+ 108              		.loc 1 16 5 view .LVU22
+ 109              		.loc 1 16 20 is_stmt 0 view .LVU23
  110 0000 8368     		ldr	r3, [r0, #8]
  111              	.LVL5:
  112              	.LBB37:
@@ -1354,8 +1355,8 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  116              		.loc 4 89 25 view .LVU25
  117              	.LBE38:
  118              	.LBE37:
-  16:GUI/FX/SteppedSlider.cpp ****     if(newVal != curVal)
- 119              		.loc 1 16 5 is_stmt 0 view .LVU26
+  17:GUI/FX/SteppedSlider.cpp ****     if(newVal != curVal)
+ 119              		.loc 1 17 5 is_stmt 0 view .LVU26
  120 0002 90ED037A 		vldr.32	s14, [r0, #12]
  121              	.LBB40:
  122              	.LBB39:
@@ -1365,37 +1366,37 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  126              		.loc 4 89 32 view .LVU28
  127              	.LBE39:
  128              	.LBE40:
- 129              		.loc 1 16 5 is_stmt 1 view .LVU29
+ 129              		.loc 1 17 5 is_stmt 1 view .LVU29
  130 000a B4EE677A 		vcmp.f32	s14, s15
  131 000e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  17:GUI/FX/SteppedSlider.cpp ****     {
-  18:GUI/FX/SteppedSlider.cpp ****         curVal = newVal;
- 132              		.loc 1 18 9 view .LVU30
- 133              		.loc 1 18 16 is_stmt 0 view .LVU31
+  18:GUI/FX/SteppedSlider.cpp ****     {
+  19:GUI/FX/SteppedSlider.cpp ****         curVal = newVal;
+ 132              		.loc 1 19 9 view .LVU30
+ 133              		.loc 1 19 16 is_stmt 0 view .LVU31
  134 0012 18BF     		it	ne
  135 0014 C0ED037A 		vstrne.32	s15, [r0, #12]
-  19:GUI/FX/SteppedSlider.cpp ****         repaint();
- 136              		.loc 1 19 9 is_stmt 1 view .LVU32
+  20:GUI/FX/SteppedSlider.cpp ****         repaint();
+ 136              		.loc 1 20 9 is_stmt 1 view .LVU32
  137              	.LVL7:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 24
+
+
  138              	.LBB41:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 24
-
-
  139              	.LBI41:
-  20:GUI/FX/SteppedSlider.cpp ****     }
-  21:GUI/FX/SteppedSlider.cpp **** }
-  22:GUI/FX/SteppedSlider.cpp **** 
-  23:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::setSelected()
-  24:GUI/FX/SteppedSlider.cpp **** {
-  25:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
-  26:GUI/FX/SteppedSlider.cpp **** }
-  27:GUI/FX/SteppedSlider.cpp **** 
-  28:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::repaint()
- 140              		.loc 1 28 6 view .LVU33
- 141              		.loc 1 28 6 is_stmt 0 view .LVU34
+  21:GUI/FX/SteppedSlider.cpp ****     }
+  22:GUI/FX/SteppedSlider.cpp **** }
+  23:GUI/FX/SteppedSlider.cpp **** 
+  24:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::setSelected()
+  25:GUI/FX/SteppedSlider.cpp **** {
+  26:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+  27:GUI/FX/SteppedSlider.cpp **** }
+  28:GUI/FX/SteppedSlider.cpp **** 
+  29:GUI/FX/SteppedSlider.cpp **** void SteppedSlider::repaint()
+ 140              		.loc 1 29 6 view .LVU33
+ 141              		.loc 1 29 6 is_stmt 0 view .LVU34
  142              	.LBE41:
-  21:GUI/FX/SteppedSlider.cpp **** 
- 143              		.loc 1 21 1 view .LVU35
+  22:GUI/FX/SteppedSlider.cpp **** 
+ 143              		.loc 1 22 1 view .LVU35
  144 0018 7047     		bx	lr
  145              		.cfi_endproc
  146              	.LFE5106:
@@ -1408,22 +1409,22 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  155              	_ZN13SteppedSlider11setSelectedEv:
  156              	.LVL8:
  157              	.LFB5107:
-  24:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
- 158              		.loc 1 24 1 is_stmt 1 view -0
+  25:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+ 158              		.loc 1 25 1 is_stmt 1 view -0
  159              		.cfi_startproc
  160              		@ args = 0, pretend = 0, frame = 0
  161              		@ frame_needed = 0, uses_anonymous_args = 0
-  25:GUI/FX/SteppedSlider.cpp **** }
- 162              		.loc 1 25 5 view .LVU37
-  24:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
- 163              		.loc 1 24 1 is_stmt 0 view .LVU38
+  26:GUI/FX/SteppedSlider.cpp **** }
+ 162              		.loc 1 26 5 view .LVU37
+  25:GUI/FX/SteppedSlider.cpp ****     encoder->setCurrentParam(paramID);
+ 163              		.loc 1 25 1 is_stmt 0 view .LVU38
  164 0000 30B5     		push	{r4, r5, lr}
  165              		.cfi_def_cfa_offset 12
  166              		.cfi_offset 4, -12
  167              		.cfi_offset 5, -8
  168              		.cfi_offset 14, -4
-  25:GUI/FX/SteppedSlider.cpp **** }
- 169              		.loc 1 25 29 view .LVU39
+  26:GUI/FX/SteppedSlider.cpp **** }
+ 169              		.loc 1 26 29 view .LVU39
  170 0002 D0E90014 		ldrd	r1, r4, [r0]
  171              	.LVL9:
  172              	.LBB51:
@@ -1437,10 +1438,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  178              	.LBB52:
  179              	.LBB53:
  180              	.LBB54:
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 25
+
+
  919:/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_vector.h ****       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 25
-
-
  181              		.loc 3 919 50 is_stmt 0 view .LVU42
  182 0006 D1E90803 		ldrd	r0, r3, [r1, #32]
  183              	.LVL10:
@@ -1497,13 +1498,13 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  221              	.L5:
  113:GUI/FX/../../Drivers/EncoderDriver.h ****             }
  222              		.loc 2 113 17 is_stmt 0 view .LVU57
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 26
+
+
  223              	.LBE52:
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 26
-
-
  224              	.LBE59:
-  26:GUI/FX/SteppedSlider.cpp **** 
- 225              		.loc 1 26 1 view .LVU58
+  27:GUI/FX/SteppedSlider.cpp **** 
+ 225              		.loc 1 27 1 view .LVU58
  226 0020 30BD     		pop	{r4, r5, pc}
  227              	.LVL13:
  228              	.L7:
@@ -1529,15 +1530,15 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  248              	_ZN13SteppedSlider7repaintEv:
  249              	.LVL15:
  250              	.LFB5108:
-  29:GUI/FX/SteppedSlider.cpp **** {
- 251              		.loc 1 29 1 is_stmt 1 view -0
+  30:GUI/FX/SteppedSlider.cpp **** {
+ 251              		.loc 1 30 1 is_stmt 1 view -0
  252              		.cfi_startproc
  253              		@ args = 0, pretend = 0, frame = 0
  254              		@ frame_needed = 0, uses_anonymous_args = 0
  255              		@ link register save eliminated.
-  30:GUI/FX/SteppedSlider.cpp ****     // paint slider using curVal
-  31:GUI/FX/SteppedSlider.cpp **** }...
- 256              		.loc 1 31 1 is_stmt 0 view .LVU62
+  31:GUI/FX/SteppedSlider.cpp ****     // paint slider using curVal
+  32:GUI/FX/SteppedSlider.cpp **** }...
+ 256              		.loc 1 32 1 is_stmt 0 view .LVU62
  257 0000 7047     		bx	lr
  258              		.cfi_endproc
  259              	.LFE5108:
@@ -1557,10 +1558,10 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  274              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
  275              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
  276              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 27
+
+
  277              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 27
-
-
  278              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
  279              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
  280              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
@@ -1604,22 +1605,22 @@ ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 1
  318              		.file 60 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
  319              		.file 61 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
  320              		.file 62 "GUI/FX/../../Drivers/../Parameters/ParameterIDs.h"
- 321              		.file 63 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
- 322              		.file 64 "GUI/FX/StyleSheet.h"
- 323              		.file 65 "../../../libDaisy//src/dev/sr_595.h"
- 324              		.file 66 "GUI/FX/SteppedSlider.h"
-ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s 			page 28
+ 321              		.file 63 "GUI/FX/StyleSheet.h"
+ 322              		.file 64 "../../../libDaisy//src/dev/sr_595.h"
+ 323              		.file 65 "GUI/FX/SteppedSlider.h"
+ 324              		.file 66 "GUI/FX/../../Drivers/daisy_ILI9341.hpp"
+ARM GAS  /var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 SteppedSlider.cpp
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:19     .text._ZN13SteppedSlider4initEiP13EncoderDriver:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:25     .text._ZN13SteppedSlider4initEiP13EncoderDriver:0000000000000000 _ZN13SteppedSlider4initEiP13EncoderDriver
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:94     .text._ZN13SteppedSlider4tickEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:100    .text._ZN13SteppedSlider4tickEv:0000000000000000 _ZN13SteppedSlider4tickEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:149    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:155    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 _ZN13SteppedSlider11setSelectedEv
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:242    .text._ZN13SteppedSlider7repaintEv:0000000000000000 $t
-/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccxqXPYp.s:248    .text._ZN13SteppedSlider7repaintEv:0000000000000000 _ZN13SteppedSlider7repaintEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:19     .text._ZN13SteppedSlider4initEiP13EncoderDriver:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:25     .text._ZN13SteppedSlider4initEiP13EncoderDriver:0000000000000000 _ZN13SteppedSlider4initEiP13EncoderDriver
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:94     .text._ZN13SteppedSlider4tickEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:100    .text._ZN13SteppedSlider4tickEv:0000000000000000 _ZN13SteppedSlider4tickEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:149    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:155    .text._ZN13SteppedSlider11setSelectedEv:0000000000000000 _ZN13SteppedSlider11setSelectedEv
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:242    .text._ZN13SteppedSlider7repaintEv:0000000000000000 $t
+/var/folders/wz/z09yph4n0qj4t7mjxhl6ttn80000gn/T//ccHyxVMO.s:248    .text._ZN13SteppedSlider7repaintEv:0000000000000000 _ZN13SteppedSlider7repaintEv
 
 NO UNDEFINED SYMBOLS

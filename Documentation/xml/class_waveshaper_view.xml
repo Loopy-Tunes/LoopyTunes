@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_waveshaper_view" kind="class" language="C++" prot="public">
+    <compoundname>WaveshaperView</compoundname>
+    <includes refid="_waveshaper_view_8h" local="no">WaveshaperView.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_waveshaper_view_1ad3a118245527052013fe1337d05a2dd3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WaveshaperView::trackID</definition>
+        <argsstring></argsstring>
+        <name>trackID</name>
+        <qualifiedname>WaveshaperView::trackID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="55" column="9" bodyfile="GUI/FX/WaveshaperView.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a8c05ab596f73f31e98cc6b56efbbe23a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+        <definition>KeypadDriver* WaveshaperView::keypad</definition>
+        <argsstring></argsstring>
+        <name>keypad</name>
+        <qualifiedname>WaveshaperView::keypad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="57" column="18" bodyfile="GUI/FX/WaveshaperView.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1aa5f97e25aa777c3d1e9b6a03ac674f90" prot="private" static="no" mutable="no">
+        <type><ref refid="class_bypass_button" kindref="compound">BypassButton</ref></type>
+        <definition>BypassButton WaveshaperView::bypass</definition>
+        <argsstring></argsstring>
+        <name>bypass</name>
+        <qualifiedname>WaveshaperView::bypass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="59" column="18" bodyfile="GUI/FX/WaveshaperView.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a77bff13f66ade6ef98f551601b5e8b12" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider WaveshaperView::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>WaveshaperView::amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="60" column="19" bodyfile="GUI/FX/WaveshaperView.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1af95695a627ecda16e637160754786cb4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider WaveshaperView::funcControl</definition>
+        <argsstring></argsstring>
+        <name>funcControl</name>
+        <qualifiedname>WaveshaperView::funcControl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="61" column="19" bodyfile="GUI/FX/WaveshaperView.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a1920dc682383115c73bcc9818ea3c567" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stepped_slider" kindref="compound">SteppedSlider</ref></type>
+        <definition>SteppedSlider WaveshaperView::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>WaveshaperView::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="62" column="19" bodyfile="GUI/FX/WaveshaperView.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a3c0f7c8be02428e775764fb60356216a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WaveshaperView::numberOfParameters</definition>
+        <argsstring></argsstring>
+        <name>numberOfParameters</name>
+        <qualifiedname>WaveshaperView::numberOfParameters</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="64" column="9" bodyfile="GUI/FX/WaveshaperView.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a4fd15ef21d3404ed5feabb00fe962815" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* WaveshaperView::parameterNames[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>parameterNames</name>
+        <qualifiedname>WaveshaperView::parameterNames</qualifiedname>
+        <initializer>= {&quot;Amount&quot;, &quot;Function Control&quot;, &quot;Mode&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="65" column="16" bodyfile="GUI/FX/WaveshaperView.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a05b28d4d1c0dac078fa9a91b421641b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WaveshaperView::currentParam</definition>
+        <argsstring></argsstring>
+        <name>currentParam</name>
+        <qualifiedname>WaveshaperView::currentParam</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="66" column="9" bodyfile="GUI/FX/WaveshaperView.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1afc061c0c3c3dc72cccbd2617c40d1cee" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WaveshaperView::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>WaveshaperView::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="68" column="10" bodyfile="GUI/FX/WaveshaperView.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1a530f0bab19736b267fd33b91ab554d62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WaveshaperView::isPainted</definition>
+        <argsstring></argsstring>
+        <name>isPainted</name>
+        <qualifiedname>WaveshaperView::isPainted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="69" column="10" bodyfile="GUI/FX/WaveshaperView.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_waveshaper_view_1ac7f7b19e63a8c816b9204f9b9afc2665" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WaveshaperView::bypassIndexes[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>bypassIndexes</name>
+        <qualifiedname>WaveshaperView::bypassIndexes</qualifiedname>
+        <initializer>= {1, 6, 11, 16}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="70" column="9" bodyfile="GUI/FX/WaveshaperView.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_waveshaper_view_1a7e22573e74046e17f4b3a5d4d8242d7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::init</definition>
+        <argsstring>(int ID, EncoderDriver *driver, KeypadDriver *kpd)</argsstring>
+        <name>init</name>
+        <qualifiedname>WaveshaperView::init</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_encoder_driver" kindref="compound">EncoderDriver</ref> *</type>
+          <declname>driver</declname>
+        </param>
+        <param>
+          <type><ref refid="class_keypad_driver" kindref="compound">KeypadDriver</ref> *</type>
+          <declname>kpd</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the track view the instance belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the encoder driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kpd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the keypad driver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="21" column="10" bodyfile="GUI/FX/WaveshaperView.cpp" bodystart="4" bodyend="17"/>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a48da39a272f9138aa859ae2720b7a461" compoundref="_parameter_i_ds_8h" startline="27">ParameterIDs::Waveshaper::amount</references>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a9c648f329d6bc1a81525e0ea9dcc2c65" compoundref="_parameter_i_ds_8h" startline="28">ParameterIDs::Waveshaper::funcControl</references>
+        <references refid="class_encoder_driver_1acd195cb2fe0f09ff7dd4b7d18414aa0e" compoundref="_encoder_driver_8h" startline="100" endline="100">EncoderDriver::getBypassCallback</references>
+        <references refid="class_bypass_button_1a80f0430537f1194752acb452ed0669ce" compoundref="_bypass_button_8h" startline="21" endline="28">BypassButton::init</references>
+        <references refid="class_stepped_slider_1a2f44173e047163f3d8ac59fba4593b34" compoundref="_stepped_slider_8cpp" startline="4" endline="12">SteppedSlider::init</references>
+        <references refid="namespace_parameter_i_ds_1_1_waveshaper_1a73172537740cea5fed2dc6751935ab4d" compoundref="_parameter_i_ds_8h" startline="29">ParameterIDs::Waveshaper::mode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1a1167027572fa89082ee21d8b714f5afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>WaveshaperView::tick</qualifiedname>
+        <briefdescription>
+<para>Handles the updating of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="26" column="10" bodyfile="GUI/FX/WaveshaperView.cpp" bodystart="19" bodyend="27"/>
+        <references refid="class_waveshaper_view_1af4723822c047f4b34dc403e6398b65bd" compoundref="_waveshaper_view_8cpp" startline="29" endline="66">repaint</references>
+        <references refid="class_stepped_slider_1a680e304b4430e073e9ec701599b1c484" compoundref="_stepped_slider_8cpp" startline="14" endline="22">SteppedSlider::tick</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1af4723822c047f4b34dc403e6398b65bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <qualifiedname>WaveshaperView::repaint</qualifiedname>
+        <briefdescription>
+<para>Handles the repainting of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="31" column="10" bodyfile="GUI/FX/WaveshaperView.cpp" bodystart="29" bodyend="66"/>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743a1340428efccb140dcbdb71aa6176f696" compoundref="daisy___i_l_i9341_8hpp" startline="26">COLOR_BLUE</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a611399bdfbc1a749719f04815bcda743acfa9d8bbffc418447ed826f286abca02" compoundref="daisy___i_l_i9341_8hpp" startline="34">COLOR_GREEN</references>
+        <references refid="class_ui_driver_1aae60e48b285f16bdecc46557a84e6fa0" compoundref="daisy___i_l_i9341_8hpp" startline="653" endline="666">UiDriver::DrawRect</references>
+        <references refid="class_ui_driver_1af358f8137ff5f6dec8402e5b28b5be73" compoundref="daisy___i_l_i9341_8hpp" startline="678" endline="686">UiDriver::FillRect</references>
+        <references refid="daisy___i_l_i9341_8hpp_1a7adf4c2c8a0d7191321495dc19b1df31" compoundref="_i_l_i9341__ui__driver_8cpp" startline="11">lcd</references>
+        <references refid="class_bypass_button_1a92ca3fa41d4a05f5eee9eaa796f9c044" compoundref="_bypass_button_8h" startline="45" endline="54">BypassButton::repaint</references>
+        <references refid="class_ui_driver_1aed409db35305081ad515645298ff98b6" compoundref="daisy___i_l_i9341_8hpp" startline="853" endline="856">UiDriver::WriteString</references>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1a0327dad8bf41a302efac9092df710ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>WaveshaperView::clear</qualifiedname>
+        <briefdescription>
+<para>Handles the clearing of the view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="36" column="10" bodyfile="GUI/FX/WaveshaperView.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1a74be31ca1a2f22e19fab788384b8f3a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::setIsOpen</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsOpen</name>
+        <qualifiedname>WaveshaperView::setIsOpen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view is currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="41" column="10" bodyfile="GUI/FX/WaveshaperView.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1acad77b49e65cc7251ff8ad326b0b19d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::setIsPainted</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setIsPainted</name>
+        <qualifiedname>WaveshaperView::setIsPainted</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets if the view has been painted or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="46" column="10" bodyfile="GUI/FX/WaveshaperView.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_waveshaper_view_1ac5e67d9d36f1c8af182735b1f7c74a94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveshaperView::setCurrentParam</definition>
+        <argsstring>(int newParam)</argsstring>
+        <name>setCurrentParam</name>
+        <qualifiedname>WaveshaperView::setCurrentParam</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newParam</declname>
+        </param>
+        <briefdescription>
+<para>Sets the currently selected parameter on the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GUI/FX/WaveshaperView.h" line="51" column="10" bodyfile="GUI/FX/WaveshaperView.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class name: <ref refid="class_waveshaper_view" kindref="compound">WaveshaperView</ref> Function: FX level GUI class for the <ref refid="class_waveshaper" kindref="compound">Waveshaper</ref> </para>
+    </detaileddescription>
+    <location file="GUI/FX/WaveshaperView.h" line="11" column="1" bodyfile="GUI/FX/WaveshaperView.h" bodystart="12" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_waveshaper_view_1a77bff13f66ade6ef98f551601b5e8b12" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>amount</name></member>
+      <member refid="class_waveshaper_view_1aa5f97e25aa777c3d1e9b6a03ac674f90" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>bypass</name></member>
+      <member refid="class_waveshaper_view_1ac7f7b19e63a8c816b9204f9b9afc2665" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>bypassIndexes</name></member>
+      <member refid="class_waveshaper_view_1a0327dad8bf41a302efac9092df710ae6" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>clear</name></member>
+      <member refid="class_waveshaper_view_1a05b28d4d1c0dac078fa9a91b421641b2" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>currentParam</name></member>
+      <member refid="class_waveshaper_view_1af95695a627ecda16e637160754786cb4" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>funcControl</name></member>
+      <member refid="class_waveshaper_view_1a7e22573e74046e17f4b3a5d4d8242d7c" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>init</name></member>
+      <member refid="class_waveshaper_view_1afc061c0c3c3dc72cccbd2617c40d1cee" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>isOpen</name></member>
+      <member refid="class_waveshaper_view_1a530f0bab19736b267fd33b91ab554d62" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>isPainted</name></member>
+      <member refid="class_waveshaper_view_1a8c05ab596f73f31e98cc6b56efbbe23a" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>keypad</name></member>
+      <member refid="class_waveshaper_view_1a1920dc682383115c73bcc9818ea3c567" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>mode</name></member>
+      <member refid="class_waveshaper_view_1a3c0f7c8be02428e775764fb60356216a" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>numberOfParameters</name></member>
+      <member refid="class_waveshaper_view_1a4fd15ef21d3404ed5feabb00fe962815" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>parameterNames</name></member>
+      <member refid="class_waveshaper_view_1af4723822c047f4b34dc403e6398b65bd" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>repaint</name></member>
+      <member refid="class_waveshaper_view_1ac5e67d9d36f1c8af182735b1f7c74a94" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>setCurrentParam</name></member>
+      <member refid="class_waveshaper_view_1a74be31ca1a2f22e19fab788384b8f3a2" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>setIsOpen</name></member>
+      <member refid="class_waveshaper_view_1acad77b49e65cc7251ff8ad326b0b19d9" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>setIsPainted</name></member>
+      <member refid="class_waveshaper_view_1a1167027572fa89082ee21d8b714f5afb" prot="public" virt="non-virtual"><scope>WaveshaperView</scope><name>tick</name></member>
+      <member refid="class_waveshaper_view_1ad3a118245527052013fe1337d05a2dd3" prot="private" virt="non-virtual"><scope>WaveshaperView</scope><name>trackID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
